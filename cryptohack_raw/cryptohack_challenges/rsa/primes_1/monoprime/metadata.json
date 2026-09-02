@@ -1,0 +1,33 @@
+{
+  "category": "RSA",
+  "category_slug": "rsa",
+  "stage": "Primes Part 1",
+  "stage_slug": "primes_1",
+  "title": "Monoprime",
+  "slug": "monoprime",
+  "data_challenge": "monoprime",
+  "points": 30,
+  "solves": 10180,
+  "url": "https://cryptohack.org/challenges/rsa/",
+  "attachments": [
+    {
+      "text": "output.txt",
+      "href": "/static/challenges/output_086036e35349a406b94bfac9a7af6cca.txt",
+      "url": "https://cryptohack.org/static/challenges/output_086036e35349a406b94bfac9a7af6cca.txt",
+      "download": true,
+      "saved_as": "files/output_086036e35349a406b94bfac9a7af6cca.txt",
+      "status": 200,
+      "size": 707
+    }
+  ],
+  "resources": [
+    {
+      "text": "Why do we need in RSA the modulus to be product of 2 primes?",
+      "href": "https://crypto.stackexchange.com/questions/5170/why-do-we-need-in-rsa-the-modulus-to-be-product-of-2-primes",
+      "url": "https://crypto.stackexchange.com/questions/5170/why-do-we-need-in-rsa-the-modulus-to-be-product-of-2-primes",
+      "download": false
+    }
+  ],
+  "statement_html": "statement.html",
+  "statement_md": "statement.md"
+}

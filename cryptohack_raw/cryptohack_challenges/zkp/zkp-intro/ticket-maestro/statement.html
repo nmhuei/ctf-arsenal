@@ -1,0 +1,198 @@
+<div class="challengeDescription">
+ <!-- <p> -->
+ We previously showed the existence of Zero Knowledge for all of NP, through the graph Hamiltonicity
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi mathvariant="normal">
+        Σ
+       </mi>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       \Sigma
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 0.6833em;">
+     </span>
+     <span class="mord">
+      Σ
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ -Protocol.  However you may have noticed that a NIZK for proving knowledge of a Hamiltonian cycle required sending a
+ <em>
+  lot
+ </em>
+ more data than the initial DLOG
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi mathvariant="normal">
+        Σ
+       </mi>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       \Sigma
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 0.6833em;">
+     </span>
+     <span class="mord">
+      Σ
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ -Protocol.  Even just proving the witness for a 5 node graph required sending thousands of group elements.
+ <br/>
+ <br/>
+ In general,
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi mathvariant="normal">
+        Σ
+       </mi>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       \Sigma
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 0.6833em;">
+     </span>
+     <span class="mord">
+      Σ
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ -Protocols are best suited for "algebraic" statements. Here their simplicity combined with a reasonable proof size, e.g. a DLOG proof consists of only 2 group elements, make them useful in practical applications. For other statements, e.g. knowledge of a SHA-256 pre-image, Sigma protocols are less suited.
+ <br/>
+ <br/>
+ In recent years there has been a very large amount of research on techniques for how to more efficiently prove more complicated statements, including the development of the
+ <em>
+  Succint Noninteractive Argument of Knowledge
+ </em>
+ (SNARK).
+ <br/>
+ <br/>
+ <span class="note">
+  <i class="fas fa-brain">
+  </i>
+  The key word here is
+  <em>
+   succinct
+  </em>
+  , meaning that the size of the proof, (and verifier runtime) is very small in relation to the size of the statement or witness. Depending on context, some authors take succinct to mean "polylogarithmic in the statement/prover runtime", while others require the proof size to be constant/
+  <span>
+   <span class="katex">
+    <span class="katex-mathml">
+     <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <semantics>
+       <mrow>
+        <mi>
+         O
+        </mi>
+        <mo stretchy="false">
+         (
+        </mo>
+        <mn>
+         1
+        </mn>
+        <mo stretchy="false">
+         )
+        </mo>
+       </mrow>
+       <annotation encoding="application/x-tex">
+        O(1)
+       </annotation>
+      </semantics>
+     </math>
+    </span>
+    <span aria-hidden="true" class="katex-html">
+     <span class="base">
+      <span class="strut" style="height: 1em; vertical-align: -0.25em;">
+      </span>
+      <span class="mord mathnormal" style="margin-right: 0.0278em;">
+       O
+      </span>
+      <span class="mopen">
+       (
+      </span>
+      <span class="mord">
+       1
+      </span>
+      <span class="mclose">
+       )
+      </span>
+     </span>
+    </span>
+   </span>
+  </span>
+  . For now we'll take it as meaning constant proof size and verifier runtime.
+ </span>
+ <br/>
+ <br/>
+ Compared to the Hamiltonicity NIZK we saw in the previous challenge, where the proof size scales with as we increase the size of the statement (the graph), a SNARK would have the same proof size and verifier runtime regardless of the size of the graph!
+ <br/>
+ <br/>
+ One of the first widely used ZK-SNARKS was
+ <a href="https://eprint.iacr.org/2016/260.pdf">
+  Groth16
+ </a>
+ , which leverages pairings, (and a trusted setup,) to have a constant proof size of only 3 group elements and a very fast verification time! While Groth16 is still popular for some use cases due to it's tiny proof size, it does require a new trusted setup for every program, which holds it back from use in some settings.
+ <br/>
+ <br/>
+ Since then many other ZK-SNARK protocols and variants have emerged, each with their own tradeoffs in prover time, verifier time, proof size, security assumptions, trusted setup requirements and so on. With some of the more popular including bulletproofs, ligero, plonk variants, halo2, and plenty more, with most projects having optimised implementations freely available on github.
+ <br/>
+ <br/>
+ For this challenge, we will move from educational python snippets to a gentle introduction to the kind of code you should expect to see in real world cryptographic implementations. The challenge is about Groth16 proofs, where the witness is the preimage of a Poseidon hash digest, Poseidon being a hash function designed to be efficient to prove things about in zero knowledge. Good luck!
+ <br/>
+ <br/>
+ <span class="note">
+  <i class="fas fa-pencil-alt">
+  </i>
+  While it's encouraged to work with the rust libraries involved, to get a feel for what it's like to implement these kinds of proof systems, we have also included an
+  <code>
+   example.py
+  </code>
+  file showing how to interact with the service from pure python for those who so desire.
+ </span>
+ <br/>
+ <br/>
+ <b>
+  This challenge is hosted on the CTF archive. Find the corresponding challenge in that category, solve it, then enter the flag here.
+ </b>
+ <br/>
+ <br/>
+ Challenge contributed by
+ <a class="gold-link" href="https://www.zksecurity.xyz/">
+  Mathias Hall-Andersen, zksecurity.xyz
+ </a>
+ <!-- </p> -->
+</div>

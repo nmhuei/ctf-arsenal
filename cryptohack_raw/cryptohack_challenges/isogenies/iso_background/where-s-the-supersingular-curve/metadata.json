@@ -1,0 +1,39 @@
+{
+  "category": "Isogenies",
+  "category_slug": "isogenies",
+  "stage": "Starter",
+  "stage_slug": "iso_background",
+  "title": "Where's the Supersingular Curve",
+  "slug": "where-s-the-supersingular-curve",
+  "data_challenge": "a_spot_super",
+  "points": 25,
+  "solves": 508,
+  "url": "https://cryptohack.org/challenges/isogenies/",
+  "attachments": [
+    {
+      "text": "curves.sage",
+      "href": "/static/challenges/curves_1e476e7d608576c05a13b269d1481602.sage",
+      "url": "https://cryptohack.org/static/challenges/curves_1e476e7d608576c05a13b269d1481602.sage",
+      "download": true,
+      "saved_as": "files/curves_1e476e7d608576c05a13b269d1481602.sage",
+      "status": 200,
+      "size": 4311
+    }
+  ],
+  "resources": [
+    {
+      "text": "Ordinary and supersingular elliptic curves, Section 13.2, Andrew Sutherland",
+      "href": "https://ocw.mit.edu/courses/18-783-elliptic-curves-spring-2021/6b139f926bbbe94db322ea23300b0246_MIT18_783S21_notes13.pdf",
+      "url": "https://ocw.mit.edu/courses/18-783-elliptic-curves-spring-2021/6b139f926bbbe94db322ea23300b0246_MIT18_783S21_notes13.pdf",
+      "download": false
+    },
+    {
+      "text": "Supersingular elliptic curve, Wikipedia",
+      "href": "https://en.wikipedia.org/wiki/Supersingular_elliptic_curve",
+      "url": "https://en.wikipedia.org/wiki/Supersingular_elliptic_curve",
+      "download": false
+    }
+  ],
+  "statement_html": "statement.html",
+  "statement_md": "statement.md"
+}

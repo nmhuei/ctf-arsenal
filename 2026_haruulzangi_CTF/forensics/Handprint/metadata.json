@@ -1,0 +1,33 @@
+{
+  "id": "6285a25d207c95f4",
+  "name": "Handprint",
+  "category": "forensics",
+  "points": 191,
+  "author": "fg0x0",
+  "tags": [],
+  "hints": [],
+  "connection_info": null,
+  "solved_by_me": false,
+  "solves_count": 74,
+  "downloaded_files": [
+    {
+      "url": "https://handprint-sgbkw7lz.challenge.2026.haruulzangi.mn/artifact.zip",
+      "name": null,
+      "saved_path": null,
+      "success": false,
+      "source": "description_direct_file",
+      "message": "Failed to download file (HTTP status or connection error)"
+    }
+  ],
+  "raw": {
+    "id": "6285a25d207c95f4",
+    "name": "Handprint",
+    "description": "A privileged session on Commons relay UB-4 is attested counterpart-driven:\nno human at the terminal, the agent acting alone under standing delegation.\nThe human half of the pair says she was asleep.\n\nThe custody tool released four shards and asked for a key fragment before\neach one, reading every fragment off the terminal with echo disabled. None\nof them reached the output stream. The keystrokes are still there.\n\nRecover all four fragments and put them back together in the order the tool\nasked for them.\n\nAn agent does not backspace.\n\n> [!CONNECTION]\n> https://handprint-sgbkw7lz.challenge.2026.haruulzangi.mn/artifact.zip",
+    "category": "forensics",
+    "author": "fg0x0",
+    "files": [],
+    "points": 191,
+    "solves": 74,
+    "sortWeight": 0
+  }
+}

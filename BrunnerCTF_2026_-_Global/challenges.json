@@ -1,0 +1,1534 @@
+{
+  "ctf_info": {
+    "title": "BrunnerCTF 2026 - Global",
+    "url": "https://global.brunnerctf.dk",
+    "platform": "ctfd",
+    "user": "nmhuei"
+  },
+  "total_challenges": 74,
+  "total_points": 6965,
+  "categories": {
+    "Onboarding": 18,
+    "Crypto": 6,
+    "Misc": 8,
+    "Web": 6,
+    "Boot2Root": 9,
+    "Pwn": 5,
+    "Reversing": 6,
+    "Mobile": 5,
+    "OSINT": 5,
+    "Forensics": 6
+  },
+  "challenges": [
+    {
+      "id": 174,
+      "name": "Start Here: Sanity Check",
+      "category": "Onboarding",
+      "points": 10,
+      "author": null,
+      "tags": [
+        "Intro"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": true,
+      "solves_count": 800,
+      "files": []
+    },
+    {
+      "id": 103,
+      "name": "Company Intranet",
+      "category": "Onboarding",
+      "points": 15,
+      "author": null,
+      "tags": [
+        "Intro"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": true,
+      "solves_count": 670,
+      "files": []
+    },
+    {
+      "id": 175,
+      "name": "Corporate Hotline",
+      "category": "Onboarding",
+      "points": 15,
+      "author": null,
+      "tags": [
+        "Intro"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 608,
+      "files": []
+    },
+    {
+      "id": 142,
+      "name": "Bears",
+      "category": "Onboarding",
+      "points": 20,
+      "author": null,
+      "tags": [
+        "Forensics"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": true,
+      "solves_count": 630,
+      "files": [
+        {
+          "url": "https://global.brunnerctf.dk/files/7990c53cb8b6a46a3b3246fd63f5c1b1/misc_bears.zip?token=eyJ1c2VyX2lkIjozMzY2LCJ0ZWFtX2lkIjoxNzE2LCJmaWxlX2lkIjoxMDl9.aolixg.BklFbRg0K44pNiXJZjXO6aGD54Y",
+          "name": "misc_bears.zip",
+          "saved_path": "/home/light/Workspace/CTF/BrunnerCTF_2026_-_Global/Onboarding/Bears/misc_bears.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": 147,
+      "name": "Touch Base",
+      "category": "Onboarding",
+      "points": 20,
+      "author": null,
+      "tags": [
+        "Encoding"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": true,
+      "solves_count": 702,
+      "files": []
+    },
+    {
+      "id": 102,
+      "name": "Insanity Check",
+      "category": "Onboarding",
+      "points": 25,
+      "author": null,
+      "tags": [
+        "Nom Nom"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": true,
+      "solves_count": 330,
+      "files": []
+    },
+    {
+      "id": 117,
+      "name": "Business Trip",
+      "category": "Onboarding",
+      "points": 25,
+      "author": null,
+      "tags": [
+        "OSINT"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": true,
+      "solves_count": 551,
+      "files": [
+        {
+          "url": "https://global.brunnerctf.dk/files/e5cbc91d406bfd933c8e6e2cda05fc45/osint_business-trip.zip?token=eyJ1c2VyX2lkIjozMzY2LCJ0ZWFtX2lkIjoxNzE2LCJmaWxlX2lkIjo4N30.aoliyA._be3ZzMxPZpnIz2pzWaNgsS14w8",
+          "name": "osint_business-trip.zip",
+          "saved_path": "/home/light/Workspace/CTF/BrunnerCTF_2026_-_Global/Onboarding/Business_Trip/osint_business-trip.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": 154,
+      "name": "Legacy Cipher",
+      "category": "Onboarding",
+      "points": 25,
+      "author": null,
+      "tags": [
+        "Crypto"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": true,
+      "solves_count": 677,
+      "files": []
+    },
+    {
+      "id": 169,
+      "name": "Going Paperless",
+      "category": "Onboarding",
+      "points": 25,
+      "author": null,
+      "tags": [
+        "Encoding"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": true,
+      "solves_count": 667,
+      "files": [
+        {
+          "url": "https://files.brunnerctf.dk/asciitable.png",
+          "name": "ASCII table",
+          "saved_path": "/home/light/Workspace/CTF/BrunnerCTF_2026_-_Global/Onboarding/Going_Paperless/ASCII table",
+          "success": true,
+          "source": "description_direct_file",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Brunner Mifflin - Complaint Box",
+      "category": "Onboarding",
+      "points": 30,
+      "author": null,
+      "tags": [
+        "Web"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 420,
+      "files": []
+    },
+    {
+      "id": 16,
+      "name": "BOREd2root (User)",
+      "category": "Onboarding",
+      "points": 30,
+      "author": null,
+      "tags": [
+        "Boot2root"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 325,
+      "files": []
+    },
+    {
+      "id": 94,
+      "name": "Blackboard",
+      "category": "Onboarding",
+      "points": 30,
+      "author": null,
+      "tags": [
+        "Crypto"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": true,
+      "solves_count": 251,
+      "files": [
+        {
+          "url": "https://global.brunnerctf.dk/files/68d2b20b0a88c1587f04cdb36b093af8/misc_blackboard.zip?token=eyJ1c2VyX2lkIjozMzY2LCJ0ZWFtX2lkIjoxNzE2LCJmaWxlX2lkIjo3MH0.aoliyw.9TZ9SnSACbbG1DLl_EAPbWo7NNQ",
+          "name": "misc_blackboard.zip",
+          "saved_path": "/home/light/Workspace/CTF/BrunnerCTF_2026_-_Global/Onboarding/Blackboard/misc_blackboard.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "name": "Apply here",
+      "category": "Onboarding",
+      "points": 35,
+      "author": null,
+      "tags": [
+        "Web"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 361,
+      "files": []
+    },
+    {
+      "id": 79,
+      "name": "Invoice",
+      "category": "Onboarding",
+      "points": 35,
+      "author": null,
+      "tags": [
+        "Forensics",
+        "Malware"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 302,
+      "files": [
+        {
+          "url": "https://global.brunnerctf.dk/files/fe901391b0ab812de3614066acdf7196/forensics_invoice.zip?token=eyJ1c2VyX2lkIjozMzY2LCJ0ZWFtX2lkIjoxNzE2LCJmaWxlX2lkIjo2M30.aolizA.TJEI57iKxmy9IB0BX_Nvp9g964s",
+          "name": "forensics_invoice.zip",
+          "saved_path": "/home/light/Workspace/CTF/BrunnerCTF_2026_-_Global/Onboarding/Invoice/forensics_invoice.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": 127,
+      "name": "Why those random letters?",
+      "category": "Onboarding",
+      "points": 35,
+      "author": null,
+      "tags": [
+        "Crypto"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": true,
+      "solves_count": 428,
+      "files": [
+        {
+          "url": "https://global.brunnerctf.dk/files/16e29ce69bcb1ee08d91fd704b8226f5/crypto_why-those-random-letters.zip?token=eyJ1c2VyX2lkIjozMzY2LCJ0ZWFtX2lkIjoxNzE2LCJmaWxlX2lkIjo5N30.aolizA.rcjlLimI5iXObUp42d9WHYXkRxc",
+          "name": "crypto_why-those-random-letters.zip",
+          "saved_path": "/home/light/Workspace/CTF/BrunnerCTF_2026_-_Global/Onboarding/Why_those_random_letters/crypto_why-those-random-letters.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": 135,
+      "name": "BOREd2root (Root)",
+      "category": "Onboarding",
+      "points": 35,
+      "author": null,
+      "tags": [
+        "Boot2root"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 278,
+      "files": []
+    },
+    {
+      "id": 34,
+      "name": "HRBot",
+      "category": "Onboarding",
+      "points": 40,
+      "author": null,
+      "tags": [
+        "Pwn"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 251,
+      "files": [
+        {
+          "url": "https://global.brunnerctf.dk/files/d8179fa68984d662043ebeac857a38e0/pwn_hrbot.zip?token=eyJ1c2VyX2lkIjozMzY2LCJ0ZWFtX2lkIjoxNzE2LCJmaWxlX2lkIjoyMX0.aolizQ.zordsKZzH-4iDGvDBjOX4sIhZTo",
+          "name": "pwn_hrbot.zip",
+          "saved_path": "/home/light/Workspace/CTF/BrunnerCTF_2026_-_Global/Onboarding/HRBot/pwn_hrbot.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": 168,
+      "name": "Decompile?",
+      "category": "Onboarding",
+      "points": 40,
+      "author": null,
+      "tags": [
+        "Reversing"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": true,
+      "solves_count": 366,
+      "files": [
+        {
+          "url": "https://global.brunnerctf.dk/files/28ca50576fc78e413a856288b6862929/rev_decompile.zip?token=eyJ1c2VyX2lkIjozMzY2LCJ0ZWFtX2lkIjoxNzE2LCJmaWxlX2lkIjoxMjB9.aolizQ.me-0jKHtw6q9vdXmUblt9abQ6SE",
+          "name": "rev_decompile.zip",
+          "saved_path": "/home/light/Workspace/CTF/BrunnerCTF_2026_-_Global/Onboarding/Decompile/rev_decompile.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "name": "TriKDF Enterprise",
+      "category": "Crypto",
+      "points": 100,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 179,
+      "files": [
+        {
+          "url": "https://global.brunnerctf.dk/files/202d173c867132fd04e7d3815b46a905/crypto_trikdf-enterprise.zip?token=eyJ1c2VyX2lkIjozMzY2LCJ0ZWFtX2lkIjoxNzE2LCJmaWxlX2lkIjo3fQ.aolizg.foHHCtJN3Rdp_qbyMCSwnemtm8g",
+          "name": "crypto_trikdf-enterprise.zip",
+          "saved_path": "/home/light/Workspace/CTF/BrunnerCTF_2026_-_Global/Crypto/TriKDF_Enterprise/crypto_trikdf-enterprise.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Checkmate",
+      "category": "Misc",
+      "points": 100,
+      "author": null,
+      "tags": [
+        "AI"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 126,
+      "files": []
+    },
+    {
+      "id": 7,
+      "name": "Secret Storage",
+      "category": "Crypto",
+      "points": 100,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 92,
+      "files": [
+        {
+          "url": "https://global.brunnerctf.dk/files/17f560a28639790e572e8aa8fae88e49/crypto_secret-storage.zip?token=eyJ1c2VyX2lkIjozMzY2LCJ0ZWFtX2lkIjoxNzE2LCJmaWxlX2lkIjo5fQ.aolizw.YAeR7uxBuQSq1DKSenCq3vJfPEk",
+          "name": "crypto_secret-storage.zip",
+          "saved_path": "/home/light/Workspace/CTF/BrunnerCTF_2026_-_Global/Crypto/Secret_Storage/crypto_secret-storage.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "name": "Secret Event",
+      "category": "Web",
+      "points": 100,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 87,
+      "files": []
+    },
+    {
+      "id": 15,
+      "name": "PHP 2003",
+      "category": "Web",
+      "points": 100,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 243,
+      "files": []
+    },
+    {
+      "id": 19,
+      "name": "The Three Ways - Flow",
+      "category": "Boot2Root",
+      "points": 100,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 140,
+      "files": []
+    },
+    {
+      "id": 21,
+      "name": "Brunner Stocks",
+      "category": "Pwn",
+      "points": 100,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 194,
+      "files": [
+        {
+          "url": "https://global.brunnerctf.dk/files/f98156787f4b84cefcee7153e260290c/pwn_brunner-stocks.zip?token=eyJ1c2VyX2lkIjozMzY2LCJ0ZWFtX2lkIjoxNzE2LCJmaWxlX2lkIjoxMn0.aoli0A.SFLZlFN7CZ69up8_vIU-rwDVluE",
+          "name": "pwn_brunner-stocks.zip",
+          "saved_path": "/home/light/Workspace/CTF/BrunnerCTF_2026_-_Global/Pwn/Brunner_Stocks/pwn_brunner-stocks.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "name": "BrunRouter",
+      "category": "Boot2Root",
+      "points": 100,
+      "author": null,
+      "tags": [
+        "Embedded"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 54,
+      "files": [
+        {
+          "url": "https://global.brunnerctf.dk/files/5ca4dd6fb3b35ae190fcf13465c3c419/boot2root_brunrouter.zip?token=eyJ1c2VyX2lkIjozMzY2LCJ0ZWFtX2lkIjoxNzE2LCJmaWxlX2lkIjoxM30.aoli0Q.KT_ok_mxnLKCmqX9KprGylJdbOY",
+          "name": "boot2root_brunrouter.zip",
+          "saved_path": "/home/light/Workspace/CTF/BrunnerCTF_2026_-_Global/Boot2Root/BrunRouter/boot2root_brunrouter.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "name": "Git gud",
+      "category": "Misc",
+      "points": 100,
+      "author": null,
+      "tags": [
+        "Git"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 98,
+      "files": [
+        {
+          "url": "https://global.brunnerctf.dk/files/3a5d2d55d45d9b940586002ecb5899f5/misc_git-gud.zip?token=eyJ1c2VyX2lkIjozMzY2LCJ0ZWFtX2lkIjoxNzE2LCJmaWxlX2lkIjoxNn0.aoli0Q.nPNGZAMF6Pv0UJ0Vl2THXlTCJoA",
+          "name": "misc_git-gud.zip",
+          "saved_path": "/home/light/Workspace/CTF/BrunnerCTF_2026_-_Global/Misc/Git_gud/misc_git-gud.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "name": "Dumb-factor Authentication",
+      "category": "Web",
+      "points": 100,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 160,
+      "files": []
+    },
+    {
+      "id": 33,
+      "name": "Brunner Mifflin (User)",
+      "category": "Boot2Root",
+      "points": 100,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 287,
+      "files": [
+        {
+          "url": "https://global.brunnerctf.dk/files/e1c4ac3fdefad918731a72e32f7bbf22/boot2root_brunner-mifflin-user.zip?token=eyJ1c2VyX2lkIjozMzY2LCJ0ZWFtX2lkIjoxNzE2LCJmaWxlX2lkIjoxOH0.aoli0g.Jnj7p9AvJ4lCf1q6nUIckOcpsqc",
+          "name": "boot2root_brunner-mifflin-user.zip",
+          "saved_path": "/home/light/Workspace/CTF/BrunnerCTF_2026_-_Global/Boot2Root/Brunner_Mifflin_(User)/boot2root_brunner-mifflin-user.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "name": "Locked Out",
+      "category": "Pwn",
+      "points": 100,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 143,
+      "files": [
+        {
+          "url": "https://global.brunnerctf.dk/files/818ee4fc03bd91bfc124e5ace8736534/pwn_locked-out.zip?token=eyJ1c2VyX2lkIjozMzY2LCJ0ZWFtX2lkIjoxNzE2LCJmaWxlX2lkIjoyNX0.aoli0g.yIG3PhjxpF9Bll9puvtKSYZnlOo",
+          "name": "pwn_locked-out.zip",
+          "saved_path": "/home/light/Workspace/CTF/BrunnerCTF_2026_-_Global/Pwn/Locked_Out/pwn_locked-out.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "name": "Mindbreaker",
+      "category": "Pwn",
+      "points": 100,
+      "author": null,
+      "tags": [
+        "Clone2pwn",
+        "LEGO"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 68,
+      "files": [
+        {
+          "url": "https://global.brunnerctf.dk/files/8448dedcfac8172c75c877fa7b2465a8/pwn_mindbreaker.zip?token=eyJ1c2VyX2lkIjozMzY2LCJ0ZWFtX2lkIjoxNzE2LCJmaWxlX2lkIjoyN30.aoli0w.jbwDQfbQ-XJzHyXRDmRWESpqGkU",
+          "name": "pwn_mindbreaker.zip",
+          "saved_path": "/home/light/Workspace/CTF/BrunnerCTF_2026_-_Global/Pwn/Mindbreaker/pwn_mindbreaker.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": 43,
+      "name": "WordPressed to root",
+      "category": "Boot2Root",
+      "points": 100,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 66,
+      "files": [
+        {
+          "url": "https://global.brunnerctf.dk/files/29fe167bf255ba7ef274f24ce389f364/boot2root_wordpressed-to-root.zip?token=eyJ1c2VyX2lkIjozMzY2LCJ0ZWFtX2lkIjoxNzE2LCJmaWxlX2lkIjozMH0.aoli0w.yPi1l8A9CIlM9WQn6EuuQGL2_Kc",
+          "name": "boot2root_wordpressed-to-root.zip",
+          "saved_path": "/home/light/Workspace/CTF/BrunnerCTF_2026_-_Global/Boot2Root/WordPressed_to_root/boot2root_wordpressed-to-root.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": 45,
+      "name": "Pure Notes",
+      "category": "Pwn",
+      "points": 100,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 100,
+      "files": [
+        {
+          "url": "https://global.brunnerctf.dk/files/e1ff4aa7272177cb593cc8e3b9ab9125/pwn_pure-notes.zip?token=eyJ1c2VyX2lkIjozMzY2LCJ0ZWFtX2lkIjoxNzE2LCJmaWxlX2lkIjozMX0.aoli1A.hga4RjWStGfq4yuZao5VMpDWsV4",
+          "name": "pwn_pure-notes.zip",
+          "saved_path": "/home/light/Workspace/CTF/BrunnerCTF_2026_-_Global/Pwn/Pure_Notes/pwn_pure-notes.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": 46,
+      "name": "Fair Gambling",
+      "category": "Web",
+      "points": 100,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 276,
+      "files": [
+        {
+          "url": "https://global.brunnerctf.dk/files/83e66ce1514c674c0d686d0aa85f4842/web_fair-gambling.zip?token=.eJyrViotTi2Kz0xRsjI2NjPTUSpJTcwFcw3NDYHctMycVKhsLQA0uA1c.aoli1A.EMzOCfWXHZgLglYc8Pwd3IZWJ88",
+          "name": "web_fair-gambling.zip",
+          "saved_path": "/home/light/Workspace/CTF/BrunnerCTF_2026_-_Global/Web/Fair_Gambling/web_fair-gambling.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": 49,
+      "name": "Functional Budget",
+      "category": "Misc",
+      "points": 100,
+      "author": null,
+      "tags": [
+        "Math"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 102,
+      "files": [
+        {
+          "url": "https://global.brunnerctf.dk/files/d7d39fed27492ace2860d3693c0c3394/misc_functional-budget.zip?token=eyJ1c2VyX2lkIjozMzY2LCJ0ZWFtX2lkIjoxNzE2LCJmaWxlX2lkIjozNn0.aoli1A.i75OZqOtYC5vzB3ZFOeGV6miNrg",
+          "name": "misc_functional-budget.zip",
+          "saved_path": "/home/light/Workspace/CTF/BrunnerCTF_2026_-_Global/Misc/Functional_Budget/misc_functional-budget.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": 52,
+      "name": "BrunnerCorp Pre-Employment Aptitude Test",
+      "category": "Reversing",
+      "points": 100,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 68,
+      "files": [
+        {
+          "url": "https://global.brunnerctf.dk/files/bcf9e0e89ba06a51a0332c1969459196/rev_aptitude-test.zip?token=eyJ1c2VyX2lkIjozMzY2LCJ0ZWFtX2lkIjoxNzE2LCJmaWxlX2lkIjozOX0.aoli1Q.Uf-hUTwWTrYQeOkhJxL_YNxsDlQ",
+          "name": "rev_aptitude-test.zip",
+          "saved_path": "/home/light/Workspace/CTF/BrunnerCTF_2026_-_Global/Reversing/BrunnerCorp_Pre-Employment_Aptitude_Test/rev_aptitude-test.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": 54,
+      "name": "Welcome Aboard",
+      "category": "Web",
+      "points": 100,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 127,
+      "files": []
+    },
+    {
+      "id": 58,
+      "name": "Bink Ink (User)",
+      "category": "Boot2Root",
+      "points": 100,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 82,
+      "files": [
+        {
+          "url": "https://global.brunnerctf.dk/files/1c64189af05aeea7298bdd3b821345e1/boot2root_bink-ink-user.zip?token=eyJ1c2VyX2lkIjozMzY2LCJ0ZWFtX2lkIjoxNzE2LCJmaWxlX2lkIjoxMjh9.aoli1g.yLvitQjCcFTERZQ87SkIS3isss8",
+          "name": "boot2root_bink-ink-user.zip",
+          "saved_path": "/home/light/Workspace/CTF/BrunnerCTF_2026_-_Global/Boot2Root/Bink_Ink_(User)/boot2root_bink-ink-user.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": 61,
+      "name": "OnePass",
+      "category": "Mobile",
+      "points": 100,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 130,
+      "files": [
+        {
+          "url": "https://global.brunnerctf.dk/files/ac6dda560fd0012086f8463acf3db5d4/mobile_onepass.zip?token=eyJ1c2VyX2lkIjozMzY2LCJ0ZWFtX2lkIjoxNzE2LCJmaWxlX2lkIjo0Nn0.aoli1g.FgMkTkA08KkfUUb9IKN49zlDJrg",
+          "name": "mobile_onepass.zip",
+          "saved_path": "/home/light/Workspace/CTF/BrunnerCTF_2026_-_Global/Mobile/OnePass/mobile_onepass.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": 63,
+      "name": "CakeSearch",
+      "category": "Mobile",
+      "points": 100,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 122,
+      "files": [
+        {
+          "url": "https://global.brunnerctf.dk/files/bab853c7af696379aac8235b728cc21c/mobile_cakesearch.zip?token=eyJ1c2VyX2lkIjozMzY2LCJ0ZWFtX2lkIjoxNzE2LCJmaWxlX2lkIjo0OX0.aoli1g.cd2eL4efijRUD9k_m4bZJPxQU3I",
+          "name": "mobile_cakesearch.zip",
+          "saved_path": "/home/light/Workspace/CTF/BrunnerCTF_2026_-_Global/Mobile/CakeSearch/mobile_cakesearch.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": 69,
+      "name": "The North Star Metric",
+      "category": "OSINT",
+      "points": 100,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 148,
+      "files": [
+        {
+          "url": "https://global.brunnerctf.dk/files/27ec8b05719eb6b7b3a0c96cf95c6fd4/osint_the-north-star-metric.zip?token=eyJ1c2VyX2lkIjozMzY2LCJ0ZWFtX2lkIjoxNzE2LCJmaWxlX2lkIjoxMjR9.aoli1w.A8ktfH0oMKKlldPxqqmmgP-AdN8",
+          "name": "osint_the-north-star-metric.zip",
+          "saved_path": "/home/light/Workspace/CTF/BrunnerCTF_2026_-_Global/OSINT/The_North_Star_Metric/osint_the-north-star-metric.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": 70,
+      "name": "Free Play",
+      "category": "Forensics",
+      "points": 100,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 269,
+      "files": [
+        {
+          "url": "https://global.brunnerctf.dk/files/60d8f3a0f845a011ea5a81b88790403c/forensics_free-play.zip?token=eyJ1c2VyX2lkIjozMzY2LCJ0ZWFtX2lkIjoxNzE2LCJmaWxlX2lkIjo1N30.aoli1w.Pdv7r55Niy2kx9QvFuigiVn7BUw",
+          "name": "forensics_free-play.zip",
+          "saved_path": "/home/light/Workspace/CTF/BrunnerCTF_2026_-_Global/Forensics/Free_Play/forensics_free-play.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": 73,
+      "name": "Brunner Radio",
+      "category": "Crypto",
+      "points": 100,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": true,
+      "solves_count": 341,
+      "files": [
+        {
+          "url": "https://global.brunnerctf.dk/files/7658dbf5a6c280b20717221a8eaf6325/crypto_brunner-radio.zip?token=eyJ1c2VyX2lkIjozMzY2LCJ0ZWFtX2lkIjoxNzE2LCJmaWxlX2lkIjo2MH0.aoli2A.-mHQnz92gsweKrz5qmtHnvqimSc",
+          "name": "crypto_brunner-radio.zip",
+          "saved_path": "/home/light/Workspace/CTF/BrunnerCTF_2026_-_Global/Crypto/Brunner_Radio/crypto_brunner-radio.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": 76,
+      "name": "CAN you read this",
+      "category": "Forensics",
+      "points": 100,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 104,
+      "files": [
+        {
+          "url": "https://global.brunnerctf.dk/files/9891563138b68417c7dd2a264175cd1e/forensics_can-you-read-this.zip?token=eyJ1c2VyX2lkIjozMzY2LCJ0ZWFtX2lkIjoxNzE2LCJmaWxlX2lkIjo2MX0.aoli2A.bK42Uh6Zu8XCGcPZQ4XPTZJq5U8",
+          "name": "forensics_can-you-read-this.zip",
+          "saved_path": "/home/light/Workspace/CTF/BrunnerCTF_2026_-_Global/Forensics/CAN_you_read_this/forensics_can-you-read-this.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": 82,
+      "name": "Unknown Artist",
+      "category": "OSINT",
+      "points": 100,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 254,
+      "files": [
+        {
+          "url": "https://global.brunnerctf.dk/files/620b0c5695c2b885f5d8bc5bd6436395/osint_unknown-artist.zip?token=eyJ1c2VyX2lkIjozMzY2LCJ0ZWFtX2lkIjoxNzE2LCJmaWxlX2lkIjo2NH0.aoli2A.4V-nTqzAdjwjWex4JgsTAe39W60",
+          "name": "osint_unknown-artist.zip",
+          "saved_path": "/home/light/Workspace/CTF/BrunnerCTF_2026_-_Global/OSINT/Unknown_Artist/osint_unknown-artist.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": 85,
+      "name": "Brunner Mifflin (Root)",
+      "category": "Boot2Root",
+      "points": 100,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 217,
+      "files": []
+    },
+    {
+      "id": 88,
+      "name": "Half Baked",
+      "category": "Misc",
+      "points": 100,
+      "author": null,
+      "tags": [
+        "ML"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 229,
+      "files": [
+        {
+          "url": "https://global.brunnerctf.dk/files/10eb9ec6524f112459686b7a59cb5cd9/misc_half-baked.zip?token=eyJ1c2VyX2lkIjozMzY2LCJ0ZWFtX2lkIjoxNzE2LCJmaWxlX2lkIjo2Nn0.aoli2Q.Lxsffp7kE9ghxe8yPoMufJh9r0E",
+          "name": "misc_half-baked.zip",
+          "saved_path": "/home/light/Workspace/CTF/BrunnerCTF_2026_-_Global/Misc/Half_Baked/misc_half-baked.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": 90,
+      "name": "Roadmap",
+      "category": "Reversing",
+      "points": 100,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 253,
+      "files": [
+        {
+          "url": "https://global.brunnerctf.dk/files/84654b5400f1db19d5bb527727e42b18/rev_roadmap.zip?token=eyJ1c2VyX2lkIjozMzY2LCJ0ZWFtX2lkIjoxNzE2LCJmaWxlX2lkIjo2N30.aoli2g._NQNPuPceXVtRlCQtOkBNjh2hS0",
+          "name": "rev_roadmap.zip",
+          "saved_path": "/home/light/Workspace/CTF/BrunnerCTF_2026_-_Global/Reversing/Roadmap/rev_roadmap.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": 97,
+      "name": "Activating Neurons",
+      "category": "Misc",
+      "points": 100,
+      "author": null,
+      "tags": [
+        "ML"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 278,
+      "files": [
+        {
+          "url": "https://global.brunnerctf.dk/files/404ba9f30797612ea592dc55d0fa0a44/misc_activating-neurons.zip?token=eyJ1c2VyX2lkIjozMzY2LCJ0ZWFtX2lkIjoxNzE2LCJmaWxlX2lkIjo3Mn0.aoli2g.oaE0sqsqZARa4n0OG45iwugkgbI",
+          "name": "misc_activating-neurons.zip",
+          "saved_path": "/home/light/Workspace/CTF/BrunnerCTF_2026_-_Global/Misc/Activating_Neurons/misc_activating-neurons.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": 99,
+      "name": "Alternative channel",
+      "category": "Misc",
+      "points": 100,
+      "author": null,
+      "tags": [
+        "Stego"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 60,
+      "files": [
+        {
+          "url": "https://global.brunnerctf.dk/files/d43d0427d04388854f3e8f9716b0731f/misc_alternative-channel.zip?token=eyJ1c2VyX2lkIjozMzY2LCJ0ZWFtX2lkIjoxNzE2LCJmaWxlX2lkIjo3NX0.aoli2w.zI9a_0j9TzRAXw1kd2Diq4i7_SM",
+          "name": "misc_alternative-channel.zip",
+          "saved_path": "/home/light/Workspace/CTF/BrunnerCTF_2026_-_Global/Misc/Alternative_channel/misc_alternative-channel.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": 106,
+      "name": "Lockdown-mode",
+      "category": "Reversing",
+      "points": 100,
+      "author": null,
+      "tags": [
+        "LEGO"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 165,
+      "files": [
+        {
+          "url": "https://global.brunnerctf.dk/files/632423f46d0f407b1ea60f1233092803/rev_lockdown-mode.zip?token=eyJ1c2VyX2lkIjozMzY2LCJ0ZWFtX2lkIjoxNzE2LCJmaWxlX2lkIjo3Nn0.aoli2w.23Dau0Fzyduflq4vPppDmVsAQHE",
+          "name": "rev_lockdown-mode.zip",
+          "saved_path": "/home/light/Workspace/CTF/BrunnerCTF_2026_-_Global/Reversing/Lockdown-mode/rev_lockdown-mode.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": 109,
+      "name": "Reorg",
+      "category": "Reversing",
+      "points": 100,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 179,
+      "files": [
+        {
+          "url": "https://global.brunnerctf.dk/files/26868b51743f36492a13df16d84045ca/rev_reorg.zip?token=eyJ1c2VyX2lkIjozMzY2LCJ0ZWFtX2lkIjoxNzE2LCJmaWxlX2lkIjo3OX0.aoli3A.YKwm28QN5SpFJOqDi7qKrytqlgE",
+          "name": "rev_reorg.zip",
+          "saved_path": "/home/light/Workspace/CTF/BrunnerCTF_2026_-_Global/Reversing/Reorg/rev_reorg.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": 111,
+      "name": "KPWhy",
+      "category": "Reversing",
+      "points": 100,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 281,
+      "files": [
+        {
+          "url": "https://global.brunnerctf.dk/files/550b3885a2bb44a6cff94e10d0cdbba9/rev_kpwhy.zip?token=eyJ1c2VyX2lkIjozMzY2LCJ0ZWFtX2lkIjoxNzE2LCJmaWxlX2lkIjo4Mn0.aoli3A.n3_3MAPkdE1nSUAJ7XGdngunS8A",
+          "name": "rev_kpwhy.zip",
+          "saved_path": "/home/light/Workspace/CTF/BrunnerCTF_2026_-_Global/Reversing/KPWhy/rev_kpwhy.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": 112,
+      "name": "The Three Ways - Feedback",
+      "category": "Boot2Root",
+      "points": 100,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 70,
+      "files": []
+    },
+    {
+      "id": 115,
+      "name": "CleanDesk",
+      "category": "Mobile",
+      "points": 100,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 247,
+      "files": [
+        {
+          "url": "https://global.brunnerctf.dk/files/fb99eea0235e4758b5be264353a36668/mobile_cleandesk.zip?token=eyJ1c2VyX2lkIjozMzY2LCJ0ZWFtX2lkIjoxNzE2LCJmaWxlX2lkIjo4NX0.aoli3Q.Jyr_qSVeljmz9FSEmeXHmynHcLg",
+          "name": "mobile_cleandesk.zip",
+          "saved_path": "/home/light/Workspace/CTF/BrunnerCTF_2026_-_Global/Mobile/CleanDesk/mobile_cleandesk.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": 120,
+      "name": "OneVoice",
+      "category": "Mobile",
+      "points": 100,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 190,
+      "files": [
+        {
+          "url": "https://global.brunnerctf.dk/files/85ae9661bfc82024a835f0dc0d09d719/mobile_onevoice.zip?token=eyJ1c2VyX2lkIjozMzY2LCJ0ZWFtX2lkIjoxNzE2LCJmaWxlX2lkIjo5MH0.aoli3Q.0z0_P8pvrJgxcRjVDKFcTJsmJ3E",
+          "name": "mobile_onevoice.zip",
+          "saved_path": "/home/light/Workspace/CTF/BrunnerCTF_2026_-_Global/Mobile/OneVoice/mobile_onevoice.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": 123,
+      "name": "Shredded recipe",
+      "category": "Crypto",
+      "points": 100,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 250,
+      "files": [
+        {
+          "url": "https://global.brunnerctf.dk/files/06d86375ea10b7670d3e27f76771d4d4/crypto_shredded-recipe.zip?token=eyJ1c2VyX2lkIjozMzY2LCJ0ZWFtX2lkIjoxNzE2LCJmaWxlX2lkIjo5M30.aoli3g.nc06MAdp7AUFsB4y2hZxnJtyAlY",
+          "name": "crypto_shredded-recipe.zip",
+          "saved_path": "/home/light/Workspace/CTF/BrunnerCTF_2026_-_Global/Crypto/Shredded_recipe/crypto_shredded-recipe.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": 124,
+      "name": "Company Discount",
+      "category": "Forensics",
+      "points": 100,
+      "author": null,
+      "tags": [
+        "Malware"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 332,
+      "files": [
+        {
+          "url": "https://global.brunnerctf.dk/files/c5c9851743d869260312f6f42d156192/forensics_company-discount.zip?token=eyJ1c2VyX2lkIjozMzY2LCJ0ZWFtX2lkIjoxNzE2LCJmaWxlX2lkIjo5NH0.aoli3g.sNkEyDhkGBvaJHAzUbagKCfzBXU",
+          "name": "forensics_company-discount.zip",
+          "saved_path": "/home/light/Workspace/CTF/BrunnerCTF_2026_-_Global/Forensics/Company_Discount/forensics_company-discount.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": 129,
+      "name": "Trivago",
+      "category": "OSINT",
+      "points": 100,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 164,
+      "files": [
+        {
+          "url": "https://global.brunnerctf.dk/files/d8d57bd653234feebd4b3ac103b390cd/osint_trivago.zip?token=eyJ1c2VyX2lkIjozMzY2LCJ0ZWFtX2lkIjoxNzE2LCJmaWxlX2lkIjo5OX0.aoli3w.veNp3ud_t9zJD3Cd1mepO-l-of4",
+          "name": "osint_trivago.zip",
+          "saved_path": "/home/light/Workspace/CTF/BrunnerCTF_2026_-_Global/OSINT/Trivago/osint_trivago.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": 132,
+      "name": "TotalReward",
+      "category": "Mobile",
+      "points": 100,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 127,
+      "files": [
+        {
+          "url": "https://global.brunnerctf.dk/files/0d2f5e2143401718b073c237658e3008/mobile_totalreward.zip?token=eyJ1c2VyX2lkIjozMzY2LCJ0ZWFtX2lkIjoxNzE2LCJmaWxlX2lkIjoxMDJ9.aoli3w.VBP0PpzkdkHtB9hSbbMd3vqVDVA",
+          "name": "mobile_totalreward.zip",
+          "saved_path": "/home/light/Workspace/CTF/BrunnerCTF_2026_-_Global/Mobile/TotalReward/mobile_totalreward.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": 133,
+      "name": "Hidden embeddings",
+      "category": "Misc",
+      "points": 100,
+      "author": null,
+      "tags": [
+        "ML"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 201,
+      "files": [
+        {
+          "url": "https://global.brunnerctf.dk/files/3bfd83a528112f0b66f6360d158f5190/misc_hidden-embeddings.zip?token=eyJ1c2VyX2lkIjozMzY2LCJ0ZWFtX2lkIjoxNzE2LCJmaWxlX2lkIjoxMDV9.aoli4A.tVRKvRMdXEhdUtnZqD7e1_F0oxw",
+          "name": "misc_hidden-embeddings.zip",
+          "saved_path": "/home/light/Workspace/CTF/BrunnerCTF_2026_-_Global/Misc/Hidden_embeddings/misc_hidden-embeddings.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": 136,
+      "name": "The Missing Recipe",
+      "category": "Forensics",
+      "points": 100,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 187,
+      "files": [
+        {
+          "url": "https://global.brunnerctf.dk/files/1cd9211caaf05a8e9aeff0cf2230cb1b/forensics_the-missing-recipe.zip?token=eyJ1c2VyX2lkIjozMzY2LCJ0ZWFtX2lkIjoxNzE2LCJmaWxlX2lkIjoxMDZ9.aoli4A.jYufCs_-Ukn6XzG2KNed47ILONo",
+          "name": "forensics_the-missing-recipe.zip",
+          "saved_path": "/home/light/Workspace/CTF/BrunnerCTF_2026_-_Global/Forensics/The_Missing_Recipe/forensics_the-missing-recipe.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": 139,
+      "name": "π-crypt 0.57",
+      "category": "Crypto",
+      "points": 100,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": true,
+      "solves_count": 283,
+      "files": [
+        {
+          "url": "https://global.brunnerctf.dk/files/27decd107993623efb8c2cd997cf389c/crypto_pi-crypt-0-57.zip?token=eyJ1c2VyX2lkIjozMzY2LCJ0ZWFtX2lkIjoxNzE2LCJmaWxlX2lkIjoxMDh9.aoli4Q.z6O-ol3N9K96dZj6GzMvA9njMcs",
+          "name": "crypto_pi-crypt-0-57.zip",
+          "saved_path": "/home/light/Workspace/CTF/BrunnerCTF_2026_-_Global/Crypto/π-crypt_0.57/crypto_pi-crypt-0-57.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": 150,
+      "name": "The Three Ways - Continuous Improvement",
+      "category": "Boot2Root",
+      "points": 100,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 79,
+      "files": []
+    },
+    {
+      "id": 151,
+      "name": "Magic or not",
+      "category": "Misc",
+      "points": 100,
+      "author": null,
+      "tags": [
+        "Stego"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 253,
+      "files": [
+        {
+          "url": "https://global.brunnerctf.dk/files/dbbdf43bd09d7af70321fff05742db5b/misc_magic-or-not.zip?token=eyJ1c2VyX2lkIjozMzY2LCJ0ZWFtX2lkIjoxNzE2LCJmaWxlX2lkIjoxMTR9.aoli4g.s0pPbkST6uesPAl7n2rvCO9v_Dw",
+          "name": "misc_magic-or-not.zip",
+          "saved_path": "/home/light/Workspace/CTF/BrunnerCTF_2026_-_Global/Misc/Magic_or_not/misc_magic-or-not.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": 157,
+      "name": "Baked In",
+      "category": "Forensics",
+      "points": 100,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 52,
+      "files": [
+        {
+          "url": "https://files.brunnerctf.dk/forensics_baked-in.7z",
+          "name": "forensics_baked-in.7z",
+          "saved_path": null,
+          "success": false,
+          "source": "description_direct_file",
+          "message": "Failed to download file (HTTP status or connection error)"
+        }
+      ]
+    },
+    {
+      "id": 160,
+      "name": "Go Go Decompile",
+      "category": "Reversing",
+      "points": 100,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 317,
+      "files": [
+        {
+          "url": "https://global.brunnerctf.dk/files/c82f2c116166f70c446e177ff24d8885/rev_go-go-decompile.zip?token=eyJ1c2VyX2lkIjozMzY2LCJ0ZWFtX2lkIjoxNzE2LCJmaWxlX2lkIjoxMTV9.aoli4w.Mz5dRYIKP1cnzu6skZ-3SX5R-ls",
+          "name": "rev_go-go-decompile.zip",
+          "saved_path": "/home/light/Workspace/CTF/BrunnerCTF_2026_-_Global/Reversing/Go_Go_Decompile/rev_go-go-decompile.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": 162,
+      "name": "Bink Ink (Root)",
+      "category": "Boot2Root",
+      "points": 100,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 73,
+      "files": []
+    },
+    {
+      "id": 165,
+      "name": "Slis",
+      "category": "Crypto",
+      "points": 100,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": true,
+      "solves_count": 382,
+      "files": [
+        {
+          "url": "https://global.brunnerctf.dk/files/86106429b1aafe30b5ac749b77c276e1/crypto_slis.zip?token=eyJ1c2VyX2lkIjozMzY2LCJ0ZWFtX2lkIjoxNzE2LCJmaWxlX2lkIjoxMTh9.aoli5A.edIqzPcmBH3XnhH2zwtyqAePVmc",
+          "name": "crypto_slis.zip",
+          "saved_path": "/home/light/Workspace/CTF/BrunnerCTF_2026_-_Global/Crypto/Slis/crypto_slis.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": 171,
+      "name": "Rubik's Cube",
+      "category": "Forensics",
+      "points": 100,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 232,
+      "files": [
+        {
+          "url": "https://global.brunnerctf.dk/files/b25190afd340a9c6f4b0bedb994839a7/forensics_rubiks-cube.zip?token=eyJ1c2VyX2lkIjozMzY2LCJ0ZWFtX2lkIjoxNzE2LCJmaWxlX2lkIjoxMjF9.aoli5Q.21N_NR7BppSUwMMSl3VmpXog37I",
+          "name": "forensics_rubiks-cube.zip",
+          "saved_path": "/home/light/Workspace/CTF/BrunnerCTF_2026_-_Global/Forensics/Rubik's_Cube/forensics_rubiks-cube.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "name": "Guessing game",
+      "category": "Pwn",
+      "points": 125,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 44,
+      "files": [
+        {
+          "url": "https://global.brunnerctf.dk/files/6705d37a2bbca9261cb699942742d832/pwn_guessing-game.zip?token=eyJ1c2VyX2lkIjozMzY2LCJ0ZWFtX2lkIjoxNzE2LCJmaWxlX2lkIjoyNH0.aoli5Q.tqWhFDJm0scrmi6KSo-XoDW1wdg",
+          "name": "pwn_guessing-game.zip",
+          "saved_path": "/home/light/Workspace/CTF/BrunnerCTF_2026_-_Global/Pwn/Guessing_game/pwn_guessing-game.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": 55,
+      "name": "Technical Debt",
+      "category": "Web",
+      "points": 130,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 64,
+      "files": [
+        {
+          "url": "https://global.brunnerctf.dk/files/3bcfe681e27be9fd10ce86076591c1e8/web_technical-debt.zip?token=eyJ1c2VyX2lkIjozMzY2LCJ0ZWFtX2lkIjoxNzE2LCJmaWxlX2lkIjoxMjV9.aoli5Q.UA3QPsxWbW4dpxxJx-lLLpWUsHI",
+          "name": "web_technical-debt.zip",
+          "saved_path": "/home/light/Workspace/CTF/BrunnerCTF_2026_-_Global/Web/Technical_Debt/web_technical-debt.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": 145,
+      "name": "The Birthplace",
+      "category": "OSINT",
+      "points": 186,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 36,
+      "files": [
+        {
+          "url": "https://global.brunnerctf.dk/files/6ef66d17b0657d709aa9cd096ac2ffda/osint_the-birthplace.zip?token=eyJ1c2VyX2lkIjozMzY2LCJ0ZWFtX2lkIjoxNzE2LCJmaWxlX2lkIjoxMTJ9.aoli5g.JpmB9OvCi0cIdAFZ_Vhl6SjAeq0",
+          "name": "osint_the-birthplace.zip",
+          "saved_path": "/home/light/Workspace/CTF/BrunnerCTF_2026_-_Global/OSINT/The_Birthplace/osint_the-birthplace.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": 66,
+      "name": "New product - Brun-water",
+      "category": "OSINT",
+      "points": 834,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 9,
+      "files": [
+        {
+          "url": "https://global.brunnerctf.dk/files/d05c1c2e61b6aded8aa49a77ce7319e0/osint_new-product-brun-water.zip?token=eyJ1c2VyX2lkIjozMzY2LCJ0ZWFtX2lkIjoxNzE2LCJmaWxlX2lkIjo1MX0.aoli5g.Z-JXCAZLMq11shQfq77Vk1eikAo",
+          "name": "osint_new-product-brun-water.zip",
+          "saved_path": "/home/light/Workspace/CTF/BrunnerCTF_2026_-_Global/OSINT/New_product_-_Brun-water/osint_new-product-brun-water.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+services:
+  app:
+    platform: linux/amd64
+    build:
+      context: .
+      dockerfile: app/Dockerfile
+    environment:
+      RUNNER_ADDRESS: runner:5000
+      TRUSTED_PROXY_COUNT: "0"
+    depends_on:
+      - runner
+    ports:
+      - "${PORT:-3000}:3000"
+    networks:
+      - frontend
+      - backend
+
+  runner:
+    platform: linux/amd64
+    build:
+      context: .
+      dockerfile: runner/Dockerfile
+      args:
+        SFEX_GIT_REV: d9f6677e156304ee52b71eb31367309522b7f67e
+    expose:
+      - "5000"
+    networks:
+      - backend
+
+networks:
+  frontend:
+  backend:
+    internal: true

@@ -1,0 +1,33 @@
+<div class="challengeDescription">
+ <!-- <p> -->
+ There's another issue caused by allowing attackers to specify their own algorithms but not carefully validating them. Attackers can mix and match the algorithms that are used to sign and verify data. When one of these is a symmetric algorithm and one is an asymmetric algorithm, this creates a beautiful vulnerability.
+ <br/>
+ <br/>
+ <span class="note">
+  <i class="fas fa-lightbulb">
+  </i>
+  The server is running PyJWT with a small patch to enable an exploit that existed in PyJWT versions &lt;= 1.5.0. To create the malicious signature, you will need to patch your PyJWT library too. If you want to patch, look at the line that was added in the
+  <a href="https://github.com/jpadilla/pyjwt/commit/37926ea0dd207db070b45473438853447e4c1392">
+   fix for the vulnerability
+  </a>
+  . Use
+  <code>
+   pip show pyjwt
+  </code>
+  to find the location of the PyJWT library on your computer, and make the edit. For versions of PyJWT &gt; 2.4.0 the code has been changed so you will have to edit
+  <code>
+   jwt/utils.py
+  </code>
+  instead of
+  <code>
+   jwt/algorithms.py
+  </code>
+ </span>
+ <br/>
+ <br/>
+ Play at
+ <a href="https://web.cryptohack.org/rsa-or-hmac" target="_blank">
+  https://web.cryptohack.org/rsa-or-hmac
+ </a>
+ <!-- </p> -->
+</div>

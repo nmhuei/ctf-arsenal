@@ -1,0 +1,419 @@
+<div class="challengeDescription">
+ <!-- <p> -->
+ You are now ready to implement a full CSIDH key exchange! In the source file you are given a prime modulus, a starting curve
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <msub>
+        <mi>
+         E
+        </mi>
+        <mn>
+         0
+        </mn>
+       </msub>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       E_0
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 0.8333em; vertical-align: -0.15em;">
+     </span>
+     <span class="mord">
+      <span class="mord mathnormal" style="margin-right: 0.0576em;">
+       E
+      </span>
+      <span class="msupsub">
+       <span class="vlist-t vlist-t2">
+        <span class="vlist-r">
+         <span class="vlist" style="height: 0.3011em;">
+          <span class="" style="top: -2.55em; margin-left: -0.0576em; margin-right: 0.05em;">
+           <span class="pstrut" style="height: 2.7em;">
+           </span>
+           <span class="sizing reset-size6 size3 mtight">
+            <span class="mord mtight">
+             0
+            </span>
+           </span>
+          </span>
+         </span>
+         <span class="vlist-s">
+          ​
+         </span>
+        </span>
+        <span class="vlist-r">
+         <span class="vlist" style="height: 0.15em;">
+          <span class="">
+          </span>
+         </span>
+        </span>
+       </span>
+      </span>
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ , an array of odd primes and two arrays of private keys with values between
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mo>
+        ±
+       </mo>
+       <mn>
+        3
+       </mn>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       \pm 3
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 0.7278em; vertical-align: -0.0833em;">
+     </span>
+     <span class="mord">
+      ±
+     </span>
+     <span class="mord">
+      3
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ .
+ <br/>
+ <br/>
+ The secret isogeny is computed by stepping "forward" with
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi>
+        e
+       </mi>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       e
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 0.4306em;">
+     </span>
+     <span class="mord mathnormal">
+      e
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi mathvariant="normal">
+        ℓ
+       </mi>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       \ell
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 0.6944em;">
+     </span>
+     <span class="mord">
+      ℓ
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ -isogenies when
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi>
+        e
+       </mi>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       e
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 0.4306em;">
+     </span>
+     <span class="mord mathnormal">
+      e
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ is positive, and stepping backwards when
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi>
+        e
+       </mi>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       e
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 0.4306em;">
+     </span>
+     <span class="mord mathnormal">
+      e
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ is negative. Note that it doesn't matter which order you compute these steps (all the
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi mathvariant="normal">
+        ℓ
+       </mi>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       \ell
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 0.6944em;">
+     </span>
+     <span class="mord">
+      ℓ
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ are coprime) and it is the commutativity of these
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi mathvariant="normal">
+        ℓ
+       </mi>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       \ell
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 0.6944em;">
+     </span>
+     <span class="mord">
+      ℓ
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ -isogenies which you will compute which allows us to use these isogenies to build a non-interactive key exchange.
+ <br/>
+ <br/>
+ This means, given some exponent vector, a public key is set as the Montgomery coefficient A after computing the corresponding isogeny from
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <msub>
+        <mi>
+         E
+        </mi>
+        <mn>
+         0
+        </mn>
+       </msub>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       E_0
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 0.8333em; vertical-align: -0.15em;">
+     </span>
+     <span class="mord">
+      <span class="mord mathnormal" style="margin-right: 0.0576em;">
+       E
+      </span>
+      <span class="msupsub">
+       <span class="vlist-t vlist-t2">
+        <span class="vlist-r">
+         <span class="vlist" style="height: 0.3011em;">
+          <span class="" style="top: -2.55em; margin-left: -0.0576em; margin-right: 0.05em;">
+           <span class="pstrut" style="height: 2.7em;">
+           </span>
+           <span class="sizing reset-size6 size3 mtight">
+            <span class="mord mtight">
+             0
+            </span>
+           </span>
+          </span>
+         </span>
+         <span class="vlist-s">
+          ​
+         </span>
+        </span>
+        <span class="vlist-r">
+         <span class="vlist" style="height: 0.15em;">
+          <span class="">
+          </span>
+         </span>
+        </span>
+       </span>
+      </span>
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ . If Alice and Bob compute their public keys and then compute the same isogeny (same exponent vector) from each others public curves, they effectively will have walked from
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <msub>
+        <mi>
+         E
+        </mi>
+        <mn>
+         0
+        </mn>
+       </msub>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       E_0
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 0.8333em; vertical-align: -0.15em;">
+     </span>
+     <span class="mord">
+      <span class="mord mathnormal" style="margin-right: 0.0576em;">
+       E
+      </span>
+      <span class="msupsub">
+       <span class="vlist-t vlist-t2">
+        <span class="vlist-r">
+         <span class="vlist" style="height: 0.3011em;">
+          <span class="" style="top: -2.55em; margin-left: -0.0576em; margin-right: 0.05em;">
+           <span class="pstrut" style="height: 2.7em;">
+           </span>
+           <span class="sizing reset-size6 size3 mtight">
+            <span class="mord mtight">
+             0
+            </span>
+           </span>
+          </span>
+         </span>
+         <span class="vlist-s">
+          ​
+         </span>
+        </span>
+        <span class="vlist-r">
+         <span class="vlist" style="height: 0.15em;">
+          <span class="">
+          </span>
+         </span>
+        </span>
+       </span>
+      </span>
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ with an isogeny computed from the sum of their two secret exponent vectors. As addition is associative, so is CSIDH (there's a lot more to this fact) and the codomain of their second isogenies will match. Their shared secret is then the Montgomery coefficient of this final curve.
+ <br/>
+ <br/>
+ To get the flag, use the private keys provided to compute Alice and Bob's public keys. Send these keys between the two parties and then compute the shared secret. Use this to decrypt the flag and finish the section! Good Luck and well done with the hard work :)
+ <br/>
+ <br/>
+ <b>
+  Challenge files:
+ </b>
+ <br/>
+ -
+ <a download="" href="/static/challenges/source_47e3caad5ebcbefb8210c11b8c93efe0.sage">
+  source.sage
+ </a>
+ <br/>
+ <br/>
+ <b>
+  Resources:
+ </b>
+ <br/>
+ -
+ <a href="https://eprint.iacr.org/2018/383.pdf" target="_blank">
+  CSIDH: An Efficient Post-Quantum Commutative Group Action, Wouter Castryck, Tanja Lange, Chloe Martindale, Lorenz Panny, and Joost Renes
+ </a>
+ <br/>
+ <!-- </p> -->
+</div>

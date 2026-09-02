@@ -1,0 +1,10 @@
+namespace Session1.ClipBoard;
+
+public class ClipInfo
+{
+	public string time { get; set; }
+
+	public string type { get; set; }
+
+	public string content { get; set; }
+}

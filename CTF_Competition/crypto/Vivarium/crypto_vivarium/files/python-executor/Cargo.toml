@@ -1,0 +1,20 @@
+[package]
+name = "vivarium-handout"
+version = "0.1.0"
+edition = "2024"
+autobins = false
+
+[[bin]]
+name = "python-executor"
+path = "src/main.rs"
+
+[dependencies]
+axum = { version = "0.8", features = ["json"] }
+serde = { version = "1", features = ["derive"] }
+tokio = { version = "1", features = ["full"] }
+
+[profile.release]
+lto = "thin"
+codegen-units = 1
+strip = true
+panic = "abort"

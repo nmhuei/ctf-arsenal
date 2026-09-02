@@ -1,0 +1,33 @@
+{
+  "category": "Isogenies",
+  "category_slug": "isogenies",
+  "stage": "Road to CSIDH",
+  "stage_slug": "road_to_csidh",
+  "title": "CSIDH Key Exchange",
+  "slug": "csidh-key-exchange",
+  "data_challenge": "csidh_key_exchange",
+  "points": 90,
+  "solves": 270,
+  "url": "https://cryptohack.org/challenges/isogenies/",
+  "attachments": [
+    {
+      "text": "source.sage",
+      "href": "/static/challenges/source_47e3caad5ebcbefb8210c11b8c93efe0.sage",
+      "url": "https://cryptohack.org/static/challenges/source_47e3caad5ebcbefb8210c11b8c93efe0.sage",
+      "download": true,
+      "saved_as": "files/source_47e3caad5ebcbefb8210c11b8c93efe0.sage",
+      "status": 200,
+      "size": 1795
+    }
+  ],
+  "resources": [
+    {
+      "text": "CSIDH: An Efficient Post-Quantum Commutative Group Action, Wouter Castryck, Tanja Lange, Chloe Martindale, Lorenz Panny, and Joost Renes",
+      "href": "https://eprint.iacr.org/2018/383.pdf",
+      "url": "https://eprint.iacr.org/2018/383.pdf",
+      "download": false
+    }
+  ],
+  "statement_html": "statement.html",
+  "statement_md": "statement.md"
+}

@@ -1,0 +1,38 @@
+services:
+  proxy:
+    build: ./proxy
+    ports:
+      - "${PROXY_PORT:-3000}:3000"
+    environment:
+      PORT: "3000"
+      ADMIN_TOKEN: "${ADMIN_TOKEN}"
+      API_URL: "http://api:9090"
+      API_KEY: "${API_KEY}"
+    networks:
+      - frontnet
+    depends_on:
+      - api
+
+  api:
+    build: ./api
+    environment:
+      FLASK_APP: "app.py"
+      OAUTH_SECRET: "${OAUTH_SECRET}"
+    networks:
+      - backnet
+
+  bot:
+    build: ./bot
+    ports:
+      - "${BOT_PORT:-8000}:8000"
+    environment:
+      PORT: "8000"
+      SITE: "${SITE:-http://proxy:3000}"
+      ADMIN_TOKEN: "${ADMIN_TOKEN}"
+    networks:
+      - frontnet
+      - backnet
+
+networks:
+  frontnet:
+  backnet:

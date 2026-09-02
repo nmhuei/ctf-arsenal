@@ -1,0 +1,640 @@
+<div class="challengeDescription">
+ <!-- <p> -->
+ This can be turned into a public key cryptosystem by using the "additively homomorphic" property of LWE. That is, given an encryption
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mo stretchy="false">
+        ⟨
+       </mo>
+       <mi>
+        A
+       </mi>
+       <mo separator="true">
+        ,
+       </mo>
+       <mi>
+        b
+       </mi>
+       <mo stretchy="false">
+        ⟩
+       </mo>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       \langle A, b \rangle
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 1em; vertical-align: -0.25em;">
+     </span>
+     <span class="mopen">
+      ⟨
+     </span>
+     <span class="mord mathnormal">
+      A
+     </span>
+     <span class="mpunct">
+      ,
+     </span>
+     <span class="mspace" style="margin-right: 0.1667em;">
+     </span>
+     <span class="mord mathnormal">
+      b
+     </span>
+     <span class="mclose">
+      ⟩
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ encrypting the number
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi>
+        m
+       </mi>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       m
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 0.4306em;">
+     </span>
+     <span class="mord mathnormal">
+      m
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ , it is possible for anyone to turn this into a valid encryption of
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi>
+        m
+       </mi>
+       <mo>
+        +
+       </mo>
+       <msub>
+        <mi>
+         m
+        </mi>
+        <mn>
+         2
+        </mn>
+       </msub>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       m + m_2
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 0.6667em; vertical-align: -0.0833em;">
+     </span>
+     <span class="mord mathnormal">
+      m
+     </span>
+     <span class="mspace" style="margin-right: 0.2222em;">
+     </span>
+     <span class="mbin">
+      +
+     </span>
+     <span class="mspace" style="margin-right: 0.2222em;">
+     </span>
+    </span>
+    <span class="base">
+     <span class="strut" style="height: 0.5806em; vertical-align: -0.15em;">
+     </span>
+     <span class="mord">
+      <span class="mord mathnormal">
+       m
+      </span>
+      <span class="msupsub">
+       <span class="vlist-t vlist-t2">
+        <span class="vlist-r">
+         <span class="vlist" style="height: 0.3011em;">
+          <span class="" style="top: -2.55em; margin-left: 0em; margin-right: 0.05em;">
+           <span class="pstrut" style="height: 2.7em;">
+           </span>
+           <span class="sizing reset-size6 size3 mtight">
+            <span class="mord mtight">
+             2
+            </span>
+           </span>
+          </span>
+         </span>
+         <span class="vlist-s">
+          ​
+         </span>
+        </span>
+        <span class="vlist-r">
+         <span class="vlist" style="height: 0.15em;">
+          <span class="">
+          </span>
+         </span>
+        </span>
+       </span>
+      </span>
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ for any number
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <msub>
+        <mi>
+         m
+        </mi>
+        <mn>
+         2
+        </mn>
+       </msub>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       m_2
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 0.5806em; vertical-align: -0.15em;">
+     </span>
+     <span class="mord">
+      <span class="mord mathnormal">
+       m
+      </span>
+      <span class="msupsub">
+       <span class="vlist-t vlist-t2">
+        <span class="vlist-r">
+         <span class="vlist" style="height: 0.3011em;">
+          <span class="" style="top: -2.55em; margin-left: 0em; margin-right: 0.05em;">
+           <span class="pstrut" style="height: 2.7em;">
+           </span>
+           <span class="sizing reset-size6 size3 mtight">
+            <span class="mord mtight">
+             2
+            </span>
+           </span>
+          </span>
+         </span>
+         <span class="vlist-s">
+          ​
+         </span>
+        </span>
+        <span class="vlist-r">
+         <span class="vlist" style="height: 0.15em;">
+          <span class="">
+          </span>
+         </span>
+        </span>
+       </span>
+      </span>
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ . Explicitly, this is done by computing
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mo stretchy="false">
+        ⟨
+       </mo>
+       <mi>
+        A
+       </mi>
+       <mo separator="true">
+        ,
+       </mo>
+       <mi>
+        b
+       </mi>
+       <mo>
+        +
+       </mo>
+       <msub>
+        <mi>
+         m
+        </mi>
+        <mn>
+         2
+        </mn>
+       </msub>
+       <mo stretchy="false">
+        ⟩
+       </mo>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       \langle A, b + m_2 \rangle
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 1em; vertical-align: -0.25em;">
+     </span>
+     <span class="mopen">
+      ⟨
+     </span>
+     <span class="mord mathnormal">
+      A
+     </span>
+     <span class="mpunct">
+      ,
+     </span>
+     <span class="mspace" style="margin-right: 0.1667em;">
+     </span>
+     <span class="mord mathnormal">
+      b
+     </span>
+     <span class="mspace" style="margin-right: 0.2222em;">
+     </span>
+     <span class="mbin">
+      +
+     </span>
+     <span class="mspace" style="margin-right: 0.2222em;">
+     </span>
+    </span>
+    <span class="base">
+     <span class="strut" style="height: 1em; vertical-align: -0.25em;">
+     </span>
+     <span class="mord">
+      <span class="mord mathnormal">
+       m
+      </span>
+      <span class="msupsub">
+       <span class="vlist-t vlist-t2">
+        <span class="vlist-r">
+         <span class="vlist" style="height: 0.3011em;">
+          <span class="" style="top: -2.55em; margin-left: 0em; margin-right: 0.05em;">
+           <span class="pstrut" style="height: 2.7em;">
+           </span>
+           <span class="sizing reset-size6 size3 mtight">
+            <span class="mord mtight">
+             2
+            </span>
+           </span>
+          </span>
+         </span>
+         <span class="vlist-s">
+          ​
+         </span>
+        </span>
+        <span class="vlist-r">
+         <span class="vlist" style="height: 0.15em;">
+          <span class="">
+          </span>
+         </span>
+        </span>
+       </span>
+      </span>
+     </span>
+     <span class="mclose">
+      ⟩
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ for low-bit messages (high-bit noise) and
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mo stretchy="false">
+        ⟨
+       </mo>
+       <mi>
+        A
+       </mi>
+       <mo separator="true">
+        ,
+       </mo>
+       <mi>
+        b
+       </mi>
+       <mo>
+        +
+       </mo>
+       <mi mathvariant="normal">
+        Δ
+       </mi>
+       <mo>
+        ⋅
+       </mo>
+       <msub>
+        <mi>
+         m
+        </mi>
+        <mn>
+         2
+        </mn>
+       </msub>
+       <mo stretchy="false">
+        ⟩
+       </mo>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       \langle A, b + \Delta \cdot m_2 \rangle
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 1em; vertical-align: -0.25em;">
+     </span>
+     <span class="mopen">
+      ⟨
+     </span>
+     <span class="mord mathnormal">
+      A
+     </span>
+     <span class="mpunct">
+      ,
+     </span>
+     <span class="mspace" style="margin-right: 0.1667em;">
+     </span>
+     <span class="mord mathnormal">
+      b
+     </span>
+     <span class="mspace" style="margin-right: 0.2222em;">
+     </span>
+     <span class="mbin">
+      +
+     </span>
+     <span class="mspace" style="margin-right: 0.2222em;">
+     </span>
+    </span>
+    <span class="base">
+     <span class="strut" style="height: 0.6833em;">
+     </span>
+     <span class="mord">
+      Δ
+     </span>
+     <span class="mspace" style="margin-right: 0.2222em;">
+     </span>
+     <span class="mbin">
+      ⋅
+     </span>
+     <span class="mspace" style="margin-right: 0.2222em;">
+     </span>
+    </span>
+    <span class="base">
+     <span class="strut" style="height: 1em; vertical-align: -0.25em;">
+     </span>
+     <span class="mord">
+      <span class="mord mathnormal">
+       m
+      </span>
+      <span class="msupsub">
+       <span class="vlist-t vlist-t2">
+        <span class="vlist-r">
+         <span class="vlist" style="height: 0.3011em;">
+          <span class="" style="top: -2.55em; margin-left: 0em; margin-right: 0.05em;">
+           <span class="pstrut" style="height: 2.7em;">
+           </span>
+           <span class="sizing reset-size6 size3 mtight">
+            <span class="mord mtight">
+             2
+            </span>
+           </span>
+          </span>
+         </span>
+         <span class="vlist-s">
+          ​
+         </span>
+        </span>
+        <span class="vlist-r">
+         <span class="vlist" style="height: 0.15em;">
+          <span class="">
+          </span>
+         </span>
+        </span>
+       </span>
+      </span>
+     </span>
+     <span class="mclose">
+      ⟩
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ for high-bit messages (low-bit noise).
+ <br/>
+ <br/>
+ <span class="note">
+  <i class="fas fa-brain">
+  </i>
+  While this additively homomorphic property is more straightforward to see when the message is stored in low-bits, it is also present when the message is stored in high-bits.
+ </span>
+ <br/>
+ <br/>
+ Similarly, adding two LWE ciphertexts produces a new valid ciphertext which encrypts the sum of the corresponding plaintexts. The owner of the private key can use this property to turn LWE into a public-key system by releasing many different "encryptions of zero" as the public key. For Alice to use this information to encrypt, she first chooses a random subset of these "encryptions of zero" and add them together. By the second additively homomorphic property, this is also a valid encryption of zero. Next, Alice creates a new encoding of her message
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi>
+        m
+       </mi>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       m
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 0.4306em;">
+     </span>
+     <span class="mord mathnormal">
+      m
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ , and adds this encoded message to this new encryption of zero. By the first additively homomorphic property, this is a valid encryption of
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi>
+        m
+       </mi>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       m
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 0.4306em;">
+     </span>
+     <span class="mord mathnormal">
+      m
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ . This procedure requires the distribution from which the noise samples are drawn to be carefully chosen so that the final error term is (with high probability) below the threshold needed to decrypt.
+ <br/>
+ <br/>
+ In order for this to be secure, it must be hard for an adversary to determine which public key samples were summed to produce the LWE ciphertext. To ensure this, the number of "encryptions of zero" in the public key must be significantly larger than the LWE dimension. As such, the size of the public key scales as
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi>
+        O
+       </mi>
+       <mo stretchy="false">
+        (
+       </mo>
+       <msup>
+        <mi>
+         n
+        </mi>
+        <mn>
+         2
+        </mn>
+       </msup>
+       <mi>
+        log
+       </mi>
+       <mo>
+        ⁡
+       </mo>
+       <mo stretchy="false">
+        (
+       </mo>
+       <mi>
+        q
+       </mi>
+       <mo stretchy="false">
+        )
+       </mo>
+       <mo stretchy="false">
+        )
+       </mo>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       O(n^2 \log(q))
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 1.0641em; vertical-align: -0.25em;">
+     </span>
+     <span class="mord mathnormal" style="margin-right: 0.0278em;">
+      O
+     </span>
+     <span class="mopen">
+      (
+     </span>
+     <span class="mord">
+      <span class="mord mathnormal">
+       n
+      </span>
+      <span class="msupsub">
+       <span class="vlist-t">
+        <span class="vlist-r">
+         <span class="vlist" style="height: 0.8141em;">
+          <span class="" style="top: -3.063em; margin-right: 0.05em;">
+           <span class="pstrut" style="height: 2.7em;">
+           </span>
+           <span class="sizing reset-size6 size3 mtight">
+            <span class="mord mtight">
+             2
+            </span>
+           </span>
+          </span>
+         </span>
+        </span>
+       </span>
+      </span>
+     </span>
+     <span class="mspace" style="margin-right: 0.1667em;">
+     </span>
+     <span class="mop">
+      lo
+      <span style="margin-right: 0.0139em;">
+       g
+      </span>
+     </span>
+     <span class="mopen">
+      (
+     </span>
+     <span class="mord mathnormal" style="margin-right: 0.0359em;">
+      q
+     </span>
+     <span class="mclose">
+      ))
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ bits, making LWE cryptosystems have large public keys.
+ <br/>
+ <br/>
+ What is the size of a Kyber1024 public key in bytes?
+ <br/>
+ <br/>
+ Challenge contributed by
+ <a class="gold-link" href="/user/ireland">
+  ireland
+ </a>
+ <!-- </p> -->
+</div>

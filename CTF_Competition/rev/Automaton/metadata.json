@@ -1,0 +1,33 @@
+{
+  "id": "cb5901ab144cb48e",
+  "name": "Automaton",
+  "category": "rev",
+  "points": 177,
+  "author": "xyptonize",
+  "tags": [],
+  "hints": [],
+  "connection_info": null,
+  "solved_by_me": false,
+  "solves_count": 86,
+  "downloaded_files": [
+    {
+      "url": "https://automaton-ynwhxfwg.challenge.2026.haruulzangi.mn/artifact.zip",
+      "name": null,
+      "saved_path": null,
+      "success": false,
+      "source": "description_direct_file",
+      "message": "Failed to download file (HTTP status or connection error)"
+    }
+  ],
+  "raw": {
+    "id": "cb5901ab144cb48e",
+    "name": "Automaton",
+    "description": "A counterpart agent guards its channel with a gate: hand it the right\ntoken and it opens, hand it anything else and it stays shut. The gate does\nnot compare your token to a stored string — it runs your token through a\nlittle machine of its own and checks the result. The machine, and what it\nchecks against, are all that ship.\n\nRecover the token the gate will accept. That is your flag.\n\nThe handout is a self-contained WebAssembly module (plus a tiny runner);\nthere is no network, no anti-debug, and no trick — the whole answer is\ndeterministically inside it.\n\n> [!CONNECTION]\n> https://automaton-ynwhxfwg.challenge.2026.haruulzangi.mn/artifact.zip",
+    "category": "rev",
+    "author": "xyptonize",
+    "files": [],
+    "points": 177,
+    "solves": 86,
+    "sortWeight": 0
+  }
+}

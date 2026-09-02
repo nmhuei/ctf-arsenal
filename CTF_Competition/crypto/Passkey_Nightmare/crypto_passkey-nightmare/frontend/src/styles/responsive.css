@@ -1,0 +1,21 @@
+@media (max-width: 820px) {
+  .topbar { grid-template-columns: 1fr auto; padding: 0 18px; }
+  .topbar-center { display: none; }
+  .workspace { grid-template-columns: 1fr; grid-template-rows: minmax(460px, 55vh) minmax(600px, auto); }
+  .editor-panel { border-right: 0; border-bottom: 1px solid var(--line); }
+  .output-panel { min-height: 700px; }
+  .document, .raw-view { padding-left: 24px; padding-right: 24px; }
+}
+
+@media (max-width: 520px) {
+  .app-shell { grid-template-rows: 64px 1fr 38px; }
+  .brand-name { font-size: 19px; }
+  .sample-button { display: none; }
+  .flag-button { padding: 8px 10px; }
+  .output-header { padding-left: 20px; padding-right: 20px; }
+  .parse-status { font-size: 0; }
+  .meta-grid { grid-template-columns: 1fr; }
+  .document, .raw-view { padding: 30px 20px 55px; }
+  footer { padding: 0 18px; }
+  .flag-notice { right: 16px; bottom: 50px; }
+}

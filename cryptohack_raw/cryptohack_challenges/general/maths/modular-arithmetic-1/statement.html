@@ -1,0 +1,621 @@
+<div class="challengeDescription">
+ <!-- <p> -->
+ Imagine you lean over and look at a cryptographer's notebook. You see some notes in the margin:
+ <br/>
+ <br/>
+ <span class="codeBlock">
+  4 + 9 = 1
+  <br/>
+  5 - 7 = 10
+  <br/>
+  2 + 3 = 5
+ </span>
+ <br/>
+ <br/>
+ At first you might think they've gone mad. Maybe this is why there are so many data leaks nowadays you'd think, but this is nothing more than modular arithmetic modulo 12 (albeit with some sloppy notation).
+ <br/>
+ <br/>
+ You may not have been calling it modular arithmetic, but you've been doing these kinds of calculations since you learnt to tell the time (look again at those equations and think about adding hours).
+ <br/>
+ <br/>
+ Formally, "calculating time" is described by the theory of congruences. We say that two integers are congruent modulo m if
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi>
+        a
+       </mi>
+       <mo>
+        ≡
+       </mo>
+       <mi>
+        b
+       </mi>
+       <mspace>
+       </mspace>
+       <mspace width="0.6667em">
+       </mspace>
+       <mrow>
+        <mi mathvariant="normal">
+         m
+        </mi>
+        <mi mathvariant="normal">
+         o
+        </mi>
+        <mi mathvariant="normal">
+         d
+        </mi>
+       </mrow>
+       <mi>
+        m
+       </mi>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       a \equiv b \mod m
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 0.4637em;">
+     </span>
+     <span class="mord mathnormal">
+      a
+     </span>
+     <span class="mspace" style="margin-right: 0.2778em;">
+     </span>
+     <span class="mrel">
+      ≡
+     </span>
+     <span class="mspace" style="margin-right: 0.2778em;">
+     </span>
+    </span>
+    <span class="base">
+     <span class="strut" style="height: 0.6944em;">
+     </span>
+     <span class="mord mathnormal">
+      b
+     </span>
+     <span class="mspace allowbreak">
+     </span>
+     <span class="mspace" style="margin-right: 0.6667em;">
+     </span>
+    </span>
+    <span class="base">
+     <span class="strut" style="height: 0.6944em;">
+     </span>
+     <span class="mord">
+      <span class="mord">
+       <span class="mord mathrm">
+        mod
+       </span>
+      </span>
+     </span>
+     <span class="mspace" style="margin-right: 0.1667em;">
+     </span>
+     <span class="mspace" style="margin-right: 0.1667em;">
+     </span>
+     <span class="mord mathnormal">
+      m
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ .
+ <br/>
+ <br/>
+ Another way of saying this, is that when we divide the integer
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi>
+        a
+       </mi>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       a
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 0.4306em;">
+     </span>
+     <span class="mord mathnormal">
+      a
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ by
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi>
+        m
+       </mi>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       m
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 0.4306em;">
+     </span>
+     <span class="mord mathnormal">
+      m
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ , the remainder is
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi>
+        b
+       </mi>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       b
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 0.6944em;">
+     </span>
+     <span class="mord mathnormal">
+      b
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ . This tells you that if
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi>
+        m
+       </mi>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       m
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 0.4306em;">
+     </span>
+     <span class="mord mathnormal">
+      m
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ divides
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi>
+        a
+       </mi>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       a
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 0.4306em;">
+     </span>
+     <span class="mord mathnormal">
+      a
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ (this can be written as
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi>
+        m
+       </mi>
+       <mi mathvariant="normal">
+        ∣
+       </mi>
+       <mi>
+        a
+       </mi>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       m | a
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 1em; vertical-align: -0.25em;">
+     </span>
+     <span class="mord mathnormal">
+      m
+     </span>
+     <span class="mord">
+      ∣
+     </span>
+     <span class="mord mathnormal">
+      a
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ ) then
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi>
+        a
+       </mi>
+       <mo>
+        ≡
+       </mo>
+       <mn>
+        0
+       </mn>
+       <mspace>
+       </mspace>
+       <mspace width="0.6667em">
+       </mspace>
+       <mrow>
+        <mi mathvariant="normal">
+         m
+        </mi>
+        <mi mathvariant="normal">
+         o
+        </mi>
+        <mi mathvariant="normal">
+         d
+        </mi>
+       </mrow>
+       <mi>
+        m
+       </mi>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       a\equiv 0 \mod m
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 0.4637em;">
+     </span>
+     <span class="mord mathnormal">
+      a
+     </span>
+     <span class="mspace" style="margin-right: 0.2778em;">
+     </span>
+     <span class="mrel">
+      ≡
+     </span>
+     <span class="mspace" style="margin-right: 0.2778em;">
+     </span>
+    </span>
+    <span class="base">
+     <span class="strut" style="height: 0.6444em;">
+     </span>
+     <span class="mord">
+      0
+     </span>
+     <span class="mspace allowbreak">
+     </span>
+     <span class="mspace" style="margin-right: 0.6667em;">
+     </span>
+    </span>
+    <span class="base">
+     <span class="strut" style="height: 0.6944em;">
+     </span>
+     <span class="mord">
+      <span class="mord">
+       <span class="mord mathrm">
+        mod
+       </span>
+      </span>
+     </span>
+     <span class="mspace" style="margin-right: 0.1667em;">
+     </span>
+     <span class="mspace" style="margin-right: 0.1667em;">
+     </span>
+     <span class="mord mathnormal">
+      m
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ .
+ <br/>
+ <br/>
+ Calculate the following integers:
+ <br/>
+ <br/>
+ <span class="mathBlock">
+  <span>
+   <span class="katex">
+    <span class="katex-mathml">
+     <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <semantics>
+       <mrow>
+        <mn>
+         11
+        </mn>
+        <mo>
+         ≡
+        </mo>
+        <mi>
+         x
+        </mi>
+        <mspace>
+        </mspace>
+        <mspace width="0.6667em">
+        </mspace>
+        <mrow>
+         <mi mathvariant="normal">
+          m
+         </mi>
+         <mi mathvariant="normal">
+          o
+         </mi>
+         <mi mathvariant="normal">
+          d
+         </mi>
+        </mrow>
+        <mn>
+         6
+        </mn>
+       </mrow>
+       <annotation encoding="application/x-tex">
+        11 \equiv x \mod 6
+       </annotation>
+      </semantics>
+     </math>
+    </span>
+    <span aria-hidden="true" class="katex-html">
+     <span class="base">
+      <span class="strut" style="height: 0.6444em;">
+      </span>
+      <span class="mord">
+       11
+      </span>
+      <span class="mspace" style="margin-right: 0.2778em;">
+      </span>
+      <span class="mrel">
+       ≡
+      </span>
+      <span class="mspace" style="margin-right: 0.2778em;">
+      </span>
+     </span>
+     <span class="base">
+      <span class="strut" style="height: 0.4306em;">
+      </span>
+      <span class="mord mathnormal">
+       x
+      </span>
+      <span class="mspace allowbreak">
+      </span>
+      <span class="mspace" style="margin-right: 0.6667em;">
+      </span>
+     </span>
+     <span class="base">
+      <span class="strut" style="height: 0.6944em;">
+      </span>
+      <span class="mord">
+       <span class="mord">
+        <span class="mord mathrm">
+         mod
+        </span>
+       </span>
+      </span>
+      <span class="mspace" style="margin-right: 0.1667em;">
+      </span>
+      <span class="mspace" style="margin-right: 0.1667em;">
+      </span>
+      <span class="mord">
+       6
+      </span>
+     </span>
+    </span>
+   </span>
+  </span>
+  <br/>
+  <span>
+   <span class="katex">
+    <span class="katex-mathml">
+     <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <semantics>
+       <mrow>
+        <mn>
+         8146798528947
+        </mn>
+        <mo>
+         ≡
+        </mo>
+        <mi>
+         y
+        </mi>
+        <mspace>
+        </mspace>
+        <mspace width="0.6667em">
+        </mspace>
+        <mrow>
+         <mi mathvariant="normal">
+          m
+         </mi>
+         <mi mathvariant="normal">
+          o
+         </mi>
+         <mi mathvariant="normal">
+          d
+         </mi>
+        </mrow>
+        <mn>
+         17
+        </mn>
+       </mrow>
+       <annotation encoding="application/x-tex">
+        8146798528947 \equiv y \mod 17
+       </annotation>
+      </semantics>
+     </math>
+    </span>
+    <span aria-hidden="true" class="katex-html">
+     <span class="base">
+      <span class="strut" style="height: 0.6444em;">
+      </span>
+      <span class="mord">
+       8146798528947
+      </span>
+      <span class="mspace" style="margin-right: 0.2778em;">
+      </span>
+      <span class="mrel">
+       ≡
+      </span>
+      <span class="mspace" style="margin-right: 0.2778em;">
+      </span>
+     </span>
+     <span class="base">
+      <span class="strut" style="height: 0.625em; vertical-align: -0.1944em;">
+      </span>
+      <span class="mord mathnormal" style="margin-right: 0.0359em;">
+       y
+      </span>
+      <span class="mspace allowbreak">
+      </span>
+      <span class="mspace" style="margin-right: 0.6667em;">
+      </span>
+     </span>
+     <span class="base">
+      <span class="strut" style="height: 0.6944em;">
+      </span>
+      <span class="mord">
+       <span class="mord">
+        <span class="mord mathrm">
+         mod
+        </span>
+       </span>
+      </span>
+      <span class="mspace" style="margin-right: 0.1667em;">
+      </span>
+      <span class="mspace" style="margin-right: 0.1667em;">
+      </span>
+      <span class="mord">
+       17
+      </span>
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ <br/>
+ <br/>
+ The solution is the smaller of the two integers,
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mo stretchy="false">
+        (
+       </mo>
+       <mi>
+        x
+       </mi>
+       <mo separator="true">
+        ,
+       </mo>
+       <mi>
+        y
+       </mi>
+       <mo stretchy="false">
+        )
+       </mo>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       (x, y)
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 1em; vertical-align: -0.25em;">
+     </span>
+     <span class="mopen">
+      (
+     </span>
+     <span class="mord mathnormal">
+      x
+     </span>
+     <span class="mpunct">
+      ,
+     </span>
+     <span class="mspace" style="margin-right: 0.1667em;">
+     </span>
+     <span class="mord mathnormal" style="margin-right: 0.0359em;">
+      y
+     </span>
+     <span class="mclose">
+      )
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ , you obtained after reducing by the modulus.
+ <!-- </p> -->
+</div>

@@ -1,0 +1,306 @@
+{
+  "title": "Misc",
+  "slug": "misc",
+  "url": "https://cryptohack.org/challenges/misc/",
+  "completed": "0",
+  "total": "14",
+  "description_text": "Misc A bunch of interesting stuff that doesn't fit anywhere else.",
+  "stages": [
+    {
+      "title": "One Time Pad",
+      "slug": "otp"
+    },
+    {
+      "title": "PRNGs",
+      "slug": "prng"
+    },
+    {
+      "title": "LFSR",
+      "slug": "lfsr"
+    },
+    {
+      "title": "ElGamal",
+      "slug": "elgamal"
+    },
+    {
+      "title": "Secret Sharing Schemes",
+      "slug": "ssss"
+    },
+    {
+      "title": "Password Complexity",
+      "slug": "passwords"
+    }
+  ],
+  "challenge_count": 14,
+  "challenges": [
+    {
+      "title": "Gotta Go Fast",
+      "stage": "One Time Pad",
+      "path": "misc/otp/gotta-go-fast",
+      "attachments": [
+        {
+          "text": "13372.py",
+          "href": "/static/challenges/13372_04f86bd9467973586aed791d07f5d765.py",
+          "url": "https://cryptohack.org/static/challenges/13372_04f86bd9467973586aed791d07f5d765.py",
+          "download": true,
+          "saved_as": "files/13372_04f86bd9467973586aed791d07f5d765.py",
+          "status": 200,
+          "size": 1372
+        }
+      ]
+    },
+    {
+      "title": "No Leaks",
+      "stage": "One Time Pad",
+      "path": "misc/otp/no-leaks",
+      "attachments": [
+        {
+          "text": "13370.py",
+          "href": "/static/challenges/13370_f382761c27b6c87f4222a1c417a00acd.py",
+          "url": "https://cryptohack.org/static/challenges/13370_f382761c27b6c87f4222a1c417a00acd.py",
+          "download": true,
+          "saved_as": "files/13370_f382761c27b6c87f4222a1c417a00acd.py",
+          "status": 200,
+          "size": 1150
+        }
+      ]
+    },
+    {
+      "title": "Lo-Hi Card Game",
+      "stage": "PRNGs",
+      "path": "misc/prng/lo-hi-card-game",
+      "attachments": [
+        {
+          "text": "13383.py",
+          "href": "/static/challenges/13383_529fcfd4b89604c8b3e79e6ec43dbb99.py",
+          "url": "https://cryptohack.org/static/challenges/13383_529fcfd4b89604c8b3e79e6ec43dbb99.py",
+          "download": true,
+          "saved_as": "files/13383_529fcfd4b89604c8b3e79e6ec43dbb99.py",
+          "status": 200,
+          "size": 4464
+        }
+      ]
+    },
+    {
+      "title": "Nothing Up My Sleeve",
+      "stage": "PRNGs",
+      "path": "misc/prng/nothing-up-my-sleeve",
+      "attachments": [
+        {
+          "text": "13387.py",
+          "href": "/static/challenges/13387_470641ed098d10c444f9efb8d86af05f.py",
+          "url": "https://cryptohack.org/static/challenges/13387_470641ed098d10c444f9efb8d86af05f.py",
+          "download": true,
+          "saved_as": "files/13387_470641ed098d10c444f9efb8d86af05f.py",
+          "status": 200,
+          "size": 4352
+        }
+      ]
+    },
+    {
+      "title": "RSA vs RNG",
+      "stage": "PRNGs",
+      "path": "misc/prng/rsa-vs-rng",
+      "attachments": [
+        {
+          "text": "rsa-vs-rng.py",
+          "href": "/static/challenges/rsa-vs-rng_abed7c4efbaae65394e7f00f48130da4.py",
+          "url": "https://cryptohack.org/static/challenges/rsa-vs-rng_abed7c4efbaae65394e7f00f48130da4.py",
+          "download": true,
+          "saved_as": "files/rsa-vs-rng_abed7c4efbaae65394e7f00f48130da4.py",
+          "status": 200,
+          "size": 990
+        },
+        {
+          "text": "flag.enc",
+          "href": "/static/challenges/flag_9713440954a452ff8c5e5b05247f19fe.enc",
+          "url": "https://cryptohack.org/static/challenges/flag_9713440954a452ff8c5e5b05247f19fe.enc",
+          "download": true,
+          "saved_as": "files/flag_9713440954a452ff8c5e5b05247f19fe.enc",
+          "status": 200,
+          "size": 601
+        }
+      ]
+    },
+    {
+      "title": "Trust Games",
+      "stage": "PRNGs",
+      "path": "misc/prng/trust-games",
+      "attachments": [
+        {
+          "text": "13396.py",
+          "href": "/static/challenges/13396_bcae019ec7234105fc3ef66c27405b08.py",
+          "url": "https://cryptohack.org/static/challenges/13396_bcae019ec7234105fc3ef66c27405b08.py",
+          "download": true,
+          "saved_as": "files/13396_bcae019ec7234105fc3ef66c27405b08.py",
+          "status": 200,
+          "size": 2641
+        }
+      ]
+    },
+    {
+      "title": "L-Win",
+      "stage": "LFSR",
+      "path": "misc/lfsr/l-win",
+      "attachments": [
+        {
+          "text": "lwin.py",
+          "href": "/static/challenges/lwin_b0d2eaa5344ed00a3d85dc96af015e8f.py",
+          "url": "https://cryptohack.org/static/challenges/lwin_b0d2eaa5344ed00a3d85dc96af015e8f.py",
+          "download": true,
+          "saved_as": "files/lwin_b0d2eaa5344ed00a3d85dc96af015e8f.py",
+          "status": 200,
+          "size": 646
+        },
+        {
+          "text": "output.txt",
+          "href": "/static/challenges/output_7e5c4d93fa5d065d105e32efd7ef9682.txt",
+          "url": "https://cryptohack.org/static/challenges/output_7e5c4d93fa5d065d105e32efd7ef9682.txt",
+          "download": true,
+          "saved_as": "files/output_7e5c4d93fa5d065d105e32efd7ef9682.txt",
+          "status": 200,
+          "size": 2049
+        }
+      ]
+    },
+    {
+      "title": "Jeff's LFSR",
+      "stage": "LFSR",
+      "path": "misc/lfsr/jeff-s-lfsr",
+      "attachments": [
+        {
+          "text": "jeff.py",
+          "href": "/static/challenges/jeff_6f0cbc35544fb45343cd6ee532358f89.py",
+          "url": "https://cryptohack.org/static/challenges/jeff_6f0cbc35544fb45343cd6ee532358f89.py",
+          "download": true,
+          "saved_as": "files/jeff_6f0cbc35544fb45343cd6ee532358f89.py",
+          "status": 200,
+          "size": 1656
+        },
+        {
+          "text": "output.txt",
+          "href": "/static/challenges/output_d5e714c9cb62f14696f21db9c5a4a2e5.txt",
+          "url": "https://cryptohack.org/static/challenges/output_d5e714c9cb62f14696f21db9c5a4a2e5.txt",
+          "download": true,
+          "saved_as": "files/output_d5e714c9cb62f14696f21db9c5a4a2e5.txt",
+          "status": 200,
+          "size": 1025
+        }
+      ]
+    },
+    {
+      "title": "LFSR Destroyer",
+      "stage": "LFSR",
+      "path": "misc/lfsr/lfsr-destroyer",
+      "attachments": [
+        {
+          "text": "13404.py",
+          "href": "/static/challenges/13404_78642b9589677ed93133947f4f24428c.py",
+          "url": "https://cryptohack.org/static/challenges/13404_78642b9589677ed93133947f4f24428c.py",
+          "download": true,
+          "saved_as": "files/13404_78642b9589677ed93133947f4f24428c.py",
+          "status": 200,
+          "size": 3244
+        }
+      ]
+    },
+    {
+      "title": "Bit by Bit",
+      "stage": "ElGamal",
+      "path": "misc/elgamal/bit-by-bit",
+      "attachments": [
+        {
+          "text": "source.py",
+          "href": "/static/challenges/source_b7cb6015e70a394f3e58fdf2a61aa06f.py",
+          "url": "https://cryptohack.org/static/challenges/source_b7cb6015e70a394f3e58fdf2a61aa06f.py",
+          "download": true,
+          "saved_as": "files/source_b7cb6015e70a394f3e58fdf2a61aa06f.py",
+          "status": 200,
+          "size": 1335
+        },
+        {
+          "text": "output.txt",
+          "href": "/static/challenges/output_1078aca02f2ab796a8c51773f3c332ee.txt",
+          "url": "https://cryptohack.org/static/challenges/output_1078aca02f2ab796a8c51773f3c332ee.txt",
+          "download": true,
+          "saved_as": "files/output_1078aca02f2ab796a8c51773f3c332ee.txt",
+          "status": 200,
+          "size": 318682
+        }
+      ]
+    },
+    {
+      "title": "Armory",
+      "stage": "Secret Sharing Schemes",
+      "path": "misc/ssss/armory",
+      "attachments": [
+        {
+          "text": "armory.py",
+          "href": "/static/challenges/armory_25821b41f40b195ef1c8d8ff97749a15.py",
+          "url": "https://cryptohack.org/static/challenges/armory_25821b41f40b195ef1c8d8ff97749a15.py",
+          "download": true,
+          "saved_as": "files/armory_25821b41f40b195ef1c8d8ff97749a15.py",
+          "status": 200,
+          "size": 981
+        },
+        {
+          "text": "share.txt",
+          "href": "/static/challenges/share_f6dca6a2f215b12ddebb68a90380542d.txt",
+          "url": "https://cryptohack.org/static/challenges/share_f6dca6a2f215b12ddebb68a90380542d.txt",
+          "download": true,
+          "saved_as": "files/share_f6dca6a2f215b12ddebb68a90380542d.txt",
+          "status": 200,
+          "size": 160
+        }
+      ]
+    },
+    {
+      "title": "Toshi's Treasure",
+      "stage": "Secret Sharing Schemes",
+      "path": "misc/ssss/toshi-s-treasure",
+      "attachments": [
+        {
+          "text": "hyper_privkey.txt",
+          "href": "/static/challenges/hyper_privkey_1eee27d16c969fba26d706ffcb33b2f5.txt",
+          "url": "https://cryptohack.org/static/challenges/hyper_privkey_1eee27d16c969fba26d706ffcb33b2f5.txt",
+          "download": true,
+          "saved_as": "files/hyper_privkey_1eee27d16c969fba26d706ffcb33b2f5.txt",
+          "status": 200,
+          "size": 91
+        }
+      ]
+    },
+    {
+      "title": "Bruce Schneier's Password",
+      "stage": "Password Complexity",
+      "path": "misc/passwords/bruce-schneier-s-password",
+      "attachments": [
+        {
+          "text": "13400.py",
+          "href": "/static/challenges/13400_dcf3cb755904e5c762a1dff3b4db64ff.py",
+          "url": "https://cryptohack.org/static/challenges/13400_dcf3cb755904e5c762a1dff3b4db64ff.py",
+          "download": true,
+          "saved_as": "files/13400_dcf3cb755904e5c762a1dff3b4db64ff.py",
+          "status": 200,
+          "size": 2320
+        }
+      ]
+    },
+    {
+      "title": "Bruce Schneier's Password: Part 2",
+      "stage": "Password Complexity",
+      "path": "misc/passwords/bruce-schneier-s-password-part-2",
+      "attachments": [
+        {
+          "text": "13401.py",
+          "href": "/static/challenges/13401_ec4ac92cc54df2ed096a0acee93be11e.py",
+          "url": "https://cryptohack.org/static/challenges/13401_ec4ac92cc54df2ed096a0acee93be11e.py",
+          "download": true,
+          "saved_as": "files/13401_ec4ac92cc54df2ed096a0acee93be11e.py",
+          "status": 200,
+          "size": 2204
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "category": "Crypto on the Web",
+  "category_slug": "web",
+  "stage": "TLS Part 1: The Protocol",
+  "stage_slug": "tls1",
+  "title": "Sharks on the Wire",
+  "slug": "sharks-on-the-wire",
+  "data_challenge": "sharks-wire",
+  "points": 10,
+  "solves": 1914,
+  "url": "https://cryptohack.org/challenges/web/",
+  "attachments": [
+    {
+      "text": "cryptohack.org.pcapng",
+      "href": "/static/challenges/cryptohack_6b3a90f7c585d399088758fda92fb9f6.org.pcapng",
+      "url": "https://cryptohack.org/static/challenges/cryptohack_6b3a90f7c585d399088758fda92fb9f6.org.pcapng",
+      "download": true,
+      "saved_as": "files/cryptohack_6b3a90f7c585d399088758fda92fb9f6.org.pcapng",
+      "status": 200,
+      "size": 19004
+    }
+  ],
+  "resources": [
+    {
+      "text": "Wireshark",
+      "href": "https://www.wireshark.org/download.html",
+      "url": "https://www.wireshark.org/download.html",
+      "download": false
+    },
+    {
+      "text": "check the docs",
+      "href": "https://www.wireshark.org/docs/wsug_html_chunked/ChBuildInstallWinInstall.html",
+      "url": "https://www.wireshark.org/docs/wsug_html_chunked/ChBuildInstallWinInstall.html",
+      "download": false
+    }
+  ],
+  "statement_html": "statement.html",
+  "statement_md": "statement.md"
+}

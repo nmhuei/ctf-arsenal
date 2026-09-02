@@ -1,0 +1,12 @@
+services:
+  frontend:
+    build:
+      context: ./frontend
+    depends_on:
+      - python-executor
+    ports:
+      - "${PORT:-8080}:8080"
+
+  python-executor:
+    build:
+      context: ./python-executor

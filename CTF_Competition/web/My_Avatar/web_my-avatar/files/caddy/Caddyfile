@@ -1,0 +1,22 @@
+{$DOMAIN:localhost} {
+	root * /srv/public
+
+	handle /avatars/* {
+		file_server
+	}
+
+	@php path /api.php /image.php /style.php /index.php
+	handle @php {
+		reverse_proxy unix//run/php/php-fpm.sock {
+			transport fastcgi {
+				env SCRIPT_FILENAME /var/www/html/public{http.request.uri.path}
+				env DOCUMENT_ROOT /var/www/html/public
+			}
+		}
+	}
+
+	handle {
+		try_files {path} {path}/index.html /index.html
+		file_server
+	}
+}

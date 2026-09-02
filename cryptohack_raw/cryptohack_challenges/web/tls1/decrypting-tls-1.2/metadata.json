@@ -1,0 +1,42 @@
+{
+  "category": "Crypto on the Web",
+  "category_slug": "web",
+  "stage": "TLS Part 1: The Protocol",
+  "stage_slug": "tls1",
+  "title": "Decrypting TLS 1.2",
+  "slug": "decrypting-tls-1.2",
+  "data_challenge": "decrypting-tls12",
+  "points": 30,
+  "solves": 1214,
+  "url": "https://cryptohack.org/challenges/web/",
+  "attachments": [
+    {
+      "text": "tls2.cryptohack.org.pcapng",
+      "href": "/static/challenges/tls2_f84f9216f7bd77b7a1337889393296e1.cryptohack.org.pcapng",
+      "url": "https://cryptohack.org/static/challenges/tls2_f84f9216f7bd77b7a1337889393296e1.cryptohack.org.pcapng",
+      "download": true,
+      "saved_as": "files/tls2_f84f9216f7bd77b7a1337889393296e1.cryptohack.org.pcapng",
+      "status": 200,
+      "size": 9076
+    },
+    {
+      "text": "privkey.pem",
+      "href": "/static/challenges/privkey_aa0c8200134016bdbbb9e521b6e5f3e4.pem",
+      "url": "https://cryptohack.org/static/challenges/privkey_aa0c8200134016bdbbb9e521b6e5f3e4.pem",
+      "download": true,
+      "saved_as": "files/privkey_aa0c8200134016bdbbb9e521b6e5f3e4.pem",
+      "status": 200,
+      "size": 1704
+    }
+  ],
+  "resources": [
+    {
+      "text": "Wireshark: TLS Decryption",
+      "href": "https://wiki.wireshark.org/TLS#tls-decryption",
+      "url": "https://wiki.wireshark.org/TLS#tls-decryption",
+      "download": false
+    }
+  ],
+  "statement_html": "statement.html",
+  "statement_md": "statement.md"
+}

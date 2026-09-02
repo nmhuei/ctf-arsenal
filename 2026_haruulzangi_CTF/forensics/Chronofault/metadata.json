@@ -1,0 +1,33 @@
+{
+  "id": "e7e5bfb3330ece31",
+  "name": "Chronofault",
+  "category": "forensics",
+  "points": 156,
+  "author": "fg0x0",
+  "tags": [],
+  "hints": [],
+  "connection_info": null,
+  "solved_by_me": false,
+  "solves_count": 114,
+  "downloaded_files": [
+    {
+      "url": "https://chronofault-qnebgbco.challenge.2026.haruulzangi.mn/artifact.zip",
+      "name": null,
+      "saved_path": null,
+      "success": false,
+      "source": "description_direct_file",
+      "message": "Failed to download file (HTTP status or connection error)"
+    }
+  ],
+  "raw": {
+    "id": "e7e5bfb3330ece31",
+    "name": "Chronofault",
+    "description": "Somebody walked a projected service token out of the `commons-core`\nnamespace and pulled the parity OTP secret. Four megabytes left for an\noff-register host, and the pairing rotation ran an hour late.\n\nOur on-call analyst already closed this. He sorted every log by its\ntimestamp, found the session that touched `/api/v1/ledger/issue` a tenth of\na second before the core accepted a role header, and named a contractor.\n\nThe contractor's counterpart filed a chronyc dump in her defence. The DMZ\nsegment has not reached an NTP server since the firewall change. Two of\nthese five hosts have been free-wheeling on their RTC for twelve days, and\none of them stamps the log our analyst sorted by.\n\nA timeline is an accusation. Rebuild this one properly, then open the\nescrow with `unlock.py`.\n\n> [!CONNECTION]\n> https://chronofault-qnebgbco.challenge.2026.haruulzangi.mn/artifact.zip",
+    "category": "forensics",
+    "author": "fg0x0",
+    "files": [],
+    "points": 156,
+    "solves": 114,
+    "sortWeight": 0
+  }
+}

@@ -1,0 +1,383 @@
+<div class="challengeDescription">
+ <!-- <p> -->
+ All operations in RSA involve
+ <a href="https://en.wikipedia.org/wiki/Modular_exponentiation">
+  modular exponentiation
+ </a>
+ .
+ <br/>
+ <br/>
+ Modular exponentiation is an operation that is used extensively in cryptography and is normally written like:
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <msup>
+        <mn>
+         2
+        </mn>
+        <mn>
+         10
+        </mn>
+       </msup>
+       <mspace>
+       </mspace>
+       <mspace width="0.6667em">
+       </mspace>
+       <mrow>
+        <mi mathvariant="normal">
+         m
+        </mi>
+        <mi mathvariant="normal">
+         o
+        </mi>
+        <mi mathvariant="normal">
+         d
+        </mi>
+       </mrow>
+       <mn>
+        17
+       </mn>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       2^{10} \mod 17
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 0.8141em;">
+     </span>
+     <span class="mord">
+      <span class="mord">
+       2
+      </span>
+      <span class="msupsub">
+       <span class="vlist-t">
+        <span class="vlist-r">
+         <span class="vlist" style="height: 0.8141em;">
+          <span class="" style="top: -3.063em; margin-right: 0.05em;">
+           <span class="pstrut" style="height: 2.7em;">
+           </span>
+           <span class="sizing reset-size6 size3 mtight">
+            <span class="mord mtight">
+             <span class="mord mtight">
+              10
+             </span>
+            </span>
+           </span>
+          </span>
+         </span>
+        </span>
+       </span>
+      </span>
+     </span>
+     <span class="mspace allowbreak">
+     </span>
+     <span class="mspace" style="margin-right: 0.6667em;">
+     </span>
+    </span>
+    <span class="base">
+     <span class="strut" style="height: 0.6944em;">
+     </span>
+     <span class="mord">
+      <span class="mord">
+       <span class="mord mathrm">
+        mod
+       </span>
+      </span>
+     </span>
+     <span class="mspace" style="margin-right: 0.1667em;">
+     </span>
+     <span class="mspace" style="margin-right: 0.1667em;">
+     </span>
+     <span class="mord">
+      17
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ <br/>
+ <br/>
+ You can think of this as raising some number to a certain power (
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <msup>
+        <mn>
+         2
+        </mn>
+        <mn>
+         10
+        </mn>
+       </msup>
+       <mo>
+        =
+       </mo>
+       <mn>
+        1024
+       </mn>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       2^{10} = 1024
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 0.8141em;">
+     </span>
+     <span class="mord">
+      <span class="mord">
+       2
+      </span>
+      <span class="msupsub">
+       <span class="vlist-t">
+        <span class="vlist-r">
+         <span class="vlist" style="height: 0.8141em;">
+          <span class="" style="top: -3.063em; margin-right: 0.05em;">
+           <span class="pstrut" style="height: 2.7em;">
+           </span>
+           <span class="sizing reset-size6 size3 mtight">
+            <span class="mord mtight">
+             <span class="mord mtight">
+              10
+             </span>
+            </span>
+           </span>
+          </span>
+         </span>
+        </span>
+       </span>
+      </span>
+     </span>
+     <span class="mspace" style="margin-right: 0.2778em;">
+     </span>
+     <span class="mrel">
+      =
+     </span>
+     <span class="mspace" style="margin-right: 0.2778em;">
+     </span>
+    </span>
+    <span class="base">
+     <span class="strut" style="height: 0.6444em;">
+     </span>
+     <span class="mord">
+      1024
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ ), and then taking the remainder of the division by some other number (
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mn>
+        1024
+       </mn>
+       <mspace>
+       </mspace>
+       <mspace width="0.6667em">
+       </mspace>
+       <mrow>
+        <mi mathvariant="normal">
+         m
+        </mi>
+        <mi mathvariant="normal">
+         o
+        </mi>
+        <mi mathvariant="normal">
+         d
+        </mi>
+       </mrow>
+       <mn>
+        17
+       </mn>
+       <mo>
+        =
+       </mo>
+       <mn>
+        4
+       </mn>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       1024 \mod 17 = 4
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 0.6444em;">
+     </span>
+     <span class="mord">
+      1024
+     </span>
+     <span class="mspace allowbreak">
+     </span>
+     <span class="mspace" style="margin-right: 0.6667em;">
+     </span>
+    </span>
+    <span class="base">
+     <span class="strut" style="height: 0.6944em;">
+     </span>
+     <span class="mord">
+      <span class="mord">
+       <span class="mord mathrm">
+        mod
+       </span>
+      </span>
+     </span>
+     <span class="mspace" style="margin-right: 0.1667em;">
+     </span>
+     <span class="mspace" style="margin-right: 0.1667em;">
+     </span>
+     <span class="mord">
+      17
+     </span>
+     <span class="mspace" style="margin-right: 0.2778em;">
+     </span>
+     <span class="mrel">
+      =
+     </span>
+     <span class="mspace" style="margin-right: 0.2778em;">
+     </span>
+    </span>
+    <span class="base">
+     <span class="strut" style="height: 0.6444em;">
+     </span>
+     <span class="mord">
+      4
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ ). In Python there's a built-in operator for performing this operation:
+ <code>
+  pow(base, exponent, modulus)
+ </code>
+ .
+ <br/>
+ <br/>
+ In RSA, modular exponentiation, together with the problem of prime factorisation, helps us to build a "
+ <a href="https://en.wikipedia.org/wiki/Trapdoor_function">
+  trapdoor function
+ </a>
+ ". This is a function that is easy to compute in one direction, but hard to do in reverse unless you have the right information. It allows us to encrypt a message, and only the person with the key can perform the inverse operation to decrypt it.
+ <br/>
+ <br/>
+ To grab the flag, find the solution to
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mn>
+        10
+       </mn>
+       <msup>
+        <mn>
+         1
+        </mn>
+        <mn>
+         17
+        </mn>
+       </msup>
+       <mspace>
+       </mspace>
+       <mspace width="0.6667em">
+       </mspace>
+       <mrow>
+        <mi mathvariant="normal">
+         m
+        </mi>
+        <mi mathvariant="normal">
+         o
+        </mi>
+        <mi mathvariant="normal">
+         d
+        </mi>
+       </mrow>
+       <mn>
+        22663
+       </mn>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       101^{17} \mod 22663
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 0.8141em;">
+     </span>
+     <span class="mord">
+      10
+     </span>
+     <span class="mord">
+      <span class="mord">
+       1
+      </span>
+      <span class="msupsub">
+       <span class="vlist-t">
+        <span class="vlist-r">
+         <span class="vlist" style="height: 0.8141em;">
+          <span class="" style="top: -3.063em; margin-right: 0.05em;">
+           <span class="pstrut" style="height: 2.7em;">
+           </span>
+           <span class="sizing reset-size6 size3 mtight">
+            <span class="mord mtight">
+             <span class="mord mtight">
+              17
+             </span>
+            </span>
+           </span>
+          </span>
+         </span>
+        </span>
+       </span>
+      </span>
+     </span>
+     <span class="mspace allowbreak">
+     </span>
+     <span class="mspace" style="margin-right: 0.6667em;">
+     </span>
+    </span>
+    <span class="base">
+     <span class="strut" style="height: 0.6944em;">
+     </span>
+     <span class="mord">
+      <span class="mord">
+       <span class="mord mathrm">
+        mod
+       </span>
+      </span>
+     </span>
+     <span class="mspace" style="margin-right: 0.1667em;">
+     </span>
+     <span class="mspace" style="margin-right: 0.1667em;">
+     </span>
+     <span class="mord">
+      22663
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ <!-- </p> -->
+</div>

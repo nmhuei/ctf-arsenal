@@ -1,0 +1,42 @@
+{
+  "category": "Isogenies",
+  "category_slug": "isogenies",
+  "stage": "Starter",
+  "stage_slug": "iso_background",
+  "title": "DLOG on the Surface",
+  "slug": "dlog-on-the-surface",
+  "data_challenge": "2d_dlog",
+  "points": 40,
+  "solves": 366,
+  "url": "https://cryptohack.org/challenges/isogenies/",
+  "attachments": [
+    {
+      "text": "source.sage",
+      "href": "/static/challenges/source_3002be5281f58b7f4fc91369877ee15d.sage",
+      "url": "https://cryptohack.org/static/challenges/source_3002be5281f58b7f4fc91369877ee15d.sage",
+      "download": true,
+      "saved_as": "files/source_3002be5281f58b7f4fc91369877ee15d.sage",
+      "status": 200,
+      "size": 845
+    },
+    {
+      "text": "output.txt",
+      "href": "/static/challenges/output_a9fcd0db30822de938de639df287ab54.txt",
+      "url": "https://cryptohack.org/static/challenges/output_a9fcd0db30822de938de639df287ab54.txt",
+      "download": true,
+      "saved_as": "files/output_a9fcd0db30822de938de639df287ab54.txt",
+      "status": 200,
+      "size": 919
+    }
+  ],
+  "resources": [
+    {
+      "text": "Isogeny kernels and division polynomials, Lecture Notes, Andrew Sutherland",
+      "href": "https://ocw.mit.edu/courses/18-783-elliptic-curves-spring-2021/680a7686aabd24b22a15eeb96e733838_MIT18_783S21_notes5.pdf",
+      "url": "https://ocw.mit.edu/courses/18-783-elliptic-curves-spring-2021/680a7686aabd24b22a15eeb96e733838_MIT18_783S21_notes5.pdf",
+      "download": false
+    }
+  ],
+  "statement_html": "statement.html",
+  "statement_md": "statement.md"
+}

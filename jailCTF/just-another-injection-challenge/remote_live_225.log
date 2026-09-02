@@ -1,0 +1,17 @@
+[+] solver version: 2026-07-27-v2-standalone-live
+[+] connecting to challs.pyjail.club:20219 (connect timeout 15s)
+[+] TCP connected; waiting for challenge prompt
+Traceback (most recent call last):
+  File "/home/light/Workspace/CTF/jailCTF/just-another-injection-challenge/solve_remote_live.py", line 2936, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "/home/light/Workspace/CTF/jailCTF/just-another-injection-challenge/solve_remote_live.py", line 2921, in main
+    oracle = RemoteOracle(args.host, args.port, args.timeout)
+  File "/home/light/Workspace/CTF/jailCTF/just-another-injection-challenge/solve_remote_live.py", line 2412, in __init__
+    self._consume_initial_prompt()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/light/Workspace/CTF/jailCTF/just-another-injection-challenge/solve_remote_live.py", line 2427, in _consume_initial_prompt
+    raise EOFError(
+    ...<2 lines>...
+    )
+EOFError: remote closed before the first prompt; server output: ''

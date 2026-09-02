@@ -1,0 +1,302 @@
+[+] using base solver module: /home/light/Workspace/CTF/jailCTF/just-another-injection-challenge/solve_checked.py
+[+] extended feature library to 142 features
+[+] loaded 225 singleton labels for length recovery
+[+] using verified flag length = 122
+[+] using 225 unique predicate chains as jq-calibrated accept-sets
+[+] calibrating accept-sets with 'jq' (jq-1.8.2)
+[+] candidate numeric universe: 3124 values
+    calibrated 1/225 chains
+    calibrated 10/225 chains
+    calibrated 20/225 chains
+    calibrated 30/225 chains
+    calibrated 40/225 chains
+    calibrated 50/225 chains
+    calibrated 60/225 chains
+    calibrated 70/225 chains
+    calibrated 80/225 chains
+    calibrated 90/225 chains
+    calibrated 100/225 chains
+    calibrated 110/225 chains
+    calibrated 120/225 chains
+    calibrated 130/225 chains
+    calibrated 140/225 chains
+    calibrated 150/225 chains
+    calibrated 160/225 chains
+    calibrated 170/225 chains
+    calibrated 180/225 chains
+    calibrated 190/225 chains
+    calibrated 200/225 chains
+    calibrated 210/225 chains
+    calibrated 220/225 chains
+    calibrated 225/225 chains
+[+] calibration done in 2.31s
+[*] set broad phase: 142 features, 7565 oracle queries
+    local oracle: 96 queries in 0.33s
+    progress: 96/7565 queries (0.3s)
+    local oracle: 96 queries in 0.34s
+    progress: 192/7565 queries (0.7s)
+    local oracle: 96 queries in 0.33s
+    progress: 288/7565 queries (1.0s)
+    local oracle: 96 queries in 0.30s
+    progress: 384/7565 queries (1.3s)
+    local oracle: 96 queries in 0.33s
+    progress: 480/7565 queries (1.6s)
+    local oracle: 96 queries in 0.31s
+    progress: 576/7565 queries (1.9s)
+    local oracle: 96 queries in 0.33s
+    progress: 672/7565 queries (2.3s)
+    local oracle: 96 queries in 0.35s
+    progress: 768/7565 queries (2.6s)
+    local oracle: 96 queries in 0.31s
+    progress: 864/7565 queries (2.9s)
+    local oracle: 96 queries in 0.32s
+    progress: 960/7565 queries (3.2s)
+    local oracle: 96 queries in 0.31s
+    progress: 1056/7565 queries (3.5s)
+    local oracle: 96 queries in 0.35s
+    progress: 1152/7565 queries (3.9s)
+    local oracle: 96 queries in 0.32s
+    progress: 1248/7565 queries (4.2s)
+    local oracle: 96 queries in 0.38s
+    progress: 1344/7565 queries (4.6s)
+    local oracle: 96 queries in 0.35s
+    progress: 1440/7565 queries (5.0s)
+    local oracle: 96 queries in 0.40s
+    progress: 1536/7565 queries (5.4s)
+    local oracle: 96 queries in 0.40s
+    progress: 1632/7565 queries (5.8s)
+    local oracle: 96 queries in 0.45s
+    progress: 1728/7565 queries (6.2s)
+    local oracle: 96 queries in 0.28s
+    progress: 1824/7565 queries (6.5s)
+    local oracle: 96 queries in 0.29s
+    progress: 1920/7565 queries (6.8s)
+    local oracle: 96 queries in 0.30s
+    progress: 2016/7565 queries (7.1s)
+    local oracle: 96 queries in 0.30s
+    progress: 2112/7565 queries (7.4s)
+    local oracle: 96 queries in 0.30s
+    progress: 2208/7565 queries (7.7s)
+    local oracle: 96 queries in 0.32s
+    progress: 2304/7565 queries (8.0s)
+    local oracle: 96 queries in 0.36s
+    progress: 2400/7565 queries (8.3s)
+    local oracle: 96 queries in 0.29s
+    progress: 2496/7565 queries (8.6s)
+    local oracle: 96 queries in 0.28s
+    progress: 2592/7565 queries (8.9s)
+    local oracle: 96 queries in 0.30s
+    progress: 2688/7565 queries (9.2s)
+    local oracle: 96 queries in 0.32s
+    progress: 2784/7565 queries (9.5s)
+    local oracle: 96 queries in 0.31s
+    progress: 2880/7565 queries (9.8s)
+    local oracle: 96 queries in 0.31s
+    progress: 2976/7565 queries (10.1s)
+    local oracle: 96 queries in 0.36s
+    progress: 3072/7565 queries (10.5s)
+    local oracle: 96 queries in 0.35s
+    progress: 3168/7565 queries (10.9s)
+    local oracle: 96 queries in 0.35s
+    progress: 3264/7565 queries (11.2s)
+    local oracle: 96 queries in 0.35s
+    progress: 3360/7565 queries (11.6s)
+    local oracle: 96 queries in 0.33s
+    progress: 3456/7565 queries (11.9s)
+    local oracle: 96 queries in 0.36s
+    progress: 3552/7565 queries (12.3s)
+    local oracle: 96 queries in 0.34s
+    progress: 3648/7565 queries (12.6s)
+    local oracle: 96 queries in 0.35s
+    progress: 3744/7565 queries (12.9s)
+    local oracle: 96 queries in 0.36s
+    progress: 3840/7565 queries (13.3s)
+    local oracle: 96 queries in 0.34s
+    progress: 3936/7565 queries (13.6s)
+    local oracle: 96 queries in 0.37s
+    progress: 4032/7565 queries (14.0s)
+    local oracle: 96 queries in 0.35s
+    progress: 4128/7565 queries (14.4s)
+    local oracle: 96 queries in 0.36s
+    progress: 4224/7565 queries (14.7s)
+    local oracle: 96 queries in 0.37s
+    progress: 4320/7565 queries (15.1s)
+    local oracle: 96 queries in 0.36s
+    progress: 4416/7565 queries (15.5s)
+    local oracle: 96 queries in 0.37s
+    progress: 4512/7565 queries (15.8s)
+    local oracle: 96 queries in 0.38s
+    progress: 4608/7565 queries (16.2s)
+    local oracle: 96 queries in 0.36s
+    progress: 4704/7565 queries (16.6s)
+    local oracle: 96 queries in 0.37s
+    progress: 4800/7565 queries (16.9s)
+    local oracle: 96 queries in 0.37s
+    progress: 4896/7565 queries (17.3s)
+    local oracle: 96 queries in 0.37s
+    progress: 4992/7565 queries (17.7s)
+    local oracle: 96 queries in 0.38s
+    progress: 5088/7565 queries (18.0s)
+    local oracle: 96 queries in 0.35s
+    progress: 5184/7565 queries (18.4s)
+    local oracle: 96 queries in 0.39s
+    progress: 5280/7565 queries (18.8s)
+    local oracle: 96 queries in 0.38s
+    progress: 5376/7565 queries (19.2s)
+    local oracle: 96 queries in 0.43s
+    progress: 5472/7565 queries (19.6s)
+    local oracle: 96 queries in 0.40s
+    progress: 5568/7565 queries (20.0s)
+    local oracle: 96 queries in 0.38s
+    progress: 5664/7565 queries (20.4s)
+    local oracle: 96 queries in 0.42s
+    progress: 5760/7565 queries (20.8s)
+    local oracle: 96 queries in 0.45s
+    progress: 5856/7565 queries (21.3s)
+    local oracle: 96 queries in 0.48s
+    progress: 5952/7565 queries (21.7s)
+    local oracle: 96 queries in 0.49s
+    progress: 6048/7565 queries (22.2s)
+    local oracle: 96 queries in 0.46s
+    progress: 6144/7565 queries (22.7s)
+    local oracle: 96 queries in 0.51s
+    progress: 6240/7565 queries (23.2s)
+    local oracle: 96 queries in 0.72s
+    progress: 6336/7565 queries (23.9s)
+    local oracle: 96 queries in 0.72s
+    progress: 6432/7565 queries (24.6s)
+    local oracle: 96 queries in 0.62s
+    progress: 6528/7565 queries (25.3s)
+    local oracle: 96 queries in 0.66s
+    progress: 6624/7565 queries (25.9s)
+    local oracle: 96 queries in 0.72s
+    progress: 6720/7565 queries (26.6s)
+    local oracle: 96 queries in 1.06s
+    progress: 6816/7565 queries (27.7s)
+    local oracle: 96 queries in 1.03s
+    progress: 6912/7565 queries (28.7s)
+    local oracle: 96 queries in 0.85s
+    progress: 7008/7565 queries (29.6s)
+    local oracle: 96 queries in 0.97s
+    progress: 7104/7565 queries (30.5s)
+    local oracle: 96 queries in 1.35s
+    progress: 7200/7565 queries (31.9s)
+    local oracle: 96 queries in 1.54s
+    progress: 7296/7565 queries (33.4s)
+    local oracle: 96 queries in 1.56s
+    progress: 7392/7565 queries (35.0s)
+    local oracle: 96 queries in 1.45s
+    progress: 7488/7565 queries (36.4s)
+    local oracle: 77 queries in 1.20s
+    progress: 7565/7565 queries (37.6s)
+[+] domain size: 607; positive constraints: 1621
+[!] ambiguous domain at 7: c09_
+[!] ambiguous domain at 11: ac4
+[!] ambiguous domain at 14: d15
+[!] ambiguous domain at 15: 04_
+[!] ambiguous domain at 16: 7_
+[!] ambiguous domain at 17: aeg6
+[!] ambiguous domain at 18: dh59
+[!] ambiguous domain at 19: be48_
+[!] ambiguous domain at 20: bfj7
+[!] ambiguous domain at 21: aci26
+[!] ambiguous domain at 22: dh15_
+[!] ambiguous domain at 24: f37
+[!] ambiguous domain at 25: 26_
+[!] ambiguous domain at 26: dhl5789
+[!] ambiguous domain at 27: 4678
+[!] ambiguous domain at 28: efj357_
+[!] ambiguous domain at 29: i46
+[!] ambiguous domain at 30: d1349
+[!] ambiguous domain at 32: djpz59
+[!] ambiguous domain at 33: 04
+[!] ambiguous domain at 35: gkmsy
+[!] ambiguous domain at 36: 159
+[!] ambiguous domain at 37: ehikmnqtuwyz_
+[!] ambiguous domain at 38: dhjlptvx
+[!] ambiguous domain at 39: cgiksuw26
+[!] ambiguous domain at 40: ehknqrtvwz_
+[!] ambiguous domain at 41: agmsuy
+[!] ambiguous domain at 42: fprtx37
+[!] ambiguous domain at 43: ehknoqstz_
+[!] ambiguous domain at 44: djnprvz59
+[!] ambiguous domain at 45: 048
+[!] ambiguous domain at 46: ehklnpqtwxz_
+[!] ambiguous domain at 47: gkmoswy_
+[!] ambiguous domain at 48: 159
+[!] ambiguous domain at 49: ehikmnqtuwz_
+[!] ambiguous domain at 50: djlptv
+[!] ambiguous domain at 52: efhjknqrtz_
+[!] ambiguous domain at 53: egimqsuy
+[!] ambiguous domain at 54: dfhlprtx379
+[!] ambiguous domain at 55: eghknoqstwz_
+[!] ambiguous domain at 56: dfjprvz
+[!] ambiguous domain at 57: ceimquy68
+[!] ambiguous domain at 58: dehklnqtwx_
+[!] ambiguous domain at 59: cdgkmos
+[!] ambiguous domain at 61: hikmqtuz_
+[!] ambiguous domain at 62: ghjlpt
+[!] ambiguous domain at 64: ehjknqrvwz_
+[!] ambiguous domain at 65: dijmquxy
+[!] ambiguous domain at 66: 13
+[!] ambiguous domain at 67: ehknostwz04_
+[!] ambiguous domain at 68: afgmnruv
+[!] ambiguous domain at 69: 026
+[!] ambiguous domain at 70: hkqtwx_
+[!] ambiguous domain at 71: djprsw
+[!] ambiguous domain at 72: 137
+[!] ambiguous domain at 73: ehnpqrtuy_
+[!] ambiguous domain at 74: ghlmoqstx
+[!] ambiguous domain at 76: ejkmnoquvz_
+[!] ambiguous domain at 77: dijlnptuxy6
+[!] ambiguous domain at 79: hkrvxyz4_
+[!] ambiguous domain at 80: agimnqruwyz
+[!] ambiguous domain at 82: eghikopstuw_
+[!] ambiguous domain at 83: dfhjortuvz
+[!] ambiguous domain at 84: cegijmqrsuvy
+[!] ambiguous domain at 85: defhlqrstx
+[!] ambiguous domain at 86: acdegklorst
+[!] ambiguous domain at 87: gop
+[!] ambiguous domain at 88: acfimoqyz_
+[!] ambiguous domain at 89: dhilnpwz
+[!] ambiguous domain at 90: ao
+[!] ambiguous domain at 91: kr
+[!] ambiguous domain at 93: dmt1
+[!] ambiguous domain at 94: su_
+[!] ambiguous domain at 95: ftv
+[!] ambiguous domain at 96: aehjqs
+[!] ambiguous domain at 97: fiort
+[!] ambiguous domain at 98: gpsu
+[!] ambiguous domain at 100: iluw
+[!] ambiguous domain at 101: amsv
+[!] ambiguous domain at 102: gkty_
+[!] ambiguous domain at 103: alqxz
+[!] ambiguous domain at 104: a_
+[!] ambiguous domain at 105: jos
+[!] ambiguous domain at 106: kopru
+[!] ambiguous domain at 107: pqsv
+[!] ambiguous domain at 108: ef
+[!] ambiguous domain at 109: rt
+[!] ambiguous domain at 110: s_
+[!] ambiguous domain at 111: il
+[!] ambiguous domain at 114: gi
+[!] ambiguous domain at 115: e_
+[!] ambiguous domain at 116: dfk_
+[!] ambiguous domain at 117: egjl
+[!] ambiguous domain at 118: afk
+[+] solutions: ['jail{a1_b2_a3_d4_e5_fc_g72h83i9_p0_g1_l2em3sn4ey5tp6eq7ep8qd9tt0zu1of2xd3yo4uu5_z6ehjfroywarl1_tqtg_ls_x_supft_iong_flag_}', 'jail{a1_b2_a3_d4_e5_fc_g36h85i9_d0_g1hl2rg3sn4em5qd6eq7qd8dd9ut0eu1hf2tw3_m4eu5_q6ifsqgomworl1_fjfs_ls_a_jover_long_fgag_}']
+Traceback (most recent call last):
+  File "/home/light/Workspace/CTF/jailCTF/just-another-injection-challenge/solve_set_oracle_v3_fixed.py", line 401, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "/home/light/Workspace/CTF/jailCTF/just-another-injection-challenge/solve_set_oracle_v3_fixed.py", line 384, in main
+    flag = solve_once(
+        base, oracle, args.chains, charset, args.min_length, args.max_length,
+        args.feature_count, args.limit, jq_cmd, args.progress_batch,
+        args.known_length
+    )
+  File "/home/light/Workspace/CTF/jailCTF/just-another-injection-challenge/solve_set_oracle_v3_fixed.py", line 344, in solve_once
+    raise RuntimeError(
+        "not unique/inconsistent; rerun with --feature-count 124 --limit 20, or paste this output back"
+    )
+RuntimeError: not unique/inconsistent; rerun with --feature-count 124 --limit 20, or paste this output back

@@ -1,0 +1,19 @@
+[package]
+name = "my-avatar-flag"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[lib]
+name = "my_avatar_flag_protocol"
+path = "src/lib.rs"
+
+[[bin]]
+name = "my-avatar-flag"
+path = "src/bin/flag.rs"
+
+[[bin]]
+name = "my-avatar-flag-service"
+path = "src/bin/flag_service.rs"
+
+[dependencies]

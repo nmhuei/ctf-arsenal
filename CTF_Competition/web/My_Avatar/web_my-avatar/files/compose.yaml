@@ -1,0 +1,110 @@
+services:
+  flag:
+    build:
+      context: ./app
+      dockerfile: Dockerfile
+      target: flag-service
+    read_only: true
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    mem_limit: 32m
+    cpus: 0.25
+    pids_limit: 32
+    ulimits:
+      nofile:
+        soft: 128
+        hard: 128
+    environment:
+      FLAG: ${FLAG:-HZ{$$1_my_@v@t@r_$$2}}
+    network_mode: none
+    tmpfs:
+      - /run/flag-service:size=1m,mode=0700
+      - /tmp:size=1m,mode=1777
+    volumes:
+      - flag-socket:/run/my-avatar-flag
+    healthcheck:
+      test: ["CMD", "test", "-S", "/run/my-avatar-flag/S.flag"]
+      interval: 1s
+      timeout: 1s
+      retries: 30
+    restart: unless-stopped
+
+  app:
+    build:
+      context: ./app
+      dockerfile: Dockerfile
+    depends_on:
+      flag:
+        condition: service_healthy
+    read_only: true
+    cap_drop:
+      - ALL
+    cap_add:
+      - SETGID
+      - SETUID
+    security_opt:
+      - no-new-privileges:true
+    mem_limit: 128m
+    cpus: 1.0
+    pids_limit: 128
+    ulimits:
+      nofile:
+        soft: 1024
+        hard: 1024
+    network_mode: none
+    tmpfs:
+      - /run:size=16m,mode=0755
+      - /tmp:size=32m,mode=1777
+      - /var/www/html/data:size=32m,mode=0755,uid=33,gid=33
+      - /var/www/html/public/uploads:size=16m,mode=0755,uid=33,gid=33
+    volumes:
+      - avatar-uploads:/var/www/html/public/avatars
+      - flag-socket:/run/my-avatar-flag:ro
+      - php-fpm-socket:/run/php
+    restart: unless-stopped
+
+  caddy:
+    build:
+      context: .
+      dockerfile: caddy/Dockerfile
+    read_only: true
+    cap_drop:
+      - ALL
+    cap_add:
+      - NET_BIND_SERVICE
+    security_opt:
+      - no-new-privileges:true
+    mem_limit: 64m
+    cpus: 0.5
+    pids_limit: 64
+    depends_on:
+      - app
+    ports:
+      - "80:80"
+      - "443:443"
+      - "443:443/udp"
+    volumes:
+      - avatar-uploads:/srv/public/avatars:ro
+      - php-fpm-socket:/run/php:ro
+      - caddy-data:/data
+      - caddy-config:/config
+    tmpfs:
+      - /tmp:size=16m,mode=1777
+    restart: unless-stopped
+
+volumes:
+  avatar-uploads:
+  flag-socket:
+    driver_opts:
+      type: tmpfs
+      device: tmpfs
+      o: size=1m,mode=0755
+  php-fpm-socket:
+    driver_opts:
+      type: tmpfs
+      device: tmpfs
+      o: size=8m,mode=1777
+  caddy-data:
+  caddy-config:

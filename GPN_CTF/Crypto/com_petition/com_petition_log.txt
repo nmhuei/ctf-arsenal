@@ -1,0 +1,10 @@
+[1] Extracted /mnt/data/com-petition.tar.gz safely into /mnt/data/ctf_com_petition/extracted.
+[2] Inspected files: main.py, pyproject.toml, uv.lock.
+[3] Found verifier: commitment == sha256(r1 + message + r2).digest().
+[4] Found bug: no delimiter/length binding between r1, message, r2. A single byte string containing rock, paper, scissors can be split around any selected word after seeing the server choice.
+[5] Built exploit: create fresh blob = random_prefix || round_no || '|rock|paper|scissors|' || random_suffix; send sha256(blob) as commitment.
+[6] After service prints its choice, choose the winning move and submit proof as prefix/suffix split around that move.
+[7] Used a fresh random blob each round, so already_seen does not reject changing messages for the same commitment.
+[8] Local proof command: FLAG='flag{LOCAL_PROOF_FLAG}' python3 /mnt/data/com_petition_solve.py --local ./main.py
+[9] Local result: flag{LOCAL_PROOF_FLAG}. This proves the exploit completes 100 rounds and reaches the flag-printing branch.
+[10] Remote not executed because no host/port was provided in the challenge archive or prompt.

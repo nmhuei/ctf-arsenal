@@ -1,0 +1,38 @@
+{
+  "id": "blockchain_endian_firewall",
+  "name": "Control Plane",
+  "category": "misc",
+  "points": 258,
+  "author": "neerajcodz",
+  "tags": [],
+  "hints": [],
+  "connection_info": null,
+  "solved_by_me": false,
+  "solves_count": 18,
+  "downloaded_files": [
+    {
+      "url": "https://files.adheeshg.in/uploads/bd8c962420ca0e9a29ce91f91a389a55681d5b6cc89e92cc2a10029b3d24b457/blockchain-control-plane.tar.gz",
+      "name": "blockchain-control-plane.tar.gz",
+      "saved_path": "/home/light/Workspace/CTF/CTF_Competition/misc/Control_Plane/blockchain-control-plane.tar.gz",
+      "success": true,
+      "source": "platform_attachment",
+      "message": "Direct download successful"
+    }
+  ],
+  "raw": {
+    "id": "blockchain_endian_firewall",
+    "name": "Control Plane",
+    "description": "A settlement gateway accepts compact envelopes produced by several independent\nimplementations. The deployed kernel was independently audited from its\nwire-format specification. Recover the vault funds without the operator key.\n\n",
+    "category": "misc",
+    "author": "neerajcodz",
+    "files": [
+      {
+        "name": "blockchain-control-plane.tar.gz",
+        "url": "https://files.adheeshg.in/uploads/bd8c962420ca0e9a29ce91f91a389a55681d5b6cc89e92cc2a10029b3d24b457/blockchain-control-plane.tar.gz"
+      }
+    ],
+    "points": 258,
+    "solves": 18,
+    "sortWeight": 0
+  }
+}

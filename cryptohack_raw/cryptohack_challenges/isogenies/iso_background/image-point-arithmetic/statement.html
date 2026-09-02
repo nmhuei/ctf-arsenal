@@ -1,0 +1,775 @@
+<div class="challengeDescription">
+ <!-- <p> -->
+ As mentioned in the introduction, an isogeny is not only a rational map between curves, but also a map which preserves the group structure on these curves. This means that even if the isogeny
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi>
+        ϕ
+       </mi>
+       <mo>
+        :
+       </mo>
+       <mi>
+        E
+       </mi>
+       <mo>
+        →
+       </mo>
+       <msup>
+        <mi>
+         E
+        </mi>
+        <mo lspace="0em" mathvariant="normal" rspace="0em">
+         ′
+        </mo>
+       </msup>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       \phi : E \to E'
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 0.8889em; vertical-align: -0.1944em;">
+     </span>
+     <span class="mord mathnormal">
+      ϕ
+     </span>
+     <span class="mspace" style="margin-right: 0.2778em;">
+     </span>
+     <span class="mrel">
+      :
+     </span>
+     <span class="mspace" style="margin-right: 0.2778em;">
+     </span>
+    </span>
+    <span class="base">
+     <span class="strut" style="height: 0.6833em;">
+     </span>
+     <span class="mord mathnormal" style="margin-right: 0.0576em;">
+      E
+     </span>
+     <span class="mspace" style="margin-right: 0.2778em;">
+     </span>
+     <span class="mrel">
+      →
+     </span>
+     <span class="mspace" style="margin-right: 0.2778em;">
+     </span>
+    </span>
+    <span class="base">
+     <span class="strut" style="height: 0.7519em;">
+     </span>
+     <span class="mord">
+      <span class="mord mathnormal" style="margin-right: 0.0576em;">
+       E
+      </span>
+      <span class="msupsub">
+       <span class="vlist-t">
+        <span class="vlist-r">
+         <span class="vlist" style="height: 0.7519em;">
+          <span class="" style="top: -3.063em; margin-right: 0.05em;">
+           <span class="pstrut" style="height: 2.7em;">
+           </span>
+           <span class="sizing reset-size6 size3 mtight">
+            <span class="mord mtight">
+             <span class="mord mtight">
+              ′
+             </span>
+            </span>
+           </span>
+          </span>
+         </span>
+        </span>
+       </span>
+      </span>
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ is unknown, given
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi>
+        ϕ
+       </mi>
+       <mo stretchy="false">
+        (
+       </mo>
+       <mi>
+        P
+       </mi>
+       <mo stretchy="false">
+        )
+       </mo>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       \phi(P)
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 1em; vertical-align: -0.25em;">
+     </span>
+     <span class="mord mathnormal">
+      ϕ
+     </span>
+     <span class="mopen">
+      (
+     </span>
+     <span class="mord mathnormal" style="margin-right: 0.1389em;">
+      P
+     </span>
+     <span class="mclose">
+      )
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ and
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi>
+        ϕ
+       </mi>
+       <mo stretchy="false">
+        (
+       </mo>
+       <mi>
+        Q
+       </mi>
+       <mo stretchy="false">
+        )
+       </mo>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       \phi(Q)
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 1em; vertical-align: -0.25em;">
+     </span>
+     <span class="mord mathnormal">
+      ϕ
+     </span>
+     <span class="mopen">
+      (
+     </span>
+     <span class="mord mathnormal">
+      Q
+     </span>
+     <span class="mclose">
+      )
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ one can determine the result of
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi>
+        ϕ
+       </mi>
+       <mo stretchy="false">
+        (
+       </mo>
+       <mi>
+        P
+       </mi>
+       <mo>
+        +
+       </mo>
+       <mi>
+        Q
+       </mi>
+       <mo stretchy="false">
+        )
+       </mo>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       \phi(P + Q)
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 1em; vertical-align: -0.25em;">
+     </span>
+     <span class="mord mathnormal">
+      ϕ
+     </span>
+     <span class="mopen">
+      (
+     </span>
+     <span class="mord mathnormal" style="margin-right: 0.1389em;">
+      P
+     </span>
+     <span class="mspace" style="margin-right: 0.2222em;">
+     </span>
+     <span class="mbin">
+      +
+     </span>
+     <span class="mspace" style="margin-right: 0.2222em;">
+     </span>
+    </span>
+    <span class="base">
+     <span class="strut" style="height: 1em; vertical-align: -0.25em;">
+     </span>
+     <span class="mord mathnormal">
+      Q
+     </span>
+     <span class="mclose">
+      )
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ .
+ <br/>
+ <br/>
+ <span class="note">
+  <i class="fas fa-pencil-alt">
+  </i>
+  Something to think about: imagine you had access to an oracle which evaluated points under the action of an isogeny
+  <span>
+   <span class="katex">
+    <span class="katex-mathml">
+     <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <semantics>
+       <mrow>
+        <mi>
+         ϕ
+        </mi>
+        <mo>
+         :
+        </mo>
+        <mi>
+         E
+        </mi>
+        <mo>
+         →
+        </mo>
+        <msup>
+         <mi>
+          E
+         </mi>
+         <mo lspace="0em" mathvariant="normal" rspace="0em">
+          ′
+         </mo>
+        </msup>
+       </mrow>
+       <annotation encoding="application/x-tex">
+        \phi : E \to E'
+       </annotation>
+      </semantics>
+     </math>
+    </span>
+    <span aria-hidden="true" class="katex-html">
+     <span class="base">
+      <span class="strut" style="height: 0.8889em; vertical-align: -0.1944em;">
+      </span>
+      <span class="mord mathnormal">
+       ϕ
+      </span>
+      <span class="mspace" style="margin-right: 0.2778em;">
+      </span>
+      <span class="mrel">
+       :
+      </span>
+      <span class="mspace" style="margin-right: 0.2778em;">
+      </span>
+     </span>
+     <span class="base">
+      <span class="strut" style="height: 0.6833em;">
+      </span>
+      <span class="mord mathnormal" style="margin-right: 0.0576em;">
+       E
+      </span>
+      <span class="mspace" style="margin-right: 0.2778em;">
+      </span>
+      <span class="mrel">
+       →
+      </span>
+      <span class="mspace" style="margin-right: 0.2778em;">
+      </span>
+     </span>
+     <span class="base">
+      <span class="strut" style="height: 0.7519em;">
+      </span>
+      <span class="mord">
+       <span class="mord mathnormal" style="margin-right: 0.0576em;">
+        E
+       </span>
+       <span class="msupsub">
+        <span class="vlist-t">
+         <span class="vlist-r">
+          <span class="vlist" style="height: 0.7519em;">
+           <span class="" style="top: -3.063em; margin-right: 0.05em;">
+            <span class="pstrut" style="height: 2.7em;">
+            </span>
+            <span class="sizing reset-size6 size3 mtight">
+             <span class="mord mtight">
+              <span class="mord mtight">
+               ′
+              </span>
+             </span>
+            </span>
+           </span>
+          </span>
+         </span>
+        </span>
+       </span>
+      </span>
+     </span>
+    </span>
+   </span>
+  </span>
+  . Could you use this to determine the kernel of the secret isogeny?
+ </span>
+ <br/>
+ <br/>
+ To solve this challenge, compute the
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi>
+        x
+       </mi>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       x
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 0.4306em;">
+     </span>
+     <span class="mord mathnormal">
+      x
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ -coordinate of the point
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi>
+        ϕ
+       </mi>
+       <mo stretchy="false">
+        (
+       </mo>
+       <mi>
+        P
+       </mi>
+       <mo>
+        +
+       </mo>
+       <mi>
+        Q
+       </mi>
+       <mo stretchy="false">
+        )
+       </mo>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       \phi(P + Q)
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 1em; vertical-align: -0.25em;">
+     </span>
+     <span class="mord mathnormal">
+      ϕ
+     </span>
+     <span class="mopen">
+      (
+     </span>
+     <span class="mord mathnormal" style="margin-right: 0.1389em;">
+      P
+     </span>
+     <span class="mspace" style="margin-right: 0.2222em;">
+     </span>
+     <span class="mbin">
+      +
+     </span>
+     <span class="mspace" style="margin-right: 0.2222em;">
+     </span>
+    </span>
+    <span class="base">
+     <span class="strut" style="height: 1em; vertical-align: -0.25em;">
+     </span>
+     <span class="mord mathnormal">
+      Q
+     </span>
+     <span class="mclose">
+      )
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ given the following data, where
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi>
+        ϕ
+       </mi>
+       <mo>
+        :
+       </mo>
+       <mi>
+        E
+       </mi>
+       <mo>
+        →
+       </mo>
+       <msup>
+        <mi>
+         E
+        </mi>
+        <mo lspace="0em" mathvariant="normal" rspace="0em">
+         ′
+        </mo>
+       </msup>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       \phi : E \to E'
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 0.8889em; vertical-align: -0.1944em;">
+     </span>
+     <span class="mord mathnormal">
+      ϕ
+     </span>
+     <span class="mspace" style="margin-right: 0.2778em;">
+     </span>
+     <span class="mrel">
+      :
+     </span>
+     <span class="mspace" style="margin-right: 0.2778em;">
+     </span>
+    </span>
+    <span class="base">
+     <span class="strut" style="height: 0.6833em;">
+     </span>
+     <span class="mord mathnormal" style="margin-right: 0.0576em;">
+      E
+     </span>
+     <span class="mspace" style="margin-right: 0.2778em;">
+     </span>
+     <span class="mrel">
+      →
+     </span>
+     <span class="mspace" style="margin-right: 0.2778em;">
+     </span>
+    </span>
+    <span class="base">
+     <span class="strut" style="height: 0.7519em;">
+     </span>
+     <span class="mord">
+      <span class="mord mathnormal" style="margin-right: 0.0576em;">
+       E
+      </span>
+      <span class="msupsub">
+       <span class="vlist-t">
+        <span class="vlist-r">
+         <span class="vlist" style="height: 0.7519em;">
+          <span class="" style="top: -3.063em; margin-right: 0.05em;">
+           <span class="pstrut" style="height: 2.7em;">
+           </span>
+           <span class="sizing reset-size6 size3 mtight">
+            <span class="mord mtight">
+             <span class="mord mtight">
+              ′
+             </span>
+            </span>
+           </span>
+          </span>
+         </span>
+        </span>
+       </span>
+      </span>
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ is an isogeny between elliptic curves in the short Weierstrass model:
+ <br/>
+ <br/>
+ <span class="mathDisplay">
+  <span>
+   <span class="katex">
+    <span class="katex-mathml">
+     <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <semantics>
+       <mrow>
+        <mi>
+         ϕ
+        </mi>
+        <mo stretchy="false">
+         (
+        </mo>
+        <mi>
+         P
+        </mi>
+        <mo stretchy="false">
+         )
+        </mo>
+        <mo>
+         =
+        </mo>
+        <mo stretchy="false">
+         (
+        </mo>
+        <mn>
+         48622
+        </mn>
+        <mo separator="true">
+         ,
+        </mo>
+        <mn>
+         27709
+        </mn>
+        <mo stretchy="false">
+         )
+        </mo>
+        <mo separator="true">
+         ,
+        </mo>
+        <mspace width="1em">
+        </mspace>
+        <mi>
+         ϕ
+        </mi>
+        <mo stretchy="false">
+         (
+        </mo>
+        <mi>
+         Q
+        </mi>
+        <mo stretchy="false">
+         )
+        </mo>
+        <mo>
+         =
+        </mo>
+        <mo stretchy="false">
+         (
+        </mo>
+        <mn>
+         9460
+        </mn>
+        <mo separator="true">
+         ,
+        </mo>
+        <mn>
+         13819
+        </mn>
+        <mo stretchy="false">
+         )
+        </mo>
+        <mo separator="true">
+         ,
+        </mo>
+        <mspace width="1em">
+        </mspace>
+        <mi>
+         p
+        </mi>
+        <mo>
+         =
+        </mo>
+        <mn>
+         63079
+        </mn>
+       </mrow>
+       <annotation encoding="application/x-tex">
+        \phi(P) = (48622, 27709), \quad \phi(Q) = (9460, 13819), \quad p = 63079
+       </annotation>
+      </semantics>
+     </math>
+    </span>
+    <span aria-hidden="true" class="katex-html">
+     <span class="base">
+      <span class="strut" style="height: 1em; vertical-align: -0.25em;">
+      </span>
+      <span class="mord mathnormal">
+       ϕ
+      </span>
+      <span class="mopen">
+       (
+      </span>
+      <span class="mord mathnormal" style="margin-right: 0.1389em;">
+       P
+      </span>
+      <span class="mclose">
+       )
+      </span>
+      <span class="mspace" style="margin-right: 0.2778em;">
+      </span>
+      <span class="mrel">
+       =
+      </span>
+      <span class="mspace" style="margin-right: 0.2778em;">
+      </span>
+     </span>
+     <span class="base">
+      <span class="strut" style="height: 1em; vertical-align: -0.25em;">
+      </span>
+      <span class="mopen">
+       (
+      </span>
+      <span class="mord">
+       48622
+      </span>
+      <span class="mpunct">
+       ,
+      </span>
+      <span class="mspace" style="margin-right: 0.1667em;">
+      </span>
+      <span class="mord">
+       27709
+      </span>
+      <span class="mclose">
+       )
+      </span>
+      <span class="mpunct">
+       ,
+      </span>
+      <span class="mspace" style="margin-right: 1em;">
+      </span>
+      <span class="mspace" style="margin-right: 0.1667em;">
+      </span>
+      <span class="mord mathnormal">
+       ϕ
+      </span>
+      <span class="mopen">
+       (
+      </span>
+      <span class="mord mathnormal">
+       Q
+      </span>
+      <span class="mclose">
+       )
+      </span>
+      <span class="mspace" style="margin-right: 0.2778em;">
+      </span>
+      <span class="mrel">
+       =
+      </span>
+      <span class="mspace" style="margin-right: 0.2778em;">
+      </span>
+     </span>
+     <span class="base">
+      <span class="strut" style="height: 1em; vertical-align: -0.25em;">
+      </span>
+      <span class="mopen">
+       (
+      </span>
+      <span class="mord">
+       9460
+      </span>
+      <span class="mpunct">
+       ,
+      </span>
+      <span class="mspace" style="margin-right: 0.1667em;">
+      </span>
+      <span class="mord">
+       13819
+      </span>
+      <span class="mclose">
+       )
+      </span>
+      <span class="mpunct">
+       ,
+      </span>
+      <span class="mspace" style="margin-right: 1em;">
+      </span>
+      <span class="mspace" style="margin-right: 0.1667em;">
+      </span>
+      <span class="mord mathnormal">
+       p
+      </span>
+      <span class="mspace" style="margin-right: 0.2778em;">
+      </span>
+      <span class="mrel">
+       =
+      </span>
+      <span class="mspace" style="margin-right: 0.2778em;">
+      </span>
+     </span>
+     <span class="base">
+      <span class="strut" style="height: 0.6444em;">
+      </span>
+      <span class="mord">
+       63079
+      </span>
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ <br/>
+ <br/>
+ <b>
+  Resources:
+ </b>
+ <br/>
+ -
+ <a href="https://ocw.mit.edu/courses/18-783-elliptic-curves-spring-2021/a594ab394477ba96f9e8559635265ef1_MIT18_783S21_notes4.pdf" target="_blank">
+  Isogenies, Lecture Notes, Andrew Sutherland
+ </a>
+ <br/>
+ <!-- </p> -->
+</div>

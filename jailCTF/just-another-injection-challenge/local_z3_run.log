@@ -1,0 +1,213 @@
+[+] using base solver module: /home/light/Workspace/CTF/jailCTF/just-another-injection-challenge/solve_checked.py
+[+] loaded 43 singleton labels for length recovery
+[+] using verified flag length = 122
+[+] using 38 unique predicate chains as jq-calibrated accept-sets
+[+] calibrating accept-sets with 'jq' (jq-1.8.2)
+[+] candidate numeric universe: 256 values
+    calibrated 1/38 chains
+    calibrated 10/38 chains
+    calibrated 20/38 chains
+    calibrated 30/38 chains
+    calibrated 38/38 chains
+[+] calibration done in 0.12s
+[!] warning: 1 chains accept no candidate values
+[*] set broad phase: 124 features, 3158 oracle queries
+    local oracle: 96 queries in 0.27s
+    progress: 96/3158 queries (0.3s)
+    local oracle: 96 queries in 0.29s
+    progress: 192/3158 queries (0.6s)
+    local oracle: 96 queries in 0.28s
+    progress: 288/3158 queries (0.8s)
+    local oracle: 96 queries in 0.27s
+    progress: 384/3158 queries (1.1s)
+    local oracle: 96 queries in 0.29s
+    progress: 480/3158 queries (1.4s)
+    local oracle: 96 queries in 0.28s
+    progress: 576/3158 queries (1.7s)
+    local oracle: 96 queries in 0.30s
+    progress: 672/3158 queries (2.0s)
+    local oracle: 96 queries in 0.28s
+    progress: 768/3158 queries (2.3s)
+    local oracle: 96 queries in 0.32s
+    progress: 864/3158 queries (2.6s)
+    local oracle: 96 queries in 0.30s
+    progress: 960/3158 queries (2.9s)
+    local oracle: 96 queries in 0.30s
+    progress: 1056/3158 queries (3.2s)
+    local oracle: 96 queries in 0.34s
+    progress: 1152/3158 queries (3.5s)
+    local oracle: 96 queries in 0.32s
+    progress: 1248/3158 queries (3.8s)
+    local oracle: 96 queries in 0.37s
+    progress: 1344/3158 queries (4.2s)
+    local oracle: 96 queries in 0.30s
+    progress: 1440/3158 queries (4.5s)
+    local oracle: 96 queries in 0.28s
+    progress: 1536/3158 queries (4.8s)
+    local oracle: 96 queries in 0.27s
+    progress: 1632/3158 queries (5.1s)
+    local oracle: 96 queries in 0.28s
+    progress: 1728/3158 queries (5.3s)
+    local oracle: 96 queries in 0.27s
+    progress: 1824/3158 queries (5.6s)
+    local oracle: 96 queries in 0.27s
+    progress: 1920/3158 queries (5.9s)
+    local oracle: 96 queries in 0.27s
+    progress: 2016/3158 queries (6.2s)
+    local oracle: 96 queries in 0.27s
+    progress: 2112/3158 queries (6.4s)
+    local oracle: 96 queries in 0.29s
+    progress: 2208/3158 queries (6.7s)
+    local oracle: 96 queries in 0.26s
+    progress: 2304/3158 queries (7.0s)
+    local oracle: 96 queries in 0.28s
+    progress: 2400/3158 queries (7.3s)
+    local oracle: 96 queries in 0.27s
+    progress: 2496/3158 queries (7.5s)
+    local oracle: 96 queries in 0.28s
+    progress: 2592/3158 queries (7.8s)
+    local oracle: 96 queries in 0.31s
+    progress: 2688/3158 queries (8.1s)
+    local oracle: 96 queries in 0.31s
+    progress: 2784/3158 queries (8.4s)
+    local oracle: 96 queries in 0.28s
+    progress: 2880/3158 queries (8.7s)
+    local oracle: 96 queries in 0.29s
+    progress: 2976/3158 queries (9.0s)
+    local oracle: 96 queries in 0.32s
+    progress: 3072/3158 queries (9.3s)
+    local oracle: 86 queries in 0.29s
+    progress: 3158/3158 queries (9.6s)
+[+] domain size: 2733; positive constraints: 1440
+[!] ambiguous domain at 5: adfhijlmoqruvxz01367_
+[!] ambiguous domain at 6: abegijmnpstvwy01256_
+[!] ambiguous domain at 7: acdfhjlnostux0159_
+[!] ambiguous domain at 8: bclmnoprtuvxy012346789
+[!] ambiguous domain at 9: abdfhjlmopqsuvwxyz01238_
+[!] ambiguous domain at 10: abcegmnpqtvwyz012345689_
+[!] ambiguous domain at 11: abcjlu012345679_
+[!] ambiguous domain at 12: flostux0123456789_
+[!] ambiguous domain at 13: behilmnqrtuvz012345_
+[!] ambiguous domain at 14: adhij013456789_
+[!] ambiguous domain at 15: girw012456789_
+[!] ambiguous domain at 16: abcefhjkloqstuxz012567_
+[!] ambiguous domain at 17: abcefgiklmnprtuxy013469_
+[!] ambiguous domain at 18: abcdfghjlmoqsvwxyz0234589_
+[!] ambiguous domain at 19: abeghikmnprvwy12348_
+[!] ambiguous domain at 20: abcfjlouwx012367_
+[!] ambiguous domain at 21: abcijkmtv1256_
+[!] ambiguous domain at 22: bcdehiknr01459_
+[!] ambiguous domain at 23: cdghijlqrs
+[!] ambiguous domain at 24: afghijkmpqrstz2378_
+[!] ambiguous domain at 25: aefghijklopqrsuyz12679_
+[!] ambiguous domain at 26: acdghijklmquv0123456789_
+[!] ambiguous domain at 27: acfghijklptuz0123456789_
+[!] ambiguous domain at 28: aefghijkosty0123456789_
+[!] ambiguous domain at 29: adfghij01456789_
+[!] ambiguous domain at 30: cdeimrw0123456789_
+[!] ambiguous domain at 31: cdehlqvz0123456789_
+[!] ambiguous domain at 32: cdghijlpqrsuyz125789_
+[!] ambiguous domain at 33: afghijkmopqrstvxyz0146789_
+[!] ambiguous domain at 34: aefghijklnopqrstuwxyz012456789_
+[!] ambiguous domain at 35: acdefghijklmnopqrstuvxyz245678_
+[!] ambiguous domain at 36: acdefghijklmnopqrstuvwxyz1345679_
+[!] ambiguous domain at 37: aefghijklmnopqrstuvwxyz02345689_
+[!] ambiguous domain at 38: adfghijklmopqrstuvwxy12345789_
+[!] ambiguous domain at 39: cdeghijklmnpqrstuvwz012346789_
+[!] ambiguous domain at 40: acdehijklmnqrstuvwz012356789_
+[!] ambiguous domain at 41: acdgijklmprstuvy012456789_
+[!] ambiguous domain at 42: afghijkmopqrstxyz013456789_
+[!] ambiguous domain at 43: aefghijklnopqrstwxyz023456789_
+[!] ambiguous domain at 44: acdefghijklmnopqrsuvxyz123456789_
+[!] ambiguous domain at 45: acdefghijklmnopqrtuvwxyz012345678_
+[!] ambiguous domain at 46: aefghijklmnopqstuvwxyz012345679_
+[!] ambiguous domain at 47: adfghijklmoprstuvwxyz012345689_
+[!] ambiguous domain at 48: cdeghijklmnqrstuvwyz012345789_
+[!] ambiguous domain at 49: cdefhijklmnqrstuvwxz012346789_
+[!] ambiguous domain at 50: acdgijklmprstuvwy012356789_
+[!] ambiguous domain at 51: acfghjklopqstuvwxyz012456789_
+[!] ambiguous domain at 52: aefghijknopqrstuwxyz013456789_
+[!] ambiguous domain at 53: acdefghijlmnopqrstuvxyz023456789_
+[!] ambiguous domain at 54: acdefghiklmnopqrstuvwxyz123456789_
+[!] ambiguous domain at 55: aefghjklmnopqrstuvwxyz123456789_
+[!] ambiguous domain at 56: adfgijklmopqrstuvwxyz023456789_
+[!] ambiguous domain at 57: cdehijklmnpqrstuvwyz013456789_
+[!] ambiguous domain at 58: cdehijklmnoqrstuvwxz_
+[!] ambiguous domain at 59: acdfgijklmnoprstuvxy012356789
+[!] ambiguous domain at 60: 012346789
+[!] ambiguous domain at 61: aefghiklmnopqrtuvwxyz012345789_
+[!] ambiguous domain at 62: acdefghijklmnopqrstuvxyz012345689_
+[!] ambiguous domain at 63: 01234567
+[!] ambiguous domain at 64: aefghijklmnopqrstuvwxyz_
+[!] ambiguous domain at 65: adfghijklmopqrstuvwxyz
+[!] ambiguous domain at 66: cdeghijklmnpqrstuvwyz01345789_
+[!] ambiguous domain at 67: cdefhijklmnoqrstuvwxz0124678_
+[!] ambiguous domain at 68: acdefgijklmnoprstuvxy01235679
+[!] ambiguous domain at 69: acdefghjklnopqstuwxyz024689
+[!] ambiguous domain at 70: acefghiklmnopqrtuvwxyz01345789_
+[!] ambiguous domain at 71: acdefghijlmnopqrsuvwxyz0234689_
+[!] ambiguous domain at 72: acdefghijklmnopqrstuvwxyz235679_
+[!] ambiguous domain at 73: aefghijklmnopqrstuvwxyz0245678_
+[!] ambiguous domain at 74: adfghijklmopqrstuvwxyz03456789_
+[!] ambiguous domain at 75: cdeghijklmnpqrstuvwyz023456789_
+[!] ambiguous domain at 76: cdefhijklmnoqrstuvwxz23456789_
+[!] ambiguous domain at 77: acdefgijklmnoprstuvxy023456789
+[!] ambiguous domain at 78: acdefghjklnopqstuwxyz023456789
+[!] ambiguous domain at 79: acdefghikmnopqrtvxyz2345678_
+[!] ambiguous domain at 80: acdefghijlmnopqrsuvwxyz023456789_
+[!] ambiguous domain at 81: acefghijkmnopqrstvwxyz023456789_
+[!] ambiguous domain at 82: aefghijklmnopqrstuvwxyz023456789_
+[!] ambiguous domain at 83: adfghijklmopqrstuvwxyz23456789_
+[!] ambiguous domain at 84: cdeghijklmnpqrstuvwyz_
+[!] ambiguous domain at 85: cdefhijklmnoqrstuvwxz_
+[!] ambiguous domain at 86: acdefgijklmnoprstuvxy
+[!] ambiguous domain at 87: acdfghjknopqstuwxyz
+[!] ambiguous domain at 88: acdefghikmnopqrtvxyz_
+[!] ambiguous domain at 89: adefghijlnopqrsuwxyz_
+[!] ambiguous domain at 90: aghijkmnopqrstwz_
+[!] ambiguous domain at 91: ahijklopqrstux_
+[!] ambiguous domain at 92: aijklrtuv
+[!] ambiguous domain at 93: cdjklmnpqrstuvwz_
+[!] ambiguous domain at 94: cdeklmnoqrstuvwx_
+[!] ambiguous domain at 95: acdeflmnoprstuvxy023456789
+[!] ambiguous domain at 96: acdefghjklnopqsuwyz
+[!] ambiguous domain at 97: acdefghikmnopqrtvxz_
+[!] ambiguous domain at 98: adefghijlnopqrsuwxy_
+[!] ambiguous domain at 99: acefghikmnopqrtvxyz_
+[!] ambiguous domain at 100: acfhijkloqrstuwz_
+[!] ambiguous domain at 101: acghijklmpqrstuvz_
+[!] ambiguous domain at 102: acdghijklmpqrstuvy_
+[!] ambiguous domain at 103: acefhijklnoqrstuwxz_
+[!] ambiguous domain at 104: acdefgijkmnoprstvwxy_
+[!] ambiguous domain at 105: acdefghjlmnopqsuvwxyz_
+[!] ambiguous domain at 106: ahiklnopqrtux02345789_
+[!] ambiguous domain at 107: acjlmopqsuvy02346789
+[!] ambiguous domain at 108: efgijkmnoprstvxy_
+[!] ambiguous domain at 109: fhijkloqrstuxz_
+[!] ambiguous domain at 110: aclmprstuvy0456789_
+[!] ambiguous domain at 111: acdhijklmqrstuvz_
+[!] ambiguous domain at 112: aefghijklnopqrstuwxz_
+[!] ambiguous domain at 113: cjkmnopqrstvwxy
+[!] ambiguous domain at 114: acdefghijlmnopqrsuvxz
+[!] ambiguous domain at 115: aefghiklmnopqrtuvwyz_
+[!] ambiguous domain at 116: cdfghjklmopqstuvxz_
+[!] ambiguous domain at 117: degijklmnprstuy_
+[!] ambiguous domain at 118: aefhijklnoqrstxz_
+[!] ambiguous domain at 119: cdgijkprswy
+[!] ambiguous domain at 120: acdghjklmpqtuvyz_
+[+] solutions: ['jail{d291jy_l_5gkea80abckaa3aicezvaaaaa4aaaaaaaa9da1a8aa7cca2na0aac0aa0aaaaccaaaa0aaccaaaamxad_ankaathawwaamef_aacaacdaca}', 'jail{_2x7ay3ol5gblzhji9c3a4a3iccsk1aaaa0aaaaa0aa9_1gaaea0cca0aa0aac0aa0aaaaccaaaa0aaccaaaamxad_ewkaathawwaamef_aacaacdaca}']
+Traceback (most recent call last):
+  File "/home/light/Workspace/CTF/jailCTF/just-another-injection-challenge/solve_set_oracle_v3_fixed.py", line 366, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "/home/light/Workspace/CTF/jailCTF/just-another-injection-challenge/solve_set_oracle_v3_fixed.py", line 349, in main
+    flag = solve_once(
+        base, oracle, args.chains, charset, args.min_length, args.max_length,
+        args.feature_count, args.limit, jq_cmd, args.progress_batch,
+        args.known_length
+    )
+  File "/home/light/Workspace/CTF/jailCTF/just-another-injection-challenge/solve_set_oracle_v3_fixed.py", line 310, in solve_once
+    raise RuntimeError(
+        "not unique/inconsistent; rerun with --feature-count 124 --limit 20, or paste this output back"
+    )
+RuntimeError: not unique/inconsistent; rerun with --feature-count 124 --limit 20, or paste this output back

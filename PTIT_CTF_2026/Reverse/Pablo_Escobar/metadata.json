@@ -1,0 +1,42 @@
+{
+  "id": 28,
+  "name": "Pablo Escobar",
+  "category": "Reverse",
+  "points": 368,
+  "author": null,
+  "tags": [
+    "StaticAttachment"
+  ],
+  "hints": [],
+  "connection_info": null,
+  "solved_by_me": false,
+  "solves_count": 3,
+  "downloaded_files": [
+    {
+      "url": "https://jeo.infosecptit.org/assets/257fec34a3b0ad32bc18a700fa898e379003bc739da884694eb781a0ca3daf54/dist.zip",
+      "name": "dist.zip",
+      "saved_path": "/home/light/Workspace/CTF/PTIT_CTF_2026/Reverse/Pablo_Escobar/dist.zip",
+      "success": true,
+      "source": "platform_attachment",
+      "message": "Direct download successful"
+    }
+  ],
+  "raw": {
+    "id": 28,
+    "title": " Pablo Escobar",
+    "content": "```\nÔng trùm buôn ma túy ở Bắc Ninh cung cấp cho đồng bọn một phần mềm. Trước mỗi cuộc giao dịch, ông chủ đều gửi ảnh thông qua cho đồng bọn. Đồng bọn nhận ảnh nơi giao ma túy, rồi cho flycam bay tới giao hàng. Công an PC04 đã tóm gọn một đối tượng thu được 1 ít thông tin tài khoản như sau: \nTK: luongvd \nMK: luongvd \nBên trong vẫn còn chứa ảnh địa điểm cuối cùng mà đối tượng nhận được.\n```",
+    "category": "Reverse",
+    "hints": [],
+    "score": 368,
+    "type": "StaticAttachment",
+    "context": {
+      "closeTime": null,
+      "instanceEntry": null,
+      "url": "/assets/257fec34a3b0ad32bc18a700fa898e379003bc739da884694eb781a0ca3daf54/dist.zip",
+      "fileSize": 1262685
+    },
+    "limit": 0,
+    "attempts": 0,
+    "deadline": null
+  }
+}

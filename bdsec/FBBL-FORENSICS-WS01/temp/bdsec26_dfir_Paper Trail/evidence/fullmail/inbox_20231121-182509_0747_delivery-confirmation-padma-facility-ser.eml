@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Delivery Confirmation - Padma Facility Services - FirstBangla Mail</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+
+<div class="topbar">
+  <div class="topbar-left">
+    <div class="brand">
+      <div class="brand-mark">FB</div>
+      <span class="brand-name">FirstBangla Mail</span>
+    </div>
+  </div>
+  <div class="topbar-center">
+    <form class="searchform" method="get" action="/search" role="search">
+      <button type="submit" class="searchform-icon" aria-label="Search">&#128269;</button>
+      <input type="text" name="q" placeholder="Search mail" value="" autocomplete="off">
+      
+    </form>
+  </div>
+  <div class="topbar-right">
+    <span class="user-chip">
+      <span class="user-avatar">A</span>
+      <span class="user-name">Arif Khan</span>
+    </span>
+    <a class="logout-link" href="/logout">Sign out</a>
+  </div>
+</div>
+<div class="layout">
+  <div class="sidebar">
+    <div class="compose-btn" title="Composing is disabled in this archive view">+ Compose</div>
+    <nav class="folder-nav">
+      <a class="folder-link active" href="/mail/inbox">
+        <span class="folder-icon">&#128229;</span> Inbox
+        <span class="folder-count">761</span>
+      </a>
+      <a class="folder-link " href="/mail/sent">
+        <span class="folder-icon">&#128228;</span> Sent
+        <span class="folder-count">486</span>
+      </a>
+    </nav>
+    <div class="sidebar-footer">
+      arif.khan@firstbangla.com
+    </div>
+  </div>
+  <div class="main-pane">
+    <div class="detail-header">
+      <a class="back-link" href="/mail/inbox">&larr; Back to Inbox</a>
+      <a class="source-link" href="/mail/inbox/20231121-182509_0747_delivery-confirmation-padma-facility-ser.eml/source" target="_blank">View source</a>
+    </div>
+    <div class="detail-card">
+      <h1 class="detail-subject">Delivery Confirmation - Padma Facility Services</h1>
+      <div class="detail-meta">
+        <div class="detail-avatar">F</div>
+        <div class="detail-meta-text">
+          <div><strong>Farhana Bhuiyan</strong> <span class="meta-addr">&lt;farhana@padmafacilityservices.com&gt;</span></div>
+          <div class="meta-to">to Arif Khan <span class="meta-addr">&lt;arif.khan@firstbangla.com&gt;</span></div>
+        </div>
+        <div class="detail-date">21 Nov 2023, 06:25 PM</div>
+      </div>
+      <div class="detail-body">Dear Mr. Khan,
+
+Thank you for your continued partnership with Padma Facility Services. Please find attached the delivery confirmation for your reference. The total amount is BDT 729,529, payable within 15 days.
+
+Please let us know if you require any clarification.
+
+Best regards,
+Farhana Bhuiyan
+Padma Facility Services
+</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

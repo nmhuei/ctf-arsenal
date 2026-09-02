@@ -1,0 +1,17 @@
+#!/bin/sh
+export PATH=/sbin:/bin:/usr/sbin:/usr/bin
+
+mount -t proc proc /proc
+mount -t sysfs sysfs /sys
+mount -t devtmpfs devtmpfs /dev 2>/dev/null || true
+mount -t tmpfs tmpfs /tmp 2>/dev/null || true
+chmod 1777 /tmp 2>/dev/null || true
+
+mkdir -p /home/user
+chown user:user /home/user 2>/dev/null || true
+
+cat /dev/vda > /home/user/challenge.js
+chmod 0644 /home/user/challenge.js
+chown user:user /home/user/challenge.js 2>/dev/null || true
+
+exec su user -c '/usr/bin/js --disable-ansi-colors /home/user/challenge.js'

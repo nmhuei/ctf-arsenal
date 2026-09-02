@@ -1,0 +1,47 @@
+{
+  "category": "RSA",
+  "category_slug": "rsa",
+  "stage": "Primes Part 1",
+  "stage_slug": "primes_1",
+  "title": "Factoring",
+  "slug": "factoring",
+  "data_challenge": "rsa_factoring",
+  "points": 15,
+  "solves": 11146,
+  "url": "https://cryptohack.org/challenges/rsa/",
+  "attachments": [],
+  "resources": [
+    {
+      "text": "modern",
+      "href": "https://en.wikipedia.org/wiki/Lenstra_elliptic-curve_factorization",
+      "url": "https://en.wikipedia.org/wiki/Lenstra_elliptic-curve_factorization",
+      "download": false
+    },
+    {
+      "text": "methods",
+      "href": "https://en.wikipedia.org/wiki/General_number_field_sieve",
+      "url": "https://en.wikipedia.org/wiki/General_number_field_sieve",
+      "download": false
+    },
+    {
+      "text": "RSA Factoring Challenge",
+      "href": "https://en.wikipedia.org/wiki/RSA_Factoring_Challenge",
+      "url": "https://en.wikipedia.org/wiki/RSA_Factoring_Challenge",
+      "download": false
+    },
+    {
+      "text": "How big an RSA key is considered secure today?",
+      "href": "https://crypto.stackexchange.com/questions/1978/how-big-an-rsa-key-is-considered-secure-today/1982#1982",
+      "url": "https://crypto.stackexchange.com/questions/1978/how-big-an-rsa-key-is-considered-secure-today/1982#1982",
+      "download": false
+    },
+    {
+      "text": "primefac-fork",
+      "href": "https://github.com/elliptic-shiho/primefac-fork",
+      "url": "https://github.com/elliptic-shiho/primefac-fork",
+      "download": false
+    }
+  ],
+  "statement_html": "statement.html",
+  "statement_md": "statement.md"
+}

@@ -1,0 +1,11 @@
+#!/usr/bin/env python3
+CHALLENGE = "ecc_basic_small_dlp"
+p = 9739
+a = 497
+b = 1768
+G = (1804, 5368)
+Q = (5266, 442)
+R = (3362, 5905)
+PRIVATE_BOUND = 5000
+CIPHERTEXT = "0f2af5ac8cf70ea2fe1a52d5313c2670ed0c3b466515cfb0856f97fc65b06f5964b5f2505453b4791d673f5a610f5fd25a3eb247e6ce"
+LENGTH = 54

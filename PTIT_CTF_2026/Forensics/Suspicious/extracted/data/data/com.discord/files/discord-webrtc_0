@@ -1,0 +1,164 @@
+engine.cpp: [2026-07-15 17:20:28.232] [8245] (line 470): Created native engine, time: Wed Jul 15 17:20:28 2026 +07, logPath: /data/user/0/com.discord/files/, logLevel: 2
+input_volume_stats_reporter.cc: [2026-07-15 17:20:28.239] [8245] (line 98): Will not log any `WebRTC.Audio.Apm.AppliedInputVolume.*` histogram stats.
+input_volume_stats_reporter.cc: [2026-07-15 17:20:28.246] [8245] (line 98): Will not log any `WebRTC.Audio.Apm.RecommendedInputVolume.*` histogram stats.
+audio_processing_impl.cc: [2026-07-15 17:20:28.247] [8245] (line 461): Injected APM submodules:
+Echo control factory: 0
+Echo detector: 0
+Capture analyzer: 0
+Capture post processor: 1
+Render pre processor: 0
+audio_processing_impl.cc: [2026-07-15 17:20:28.251] [8245] (line 474): AudioProcessing: AudioProcessing::Config{ pipeline: { maximum_internal_processing_rate: 48000, multi_channel_render: 0, multi_channel_capture: 0 }, pre_amplifier: { enabled: 0, fixed_gain_factor: 1 },capture_level_adjustment: { enabled: 0, pre_gain_factor: 1, post_gain_factor: 1, analog_mic_gain_emulation: { enabled: 0, initial_level: 255 }}, high_pass_filter: { enabled: 0 }, echo_canceller: { enabled: 0, mobile_mode: 0, enforce_high_pass_filtering: 1 }, noise_suppression: { enabled: 0, level: Moderate }, transient_suppression: { enabled: 0 }, gain_controller1: { enabled: 0, mode: AdaptiveAnalog, target_level_dbfs: 3, compression_gain_db: 9, enable_limiter: 1, analog_gain_controller { enabled: 1, startup_min_volume: 0, clipped_level_min: 70, enable_digital_adaptive: 1, clipped_level_step: 15, clipped_ratio_threshold: 0.1, clipped_wait_frames: 300, clipping_predictor:  { enabled: 0, mode: 0, window_length: 5, reference_window_length: 5, reference_window_delay: 5, clipping_threshold: -1, crest_factor_margin: 3, use_predicted_step: 1 }}}, gain_controller2: { enabled: 0, fixed_digital: { gain_db: 0 }, adaptive_digital: { enabled: 0, headroom_db: 5, max_gain_db: 50, initial_gain_db: 15, max_gain_change_db_per_second: 6, max_output_noise_level_dbfs: -50 }, input_volume_control : { enabled 0}}
+audio_processing_impl.cc: [2026-07-15 17:20:28.254] [8245] (line 673): AudioProcessing::ApplyConfig: AudioProcessing::Config{ pipeline: { maximum_internal_processing_rate: 48000, multi_channel_render: 0, multi_channel_capture: 0 }, pre_amplifier: { enabled: 0, fixed_gain_factor: 1 },capture_level_adjustment: { enabled: 0, pre_gain_factor: 1, post_gain_factor: 1, analog_mic_gain_emulation: { enabled: 0, initial_level: 255 }}, high_pass_filter: { enabled: 1 }, echo_canceller: { enabled: 0, mobile_mode: 0, enforce_high_pass_filtering: 1 }, noise_suppression: { enabled: 0, level: Moderate }, transient_suppression: { enabled: 0 }, gain_controller1: { enabled: 0, mode: AdaptiveAnalog, target_level_dbfs: 3, compression_gain_db: 9, enable_limiter: 1, analog_gain_controller { enabled: 1, startup_min_volume: 0, clipped_level_min: 70, enable_digital_adaptive: 1, clipped_level_step: 15, clipped_ratio_threshold: 0.1, clipped_wait_frames: 300, clipping_predictor:  { enabled: 0, mode: 0, window_length: 5, reference_window_length: 5, reference_window_delay: 5, clipping_threshold: -1, crest_factor_margin: 3, use_predicted_step: 1 }}}, gain_controller2: { enabled: 0, fixed_digital: { gain_db: 0 }, adaptive_digital: { enabled: 0, headroom_db: 5, max_gain_db: 50, initial_gain_db: 15, max_gain_change_db_per_second: 6, max_output_noise_level_dbfs: -50 }, input_volume_control : { enabled 0}}
+adm_factory_default.cpp: [2026-07-15 17:20:28.257] [8245] (line 103): Creating ADM on dedicated controls thread
+audio_record_jni.cc: [2026-07-15 17:20:28.407] [8250] (line 71): ctor
+audio_track_jni.cc: [2026-07-15 17:20:28.407] [8250] (line 49): ctor
+default_task_queue_factory_stdlib_or_libevent_experiment.cc: [2026-07-15 17:20:28.409] [8250] (line 33): WebRTC-TaskQueue-ReplaceLibeventWithStdlib: using TaskQueueLibeventFactory.
+input_volume_stats_reporter.cc: [2026-07-15 17:20:28.410] [8245] (line 98): Will not log any `WebRTC.Audio.Apm.AppliedInputVolume.*` histogram stats.
+input_volume_stats_reporter.cc: [2026-07-15 17:20:28.410] [8245] (line 98): Will not log any `WebRTC.Audio.Apm.RecommendedInputVolume.*` histogram stats.
+audio_processing_impl.cc: [2026-07-15 17:20:28.410] [8245] (line 461): Injected APM submodules:
+Echo control factory: 0
+Echo detector: 0
+Capture analyzer: 0
+Capture post processor: 0
+Render pre processor: 0
+audio_processing_impl.cc: [2026-07-15 17:20:28.411] [8245] (line 474): AudioProcessing: AudioProcessing::Config{ pipeline: { maximum_internal_processing_rate: 48000, multi_channel_render: 0, multi_channel_capture: 0 }, pre_amplifier: { enabled: 0, fixed_gain_factor: 1 },capture_level_adjustment: { enabled: 0, pre_gain_factor: 1, post_gain_factor: 1, analog_mic_gain_emulation: { enabled: 0, initial_level: 255 }}, high_pass_filter: { enabled: 0 }, echo_canceller: { enabled: 0, mobile_mode: 0, enforce_high_pass_filtering: 1 }, noise_suppression: { enabled: 0, level: Moderate }, transient_suppression: { enabled: 0 }, gain_controller1: { enabled: 0, mode: AdaptiveAnalog, target_level_dbfs: 3, compression_gain_db: 9, enable_limiter: 1, analog_gain_controller { enabled: 1, startup_min_volume: 0, clipped_level_min: 70, enable_digital_adaptive: 1, clipped_level_step: 15, clipped_ratio_threshold: 0.1, clipped_wait_frames: 300, clipping_predictor:  { enabled: 0, mode: 0, window_length: 5, reference_window_length: 5, reference_window_delay: 5, clipping_threshold: -1, crest_factor_margin: 3, use_predicted_step: 1 }}}, gain_controller2: { enabled: 0, fixed_digital: { gain_db: 0 }, adaptive_digital: { enabled: 0, headroom_db: 5, max_gain_db: 50, initial_gain_db: 15, max_gain_change_db_per_second: 6, max_output_noise_level_dbfs: -50 }, input_volume_control : { enabled 0}}
+audio_engine.cpp: [2026-07-15 17:20:28.414] [8245] (line 641): Creating audio engine: standard
+audio_coding.cpp: [2026-07-15 17:20:28.415] [8245] (line 158): Using software Opus decoder
+audio_device_buffer.cc: [2026-07-15 17:20:28.416] [8250] (line 66): AudioDeviceBuffer::ctor
+audio_track_jni.cc: [2026-07-15 17:20:28.416] [8250] (line 222): AttachAudioBuffer
+audio_track_jni.cc: [2026-07-15 17:20:28.416] [8250] (line 226): SetPlayoutSampleRate(8000)
+audio_device_buffer.cc: [2026-07-15 17:20:28.417] [8250] (line 203): SetPlayoutSampleRate(8000)
+audio_coding.cpp: [2026-07-15 17:20:28.417] [8245] (line 175): Using software Opus encoder
+audio_track_jni.cc: [2026-07-15 17:20:28.417] [8250] (line 229): SetPlayoutChannels(1)
+audio_device_buffer.cc: [2026-07-15 17:20:28.418] [8250] (line 223): SetPlayoutChannels(1)
+audio_record_jni.cc: [2026-07-15 17:20:28.419] [8250] (line 192): AttachAudioBuffer
+audio_engine.cpp: [2026-07-15 17:20:28.419] [8245] (line 220): Setting audio input device: 'default'
+audio_engine.cpp: [2026-07-15 17:20:28.419] [8245] (line 237): Setting audio output device: 'default'
+audio_record_jni.cc: [2026-07-15 17:20:28.419] [8250] (line 196): SetRecordingSampleRate(8000)
+audio_processing_impl.cc: [2026-07-15 17:20:28.419] [8245] (line 673): AudioProcessing::ApplyConfig: AudioProcessing::Config{ pipeline: { maximum_internal_processing_rate: 48000, multi_channel_render: 0, multi_channel_capture: 0 }, pre_amplifier: { enabled: 0, fixed_gain_factor: 1 },capture_level_adjustment: { enabled: 0, pre_gain_factor: 1, post_gain_factor: 1, analog_mic_gain_emulation: { enabled: 0, initial_level: 255 }}, high_pass_filter: { enabled: 1 }, echo_canceller: { enabled: 1, mobile_mode: 0, enforce_high_pass_filtering: 1 }, noise_suppression: { enabled: 0, level: Moderate }, transient_suppression: { enabled: 0 }, gain_controller1: { enabled: 0, mode: AdaptiveAnalog, target_level_dbfs: 3, compression_gain_db: 9, enable_limiter: 1, analog_gain_controller { enabled: 1, startup_min_volume: 0, clipped_level_min: 70, enable_digital_adaptive: 1, clipped_level_step: 15, clipped_ratio_threshold: 0.1, clipped_wait_frames: 300, clipping_predictor:  { enabled: 0, mode: 0, window_length: 5, reference_window_length: 5, reference_window_delay: 5, clipping_threshold: -1, crest_factor_margin: 3, use_predicted_step: 1 }}}, gain_controller2: { enabled: 0, fixed_digital: { gain_db: 0 }, adaptive_digital: { enabled: 0, headroom_db: 5, max_gain_db: 50, initial_gain_db: 15, max_gain_change_db_per_second: 6, max_output_noise_level_dbfs: -50 }, input_volume_control : { enabled 0}}
+audio_device_buffer.cc: [2026-07-15 17:20:28.420] [8250] (line 197): SetRecordingSampleRate(8000)
+audio_record_jni.cc: [2026-07-15 17:20:28.421] [8250] (line 199): SetRecordingChannels(1)
+audio_device_buffer.cc: [2026-07-15 17:20:28.421] [8250] (line 217): SetRecordingChannels(1)
+audio_track_jni.cc: [2026-07-15 17:20:28.421] [8250] (line 66): Init
+audio_record_jni.cc: [2026-07-15 17:20:28.422] [8250] (line 88): Init
+audio_device_module.cc: [2026-07-15 17:20:28.422] [8250] (line 488): changing stereo recording not supported
+transparent_mode.cc: [2026-07-15 17:20:28.423] [8245] (line 240): AEC3 Transparent Mode: Legacy
+echo_canceller3.cc: [2026-07-15 17:20:28.423] [8245] (line 792): AEC3 created with sample rate: 16000 Hz, num render channels: 1, num capture channels: 1
+audio_processing_impl.cc: [2026-07-15 17:20:28.423] [8245] (line 673): AudioProcessing::ApplyConfig: AudioProcessing::Config{ pipeline: { maximum_internal_processing_rate: 48000, multi_channel_render: 0, multi_channel_capture: 0 }, pre_amplifier: { enabled: 0, fixed_gain_factor: 1 },capture_level_adjustment: { enabled: 0, pre_gain_factor: 1, post_gain_factor: 1, analog_mic_gain_emulation: { enabled: 0, initial_level: 255 }}, high_pass_filter: { enabled: 1 }, echo_canceller: { enabled: 1, mobile_mode: 0, enforce_high_pass_filtering: 1 }, noise_suppression: { enabled: 0, level: Moderate }, transient_suppression: { enabled: 0 }, gain_controller1: { enabled: 1, mode: AdaptiveAnalog, target_level_dbfs: 3, compression_gain_db: 9, enable_limiter: 1, analog_gain_controller { enabled: 1, startup_min_volume: 0, clipped_level_min: 70, enable_digital_adaptive: 1, clipped_level_step: 15, clipped_ratio_threshold: 0.1, clipped_wait_frames: 300, clipping_predictor:  { enabled: 0, mode: 0, window_length: 5, reference_window_length: 5, reference_window_delay: 5, clipping_threshold: -1, crest_factor_margin: 3, use_predicted_step: 1 }}}, gain_controller2: { enabled: 0, fixed_digital: { gain_db: 0 }, adaptive_digital: { enabled: 1, headroom_db: 5, max_gain_db: 50, initial_gain_db: 15, max_gain_change_db_per_second: 6, max_output_noise_level_dbfs: -50 }, input_volume_control : { enabled 0}}
+clipping_predictor.cc: [2026-07-15 17:20:28.426] [8245] (line 358): [AGC2] Clipping prediction disabled.
+agc_manager_direct.cc: [2026-07-15 17:20:28.426] [8245] (line 481): [agc] analog controller enabled: yes
+agc_manager_direct.cc: [2026-07-15 17:20:28.426] [8245] (line 484): [agc] Min mic level: 12 (overridden: no)
+captured_audio_processor.cpp: [2026-07-15 17:20:28.428] [8245] (line 167): SetNoiseCancellation: 0
+noise_canceller.cpp: [2026-07-15 17:20:28.429] [8245] (line 95): Attempting to reset while uninitialized, state: 0
+audio_processing_impl.cc: [2026-07-15 17:20:28.430] [8245] (line 673): AudioProcessing::ApplyConfig: AudioProcessing::Config{ pipeline: { maximum_internal_processing_rate: 48000, multi_channel_render: 0, multi_channel_capture: 0 }, pre_amplifier: { enabled: 0, fixed_gain_factor: 1 },capture_level_adjustment: { enabled: 0, pre_gain_factor: 1, post_gain_factor: 1, analog_mic_gain_emulation: { enabled: 0, initial_level: 255 }}, high_pass_filter: { enabled: 1 }, echo_canceller: { enabled: 1, mobile_mode: 0, enforce_high_pass_filtering: 1 }, noise_suppression: { enabled: 1, level: High }, transient_suppression: { enabled: 0 }, gain_controller1: { enabled: 1, mode: AdaptiveAnalog, target_level_dbfs: 3, compression_gain_db: 9, enable_limiter: 1, analog_gain_controller { enabled: 1, startup_min_volume: 0, clipped_level_min: 70, enable_digital_adaptive: 1, clipped_level_step: 15, clipped_ratio_threshold: 0.1, clipped_wait_frames: 300, clipping_predictor:  { enabled: 0, mode: 0, window_length: 5, reference_window_length: 5, reference_window_delay: 5, clipping_threshold: -1, crest_factor_margin: 3, use_predicted_step: 1 }}}, gain_controller2: { enabled: 0, fixed_digital: { gain_db: 0 }, adaptive_digital: { enabled: 1, headroom_db: 5, max_gain_db: 50, initial_gain_db: 15, max_gain_change_db_per_second: 6, max_output_noise_level_dbfs: -50 }, input_volume_control : { enabled 0}}
+field_trial.cc: [2026-07-15 17:20:28.431] [8245] (line 164): Setting field trial string:WebRTC-Audio-NetEqDecisionLogicConfig/reinit_after_expands:100/
+engine.cpp: [2026-07-15 17:20:28.434] [8245] (line 151): *** OnDevicesChanged:
+engine.cpp: [2026-07-15 17:20:28.434] [8245] (line 152): * audioInput:
+engine.cpp: [2026-07-15 17:20:28.435] [8245] (line 155): - default (default)
+engine.cpp: [2026-07-15 17:20:28.435] [8245] (line 157): * audioOutput:
+engine.cpp: [2026-07-15 17:20:28.435] [8245] (line 160): - default (default)
+engine.cpp: [2026-07-15 17:20:28.436] [8245] (line 165): * videoInput:
+engine.cpp: [2026-07-15 17:20:28.437] [8245] (line 778): Setting audio input device id: 'default'
+audio_engine.cpp: [2026-07-15 17:20:28.437] [8245] (line 220): Setting audio input device: 'default'
+webrtc_adm_helper.cpp: [2026-07-15 17:20:28.438] [8245] (line 295): Deferring to work queue: EnsureRecordingStopped(1)
+audio_engine.cpp: [2026-07-15 17:20:28.438] [8245] (line 237): Setting audio output device: 'default'
+webrtc_adm_helper.cpp: [2026-07-15 17:20:28.438] [8245] (line 329): Deferring to work queue: EnsurePlayoutStopped(1)
+engine_audio_transport.cpp: [2026-07-15 17:20:28.438] [8245] (line 644): EngineAudioTransport::SetSidechainCompression 1
+engine.cpp: [2026-07-15 17:20:28.438] [8245] (line 778): Setting audio input device id: 'default'
+audio_engine.cpp: [2026-07-15 17:20:28.439] [8245] (line 220): Setting audio input device: 'default'
+webrtc_adm_helper.cpp: [2026-07-15 17:20:28.439] [8245] (line 295): Deferring to work queue: EnsureRecordingStopped(1)
+audio_engine.cpp: [2026-07-15 17:20:28.439] [8245] (line 237): Setting audio output device: 'default'
+webrtc_adm_helper.cpp: [2026-07-15 17:20:28.439] [8245] (line 329): Deferring to work queue: EnsurePlayoutStopped(1)
+webrtc_adm_helper.cpp: [2026-07-15 17:20:28.439] [8250] (line 301): Completed: EnsureRecordingStopped(1)
+engine.cpp: [2026-07-15 17:20:28.439] [8245] (line 151): *** OnDevicesChanged:
+engine.cpp: [2026-07-15 17:20:28.441] [8245] (line 152): * audioInput:
+engine.cpp: [2026-07-15 17:20:28.441] [8245] (line 155): - default (default)
+engine.cpp: [2026-07-15 17:20:28.441] [8245] (line 157): * audioOutput:
+engine.cpp: [2026-07-15 17:20:28.441] [8245] (line 160): - default (default)
+engine.cpp: [2026-07-15 17:20:28.441] [8245] (line 165): * videoInput:
+engine.cpp: [2026-07-15 17:20:28.442] [8245] (line 167): - 0 (android_camera_0_back_facing)
+engine.cpp: [2026-07-15 17:20:28.442] [8245] (line 167): - 1 (android_camera_1_front_facing)
+engine.cpp: [2026-07-15 17:20:28.442] [8245] (line 778): Setting audio input device id: 'default'
+audio_engine.cpp: [2026-07-15 17:20:28.442] [8245] (line 220): Setting audio input device: 'default'
+webrtc_adm_helper.cpp: [2026-07-15 17:20:28.443] [8245] (line 295): Deferring to work queue: EnsureRecordingStopped(1)
+audio_engine.cpp: [2026-07-15 17:20:28.444] [8245] (line 237): Setting audio output device: 'default'
+webrtc_adm_helper.cpp: [2026-07-15 17:20:28.444] [8245] (line 329): Deferring to work queue: EnsurePlayoutStopped(1)
+audio_device_module.cc: [2026-07-15 17:20:28.445] [8250] (line 488): changing stereo recording not supported
+webrtc_adm_helper.cpp: [2026-07-15 17:20:28.445] [8250] (line 335): Completed: EnsurePlayoutStopped(1)
+webrtc_adm_helper.cpp: [2026-07-15 17:20:28.445] [8250] (line 301): Completed: EnsureRecordingStopped(1)
+audio_device_module.cc: [2026-07-15 17:20:28.445] [8250] (line 488): changing stereo recording not supported
+webrtc_adm_helper.cpp: [2026-07-15 17:20:28.445] [8250] (line 335): Completed: EnsurePlayoutStopped(1)
+webrtc_adm_helper.cpp: [2026-07-15 17:20:28.446] [8250] (line 301): Completed: EnsureRecordingStopped(1)
+audio_device_module.cc: [2026-07-15 17:20:28.446] [8250] (line 488): changing stereo recording not supported
+webrtc_adm_helper.cpp: [2026-07-15 17:20:28.446] [8250] (line 335): Completed: EnsurePlayoutStopped(1)
+region_latency_tester.cpp: [2026-07-15 17:22:05.909] [8554] (line 73): Sending 5 latency test pings to region hongkong
+region_latency_tester.cpp: [2026-07-15 17:22:05.910] [8554] (line 138): Sending latency test ping to IP 104.29.148.255:50001
+region_latency_tester.cpp: [2026-07-15 17:22:05.911] [8554] (line 138): Sending latency test ping to IP 104.29.138.107:50003
+region_latency_tester.cpp: [2026-07-15 17:22:05.912] [8554] (line 138): Sending latency test ping to IP 104.29.132.41:50003
+region_latency_tester.cpp: [2026-07-15 17:22:05.912] [8554] (line 138): Sending latency test ping to IP 104.29.132.109:50002
+region_latency_tester.cpp: [2026-07-15 17:22:05.913] [8554] (line 138): Sending latency test ping to IP 104.29.138.104:50001
+region_latency_tester.cpp: [2026-07-15 17:22:05.913] [8554] (line 73): Sending 5 latency test pings to region singapore
+region_latency_tester.cpp: [2026-07-15 17:22:05.913] [8554] (line 138): Sending latency test ping to IP 104.29.142.13:50004
+region_latency_tester.cpp: [2026-07-15 17:22:05.913] [8554] (line 138): Sending latency test ping to IP 104.29.141.220:50002
+region_latency_tester.cpp: [2026-07-15 17:22:05.913] [8554] (line 138): Sending latency test ping to IP 104.29.142.83:50002
+region_latency_tester.cpp: [2026-07-15 17:22:05.913] [8554] (line 138): Sending latency test ping to IP 104.29.141.203:50003
+region_latency_tester.cpp: [2026-07-15 17:22:05.914] [8554] (line 138): Sending latency test ping to IP 104.29.146.19:50004
+region_latency_tester.cpp: [2026-07-15 17:22:05.914] [8554] (line 73): Sending 5 latency test pings to region india
+region_latency_tester.cpp: [2026-07-15 17:22:05.914] [8554] (line 138): Sending latency test ping to IP 104.29.138.220:50004
+region_latency_tester.cpp: [2026-07-15 17:22:05.914] [8554] (line 138): Sending latency test ping to IP 104.29.139.160:50002
+region_latency_tester.cpp: [2026-07-15 17:22:05.914] [8554] (line 138): Sending latency test ping to IP 104.29.139.91:50001
+region_latency_tester.cpp: [2026-07-15 17:22:05.914] [8554] (line 138): Sending latency test ping to IP 104.29.139.149:50003
+region_latency_tester.cpp: [2026-07-15 17:22:05.914] [8554] (line 138): Sending latency test ping to IP 104.29.139.66:50004
+region_latency_tester.cpp: [2026-07-15 17:22:05.915] [8554] (line 73): Sending 5 latency test pings to region japan
+region_latency_tester.cpp: [2026-07-15 17:22:05.915] [8554] (line 138): Sending latency test ping to IP 104.29.140.230:50001
+region_latency_tester.cpp: [2026-07-15 17:22:05.915] [8554] (line 138): Sending latency test ping to IP 104.29.141.62:50004
+region_latency_tester.cpp: [2026-07-15 17:22:05.915] [8554] (line 138): Sending latency test ping to IP 104.29.141.54:50001
+region_latency_tester.cpp: [2026-07-15 17:22:05.916] [8554] (line 138): Sending latency test ping to IP 104.29.141.5:50002
+region_latency_tester.cpp: [2026-07-15 17:22:05.916] [8554] (line 138): Sending latency test ping to IP 104.29.141.30:50003
+region_latency_tester.cpp: [2026-07-15 17:22:05.916] [8554] (line 73): Sending 5 latency test pings to region dubai
+region_latency_tester.cpp: [2026-07-15 17:22:05.916] [8554] (line 138): Sending latency test ping to IP 104.29.146.13:50002
+region_latency_tester.cpp: [2026-07-15 17:22:05.916] [8554] (line 138): Sending latency test ping to IP 104.29.146.13:50002
+region_latency_tester.cpp: [2026-07-15 17:22:05.917] [8554] (line 138): Sending latency test ping to IP 104.29.146.17:50004
+region_latency_tester.cpp: [2026-07-15 17:22:05.917] [8554] (line 138): Sending latency test ping to IP 104.29.146.12:50004
+region_latency_tester.cpp: [2026-07-15 17:22:05.917] [8554] (line 138): Sending latency test ping to IP 104.29.146.17:50003
+region_latency_tester.cpp: [2026-07-15 17:22:06.397] [8554] (line 314): Average RTT for region hongkong is 490
+region_latency_tester.cpp: [2026-07-15 17:22:06.397] [8554] (line 314): Average RTT for region singapore is 490
+region_latency_tester.cpp: [2026-07-15 17:22:06.397] [8554] (line 314): Average RTT for region india is 490
+region_latency_tester.cpp: [2026-07-15 17:22:06.397] [8554] (line 314): Average RTT for region japan is 490
+region_latency_tester.cpp: [2026-07-15 17:22:06.398] [8554] (line 314): Average RTT for region dubai is 490
+region_latency_tester.cpp: [2026-07-16 21:40:34.733] [13859] (line 73): Sending 5 latency test pings to region hongkong
+region_latency_tester.cpp: [2026-07-16 21:40:34.743] [13859] (line 138): Sending latency test ping to IP 104.29.132.31:50001
+region_latency_tester.cpp: [2026-07-16 21:40:34.762] [13859] (line 138): Sending latency test ping to IP 104.29.132.31:50003
+region_latency_tester.cpp: [2026-07-16 21:40:34.763] [13859] (line 138): Sending latency test ping to IP 104.29.132.20:50003
+region_latency_tester.cpp: [2026-07-16 21:40:34.771] [13859] (line 138): Sending latency test ping to IP 104.29.132.16:50002
+region_latency_tester.cpp: [2026-07-16 21:40:34.773] [13859] (line 138): Sending latency test ping to IP 104.29.132.41:50001
+region_latency_tester.cpp: [2026-07-16 21:40:34.775] [13859] (line 73): Sending 5 latency test pings to region singapore
+region_latency_tester.cpp: [2026-07-16 21:40:34.783] [13859] (line 138): Sending latency test ping to IP 104.29.142.15:50004
+region_latency_tester.cpp: [2026-07-16 21:40:34.783] [13859] (line 138): Sending latency test ping to IP 104.29.142.92:50002
+region_latency_tester.cpp: [2026-07-16 21:40:34.784] [13859] (line 138): Sending latency test ping to IP 104.29.141.176:50002
+region_latency_tester.cpp: [2026-07-16 21:40:34.785] [13859] (line 138): Sending latency test ping to IP 104.29.141.140:50003
+region_latency_tester.cpp: [2026-07-16 21:40:34.786] [13859] (line 138): Sending latency test ping to IP 104.29.142.13:50004
+region_latency_tester.cpp: [2026-07-16 21:40:34.788] [13859] (line 73): Sending 5 latency test pings to region india
+region_latency_tester.cpp: [2026-07-16 21:40:34.789] [13859] (line 138): Sending latency test ping to IP 104.29.139.91:50004
+region_latency_tester.cpp: [2026-07-16 21:40:34.789] [13859] (line 138): Sending latency test ping to IP 104.29.139.163:50002
+region_latency_tester.cpp: [2026-07-16 21:40:34.790] [13859] (line 138): Sending latency test ping to IP 104.29.139.66:50001
+region_latency_tester.cpp: [2026-07-16 21:40:34.790] [13859] (line 138): Sending latency test ping to IP 104.29.138.161:50003
+region_latency_tester.cpp: [2026-07-16 21:40:34.790] [13859] (line 138): Sending latency test ping to IP 104.29.139.145:50004
+region_latency_tester.cpp: [2026-07-16 21:40:34.793] [13859] (line 73): Sending 5 latency test pings to region japan
+region_latency_tester.cpp: [2026-07-16 21:40:34.793] [13859] (line 138): Sending latency test ping to IP 104.29.140.215:50001
+region_latency_tester.cpp: [2026-07-16 21:40:34.798] [13859] (line 138): Sending latency test ping to IP 104.29.141.54:50004
+region_latency_tester.cpp: [2026-07-16 21:40:34.799] [13859] (line 138): Sending latency test ping to IP 104.29.141.8:50001
+region_latency_tester.cpp: [2026-07-16 21:40:34.800] [13859] (line 138): Sending latency test ping to IP 104.29.141.30:50002
+region_latency_tester.cpp: [2026-07-16 21:40:34.802] [13859] (line 138): Sending latency test ping to IP 104.29.141.56:50003
+region_latency_tester.cpp: [2026-07-16 21:40:34.802] [13859] (line 73): Sending 5 latency test pings to region dubai
+region_latency_tester.cpp: [2026-07-16 21:40:34.803] [13859] (line 138): Sending latency test ping to IP 104.29.146.12:50002
+region_latency_tester.cpp: [2026-07-16 21:40:34.803] [13859] (line 138): Sending latency test ping to IP 104.29.146.9:50002
+region_latency_tester.cpp: [2026-07-16 21:40:34.804] [13859] (line 138): Sending latency test ping to IP 104.29.146.17:50004
+region_latency_tester.cpp: [2026-07-16 21:40:34.805] [13859] (line 138): Sending latency test ping to IP 104.29.146.10:50004
+region_latency_tester.cpp: [2026-07-16 21:40:34.806] [13859] (line 138): Sending latency test ping to IP 104.29.146.14:50003
+region_latency_tester.cpp: [2026-07-16 21:40:39.718] [13859] (line 207): Timing out 1 remaining latency test pings
+region_latency_tester.cpp: [2026-07-16 21:40:39.718] [13859] (line 314): Average RTT for region hongkong is 132
+region_latency_tester.cpp: [2026-07-16 21:40:39.719] [13859] (line 314): Average RTT for region singapore is 218
+region_latency_tester.cpp: [2026-07-16 21:40:39.719] [13859] (line 314): Average RTT for region india is 262.25
+region_latency_tester.cpp: [2026-07-16 21:40:39.719] [13859] (line 314): Average RTT for region japan is 201
+region_latency_tester.cpp: [2026-07-16 21:40:39.719] [13859] (line 314): Average RTT for region dubai is 259.75

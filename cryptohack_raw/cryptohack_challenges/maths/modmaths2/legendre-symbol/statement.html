@@ -1,0 +1,1252 @@
+<div class="challengeDescription">
+ <!-- <p> -->
+ In Quadratic Residues we learnt what it means to take the square root modulo an integer. We also saw that taking a root isn't always possible.
+ <br/>
+ <br/>
+ In the previous case when
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi>
+        p
+       </mi>
+       <mo>
+        =
+       </mo>
+       <mn>
+        29
+       </mn>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       p = 29
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 0.625em; vertical-align: -0.1944em;">
+     </span>
+     <span class="mord mathnormal">
+      p
+     </span>
+     <span class="mspace" style="margin-right: 0.2778em;">
+     </span>
+     <span class="mrel">
+      =
+     </span>
+     <span class="mspace" style="margin-right: 0.2778em;">
+     </span>
+    </span>
+    <span class="base">
+     <span class="strut" style="height: 0.6444em;">
+     </span>
+     <span class="mord">
+      29
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ , even the simplest method of calculating the square root was fast enough, but as
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi>
+        p
+       </mi>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       p
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 0.625em; vertical-align: -0.1944em;">
+     </span>
+     <span class="mord mathnormal">
+      p
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ gets larger, this method becomes wildly unreasonable.
+ <br/>
+ <br/>
+ Lucky for us, we have a way to check whether an integer is a quadratic residue with a single calculation thanks to Legendre. In the following, we will assume we are working modulo a prime
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi>
+        p
+       </mi>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       p
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 0.625em; vertical-align: -0.1944em;">
+     </span>
+     <span class="mord mathnormal">
+      p
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ .
+ <br/>
+ <br/>
+ Before looking at Legendre's symbol, let's take a brief detour to see an interesting property of quadratic (non-)residues.
+ <br/>
+ <br/>
+ <span class="mathBlock">
+  Quadratic Residue * Quadratic Residue = Quadratic Residue
+  <br/>
+  Quadratic Residue * Quadratic Non-residue = Quadratic Non-residue
+  <br/>
+  Quadratic Non-residue * Quadratic Non-residue = Quadratic Residue
+ </span>
+ <br/>
+ <br/>
+ <span class="note">
+  <i class="fas fa-pencil-alt">
+  </i>
+  Want an easy way to remember this? Replace "Quadratic Residue" with
+  <span>
+   <span class="katex">
+    <span class="katex-mathml">
+     <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <semantics>
+       <mrow>
+        <mo>
+         +
+        </mo>
+        <mn>
+         1
+        </mn>
+       </mrow>
+       <annotation encoding="application/x-tex">
+        +1
+       </annotation>
+      </semantics>
+     </math>
+    </span>
+    <span aria-hidden="true" class="katex-html">
+     <span class="base">
+      <span class="strut" style="height: 0.7278em; vertical-align: -0.0833em;">
+      </span>
+      <span class="mord">
+       +
+      </span>
+      <span class="mord">
+       1
+      </span>
+     </span>
+    </span>
+   </span>
+  </span>
+  and "Quadratic Non-residue" with
+  <span>
+   <span class="katex">
+    <span class="katex-mathml">
+     <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <semantics>
+       <mrow>
+        <mo>
+         −
+        </mo>
+        <mn>
+         1
+        </mn>
+       </mrow>
+       <annotation encoding="application/x-tex">
+        -1
+       </annotation>
+      </semantics>
+     </math>
+    </span>
+    <span aria-hidden="true" class="katex-html">
+     <span class="base">
+      <span class="strut" style="height: 0.7278em; vertical-align: -0.0833em;">
+      </span>
+      <span class="mord">
+       −
+      </span>
+      <span class="mord">
+       1
+      </span>
+     </span>
+    </span>
+   </span>
+  </span>
+  , all three results are the same!
+ </span>
+ <br/>
+ <br/>
+ So what's the trick? The
+ <a href="https://en.wikipedia.org/wiki/Legendre_symbol" rel="noopener" target="_blank">
+  Legendre Symbol
+ </a>
+ gives an efficient way to determine whether an integer is a quadratic residue modulo an odd prime
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi>
+        p
+       </mi>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       p
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 0.625em; vertical-align: -0.1944em;">
+     </span>
+     <span class="mord mathnormal">
+      p
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ .
+ <br/>
+ <br/>
+ Legendre's Symbol:
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mo stretchy="false">
+        (
+       </mo>
+       <mi>
+        a
+       </mi>
+       <mi mathvariant="normal">
+        /
+       </mi>
+       <mi>
+        p
+       </mi>
+       <mo stretchy="false">
+        )
+       </mo>
+       <mo>
+        ≡
+       </mo>
+       <msup>
+        <mi>
+         a
+        </mi>
+        <mrow>
+         <mo stretchy="false">
+          (
+         </mo>
+         <mi>
+          p
+         </mi>
+         <mo>
+          −
+         </mo>
+         <mn>
+          1
+         </mn>
+         <mo stretchy="false">
+          )
+         </mo>
+         <mi mathvariant="normal">
+          /
+         </mi>
+         <mn>
+          2
+         </mn>
+        </mrow>
+       </msup>
+       <mspace>
+       </mspace>
+       <mspace width="0.6667em">
+       </mspace>
+       <mrow>
+        <mi mathvariant="normal">
+         m
+        </mi>
+        <mi mathvariant="normal">
+         o
+        </mi>
+        <mi mathvariant="normal">
+         d
+        </mi>
+       </mrow>
+       <mi>
+        p
+       </mi>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       (a / p) \equiv a^{(p-1)/2} \mod p
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 1em; vertical-align: -0.25em;">
+     </span>
+     <span class="mopen">
+      (
+     </span>
+     <span class="mord mathnormal">
+      a
+     </span>
+     <span class="mord">
+      /
+     </span>
+     <span class="mord mathnormal">
+      p
+     </span>
+     <span class="mclose">
+      )
+     </span>
+     <span class="mspace" style="margin-right: 0.2778em;">
+     </span>
+     <span class="mrel">
+      ≡
+     </span>
+     <span class="mspace" style="margin-right: 0.2778em;">
+     </span>
+    </span>
+    <span class="base">
+     <span class="strut" style="height: 0.888em;">
+     </span>
+     <span class="mord">
+      <span class="mord mathnormal">
+       a
+      </span>
+      <span class="msupsub">
+       <span class="vlist-t">
+        <span class="vlist-r">
+         <span class="vlist" style="height: 0.888em;">
+          <span class="" style="top: -3.063em; margin-right: 0.05em;">
+           <span class="pstrut" style="height: 2.7em;">
+           </span>
+           <span class="sizing reset-size6 size3 mtight">
+            <span class="mord mtight">
+             <span class="mopen mtight">
+              (
+             </span>
+             <span class="mord mathnormal mtight">
+              p
+             </span>
+             <span class="mbin mtight">
+              −
+             </span>
+             <span class="mord mtight">
+              1
+             </span>
+             <span class="mclose mtight">
+              )
+             </span>
+             <span class="mord mtight">
+              /2
+             </span>
+            </span>
+           </span>
+          </span>
+         </span>
+        </span>
+       </span>
+      </span>
+     </span>
+     <span class="mspace allowbreak">
+     </span>
+     <span class="mspace" style="margin-right: 0.6667em;">
+     </span>
+    </span>
+    <span class="base">
+     <span class="strut" style="height: 0.8889em; vertical-align: -0.1944em;">
+     </span>
+     <span class="mord">
+      <span class="mord">
+       <span class="mord mathrm">
+        mod
+       </span>
+      </span>
+     </span>
+     <span class="mspace" style="margin-right: 0.1667em;">
+     </span>
+     <span class="mspace" style="margin-right: 0.1667em;">
+     </span>
+     <span class="mord mathnormal">
+      p
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ obeys:
+ <br/>
+ <br/>
+ <span class="mathBlock">
+  <span>
+   <span class="katex">
+    <span class="katex-mathml">
+     <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <semantics>
+       <mrow>
+        <mo stretchy="false">
+         (
+        </mo>
+        <mi>
+         a
+        </mi>
+        <mi mathvariant="normal">
+         /
+        </mi>
+        <mi>
+         p
+        </mi>
+        <mo stretchy="false">
+         )
+        </mo>
+        <mo>
+         =
+        </mo>
+        <mn>
+         1
+        </mn>
+       </mrow>
+       <annotation encoding="application/x-tex">
+        (a / p) = 1
+       </annotation>
+      </semantics>
+     </math>
+    </span>
+    <span aria-hidden="true" class="katex-html">
+     <span class="base">
+      <span class="strut" style="height: 1em; vertical-align: -0.25em;">
+      </span>
+      <span class="mopen">
+       (
+      </span>
+      <span class="mord mathnormal">
+       a
+      </span>
+      <span class="mord">
+       /
+      </span>
+      <span class="mord mathnormal">
+       p
+      </span>
+      <span class="mclose">
+       )
+      </span>
+      <span class="mspace" style="margin-right: 0.2778em;">
+      </span>
+      <span class="mrel">
+       =
+      </span>
+      <span class="mspace" style="margin-right: 0.2778em;">
+      </span>
+     </span>
+     <span class="base">
+      <span class="strut" style="height: 0.6444em;">
+      </span>
+      <span class="mord">
+       1
+      </span>
+     </span>
+    </span>
+   </span>
+  </span>
+  if
+  <span>
+   <span class="katex">
+    <span class="katex-mathml">
+     <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <semantics>
+       <mrow>
+        <mi>
+         a
+        </mi>
+       </mrow>
+       <annotation encoding="application/x-tex">
+        a
+       </annotation>
+      </semantics>
+     </math>
+    </span>
+    <span aria-hidden="true" class="katex-html">
+     <span class="base">
+      <span class="strut" style="height: 0.4306em;">
+      </span>
+      <span class="mord mathnormal">
+       a
+      </span>
+     </span>
+    </span>
+   </span>
+  </span>
+  is a quadratic residue and
+  <span>
+   <span class="katex">
+    <span class="katex-mathml">
+     <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <semantics>
+       <mrow>
+        <mi>
+         a
+        </mi>
+        <mo>
+         ≢
+        </mo>
+        <mn>
+         0
+        </mn>
+        <mspace>
+        </mspace>
+        <mspace width="0.6667em">
+        </mspace>
+        <mrow>
+         <mi mathvariant="normal">
+          m
+         </mi>
+         <mi mathvariant="normal">
+          o
+         </mi>
+         <mi mathvariant="normal">
+          d
+         </mi>
+        </mrow>
+        <mi>
+         p
+        </mi>
+       </mrow>
+       <annotation encoding="application/x-tex">
+        a \not\equiv 0 \mod p
+       </annotation>
+      </semantics>
+     </math>
+    </span>
+    <span aria-hidden="true" class="katex-html">
+     <span class="base">
+      <span class="strut" style="height: 0.8889em; vertical-align: -0.1944em;">
+      </span>
+      <span class="mord mathnormal">
+       a
+      </span>
+      <span class="mspace" style="margin-right: 0.2778em;">
+      </span>
+      <span class="mrel">
+       <span class="mord vbox">
+        <span class="thinbox">
+         <span class="rlap">
+          <span class="strut" style="height: 0.8889em; vertical-align: -0.1944em;">
+          </span>
+          <span class="inner">
+           <span class="mord">
+            <span class="mrel">
+             
+            </span>
+           </span>
+          </span>
+          <span class="fix">
+          </span>
+         </span>
+        </span>
+       </span>
+      </span>
+     </span>
+     <span class="base">
+      <span class="strut" style="height: 0.4637em;">
+      </span>
+      <span class="mrel">
+       ≡
+      </span>
+      <span class="mspace" style="margin-right: 0.2778em;">
+      </span>
+     </span>
+     <span class="base">
+      <span class="strut" style="height: 0.6444em;">
+      </span>
+      <span class="mord">
+       0
+      </span>
+      <span class="mspace allowbreak">
+      </span>
+      <span class="mspace" style="margin-right: 0.6667em;">
+      </span>
+     </span>
+     <span class="base">
+      <span class="strut" style="height: 0.8889em; vertical-align: -0.1944em;">
+      </span>
+      <span class="mord">
+       <span class="mord">
+        <span class="mord mathrm">
+         mod
+        </span>
+       </span>
+      </span>
+      <span class="mspace" style="margin-right: 0.1667em;">
+      </span>
+      <span class="mspace" style="margin-right: 0.1667em;">
+      </span>
+      <span class="mord mathnormal">
+       p
+      </span>
+     </span>
+    </span>
+   </span>
+  </span>
+  <br/>
+  <span>
+   <span class="katex">
+    <span class="katex-mathml">
+     <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <semantics>
+       <mrow>
+        <mo stretchy="false">
+         (
+        </mo>
+        <mi>
+         a
+        </mi>
+        <mi mathvariant="normal">
+         /
+        </mi>
+        <mi>
+         p
+        </mi>
+        <mo stretchy="false">
+         )
+        </mo>
+        <mo>
+         =
+        </mo>
+        <mo>
+         −
+        </mo>
+        <mn>
+         1
+        </mn>
+       </mrow>
+       <annotation encoding="application/x-tex">
+        (a / p) = -1
+       </annotation>
+      </semantics>
+     </math>
+    </span>
+    <span aria-hidden="true" class="katex-html">
+     <span class="base">
+      <span class="strut" style="height: 1em; vertical-align: -0.25em;">
+      </span>
+      <span class="mopen">
+       (
+      </span>
+      <span class="mord mathnormal">
+       a
+      </span>
+      <span class="mord">
+       /
+      </span>
+      <span class="mord mathnormal">
+       p
+      </span>
+      <span class="mclose">
+       )
+      </span>
+      <span class="mspace" style="margin-right: 0.2778em;">
+      </span>
+      <span class="mrel">
+       =
+      </span>
+      <span class="mspace" style="margin-right: 0.2778em;">
+      </span>
+     </span>
+     <span class="base">
+      <span class="strut" style="height: 0.7278em; vertical-align: -0.0833em;">
+      </span>
+      <span class="mord">
+       −
+      </span>
+      <span class="mord">
+       1
+      </span>
+     </span>
+    </span>
+   </span>
+  </span>
+  if
+  <span>
+   <span class="katex">
+    <span class="katex-mathml">
+     <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <semantics>
+       <mrow>
+        <mi>
+         a
+        </mi>
+       </mrow>
+       <annotation encoding="application/x-tex">
+        a
+       </annotation>
+      </semantics>
+     </math>
+    </span>
+    <span aria-hidden="true" class="katex-html">
+     <span class="base">
+      <span class="strut" style="height: 0.4306em;">
+      </span>
+      <span class="mord mathnormal">
+       a
+      </span>
+     </span>
+    </span>
+   </span>
+  </span>
+  is a quadratic non-residue
+  <span>
+   <span class="katex">
+    <span class="katex-mathml">
+     <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <semantics>
+       <mrow>
+        <mspace>
+        </mspace>
+        <mspace width="0.6667em">
+        </mspace>
+        <mrow>
+         <mi mathvariant="normal">
+          m
+         </mi>
+         <mi mathvariant="normal">
+          o
+         </mi>
+         <mi mathvariant="normal">
+          d
+         </mi>
+        </mrow>
+        <mi>
+         p
+        </mi>
+       </mrow>
+       <annotation encoding="application/x-tex">
+        \mod p
+       </annotation>
+      </semantics>
+     </math>
+    </span>
+    <span aria-hidden="true" class="katex-html">
+     <span class="base">
+      <span class="strut" style="height: 0em;">
+      </span>
+      <span class="mspace allowbreak">
+      </span>
+      <span class="mspace" style="margin-right: 0.6667em;">
+      </span>
+     </span>
+     <span class="base">
+      <span class="strut" style="height: 0.8889em; vertical-align: -0.1944em;">
+      </span>
+      <span class="mord">
+       <span class="mord">
+        <span class="mord mathrm">
+         mod
+        </span>
+       </span>
+      </span>
+      <span class="mspace" style="margin-right: 0.1667em;">
+      </span>
+      <span class="mspace" style="margin-right: 0.1667em;">
+      </span>
+      <span class="mord mathnormal">
+       p
+      </span>
+     </span>
+    </span>
+   </span>
+  </span>
+  <br/>
+  <span>
+   <span class="katex">
+    <span class="katex-mathml">
+     <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <semantics>
+       <mrow>
+        <mo stretchy="false">
+         (
+        </mo>
+        <mi>
+         a
+        </mi>
+        <mi mathvariant="normal">
+         /
+        </mi>
+        <mi>
+         p
+        </mi>
+        <mo stretchy="false">
+         )
+        </mo>
+        <mo>
+         =
+        </mo>
+        <mn>
+         0
+        </mn>
+       </mrow>
+       <annotation encoding="application/x-tex">
+        (a / p) = 0
+       </annotation>
+      </semantics>
+     </math>
+    </span>
+    <span aria-hidden="true" class="katex-html">
+     <span class="base">
+      <span class="strut" style="height: 1em; vertical-align: -0.25em;">
+      </span>
+      <span class="mopen">
+       (
+      </span>
+      <span class="mord mathnormal">
+       a
+      </span>
+      <span class="mord">
+       /
+      </span>
+      <span class="mord mathnormal">
+       p
+      </span>
+      <span class="mclose">
+       )
+      </span>
+      <span class="mspace" style="margin-right: 0.2778em;">
+      </span>
+      <span class="mrel">
+       =
+      </span>
+      <span class="mspace" style="margin-right: 0.2778em;">
+      </span>
+     </span>
+     <span class="base">
+      <span class="strut" style="height: 0.6444em;">
+      </span>
+      <span class="mord">
+       0
+      </span>
+     </span>
+    </span>
+   </span>
+  </span>
+  if
+  <span>
+   <span class="katex">
+    <span class="katex-mathml">
+     <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <semantics>
+       <mrow>
+        <mi>
+         a
+        </mi>
+        <mo>
+         ≡
+        </mo>
+        <mn>
+         0
+        </mn>
+        <mspace>
+        </mspace>
+        <mspace width="0.6667em">
+        </mspace>
+        <mrow>
+         <mi mathvariant="normal">
+          m
+         </mi>
+         <mi mathvariant="normal">
+          o
+         </mi>
+         <mi mathvariant="normal">
+          d
+         </mi>
+        </mrow>
+        <mi>
+         p
+        </mi>
+       </mrow>
+       <annotation encoding="application/x-tex">
+        a \equiv 0 \mod p
+       </annotation>
+      </semantics>
+     </math>
+    </span>
+    <span aria-hidden="true" class="katex-html">
+     <span class="base">
+      <span class="strut" style="height: 0.4637em;">
+      </span>
+      <span class="mord mathnormal">
+       a
+      </span>
+      <span class="mspace" style="margin-right: 0.2778em;">
+      </span>
+      <span class="mrel">
+       ≡
+      </span>
+      <span class="mspace" style="margin-right: 0.2778em;">
+      </span>
+     </span>
+     <span class="base">
+      <span class="strut" style="height: 0.6444em;">
+      </span>
+      <span class="mord">
+       0
+      </span>
+      <span class="mspace allowbreak">
+      </span>
+      <span class="mspace" style="margin-right: 0.6667em;">
+      </span>
+     </span>
+     <span class="base">
+      <span class="strut" style="height: 0.8889em; vertical-align: -0.1944em;">
+      </span>
+      <span class="mord">
+       <span class="mord">
+        <span class="mord mathrm">
+         mod
+        </span>
+       </span>
+      </span>
+      <span class="mspace" style="margin-right: 0.1667em;">
+      </span>
+      <span class="mspace" style="margin-right: 0.1667em;">
+      </span>
+      <span class="mord mathnormal">
+       p
+      </span>
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ <br/>
+ <br/>
+ Which means given any integer
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi>
+        a
+       </mi>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       a
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 0.4306em;">
+     </span>
+     <span class="mord mathnormal">
+      a
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ , calculating
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <msup>
+        <mi>
+         a
+        </mi>
+        <mrow>
+         <mo stretchy="false">
+          (
+         </mo>
+         <mi>
+          p
+         </mi>
+         <mo>
+          −
+         </mo>
+         <mn>
+          1
+         </mn>
+         <mo stretchy="false">
+          )
+         </mo>
+         <mi mathvariant="normal">
+          /
+         </mi>
+         <mn>
+          2
+         </mn>
+        </mrow>
+       </msup>
+       <mspace>
+       </mspace>
+       <mspace width="0.6667em">
+       </mspace>
+       <mrow>
+        <mi mathvariant="normal">
+         m
+        </mi>
+        <mi mathvariant="normal">
+         o
+        </mi>
+        <mi mathvariant="normal">
+         d
+        </mi>
+       </mrow>
+       <mi>
+        p
+       </mi>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       a^{(p-1)/2} \mod p
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 0.888em;">
+     </span>
+     <span class="mord">
+      <span class="mord mathnormal">
+       a
+      </span>
+      <span class="msupsub">
+       <span class="vlist-t">
+        <span class="vlist-r">
+         <span class="vlist" style="height: 0.888em;">
+          <span class="" style="top: -3.063em; margin-right: 0.05em;">
+           <span class="pstrut" style="height: 2.7em;">
+           </span>
+           <span class="sizing reset-size6 size3 mtight">
+            <span class="mord mtight">
+             <span class="mopen mtight">
+              (
+             </span>
+             <span class="mord mathnormal mtight">
+              p
+             </span>
+             <span class="mbin mtight">
+              −
+             </span>
+             <span class="mord mtight">
+              1
+             </span>
+             <span class="mclose mtight">
+              )
+             </span>
+             <span class="mord mtight">
+              /2
+             </span>
+            </span>
+           </span>
+          </span>
+         </span>
+        </span>
+       </span>
+      </span>
+     </span>
+     <span class="mspace allowbreak">
+     </span>
+     <span class="mspace" style="margin-right: 0.6667em;">
+     </span>
+    </span>
+    <span class="base">
+     <span class="strut" style="height: 0.8889em; vertical-align: -0.1944em;">
+     </span>
+     <span class="mord">
+      <span class="mord">
+       <span class="mord mathrm">
+        mod
+       </span>
+      </span>
+     </span>
+     <span class="mspace" style="margin-right: 0.1667em;">
+     </span>
+     <span class="mspace" style="margin-right: 0.1667em;">
+     </span>
+     <span class="mord mathnormal">
+      p
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ is enough to determine if
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi>
+        a
+       </mi>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       a
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 0.4306em;">
+     </span>
+     <span class="mord mathnormal">
+      a
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ is a quadratic residue.
+ <br/>
+ <br/>
+ Now for the flag. Given the following 1024 bit prime and 10 integers, find the quadratic residue and then calculate its square root; the square root is your flag. Of the two possible roots, submit the larger one as your answer.
+ <br/>
+ <br/>
+ <span class="note">
+  <i class="fas fa-brain">
+  </i>
+  So Legendre's symbol tells us which integer is a quadratic residue, but how do we find the square root?! The prime supplied obeys
+  <span>
+   <span class="katex">
+    <span class="katex-mathml">
+     <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <semantics>
+       <mrow>
+        <mi>
+         p
+        </mi>
+        <mo>
+         =
+        </mo>
+        <mn>
+         3
+        </mn>
+        <mspace>
+        </mspace>
+        <mspace width="0.6667em">
+        </mspace>
+        <mrow>
+         <mi mathvariant="normal">
+          m
+         </mi>
+         <mi mathvariant="normal">
+          o
+         </mi>
+         <mi mathvariant="normal">
+          d
+         </mi>
+        </mrow>
+        <mn>
+         4
+        </mn>
+       </mrow>
+       <annotation encoding="application/x-tex">
+        p = 3 \mod 4
+       </annotation>
+      </semantics>
+     </math>
+    </span>
+    <span aria-hidden="true" class="katex-html">
+     <span class="base">
+      <span class="strut" style="height: 0.625em; vertical-align: -0.1944em;">
+      </span>
+      <span class="mord mathnormal">
+       p
+      </span>
+      <span class="mspace" style="margin-right: 0.2778em;">
+      </span>
+      <span class="mrel">
+       =
+      </span>
+      <span class="mspace" style="margin-right: 0.2778em;">
+      </span>
+     </span>
+     <span class="base">
+      <span class="strut" style="height: 0.6444em;">
+      </span>
+      <span class="mord">
+       3
+      </span>
+      <span class="mspace allowbreak">
+      </span>
+      <span class="mspace" style="margin-right: 0.6667em;">
+      </span>
+     </span>
+     <span class="base">
+      <span class="strut" style="height: 0.6944em;">
+      </span>
+      <span class="mord">
+       <span class="mord">
+        <span class="mord mathrm">
+         mod
+        </span>
+       </span>
+      </span>
+      <span class="mspace" style="margin-right: 0.1667em;">
+      </span>
+      <span class="mspace" style="margin-right: 0.1667em;">
+      </span>
+      <span class="mord">
+       4
+      </span>
+     </span>
+    </span>
+   </span>
+  </span>
+  , which allows us easily compute the square root. The answer is online, but you can figure it out yourself if you think about Fermat's little theorem.
+ </span>
+ <br/>
+ <br/>
+ <b>
+  Challenge files:
+ </b>
+ <br/>
+ -
+ <a download="" href="/static/challenges/output_479698cde19aaa05d9e9dfca460f5443.txt">
+  output.txt
+ </a>
+ <br/>
+ <!-- </p> -->
+</div>

@@ -1,0 +1,92 @@
+# ==========================================================
+# Comprehensive GitIgnore for CTF Workspace
+# Excludes virtual environments, third-party caches,
+# forensic raw images (>50MB), VM disks, and giant archives.
+# ==========================================================
+
+# Virtual environments & packages
+**/.venv/
+**/venv/
+**/env/
+**/gdown_venv/
+**/forensic_venv/
+**/.venv311/
+**/node_modules/
+**/__pycache__/
+*.py[cod]
+*$py.class
+
+# Standalone virtualenv binaries inside challenges
+sekai/crypto/iihash/bin/
+sekai/crypto/iihash/include/
+sekai/crypto/iihash/lib/
+sekai/crypto/iihash/lib64/
+sekai/crypto/iihash/pyvenv.cfg
+sekai/rev/chibile/bin/
+sekai/rev/chibile/include/
+sekai/rev/chibile/lib/
+sekai/rev/chibile/lib64/
+sekai/rev/chibile/pyvenv.cfg
+**/qemu/build/
+
+# OS and Editor artifacts
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+
+# Build artifacts & compiled objects
+*.o
+*.a
+*.so
+*.dylib
+*.dll
+
+# Heavy disk images, memory dumps, VM disks & raw dumps (>50MB)
+*.raw
+*.raw.xz
+*.vhdx
+*.vmdk
+*.qcow2
+*.img
+*.iso
+core
+core.*
+
+# LLM model weights & giant binaries (>50MB)
+*.gguf
+*.bin
+*.dec
+*.tmp
+
+# Migration and temporary backups
+.migration_backup_*
+
+# Oversized challenge archives (>50MB - exceeds or nears GitHub 100MB hard limit)
+**/chall.zip
+**/leftovers.tar.gz
+**/leftover-leftovers.tar.gz
+**/rev_nevm.tar.gz
+**/forensics_baked-in.7z.tmp
+**/funnygame.zip
+**/game_minions-in-16k.tar.gz
+**/client.exe
+**/client_linux
+**/pwn_3in1.tar.gz
+**/initramfs.cpio
+**/qemu-system-x86_64
+**/rootfs.ext2
+**/public.7z
+**/base.apk
+**/split_config.x86_64.apk
+**/Sideband_Surgery_*.txz
+**/challenge.raw
+**/Silent_Carrier_*.txz
+**/recycled-bits.img
+**/Triage.vhdx
+**/triage.raw
+**/SOFTWARE
+Ghidra/

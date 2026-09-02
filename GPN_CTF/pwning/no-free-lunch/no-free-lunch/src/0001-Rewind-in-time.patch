@@ -1,0 +1,28 @@
+From 37cda61b5fc78dbab12cc27325abdc6b1da71abc Mon Sep 17 00:00:00 2001
+From: kitctf <gpnctf-24@kitctf.de>
+Date: Sun, 17 May 2026 16:20:05 +0200
+Subject: [PATCH 1/2] Rewind in time
+
+---
+ Modules/_heapqmodule.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/Modules/_heapqmodule.c b/Modules/_heapqmodule.c
+index c705376f4e..22c9bec5d5 100644
+--- a/Modules/_heapqmodule.c
++++ b/Modules/_heapqmodule.c
+@@ -272,9 +272,9 @@ _heapq_heappushpop_impl(PyObject *module, PyObject *heap, PyObject *item)
+     }
+ 
+     PyObject* top = PyList_GET_ITEM(heap, 0);
+-    Py_INCREF(top);
++    // Py_INCREF(top);
+     cmp = PyObject_RichCompareBool(top, item, Py_LT);
+-    Py_DECREF(top);
++    // Py_DECREF(top);
+     if (cmp < 0)
+         return NULL;
+     if (cmp == 0) {
+-- 
+2.39.5
+

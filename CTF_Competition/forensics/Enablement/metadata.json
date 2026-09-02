@@ -1,0 +1,33 @@
+{
+  "id": "b6ab0b9ce3c13116",
+  "name": "Enablement",
+  "category": "forensics",
+  "points": 179,
+  "author": "xyptonize",
+  "tags": [],
+  "hints": [],
+  "connection_info": null,
+  "solved_by_me": false,
+  "solves_count": 84,
+  "downloaded_files": [
+    {
+      "url": "https://enablement-iohkqfar.challenge.2026.haruulzangi.mn/artifact.zip",
+      "name": null,
+      "saved_path": null,
+      "success": false,
+      "source": "description_direct_file",
+      "message": "Failed to download file (HTTP status or connection error)"
+    }
+  ],
+  "raw": {
+    "id": "b6ab0b9ce3c13116",
+    "name": "Enablement",
+    "description": "A counterpart agent's mailbox took a \"Delegation Enablement Pack\": a\nmacro-enabled Word document that, on open, rebuilds the counterpart's\nstanding-delegation token and reports it to a Registry endpoint.\nCompliance caught it before it ran. Nobody enabled content.\n\nThe document does not store the token. It reconstructs it from material\nit carries inside itself, and the macro spells out every step. Read what\nit would have done and do it by hand. The token it would have sent is\nyour flag.\n\nThe handout is password-protected with the password `infected`.\n\n> [!CONNECTION]\n> https://enablement-iohkqfar.challenge.2026.haruulzangi.mn/artifact.zip",
+    "category": "forensics",
+    "author": "xyptonize",
+    "files": [],
+    "points": 179,
+    "solves": 84,
+    "sortWeight": 0
+  }
+}

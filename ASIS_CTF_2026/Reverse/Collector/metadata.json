@@ -1,0 +1,64 @@
+{
+  "id": 70,
+  "name": "Collector",
+  "category": "Reverse",
+  "points": 500,
+  "author": null,
+  "tags": [
+    "Reverse"
+  ],
+  "hints": [],
+  "connection_info": null,
+  "solved_by_me": false,
+  "solves_count": 0,
+  "submit_endpoint": null,
+  "instance_info": {},
+  "downloaded_files": [
+    {
+      "url": "https://asisctf.com/tasks/Collector_74c92ebeb1228fa20a858574384df47c66656f89.txz",
+      "name": "Collector_74c92ebeb1228fa20a858574384df47c66656f89.txz",
+      "saved_path": null,
+      "success": false,
+      "source": "platform_attachment",
+      "message": "Tải file thất bại (HTTP status, lỗi kết nối hoặc nội dung HTML)"
+    }
+  ],
+  "raw": {
+    "id": 70,
+    "name": "Collector",
+    "description": "<p>The garbage <a href=\"/tasks/Collector_74c92ebeb1228fa20a858574384df47c66656f89.txz\"><strong>collector</strong></a> remembers everything, including the code you hoped it forgot. Untangle its heap before it takes your flag to the trash.</p>\n",
+    "points": 500,
+    "published_at": "2026-08-29 18:00:00",
+    "fixedPoints": 19,
+    "solves_count": 0,
+    "first_n_solves": [],
+    "SolvedByCurrentTeam": false,
+    "dynamic_points": 500,
+    "rewardable_dynamic_points": 500,
+    "chartData": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "categories": [
+      {
+        "id": 5,
+        "name": "Reverse",
+        "created_at": "2025-09-09T05:37:36.000000Z",
+        "updated_at": "2025-09-09T05:37:36.000000Z",
+        "pivot": {
+          "challenge_id": 70,
+          "category_id": 5
+        }
+      }
+    ],
+    "solves": []
+  }
+}

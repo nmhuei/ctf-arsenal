@@ -1,0 +1,42 @@
+{
+  "category": "RSA",
+  "category_slug": "rsa",
+  "stage": "Public exponent",
+  "stage_slug": "public_exponent",
+  "title": "Endless Emails",
+  "slug": "endless-emails",
+  "data_challenge": "johan",
+  "points": 150,
+  "solves": 3235,
+  "url": "https://cryptohack.org/challenges/rsa/",
+  "attachments": [
+    {
+      "text": "johan.py",
+      "href": "/static/challenges/johan_335f59b72545e3e27e60453719d50288.py",
+      "url": "https://cryptohack.org/static/challenges/johan_335f59b72545e3e27e60453719d50288.py",
+      "download": true,
+      "saved_as": "files/johan_335f59b72545e3e27e60453719d50288.py",
+      "status": 200,
+      "size": 392
+    },
+    {
+      "text": "output.txt",
+      "href": "/static/challenges/output_0ef6d6343784e59e2f44f61d2d29896f.txt",
+      "url": "https://cryptohack.org/static/challenges/output_0ef6d6343784e59e2f44f61d2d29896f.txt",
+      "download": true,
+      "saved_as": "files/output_0ef6d6343784e59e2f44f61d2d29896f.txt",
+      "status": 200,
+      "size": 8757
+    }
+  ],
+  "resources": [
+    {
+      "text": "Twenty Years of Attacks on the RSA Cryptosystem",
+      "href": "https://www.ams.org/notices/199902/boneh.pdf",
+      "url": "https://www.ams.org/notices/199902/boneh.pdf",
+      "download": false
+    }
+  ],
+  "statement_html": "statement.html",
+  "statement_md": "statement.md"
+}

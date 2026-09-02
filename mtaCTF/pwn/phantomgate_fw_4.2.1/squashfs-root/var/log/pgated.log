@@ -1,0 +1,15 @@
+2024-01-15 00:00:06 [INFO] pgated v4.2.1 starting
+2024-01-15 00:00:06 [INFO] loading config: /etc/pgated.conf
+2024-01-15 00:00:06 [INFO] TLS certificate loaded: /etc/ssl/server.pem
+2024-01-15 00:00:06 [INFO] max_connections=32, log_level=info
+2024-01-15 00:00:06 [INFO] interface: eth0, bind: 0.0.0.0:8080
+2024-01-15 00:00:06 [INFO] gateway engine initialized
+2024-01-15 00:00:06 [INFO] ready — accepting connections
+2024-01-15 00:01:02 [INFO] new connection from 192.168.1.105:49832
+2024-01-15 00:01:02 [INFO] TLS handshake completed (TLS 1.2, ECDHE-RSA-AES256-GCM-SHA384)
+2024-01-15 00:01:03 [INFO] auth: user=admin status=success src=192.168.1.105
+2024-01-15 00:01:03 [INFO] session started sid=a3f8c012 user=admin
+2024-01-15 00:15:44 [INFO] session idle timeout sid=a3f8c012
+2024-01-15 00:15:44 [INFO] connection closed from 192.168.1.105:49832
+2024-01-15 01:00:08 [INFO] periodic health check: OK (mem=52MB/128MB, conns=0/32)
+2024-01-15 02:00:08 [INFO] periodic health check: OK (mem=51MB/128MB, conns=0/32)

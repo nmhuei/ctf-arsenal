@@ -1,0 +1,41 @@
+<div class="challengeDescription">
+ <!-- <p> -->
+ If a block cipher is secure, there should be no way for an attacker to distinguish the output of AES from a
+ <a href="https://en.wikipedia.org/wiki/Pseudorandom_permutation" target="_blank">
+  random permutation
+ </a>
+ of bits. Furthermore, there should be no better way to undo the permutation than simply bruteforcing every possible key. That's why academics consider a cipher theoretically "broken" if they can find an attack that takes fewer steps to perform than bruteforcing the key, even if that attack is practically infeasible.
+ <br/>
+ <br/>
+ <span class="note">
+  <i class="fas fa-pencil-alt">
+  </i>
+  How difficult is it to bruteforce a 128-bit keyspace?
+  <a href="https://crypto.stackexchange.com/a/48669" target="_blank">
+   Somebody estimated
+  </a>
+  that if you turned the power of the entire Bitcoin mining network against an AES-128 key, it would take over a hundred times the age of the universe to crack the key.
+ </span>
+ <br/>
+ <br/>
+ It turns out that there is
+ <a href="https://en.wikipedia.org/wiki/Biclique_attack" target="_blank">
+  an attack
+ </a>
+ on AES that's better than bruteforce, but only slightly – it lowers the security level of AES-128 down to 126.1 bits, and hasn't been improved on for over 8 years. Given the large "security margin" provided by 128 bits, and the lack of improvements despite extensive study, it's not considered a credible risk to the security of AES. But yes, in a very narrow sense, it "breaks" AES.
+ <br/>
+ <br/>
+ Finally, while quantum computers have the potential to completely break popular public-key cryptosystems like RSA via
+ <a href="https://en.wikipedia.org/wiki/Shor%27s_algorithm" target="_blank">
+  Shor's algorithm
+ </a>
+ , they are thought to only cut in half the security level of symmetric cryptosystems via
+ <a href="https://en.wikipedia.org/wiki/Grover's_algorithm" target="_blank">
+  Grover's algorithm
+ </a>
+ . This is one reason why people recommend using AES-256, despite it being less performant, as it would still provide a very adequate 128 bits of security in a quantum future.
+ <br/>
+ <br/>
+ What is the name for the best single-key attack against AES?
+ <!-- </p> -->
+</div>

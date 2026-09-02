@@ -1,0 +1,18 @@
+#!/bin/sh
+# S20network — network interface configuration
+
+case "$1" in
+    start)
+        echo "[S20] Configuring network interfaces..."
+        /usr/sbin/pg_netd start
+
+        echo "[S20] Starting NTP sync..."
+        ntpd -p pool.ntp.org -S /usr/sbin/ntpd-hotplug 2>/dev/null || true
+
+        echo "[S20] Network ready"
+        ;;
+    stop)
+        echo "[S20] Stopping network..."
+        /usr/sbin/pg_netd stop
+        ;;
+esac

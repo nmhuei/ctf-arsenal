@@ -1,0 +1,587 @@
+<div class="challengeDescription">
+ <!-- <p> -->
+ In Legendre Symbol we introduced a fast way to determine whether a number is a square root modulo a prime. We can go further: there are algorithms for efficiently calculating such roots. The best one in practice is called Tonelli-Shanks, which gets its funny name from the fact that it was first described by an Italian in the 19th century and rediscovered independently by Daniel Shanks in the 1970s.
+ <br/>
+ <br/>
+ All primes that aren't 2 are of the form
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi>
+        p
+       </mi>
+       <mo>
+        ≡
+       </mo>
+       <mn>
+        1
+       </mn>
+       <mspace>
+       </mspace>
+       <mspace width="0.6667em">
+       </mspace>
+       <mrow>
+        <mi mathvariant="normal">
+         m
+        </mi>
+        <mi mathvariant="normal">
+         o
+        </mi>
+        <mi mathvariant="normal">
+         d
+        </mi>
+       </mrow>
+       <mn>
+        4
+       </mn>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       p \equiv 1 \mod 4
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 0.6582em; vertical-align: -0.1944em;">
+     </span>
+     <span class="mord mathnormal">
+      p
+     </span>
+     <span class="mspace" style="margin-right: 0.2778em;">
+     </span>
+     <span class="mrel">
+      ≡
+     </span>
+     <span class="mspace" style="margin-right: 0.2778em;">
+     </span>
+    </span>
+    <span class="base">
+     <span class="strut" style="height: 0.6444em;">
+     </span>
+     <span class="mord">
+      1
+     </span>
+     <span class="mspace allowbreak">
+     </span>
+     <span class="mspace" style="margin-right: 0.6667em;">
+     </span>
+    </span>
+    <span class="base">
+     <span class="strut" style="height: 0.6944em;">
+     </span>
+     <span class="mord">
+      <span class="mord">
+       <span class="mord mathrm">
+        mod
+       </span>
+      </span>
+     </span>
+     <span class="mspace" style="margin-right: 0.1667em;">
+     </span>
+     <span class="mspace" style="margin-right: 0.1667em;">
+     </span>
+     <span class="mord">
+      4
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ or
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi>
+        p
+       </mi>
+       <mo>
+        ≡
+       </mo>
+       <mn>
+        3
+       </mn>
+       <mspace>
+       </mspace>
+       <mspace width="0.6667em">
+       </mspace>
+       <mrow>
+        <mi mathvariant="normal">
+         m
+        </mi>
+        <mi mathvariant="normal">
+         o
+        </mi>
+        <mi mathvariant="normal">
+         d
+        </mi>
+       </mrow>
+       <mn>
+        4
+       </mn>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       p \equiv 3 \mod 4
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 0.6582em; vertical-align: -0.1944em;">
+     </span>
+     <span class="mord mathnormal">
+      p
+     </span>
+     <span class="mspace" style="margin-right: 0.2778em;">
+     </span>
+     <span class="mrel">
+      ≡
+     </span>
+     <span class="mspace" style="margin-right: 0.2778em;">
+     </span>
+    </span>
+    <span class="base">
+     <span class="strut" style="height: 0.6444em;">
+     </span>
+     <span class="mord">
+      3
+     </span>
+     <span class="mspace allowbreak">
+     </span>
+     <span class="mspace" style="margin-right: 0.6667em;">
+     </span>
+    </span>
+    <span class="base">
+     <span class="strut" style="height: 0.6944em;">
+     </span>
+     <span class="mord">
+      <span class="mord">
+       <span class="mord mathrm">
+        mod
+       </span>
+      </span>
+     </span>
+     <span class="mspace" style="margin-right: 0.1667em;">
+     </span>
+     <span class="mspace" style="margin-right: 0.1667em;">
+     </span>
+     <span class="mord">
+      4
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ , since all odd numbers obey these congruences. As the previous challenge hinted, in the
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi>
+        p
+       </mi>
+       <mo>
+        ≡
+       </mo>
+       <mn>
+        3
+       </mn>
+       <mspace>
+       </mspace>
+       <mspace width="0.6667em">
+       </mspace>
+       <mrow>
+        <mi mathvariant="normal">
+         m
+        </mi>
+        <mi mathvariant="normal">
+         o
+        </mi>
+        <mi mathvariant="normal">
+         d
+        </mi>
+       </mrow>
+       <mn>
+        4
+       </mn>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       p \equiv 3 \mod 4
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 0.6582em; vertical-align: -0.1944em;">
+     </span>
+     <span class="mord mathnormal">
+      p
+     </span>
+     <span class="mspace" style="margin-right: 0.2778em;">
+     </span>
+     <span class="mrel">
+      ≡
+     </span>
+     <span class="mspace" style="margin-right: 0.2778em;">
+     </span>
+    </span>
+    <span class="base">
+     <span class="strut" style="height: 0.6444em;">
+     </span>
+     <span class="mord">
+      3
+     </span>
+     <span class="mspace allowbreak">
+     </span>
+     <span class="mspace" style="margin-right: 0.6667em;">
+     </span>
+    </span>
+    <span class="base">
+     <span class="strut" style="height: 0.6944em;">
+     </span>
+     <span class="mord">
+      <span class="mord">
+       <span class="mord mathrm">
+        mod
+       </span>
+      </span>
+     </span>
+     <span class="mspace" style="margin-right: 0.1667em;">
+     </span>
+     <span class="mspace" style="margin-right: 0.1667em;">
+     </span>
+     <span class="mord">
+      4
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ case, a really simple formula for computing square roots can be
+ <a href="https://crypto.stackexchange.com/a/20994" target="_blank">
+  derived
+ </a>
+ directly from Fermat's little theorem. That leaves us still with the
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi>
+        p
+       </mi>
+       <mo>
+        ≡
+       </mo>
+       <mn>
+        1
+       </mn>
+       <mspace>
+       </mspace>
+       <mspace width="0.6667em">
+       </mspace>
+       <mrow>
+        <mi mathvariant="normal">
+         m
+        </mi>
+        <mi mathvariant="normal">
+         o
+        </mi>
+        <mi mathvariant="normal">
+         d
+        </mi>
+       </mrow>
+       <mn>
+        4
+       </mn>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       p \equiv 1 \mod 4
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 0.6582em; vertical-align: -0.1944em;">
+     </span>
+     <span class="mord mathnormal">
+      p
+     </span>
+     <span class="mspace" style="margin-right: 0.2778em;">
+     </span>
+     <span class="mrel">
+      ≡
+     </span>
+     <span class="mspace" style="margin-right: 0.2778em;">
+     </span>
+    </span>
+    <span class="base">
+     <span class="strut" style="height: 0.6444em;">
+     </span>
+     <span class="mord">
+      1
+     </span>
+     <span class="mspace allowbreak">
+     </span>
+     <span class="mspace" style="margin-right: 0.6667em;">
+     </span>
+    </span>
+    <span class="base">
+     <span class="strut" style="height: 0.6944em;">
+     </span>
+     <span class="mord">
+      <span class="mord">
+       <span class="mord mathrm">
+        mod
+       </span>
+      </span>
+     </span>
+     <span class="mspace" style="margin-right: 0.1667em;">
+     </span>
+     <span class="mspace" style="margin-right: 0.1667em;">
+     </span>
+     <span class="mord">
+      4
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ case, so a more general algorithm is required.
+ <br/>
+ <br/>
+ In a congruence of the form
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <msup>
+        <mi>
+         r
+        </mi>
+        <mn>
+         2
+        </mn>
+       </msup>
+       <mo>
+        ≡
+       </mo>
+       <mi>
+        a
+       </mi>
+       <mspace>
+       </mspace>
+       <mspace width="0.6667em">
+       </mspace>
+       <mrow>
+        <mi mathvariant="normal">
+         m
+        </mi>
+        <mi mathvariant="normal">
+         o
+        </mi>
+        <mi mathvariant="normal">
+         d
+        </mi>
+       </mrow>
+       <mi>
+        p
+       </mi>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       r^2 \equiv a \mod p
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 0.8141em;">
+     </span>
+     <span class="mord">
+      <span class="mord mathnormal" style="margin-right: 0.0278em;">
+       r
+      </span>
+      <span class="msupsub">
+       <span class="vlist-t">
+        <span class="vlist-r">
+         <span class="vlist" style="height: 0.8141em;">
+          <span class="" style="top: -3.063em; margin-right: 0.05em;">
+           <span class="pstrut" style="height: 2.7em;">
+           </span>
+           <span class="sizing reset-size6 size3 mtight">
+            <span class="mord mtight">
+             2
+            </span>
+           </span>
+          </span>
+         </span>
+        </span>
+       </span>
+      </span>
+     </span>
+     <span class="mspace" style="margin-right: 0.2778em;">
+     </span>
+     <span class="mrel">
+      ≡
+     </span>
+     <span class="mspace" style="margin-right: 0.2778em;">
+     </span>
+    </span>
+    <span class="base">
+     <span class="strut" style="height: 0.4306em;">
+     </span>
+     <span class="mord mathnormal">
+      a
+     </span>
+     <span class="mspace allowbreak">
+     </span>
+     <span class="mspace" style="margin-right: 0.6667em;">
+     </span>
+    </span>
+    <span class="base">
+     <span class="strut" style="height: 0.8889em; vertical-align: -0.1944em;">
+     </span>
+     <span class="mord">
+      <span class="mord">
+       <span class="mord mathrm">
+        mod
+       </span>
+      </span>
+     </span>
+     <span class="mspace" style="margin-right: 0.1667em;">
+     </span>
+     <span class="mspace" style="margin-right: 0.1667em;">
+     </span>
+     <span class="mord mathnormal">
+      p
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ , Tonelli-Shanks calculates
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi>
+        r
+       </mi>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       r
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 0.4306em;">
+     </span>
+     <span class="mord mathnormal" style="margin-right: 0.0278em;">
+      r
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ .
+ <br/>
+ <br/>
+ <span class="note">
+  <i class="fas fa-pencil-alt">
+  </i>
+  Tonelli-Shanks doesn't work for composite (non-prime) moduli. Finding square roots modulo composites is computationally equivalent to integer factorization - that is, it's a hard problem.
+ </span>
+ <br/>
+ <br/>
+ The main use-case for this algorithm is finding elliptic curve coordinates. Its operation is somewhat complex so we're not going to discuss the details, however, implementations are easy to find and Sage has one built-in.
+ <br/>
+ <br/>
+ Find the square root of
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi>
+        a
+       </mi>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       a
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 0.4306em;">
+     </span>
+     <span class="mord mathnormal">
+      a
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ modulo the 2048-bit prime
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi>
+        p
+       </mi>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       p
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 0.625em; vertical-align: -0.1944em;">
+     </span>
+     <span class="mord mathnormal">
+      p
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ . Give the smaller of the two roots as your answer.
+ <br/>
+ <br/>
+ <b>
+  Challenge files:
+ </b>
+ <br/>
+ -
+ <a download="" href="/static/challenges/output_abe0beb359a950c8a0a9300897528a9d.txt">
+  output.txt
+ </a>
+ <br/>
+ <!-- </p> -->
+</div>

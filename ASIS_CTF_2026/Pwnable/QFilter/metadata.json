@@ -1,0 +1,145 @@
+{
+  "id": 89,
+  "name": "QFilter",
+  "category": "Pwnable",
+  "points": 60,
+  "author": null,
+  "tags": [
+    "Pwnable"
+  ],
+  "hints": [],
+  "connection_info": "nc 65.109.208.46 1337",
+  "solved_by_me": true,
+  "solves_count": 87,
+  "submit_endpoint": null,
+  "instance_info": {},
+  "downloaded_files": [
+    {
+      "url": "https://asisctf.com/tasks/QFilter_c9b8d86ebc59fcd1d7b9bf68ce3d9cb7b0f0f476.txz",
+      "name": "QFilter_c9b8d86ebc59fcd1d7b9bf68ce3d9cb7b0f0f476.txz",
+      "saved_path": "/home/light/Workspace/CTF/ASIS_CTF_2026/Pwnable/QFilter/challenge/QFilter_c9b8d86ebc59fcd1d7b9bf68ce3d9cb7b0f0f476.txz",
+      "success": true,
+      "source": "platform_attachment",
+      "message": "Đã tải trực tiếp thành công"
+    }
+  ],
+  "raw": {
+    "id": 89,
+    "name": "QFilter",
+    "description": "<p>Need a custom <a href=\"/tasks/QFilter_c9b8d86ebc59fcd1d7b9bf68ce3d9cb7b0f0f476.txz\"><strong>Filter</strong></a>? Please be my guest.</p>\n<p><code>nc 65.109.208.46 1337</code></p>\n",
+    "points": 500,
+    "published_at": "2026-08-29 14:00:00",
+    "fixedPoints": 19,
+    "solves_count": 5,
+    "first_n_solves": [
+      {
+        "team_id": 1922,
+        "team_name": "TeamH4C",
+        "challenge_name": "QFilter",
+        "challenge_id": 89,
+        "solved_at": "2026-08-29 14:14:49",
+        "time_to_solve": "0d 00h 14m 49s"
+      },
+      {
+        "team_id": 2457,
+        "team_name": "세상에 이란일이",
+        "challenge_name": "QFilter",
+        "challenge_id": 89,
+        "solved_at": "2026-08-29 14:15:28",
+        "time_to_solve": "0d 00h 15m 28s"
+      },
+      {
+        "team_id": 2317,
+        "team_name": "ctrl_alt_del",
+        "challenge_name": "QFilter",
+        "challenge_id": 89,
+        "solved_at": "2026-08-29 14:16:48",
+        "time_to_solve": "0d 00h 16m 48s"
+      }
+    ],
+    "SolvedByCurrentTeam": false,
+    "dynamic_points": 398,
+    "rewardable_dynamic_points": 375,
+    "chartData": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      5
+    ],
+    "categories": [
+      {
+        "id": 3,
+        "name": "Pwnable",
+        "created_at": "2025-09-09T05:37:22.000000Z",
+        "updated_at": "2025-09-09T05:37:22.000000Z",
+        "pivot": {
+          "challenge_id": 89,
+          "category_id": 3
+        }
+      }
+    ],
+    "solves": [
+      {
+        "id": 2478,
+        "user_id": 4023,
+        "team_id": 1922,
+        "challenge_id": 89,
+        "created_at": "2026-08-29T14:14:49.000000Z",
+        "updated_at": "2026-08-29T14:14:49.000000Z"
+      },
+      {
+        "id": 2484,
+        "user_id": 4010,
+        "team_id": 2457,
+        "challenge_id": 89,
+        "created_at": "2026-08-29T14:15:28.000000Z",
+        "updated_at": "2026-08-29T14:15:28.000000Z"
+      },
+      {
+        "id": 2503,
+        "user_id": 3731,
+        "team_id": 2317,
+        "challenge_id": 89,
+        "created_at": "2026-08-29T14:16:48.000000Z",
+        "updated_at": "2026-08-29T14:16:48.000000Z"
+      },
+      {
+        "id": 2512,
+        "user_id": 3117,
+        "team_id": 1989,
+        "challenge_id": 89,
+        "created_at": "2026-08-29T14:17:25.000000Z",
+        "updated_at": "2026-08-29T14:17:25.000000Z"
+      },
+      {
+        "id": 2517,
+        "user_id": 2576,
+        "team_id": 1669,
+        "challenge_id": 89,
+        "created_at": "2026-08-29T14:17:49.000000Z",
+        "updated_at": "2026-08-29T14:17:49.000000Z"
+      }
+    ]
+  },
+  "status": {
+    "schema_version": 2,
+    "solve": "solved_by_me",
+    "flag": {
+      "value": null,
+      "state": "none"
+    },
+    "writeup": "none",
+    "writeup_auto": true,
+    "notes": "",
+    "labels": [],
+    "container": "none",
+    "synced_at": "2026-08-29T18:23:01Z",
+    "updated_at": "2026-08-29T18:23:01Z"
+  }
+}

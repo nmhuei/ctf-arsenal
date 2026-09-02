@@ -1,0 +1,24 @@
+[+] using base solver module: /home/light/Workspace/CTF/jailCTF/just-another-injection-challenge/solve_checked.py
+[!] remote connect attempt 1/5 failed: EOFError: remote closed before the first prompt
+[!] remote connect attempt 2/5 failed: EOFError: remote closed before the first prompt
+[!] remote connect attempt 3/5 failed: EOFError: remote closed before the first prompt
+[!] remote connect attempt 4/5 failed: EOFError: remote closed before the first prompt
+[!] remote connect attempt 5/5 failed: EOFError: remote closed before the first prompt
+Traceback (most recent call last):
+  File "/home/light/Workspace/CTF/jailCTF/just-another-injection-challenge/solve_set_oracle_v2.py", line 337, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "/home/light/Workspace/CTF/jailCTF/just-another-injection-challenge/solve_set_oracle_v2.py", line 319, in main
+    oracle = make_oracle(base, args)
+  File "/home/light/Workspace/CTF/jailCTF/just-another-injection-challenge/solve_set_oracle_v2.py", line 238, in make_oracle
+    raise last  # type: ignore[misc]
+    ^^^^^^^^^^
+  File "/home/light/Workspace/CTF/jailCTF/just-another-injection-challenge/solve_set_oracle_v2.py", line 233, in make_oracle
+    return base.RemoteOracle(args.host, args.port, args.timeout)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/light/Workspace/CTF/jailCTF/just-another-injection-challenge/solve_checked.py", line 272, in __init__
+    self._consume_initial_prompt()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/light/Workspace/CTF/jailCTF/just-another-injection-challenge/solve_checked.py", line 278, in _consume_initial_prompt
+    raise EOFError("remote closed before the first prompt")
+EOFError: remote closed before the first prompt

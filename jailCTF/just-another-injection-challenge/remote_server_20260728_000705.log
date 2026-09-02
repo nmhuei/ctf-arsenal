@@ -1,0 +1,339 @@
+[+] jq version: jq-1.8.2
+[+] solver version: 2026-07-27-v2-standalone-live
+[+] connecting to challs.pyjail.club:20219 (connect timeout 15s)
+[+] TCP connected; waiting for challenge prompt
+[+] challenge prompt received
+[+] loaded 225 locally validated singleton predicates from chains_225.json
+[*] recovering flag length
+    progress: 8/19 ( 42.1%) | 14.2 q/s | ETA 0.8s
+    progress: 16/19 ( 84.2%) | 13.4 q/s | ETA 0.2s
+    progress: 19/19 (100.0%) | 11.4 q/s | ETA 0.0s
+    remote oracle: 19 queries in 1.66s
+[+] length signature identity -> [103, 105, 107, 109, 110, 115, 119, 122, 127, 128]
+    progress: 1/1 (100.0%) | 4.1 q/s | ETA 0.0s
+    remote oracle: 1 queries in 0.25s
+[+] length signature tostring|length -> [103, 105, 107, 109, 110, 115, 119, 122, 127, 128]
+    progress: 6/6 (100.0%) | 9.8 q/s | ETA 0.0s
+    remote oracle: 6 queries in 0.61s
+[+] length signature tostring|explode|last -> [122]
+[+] flag length = 122
+[*] broad phase: 84 features, 2401 oracle queries
+    progress: 8/2401 (  0.3%) | 14.8 q/s | ETA 162.2s
+    progress: 16/2401 (  0.7%) | 15.1 q/s | ETA 158.4s
+    progress: 24/2401 (  1.0%) | 14.4 q/s | ETA 165.3s
+    progress: 32/2401 (  1.3%) | 13.6 q/s | ETA 173.9s
+    progress: 40/2401 (  1.7%) | 14.2 q/s | ETA 166.5s
+    progress: 48/2401 (  2.0%) | 13.9 q/s | ETA 169.7s
+    progress: 56/2401 (  2.3%) | 13.9 q/s | ETA 168.5s
+    progress: 64/2401 (  2.7%) | 14.2 q/s | ETA 164.2s
+    progress: 72/2401 (  3.0%) | 14.4 q/s | ETA 161.4s
+    progress: 80/2401 (  3.3%) | 14.4 q/s | ETA 160.8s
+    progress: 88/2401 (  3.7%) | 14.5 q/s | ETA 159.6s
+    progress: 96/2401 (  4.0%) | 14.6 q/s | ETA 158.1s
+    progress: 104/2401 (  4.3%) | 14.0 q/s | ETA 163.6s
+    progress: 112/2401 (  4.7%) | 14.2 q/s | ETA 161.8s
+    progress: 120/2401 (  5.0%) | 14.1 q/s | ETA 162.1s
+    progress: 128/2401 (  5.3%) | 14.2 q/s | ETA 160.6s
+    progress: 136/2401 (  5.7%) | 14.3 q/s | ETA 158.5s
+    progress: 144/2401 (  6.0%) | 14.4 q/s | ETA 156.9s
+    progress: 152/2401 (  6.3%) | 14.4 q/s | ETA 155.7s
+    progress: 160/2401 (  6.7%) | 14.4 q/s | ETA 155.3s
+    progress: 168/2401 (  7.0%) | 14.4 q/s | ETA 155.6s
+    progress: 176/2401 (  7.3%) | 14.2 q/s | ETA 157.2s
+    progress: 184/2401 (  7.7%) | 14.2 q/s | ETA 156.4s
+    progress: 192/2401 (  8.0%) | 14.3 q/s | ETA 154.9s
+    progress: 200/2401 (  8.3%) | 14.3 q/s | ETA 154.1s
+    progress: 208/2401 (  8.7%) | 14.3 q/s | ETA 153.1s
+    progress: 216/2401 (  9.0%) | 14.3 q/s | ETA 152.5s
+    progress: 224/2401 (  9.3%) | 14.3 q/s | ETA 152.0s
+    progress: 232/2401 (  9.7%) | 13.9 q/s | ETA 155.9s
+    progress: 240/2401 ( 10.0%) | 13.7 q/s | ETA 157.9s
+    progress: 248/2401 ( 10.3%) | 13.7 q/s | ETA 156.7s
+    progress: 256/2401 ( 10.7%) | 13.7 q/s | ETA 156.4s
+    progress: 264/2401 ( 11.0%) | 13.6 q/s | ETA 157.0s
+    progress: 272/2401 ( 11.3%) | 13.6 q/s | ETA 156.1s
+    progress: 280/2401 ( 11.7%) | 13.7 q/s | ETA 155.0s
+    progress: 288/2401 ( 12.0%) | 13.7 q/s | ETA 153.9s
+    progress: 296/2401 ( 12.3%) | 13.7 q/s | ETA 153.1s
+    progress: 304/2401 ( 12.7%) | 13.8 q/s | ETA 151.9s
+    progress: 312/2401 ( 13.0%) | 13.8 q/s | ETA 151.7s
+    progress: 320/2401 ( 13.3%) | 13.8 q/s | ETA 150.7s
+    progress: 328/2401 ( 13.7%) | 13.8 q/s | ETA 149.7s
+    progress: 336/2401 ( 14.0%) | 13.7 q/s | ETA 150.7s
+    progress: 344/2401 ( 14.3%) | 13.7 q/s | ETA 149.9s
+    progress: 352/2401 ( 14.7%) | 13.8 q/s | ETA 148.9s
+    progress: 360/2401 ( 15.0%) | 13.7 q/s | ETA 149.1s
+    progress: 368/2401 ( 15.3%) | 13.7 q/s | ETA 148.4s
+    progress: 376/2401 ( 15.7%) | 13.8 q/s | ETA 147.2s
+    progress: 384/2401 ( 16.0%) | 13.8 q/s | ETA 146.1s
+    progress: 392/2401 ( 16.3%) | 13.8 q/s | ETA 145.5s
+    progress: 400/2401 ( 16.7%) | 13.8 q/s | ETA 145.2s
+    progress: 408/2401 ( 17.0%) | 13.8 q/s | ETA 144.1s
+    progress: 416/2401 ( 17.3%) | 13.8 q/s | ETA 143.8s
+    progress: 424/2401 ( 17.7%) | 13.9 q/s | ETA 142.7s
+    progress: 432/2401 ( 18.0%) | 13.9 q/s | ETA 142.0s
+    progress: 440/2401 ( 18.3%) | 13.9 q/s | ETA 141.1s
+    progress: 448/2401 ( 18.7%) | 13.8 q/s | ETA 141.6s
+    progress: 456/2401 ( 19.0%) | 13.8 q/s | ETA 140.6s
+    progress: 464/2401 ( 19.3%) | 13.8 q/s | ETA 140.3s
+    progress: 472/2401 ( 19.7%) | 13.8 q/s | ETA 139.5s
+    progress: 480/2401 ( 20.0%) | 13.9 q/s | ETA 138.6s
+    progress: 488/2401 ( 20.3%) | 13.9 q/s | ETA 137.8s
+    progress: 496/2401 ( 20.7%) | 13.9 q/s | ETA 137.0s
+    progress: 504/2401 ( 21.0%) | 13.9 q/s | ETA 136.2s
+    progress: 512/2401 ( 21.3%) | 14.0 q/s | ETA 135.2s
+    progress: 520/2401 ( 21.7%) | 14.0 q/s | ETA 134.3s
+    progress: 528/2401 ( 22.0%) | 14.0 q/s | ETA 133.8s
+    progress: 536/2401 ( 22.3%) | 14.0 q/s | ETA 133.4s
+    progress: 544/2401 ( 22.7%) | 14.0 q/s | ETA 132.9s
+    progress: 552/2401 ( 23.0%) | 14.0 q/s | ETA 132.2s
+    progress: 560/2401 ( 23.3%) | 14.0 q/s | ETA 131.5s
+    progress: 568/2401 ( 23.7%) | 14.0 q/s | ETA 130.6s
+    progress: 576/2401 ( 24.0%) | 14.0 q/s | ETA 130.2s
+    progress: 584/2401 ( 24.3%) | 14.0 q/s | ETA 129.4s
+    progress: 592/2401 ( 24.7%) | 13.9 q/s | ETA 130.0s
+    progress: 600/2401 ( 25.0%) | 13.8 q/s | ETA 130.0s
+    progress: 608/2401 ( 25.3%) | 13.9 q/s | ETA 129.2s
+    progress: 616/2401 ( 25.7%) | 13.9 q/s | ETA 128.6s
+    progress: 624/2401 ( 26.0%) | 13.9 q/s | ETA 128.0s
+    progress: 632/2401 ( 26.3%) | 13.9 q/s | ETA 127.1s
+    progress: 640/2401 ( 26.7%) | 13.9 q/s | ETA 126.8s
+    progress: 648/2401 ( 27.0%) | 13.9 q/s | ETA 126.4s
+    progress: 656/2401 ( 27.3%) | 13.9 q/s | ETA 125.8s
+    progress: 664/2401 ( 27.7%) | 13.9 q/s | ETA 125.2s
+    progress: 672/2401 ( 28.0%) | 13.9 q/s | ETA 124.6s
+    progress: 680/2401 ( 28.3%) | 13.9 q/s | ETA 124.0s
+    progress: 688/2401 ( 28.7%) | 13.9 q/s | ETA 123.4s
+    progress: 696/2401 ( 29.0%) | 13.9 q/s | ETA 122.7s
+    progress: 704/2401 ( 29.3%) | 13.9 q/s | ETA 121.9s
+    progress: 712/2401 ( 29.7%) | 13.8 q/s | ETA 122.0s
+    progress: 720/2401 ( 30.0%) | 13.9 q/s | ETA 121.3s
+    progress: 728/2401 ( 30.3%) | 13.8 q/s | ETA 121.0s
+    progress: 736/2401 ( 30.7%) | 13.8 q/s | ETA 120.5s
+    progress: 744/2401 ( 31.0%) | 13.8 q/s | ETA 119.8s
+    progress: 752/2401 ( 31.3%) | 13.8 q/s | ETA 119.2s
+    progress: 760/2401 ( 31.7%) | 13.9 q/s | ETA 118.5s
+    progress: 768/2401 ( 32.0%) | 13.9 q/s | ETA 117.7s
+    progress: 776/2401 ( 32.3%) | 13.9 q/s | ETA 117.1s
+    progress: 784/2401 ( 32.7%) | 13.9 q/s | ETA 116.4s
+    progress: 792/2401 ( 33.0%) | 13.9 q/s | ETA 115.6s
+    progress: 800/2401 ( 33.3%) | 13.9 q/s | ETA 114.8s
+    progress: 808/2401 ( 33.7%) | 14.0 q/s | ETA 114.0s
+    progress: 816/2401 ( 34.0%) | 14.0 q/s | ETA 113.4s
+    progress: 824/2401 ( 34.3%) | 14.0 q/s | ETA 112.8s
+    progress: 832/2401 ( 34.7%) | 14.0 q/s | ETA 112.3s
+    progress: 840/2401 ( 35.0%) | 14.0 q/s | ETA 111.6s
+    progress: 848/2401 ( 35.3%) | 14.0 q/s | ETA 111.1s
+    progress: 856/2401 ( 35.7%) | 14.0 q/s | ETA 110.4s
+    progress: 864/2401 ( 36.0%) | 14.0 q/s | ETA 109.6s
+    progress: 872/2401 ( 36.3%) | 14.0 q/s | ETA 109.0s
+    progress: 880/2401 ( 36.7%) | 14.0 q/s | ETA 108.4s
+    progress: 888/2401 ( 37.0%) | 14.0 q/s | ETA 107.7s
+    progress: 896/2401 ( 37.3%) | 14.0 q/s | ETA 107.2s
+    progress: 904/2401 ( 37.7%) | 14.1 q/s | ETA 106.5s
+    progress: 912/2401 ( 38.0%) | 14.1 q/s | ETA 105.9s
+    progress: 920/2401 ( 38.3%) | 14.1 q/s | ETA 105.2s
+    progress: 928/2401 ( 38.7%) | 14.1 q/s | ETA 104.7s
+    progress: 936/2401 ( 39.0%) | 14.1 q/s | ETA 104.1s
+    progress: 944/2401 ( 39.3%) | 14.1 q/s | ETA 103.6s
+    progress: 952/2401 ( 39.7%) | 14.1 q/s | ETA 102.9s
+    progress: 960/2401 ( 40.0%) | 14.0 q/s | ETA 102.7s
+    progress: 968/2401 ( 40.3%) | 14.0 q/s | ETA 102.2s
+    progress: 976/2401 ( 40.6%) | 14.0 q/s | ETA 101.7s
+    progress: 984/2401 ( 41.0%) | 14.0 q/s | ETA 101.2s
+    progress: 992/2401 ( 41.3%) | 14.0 q/s | ETA 100.5s
+    progress: 1000/2401 ( 41.6%) | 14.0 q/s | ETA 99.9s
+    progress: 1008/2401 ( 42.0%) | 14.0 q/s | ETA 99.2s
+    progress: 1016/2401 ( 42.3%) | 14.0 q/s | ETA 98.7s
+    progress: 1024/2401 ( 42.6%) | 14.0 q/s | ETA 98.1s
+    progress: 1032/2401 ( 43.0%) | 14.0 q/s | ETA 97.6s
+    progress: 1040/2401 ( 43.3%) | 14.0 q/s | ETA 96.9s
+    progress: 1048/2401 ( 43.6%) | 14.0 q/s | ETA 96.4s
+    progress: 1056/2401 ( 44.0%) | 14.0 q/s | ETA 95.8s
+    progress: 1064/2401 ( 44.3%) | 14.1 q/s | ETA 95.1s
+    progress: 1072/2401 ( 44.6%) | 14.1 q/s | ETA 94.5s
+    progress: 1080/2401 ( 45.0%) | 14.1 q/s | ETA 93.9s
+    progress: 1088/2401 ( 45.3%) | 14.0 q/s | ETA 93.6s
+    progress: 1096/2401 ( 45.6%) | 14.0 q/s | ETA 93.1s
+    progress: 1104/2401 ( 46.0%) | 14.0 q/s | ETA 92.4s
+    progress: 1112/2401 ( 46.3%) | 14.0 q/s | ETA 92.3s
+    progress: 1120/2401 ( 46.6%) | 14.0 q/s | ETA 91.7s
+    progress: 1128/2401 ( 47.0%) | 14.0 q/s | ETA 91.1s
+    progress: 1136/2401 ( 47.3%) | 13.9 q/s | ETA 90.8s
+    progress: 1144/2401 ( 47.6%) | 13.9 q/s | ETA 90.2s
+    progress: 1152/2401 ( 48.0%) | 13.9 q/s | ETA 89.6s
+    progress: 1160/2401 ( 48.3%) | 13.9 q/s | ETA 89.0s
+    progress: 1168/2401 ( 48.6%) | 13.9 q/s | ETA 88.5s
+    progress: 1176/2401 ( 49.0%) | 13.9 q/s | ETA 87.9s
+    progress: 1184/2401 ( 49.3%) | 13.9 q/s | ETA 87.3s
+    progress: 1192/2401 ( 49.6%) | 13.9 q/s | ETA 86.7s
+    progress: 1200/2401 ( 50.0%) | 13.9 q/s | ETA 86.1s
+    progress: 1208/2401 ( 50.3%) | 13.9 q/s | ETA 85.6s
+    progress: 1216/2401 ( 50.6%) | 13.9 q/s | ETA 85.0s
+    progress: 1224/2401 ( 51.0%) | 14.0 q/s | ETA 84.3s
+    progress: 1232/2401 ( 51.3%) | 13.9 q/s | ETA 83.9s
+    progress: 1240/2401 ( 51.6%) | 13.9 q/s | ETA 83.3s
+    progress: 1248/2401 ( 52.0%) | 13.9 q/s | ETA 82.7s
+    progress: 1256/2401 ( 52.3%) | 14.0 q/s | ETA 82.0s
+    progress: 1264/2401 ( 52.6%) | 14.0 q/s | ETA 81.4s
+    progress: 1272/2401 ( 53.0%) | 14.0 q/s | ETA 80.8s
+    progress: 1280/2401 ( 53.3%) | 14.0 q/s | ETA 80.2s
+    progress: 1288/2401 ( 53.6%) | 13.9 q/s | ETA 79.8s
+    progress: 1296/2401 ( 54.0%) | 14.0 q/s | ETA 79.1s
+    progress: 1304/2401 ( 54.3%) | 14.0 q/s | ETA 78.6s
+    progress: 1312/2401 ( 54.6%) | 14.0 q/s | ETA 78.0s
+    progress: 1320/2401 ( 55.0%) | 14.0 q/s | ETA 77.3s
+    progress: 1328/2401 ( 55.3%) | 14.0 q/s | ETA 76.7s
+    progress: 1336/2401 ( 55.6%) | 14.0 q/s | ETA 76.0s
+    progress: 1344/2401 ( 56.0%) | 14.0 q/s | ETA 75.4s
+    progress: 1352/2401 ( 56.3%) | 14.0 q/s | ETA 74.9s
+    progress: 1360/2401 ( 56.6%) | 14.0 q/s | ETA 74.3s
+    progress: 1368/2401 ( 57.0%) | 14.0 q/s | ETA 73.8s
+    progress: 1376/2401 ( 57.3%) | 14.0 q/s | ETA 73.2s
+    progress: 1384/2401 ( 57.6%) | 14.0 q/s | ETA 72.6s
+    progress: 1392/2401 ( 58.0%) | 14.0 q/s | ETA 72.0s
+    progress: 1400/2401 ( 58.3%) | 14.0 q/s | ETA 71.3s
+    progress: 1408/2401 ( 58.6%) | 14.0 q/s | ETA 70.8s
+    progress: 1416/2401 ( 59.0%) | 14.0 q/s | ETA 70.3s
+    progress: 1424/2401 ( 59.3%) | 14.0 q/s | ETA 69.6s
+    progress: 1432/2401 ( 59.6%) | 14.0 q/s | ETA 69.0s
+    progress: 1440/2401 ( 60.0%) | 14.0 q/s | ETA 68.5s
+    progress: 1448/2401 ( 60.3%) | 14.0 q/s | ETA 68.0s
+    progress: 1456/2401 ( 60.6%) | 14.0 q/s | ETA 67.4s
+    progress: 1464/2401 ( 61.0%) | 14.0 q/s | ETA 66.9s
+    progress: 1472/2401 ( 61.3%) | 14.0 q/s | ETA 66.5s
+    progress: 1480/2401 ( 61.6%) | 13.9 q/s | ETA 66.4s
+    progress: 1488/2401 ( 62.0%) | 13.9 q/s | ETA 65.8s
+    progress: 1496/2401 ( 62.3%) | 13.9 q/s | ETA 65.2s
+    progress: 1504/2401 ( 62.6%) | 13.9 q/s | ETA 64.7s
+    progress: 1512/2401 ( 63.0%) | 13.9 q/s | ETA 64.1s
+    progress: 1520/2401 ( 63.3%) | 13.9 q/s | ETA 63.4s
+    progress: 1528/2401 ( 63.6%) | 13.8 q/s | ETA 63.2s
+    progress: 1536/2401 ( 64.0%) | 13.8 q/s | ETA 62.6s
+    progress: 1544/2401 ( 64.3%) | 13.8 q/s | ETA 61.9s
+    progress: 1552/2401 ( 64.6%) | 13.8 q/s | ETA 61.7s
+    progress: 1560/2401 ( 65.0%) | 13.8 q/s | ETA 61.1s
+    progress: 1568/2401 ( 65.3%) | 13.8 q/s | ETA 60.5s
+    progress: 1576/2401 ( 65.6%) | 13.8 q/s | ETA 59.9s
+    progress: 1584/2401 ( 66.0%) | 13.8 q/s | ETA 59.3s
+    progress: 1592/2401 ( 66.3%) | 13.8 q/s | ETA 58.6s
+    progress: 1600/2401 ( 66.6%) | 13.8 q/s | ETA 58.0s
+    progress: 1608/2401 ( 67.0%) | 13.8 q/s | ETA 57.4s
+    progress: 1616/2401 ( 67.3%) | 13.8 q/s | ETA 56.8s
+    progress: 1624/2401 ( 67.6%) | 13.7 q/s | ETA 56.7s
+    progress: 1632/2401 ( 68.0%) | 13.7 q/s | ETA 56.1s
+    progress: 1640/2401 ( 68.3%) | 13.7 q/s | ETA 55.4s
+    progress: 1648/2401 ( 68.6%) | 13.7 q/s | ETA 54.8s
+    progress: 1656/2401 ( 69.0%) | 13.7 q/s | ETA 54.3s
+    progress: 1664/2401 ( 69.3%) | 13.7 q/s | ETA 53.8s
+    progress: 1672/2401 ( 69.6%) | 13.6 q/s | ETA 53.5s
+    progress: 1680/2401 ( 70.0%) | 13.6 q/s | ETA 53.0s
+    progress: 1688/2401 ( 70.3%) | 13.6 q/s | ETA 52.6s
+    progress: 1696/2401 ( 70.6%) | 13.5 q/s | ETA 52.2s
+    progress: 1704/2401 ( 71.0%) | 13.5 q/s | ETA 51.5s
+    progress: 1712/2401 ( 71.3%) | 13.5 q/s | ETA 50.9s
+    progress: 1720/2401 ( 71.6%) | 13.5 q/s | ETA 50.6s
+    progress: 1728/2401 ( 72.0%) | 13.4 q/s | ETA 50.1s
+    progress: 1736/2401 ( 72.3%) | 13.4 q/s | ETA 49.8s
+    progress: 1744/2401 ( 72.6%) | 13.3 q/s | ETA 49.4s
+    progress: 1752/2401 ( 73.0%) | 13.3 q/s | ETA 48.9s
+    progress: 1760/2401 ( 73.3%) | 13.3 q/s | ETA 48.3s
+    progress: 1768/2401 ( 73.6%) | 13.3 q/s | ETA 47.7s
+    progress: 1776/2401 ( 74.0%) | 13.3 q/s | ETA 47.1s
+    progress: 1784/2401 ( 74.3%) | 13.3 q/s | ETA 46.5s
+    progress: 1792/2401 ( 74.6%) | 13.3 q/s | ETA 45.9s
+    progress: 1800/2401 ( 75.0%) | 13.3 q/s | ETA 45.3s
+    progress: 1808/2401 ( 75.3%) | 13.3 q/s | ETA 44.6s
+    progress: 1816/2401 ( 75.6%) | 13.3 q/s | ETA 44.0s
+    progress: 1824/2401 ( 76.0%) | 13.3 q/s | ETA 43.5s
+    progress: 1832/2401 ( 76.3%) | 13.3 q/s | ETA 42.9s
+    progress: 1840/2401 ( 76.6%) | 13.3 q/s | ETA 42.3s
+    progress: 1848/2401 ( 77.0%) | 13.3 q/s | ETA 41.7s
+    progress: 1856/2401 ( 77.3%) | 13.3 q/s | ETA 41.1s
+    progress: 1864/2401 ( 77.6%) | 13.3 q/s | ETA 40.4s
+    progress: 1872/2401 ( 78.0%) | 13.3 q/s | ETA 39.8s
+    progress: 1880/2401 ( 78.3%) | 13.3 q/s | ETA 39.2s
+    progress: 1888/2401 ( 78.6%) | 13.3 q/s | ETA 38.6s
+    progress: 1896/2401 ( 79.0%) | 13.3 q/s | ETA 38.0s
+    progress: 1904/2401 ( 79.3%) | 13.3 q/s | ETA 37.4s
+    progress: 1912/2401 ( 79.6%) | 13.3 q/s | ETA 36.8s
+    progress: 1920/2401 ( 80.0%) | 13.3 q/s | ETA 36.2s
+    progress: 1928/2401 ( 80.3%) | 13.3 q/s | ETA 35.6s
+    progress: 1936/2401 ( 80.6%) | 13.3 q/s | ETA 35.0s
+    progress: 1944/2401 ( 81.0%) | 13.3 q/s | ETA 34.4s
+    progress: 1952/2401 ( 81.3%) | 13.3 q/s | ETA 33.8s
+    progress: 1960/2401 ( 81.6%) | 13.3 q/s | ETA 33.2s
+    progress: 1968/2401 ( 82.0%) | 13.3 q/s | ETA 32.7s
+    progress: 1976/2401 ( 82.3%) | 13.3 q/s | ETA 32.0s
+    progress: 1984/2401 ( 82.6%) | 13.3 q/s | ETA 31.4s
+    progress: 1992/2401 ( 83.0%) | 13.3 q/s | ETA 30.8s
+    progress: 2000/2401 ( 83.3%) | 13.3 q/s | ETA 30.2s
+    progress: 2008/2401 ( 83.6%) | 13.3 q/s | ETA 29.6s
+    progress: 2016/2401 ( 84.0%) | 13.3 q/s | ETA 29.0s
+    progress: 2024/2401 ( 84.3%) | 13.3 q/s | ETA 28.4s
+    progress: 2032/2401 ( 84.6%) | 13.3 q/s | ETA 27.8s
+    progress: 2040/2401 ( 85.0%) | 13.3 q/s | ETA 27.2s
+    progress: 2048/2401 ( 85.3%) | 13.3 q/s | ETA 26.6s
+    progress: 2056/2401 ( 85.6%) | 13.3 q/s | ETA 25.9s
+    progress: 2064/2401 ( 86.0%) | 13.3 q/s | ETA 25.3s
+    progress: 2072/2401 ( 86.3%) | 13.3 q/s | ETA 24.7s
+    progress: 2080/2401 ( 86.6%) | 13.3 q/s | ETA 24.1s
+    progress: 2088/2401 ( 87.0%) | 13.3 q/s | ETA 23.5s
+    progress: 2096/2401 ( 87.3%) | 13.3 q/s | ETA 22.9s
+    progress: 2104/2401 ( 87.6%) | 13.3 q/s | ETA 22.3s
+    progress: 2112/2401 ( 88.0%) | 13.3 q/s | ETA 21.7s
+    progress: 2120/2401 ( 88.3%) | 13.3 q/s | ETA 21.1s
+    progress: 2128/2401 ( 88.6%) | 13.3 q/s | ETA 20.5s
+    progress: 2136/2401 ( 89.0%) | 13.3 q/s | ETA 19.9s
+    progress: 2144/2401 ( 89.3%) | 13.3 q/s | ETA 19.3s
+    progress: 2152/2401 ( 89.6%) | 13.3 q/s | ETA 18.7s
+    progress: 2160/2401 ( 90.0%) | 13.4 q/s | ETA 18.0s
+    progress: 2168/2401 ( 90.3%) | 13.4 q/s | ETA 17.4s
+    progress: 2176/2401 ( 90.6%) | 13.4 q/s | ETA 16.8s
+    progress: 2184/2401 ( 91.0%) | 13.4 q/s | ETA 16.2s
+    progress: 2192/2401 ( 91.3%) | 13.4 q/s | ETA 15.6s
+    progress: 2200/2401 ( 91.6%) | 13.4 q/s | ETA 15.0s
+    progress: 2208/2401 ( 92.0%) | 13.4 q/s | ETA 14.4s
+    progress: 2216/2401 ( 92.3%) | 13.4 q/s | ETA 13.8s
+    progress: 2224/2401 ( 92.6%) | 13.4 q/s | ETA 13.2s
+    progress: 2232/2401 ( 93.0%) | 13.4 q/s | ETA 12.6s
+    progress: 2240/2401 ( 93.3%) | 13.4 q/s | ETA 12.0s
+    progress: 2248/2401 ( 93.6%) | 13.4 q/s | ETA 11.4s
+    progress: 2256/2401 ( 94.0%) | 13.4 q/s | ETA 10.8s
+    progress: 2264/2401 ( 94.3%) | 13.4 q/s | ETA 10.2s
+    progress: 2272/2401 ( 94.6%) | 13.4 q/s | ETA 9.6s
+    progress: 2280/2401 ( 95.0%) | 13.4 q/s | ETA 9.0s
+    progress: 2288/2401 ( 95.3%) | 13.4 q/s | ETA 8.4s
+    progress: 2296/2401 ( 95.6%) | 13.4 q/s | ETA 7.8s
+    progress: 2304/2401 ( 96.0%) | 13.4 q/s | ETA 7.2s
+    progress: 2312/2401 ( 96.3%) | 13.4 q/s | ETA 6.6s
+    progress: 2320/2401 ( 96.6%) | 13.4 q/s | ETA 6.0s
+    progress: 2328/2401 ( 97.0%) | 13.4 q/s | ETA 5.4s
+    progress: 2336/2401 ( 97.3%) | 13.4 q/s | ETA 4.8s
+    progress: 2344/2401 ( 97.6%) | 13.4 q/s | ETA 4.2s
+    progress: 2352/2401 ( 98.0%) | 13.4 q/s | ETA 3.6s
+    progress: 2360/2401 ( 98.3%) | 13.4 q/s | ETA 3.1s
+    progress: 2368/2401 ( 98.6%) | 13.4 q/s | ETA 2.5s
+    progress: 2376/2401 ( 99.0%) | 13.4 q/s | ETA 1.9s
+    progress: 2384/2401 ( 99.3%) | 13.4 q/s | ETA 1.3s
+    progress: 2392/2401 ( 99.6%) | 13.4 q/s | ETA 0.7s
+    progress: 2400/2401 (100.0%) | 13.4 q/s | ETA 0.1s
+    progress: 2401/2401 (100.0%) | 13.4 q/s | ETA 0.0s
+    remote oracle: 2401 queries in 178.92s
+Traceback (most recent call last):
+  File "/home/light/Workspace/CTF/jailCTF/just-another-injection-challenge/solve_remote_live.py", line 2936, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "/home/light/Workspace/CTF/jailCTF/just-another-injection-challenge/solve_remote_live.py", line 2923, in main
+    recovered = run_attack(
+        oracle, args.chains, args.charset, args.min_length, args.max_length
+    )
+  File "/home/light/Workspace/CTF/jailCTF/just-another-injection-challenge/solve_remote_live.py", line 2853, in run_attack
+    domains = apply_negative_observations(length, charset, observations)
+  File "/home/light/Workspace/CTF/jailCTF/just-another-injection-challenge/solve_remote_live.py", line 2639, in apply_negative_observations
+    raise RuntimeError(
+    ...<5 lines>...
+    )
+RuntimeError: empty domain at position 121; feature=add, reverse=False, value=246. This usually means the remote endpoint is not this challenge or its jq build differs from jq 1.8.2.
+[+] solver exit code: 1
+[+] Last 80 log lines:

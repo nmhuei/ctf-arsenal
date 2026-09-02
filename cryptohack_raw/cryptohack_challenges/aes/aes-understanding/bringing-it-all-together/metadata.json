@@ -1,0 +1,42 @@
+{
+  "category": "Symmetric Ciphers",
+  "category_slug": "aes",
+  "stage": "How AES Works",
+  "stage_slug": "aes-understanding",
+  "title": "Bringing It All Together",
+  "slug": "bringing-it-all-together",
+  "data_challenge": "aes6",
+  "points": 50,
+  "solves": 9429,
+  "url": "https://cryptohack.org/challenges/aes/",
+  "attachments": [
+    {
+      "text": "aes_decrypt.py",
+      "href": "/static/challenges/aes_decrypt_f491744105801ec03d6a6f7a0e7f8101.py",
+      "url": "https://cryptohack.org/static/challenges/aes_decrypt_f491744105801ec03d6a6f7a0e7f8101.py",
+      "download": true,
+      "saved_as": "files/aes_decrypt_f491744105801ec03d6a6f7a0e7f8101.py",
+      "status": 200,
+      "size": 2273
+    },
+    {
+      "text": "LICENSE",
+      "href": "/static/challenges/LICENSE_651b0602addd2b4bfa5d69ad7fca2dd5",
+      "url": "https://cryptohack.org/static/challenges/LICENSE_651b0602addd2b4bfa5d69ad7fca2dd5",
+      "download": true,
+      "saved_as": "files/license_651b0602addd2b4bfa5d69ad7fca2dd5",
+      "status": 200,
+      "size": 1072
+    }
+  ],
+  "resources": [
+    {
+      "text": "Rolling your own crypto: Everything you need to build AES from scratch",
+      "href": "https://github.com/francisrstokes/githublog/blob/main/2022/6/15/rolling-your-own-crypto-aes.md",
+      "url": "https://github.com/francisrstokes/githublog/blob/main/2022/6/15/rolling-your-own-crypto-aes.md",
+      "download": false
+    }
+  ],
+  "statement_html": "statement.html",
+  "statement_md": "statement.md"
+}

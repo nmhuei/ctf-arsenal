@@ -1,0 +1,48 @@
+#!/bin/sh
+# S30pgated — PhantomGate application gateway daemon
+#
+# Configuration: /etc/pgated.conf
+# Binary:        /usr/sbin/pgated
+# PID file:      /var/run/pgated.pid
+
+DAEMON=/usr/sbin/pgated
+CONF=/etc/pgated.conf
+PID_FILE=/var/run/pgated.pid
+
+case "$1" in
+    start)
+        if [ ! -x "$DAEMON" ]; then
+            echo "[S30] ERROR: $DAEMON not found or not executable"
+            exit 1
+        fi
+        if [ ! -f "$CONF" ]; then
+            echo "[S30] ERROR: config not found: $CONF"
+            exit 1
+        fi
+        echo "[S30] Starting pgated..."
+        start-stop-daemon -S -b -m -p "$PID_FILE" -x "$DAEMON" -- -c "$CONF"
+        echo "[S30] pgated started (PID $(cat $PID_FILE 2>/dev/null))"
+        ;;
+    stop)
+        echo "[S30] Stopping pgated..."
+        start-stop-daemon -K -p "$PID_FILE" -s TERM
+        rm -f "$PID_FILE"
+        ;;
+    restart)
+        $0 stop
+        sleep 1
+        $0 start
+        ;;
+    status)
+        if [ -f "$PID_FILE" ] && kill -0 $(cat "$PID_FILE") 2>/dev/null; then
+            echo "pgated is running (PID $(cat $PID_FILE))"
+        else
+            echo "pgated is not running"
+            exit 1
+        fi
+        ;;
+    *)
+        echo "Usage: $0 {start|stop|restart|status}"
+        exit 1
+        ;;
+esac

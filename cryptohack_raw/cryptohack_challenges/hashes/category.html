@@ -1,0 +1,1200 @@
+<!DOCTYPE html><html lang="en" dir="ltr" class="dark-mode"><head>
+        <title>CryptoHack – Hash Functions challenges</title>
+
+        <link rel="stylesheet" type="text/css" href="/static/css/materialize.min.css">
+        <link rel="stylesheet" type="text/css" href="/static/css/main.css?ver=2">
+        <link rel="stylesheet" type="text/css" href="/static/css/light.css">
+
+        <link rel="stylesheet" type="text/css" href="/static/css/flag-icon.min.css">
+        <link rel="stylesheet" type="text/css" href="/static/css/all.min.css">
+        <link rel="stylesheet" type="text/css" href="/static/css/v4-shims.min.css">
+
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        
+<link rel="stylesheet" href="/static/css/katex.min.css">
+<script defer="" src="/static/js/katex.min.js"></script>
+<script defer="" src="/static/js/katex-auto-render.min.js"></script>
+<script defer="" src="/static/js/katex-render-options.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, katex_render_options);
+    });
+</script>
+
+
+        <!-- Generic Metadata -->
+        <link rel="canonical" href="https://cryptohack.org">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://cryptohack.org">
+        <meta property="og:site_name" content="CryptoHack">
+        <meta property="og:image" content="https://cryptohack.org/static/img/banner.png">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@CryptoHack__">
+        <meta name="twitter:image" content="https://cryptohack.org/static/img/banner.png">
+
+        <!-- Favicon -->
+        <link rel="apple-touch-icon" sizes="57x57" href="/static/favicon/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="/static/favicon/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/static/favicon/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/static/favicon/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/static/favicon/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/static/favicon/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/static/favicon/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/static/favicon/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/static/favicon/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="36x36" href="/static/favicon/android-icon-36x36.png">
+        <link rel="icon" type="image/png" sizes="48x48" href="/static/favicon/android-icon-48x48.png">
+        <link rel="icon" type="image/png" sizes="72x72" href="/static/favicon/android-icon-72x72.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="/static/favicon/android-icon-96x96.png">
+        <link rel="icon" type="image/png" sizes="144x144" href="/static/favicon/android-icon-144x144.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="/static/favicon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="/static/favicon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon/favicon-16x16.png">
+
+        <script>
+            function isLightThemeSelected() {
+                return document.cookie.match(/theme=light/i) != null
+            }
+
+            function setThemeFromCookie() {
+                var html = document.getElementsByTagName('html')[0]
+                html.className = isLightThemeSelected() ? 'light-mode' : 'dark-mode'
+                console.log('Loaded cookie: ' + document.cookie)
+            }
+
+            (function() {
+              setThemeFromCookie()
+            })();
+        </script>
+    </head>
+    <body class="competition-page">
+      <div class="wrapper">
+        <header>
+            <nav class="top-nav nav-fixed">
+                <div class="nav-wrapper">
+
+                    <div><a href="#" data-activates="nav-mobile" class="button-collapse top-nav full"><i class="fas fa-bars" aria-label="Menu Bars"></i></a></div>
+                    <a class="logo-link" href="/"><span class="outline">CRYPTOHACK</span></a>
+
+                    
+
+                    <ul class="right hide-on-med-and-down">
+                        
+                        
+                        <li><a href="/register/">Register</a></li>
+                        
+                        <li><a href="/login/">Login</a></li>
+                        
+                    </ul>
+                </div>
+
+            </nav>
+            <ul id="nav-mobile" class="side-nav fixed" style="left: 0px;">
+
+
+                <li><a href="/courses/">
+                    <div class="side-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <div class="side-text">Courses</div>
+                </a></li>
+
+                <li><a href="/challenges/">
+                    <div class="side-icon"><i class="fas fa-flag"></i></div>
+                    <div class="side-text">Challenges</div>
+                </a></li>
+
+                <!-- <div class="divider" /></div> -->
+                
+                <li><a href="/scoreboard/">
+                    <div class="side-icon"><i class="fas fa-chart-line"></i></div>
+                    <div class="side-text">Scoreboard</div>
+                </a></li>
+
+                <li><a href="/blog/">
+                    <div class="side-icon"><i class="fas fa-brain" style="margin-left: -2px;"></i></div>
+                    <div class="side-text">Blog</div>
+                </a></li>
+
+                <li><a href="/chat/">
+                    <div class="side-icon"><i class="fas fa-comments"></i></div>
+<!--                     <div class="side-icon"><img src="/static/img/Discord-Logo-Color.svg" width="25" style="margin: 14px 0 0 -5px;"></div> -->
+                    <div class="side-text">Chat</div>
+                </a></li>
+
+                <li><a href="/careers/">
+                    <div class="side-icon"><i class="fas fa-briefcase"></i></div>
+                    <div class="side-text">Careers</div>
+                </a></li>
+
+                <li><a href="/faq/">
+                    <div class="side-icon"><i class="fas fa-question"></i></div>
+                    <div class="side-text">FAQ</div>
+                </a></li>
+
+                
+
+                
+
+                
+                
+                <li><a href="/register/">
+                        <div class="side-icon"><i class="fas fa-user-plus"></i></div>
+                        <div class="side-text">Register</div>
+                    </a></li>
+                
+                <li><a href="/login/">
+                        <div class="side-icon"><i class="fas fa-lock"></i></div>
+                        <div class="side-text">Login</div>
+                    </a></li>
+                
+            </ul>
+        </header>
+        <div class="cont">
+            
+        </div>
+        <div class="cont">
+            
+
+
+
+<div class="categoryDescription">
+  
+  <div class="categoryText">
+    <h2 class="categoryTitle">Hash Functions</h2>
+    <p>A <a href="https://en.wikipedia.org/wiki/Hash_function">hash function</a> is a function which takes an arbitrary long string of bits and produces a fixed-length output. Hash functions have applications in data structures, string-searching and even in video game design. Here we're interested in a subset of hash functions which are suitable for cryptographic purposes. <br><br><a href="https://en.wikipedia.org/wiki/Cryptographic_hash_function">Cryptographic hash functions</a> are designed to be one-way: functions that are practically impossible to invert. This is in contrast to the functions used in asymmetric cryptography, where trapdoor functions are infeasible to invert <em>unless</em> some additional secret knowledge is known.<br><br>Cryptographic hash functions are used to verify message integrity, compute digital signatures, and safely store passwords in databases. In asymmetric cryptography, hash functions are particularly useful in compressing arbitrary length messages to a value which has a smaller bit-length than the modulus when signing messages with RSA or protocols such as (EC)DSA or Elgamal. <br><br>For a hash function to be cryptographically secure, it must be resistant to the following three attacks: </p> <ul> <li><a href="https://en.wikipedia.org/wiki/Preimage_attack">Pre-image attacks</a>: given the output of a hash function <code>x = hash(m)</code>, it must be practically impossible to find a message <code>m0</code> such that <code>hash(m0) = x</code>. This is another way of saying that the hash must be a one-way function.</li> <li>Second pre-image resistance: given a message <code>m1</code>, it must be practically impossible to find a message <code>m2</code> such that <code>hash(m1) = hash(m2)</code>.</li> <li><a href="https://en.wikipedia.org/wiki/Collision_resistance">Collision resistance</a>: it should be practically impossible to find two messages <code>m1, m2</code> such that <code>hash(m1) = hash(m2)</code>. Note the difference to the second pre-image attack, in that we can vary both <code>m1</code> and <code>m2</code>.</li> </ul> <p> We can think of this as a linked set of dependencies, if a pre-image attack is known, so are second pre-image attacks and collision attacks. But if a collision attack is known, this doesn't generically allow pre-image attacks against the hash function.  <br><br>Ultimately, it is impossible for a hash function to be totally secure against these attacks, in the same way symmetric and asymmetric ciphers can have their protocols brute forced. Even given a perfect one-way function, as the output has a fixed length, there will be infinitely many inputs that yield any chosen output. The goal for a cryptographic hash function is then to have algorithms designed to make the above problems "sufficiently" hard assuming an attackers compute power.<br><br>In the following challenges, we present custom hash functions which do not meet these criteria, or older cryptographic hash functions which have been found to be vulnerable to attacks.</p>
+  </div>
+  <div class="categoryImage">
+  <img src="/static/img/category/hashes.png" alt="">
+  </div>
+  
+
+</div>
+
+
+<div class="row">
+    <div class="col s12 m6 noPadding">
+        <div class="left">
+        <div class="select-wrapper"><span class="caret">▼</span><input type="text" class="select-dropdown" readonly="true" data-activates="select-options-30645f09-3c8e-73d5-65ac-6e239fec0077" value="Show all stages"><ul id="select-options-30645f09-3c8e-73d5-65ac-6e239fec0077" class="dropdown-content select-dropdown"><li class=""><span>Show all stages</span></li><li class=""><span>Probability</span></li><li class=""><span>Collisions</span></li><li class=""><span>Length Extension</span></li><li class=""><span>Pre-image attacks</span></li><li class=""><span>Hash-based Cryptography</span></li></ul><select onchange="filterCategories(this);" class="initialized">
+            <option value="*">Show all stages</option>
+            
+            <option value="probability">Probability</option>
+            
+            <option value="collisions">Collisions</option>
+            
+            <option value="length-extension">Length Extension</option>
+            
+            <option value="pre-image">Pre-image attacks</option>
+            
+            <option value="hashbased">Hash-based Cryptography</option>
+            
+        </select></div>
+        </div>
+    </div>
+    <div class="col s12 m6 noPadding">
+      <p class="toggleCheckbox"><input type="checkbox" id="toggleSolved" class="filled-in"><label for="toggleSolved">Hide Solved Challenges</label></p>
+    </div>
+</div>
+
+<span class="stage" data-stage="probability">
+    <hr>
+    <div class="challengeInfo">
+      <span><h4>Probability</h4></span>
+      <span class="flexToggle"><a class="stage-collapse" data-collapse="probability" href="#">Toggle</a></span>
+    </div>
+    
+    <div class="clearfix"></div>
+    <ul class="collapsible popout" data-collapsible="expandable">
+        
+        <li class="challenge active" data-category="142" data-stage="probability">
+            <div id="header-birthday1" data-challenge="birthday1" class="collapsible-header active">
+                
+                <i id="check-birthday1" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="96708102-90b2-13fc-d7bb-492206c79431"></i>
+                <i id="uncheck-birthday1" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="9db58e45-a2c0-4461-507c-d9638ca4b8f6"></i>
+                
+                <div class="challenge-text truncate">Jack's Birthday Hash</div>
+                <span class="right">
+                    
+                    20 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/birthday1/solves/">
+                        <span id="solves-birthday1">4198 Solves</span>
+                    </a>
+                    
+                    
+                    <span class="solutions_links solutionsHide" id="solutions-birthday1">
+                      <b>·</b>
+                      <a class="gold-link preventToggle" href="/challenges/birthday1/solutions/">
+                        14 Solutions
+                      </a>
+                    </span>
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body" style="display: block;">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    Today is Jack's birthday, so he has designed his own cryptographic hash as a way to celebrate.<br><br>Reading up on the key components of hash functions, he's a little worried about the security of the <code>JACK11</code> hash.<br><br>Given any input data, <code>JACK11</code> has been designed to produce a deterministic bit array of length 11, which is sensitive to small changes using the avalanche effect.<br><br>Using <code>JACK11</code>, his secret has the hash value: <code>JACK(secret) = 01011001101</code>.<br><br>Given no other data of the <code>JACK11</code> hash algorithm, how many unique secrets would you expect to hash to have (on average) a 50% chance of a collision with Jack's secret?
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Fhashes%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+        <li class="challenge active" data-category="141" data-stage="probability">
+            <div id="header-birthday2" data-challenge="birthday2" class="collapsible-header active">
+                
+                <i id="check-birthday2" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="2ba60dc0-f12e-159e-25e7-ad0f21c730e6"></i>
+                <i id="uncheck-birthday2" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="f48a995f-ccd4-d990-6dc9-e4b9ad5ce6e7"></i>
+                
+                <div class="challenge-text truncate">Jack's Birthday Confusion</div>
+                <span class="right">
+                    
+                    30 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/birthday2/solves/">
+                        <span id="solves-birthday2">3622 Solves</span>
+                    </a>
+                    
+                    
+                    <span class="solutions_links solutionsHide" id="solutions-birthday2">
+                      <b>·</b>
+                      <a class="gold-link preventToggle" href="/challenges/birthday2/solutions/">
+                        12 Solutions
+                      </a>
+                    </span>
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body" style="display: block;">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    The last computation has made Jack a little worried about the safety of his hash, and after doing some more research it seems there's a bigger problem.<br><br>Given no other data of the <code>JACK11</code> hash algorithm, how many unique secrets would you expect to hash to have (on average) a 75% chance of a collision between two distinct secrets?<br><br><span class="note"><i class="fas fa-pencil-alt"></i>Remember, given any input data, <code>JACK11</code> has been designed to produce a deterministic bit array of length 11, which is sensitive to small changes using the avalanche effect.</span>
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Fhashes%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+    </ul>
+</span>
+
+
+<span class="stage" data-stage="collisions">
+    <hr>
+    <div class="challengeInfo">
+      <span><h4>Collisions</h4></span>
+      <span class="flexToggle"><a class="stage-collapse" data-collapse="collisions" href="#">Toggle</a></span>
+    </div>
+    
+    <div class="clearfix"></div>
+    <ul class="collapsible popout" data-collapsible="expandable">
+        
+        <li class="challenge" data-category="113" data-stage="collisions">
+            <div id="header-collider" data-challenge="collider" class="collapsible-header">
+                
+                <i id="check-collider" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="0ec39901-cb11-f065-b265-b437daf65207"></i>
+                <i id="uncheck-collider" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="243b2a9f-01b2-507c-a213-7750038d329f"></i>
+                
+                <div class="challenge-text truncate">Collider</div>
+                <span class="right">
+                    
+                    50 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/collider/solves/">
+                        <span id="solves-collider">2799 Solves</span>
+                    </a>
+                    
+                    
+                    <span class="solutions_links solutionsHide" id="solutions-collider">
+                      <b>·</b>
+                      <a class="gold-link preventToggle" href="/challenges/collider/solutions/">
+                        8 Solutions
+                      </a>
+                    </span>
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    Check out my document system about particle physics, where every document is uniquely referenced by hash.<br><br>Connect at <code>socket.cryptohack.org 13389</code><br><br><b>Challenge files:</b><br>&nbsp; - <a href="/static/challenges/13389_1044beb3c8949c7ee5813a8b1871e388.py" download="">13389.py</a><br>
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Fhashes%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+        <li class="challenge" data-category="157" data-stage="collisions">
+            <div id="header-stuffing" data-challenge="stuffing" class="collapsible-header">
+                
+                <i id="check-stuffing" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="4940dc68-de55-059b-d728-12626b37b4f3"></i>
+                <i id="uncheck-stuffing" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="7aa2001d-cdfd-27c5-ae68-e7c9fa567ad2"></i>
+                
+                <div class="challenge-text truncate">Hash Stuffing</div>
+                <span class="right">
+                    
+                    50 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/stuffing/solves/">
+                        <span id="solves-stuffing">1826 Solves</span>
+                    </a>
+                    
+                    
+                    <span class="solutions_links solutionsHide" id="solutions-stuffing">
+                      <b>·</b>
+                      <a class="gold-link preventToggle" href="/challenges/stuffing/solutions/">
+                        13 Solutions
+                      </a>
+                    </span>
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    With all the attacks on MD5 and SHA1 floating around, we thought it was time to start rolling our own hash algorithm. We've set the block size to 256 bits, so I doubt anyone will find a collision. <br><br>Connect at <code>socket.cryptohack.org 13405</code><br><br><b>Challenge files:</b><br>&nbsp; - <a href="/static/challenges/source_8435bf432bcd68b3bf16736a8a47a003.py" download="">source.py</a><br>
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Fhashes%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+        <li class="challenge" data-category="128" data-stage="collisions">
+            <div id="header-primed5" data-challenge="primed5" class="collapsible-header">
+                
+                <i id="check-primed5" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="443c9d99-ad03-7658-e4ff-3a3d9bc78f7f"></i>
+                <i id="uncheck-primed5" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="b1aa8bd0-df5d-5b2f-b87e-faca17bb2c3e"></i>
+                
+                <div class="challenge-text truncate">PriMeD5</div>
+                <span class="right">
+                    
+                    100 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/primed5/solves/">
+                        <span id="solves-primed5">1300 Solves</span>
+                    </a>
+                    
+                    
+                    <span class="solutions_links solutionsHide" id="solutions-primed5">
+                      <b>·</b>
+                      <a class="gold-link preventToggle" href="/challenges/primed5/solutions/">
+                        11 Solutions
+                      </a>
+                    </span>
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    Primality checking is expensive so I made a service that signs primes, allowing anyone to quickly check if a number is prime.  <br><br><span class="note"><i class="fas fa-pencil-alt"></i> The solution requires ~5 minutes to calculate on a commodity PC.</span><br><br>Connect at <code>socket.cryptohack.org 13392</code><br><br><b>Challenge files:</b><br>&nbsp; - <a href="/static/challenges/13392_a01a0d939c2f1a41d4d48933acc31e1a.py" download="">13392.py</a><br><br><br>Challenge contributed by <a class="gold-link" href="/user/trillian">trillian</a>
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Fhashes%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+        <li class="challenge" data-category="132" data-stage="collisions">
+            <div id="header-twinkeys" data-challenge="twinkeys" class="collapsible-header">
+                
+                <i id="check-twinkeys" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="7dc361bd-31d4-8c95-6a6f-5fc72c21a03b"></i>
+                <i id="uncheck-twinkeys" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="98be9f0f-fcc0-ee2e-2043-78bc55a0dfe6"></i>
+                
+                <div class="challenge-text truncate">Twin Keys</div>
+                <span class="right">
+                    
+                    100 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/twinkeys/solves/">
+                        <span id="solves-twinkeys">772 Solves</span>
+                    </a>
+                    
+                    
+                    <span class="solutions_links solutionsHide" id="solutions-twinkeys">
+                      <b>·</b>
+                      <a class="gold-link preventToggle" href="/challenges/twinkeys/solutions/">
+                        4 Solutions
+                      </a>
+                    </span>
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    Cryptohack's secure safe requires two keys to unlock its secret. However, Jack and Hyperreality can't remember the keys, only the start of one of them. Can you help find the lost keys to unlock the safe?<br><br>Connect at <code>socket.cryptohack.org 13397</code><br><br><b>Challenge files:</b><br>&nbsp; - <a href="/static/challenges/13397_2da9a4fc83bf4d52892538136971b664.py" download="">13397.py</a><br><br><br>Challenge contributed by <a class="gold-link" href="/user/ciphr">ciphr</a>
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Fhashes%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+        <li class="challenge" data-category="130" data-stage="collisions">
+            <div id="header-no_difference" data-challenge="no_difference" class="collapsible-header">
+                
+                <i id="check-no_difference" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="96fcd164-b7ed-1cf2-7151-ec09bd4d0ae4"></i>
+                <i id="uncheck-no_difference" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="75a86a60-7879-698d-4343-90fe0ab69ece"></i>
+                
+                <div class="challenge-text truncate">No Difference</div>
+                <span class="right">
+                    
+                    175 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/no_difference/solves/">
+                        <span id="solves-no_difference">871 Solves</span>
+                    </a>
+                    
+                    
+                    <span class="solutions_links solutionsHide" id="solutions-no_difference">
+                      <b>·</b>
+                      <a class="gold-link preventToggle" href="/challenges/no_difference/solutions/">
+                        17 Solutions
+                      </a>
+                    </span>
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    It's easy to come across a collision for MD5, but can you find one in my custom hash function?<br><br>Connect at <code>socket.cryptohack.org 13395</code><br><br><b>Challenge files:</b><br>&nbsp; - <a href="/static/challenges/13395_5ed60003866ba89ca3db17fbd446b841.py" download="">13395.py</a><br><br><br>Challenge contributed by <a class="gold-link" href="/user/VincBreaker">VincBreaker</a>
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Fhashes%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+    </ul>
+</span>
+
+
+<span class="stage" data-stage="length-extension">
+    <hr>
+    <div class="challengeInfo">
+      <span><h4>Length Extension</h4></span>
+      <span class="flexToggle"><a class="stage-collapse" data-collapse="length-extension" href="#">Toggle</a></span>
+    </div>
+    
+    <div class="clearfix"></div>
+    <ul class="collapsible popout" data-collapsible="expandable">
+        
+        <li class="challenge" data-category="112" data-stage="length-extension">
+            <div id="header-md0" data-challenge="md0" class="collapsible-header">
+                
+                <i id="check-md0" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="bd8952bc-164e-6c62-77c8-2f914f33a1d8"></i>
+                <i id="uncheck-md0" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="e9544b79-c533-899c-fa59-fe5f38592bcf"></i>
+                
+                <div class="challenge-text truncate">MD0</div>
+                <span class="right">
+                    
+                    80 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/md0/solves/">
+                        <span id="solves-md0">1532 Solves</span>
+                    </a>
+                    
+                    
+                    <span class="solutions_links solutionsHide" id="solutions-md0">
+                      <b>·</b>
+                      <a class="gold-link preventToggle" href="/challenges/md0/solutions/">
+                        12 Solutions
+                      </a>
+                    </span>
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    I've invented a nice simple version of HMAC authentication, hopefully it isn't vulnerable to the same problems as Merkle–Damgård construction hash functions...<br><br>Connect at <code>socket.cryptohack.org 13388</code><br><br><b>Challenge files:</b><br>&nbsp; - <a href="/static/challenges/13388_25e6ecf23e99d2590782f77b3327f862.py" download="">13388.py</a><br><br><br>Challenge contributed by <a class="gold-link" href="/user/trillian">trillian</a>
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Fhashes%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+        <li class="challenge" data-category="168" data-stage="length-extension">
+            <div id="header-mdflag" data-challenge="mdflag" class="collapsible-header">
+                
+                <i id="check-mdflag" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="14ac1772-4991-687c-e28a-ddebaba5a163"></i>
+                <i id="uncheck-mdflag" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="cd69443f-679e-3b58-89c8-605cd2060c4a"></i>
+                
+                <div class="challenge-text truncate">MDFlag</div>
+                <span class="right">
+                    
+                    125 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/mdflag/solves/">
+                        <span id="solves-mdflag">552 Solves</span>
+                    </a>
+                    
+                    
+                    <span class="solutions_links solutionsHide" id="solutions-mdflag">
+                      <b>·</b>
+                      <a class="gold-link preventToggle" href="/challenges/mdflag/solutions/">
+                        7 Solutions
+                      </a>
+                    </span>
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    MD0 had a serious weakness, here is a new improved MD5-based HMAC.<br><br>Connect at <code>socket.cryptohack.org 13407</code><br><br><b>Challenge files:</b><br>&nbsp; - <a href="/static/challenges/13407_f54e9b0e86fdf85b7ef0ad8762d0cf8e.py" download="">13407.py</a><br><br><br>Challenge contributed by <a class="gold-link" href="/user/giladk">giladk</a>
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Fhashes%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+    </ul>
+</span>
+
+
+<span class="stage" data-stage="pre-image">
+    <hr>
+    <div class="challengeInfo">
+      <span><h4>Pre-image attacks</h4></span>
+      <span class="flexToggle"><a class="stage-collapse" data-collapse="pre-image" href="#">Toggle</a></span>
+    </div>
+    
+    <div class="clearfix"></div>
+    <ul class="collapsible popout" data-collapsible="expandable">
+        
+        <li class="challenge" data-category="146" data-stage="pre-image">
+            <div id="header-mixed_up" data-challenge="mixed_up" class="collapsible-header">
+                
+                <i id="check-mixed_up" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="039a3761-b979-4bf3-27e0-5dfb40fa29f5"></i>
+                <i id="uncheck-mixed_up" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="4578b1ff-8db4-d535-4ac3-0c5b43b7af5f"></i>
+                
+                <div class="challenge-text truncate">Mixed Up</div>
+                <span class="right">
+                    
+                    120 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/mixed_up/solves/">
+                        <span id="solves-mixed_up">904 Solves</span>
+                    </a>
+                    
+                    
+                    <span class="solutions_links solutionsHide" id="solutions-mixed_up">
+                      <b>·</b>
+                      <a class="gold-link preventToggle" href="/challenges/mixed_up/solutions/">
+                        6 Solutions
+                      </a>
+                    </span>
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    Due to the properties of XOR and hash functions, it shouldn't be possible to unmix the flag... or is it?<br><br>Connect at <code>socket.cryptohack.org 13402</code><br><br><b>Challenge files:</b><br>&nbsp; - <a href="/static/challenges/13402_6e135c0f953665691b625db0710aa6ec.py" download="">13402.py</a><br><br><br>Challenge contributed by <a class="gold-link" href="/user/giladk">giladk</a>
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Fhashes%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+        <li class="challenge" data-category="131" data-stage="pre-image">
+            <div id="header-invariant" data-challenge="invariant" class="collapsible-header">
+                
+                <i id="check-invariant" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="cbfe9568-50d0-5e3b-d4a1-60ecea6ea5a0"></i>
+                <i id="uncheck-invariant" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="a740cc9f-3720-2fef-4b35-375c1fb4eb0b"></i>
+                
+                <div class="challenge-text truncate">Invariant</div>
+                <span class="right">
+                    
+                    250 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/invariant/solves/">
+                        <span id="solves-invariant">523 Solves</span>
+                    </a>
+                    
+                    
+                    <span class="solutions_links solutionsHide" id="solutions-invariant">
+                      <b>·</b>
+                      <a class="gold-link preventToggle" href="/challenges/invariant/solutions/">
+                        5 Solutions
+                      </a>
+                    </span>
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    It's said that you shouldn't roll your own hash function. But how easy is it to break one? <br><br>Connect at <code>socket.cryptohack.org 13393</code><br><br><b>Challenge files:</b><br>&nbsp; - <a href="/static/challenges/13393_6eac484069c511cc17a276266c645891.py" download="">13393.py</a><br><br><br>Challenge contributed by <a class="gold-link" href="/user/Cryptanalyse">Cryptanalyse</a>
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Fhashes%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+    </ul>
+</span>
+
+
+<span class="stage" data-stage="hashbased">
+    <hr>
+    <div class="challengeInfo">
+      <span><h4>Hash-based Cryptography</h4></span>
+      <span class="flexToggle"><a class="stage-collapse" data-collapse="hashbased" href="#">Toggle</a></span>
+    </div>
+    
+    <div class="clearfix"></div>
+    <ul class="collapsible popout" data-collapsible="expandable">
+        
+        <li class="challenge" data-category="293" data-stage="hashbased">
+            <div id="header-merkletrees" data-challenge="merkletrees" class="collapsible-header">
+                
+                <i id="check-merkletrees" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="931a6f18-5a98-4f9b-b1cb-e5a0fef519e4"></i>
+                <i id="uncheck-merkletrees" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="35561635-5d4a-8404-3089-c36b0219c251"></i>
+                
+                <div class="challenge-text truncate">Merkle Trees</div>
+                <span class="right">
+                    
+                    25 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/merkletrees/solves/">
+                        <span id="solves-merkletrees">710 Solves</span>
+                    </a>
+                    
+                    
+                    <span class="solutions_links solutionsHide" id="solutions-merkletrees">
+                      <b>·</b>
+                      <a class="gold-link preventToggle" href="/challenges/merkletrees/solutions/">
+                        8 Solutions
+                      </a>
+                    </span>
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    A Merkle tree is a fundamental concept in computer science, particularly utilized within blockchain technology and cryptocurrencies to ensure data integrity and efficiency in verification processes. Imagine it as a tree structure, but instead of leaves and branches in the traditional sense, it consists of nodes containing hashes of data blocks.<br><br>At the very bottom of the tree, are the leaves, which are hashes of individual pieces of data (like transactions in the case of cryptocurrencies). These hashes are unique fingerprints of the data, created using cryptographic hash functions that turn any input into a fixed-size, indecipherable output. Moving up the tree, each leaf node is paired and hashed together to form the nodes of the next layer. This pairing and hashing continue upwards until you reach the single hash at the top of the tree, known as the Merkle root.<br><br><img style="max-width: 100%; display: block; margin: 0 auto;" src="/static/img/Hash_Tree.png" alt="diagram showing Merkle tree"><br><br>The beauty of the Merkle tree lies in its efficiency for verifying content. If you want to check if a specific piece of data is included in the set, you don't need to review the entire dataset. Instead, you only need to look at the hashes along the path from the specific item to the Merkle root. This significantly reduces the amount of data to be processed and verified, making Merkle trees useful for large datasets.<br><br>For this warmup challenge, you will be given a number of Merkle trees, each with four leaf nodes representing the hashes of the 4 data blocks, and each with a root node hash.<br><br><img style="max-width: 100%; display: block; margin: 0 auto;" src="/static/img/warmup_tree.png" alt="diagram showing warmup tree"><br><br>The SHA256 hash function will be used, and nodes will be paired by hashing the result of adding them together.<br><br>Each line in <code>output.txt</code> will represent a bit of the flag depending on whether the Merkle tree proof correctly verifies or not.<br><br>(1 if the proof is validated, 0 otherwise)<br><br>Concatenate all these bits and convert to ASCII to get the flag.<br><br><b>Challenge files:</b><br>&nbsp; - <a href="/static/challenges/generate_15fce6199904ba00202bb32d01a11551.py" download="">generate.py</a><br>&nbsp; - <a href="/static/challenges/output_1091e36a2522c149f174d6721df7ab02.txt" download="">output.txt</a><br><br><br>Challenge contributed by <a class="gold-link" href="/user/Ectario">Ectario</a>
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Fhashes%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+        <li class="challenge" data-category="246" data-stage="hashbased">
+            <div id="header-wots_up-ecsc_2023_norway2023" data-challenge="wots_up-ecsc_2023_norway2023" class="collapsible-header">
+                
+                <i id="check-wots_up-ecsc_2023_norway2023" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="14765578-de6e-fa45-d3ad-ffaa0e1be1d1"></i>
+                <i id="uncheck-wots_up-ecsc_2023_norway2023" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="6fc8a82a-949c-e183-6b42-b825660bbae2"></i>
+                
+                <div class="challenge-text truncate">WOTS Up</div>
+                <span class="right">
+                    
+                    75 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/wots_up-ecsc_2023_norway2023/solves/">
+                        <span id="solves-wots_up-ecsc_2023_norway2023">590 Solves</span>
+                    </a>
+                    
+                    
+                    <span class="solutions_links solutionsHide" id="solutions-wots_up-ecsc_2023_norway2023">
+                      <b>·</b>
+                      <a class="gold-link preventToggle" href="/challenges/wots_up-ecsc_2023_norway2023/solutions/">
+                        4 Solutions
+                      </a>
+                    </span>
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    With the need to find post-quantum schemes, hash-based signatures are cool again. Challenge originally featured in ECSC 2023 (Norway).<br><br><b>Challenge files:</b><br>&nbsp; - <a href="/static/challenges/chal_dd02099acd9ffe4e8821daf5fc3b583c.py" download="">chal.py</a><br>&nbsp; - <a href="/static/challenges/data_fd54ee361e446499d28fb7c04c0669f4.json" download="">data.json</a><br>
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Fhashes%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+        <li class="challenge" data-category="244" data-stage="hashbased">
+            <div id="header-wots_up_2-ecsc_2023_norway202" data-challenge="wots_up_2-ecsc_2023_norway202" class="collapsible-header">
+                
+                <i id="check-wots_up_2-ecsc_2023_norway202" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="106e9eb7-b321-44e1-93b2-c2ed6ea41752"></i>
+                <i id="uncheck-wots_up_2-ecsc_2023_norway202" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="6c02efa6-bccb-186e-f5e6-c111a39822cd"></i>
+                
+                <div class="challenge-text truncate">WOTS Up 2</div>
+                <span class="right">
+                    
+                    90 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/wots_up_2-ecsc_2023_norway202/solves/">
+                        <span id="solves-wots_up_2-ecsc_2023_norway202">535 Solves</span>
+                    </a>
+                    
+                    
+                    <span class="solutions_links solutionsHide" id="solutions-wots_up_2-ecsc_2023_norway202">
+                      <b>·</b>
+                      <a class="gold-link preventToggle" href="/challenges/wots_up_2-ecsc_2023_norway202/solutions/">
+                        6 Solutions
+                      </a>
+                    </span>
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    I fixed the problem with my last scheme, now I can confidently sign my WOTScoin transactions.. Challenge originally featured in ECSC 2023 (Norway).<br><br><b>Challenge files:</b><br>&nbsp; - <a href="/static/challenges/chal_455b7cde5b008daa22efc2ff172c9f28.py" download="">chal.py</a><br>&nbsp; - <a href="/static/challenges/data_c1cf7f9624cc5c43e06c5c10b551a0e3.json" download="">data.json</a><br>
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Fhashes%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+    </ul>
+</span>
+
+
+
+        </div>
+        <script src="/static/js/jquery.min.js"></script>
+        <script src="/static/js/materialize.min.js"></script>
+        <script defer="" src="/static/js/confetti.browser.min.js"></script>
+        <script src="/static/js/api.js"></script>
+        <script src="/static/js/moment-with-locales.min.js"></script>
+
+<script>
+moment.locale("en");
+function flask_moment_render(elem) {{
+    const timestamp = moment(elem.dataset.timestamp);
+    const func = elem.dataset.function;
+    const format = elem.dataset.format;
+    const timestamp2 = elem.dataset.timestamp2;
+    const no_suffix = elem.dataset.nosuffix;
+    const units = elem.dataset.units;
+    let args = [];
+    if (format)
+        args.push(format);
+    if (timestamp2)
+        args.push(moment(timestamp2));
+    if (no_suffix)
+        args.push(no_suffix);
+    if (units)
+        args.push(units);
+    elem.textContent = timestamp[func].apply(timestamp, args);
+    elem.classList.remove('flask-moment');
+    elem.style.display = "";
+}}
+function flask_moment_render_all() {{
+    const moments = document.querySelectorAll('.flask-moment');
+    moments.forEach(function(moment) {{
+        flask_moment_render(moment);
+        const refresh = moment.dataset.refresh;
+        if (refresh && refresh > 0) {{
+            (function(elem, interval) {{
+                setInterval(function() {{
+                    flask_moment_render(elem);
+                }}, interval);
+            }})(moment, refresh);
+        }}
+    }})
+}}
+document.addEventListener("DOMContentLoaded", flask_moment_render_all);
+</script>
+
+        <script>
+            function dismissNotification(id) {
+                api.makeCall("/dismiss/" + id + ".json", {_csrf_token: "evqcmr67h72vvdpmv99ne6wgw5oue9lvwhfiby9vxej6m1gmsw5wm1g575xu3cwt"}, function() {
+                    $("#notification" + id).slideUp();
+                });
+            }
+
+            $( document ).ready(function() {
+              $('select').material_select();
+            });
+
+            var pointsLevels = [0, 10, 20, 40, 80, 160, 320, 640, 1280, 1920, 2560, 3200, 3840, 4480, 5120, 5760, 6400, 7040, 7680, 8320, 8960, 9600, 10240, 10880, 11520, 12160, 12800, 13440, 14080, 14720, 15360, 16000, 16640, 17280, 17920, 18560, 19200, 19840, 20480];
+        </script>
+        
+        <script>
+        $(function() {
+            $('.button-collapse').sideNav();
+        });
+        </script>
+        <script id="toasts" type="text/javascript">
+            
+        </script>
+        
+
+
+<script>
+    var challenges_open = JSON.parse(localStorage.getItem("challenges-open")) || {"birthday1": true, "birthday2": true};
+    Object.keys(challenges_open).forEach(function(el){
+        $(".collapsible-header#header-" + el).addClass("active");
+    });
+
+    $(".collapsible-header").on("click", function(){
+        var chall = $(this).data('challenge');
+        if(challenges_open.hasOwnProperty(chall)) {
+            delete challenges_open[chall];
+        } else {
+            challenges_open[chall] = true;
+            $('html, body').animate({
+                    scrollTop: $(this).offset().top -100
+            }, 700);
+        }
+        localStorage.setItem("challenges-open", JSON.stringify(challenges_open));
+    });
+
+    $(".preventToggle").on("click", function(){
+        event.stopPropagation();
+    });
+
+    var state = $(".collapsible-header.active").length == 0;
+    function updateButton(){
+        if(state){
+            $("#toggleState").html("Expand all challenges");
+        } else {
+            $("#toggleState").html("Collapse all challenges");
+        }
+
+    }
+    updateButton(state);
+    function toggle() {
+        if(state) {
+            $(".collapsible-header").each(function(i, x){ $(x).hasClass("active") || $(x).click(); });
+        } else {
+            $(".collapsible-header").each(function(i, x){ $(x).hasClass("active") && $(x).click(); });
+        }
+        state = !state;
+        updateButton(state);
+    }
+    function filterCategories(t) {
+        var v = t.options[t.selectedIndex].value;
+        if(v == "*")
+            $(".stage").show();
+        else {
+            $(".stage[data-stage=" + v + "]").show();
+            $(".stage[data-stage!=" + v + "]").hide();
+        }
+    }
+    function toggleSolved(){
+      $('.fas.fa-star').each(function() {
+        if($(this).css('display') == 'block'){
+          if($(this).parent().next().css('display') == 'block'){
+              $(this).parent().toggle();
+              $(this).parent().click();
+              $(this).parent().next().hide();
+          }
+          else{
+            $(this).parent().toggle();
+          }
+        }
+      });
+    }
+
+
+    $("#toggleSolved").on("click", function(e){
+        // e.preventDefault();
+        toggleSolved();
+        // var text = $(this).next().text();
+        // $(this).next().text(
+        // text == "Hide Solved Challenges" ? "Show Solved Challenges" : "Hide Solved Challenges");
+    });
+
+
+    $("#toggleState").on("click", function(e){
+        // e.preventDefault();
+        toggle();
+    });
+    $(".stage-collapse").on("click", function(e){
+        // e.preventDefault();
+        var stage = $(this).data('collapse');
+        var header_selector = ".challenge[data-stage=" + stage + "] .collapsible-header";
+        var state = $(header_selector + ".active").length != 0;
+        if(state)
+            $(header_selector).each(function(i, x){ $(x).hasClass("active") && $(x).click(); });
+        else
+            $(header_selector).each(function(i, x){ $(x).hasClass("active") || $(x).click(); });
+    });
+    $("form").submit(function(e) {
+        // Loading button
+        var loadBtn = $(this).find(".loader");
+        loadBtn.show();
+
+        var id = $(this).data("challenge");
+        var points = $(this).data("points");
+        var flag = $("#flag-" + id).val();
+        // var updatedScore = score + points;
+        console.log(id);
+        console.log(flag);
+        api.makeCall("/submit/" + id + ".json", {flag: flag, _csrf_token: "evqcmr67h72vvdpmv99ne6wgw5oue9lvwhfiby9vxej6m1gmsw5wm1g575xu3cwt"}, function(data) {
+            if(data.code) {
+                loadBtn.hide();
+                Materialize.toast(data.message, 4000);
+            }
+            else {
+                // Materialize.toast("Correct flag, nice one!", 4000);
+                $("#uncheck-" + id).hide();
+                $("#check-" + id).show();
+                $("#header-" + id).click();
+
+                // update solves box
+                var solves_text = data.solves == 1 ? "Solve" : "Solves";
+                $("#solves-" + id).html(data.solves + " " + solves_text);
+                $("#solves-" + id).parent().show();
+                $("#solutions-" + id).show();
+                $("#youvesolved-" + id).show();
+                $("#empty-" + id).hide();
+                $("#flagform-" + id).hide();
+
+                // update points at top
+                console.log(score);
+                console.log(points);
+                score = calculateLevel(score, points);
+                loadBtn.hide();
+                setTimeout(function(){ launchConfetti(); }, 250);
+            }
+        });
+        return false;
+    });
+</script>
+
+
+      </div>
+
+      <div id="levelUpPop" class="levelup">
+        <div class="levelUpCard">
+          <h3>Level Up</h3>
+          <img src="/static/img/levelup.png" width="180" height="202" alt="level up icon">
+          <p>You are now level <span id="currentlevel" class="gold-text">Current level</span></p>
+        </div>
+      </div>
+    
+
+    <footer>
+    <div class="footerLinks">
+      <div>
+        <h5>CryptoHack</h5>
+        <a id="changeTheme">Light Mode</a><br>
+        <a href="/faq/">FAQ</a><br>
+        <a href="/blog/">Blog</a><br>
+        <span class="footerIcon">
+          <a href="https://twitter.com/cryptohack__" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="https://discord.gg/h9E7cna5pV" aria-label="Discord"><img src="/static/img/Discord-Logo-Color.svg" width="25"></a>
+          <a href="https://patreon.com/cryptohack" aria-label="Patreon"><i class="fab fa-patreon"></i></a>
+        </span><br>
+
+      </div>
+
+      <div>
+        <h5>Courses</h5>
+        <a href="/courses/intro/">Introduction to CryptoHack</a><br>
+        <a href="/courses/modular/">Modular Arithmetic</a><br>
+        <a href="/courses/symmetric/">Symmetric Cryptography</a><br>
+        <a href="/courses/public-key/">Public-Key Cryptography</a><br>
+        <a href="/courses/elliptic/">Elliptic Curves</a><br>
+      </div>
+
+      <div>
+        <h5>Categories</h5>
+        <a href="/challenges/general/">General</a><br>
+        <a href="/challenges/aes/">Symmetric Ciphers</a><br>
+        <a href="/challenges/maths/">Mathematics</a><br>
+        <a href="/challenges/rsa/">RSA</a><br>
+        <a href="/challenges/diffie-hellman/">Diffie-Hellman</a><br>
+        <a href="/challenges/ecc/">Elliptic Curves</a><br>
+        <a href="/challenges/hashes/">Hash Functions</a><br>
+        <a href="/challenges/web/">Crypto on the Web</a><br>
+        <a href="/challenges/post-quantum/">Lattices</a><br>
+        <a href="/challenges/isogenies/">Isogenies</a><br>
+        <a href="/challenges/zkp/">Zero-Knowledge Proofs</a><br>
+        <a href="/challenges/misc/">Miscellaneous</a><br>
+        <a href="/challenges/ctf-archive/">CTF Archive</a><br>
+      </div>
+    </div>
+
+
+    <div class="credits">
+      <h5>Credits</h5>
+      Illustrations from <a href="https://icons8.com">Ouch.pics</a><br>
+      Drawn by <a href="https://dribbble.com/thierryfousse">Thierry Fousse</a> and <a href="https://icons8.com/illustrations/author/60ab64bc8e3740e9be238b13">Tatyana Krasutskaya</a>
+
+    </div>
+
+    <div class="copyright">
+      <span>
+        <a href="/privacy-policy/">Privacy Policy</a> &nbsp;
+      </span>
+
+      <span>
+        © <span class="" data-timestamp="2026-05-25T08:43:00Z" data-function="format" data-format="YYYY" data-refresh="0" style="">2026</span> CryptoHack
+      </span>
+    </div>
+    </footer>
+
+    <script type="text/javascript">
+    function updateThemeToggleFooter() {
+      var elem = document.querySelector('#changeTheme');
+      elem.innerHTML = isLightThemeSelected() ? 'Dark Mode' : 'Light Mode'
+    }
+
+    (function() {
+      updateThemeToggleFooter()
+    })();
+
+    function togglePageContentLightDark() {
+        var html = document.getElementsByTagName('html')[0]
+        var currentClass = html.className
+        var newClass = html.className == 'dark-mode' ? 'light-mode' : 'dark-mode'
+        html.className = newClass
+
+        document.cookie = 'theme=' + (newClass == 'light-mode' ? 'light' : 'dark') + ';SameSite=Strict;path=/;domain=cryptohack.org;expires=Fri, 31 Dec 9999 23:59:59 GMT'
+        console.log('Cookies are now: ' + document.cookie)
+
+        var elem = document.querySelector('#changeTheme');
+        elem.innerHTML = isLightThemeSelected() ? 'Dark Mode' : 'Light Mode'
+    }
+
+    $("#changeTheme").on("click", function(e){
+    togglePageContentLightDark();
+
+    if ($("#darktheme").length) {
+      if(isLightThemeSelected()){
+        $('#darktheme').prop('checked', false);
+        $('#lighttheme').prop('checked', true);
+      }
+      else{
+        $('#darktheme').prop('checked', true);
+        $('#lighttheme').prop('checked', false);
+      }
+    }
+    });
+    </script>
+<div class="material-tooltip" id="96708102-90b2-13fc-d7bb-492206c79431"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="9db58e45-a2c0-4461-507c-d9638ca4b8f6"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="2ba60dc0-f12e-159e-25e7-ad0f21c730e6"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="f48a995f-ccd4-d990-6dc9-e4b9ad5ce6e7"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="0ec39901-cb11-f065-b265-b437daf65207"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="243b2a9f-01b2-507c-a213-7750038d329f"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="4940dc68-de55-059b-d728-12626b37b4f3"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="7aa2001d-cdfd-27c5-ae68-e7c9fa567ad2"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="443c9d99-ad03-7658-e4ff-3a3d9bc78f7f"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="b1aa8bd0-df5d-5b2f-b87e-faca17bb2c3e"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="7dc361bd-31d4-8c95-6a6f-5fc72c21a03b"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="98be9f0f-fcc0-ee2e-2043-78bc55a0dfe6"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="96fcd164-b7ed-1cf2-7151-ec09bd4d0ae4"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="75a86a60-7879-698d-4343-90fe0ab69ece"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="bd8952bc-164e-6c62-77c8-2f914f33a1d8"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="e9544b79-c533-899c-fa59-fe5f38592bcf"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="14ac1772-4991-687c-e28a-ddebaba5a163"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="cd69443f-679e-3b58-89c8-605cd2060c4a"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="039a3761-b979-4bf3-27e0-5dfb40fa29f5"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="4578b1ff-8db4-d535-4ac3-0c5b43b7af5f"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="cbfe9568-50d0-5e3b-d4a1-60ecea6ea5a0"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="a740cc9f-3720-2fef-4b35-375c1fb4eb0b"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="931a6f18-5a98-4f9b-b1cb-e5a0fef519e4"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="35561635-5d4a-8404-3089-c36b0219c251"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="14765578-de6e-fa45-d3ad-ffaa0e1be1d1"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="6fc8a82a-949c-e183-6b42-b825660bbae2"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="106e9eb7-b321-44e1-93b2-c2ed6ea41752"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="6c02efa6-bccb-186e-f5e6-c111a39822cd"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="hiddendiv common"></div><div class="drag-target" style="left: 0px; touch-action: pan-y; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></div></body></html>

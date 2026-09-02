@@ -1,0 +1,538 @@
+{
+  "ctf_info": {
+    "title": "CTF Competition",
+    "url": "https://2026.haruulzangi.mn",
+    "platform": "rctf",
+    "user": null
+  },
+  "total_challenges": 26,
+  "total_points": 10873,
+  "categories": {
+    "web": 4,
+    "misc": 5,
+    "forensics": 5,
+    "pwn": 5,
+    "rev": 4,
+    "crypto": 3
+  },
+  "challenges": [
+    {
+      "id": "fdae5bbeaf0b0f16",
+      "name": "Custodian",
+      "category": "web",
+      "points": 233,
+      "author": "fg0x0",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 52,
+      "files": []
+    },
+    {
+      "id": "f818a8b595cce32f",
+      "name": "Sur Kharvaa",
+      "category": "misc",
+      "points": 233,
+      "author": "bekkaze",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 52,
+      "files": [
+        {
+          "url": "https://2026.haruulzangi.mn/uploads/1140783cf8eedf50f6ce4754ce978cc9c343b4122438caa65a4d41c7c395b42f/misc_sur-kharvaa.tar.gz",
+          "name": "misc_sur-kharvaa.tar.gz",
+          "saved_path": "/home/light/Workspace/CTF/CTF_Competition/misc/Sur_Kharvaa/misc_sur-kharvaa.tar.gz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": "e7e5bfb3330ece31",
+      "name": "Chronofault",
+      "category": "forensics",
+      "points": 156,
+      "author": "fg0x0",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 114,
+      "files": [
+        {
+          "url": "https://chronofault-qnebgbco.challenge.2026.haruulzangi.mn/artifact.zip",
+          "name": null,
+          "saved_path": null,
+          "success": false,
+          "source": "description_direct_file",
+          "message": "Failed to download file (HTTP status or connection error)"
+        }
+      ]
+    },
+    {
+      "id": "e6e8830812b7a825",
+      "name": "Made In Mongolia",
+      "category": "pwn",
+      "points": 726,
+      "author": "flame",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 7,
+      "files": [
+        {
+          "url": "https://2026.haruulzangi.mn/uploads/a432e1160b46c3c55632c84f5f0aa5c5dbef7241e547f9c5f0df9c122e17d892/pwn_made-in-mongolia.tar.gz",
+          "name": "pwn_made-in-mongolia.tar.gz",
+          "saved_path": "/home/light/Workspace/CTF/CTF_Competition/pwn/Made_In_Mongolia/pwn_made-in-mongolia.tar.gz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": "d2411872197abf20",
+      "name": "Likeness",
+      "category": "web",
+      "points": 957,
+      "author": "Ebo",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 2,
+      "files": [
+        {
+          "url": "https://2026.haruulzangi.mn/uploads/e8442e380056f3e0ada4ea2c2fa89425e52f6163460dfe08a6884df23b596e10/web_likeness.tar.gz",
+          "name": "web_likeness.tar.gz",
+          "saved_path": "/home/light/Workspace/CTF/CTF_Competition/web/Likeness/web_likeness.tar.gz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": "cb5901ab144cb48e",
+      "name": "Automaton",
+      "category": "rev",
+      "points": 177,
+      "author": "xyptonize",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 86,
+      "files": [
+        {
+          "url": "https://automaton-ynwhxfwg.challenge.2026.haruulzangi.mn/artifact.zip",
+          "name": null,
+          "saved_path": null,
+          "success": false,
+          "source": "description_direct_file",
+          "message": "Failed to download file (HTTP status or connection error)"
+        }
+      ]
+    },
+    {
+      "id": "c4e1c3daaa5e4db7",
+      "name": "Khiimori",
+      "category": "forensics",
+      "points": 1000,
+      "author": "fg0x0",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 1,
+      "files": [
+        {
+          "url": "https://khiimori-882482c6.challenge.2026.haruulzangi.mn/artifact.zip",
+          "name": null,
+          "saved_path": null,
+          "success": false,
+          "source": "description_direct_file",
+          "message": "Failed to download file (HTTP status or connection error)"
+        }
+      ]
+    },
+    {
+      "id": "c3905f77391eb4fc",
+      "name": "Real world Fraud",
+      "category": "misc",
+      "points": 471,
+      "author": "w01f",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 17,
+      "files": []
+    },
+    {
+      "id": "c09a68350f3855e6",
+      "name": "Naadam",
+      "category": "misc",
+      "points": 857,
+      "author": "bekkaze",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 4,
+      "files": [
+        {
+          "url": "https://2026.haruulzangi.mn/uploads/4af307825ea7b6b4b55f0c1d7e99c9d7112a185408fc3fa1c152c5d5a3f6a93c/misc_naadam.tar.gz",
+          "name": "misc_naadam.tar.gz",
+          "saved_path": "/home/light/Workspace/CTF/CTF_Competition/misc/Naadam/misc_naadam.tar.gz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": "b6ab0b9ce3c13116",
+      "name": "Enablement",
+      "category": "forensics",
+      "points": 179,
+      "author": "xyptonize",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 84,
+      "files": [
+        {
+          "url": "https://enablement-iohkqfar.challenge.2026.haruulzangi.mn/artifact.zip",
+          "name": null,
+          "saved_path": null,
+          "success": false,
+          "source": "description_direct_file",
+          "message": "Failed to download file (HTTP status or connection error)"
+        }
+      ]
+    },
+    {
+      "id": "9fd79f358d514903",
+      "name": "Formality",
+      "category": "pwn",
+      "points": 218,
+      "author": "Ebo",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 58,
+      "files": [
+        {
+          "url": "https://2026.haruulzangi.mn/uploads/1ad639e89c25a3379eab967372c03953c6fe766fa377109915824d66d35ba2f8/pwn_formality.tar.gz",
+          "name": "pwn_formality.tar.gz",
+          "saved_path": "/home/light/Workspace/CTF/CTF_Competition/pwn/Formality/pwn_formality.tar.gz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": "828b9e0d6194bcee",
+      "name": "Interval",
+      "category": "forensics",
+      "points": 197,
+      "author": "fg0x0",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 70,
+      "files": [
+        {
+          "url": "https://interval-3n3bj6hc.challenge.2026.haruulzangi.mn/artifact.zip",
+          "name": null,
+          "saved_path": null,
+          "success": false,
+          "source": "description_direct_file",
+          "message": "Failed to download file (HTTP status or connection error)"
+        }
+      ]
+    },
+    {
+      "id": "7ece1b361200ceb7",
+      "name": "Vivarium",
+      "category": "crypto",
+      "points": 906,
+      "author": "flame",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 3,
+      "files": [
+        {
+          "url": "https://2026.haruulzangi.mn/uploads/cd71ff6b1550fd5961f4e90b3c7066100da1f9d360d3f32228f5dbc85b8f7e88/crypto_vivarium.tar.gz",
+          "name": "crypto_vivarium.tar.gz",
+          "saved_path": "/home/light/Workspace/CTF/CTF_Competition/crypto/Vivarium/crypto_vivarium.tar.gz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": "792e24a47cb01853",
+      "name": "Tenure",
+      "category": "pwn",
+      "points": 507,
+      "author": "Ebo",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 15,
+      "files": [
+        {
+          "url": "https://2026.haruulzangi.mn/uploads/cc34de2ecdd4f07932aa01218b1e8a8bed5f16c4efff0417af9815c9f7a29100/pwn_tenure.tar.gz",
+          "name": "pwn_tenure.tar.gz",
+          "saved_path": "/home/light/Workspace/CTF/CTF_Competition/pwn/Tenure/pwn_tenure.tar.gz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": "77ec2c7f5d9fbbc8",
+      "name": "Passkey Nightmare",
+      "category": "crypto",
+      "points": 258,
+      "author": "flame",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 44,
+      "files": [
+        {
+          "url": "https://2026.haruulzangi.mn/uploads/070969e84b5ee8678acee7a0319e08a300dbbd4bd7a4c49b735aef4eea45d7a0/crypto_passkey-nightmare.tar.gz",
+          "name": "crypto_passkey-nightmare.tar.gz",
+          "saved_path": "/home/light/Workspace/CTF/CTF_Competition/crypto/Passkey_Nightmare/crypto_passkey-nightmare.tar.gz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": "70c368d57f190cf3",
+      "name": "Ehlel",
+      "category": "rev",
+      "points": 323,
+      "author": "flame",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 31,
+      "files": []
+    },
+    {
+      "id": "6c999c688c63208b",
+      "name": "Cabinet",
+      "category": "pwn",
+      "points": 254,
+      "author": "bekkaze",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 45,
+      "files": [
+        {
+          "url": "https://2026.haruulzangi.mn/uploads/5305766cfbde751fe332961e954204132a3d4162da84c49cfbdf33979452e160/pwn_cabinet.tar.gz",
+          "name": "pwn_cabinet.tar.gz",
+          "saved_path": "/home/light/Workspace/CTF/CTF_Competition/pwn/Cabinet/pwn_cabinet.tar.gz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": "6285a25d207c95f4",
+      "name": "Handprint",
+      "category": "forensics",
+      "points": 191,
+      "author": "fg0x0",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 74,
+      "files": [
+        {
+          "url": "https://handprint-sgbkw7lz.challenge.2026.haruulzangi.mn/artifact.zip",
+          "name": null,
+          "saved_path": null,
+          "success": false,
+          "source": "description_direct_file",
+          "message": "Failed to download file (HTTP status or connection error)"
+        }
+      ]
+    },
+    {
+      "id": "51ae0af94102892d",
+      "name": "Furnace",
+      "category": "rev",
+      "points": 274,
+      "author": "ByamB4",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 40,
+      "files": []
+    },
+    {
+      "id": "44ebf7f30f03a0cc",
+      "name": "Welcome",
+      "category": "misc",
+      "points": 100,
+      "author": "Ebo",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 128,
+      "files": []
+    },
+    {
+      "id": "418d33509766bed1",
+      "name": "Gerege",
+      "category": "crypto",
+      "points": 191,
+      "author": "fg0x0",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 74,
+      "files": [
+        {
+          "url": "https://2026.haruulzangi.mn/uploads/c792c74007589f9b744a09411ea4c421675dcc616446cfdda4fd4642b5c8cf39/crypto_gerege.tar.gz",
+          "name": "crypto_gerege.tar.gz",
+          "saved_path": "/home/light/Workspace/CTF/CTF_Competition/crypto/Gerege/crypto_gerege.tar.gz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": "3a06fd9708feeef3",
+      "name": "Trace",
+      "category": "rev",
+      "points": 288,
+      "author": "bekkaze",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 37,
+      "files": [
+        {
+          "url": "https://2026.haruulzangi.mn/uploads/2462a79615714d7b9fc2f2193f1e7121869b8d0779acc3c283817f18b202f795/rev_trace.tar.gz",
+          "name": "rev_trace.tar.gz",
+          "saved_path": "/home/light/Workspace/CTF/CTF_Competition/rev/Trace/rev_trace.tar.gz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": "2a442ae1c2ce87fc",
+      "name": "DreamComeTwo",
+      "category": "web",
+      "points": 361,
+      "author": "jooy",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 26,
+      "files": []
+    },
+    {
+      "id": "13edf6a1e0bfe260",
+      "name": "My Avatar",
+      "category": "web",
+      "points": 906,
+      "author": "flame",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 3,
+      "files": [
+        {
+          "url": "https://2026.haruulzangi.mn/uploads/f723cf81a90a862f60edc849d71c9ce0cd024381420f18c5723d5e1233979f93/web_my-avatar.tar.gz",
+          "name": "web_my-avatar.tar.gz",
+          "saved_path": "/home/light/Workspace/CTF/CTF_Competition/web/My_Avatar/web_my-avatar.tar.gz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": "0e89065bbbf1aa78",
+      "name": "Countersign",
+      "category": "misc",
+      "points": 254,
+      "author": "Ebo",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 45,
+      "files": [
+        {
+          "url": "https://countersign-5bvuxwub.challenge.2026.haruulzangi.mn/artifact.zip",
+          "name": null,
+          "saved_path": null,
+          "success": false,
+          "source": "description_direct_file",
+          "message": "Failed to download file (HTTP status or connection error)"
+        }
+      ]
+    },
+    {
+      "id": "0313e6ce1a3a557a",
+      "name": "Payphone",
+      "category": "pwn",
+      "points": 656,
+      "author": "flame",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 9,
+      "files": [
+        {
+          "url": "https://2026.haruulzangi.mn/uploads/e46ba0370dcc28c8ac4d669936d866e83bd86e423d3eb98a4fe98338c4b2924f/pwn_payphone.tar.gz",
+          "name": "pwn_payphone.tar.gz",
+          "saved_path": "/home/light/Workspace/CTF/CTF_Competition/pwn/Payphone/pwn_payphone.tar.gz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    }
+  ]
+}

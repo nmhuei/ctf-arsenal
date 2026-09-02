@@ -1,0 +1,580 @@
+{
+  "ctf_info": {
+    "title": "CTF Competition",
+    "url": "https://ctf.z0d1ak.org",
+    "platform": "rctf",
+    "user": "USTH_Ex0dia"
+  },
+  "total_challenges": 34,
+  "total_points": 7437,
+  "categories": {
+    "webex": 2,
+    "rev": 4,
+    "pwn": 4,
+    "osint": 6,
+    "misc": 4,
+    "forensics": 9,
+    "crypto": 5
+  },
+  "challenges": [
+    {
+      "id": "webex_captcha",
+      "name": "captcha",
+      "category": "webex",
+      "points": 154,
+      "author": "ludicrouslytrue",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 57,
+      "files": []
+    },
+    {
+      "id": "webex_both_cups",
+      "name": "both-cups",
+      "category": "webex",
+      "points": 310,
+      "author": "afish",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 12,
+      "files": []
+    },
+    {
+      "id": "rev_stars_below",
+      "name": "stars-below",
+      "category": "rev",
+      "points": 179,
+      "author": "afish",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 39,
+      "files": []
+    },
+    {
+      "id": "rev_rival_battle",
+      "name": "rival-battle",
+      "category": "rev",
+      "points": 245,
+      "author": "Abhi404",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 20,
+      "files": []
+    },
+    {
+      "id": "rev_pekpek_stadium_64",
+      "name": "pekpek-stadium-64",
+      "category": "rev",
+      "points": 347,
+      "author": "n1cogum",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 9,
+      "files": []
+    },
+    {
+      "id": "rev_black_tide_survey",
+      "name": "Black Tide Survey",
+      "category": "rev",
+      "points": 142,
+      "author": "pokymono",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 71,
+      "files": []
+    },
+    {
+      "id": "pwn_salvage_protocol",
+      "name": "Salvage Protocol",
+      "category": "pwn",
+      "points": 128,
+      "author": "ludicrouslytrue",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 102,
+      "files": [
+        {
+          "url": "https://files.adheeshg.in/uploads/849a151eb5211149030d2f1683b9f1a3440ad4b7d8c85003ba8629216bf64dd7/pwn_salvage-protocol.tar.gz",
+          "name": "pwn_salvage-protocol.tar.gz",
+          "saved_path": "/home/light/Workspace/CTF/CTF_Competition/pwn/Salvage_Protocol/pwn_salvage-protocol.tar.gz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": "pwn_rapture",
+      "name": "rapture",
+      "category": "pwn",
+      "points": 135,
+      "author": "Abhi404",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 84,
+      "files": [
+        {
+          "url": "https://files.adheeshg.in/uploads/6665a5ca1ff1d907810b4a8abbe06d4fc2b9ce19505fa748dfcacef40bcf3c6c/pwn_rapture.tar.gz",
+          "name": "pwn_rapture.tar.gz",
+          "saved_path": "/home/light/Workspace/CTF/CTF_Competition/pwn/rapture/pwn_rapture.tar.gz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": "pwn_paperweight",
+      "name": "paperweight",
+      "category": "pwn",
+      "points": 212,
+      "author": "afish",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 27,
+      "files": [
+        {
+          "url": "https://files.adheeshg.in/uploads/acc50d5bc148095adef20d3d50a136d42738d7073dbf54c6741cc40518af5b34/pwn_paperweight.tar.gz",
+          "name": "pwn_paperweight.tar.gz",
+          "saved_path": "/home/light/Workspace/CTF/CTF_Competition/pwn/paperweight/pwn_paperweight.tar.gz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": "pwn_house_xiii",
+      "name": "House XIII",
+      "category": "pwn",
+      "points": 147,
+      "author": "n00b",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 65,
+      "files": [
+        {
+          "url": "https://files.adheeshg.in/uploads/2ea557444b06160088e6d5e483dfb65a1a918d167a1700b9607396eaed70c586/pwn_house-xiii.tar.gz",
+          "name": "pwn_house-xiii.tar.gz",
+          "saved_path": "/home/light/Workspace/CTF/CTF_Competition/pwn/House_XIII/pwn_house-xiii.tar.gz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": "osint_uncharted_tides",
+      "name": "Uncharted Tides",
+      "category": "osint",
+      "points": 143,
+      "author": "Gaurav",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 70,
+      "files": [
+        {
+          "url": "https://files.adheeshg.in/uploads/b9dc4a28617a71782ac24af6932e9317290bec89e1b1aeb495691458c2112039/osint_uncharted-tides.tar.gz",
+          "name": "osint_uncharted-tides.tar.gz",
+          "saved_path": "/home/light/Workspace/CTF/CTF_Competition/osint/Uncharted_Tides/osint_uncharted-tides.tar.gz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": "osint_sporty_eater",
+      "name": "Sporty Eater",
+      "category": "osint",
+      "points": 245,
+      "author": "TitanCode",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 20,
+      "files": [
+        {
+          "url": "https://files.adheeshg.in/uploads/38125bc718b8eb6c3cf05ba4f1577ff129de4cd029e4e658fabae8a71069d6ea/osint_sporty-eater.tar.gz",
+          "name": "osint_sporty-eater.tar.gz",
+          "saved_path": "/home/light/Workspace/CTF/CTF_Competition/osint/Sporty_Eater/osint_sporty-eater.tar.gz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": "osint_rice",
+      "name": "Rice",
+      "category": "osint",
+      "points": 500,
+      "author": "ret2.libc",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 0,
+      "files": []
+    },
+    {
+      "id": "osint_get_zucked",
+      "name": "get zucked",
+      "category": "osint",
+      "points": 229,
+      "author": "ant1v3n0m",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 23,
+      "files": []
+    },
+    {
+      "id": "osint_geoint",
+      "name": "Guess r/y",
+      "category": "osint",
+      "points": 500,
+      "author": "TitanCode",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 0,
+      "files": []
+    },
+    {
+      "id": "misc_genie",
+      "name": "genie",
+      "category": "misc",
+      "points": 144,
+      "author": "ludicrouslytrue",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 68,
+      "files": [
+        {
+          "url": "https://files.adheeshg.in/uploads/af41782ab39296794fece493cd9b9d5bd36050ba28aa7b11c900ecf6d6b85612/misc_genie.tar.gz",
+          "name": "misc_genie.tar.gz",
+          "saved_path": "/home/light/Workspace/CTF/CTF_Competition/misc/genie/misc_genie.tar.gz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": "misc_clockwork_nailoong",
+      "name": "Clockwork Nailoong",
+      "category": "misc",
+      "points": 500,
+      "author": "Passive-Coder",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 0,
+      "files": []
+    },
+    {
+      "id": "forensics_Unrotated",
+      "name": "Unrotated",
+      "category": "forensics",
+      "points": 144,
+      "author": "ant1v3n0m",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 69,
+      "files": []
+    },
+    {
+      "id": "forensics_mermaids_last_song",
+      "name": "mermaids_last_song",
+      "category": "forensics",
+      "points": 500,
+      "author": "ashbrown",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 0,
+      "files": []
+    },
+    {
+      "id": "forensics_layer_eight",
+      "name": "layer-eight",
+      "category": "forensics",
+      "points": 127,
+      "author": "Abhi404",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 105,
+      "files": []
+    },
+    {
+      "id": "forensics_ghost_in_the_gpu",
+      "name": "Ghost in the GPU",
+      "category": "forensics",
+      "points": 121,
+      "author": "neerajcodz",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 130,
+      "files": []
+    },
+    {
+      "id": "forensics_dead_letter_wake",
+      "name": "Dead Letter Wake",
+      "category": "forensics",
+      "points": 175,
+      "author": "ant1v3n0m",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 41,
+      "files": []
+    },
+    {
+      "id": "forensics_dead_current",
+      "name": "Dead Current",
+      "category": "forensics",
+      "points": 172,
+      "author": "pokymono",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 43,
+      "files": []
+    },
+    {
+      "id": "forensics_black_box",
+      "name": "Black Box",
+      "category": "forensics",
+      "points": 111,
+      "author": "Praneet",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 228,
+      "files": []
+    },
+    {
+      "id": "forensics_acoustic",
+      "name": "acoustic",
+      "category": "forensics",
+      "points": 205,
+      "author": "TitanCode",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 29,
+      "files": [
+        {
+          "url": "https://files.adheeshg.in/uploads/62401d4faf992e9ee0bc584479edf78af877c91297921da51f81d62c2e0a98e6/forensics_acoustic.tar.gz",
+          "name": "forensics_acoustic.tar.gz",
+          "saved_path": "/home/light/Workspace/CTF/CTF_Competition/forensics/acoustic/forensics_acoustic.tar.gz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": "forensics_90_plus_13",
+      "name": "Hydra FC",
+      "category": "forensics",
+      "points": 135,
+      "author": "TitanCode",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 85,
+      "files": []
+    },
+    {
+      "id": "crypto_unseen_colors",
+      "name": "You Have Not Seen My Colors",
+      "category": "crypto",
+      "points": 138,
+      "author": "TitanCode",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 78,
+      "files": [
+        {
+          "url": "https://files.adheeshg.in/uploads/4c5ffce82fa63c1022ebdd97c022830e960d1d9300dc899add889f148ea379eb/crypto_you-have-not-seen-my-colors.tar.gz",
+          "name": "crypto_you-have-not-seen-my-colors.tar.gz",
+          "saved_path": "/home/light/Workspace/CTF/CTF_Competition/crypto/You_Have_Not_Seen_My_Colors/crypto_you-have-not-seen-my-colors.tar.gz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": "crypto_siren",
+      "name": "siren",
+      "category": "crypto",
+      "points": 114,
+      "author": "Abhi404",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 189,
+      "files": [
+        {
+          "url": "https://files.adheeshg.in/uploads/a26a331ae1a21c5d3834b9110d42a3bcf54161ed32b043c405b97df3cf378fe6/crypto_siren.tar.gz",
+          "name": "crypto_siren.tar.gz",
+          "saved_path": "/home/light/Workspace/CTF/CTF_Competition/crypto/siren/crypto_siren.tar.gz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": "crypto_rewind_revenge",
+      "name": "Rewind Revenge",
+      "category": "crypto",
+      "points": 130,
+      "author": "theg1239",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 96,
+      "files": []
+    },
+    {
+      "id": "crypto_rewind",
+      "name": "Rewind",
+      "category": "crypto",
+      "points": 125,
+      "author": "theg1239",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 115,
+      "files": []
+    },
+    {
+      "id": "crypto_cyclotomic_echo",
+      "name": "cyclotomic-echo",
+      "category": "crypto",
+      "points": 172,
+      "author": "afish",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 43,
+      "files": [
+        {
+          "url": "https://files.adheeshg.in/uploads/22ebce0eb842b3a9d6011afc102164c7ebcd8d33cffe99f0b99641d9c6364261/crypto_cyclotomic-echo.tar.gz",
+          "name": "crypto_cyclotomic-echo.tar.gz",
+          "saved_path": "/home/light/Workspace/CTF/CTF_Competition/crypto/cyclotomic-echo/crypto_cyclotomic-echo.tar.gz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": "blockchain_endian_firewall",
+      "name": "Control Plane",
+      "category": "misc",
+      "points": 258,
+      "author": "neerajcodz",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 18,
+      "files": [
+        {
+          "url": "https://files.adheeshg.in/uploads/bd8c962420ca0e9a29ce91f91a389a55681d5b6cc89e92cc2a10029b3d24b457/blockchain-control-plane.tar.gz",
+          "name": "blockchain-control-plane.tar.gz",
+          "saved_path": "/home/light/Workspace/CTF/CTF_Competition/misc/Control_Plane/blockchain-control-plane.tar.gz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": "bb09251d-3bc7-42dc-b9e7-b22fd162f6aa",
+      "name": "Setting Sails",
+      "category": "misc",
+      "points": 50,
+      "author": "z0d1ak",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 306,
+      "files": []
+    },
+    {
+      "id": "3f4e2f6c-e015-43c5-a08a-7aeec667e63a",
+      "name": "Random Click #1",
+      "category": "osint",
+      "points": 500,
+      "author": "theg1239",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 1,
+      "files": [
+        {
+          "url": "https://ctf.z0d1ak.org/uploads/19923bef693a6c8d5dbe5d524ddc2eaa16667383d2c060d33fdd6d60ee091652/part%201.jpeg",
+          "name": "part 1.jpeg",
+          "saved_path": "/home/light/Workspace/CTF/CTF_Competition/osint/Random_Click_#1/part 1.jpeg",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    }
+  ]
+}

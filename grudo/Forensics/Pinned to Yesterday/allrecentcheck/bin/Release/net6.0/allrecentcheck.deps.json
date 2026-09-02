@@ -1,0 +1,181 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "allrecentcheck/1.0.0": {
+        "dependencies": {
+          "Registry": "2026.5.0",
+          "RegistryPlugin.RecentDocs": "1.0.0"
+        },
+        "runtime": {
+          "allrecentcheck.dll": {}
+        }
+      },
+      "ExtensionBlocks/2026.5.0": {
+        "dependencies": {
+          "GuidMapping": "2026.5.0",
+          "System.Text.Encoding.CodePages": "10.0.7"
+        },
+        "runtime": {
+          "lib/netstandard2.0/ExtensionBlocks.dll": {
+            "assemblyVersion": "2026.0.0.0",
+            "fileVersion": "2026.5.0.0"
+          }
+        }
+      },
+      "GuidMapping/2026.5.0": {
+        "runtime": {
+          "lib/netstandard2.0/GuidMapping.dll": {
+            "assemblyVersion": "2026.0.0.0",
+            "fileVersion": "2026.5.0.0"
+          }
+        }
+      },
+      "Microsoft.NETCore.Platforms/7.0.4": {},
+      "Registry/2026.5.0": {
+        "dependencies": {
+          "Serilog": "4.2.0",
+          "System.Text.Encoding.CodePages": "10.0.7"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Registry.dll": {
+            "assemblyVersion": "2026.0.0.0",
+            "fileVersion": "2026.5.0.0"
+          }
+        }
+      },
+      "RegistryPluginBase/2026.5.0": {
+        "dependencies": {
+          "ExtensionBlocks": "2026.5.0",
+          "GuidMapping": "2026.5.0",
+          "Microsoft.NETCore.Platforms": "7.0.4",
+          "Registry": "2026.5.0",
+          "System.Text.Encoding.CodePages": "10.0.7"
+        },
+        "runtime": {
+          "lib/netstandard2.0/RegistryPluginBase.dll": {
+            "assemblyVersion": "2026.5.0.0",
+            "fileVersion": "2026.5.0.0"
+          }
+        }
+      },
+      "Serilog/4.2.0": {
+        "runtime": {
+          "lib/net6.0/Serilog.dll": {
+            "assemblyVersion": "4.2.0.0",
+            "fileVersion": "4.2.0.0"
+          }
+        }
+      },
+      "System.Memory/4.6.3": {},
+      "System.Runtime.CompilerServices.Unsafe/6.1.2": {
+        "runtime": {
+          "lib/net6.0/System.Runtime.CompilerServices.Unsafe.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.100.225.20307"
+          }
+        }
+      },
+      "System.Text.Encoding.CodePages/10.0.7": {
+        "dependencies": {
+          "System.Memory": "4.6.3",
+          "System.Runtime.CompilerServices.Unsafe": "6.1.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Text.Encoding.CodePages.dll": {
+            "assemblyVersion": "10.0.0.0",
+            "fileVersion": "10.0.726.21808"
+          }
+        }
+      },
+      "RegistryPlugin.RecentDocs/1.0.0": {
+        "dependencies": {
+          "RegistryPluginBase": "2026.5.0",
+          "System.Text.Encoding.CodePages": "10.0.7"
+        },
+        "runtime": {
+          "RegistryPlugin.RecentDocs.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "allrecentcheck/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ExtensionBlocks/2026.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-DdD+lfQ44zRiV0OR/OwkRUjKK566b7kYNTChsW1hMPCbK2I14DMxE9rqnRFpTzBuLs184Y2q7sQPPXP3RSi3Vg==",
+      "path": "extensionblocks/2026.5.0",
+      "hashPath": "extensionblocks.2026.5.0.nupkg.sha512"
+    },
+    "GuidMapping/2026.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-lWJz8BT0t0DFAdfeaNW9Lt+YobNF9YFz13iypcM3t7SMcr/5Ky/THblbPe48v2Q1aVqICdt6lPq/qJVqz1s0lQ==",
+      "path": "guidmapping/2026.5.0",
+      "hashPath": "guidmapping.2026.5.0.nupkg.sha512"
+    },
+    "Microsoft.NETCore.Platforms/7.0.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-yLEHlNN7O5WiND89r42sepgVwy5W/ZoTiFEdJDV7MHR1lW02LL7Nipz2TD5qM/Kx9W3/k3NP+PAP2qUdOm+leg==",
+      "path": "microsoft.netcore.platforms/7.0.4",
+      "hashPath": "microsoft.netcore.platforms.7.0.4.nupkg.sha512"
+    },
+    "Registry/2026.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ETgi/AvoA7vnI8uXRSWpCDo2+ogcAJg4MXFqeX2XuqmXSqJNEM0i0dwWTzXLVxWnpsdJEkqzehsXefOUSKdbrA==",
+      "path": "registry/2026.5.0",
+      "hashPath": "registry.2026.5.0.nupkg.sha512"
+    },
+    "RegistryPluginBase/2026.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-tI0ymnW2LEZ/0obUh3aM1+EjSTfWj041gV3hKIqfoghxXujXv+YgJYcnUf9/M336fRVWngKd75gyCBnky8wR4w==",
+      "path": "registrypluginbase/2026.5.0",
+      "hashPath": "registrypluginbase.2026.5.0.nupkg.sha512"
+    },
+    "Serilog/4.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-gmoWVOvKgbME8TYR+gwMf7osROiWAURterc6Rt2dQyX7wtjZYpqFiA/pY6ztjGQKKV62GGCyOcmtP1UKMHgSmA==",
+      "path": "serilog/4.2.0",
+      "hashPath": "serilog.4.2.0.nupkg.sha512"
+    },
+    "System.Memory/4.6.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-qdcDOgnFZY40+Q9876JUHnlHu7bosOHX8XISRoH94fwk6hgaeQGSgfZd8srWRZNt5bV9ZW2TljcegDNxsf+96A==",
+      "path": "system.memory/4.6.3",
+      "hashPath": "system.memory.4.6.3.nupkg.sha512"
+    },
+    "System.Runtime.CompilerServices.Unsafe/6.1.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-2hBr6zdbIBTDE3EhK7NSVNdX58uTK6iHW/P/Axmm9sl1xoGSLqDvMtpecn226TNwHByFokYwJmt/aQQNlO5CRw==",
+      "path": "system.runtime.compilerservices.unsafe/6.1.2",
+      "hashPath": "system.runtime.compilerservices.unsafe.6.1.2.nupkg.sha512"
+    },
+    "System.Text.Encoding.CodePages/10.0.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-jVwqeYm6ihKbC8+f9dC+VGlWb6areYWTi+3aHuawZXazkiVs3DxQTNeiMYbcZ/H+JzVkPXfkLUUzUFPQneobFg==",
+      "path": "system.text.encoding.codepages/10.0.7",
+      "hashPath": "system.text.encoding.codepages.10.0.7.nupkg.sha512"
+    },
+    "RegistryPlugin.RecentDocs/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

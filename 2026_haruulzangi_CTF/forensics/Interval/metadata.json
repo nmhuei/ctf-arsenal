@@ -1,0 +1,33 @@
+{
+  "id": "828b9e0d6194bcee",
+  "name": "Interval",
+  "category": "forensics",
+  "points": 197,
+  "author": "fg0x0",
+  "tags": [],
+  "hints": [],
+  "connection_info": null,
+  "solved_by_me": false,
+  "solves_count": 70,
+  "downloaded_files": [
+    {
+      "url": "https://interval-3n3bj6hc.challenge.2026.haruulzangi.mn/artifact.zip",
+      "name": null,
+      "saved_path": null,
+      "success": false,
+      "source": "description_direct_file",
+      "message": "Failed to download file (HTTP status or connection error)"
+    }
+  ],
+  "raw": {
+    "id": "828b9e0d6194bcee",
+    "name": "Interval",
+    "description": "A registered counterpart on the Commons mesh started talking to peers that\nare not on the register. We captured a little over a minute before the\nflows were cut.\n\nThe vendor says it is a pairing keepalive, and our own analysts agree with\nthem, which is what worries us. Every beacon carries the same query type to\nthe same domain. The only thing that changes is a counter that goes up by\none, forever. There is no payload, no encoding, nothing to decode. Somebody\nalready chased the base64 blob in the HTTP session; it is a taunt.\n\nThe message left the Commons anyway, and not one of the flows carries\nenough of it to matter on its own.\n\nTwo agents agreed on something without saying it out loud. Find out what.\n\n> [!CONNECTION]\n> https://interval-3n3bj6hc.challenge.2026.haruulzangi.mn/artifact.zip",
+    "category": "forensics",
+    "author": "fg0x0",
+    "files": [],
+    "points": 197,
+    "solves": 70,
+    "sortWeight": 0
+  }
+}

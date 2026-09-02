@@ -1,0 +1,26 @@
+{
+  "initialized": "2026-09-01T00:00:00+07:00",
+  "goal": "solve all remaining CTF challenges across 17 workspaces (621 unsolved at init)",
+  "submission_auth": "NOT CONFIGURED - hoard flags locally only (ctf hoard), never submit",
+  "workspace_order": "smallest unsolved count first",
+  "workspaces": {},
+  "note": "cron 57f8b713 fires every 30min (17,47 * * * *); each tick spawns up to 4 solver agents; GPT tool = bridge at 127.0.0.1:4000",
+  "in_progress": {
+    "thryvecCTF/crypto/intercepted_message": {
+      "status": "in_progress",
+      "since": "2026-09-01T06:40+07:00"
+    },
+    "thryvecCTF/rev/Badge_Check": {
+      "status": "in_progress",
+      "since": "2026-09-01T06:40+07:00"
+    },
+    "mtaCTF/threat intelll/hassh": {
+      "status": "in_progress",
+      "since": "2026-09-01T06:40+07:00"
+    },
+    "GPN_CTF/Miscellaneous/knitted-flag": {
+      "status": "in_progress",
+      "since": "2026-09-01T06:40+07:00"
+    }
+  }
+}

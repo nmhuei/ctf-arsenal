@@ -1,0 +1,275 @@
+{
+  "title": "Mathematics",
+  "slug": "maths",
+  "url": "https://cryptohack.org/challenges/maths/",
+  "completed": "0",
+  "total": "15",
+  "description_text": "Mathematics This category covers more advanced cryptographic math. It's not necessary to solve these before moving to the Symmetric Ciphers and RSA sections. However, the first challenges will expand your modular toolbox, while the later ones are reported to be among the most satisfying puzzles to solve on CryptoHack.",
+  "stages": [
+    {
+      "title": "Modular Math",
+      "slug": "modmaths2"
+    },
+    {
+      "title": "Brainteasers Part 1",
+      "slug": "brainteasers"
+    },
+    {
+      "title": "Brainteasers Part 2",
+      "slug": "brainteasers2"
+    },
+    {
+      "title": "Primes",
+      "slug": "primenumbers"
+    }
+  ],
+  "challenge_count": 15,
+  "challenges": [
+    {
+      "title": "Quadratic Residues",
+      "stage": "Modular Math",
+      "path": "maths/modmaths2/quadratic-residues",
+      "attachments": []
+    },
+    {
+      "title": "Legendre Symbol",
+      "stage": "Modular Math",
+      "path": "maths/modmaths2/legendre-symbol",
+      "attachments": [
+        {
+          "text": "output.txt",
+          "href": "/static/challenges/output_479698cde19aaa05d9e9dfca460f5443.txt",
+          "url": "https://cryptohack.org/static/challenges/output_479698cde19aaa05d9e9dfca460f5443.txt",
+          "download": true,
+          "saved_as": "files/output_479698cde19aaa05d9e9dfca460f5443.txt",
+          "status": 200,
+          "size": 3421
+        }
+      ]
+    },
+    {
+      "title": "Modular Square Root",
+      "stage": "Modular Math",
+      "path": "maths/modmaths2/modular-square-root",
+      "attachments": [
+        {
+          "text": "output.txt",
+          "href": "/static/challenges/output_abe0beb359a950c8a0a9300897528a9d.txt",
+          "url": "https://cryptohack.org/static/challenges/output_abe0beb359a950c8a0a9300897528a9d.txt",
+          "download": true,
+          "saved_as": "files/output_abe0beb359a950c8a0a9300897528a9d.txt",
+          "status": 200,
+          "size": 1243
+        }
+      ]
+    },
+    {
+      "title": "Chinese Remainder Theorem",
+      "stage": "Modular Math",
+      "path": "maths/modmaths2/chinese-remainder-theorem",
+      "attachments": []
+    },
+    {
+      "title": "Successive Powers",
+      "stage": "Brainteasers Part 1",
+      "path": "maths/brainteasers/successive-powers",
+      "attachments": []
+    },
+    {
+      "title": "Adrien's Signs",
+      "stage": "Brainteasers Part 1",
+      "path": "maths/brainteasers/adrien-s-signs",
+      "attachments": [
+        {
+          "text": "source.py",
+          "href": "/static/challenges/source_734d7e14251f950935f83d228f8694ab.py",
+          "url": "https://cryptohack.org/static/challenges/source_734d7e14251f950935f83d228f8694ab.py",
+          "download": true,
+          "saved_as": "files/source_734d7e14251f950935f83d228f8694ab.py",
+          "status": 200,
+          "size": 465
+        },
+        {
+          "text": "output.txt",
+          "href": "/static/challenges/output_80fc6398d2fd9f272186d0af510323f9.txt",
+          "url": "https://cryptohack.org/static/challenges/output_80fc6398d2fd9f272186d0af510323f9.txt",
+          "download": true,
+          "saved_as": "files/output_80fc6398d2fd9f272186d0af510323f9.txt",
+          "status": 200,
+          "size": 3780
+        }
+      ]
+    },
+    {
+      "title": "Modular Binomials",
+      "stage": "Brainteasers Part 1",
+      "path": "maths/brainteasers/modular-binomials",
+      "attachments": [
+        {
+          "text": "data.txt",
+          "href": "/static/challenges/data_04a0fe134cf31a6c941377aad75db81c.txt",
+          "url": "https://cryptohack.org/static/challenges/data_04a0fe134cf31a6c941377aad75db81c.txt",
+          "download": true,
+          "saved_as": "files/data_04a0fe134cf31a6c941377aad75db81c.txt",
+          "status": 200,
+          "size": 2190
+        }
+      ]
+    },
+    {
+      "title": "Broken RSA",
+      "stage": "Brainteasers Part 1",
+      "path": "maths/brainteasers/broken-rsa",
+      "attachments": [
+        {
+          "text": "broken_rsa.txt",
+          "href": "/static/challenges/broken_rsa_34db5007b0788a5cd306f3bd47e9ca71.txt",
+          "url": "https://cryptohack.org/static/challenges/broken_rsa_34db5007b0788a5cd306f3bd47e9ca71.txt",
+          "download": true,
+          "saved_as": "files/broken_rsa_34db5007b0788a5cd306f3bd47e9ca71.txt",
+          "status": 200,
+          "size": 1252
+        }
+      ]
+    },
+    {
+      "title": "No Way Back Home",
+      "stage": "Brainteasers Part 1",
+      "path": "maths/brainteasers/no-way-back-home",
+      "attachments": [
+        {
+          "text": "nowayback.py",
+          "href": "/static/challenges/nowayback_9e0beb8fb2bbb103771ee735a890e387.py",
+          "url": "https://cryptohack.org/static/challenges/nowayback_9e0beb8fb2bbb103771ee735a890e387.py",
+          "download": true,
+          "saved_as": "files/nowayback_9e0beb8fb2bbb103771ee735a890e387.py",
+          "status": 200,
+          "size": 968
+        },
+        {
+          "text": "out.txt",
+          "href": "/static/challenges/out_549f6bbac5f815ee3f197c2248a352cd.txt",
+          "url": "https://cryptohack.org/static/challenges/out_549f6bbac5f815ee3f197c2248a352cd.txt",
+          "download": true,
+          "saved_as": "files/out_549f6bbac5f815ee3f197c2248a352cd.txt",
+          "status": 200,
+          "size": 1378
+        }
+      ]
+    },
+    {
+      "title": "Ellipse Curve Cryptography",
+      "stage": "Brainteasers Part 2",
+      "path": "maths/brainteasers2/ellipse-curve-cryptography",
+      "attachments": [
+        {
+          "text": "source.py",
+          "href": "/static/challenges/source_f8d9ededc511666cb0b32e183142b444.py",
+          "url": "https://cryptohack.org/static/challenges/source_f8d9ededc511666cb0b32e183142b444.py",
+          "download": true,
+          "saved_as": "files/source_f8d9ededc511666cb0b32e183142b444.py",
+          "status": 200,
+          "size": 1924
+        },
+        {
+          "text": "output.txt",
+          "href": "/static/challenges/output_3285d9daa401e33046ada4c3cc077b10.txt",
+          "url": "https://cryptohack.org/static/challenges/output_3285d9daa401e33046ada4c3cc077b10.txt",
+          "download": true,
+          "saved_as": "files/output_3285d9daa401e33046ada4c3cc077b10.txt",
+          "status": 200,
+          "size": 529
+        }
+      ]
+    },
+    {
+      "title": "Roll your Own",
+      "stage": "Brainteasers Part 2",
+      "path": "maths/brainteasers2/roll-your-own",
+      "attachments": [
+        {
+          "text": "13403.py",
+          "href": "/static/challenges/13403_3fc14872be8c0172d0c72a81b6fc9b12.py",
+          "url": "https://cryptohack.org/static/challenges/13403_3fc14872be8c0172d0c72a81b6fc9b12.py",
+          "download": true,
+          "saved_as": "files/13403_3fc14872be8c0172d0c72a81b6fc9b12.py",
+          "status": 200,
+          "size": 2188
+        }
+      ]
+    },
+    {
+      "title": "Unencryptable",
+      "stage": "Brainteasers Part 2",
+      "path": "maths/brainteasers2/unencryptable",
+      "attachments": [
+        {
+          "text": "source.py",
+          "href": "/static/challenges/source_b1dbaf88b6cbdfcc484a693074e668d1.py",
+          "url": "https://cryptohack.org/static/challenges/source_b1dbaf88b6cbdfcc484a693074e668d1.py",
+          "download": true,
+          "saved_as": "files/source_b1dbaf88b6cbdfcc484a693074e668d1.py",
+          "status": 200,
+          "size": 1242
+        },
+        {
+          "text": "output.txt",
+          "href": "/static/challenges/output_d8d7a60bdc52b56d3be6f24a000f40cd.txt",
+          "url": "https://cryptohack.org/static/challenges/output_d8d7a60bdc52b56d3be6f24a000f40cd.txt",
+          "download": true,
+          "saved_as": "files/output_d8d7a60bdc52b56d3be6f24a000f40cd.txt",
+          "status": 200,
+          "size": 581
+        }
+      ]
+    },
+    {
+      "title": "Cofactor Cofantasy",
+      "stage": "Brainteasers Part 2",
+      "path": "maths/brainteasers2/cofactor-cofantasy",
+      "attachments": [
+        {
+          "text": "13398.py",
+          "href": "/static/challenges/13398_484901f7f3e88604cdaa1ecfc1b46159.py",
+          "url": "https://cryptohack.org/static/challenges/13398_484901f7f3e88604cdaa1ecfc1b46159.py",
+          "download": true,
+          "saved_as": "files/13398_484901f7f3e88604cdaa1ecfc1b46159.py",
+          "status": 200,
+          "size": 3255
+        }
+      ]
+    },
+    {
+      "title": "Real Eisenstein",
+      "stage": "Brainteasers Part 2",
+      "path": "maths/brainteasers2/real-eisenstein",
+      "attachments": [
+        {
+          "text": "real_eisenstein.py",
+          "href": "/static/challenges/real_eisenstein_1ce0c3fb87030d17f78337c733db02c9.py",
+          "url": "https://cryptohack.org/static/challenges/real_eisenstein_1ce0c3fb87030d17f78337c733db02c9.py",
+          "download": true,
+          "saved_as": "files/real_eisenstein_1ce0c3fb87030d17f78337c733db02c9.py",
+          "status": 200,
+          "size": 452
+        }
+      ]
+    },
+    {
+      "title": "Prime and Prejudice",
+      "stage": "Primes",
+      "path": "maths/primenumbers/prime-and-prejudice",
+      "attachments": [
+        {
+          "text": "13385.py",
+          "href": "/static/challenges/13385_d25d40f676ab81262d2b10a0b3b37e6e.py",
+          "url": "https://cryptohack.org/static/challenges/13385_d25d40f676ab81262d2b10a0b3b37e6e.py",
+          "download": true,
+          "saved_as": "files/13385_d25d40f676ab81262d2b10a0b3b37e6e.py",
+          "status": 200,
+          "size": 2144
+        }
+      ]
+    }
+  ]
+}

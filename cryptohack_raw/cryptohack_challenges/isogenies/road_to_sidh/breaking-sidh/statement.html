@@ -1,0 +1,223 @@
+<div class="challengeDescription">
+ <!-- <p> -->
+ The SIDH protocol is a great way to learn some of the machinery of isogeny-based cryptography, but in 2022 it was shown to be broken in polynomial time by a series of papers (the paper by Castryck and Decru appeared online first, only a week before the following two papers which further broke more general protocols).
+ <br/>
+ <br/>
+ Given only the public data of an SIDH protocol can you recover the shared secret and decrypt the flag?
+ <br/>
+ <br/>
+ <span class="note">
+  <i class="fas fa-pencil-alt">
+  </i>
+  You may notice the prime used here:
+  <span>
+   <span class="katex">
+    <span class="katex-mathml">
+     <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <semantics>
+       <mrow>
+        <mi>
+         p
+        </mi>
+        <mo>
+         =
+        </mo>
+        <mn>
+         45
+        </mn>
+        <mo>
+         ⋅
+        </mo>
+        <msup>
+         <mn>
+          2
+         </mn>
+         <mn>
+          117
+         </mn>
+        </msup>
+        <mo>
+         ⋅
+        </mo>
+        <msup>
+         <mn>
+          3
+         </mn>
+         <mn>
+          73
+         </mn>
+        </msup>
+        <mo>
+         −
+        </mo>
+        <mn>
+         1
+        </mn>
+       </mrow>
+       <annotation encoding="application/x-tex">
+        p = 45 \cdot 2^{117} \cdot 3^{73} - 1
+       </annotation>
+      </semantics>
+     </math>
+    </span>
+    <span aria-hidden="true" class="katex-html">
+     <span class="base">
+      <span class="strut" style="height: 0.625em; vertical-align: -0.1944em;">
+      </span>
+      <span class="mord mathnormal">
+       p
+      </span>
+      <span class="mspace" style="margin-right: 0.2778em;">
+      </span>
+      <span class="mrel">
+       =
+      </span>
+      <span class="mspace" style="margin-right: 0.2778em;">
+      </span>
+     </span>
+     <span class="base">
+      <span class="strut" style="height: 0.6444em;">
+      </span>
+      <span class="mord">
+       45
+      </span>
+      <span class="mspace" style="margin-right: 0.2222em;">
+      </span>
+      <span class="mbin">
+       ⋅
+      </span>
+      <span class="mspace" style="margin-right: 0.2222em;">
+      </span>
+     </span>
+     <span class="base">
+      <span class="strut" style="height: 0.8141em;">
+      </span>
+      <span class="mord">
+       <span class="mord">
+        2
+       </span>
+       <span class="msupsub">
+        <span class="vlist-t">
+         <span class="vlist-r">
+          <span class="vlist" style="height: 0.8141em;">
+           <span class="" style="top: -3.063em; margin-right: 0.05em;">
+            <span class="pstrut" style="height: 2.7em;">
+            </span>
+            <span class="sizing reset-size6 size3 mtight">
+             <span class="mord mtight">
+              <span class="mord mtight">
+               117
+              </span>
+             </span>
+            </span>
+           </span>
+          </span>
+         </span>
+        </span>
+       </span>
+      </span>
+      <span class="mspace" style="margin-right: 0.2222em;">
+      </span>
+      <span class="mbin">
+       ⋅
+      </span>
+      <span class="mspace" style="margin-right: 0.2222em;">
+      </span>
+     </span>
+     <span class="base">
+      <span class="strut" style="height: 0.8974em; vertical-align: -0.0833em;">
+      </span>
+      <span class="mord">
+       <span class="mord">
+        3
+       </span>
+       <span class="msupsub">
+        <span class="vlist-t">
+         <span class="vlist-r">
+          <span class="vlist" style="height: 0.8141em;">
+           <span class="" style="top: -3.063em; margin-right: 0.05em;">
+            <span class="pstrut" style="height: 2.7em;">
+            </span>
+            <span class="sizing reset-size6 size3 mtight">
+             <span class="mord mtight">
+              <span class="mord mtight">
+               73
+              </span>
+             </span>
+            </span>
+           </span>
+          </span>
+         </span>
+        </span>
+       </span>
+      </span>
+      <span class="mspace" style="margin-right: 0.2222em;">
+      </span>
+      <span class="mbin">
+       −
+      </span>
+      <span class="mspace" style="margin-right: 0.2222em;">
+      </span>
+     </span>
+     <span class="base">
+      <span class="strut" style="height: 0.6444em;">
+      </span>
+      <span class="mord">
+       1
+      </span>
+     </span>
+    </span>
+   </span>
+  </span>
+  is different to the previous challenges. This has been done on purpose to simplify the attack! Read the resources and you should see why.
+ </span>
+ <br/>
+ <br/>
+ <span class="note">
+  <i class="fas fa-brain">
+  </i>
+  Setting the score for this challenge is very hard. The whole attack implemented without help is very challenging and was first done in SageMath as a team effort in our discord chat (see the resources below). On the other hand, there's now a few different implementations of the attack on GitHub which do a lot of the work for you. Our advice here is to spend as much time as you want on this project and if you rely on tools for the flag, maybe come back another day and try implementing certain steps yourself. It's a beautiful topic and the main reason I (Jack) am so interested in the topic today. It's also the cornerstone of many new advanced isogeny primitives such as SQIsign2D, FESTA and SCALLOP-HD.
+ </span>
+ <br/>
+ <br/>
+ <b>
+  Challenge files:
+ </b>
+ <br/>
+ -
+ <a download="" href="/static/challenges/source_0e46e87ca6110ad062f6ce1819ded232.sage">
+  source.sage
+ </a>
+ <br/>
+ <br/>
+ <b>
+  Resources:
+ </b>
+ <br/>
+ -
+ <a href="https://eprint.iacr.org/2022/975" target="_blank">
+  An efficient key recovery attack on SIDH, Wouter Castryck, Thomas Decru
+ </a>
+ <br/>
+ -
+ <a href="https://eprint.iacr.org/2023/640" target="_blank">
+  A Direct Key Recovery Attack on SIDH, Luciano Maino, Chloe Martindale, Lorenz Panny, Giacomo Pope, Benjamin Wesolowski
+ </a>
+ <br/>
+ -
+ <a href="https://eprint.iacr.org/2022/1038" target="_blank">
+  Breaking SIDH in polynomial time, Damien Robert
+ </a>
+ <br/>
+ -
+ <a href="https://eprint.iacr.org/2022/1283" target="_blank">
+  A Note on Reimplementing the Castryck-Decru Attack and Lessons Learned for SageMath, Rémy Oudompheng, Giacomo Pope
+ </a>
+ <br/>
+ -
+ <a href="https://yx7.cc/blah/2022-08-22.html" target="_blank">
+  You could have broken SIDH, Lorenz Panny
+ </a>
+ <br/>
+ <!-- </p> -->
+</div>

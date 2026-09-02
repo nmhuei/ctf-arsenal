@@ -1,0 +1,8 @@
+# /etc/fstab — PhantomGate PG-400
+# <fs>        <mountpoint>  <type>   <opts>              <dump> <pass>
+/dev/root     /             squashfs ro                   0      0
+proc          /proc         proc     defaults             0      0
+sysfs         /sys          sysfs    defaults             0      0
+tmpfs         /tmp          tmpfs    size=16M,nosuid,nodev 0     0
+tmpfs         /var/run      tmpfs    size=2M,nosuid,nodev 0      0
+devpts        /dev/pts      devpts   defaults,gid=5,mode=620 0   0

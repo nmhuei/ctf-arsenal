@@ -1,0 +1,53 @@
+Additional problems (CSC Belgium) - fast batched solver
+
+Optimization
+------------
+The first solver queried the oracle one sample at a time:
+
+    choose N, encrypt one byte 00 several times, decrypt one byte
+
+But the service accepts a whole byte string.  If we send a message like:
+
+    00 00 00 ... 00
+
+then the server encrypts every byte independently under the same p and N.  After
+adding the same number of zero messages and decrypting, one server decrypt gives
+hundreds of independent leak samples.
+
+For t encryptions of zero:
+
+    c = p*Q + N*R
+    dec(c) = (N*R mod p) mod N = (-k*p) mod N
+
+For t = 4, k can only be 0 or 1, so any non-zero output immediately gives:
+
+    p mod N = -output mod N
+
+The fast solver uses a vector length of 400 zero bytes by default.  This stays
+below the server's recv(1024) input size because the hex string is only 800
+characters long.
+
+Extra speedups
+--------------
+1. Use the largest primes below 256 first.  Only 17 residues are needed because
+   their CRT product is already larger than 2^128.
+2. Batch 400 independent samples per oracle query, normally one query per N.
+3. Fall back to t = 5, 6, 7 only if t = 4 gets no wrapping sample.
+
+Commands
+--------
+Local self-test:
+
+    python3 solve_additional_problems_fast.py --local
+
+Remote:
+
+    python3 solve_additional_problems_fast.py --remote archive.cryptohack.org 21970
+
+If the server/network is flaky, try a smaller batch:
+
+    python3 solve_additional_problems_fast.py --remote archive.cryptohack.org 21970 --batch-size 250
+
+If it still fails due to unlucky no-wrap samples, increase retries:
+
+    python3 solve_additional_problems_fast.py --remote archive.cryptohack.org 21970 --extra-batches 4

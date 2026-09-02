@@ -1,0 +1,42 @@
+{
+  "id": 32,
+  "name": "PhoneFarm",
+  "category": "Reverse",
+  "points": 100,
+  "author": null,
+  "tags": [
+    "StaticAttachment"
+  ],
+  "hints": [],
+  "connection_info": null,
+  "solved_by_me": false,
+  "solves_count": 53,
+  "downloaded_files": [
+    {
+      "url": "https://jeo.infosecptit.org/assets/bb95b4966246f91d487ef081a5ab9e4da6e099a87acb66a524e6baeebbcf84ad/PhoneFarm.zip",
+      "name": "PhoneFarm.zip",
+      "saved_path": "/home/light/Workspace/CTF/PTIT_CTF_2026/Reverse/PhoneFarm/PhoneFarm.zip",
+      "success": true,
+      "source": "platform_attachment",
+      "message": "Direct download successful"
+    }
+  ],
+  "raw": {
+    "id": 32,
+    "title": "PhoneFarm",
+    "content": "Gần đây công an Đột kích \"trang trại\" 2.000 điện thoại ở Đà Nẵng: Chuyên \"nuôi\" tài khoản Zalo, Tinder ảo để phục vụ lừa đảo Campuchia. Đã thu được 1 phần mềm có tác dụng đổi thông tin thiết bị để gian lận. Qua quá trình khai thác đã biết một đối tượng tên luongvd đã crack phần mềm này. Tìm ra key của phần mềm mà không cần mua. Hãy tìm ra nó và chuyển sang dạng MD5",
+    "category": "Reverse",
+    "hints": null,
+    "score": 100,
+    "type": "StaticAttachment",
+    "context": {
+      "closeTime": null,
+      "instanceEntry": null,
+      "url": "/assets/bb95b4966246f91d487ef081a5ab9e4da6e099a87acb66a524e6baeebbcf84ad/PhoneFarm.zip",
+      "fileSize": 7794342
+    },
+    "limit": 0,
+    "attempts": 2,
+    "deadline": null
+  }
+}

@@ -1,0 +1,47 @@
+<div class="challengeDescription">
+ <!-- <p> -->
+ The most common signing algorithms used in JWTs are
+ <i>
+  HS256
+ </i>
+ and
+ <i>
+  RS256
+ </i>
+ . The first is a symmetric signing scheme using a HMAC with the SHA256 hash function. The second is an asymmetric signing scheme based on RSA.
+ <br/>
+ <br/>
+ A lot of guides on the internet recommend using
+ <i>
+  HS256
+ </i>
+ as it's more straightforward. The secret key used to sign a token is the same as the key used to verify it.
+ <br/>
+ <br/>
+ However, if the signing secret key is compromised, an attacker can sign arbitrary tokens and forge sessions of other users, potentially causing total compromise of a webapp.
+ <i>
+  HS256
+ </i>
+ makes the secret key harder to secure than an asymmetric keypair, as the key must be available on all servers that verify
+ <i>
+  HS256
+ </i>
+ tokens (unless better infrastructure with a separate token verifying service is in place, which usually isn't the case). In contrast, with the asymmetric scheme of RS256, the signing key can be better protected while the verifying key is distributed freely.
+ <br/>
+ <br/>
+ <span class="note">
+  <i class="fas fa-brain">
+  </i>
+  Even worse, developers sometimes use a default or weak HS256 secret key.
+ </span>
+ <br/>
+ <br/>
+ Here is a snippet of source code with one function to create a session and another function to authorise a session and check for admin permissions. But there's a strange comment about the secret key. What are you going to do?
+ <br/>
+ <br/>
+ Play at
+ <a href="https://web.cryptohack.org/jwt-secrets" target="_blank">
+  https://web.cryptohack.org/jwt-secrets
+ </a>
+ <!-- </p> -->
+</div>

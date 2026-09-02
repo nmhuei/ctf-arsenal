@@ -1,0 +1,580 @@
+{
+  "title": "RSA",
+  "slug": "rsa",
+  "url": "https://cryptohack.org/challenges/rsa/",
+  "completed": "0",
+  "total": "29",
+  "description_text": "RSA RSA, first described in 1977, is the most famous public-key cryptosystem. It has two main use-cases: Public key encryption enables a user, Alice, to distribute a public key and others can use that public key to encrypt messages to her. Alice can then use her private key to decrypt the messages. Digital signatures enable Alice to use her private key to \"sign\" a message. Anyone can use Alice's public key to verify that the signature was created with her corresponding private key, and that the message hasn't been tampered with. Although RSA's security is based on the difficulty of factoring large composite numbers, in recent years the cryptosystem has received criticism for how easy it is to implement incorrectly. Major flaws have been found in common deployments, the most notorious of these being the ROCA vulnerability which led to Estonia suspending 760,000 national ID cards. These challenges introduce you to the many footguns of RSA, and soon see you performing attacks which have caused millions of dollars of damage in the real world.",
+  "stages": [
+    {
+      "title": "Starter",
+      "slug": "rsa_starter"
+    },
+    {
+      "title": "Primes Part 1",
+      "slug": "primes_1"
+    },
+    {
+      "title": "Public exponent",
+      "slug": "public_exponent"
+    },
+    {
+      "title": "Primes Part 2",
+      "slug": "primes_2"
+    },
+    {
+      "title": "Padding",
+      "slug": "rsa_padding"
+    },
+    {
+      "title": "Signatures Part 1",
+      "slug": "rsa_signing"
+    },
+    {
+      "title": "Signatures Part 2",
+      "slug": "rsa_signing_2"
+    }
+  ],
+  "challenge_count": 29,
+  "challenges": [
+    {
+      "title": "Modular Exponentiation",
+      "stage": "Starter",
+      "path": "rsa/rsa_starter/modular-exponentiation",
+      "attachments": []
+    },
+    {
+      "title": "Public Keys",
+      "stage": "Starter",
+      "path": "rsa/rsa_starter/public-keys",
+      "attachments": []
+    },
+    {
+      "title": "Euler's Totient",
+      "stage": "Starter",
+      "path": "rsa/rsa_starter/euler-s-totient",
+      "attachments": []
+    },
+    {
+      "title": "Private Keys",
+      "stage": "Starter",
+      "path": "rsa/rsa_starter/private-keys",
+      "attachments": []
+    },
+    {
+      "title": "RSA Decryption",
+      "stage": "Starter",
+      "path": "rsa/rsa_starter/rsa-decryption",
+      "attachments": []
+    },
+    {
+      "title": "RSA Signatures",
+      "stage": "Starter",
+      "path": "rsa/rsa_starter/rsa-signatures",
+      "attachments": [
+        {
+          "text": "private.key",
+          "href": "/static/challenges/private_0a1880d1fffce9403686130a1f932b10.key",
+          "url": "https://cryptohack.org/static/challenges/private_0a1880d1fffce9403686130a1f932b10.key",
+          "download": true,
+          "saved_as": "files/private_0a1880d1fffce9403686130a1f932b10.key",
+          "status": 200,
+          "size": 1244
+        }
+      ]
+    },
+    {
+      "title": "Factoring",
+      "stage": "Primes Part 1",
+      "path": "rsa/primes_1/factoring",
+      "attachments": []
+    },
+    {
+      "title": "Inferius Prime",
+      "stage": "Primes Part 1",
+      "path": "rsa/primes_1/inferius-prime",
+      "attachments": [
+        {
+          "text": "inferius.py",
+          "href": "/static/challenges/inferius_2facb420dc30897696869e3fd11b4b4f.py",
+          "url": "https://cryptohack.org/static/challenges/inferius_2facb420dc30897696869e3fd11b4b4f.py",
+          "download": true,
+          "saved_as": "files/inferius_2facb420dc30897696869e3fd11b4b4f.py",
+          "status": 200,
+          "size": 503
+        },
+        {
+          "text": "output.txt",
+          "href": "/static/challenges/output_cf39018a5db981bd454ddcdcf6595167.txt",
+          "url": "https://cryptohack.org/static/challenges/output_cf39018a5db981bd454ddcdcf6595167.txt",
+          "download": true,
+          "saved_as": "files/output_cf39018a5db981bd454ddcdcf6595167.txt",
+          "status": 200,
+          "size": 141
+        }
+      ]
+    },
+    {
+      "title": "Monoprime",
+      "stage": "Primes Part 1",
+      "path": "rsa/primes_1/monoprime",
+      "attachments": [
+        {
+          "text": "output.txt",
+          "href": "/static/challenges/output_086036e35349a406b94bfac9a7af6cca.txt",
+          "url": "https://cryptohack.org/static/challenges/output_086036e35349a406b94bfac9a7af6cca.txt",
+          "download": true,
+          "saved_as": "files/output_086036e35349a406b94bfac9a7af6cca.txt",
+          "status": 200,
+          "size": 707
+        }
+      ]
+    },
+    {
+      "title": "Square Eyes",
+      "stage": "Primes Part 1",
+      "path": "rsa/primes_1/square-eyes",
+      "attachments": [
+        {
+          "text": "output.txt",
+          "href": "/static/challenges/output_00dace150c0bc52f7abf03fc3e9529d2.txt",
+          "url": "https://cryptohack.org/static/challenges/output_00dace150c0bc52f7abf03fc3e9529d2.txt",
+          "download": true,
+          "saved_as": "files/output_00dace150c0bc52f7abf03fc3e9529d2.txt",
+          "status": 200,
+          "size": 2487
+        }
+      ]
+    },
+    {
+      "title": "Manyprime",
+      "stage": "Primes Part 1",
+      "path": "rsa/primes_1/manyprime",
+      "attachments": [
+        {
+          "text": "output.txt",
+          "href": "/static/challenges/output_5a478a5d4764257d0bbdfaed340fcbdd.txt",
+          "url": "https://cryptohack.org/static/challenges/output_5a478a5d4764257d0bbdfaed340fcbdd.txt",
+          "download": true,
+          "saved_as": "files/output_5a478a5d4764257d0bbdfaed340fcbdd.txt",
+          "status": 200,
+          "size": 1245
+        }
+      ]
+    },
+    {
+      "title": "Salty",
+      "stage": "Public exponent",
+      "path": "rsa/public_exponent/salty",
+      "attachments": [
+        {
+          "text": "salty.py",
+          "href": "/static/challenges/salty_9854bdcadc3f8b8f58008a24d392c1bf.py",
+          "url": "https://cryptohack.org/static/challenges/salty_9854bdcadc3f8b8f58008a24d392c1bf.py",
+          "download": true,
+          "saved_as": "files/salty_9854bdcadc3f8b8f58008a24d392c1bf.py",
+          "status": 200,
+          "size": 451
+        },
+        {
+          "text": "output.txt",
+          "href": "/static/challenges/output_95f558e889cc66920c24a961f1fb8181.txt",
+          "url": "https://cryptohack.org/static/challenges/output_95f558e889cc66920c24a961f1fb8181.txt",
+          "download": true,
+          "saved_as": "files/output_95f558e889cc66920c24a961f1fb8181.txt",
+          "status": 200,
+          "size": 469
+        }
+      ]
+    },
+    {
+      "title": "Modulus Inutilis",
+      "stage": "Public exponent",
+      "path": "rsa/public_exponent/modulus-inutilis",
+      "attachments": [
+        {
+          "text": "modulus_inutilis.py",
+          "href": "/static/challenges/modulus_inutilis_d2e0022b0165d99403eafeb0bea01231.py",
+          "url": "https://cryptohack.org/static/challenges/modulus_inutilis_d2e0022b0165d99403eafeb0bea01231.py",
+          "download": true,
+          "saved_as": "files/modulus_inutilis_d2e0022b0165d99403eafeb0bea01231.py",
+          "status": 200,
+          "size": 453
+        },
+        {
+          "text": "output.txt",
+          "href": "/static/challenges/output_30cff153b7432055fc947fc5abdb57d3.txt",
+          "url": "https://cryptohack.org/static/challenges/output_30cff153b7432055fc947fc5abdb57d3.txt",
+          "download": true,
+          "saved_as": "files/output_30cff153b7432055fc947fc5abdb57d3.txt",
+          "status": 200,
+          "size": 814
+        }
+      ]
+    },
+    {
+      "title": "Everything is Big",
+      "stage": "Public exponent",
+      "path": "rsa/public_exponent/everything-is-big",
+      "attachments": [
+        {
+          "text": "source.py",
+          "href": "/static/challenges/source_a9eaeb4b534011e36229bf45be4ea455.py",
+          "url": "https://cryptohack.org/static/challenges/source_a9eaeb4b534011e36229bf45be4ea455.py",
+          "download": true,
+          "saved_as": "files/source_a9eaeb4b534011e36229bf45be4ea455.py",
+          "status": 200,
+          "size": 507
+        },
+        {
+          "text": "output.txt",
+          "href": "/static/challenges/output_1884d0ba92d19ad074549e174cdf5a70.txt",
+          "url": "https://cryptohack.org/static/challenges/output_1884d0ba92d19ad074549e174cdf5a70.txt",
+          "download": true,
+          "saved_as": "files/output_1884d0ba92d19ad074549e174cdf5a70.txt",
+          "status": 200,
+          "size": 1556
+        }
+      ]
+    },
+    {
+      "title": "Crossed Wires",
+      "stage": "Public exponent",
+      "path": "rsa/public_exponent/crossed-wires",
+      "attachments": [
+        {
+          "text": "source.py",
+          "href": "/static/challenges/source_b3c3c786c649d363d27995545cf95dab.py",
+          "url": "https://cryptohack.org/static/challenges/source_b3c3c786c649d363d27995545cf95dab.py",
+          "download": true,
+          "saved_as": "files/source_b3c3c786c649d363d27995545cf95dab.py",
+          "status": 200,
+          "size": 589
+        },
+        {
+          "text": "output.txt",
+          "href": "/static/challenges/output_434cbf2b937bac1177bed299b2049a92.txt",
+          "url": "https://cryptohack.org/static/challenges/output_434cbf2b937bac1177bed299b2049a92.txt",
+          "download": true,
+          "saved_as": "files/output_434cbf2b937bac1177bed299b2049a92.txt",
+          "status": 200,
+          "size": 5057
+        }
+      ]
+    },
+    {
+      "title": "Everything is Still Big",
+      "stage": "Public exponent",
+      "path": "rsa/public_exponent/everything-is-still-big",
+      "attachments": [
+        {
+          "text": "source.py",
+          "href": "/static/challenges/source_359e2ea194f56fb72f63e7dff31b54ee.py",
+          "url": "https://cryptohack.org/static/challenges/source_359e2ea194f56fb72f63e7dff31b54ee.py",
+          "download": true,
+          "saved_as": "files/source_359e2ea194f56fb72f63e7dff31b54ee.py",
+          "status": 200,
+          "size": 589
+        },
+        {
+          "text": "output.txt",
+          "href": "/static/challenges/output_f554de954a6cd0a94142afc264107558.txt",
+          "url": "https://cryptohack.org/static/challenges/output_f554de954a6cd0a94142afc264107558.txt",
+          "download": true,
+          "saved_as": "files/output_f554de954a6cd0a94142afc264107558.txt",
+          "status": 200,
+          "size": 1556
+        }
+      ]
+    },
+    {
+      "title": "Endless Emails",
+      "stage": "Public exponent",
+      "path": "rsa/public_exponent/endless-emails",
+      "attachments": [
+        {
+          "text": "johan.py",
+          "href": "/static/challenges/johan_335f59b72545e3e27e60453719d50288.py",
+          "url": "https://cryptohack.org/static/challenges/johan_335f59b72545e3e27e60453719d50288.py",
+          "download": true,
+          "saved_as": "files/johan_335f59b72545e3e27e60453719d50288.py",
+          "status": 200,
+          "size": 392
+        },
+        {
+          "text": "output.txt",
+          "href": "/static/challenges/output_0ef6d6343784e59e2f44f61d2d29896f.txt",
+          "url": "https://cryptohack.org/static/challenges/output_0ef6d6343784e59e2f44f61d2d29896f.txt",
+          "download": true,
+          "saved_as": "files/output_0ef6d6343784e59e2f44f61d2d29896f.txt",
+          "status": 200,
+          "size": 8757
+        }
+      ]
+    },
+    {
+      "title": "Infinite Descent",
+      "stage": "Primes Part 2",
+      "path": "rsa/primes_2/infinite-descent",
+      "attachments": [
+        {
+          "text": "descent.py",
+          "href": "/static/challenges/descent_240fda375202c97a3cbaf3fdedbb8266.py",
+          "url": "https://cryptohack.org/static/challenges/descent_240fda375202c97a3cbaf3fdedbb8266.py",
+          "download": true,
+          "saved_as": "files/descent_240fda375202c97a3cbaf3fdedbb8266.py",
+          "status": 200,
+          "size": 508
+        },
+        {
+          "text": "output.txt",
+          "href": "/static/challenges/output_14f82a67efe7b7edffb810dbb7ab5f27.txt",
+          "url": "https://cryptohack.org/static/challenges/output_14f82a67efe7b7edffb810dbb7ab5f27.txt",
+          "download": true,
+          "saved_as": "files/output_14f82a67efe7b7edffb810dbb7ab5f27.txt",
+          "status": 200,
+          "size": 2485
+        }
+      ]
+    },
+    {
+      "title": "Marin's Secrets",
+      "stage": "Primes Part 2",
+      "path": "rsa/primes_2/marin-s-secrets",
+      "attachments": [
+        {
+          "text": "marin.py",
+          "href": "/static/challenges/marin_06e647881a0f6f2480d48c7f18f0274e.py",
+          "url": "https://cryptohack.org/static/challenges/marin_06e647881a0f6f2480d48c7f18f0274e.py",
+          "download": true,
+          "saved_as": "files/marin_06e647881a0f6f2480d48c7f18f0274e.py",
+          "status": 200,
+          "size": 428
+        },
+        {
+          "text": "output.txt",
+          "href": "/static/challenges/output_f194012343666ced1a6699d196c8adc5.txt",
+          "url": "https://cryptohack.org/static/challenges/output_f194012343666ced1a6699d196c8adc5.txt",
+          "download": true,
+          "saved_as": "files/output_f194012343666ced1a6699d196c8adc5.txt",
+          "status": 200,
+          "size": 2718
+        }
+      ]
+    },
+    {
+      "title": "Fast Primes",
+      "stage": "Primes Part 2",
+      "path": "rsa/primes_2/fast-primes",
+      "attachments": [
+        {
+          "text": "fast_primes.py",
+          "href": "/static/challenges/fast_primes_d50f598035bc3bedfa9fcff8cc08ece7.py",
+          "url": "https://cryptohack.org/static/challenges/fast_primes_d50f598035bc3bedfa9fcff8cc08ece7.py",
+          "download": true,
+          "saved_as": "files/fast_primes_d50f598035bc3bedfa9fcff8cc08ece7.py",
+          "status": 200,
+          "size": 1920
+        },
+        {
+          "text": "key.pem",
+          "href": "/static/challenges/key_17a08b7040db46308f8b9a19894f9f95.pem",
+          "url": "https://cryptohack.org/static/challenges/key_17a08b7040db46308f8b9a19894f9f95.pem",
+          "download": true,
+          "saved_as": "files/key_17a08b7040db46308f8b9a19894f9f95.pem",
+          "status": 200,
+          "size": 177
+        },
+        {
+          "text": "ciphertext.txt",
+          "href": "/static/challenges/ciphertext_98a448b6bbcd080909d235e5da5e9d56.txt",
+          "url": "https://cryptohack.org/static/challenges/ciphertext_98a448b6bbcd080909d235e5da5e9d56.txt",
+          "download": true,
+          "saved_as": "files/ciphertext_98a448b6bbcd080909d235e5da5e9d56.txt",
+          "status": 200,
+          "size": 128
+        }
+      ]
+    },
+    {
+      "title": "Ron was Wrong, Whit is Right",
+      "stage": "Primes Part 2",
+      "path": "rsa/primes_2/ron-was-wrong-whit-is-right",
+      "attachments": [
+        {
+          "text": "excerpt.py",
+          "href": "/static/challenges/excerpt_fde5288e8de326c341ced61e9fea92ba.py",
+          "url": "https://cryptohack.org/static/challenges/excerpt_fde5288e8de326c341ced61e9fea92ba.py",
+          "download": true,
+          "saved_as": "files/excerpt_fde5288e8de326c341ced61e9fea92ba.py",
+          "status": 200,
+          "size": 278
+        },
+        {
+          "text": "keys_and_messages.zip",
+          "href": "/static/challenges/keys_and_messages_701dba5b1a84cb168547ec18227a7740.zip",
+          "url": "https://cryptohack.org/static/challenges/keys_and_messages_701dba5b1a84cb168547ec18227a7740.zip",
+          "download": true,
+          "saved_as": "files/keys_and_messages_701dba5b1a84cb168547ec18227a7740.zip",
+          "status": 200,
+          "size": 64053
+        }
+      ]
+    },
+    {
+      "title": "RSA Backdoor Viability",
+      "stage": "Primes Part 2",
+      "path": "rsa/primes_2/rsa-backdoor-viability",
+      "attachments": [
+        {
+          "text": "complex_primes.py",
+          "href": "/static/challenges/complex_primes_2d261cc3ab7fb63530d172e045861190.py",
+          "url": "https://cryptohack.org/static/challenges/complex_primes_2d261cc3ab7fb63530d172e045861190.py",
+          "download": true,
+          "saved_as": "files/complex_primes_2d261cc3ab7fb63530d172e045861190.py",
+          "status": 200,
+          "size": 530
+        },
+        {
+          "text": "output.txt",
+          "href": "/static/challenges/output_57c296f30a4d023c3c29f9b311da7c85.txt",
+          "url": "https://cryptohack.org/static/challenges/output_57c296f30a4d023c3c29f9b311da7c85.txt",
+          "download": true,
+          "saved_as": "files/output_57c296f30a4d023c3c29f9b311da7c85.txt",
+          "status": 200,
+          "size": 2486
+        }
+      ]
+    },
+    {
+      "title": "Bespoke Padding",
+      "stage": "Padding",
+      "path": "rsa/rsa_padding/bespoke-padding",
+      "attachments": [
+        {
+          "text": "13386.py",
+          "href": "/static/challenges/13386_42e6fb9bddd96dc87c9b79435e226329.py",
+          "url": "https://cryptohack.org/static/challenges/13386_42e6fb9bddd96dc87c9b79435e226329.py",
+          "download": true,
+          "saved_as": "files/13386_42e6fb9bddd96dc87c9b79435e226329.py",
+          "status": 200,
+          "size": 1412
+        }
+      ]
+    },
+    {
+      "title": "Null or Never",
+      "stage": "Padding",
+      "path": "rsa/rsa_padding/null-or-never",
+      "attachments": [
+        {
+          "text": "pad_encrypt.py",
+          "href": "/static/challenges/pad_encrypt_17109ca1e3e5d0c90e47b9dd13fb6a60.py",
+          "url": "https://cryptohack.org/static/challenges/pad_encrypt_17109ca1e3e5d0c90e47b9dd13fb6a60.py",
+          "download": true,
+          "saved_as": "files/pad_encrypt_17109ca1e3e5d0c90e47b9dd13fb6a60.py",
+          "status": 200,
+          "size": 377
+        },
+        {
+          "text": "output.txt",
+          "href": "/static/challenges/output_a9b926b2ff21c0aeac188cd5191b1396.txt",
+          "url": "https://cryptohack.org/static/challenges/output_a9b926b2ff21c0aeac188cd5191b1396.txt",
+          "download": true,
+          "saved_as": "files/output_a9b926b2ff21c0aeac188cd5191b1396.txt",
+          "status": 200,
+          "size": 632
+        }
+      ]
+    },
+    {
+      "title": "Signing Server",
+      "stage": "Signatures Part 1",
+      "path": "rsa/rsa_signing/signing-server",
+      "attachments": [
+        {
+          "text": "13374.py",
+          "href": "/static/challenges/13374_fff7c798c8d0c351fd2d05aad6b9d9f0.py",
+          "url": "https://cryptohack.org/static/challenges/13374_fff7c798c8d0c351fd2d05aad6b9d9f0.py",
+          "download": true,
+          "saved_as": "files/13374_fff7c798c8d0c351fd2d05aad6b9d9f0.py",
+          "status": 200,
+          "size": 1044
+        }
+      ]
+    },
+    {
+      "title": "Let's Decrypt",
+      "stage": "Signatures Part 1",
+      "path": "rsa/rsa_signing/let-s-decrypt",
+      "attachments": [
+        {
+          "text": "13391.py",
+          "href": "/static/challenges/13391_5bb4e548ed254cef357799685c887460.py",
+          "url": "https://cryptohack.org/static/challenges/13391_5bb4e548ed254cef357799685c887460.py",
+          "download": true,
+          "saved_as": "files/13391_5bb4e548ed254cef357799685c887460.py",
+          "status": 200,
+          "size": 1902
+        }
+      ]
+    },
+    {
+      "title": "Blinding Light",
+      "stage": "Signatures Part 1",
+      "path": "rsa/rsa_signing/blinding-light",
+      "attachments": [
+        {
+          "text": "13376.py",
+          "href": "/static/challenges/13376_43ed0ce3200294aa8cd3a797abd12fc9.py",
+          "url": "https://cryptohack.org/static/challenges/13376_43ed0ce3200294aa8cd3a797abd12fc9.py",
+          "download": true,
+          "saved_as": "files/13376_43ed0ce3200294aa8cd3a797abd12fc9.py",
+          "status": 200,
+          "size": 1810
+        }
+      ]
+    },
+    {
+      "title": "Vote for Pedro",
+      "stage": "Signatures Part 2",
+      "path": "rsa/rsa_signing_2/vote-for-pedro",
+      "attachments": [
+        {
+          "text": "13375.py",
+          "href": "/static/challenges/13375_7eaca879f3911da349a7248f302c6344.py",
+          "url": "https://cryptohack.org/static/challenges/13375_7eaca879f3911da349a7248f302c6344.py",
+          "download": true,
+          "saved_as": "files/13375_7eaca879f3911da349a7248f302c6344.py",
+          "status": 200,
+          "size": 1088
+        },
+        {
+          "text": "alice.key",
+          "href": "/static/challenges/alice_668771701429c4137ea2c6c62249f619.key",
+          "url": "https://cryptohack.org/static/challenges/alice_668771701429c4137ea2c6c62249f619.key",
+          "download": true,
+          "saved_as": "files/alice_668771701429c4137ea2c6c62249f619.key",
+          "status": 200,
+          "size": 629
+        }
+      ]
+    },
+    {
+      "title": "Let's Decrypt Again",
+      "stage": "Signatures Part 2",
+      "path": "rsa/rsa_signing_2/let-s-decrypt-again",
+      "attachments": [
+        {
+          "text": "13394.py",
+          "href": "/static/challenges/13394_b45cc5d677b4748dffa4c6ffd5a6bc67.py",
+          "url": "https://cryptohack.org/static/challenges/13394_b45cc5d677b4748dffa4c6ffd5a6bc67.py",
+          "download": true,
+          "saved_as": "files/13394_b45cc5d677b4748dffa4c6ffd5a6bc67.py",
+          "status": 200,
+          "size": 4002
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,129 @@
+{
+  "id": 68,
+  "name": "Atarude",
+  "category": "Reverse",
+  "points": 51,
+  "author": null,
+  "tags": [
+    "Reverse"
+  ],
+  "hints": [],
+  "connection_info": null,
+  "solved_by_me": true,
+  "solves_count": 109,
+  "submit_endpoint": null,
+  "instance_info": {},
+  "downloaded_files": [
+    {
+      "url": "https://asisctf.com/tasks/Atarude_e39d6ecbf3f6d04dee16fc4a9046770fa3bdd9f3.txz",
+      "name": "Atarude_e39d6ecbf3f6d04dee16fc4a9046770fa3bdd9f3.txz",
+      "saved_path": "/home/light/Workspace/CTF/ASIS_CTF_2026/Reverse/Atarude/challenge/Atarude_e39d6ecbf3f6d04dee16fc4a9046770fa3bdd9f3.txz",
+      "success": true,
+      "source": "platform_attachment",
+      "message": "Đã tải trực tiếp thành công"
+    }
+  ],
+  "raw": {
+    "id": 68,
+    "name": "Atarude",
+    "description": "<p>The binary is willing to talk, but only in hex and only on its own terms. It gives you a few local oracle lanes, then refuses to hand over the flag until you forge fresh ciphertexts for all of them.\nReverse the weird little <a href=\"/tasks/Atarude_e39d6ecbf3f6d04dee16fc4a9046770fa3bdd9f3.txz\"><strong>Atarude</strong></a>, find the hidden relations, and convince flag.enc that you belong here.</p>\n",
+    "points": 500,
+    "published_at": "2026-08-29 14:00:00",
+    "fixedPoints": 19,
+    "solves_count": 3,
+    "first_n_solves": [
+      {
+        "team_id": 2457,
+        "team_name": "세상에 이란일이",
+        "challenge_name": "Atarude",
+        "challenge_id": 68,
+        "solved_at": "2026-08-29 14:13:17",
+        "time_to_solve": "0d 00h 13m 17s"
+      },
+      {
+        "team_id": 1511,
+        "team_name": "H-T8",
+        "challenge_name": "Atarude",
+        "challenge_id": 68,
+        "solved_at": "2026-08-29 14:14:37",
+        "time_to_solve": "0d 00h 14m 37s"
+      },
+      {
+        "team_id": 2564,
+        "team_name": "tjcsc",
+        "challenge_name": "Atarude",
+        "challenge_id": 68,
+        "solved_at": "2026-08-29 14:15:51",
+        "time_to_solve": "0d 00h 15m 51s"
+      }
+    ],
+    "SolvedByCurrentTeam": false,
+    "dynamic_points": 450,
+    "rewardable_dynamic_points": 423,
+    "chartData": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      3
+    ],
+    "categories": [
+      {
+        "id": 5,
+        "name": "Reverse",
+        "created_at": "2025-09-09T05:37:36.000000Z",
+        "updated_at": "2025-09-09T05:37:36.000000Z",
+        "pivot": {
+          "challenge_id": 68,
+          "category_id": 5
+        }
+      }
+    ],
+    "solves": [
+      {
+        "id": 2465,
+        "user_id": 4010,
+        "team_id": 2457,
+        "challenge_id": 68,
+        "created_at": "2026-08-29T14:13:17.000000Z",
+        "updated_at": "2026-08-29T14:13:17.000000Z"
+      },
+      {
+        "id": 2477,
+        "user_id": 2411,
+        "team_id": 1511,
+        "challenge_id": 68,
+        "created_at": "2026-08-29T14:14:37.000000Z",
+        "updated_at": "2026-08-29T14:14:37.000000Z"
+      },
+      {
+        "id": 2489,
+        "user_id": 4225,
+        "team_id": 2564,
+        "challenge_id": 68,
+        "created_at": "2026-08-29T14:15:51.000000Z",
+        "updated_at": "2026-08-29T14:15:51.000000Z"
+      }
+    ]
+  },
+  "status": {
+    "schema_version": 2,
+    "solve": "solved_by_me",
+    "flag": {
+      "value": null,
+      "state": "none"
+    },
+    "writeup": "none",
+    "writeup_auto": true,
+    "notes": "",
+    "labels": [],
+    "container": "none",
+    "synced_at": "2026-08-29T18:23:01Z",
+    "updated_at": "2026-08-29T18:23:01Z"
+  }
+}

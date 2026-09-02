@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Retail Banking Weekly Status Update - FirstBangla Mail</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+
+<div class="topbar">
+  <div class="topbar-left">
+    <div class="brand">
+      <div class="brand-mark">FB</div>
+      <span class="brand-name">FirstBangla Mail</span>
+    </div>
+  </div>
+  <div class="topbar-center">
+    <form class="searchform" method="get" action="/search" role="search">
+      <button type="submit" class="searchform-icon" aria-label="Search">&#128269;</button>
+      <input type="text" name="q" placeholder="Search mail" value="" autocomplete="off">
+      
+    </form>
+  </div>
+  <div class="topbar-right">
+    <span class="user-chip">
+      <span class="user-avatar">A</span>
+      <span class="user-name">Arif Khan</span>
+    </span>
+    <a class="logout-link" href="/logout">Sign out</a>
+  </div>
+</div>
+<div class="layout">
+  <div class="sidebar">
+    <div class="compose-btn" title="Composing is disabled in this archive view">+ Compose</div>
+    <nav class="folder-nav">
+      <a class="folder-link active" href="/mail/inbox">
+        <span class="folder-icon">&#128229;</span> Inbox
+        <span class="folder-count">761</span>
+      </a>
+      <a class="folder-link " href="/mail/sent">
+        <span class="folder-icon">&#128228;</span> Sent
+        <span class="folder-count">486</span>
+      </a>
+    </nav>
+    <div class="sidebar-footer">
+      arif.khan@firstbangla.com
+    </div>
+  </div>
+  <div class="main-pane">
+    <div class="detail-header">
+      <a class="back-link" href="/mail/inbox">&larr; Back to Inbox</a>
+      <a class="source-link" href="/mail/inbox/20230706-171222_0426_retail-banking-weekly-status-update.eml/source" target="_blank">View source</a>
+    </div>
+    <div class="detail-card">
+      <h1 class="detail-subject">Retail Banking Weekly Status Update</h1>
+      <div class="detail-meta">
+        <div class="detail-avatar">S</div>
+        <div class="detail-meta-text">
+          <div><strong>Shamsul Ahmed</strong> <span class="meta-addr">&lt;shamsul.ahmed@firstbangla.com&gt;</span></div>
+          <div class="meta-to">to Arif Khan <span class="meta-addr">&lt;arif.khan@firstbangla.com&gt;</span></div>
+        </div>
+        <div class="detail-date">06 Jul 2023, 05:12 PM</div>
+      </div>
+      <div class="detail-body">Dear Arif,
+
+Please find attached the retail banking weekly status update for your review. Kindly confirm once reviewed so we can proceed with the next steps.
+
+The Gulshan Branch team has flagged a minor discrepancy of BDT 26192 which has been reconciled as of today.
+
+Let me know if you need anything else before EOD.
+
+Regards,
+Shamsul Ahmed
+Retail Banking
+First Bangla Bank Ltd.
+</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

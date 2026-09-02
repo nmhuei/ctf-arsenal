@@ -1,0 +1,24 @@
+{
+  "id": "fdae5bbeaf0b0f16",
+  "name": "Custodian",
+  "category": "web",
+  "points": 233,
+  "author": "fg0x0",
+  "tags": [],
+  "hints": [],
+  "connection_info": null,
+  "solved_by_me": false,
+  "solves_count": 52,
+  "downloaded_files": [],
+  "raw": {
+    "id": "fdae5bbeaf0b0f16",
+    "name": "Custodian",
+    "description": "Half the traffic on this node is human and half is not, so the node trusts\nneither. Every request to a counterpart surface carries a Parity Signature.\nThe scheme is published. The node key is not.\n\nBehind the signature sits the custodian: the runtime that decides what a\ncounterpart is allowed to touch. Agents submit capability policies as\nbytecode and the custodian runs them on a tagged-value machine. The tags\nexist so that a policy can never turn a number it computed into a handle on\nregistry memory.\n\nThat is the whole security model for every agent on this node, and it is\ndocumented in full at `/docs`. Nothing is hidden from you except the\nimplementation.\n\nThe Registry keeps something above the policy window.\n\nYour terminal is an observer. Observers cannot submit.\n\n> [!CONNECTION]\n> https://custodian-4gyrjvn4.challenge.2026.haruulzangi.mn",
+    "category": "web",
+    "author": "fg0x0",
+    "files": [],
+    "points": 233,
+    "solves": 52,
+    "sortWeight": 0
+  }
+}

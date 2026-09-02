@@ -1,0 +1,18 @@
+#!/bin/sh
+# S40firewall — PhantomGate packet filter
+
+case "$1" in
+    start)
+        echo "[S40] Loading firewall rules..."
+        /usr/sbin/pg_firewall start
+        echo "[S40] Firewall active"
+        ;;
+    stop)
+        echo "[S40] Flushing firewall rules..."
+        /usr/sbin/pg_firewall stop
+        ;;
+    restart)
+        $0 stop
+        $0 start
+        ;;
+esac

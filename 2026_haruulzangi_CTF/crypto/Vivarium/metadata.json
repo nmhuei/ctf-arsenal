@@ -1,0 +1,38 @@
+{
+  "id": "7ece1b361200ceb7",
+  "name": "Vivarium",
+  "category": "crypto",
+  "points": 906,
+  "author": "flame",
+  "tags": [],
+  "hints": [],
+  "connection_info": null,
+  "solved_by_me": false,
+  "solves_count": 3,
+  "downloaded_files": [
+    {
+      "url": "https://2026.haruulzangi.mn/uploads/cd71ff6b1550fd5961f4e90b3c7066100da1f9d360d3f32228f5dbc85b8f7e88/crypto_vivarium.tar.gz",
+      "name": "crypto_vivarium.tar.gz",
+      "saved_path": "/home/light/Workspace/CTF/2026_haruulzangi_CTF/crypto/Vivarium/crypto_vivarium.tar.gz",
+      "success": true,
+      "source": "platform_attachment",
+      "message": "Direct download successful"
+    }
+  ],
+  "raw": {
+    "id": "7ece1b361200ceb7",
+    "name": "Vivarium",
+    "description": "The Commons keeps its Python snakes in a vivarium. Each one is sealed in\nan enclosure, safely separated from the vault where their food is stored.\n\nOr so the keepers thought. One particularly sneaky snake slipped through\nthe GPG socket connecting its enclosure to the vault.\n\nRun `/flag` and the vault will return an encrypted message. The public\nkey is available at `/flag.pub`; the rest is history.\n\nFollow the snake and recover the plaintext flag.\n\n> [!CONNECTION]\n> https://vivarium-lblgay6n.challenge.2026.haruulzangi.mn",
+    "category": "crypto",
+    "author": "flame",
+    "files": [
+      {
+        "name": "crypto_vivarium.tar.gz",
+        "url": "/uploads/cd71ff6b1550fd5961f4e90b3c7066100da1f9d360d3f32228f5dbc85b8f7e88/crypto_vivarium.tar.gz"
+      }
+    ],
+    "points": 906,
+    "solves": 3,
+    "sortWeight": 0
+  }
+}

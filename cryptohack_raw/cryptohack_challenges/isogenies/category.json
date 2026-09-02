@@ -1,0 +1,335 @@
+{
+  "title": "Isogenies",
+  "slug": "isogenies",
+  "url": "https://cryptohack.org/challenges/isogenies/",
+  "completed": "0",
+  "total": "23",
+  "description_text": "Isogenies Isogeny-based cryptography is a relatively new area of cryptography which began in the early 2000s with work by Couveignes (which was unpublished for more than a decade) and Rostovtsev and Stolbunov, who worked with hard homogenous spaces and isogeny-based protocols. Due to the mathematical complexity of the area, it's a fairly intimidating topic for many young researchers, but the mathematical richness is also a beautiful and alluring aspect which has driven a lot of research attention for the past twenty years. Of particular interest to cryptographers are supersingular elliptic curves. Considering the collection of isogenies between these curves as a graph, with (isomorphism classes) of curves as nodes and isogenies as edges, supersingular isogeny graphs have particular properties which make them attractive to designing asymmetric cryptographic primitives where public values are the start and end nodes, and the secret values are the paths between them. In 2022, isogeny-based cryptography went through its \"second-wave\" when it was shown that the isogeny-based key exchange mechanism known as \"SIDH\" could be broken in polynomial time thanks to work by the mathematician Kani from a paper published in 1996. As SIKE (built from SIDH) was a fourth-round candidate in the NIST post-quantum cryptography project, the complete break of the most well-known isogeny-based primitive has had a big impact on isogeny-based primitives. In a post-SIDH world, isogeny-based cryptography is now experiencing rapid progress in many different primitives thanks to constructive applications of the SIDH attack. One of the first descriptions of this is the PKE FESTA, and the variant QFESTA. More recently, an updated version of SQIsign (a digital signature algorithm currently in the NIST competition) was published which used work based on the SIDH-attack to dramatically improve performance of key generation, signing and verification.",
+  "stages": [
+    {
+      "title": "Introduction",
+      "slug": "iso_introduction"
+    },
+    {
+      "title": "Starter",
+      "slug": "iso_background"
+    },
+    {
+      "title": "Road to SIDH",
+      "slug": "road_to_sidh"
+    },
+    {
+      "title": "Road to CSIDH",
+      "slug": "road_to_csidh"
+    },
+    {
+      "title": "Isogeny Challenges",
+      "slug": "iso_challenges"
+    }
+  ],
+  "challenge_count": 23,
+  "challenges": [
+    {
+      "title": "Introduction to Isogenies",
+      "stage": "Introduction",
+      "path": "isogenies/iso_introduction/introduction-to-isogenies",
+      "attachments": []
+    },
+    {
+      "title": "The j-invariant",
+      "stage": "Starter",
+      "path": "isogenies/iso_background/the-j-invariant",
+      "attachments": []
+    },
+    {
+      "title": "Where's the Supersingular Curve",
+      "stage": "Starter",
+      "path": "isogenies/iso_background/where-s-the-supersingular-curve",
+      "attachments": [
+        {
+          "text": "curves.sage",
+          "href": "/static/challenges/curves_1e476e7d608576c05a13b269d1481602.sage",
+          "url": "https://cryptohack.org/static/challenges/curves_1e476e7d608576c05a13b269d1481602.sage",
+          "download": true,
+          "saved_as": "files/curves_1e476e7d608576c05a13b269d1481602.sage",
+          "status": 200,
+          "size": 4311
+        }
+      ]
+    },
+    {
+      "title": "Image Point Arithmetic",
+      "stage": "Starter",
+      "path": "isogenies/iso_background/image-point-arithmetic",
+      "attachments": []
+    },
+    {
+      "title": "Montgomery Curves",
+      "stage": "Starter",
+      "path": "isogenies/iso_background/montgomery-curves",
+      "attachments": []
+    },
+    {
+      "title": "DLOG on the Surface",
+      "stage": "Starter",
+      "path": "isogenies/iso_background/dlog-on-the-surface",
+      "attachments": [
+        {
+          "text": "source.sage",
+          "href": "/static/challenges/source_3002be5281f58b7f4fc91369877ee15d.sage",
+          "url": "https://cryptohack.org/static/challenges/source_3002be5281f58b7f4fc91369877ee15d.sage",
+          "download": true,
+          "saved_as": "files/source_3002be5281f58b7f4fc91369877ee15d.sage",
+          "status": 200,
+          "size": 845
+        },
+        {
+          "text": "output.txt",
+          "href": "/static/challenges/output_a9fcd0db30822de938de639df287ab54.txt",
+          "url": "https://cryptohack.org/static/challenges/output_a9fcd0db30822de938de639df287ab54.txt",
+          "download": true,
+          "saved_as": "files/output_a9fcd0db30822de938de639df287ab54.txt",
+          "status": 200,
+          "size": 919
+        }
+      ]
+    },
+    {
+      "title": "Two Isogenies",
+      "stage": "Road to SIDH",
+      "path": "isogenies/road_to_sidh/two-isogenies",
+      "attachments": []
+    },
+    {
+      "title": "Three Isogenies",
+      "stage": "Road to SIDH",
+      "path": "isogenies/road_to_sidh/three-isogenies",
+      "attachments": []
+    },
+    {
+      "title": "Composite Isogenies",
+      "stage": "Road to SIDH",
+      "path": "isogenies/road_to_sidh/composite-isogenies",
+      "attachments": []
+    },
+    {
+      "title": "SIDH Key Exchange",
+      "stage": "Road to SIDH",
+      "path": "isogenies/road_to_sidh/sidh-key-exchange",
+      "attachments": [
+        {
+          "text": "source.sage",
+          "href": "/static/challenges/source_900b394e3f090ae9a3a0f1fb90f3c985.sage",
+          "url": "https://cryptohack.org/static/challenges/source_900b394e3f090ae9a3a0f1fb90f3c985.sage",
+          "download": true,
+          "saved_as": "files/source_900b394e3f090ae9a3a0f1fb90f3c985.sage",
+          "status": 200,
+          "size": 2078
+        }
+      ]
+    },
+    {
+      "title": "Breaking SIDH",
+      "stage": "Road to SIDH",
+      "path": "isogenies/road_to_sidh/breaking-sidh",
+      "attachments": [
+        {
+          "text": "source.sage",
+          "href": "/static/challenges/source_0e46e87ca6110ad062f6ce1819ded232.sage",
+          "url": "https://cryptohack.org/static/challenges/source_0e46e87ca6110ad062f6ce1819ded232.sage",
+          "download": true,
+          "saved_as": "files/source_0e46e87ca6110ad062f6ce1819ded232.sage",
+          "status": 200,
+          "size": 3960
+        }
+      ]
+    },
+    {
+      "title": "Special Isogenies",
+      "stage": "Road to CSIDH",
+      "path": "isogenies/road_to_csidh/special-isogenies",
+      "attachments": []
+    },
+    {
+      "title": "Prime Power Isogenies",
+      "stage": "Road to CSIDH",
+      "path": "isogenies/road_to_csidh/prime-power-isogenies",
+      "attachments": []
+    },
+    {
+      "title": "Secret Exponents",
+      "stage": "Road to CSIDH",
+      "path": "isogenies/road_to_csidh/secret-exponents",
+      "attachments": []
+    },
+    {
+      "title": "Twisted CSIDH Isogenies",
+      "stage": "Road to CSIDH",
+      "path": "isogenies/road_to_csidh/twisted-csidh-isogenies",
+      "attachments": []
+    },
+    {
+      "title": "CSIDH Key Exchange",
+      "stage": "Road to CSIDH",
+      "path": "isogenies/road_to_csidh/csidh-key-exchange",
+      "attachments": [
+        {
+          "text": "source.sage",
+          "href": "/static/challenges/source_47e3caad5ebcbefb8210c11b8c93efe0.sage",
+          "url": "https://cryptohack.org/static/challenges/source_47e3caad5ebcbefb8210c11b8c93efe0.sage",
+          "download": true,
+          "saved_as": "files/source_47e3caad5ebcbefb8210c11b8c93efe0.sage",
+          "status": 200,
+          "size": 1795
+        }
+      ]
+    },
+    {
+      "title": "What's My Kernel",
+      "stage": "Isogeny Challenges",
+      "path": "isogenies/iso_challenges/what-s-my-kernel",
+      "attachments": [
+        {
+          "text": "source.sage",
+          "href": "/static/challenges/source_1b6b34f345b56131770fb63819ea4435.sage",
+          "url": "https://cryptohack.org/static/challenges/source_1b6b34f345b56131770fb63819ea4435.sage",
+          "download": true,
+          "saved_as": "files/source_1b6b34f345b56131770fb63819ea4435.sage",
+          "status": 200,
+          "size": 999
+        },
+        {
+          "text": "output.txt",
+          "href": "/static/challenges/output_f0f36907a0a0be13b6587ab3cfdde72a.txt",
+          "url": "https://cryptohack.org/static/challenges/output_f0f36907a0a0be13b6587ab3cfdde72a.txt",
+          "download": true,
+          "saved_as": "files/output_f0f36907a0a0be13b6587ab3cfdde72a.txt",
+          "status": 200,
+          "size": 4310
+        }
+      ]
+    },
+    {
+      "title": "André Encoding",
+      "stage": "Isogeny Challenges",
+      "path": "isogenies/iso_challenges/andr-encoding",
+      "attachments": [
+        {
+          "text": "source.sage",
+          "href": "/static/challenges/source_b17b07370a5a535ebc81947d2f1d0d03.sage",
+          "url": "https://cryptohack.org/static/challenges/source_b17b07370a5a535ebc81947d2f1d0d03.sage",
+          "download": true,
+          "saved_as": "files/source_b17b07370a5a535ebc81947d2f1d0d03.sage",
+          "status": 200,
+          "size": 1852
+        },
+        {
+          "text": "output.txt",
+          "href": "/static/challenges/output_6e30f9b5a6cd1356d485b369927bb106.txt",
+          "url": "https://cryptohack.org/static/challenges/output_6e30f9b5a6cd1356d485b369927bb106.txt",
+          "download": true,
+          "saved_as": "files/output_6e30f9b5a6cd1356d485b369927bb106.txt",
+          "status": 200,
+          "size": 57092
+        }
+      ]
+    },
+    {
+      "title": "Better than Linear",
+      "stage": "Isogeny Challenges",
+      "path": "isogenies/iso_challenges/better-than-linear",
+      "attachments": []
+    },
+    {
+      "title": "Abelian SIDH",
+      "stage": "Isogeny Challenges",
+      "path": "isogenies/iso_challenges/abelian-sidh",
+      "attachments": [
+        {
+          "text": "source.sage",
+          "href": "/static/challenges/source_68276706efaf461ee2c4266b44cce964.sage",
+          "url": "https://cryptohack.org/static/challenges/source_68276706efaf461ee2c4266b44cce964.sage",
+          "download": true,
+          "saved_as": "files/source_68276706efaf461ee2c4266b44cce964.sage",
+          "status": 200,
+          "size": 2004
+        },
+        {
+          "text": "output.txt",
+          "href": "/static/challenges/output_40889cc050743c3dd764374fd6a064ba.txt",
+          "url": "https://cryptohack.org/static/challenges/output_40889cc050743c3dd764374fd6a064ba.txt",
+          "download": true,
+          "saved_as": "files/output_40889cc050743c3dd764374fd6a064ba.txt",
+          "status": 200,
+          "size": 2772
+        }
+      ]
+    },
+    {
+      "title": "Dual Masters",
+      "stage": "Isogeny Challenges",
+      "path": "isogenies/iso_challenges/dual-masters",
+      "attachments": [
+        {
+          "text": "source.sage",
+          "href": "/static/challenges/source_59775a14f8b0efbd2d22ccc03830e504.sage",
+          "url": "https://cryptohack.org/static/challenges/source_59775a14f8b0efbd2d22ccc03830e504.sage",
+          "download": true,
+          "saved_as": "files/source_59775a14f8b0efbd2d22ccc03830e504.sage",
+          "status": 200,
+          "size": 865
+        },
+        {
+          "text": "output.txt",
+          "href": "/static/challenges/output_dddb20abfff441071490f793e7851802.txt",
+          "url": "https://cryptohack.org/static/challenges/output_dddb20abfff441071490f793e7851802.txt",
+          "download": true,
+          "saved_as": "files/output_dddb20abfff441071490f793e7851802.txt",
+          "status": 200,
+          "size": 2662
+        }
+      ]
+    },
+    {
+      "title": "Meet me in the Claw",
+      "stage": "Isogeny Challenges",
+      "path": "isogenies/iso_challenges/meet-me-in-the-claw",
+      "attachments": [
+        {
+          "text": "source.sage",
+          "href": "/static/challenges/source_148459f883951ab12ee054bf01ea6e92.sage",
+          "url": "https://cryptohack.org/static/challenges/source_148459f883951ab12ee054bf01ea6e92.sage",
+          "download": true,
+          "saved_as": "files/source_148459f883951ab12ee054bf01ea6e92.sage",
+          "status": 200,
+          "size": 1422
+        }
+      ]
+    },
+    {
+      "title": "A True Genus",
+      "stage": "Isogeny Challenges",
+      "path": "isogenies/iso_challenges/a-true-genus",
+      "attachments": [
+        {
+          "text": "source.sage",
+          "href": "/static/challenges/source_9eabb9b7ed963f9e656c3710148f5545.sage",
+          "url": "https://cryptohack.org/static/challenges/source_9eabb9b7ed963f9e656c3710148f5545.sage",
+          "download": true,
+          "saved_as": "files/source_9eabb9b7ed963f9e656c3710148f5545.sage",
+          "status": 200,
+          "size": 2590
+        },
+        {
+          "text": "output.txt",
+          "href": "/static/challenges/output_6cddf765597314b7a2c5b737c98233b2.txt",
+          "url": "https://cryptohack.org/static/challenges/output_6cddf765597314b7a2c5b737c98233b2.txt",
+          "download": true,
+          "saved_as": "files/output_6cddf765597314b7a2c5b737c98233b2.txt",
+          "status": 200,
+          "size": 24387
+        }
+      ]
+    }
+  ]
+}

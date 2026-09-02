@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PG-400 - Dashboard</title>
+<link rel="stylesheet" href="/www/css/style.css">
+</head>
+<body>
+<div class="app-layout">
+  <nav class="sidebar">
+    <div class="sidebar-brand">
+      <span class="brand-icon">&#9651;</span>
+      <span>PG-400</span>
+    </div>
+    <ul class="nav-list">
+      <li><a href="/www/dashboard.html" class="active">Dashboard</a></li>
+      <li><a href="/www/settings.html">Network Settings</a></li>
+      <li><a href="/www/logs.html">System Logs</a></li>
+      <li><a href="/www/firmware.html">Firmware Update</a></li>
+    </ul>
+    <div class="sidebar-footer">
+      <a href="/www/index.html" class="logout-link">Logout</a>
+    </div>
+  </nav>
+  <main class="content">
+    <header class="topbar">
+      <h2>Dashboard</h2>
+      <span class="clock" id="clock"></span>
+    </header>
+    <section class="dashboard-grid">
+      <div class="card">
+        <h3>Device Info</h3>
+        <table class="info-table">
+          <tr><td>Model</td><td>PhantomGate PG-400</td></tr>
+          <tr><td>Firmware</td><td>v4.2.1</td></tr>
+          <tr><td>Serial</td><td>PG4-2024-07A391</td></tr>
+          <tr><td>Uptime</td><td>14d 7h 32m</td></tr>
+        </table>
+      </div>
+      <div class="card">
+        <h3>CPU Load</h3>
+        <div class="meter-wrap">
+          <div class="meter"><div class="meter-fill" style="width:23%"></div></div>
+          <span class="meter-label">23%</span>
+        </div>
+        <p class="card-note">ARM Cortex-A53 @ 1.2 GHz</p>
+      </div>
+      <div class="card">
+        <h3>Memory Usage</h3>
+        <div class="meter-wrap">
+          <div class="meter"><div class="meter-fill" style="width:41%"></div></div>
+          <span class="meter-label">41% (52 / 128 MB)</span>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Network</h3>
+        <table class="info-table">
+          <tr><td>Interface</td><td>eth0</td></tr>
+          <tr><td>Status</td><td><span class="status-up">UP</span></td></tr>
+          <tr><td>IP Address</td><td>192.168.1.1</td></tr>
+          <tr><td>MAC</td><td>02:PG:40:0A:B3:91</td></tr>
+          <tr><td>RX / TX</td><td>1.2 GB / 340 MB</td></tr>
+        </table>
+      </div>
+      <div class="card">
+        <h3>Firewall</h3>
+        <table class="info-table">
+          <tr><td>Status</td><td><span class="status-up">ACTIVE</span></td></tr>
+          <tr><td>Rules loaded</td><td>47</td></tr>
+          <tr><td>Blocked today</td><td>1,204</td></tr>
+        </table>
+      </div>
+      <div class="card">
+        <h3>VPN Tunnel</h3>
+        <table class="info-table">
+          <tr><td>Mode</td><td>IPSec IKEv2</td></tr>
+          <tr><td>Status</td><td><span class="status-up">ESTABLISHED</span></td></tr>
+          <tr><td>Peer</td><td>10.0.0.1</td></tr>
+        </table>
+      </div>
+    </section>
+  </main>
+</div>
+<footer>&copy; 2024 PhantomGate Systems Ltd.</footer>
+<script src="/www/js/app.js"></script>
+</body>
+</html>

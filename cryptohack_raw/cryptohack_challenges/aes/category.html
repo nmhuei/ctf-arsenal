@@ -1,0 +1,1790 @@
+<!DOCTYPE html><html lang="en" dir="ltr" class="dark-mode"><head>
+        <title>CryptoHack – Symmetric Ciphers challenges</title>
+
+        <link rel="stylesheet" type="text/css" href="/static/css/materialize.min.css">
+        <link rel="stylesheet" type="text/css" href="/static/css/main.css?ver=2">
+        <link rel="stylesheet" type="text/css" href="/static/css/light.css">
+
+        <link rel="stylesheet" type="text/css" href="/static/css/flag-icon.min.css">
+        <link rel="stylesheet" type="text/css" href="/static/css/all.min.css">
+        <link rel="stylesheet" type="text/css" href="/static/css/v4-shims.min.css">
+
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        
+<link rel="stylesheet" href="/static/css/katex.min.css">
+<script defer="" src="/static/js/katex.min.js"></script>
+<script defer="" src="/static/js/katex-auto-render.min.js"></script>
+<script defer="" src="/static/js/katex-render-options.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, katex_render_options);
+    });
+</script>
+
+
+        <!-- Generic Metadata -->
+        <link rel="canonical" href="https://cryptohack.org">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://cryptohack.org">
+        <meta property="og:site_name" content="CryptoHack">
+        <meta property="og:image" content="https://cryptohack.org/static/img/banner.png">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@CryptoHack__">
+        <meta name="twitter:image" content="https://cryptohack.org/static/img/banner.png">
+
+        <!-- Favicon -->
+        <link rel="apple-touch-icon" sizes="57x57" href="/static/favicon/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="/static/favicon/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/static/favicon/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/static/favicon/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/static/favicon/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/static/favicon/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/static/favicon/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/static/favicon/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/static/favicon/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="36x36" href="/static/favicon/android-icon-36x36.png">
+        <link rel="icon" type="image/png" sizes="48x48" href="/static/favicon/android-icon-48x48.png">
+        <link rel="icon" type="image/png" sizes="72x72" href="/static/favicon/android-icon-72x72.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="/static/favicon/android-icon-96x96.png">
+        <link rel="icon" type="image/png" sizes="144x144" href="/static/favicon/android-icon-144x144.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="/static/favicon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="/static/favicon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon/favicon-16x16.png">
+
+        <script>
+            function isLightThemeSelected() {
+                return document.cookie.match(/theme=light/i) != null
+            }
+
+            function setThemeFromCookie() {
+                var html = document.getElementsByTagName('html')[0]
+                html.className = isLightThemeSelected() ? 'light-mode' : 'dark-mode'
+                console.log('Loaded cookie: ' + document.cookie)
+            }
+
+            (function() {
+              setThemeFromCookie()
+            })();
+        </script>
+    </head>
+    <body class="competition-page">
+      <div class="wrapper">
+        <header>
+            <nav class="top-nav nav-fixed">
+                <div class="nav-wrapper">
+
+                    <div><a href="#" data-activates="nav-mobile" class="button-collapse top-nav full"><i class="fas fa-bars" aria-label="Menu Bars"></i></a></div>
+                    <a class="logo-link" href="/"><span class="outline">CRYPTOHACK</span></a>
+
+                    
+
+                    <ul class="right hide-on-med-and-down">
+                        
+                        
+                        <li><a href="/register/">Register</a></li>
+                        
+                        <li><a href="/login/">Login</a></li>
+                        
+                    </ul>
+                </div>
+
+            </nav>
+            <ul id="nav-mobile" class="side-nav fixed" style="left: 0px;">
+
+
+                <li><a href="/courses/">
+                    <div class="side-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <div class="side-text">Courses</div>
+                </a></li>
+
+                <li><a href="/challenges/">
+                    <div class="side-icon"><i class="fas fa-flag"></i></div>
+                    <div class="side-text">Challenges</div>
+                </a></li>
+
+                <!-- <div class="divider" /></div> -->
+                
+                <li><a href="/scoreboard/">
+                    <div class="side-icon"><i class="fas fa-chart-line"></i></div>
+                    <div class="side-text">Scoreboard</div>
+                </a></li>
+
+                <li><a href="/blog/">
+                    <div class="side-icon"><i class="fas fa-brain" style="margin-left: -2px;"></i></div>
+                    <div class="side-text">Blog</div>
+                </a></li>
+
+                <li><a href="/chat/">
+                    <div class="side-icon"><i class="fas fa-comments"></i></div>
+<!--                     <div class="side-icon"><img src="/static/img/Discord-Logo-Color.svg" width="25" style="margin: 14px 0 0 -5px;"></div> -->
+                    <div class="side-text">Chat</div>
+                </a></li>
+
+                <li><a href="/careers/">
+                    <div class="side-icon"><i class="fas fa-briefcase"></i></div>
+                    <div class="side-text">Careers</div>
+                </a></li>
+
+                <li><a href="/faq/">
+                    <div class="side-icon"><i class="fas fa-question"></i></div>
+                    <div class="side-text">FAQ</div>
+                </a></li>
+
+                
+
+                
+
+                
+                
+                <li><a href="/register/">
+                        <div class="side-icon"><i class="fas fa-user-plus"></i></div>
+                        <div class="side-text">Register</div>
+                    </a></li>
+                
+                <li><a href="/login/">
+                        <div class="side-icon"><i class="fas fa-lock"></i></div>
+                        <div class="side-text">Login</div>
+                    </a></li>
+                
+            </ul>
+        </header>
+        <div class="cont">
+            
+        </div>
+        <div class="cont">
+            
+
+
+
+<div class="categoryDescription">
+  
+  <div class="categoryText">
+    <h2 class="categoryTitle">Symmetric Ciphers</h2>
+    <p>Symmetric-key ciphers are algorithms that use the same key both to encrypt and decrypt data. The goal is to use short secret keys to securely and efficiently send long messages.<br><br>The most famous symmetric-key cipher is Advanced Encryption Standard (<a href="https://en.wikipedia.org/wiki/Advanced_Encryption_Standard" target="_blank">AES</a>), standardised in 2001. It's so widespread that modern processors even contain <a href="https://en.wikipedia.org/wiki/AES_instruction_set" target="_blank">special instruction sets</a> to perform AES operations. The first series of challenges here guides you through the inner workings of AES, showing you how its separate components work together to make it a secure cipher. By the end you will have built your own code for doing AES decryption!<br><br>We can split symmetric-key ciphers into two types, block ciphers and stream ciphers. Block ciphers break up a plaintext into fixed-length blocks, and send each block through an encryption function together with a secret key. Stream ciphers meanwhile encrypt one byte of plaintext at a time, by XORing a pseudo-random keystream with the data. AES is a block cipher but can be turned into a stream cipher using modes of operation such as CTR.<br><br>Block ciphers only specify how to encrypt and decrypt individual blocks, and a <a href="https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation" target="_blank">mode of operation</a> must be used to apply the cipher to longer messages. This is the point where real world implementations often fail spectacularly, since developers do not understand the subtle implications of using particular modes. The remainder of the challenges see you attacking common misuses of various modes.</p>
+  </div>
+  <div class="categoryImage">
+  <img src="/static/img/category/aes.png" alt="">
+  </div>
+  
+
+</div>
+
+
+<div class="row">
+    <div class="col s12 m6 noPadding">
+        <div class="left">
+        <div class="select-wrapper"><span class="caret">▼</span><input type="text" class="select-dropdown" readonly="true" data-activates="select-options-fd52a757-bb13-182d-f801-f472285c0fb5" value="Show all stages"><ul id="select-options-fd52a757-bb13-182d-f801-f472285c0fb5" class="dropdown-content select-dropdown"><li class=""><span>Show all stages</span></li><li class=""><span>How AES Works</span></li><li class=""><span>Symmetric Starter</span></li><li class=""><span>Block Ciphers 1</span></li><li class=""><span>Stream Ciphers</span></li><li class=""><span>Padding Attacks</span></li><li class=""><span>Authenticated Encryption</span></li><li class=""><span>Linear Cryptanalysis</span></li></ul><select onchange="filterCategories(this);" class="initialized">
+            <option value="*">Show all stages</option>
+            
+            <option value="aes-understanding">How AES Works</option>
+            
+            <option value="block-starter">Symmetric Starter</option>
+            
+            <option value="block">Block Ciphers 1</option>
+            
+            <option value="stream">Stream Ciphers</option>
+            
+            <option value="padding">Padding Attacks</option>
+            
+            <option value="auth-enc">Authenticated Encryption</option>
+            
+            <option value="linear-cryptanalysis">Linear Cryptanalysis</option>
+            
+        </select></div>
+        </div>
+    </div>
+    <div class="col s12 m6 noPadding">
+      <p class="toggleCheckbox"><input type="checkbox" id="toggleSolved" class="filled-in"><label for="toggleSolved">Hide Solved Challenges</label></p>
+    </div>
+</div>
+
+<span class="stage" data-stage="aes-understanding">
+    <hr>
+    <div class="challengeInfo">
+      <span><h4>How AES Works</h4></span>
+      <span class="flexToggle"><a class="stage-collapse" data-collapse="aes-understanding" href="#">Toggle</a></span>
+    </div>
+    
+    <div class="clearfix"></div>
+    <ul class="collapsible popout" data-collapsible="expandable">
+        
+        <li class="challenge active" data-category="107" data-stage="aes-understanding">
+            <div id="header-aes0" data-challenge="aes0" class="collapsible-header active">
+                
+                <i id="check-aes0" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="8a49f2b0-580f-7871-8891-3bcb333b47cb"></i>
+                <i id="uncheck-aes0" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="c6ba31c6-71f5-200e-238a-7f71d3c7b708"></i>
+                
+                <div class="challenge-text truncate">Keyed Permutations</div>
+                <span class="right">
+                    
+                    5 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/aes0/solves/">
+                        <span id="solves-aes0">19281 Solves</span>
+                    </a>
+                    
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body" style="display: block;">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    AES, like all good block ciphers, performs a "keyed permutation". This means that it maps every possible input block to a unique output block, with a key determining which permutation to perform.<br><br><span class="note"><i class="fas fa-brain"></i>A "block" just refers to a fixed number of bits or bytes, which may represent any kind of data. AES processes a block and outputs another block. We'll be specifically talking the variant of AES which works on 128 bit (16 byte) blocks and a 128 bit key, known as AES-128.</span><br><br>Using the same key, the permutation can be performed in reverse, mapping the output block back to the original input block. It is important that there is a one-to-one correspondence between input and output blocks, otherwise we wouldn't be able to rely on the ciphertext to decrypt back to the same plaintext we started with.<br><br>What is the mathematical term for a one-to-one correspondence?
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Faes%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+        <li class="challenge active" data-category="104" data-stage="aes-understanding">
+            <div id="header-aes1" data-challenge="aes1" class="collapsible-header active">
+                
+                <i id="check-aes1" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="760c2c2e-467d-3942-12ae-7248a65a044b"></i>
+                <i id="uncheck-aes1" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="33030d81-b9f2-72dc-7a55-82d45d82e444"></i>
+                
+                <div class="challenge-text truncate">Resisting Bruteforce</div>
+                <span class="right">
+                    
+                    10 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/aes1/solves/">
+                        <span id="solves-aes1">17702 Solves</span>
+                    </a>
+                    
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body" style="display: block;">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    If a block cipher is secure, there should be no way for an attacker to distinguish the output of AES from a <a href="https://en.wikipedia.org/wiki/Pseudorandom_permutation" target="_blank">random permutation</a> of bits. Furthermore, there should be no better way to undo the permutation than simply bruteforcing every possible key. That's why academics consider a cipher theoretically "broken" if they can find an attack that takes fewer steps to perform than bruteforcing the key, even if that attack is practically infeasible.<br><br><span class="note"><i class="fas fa-pencil-alt"></i>How difficult is it to bruteforce a 128-bit keyspace? <a href="https://crypto.stackexchange.com/a/48669" target="_blank">Somebody estimated</a> that if you turned the power of the entire Bitcoin mining network against an AES-128 key, it would take over a hundred times the age of the universe to crack the key.</span><br><br>It turns out that there is <a href="https://en.wikipedia.org/wiki/Biclique_attack" target="_blank">an attack</a> on AES that's better than bruteforce, but only slightly – it lowers the security level of AES-128 down to 126.1 bits, and hasn't been improved on for over 8 years. Given the large "security margin" provided by 128 bits, and the lack of improvements despite extensive study, it's not considered a credible risk to the security of AES. But yes, in a very narrow sense, it "breaks" AES.<br><br>Finally, while quantum computers have the potential to completely break popular public-key cryptosystems like RSA via <a href="https://en.wikipedia.org/wiki/Shor%27s_algorithm" target="_blank">Shor's algorithm</a>, they are thought to only cut in half the security level of symmetric cryptosystems via <a href="https://en.wikipedia.org/wiki/Grover's_algorithm" target="_blank">Grover's algorithm</a>. This is one reason why people recommend using AES-256, despite it being less performant, as it would still provide a very adequate 128 bits of security in a quantum future.<br><br>What is the name for the best single-key attack against AES?
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Faes%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+        <li class="challenge active" data-category="106" data-stage="aes-understanding">
+            <div id="header-aes2" data-challenge="aes2" class="collapsible-header active">
+                
+                <i id="check-aes2" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="ce0aa979-4ad0-64ae-07b7-fe7944bcdf6a"></i>
+                <i id="uncheck-aes2" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="fab14eb6-7c39-807d-0d49-852a8aae4e42"></i>
+                
+                <div class="challenge-text truncate">Structure of AES</div>
+                <span class="right">
+                    
+                    15 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/aes2/solves/">
+                        <span id="solves-aes2">14529 Solves</span>
+                    </a>
+                    
+                    
+                    <span class="solutions_links solutionsHide" id="solutions-aes2">
+                      <b>·</b>
+                      <a class="gold-link preventToggle" href="/challenges/aes2/solutions/">
+                        43 Solutions
+                      </a>
+                    </span>
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body" style="display: block;">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    To achieve a keyed permutation that is infeasible to invert without the key, AES applies a large number of ad-hoc mixing operations on the input. This is in stark contrast to public-key cryptosystems like RSA, which are based on elegant individual mathematical problems. AES is much less elegant, but it's very fast.<br><br>At a high level, AES-128 begins with a "key schedule" and then runs 10 rounds over a state. The starting state is just the plaintext block that we want to encrypt, represented as a 4x4 matrix of bytes. Over the course of the 10 rounds, the state is repeatedly modified by a number of invertible transformations.<br><br><span class="note"><i class="fas fa-pencil-alt"></i>Each transformation step has a defined purpose based on theoretical properties of secure ciphers established by Claude Shannon in the 1940s. We'll look closer at each of these in the following challenges.</span><br><br>Here's an overview of the phases of AES encryption:<br><br><img align="right" src="/static/img/aes/Structure.png" alt="diagram showing AES rounds"><br><br>1. <b>KeyExpansion</b> or Key Schedule<br><br> From the 128 bit key, 11 separate 128 bit "round keys" are derived: one to be used in each AddRoundKey step.<br><br>2. <b>Initial key addition</b><br><br> <i>AddRoundKey</i> - the bytes of the first round key are XOR'd with the bytes of the state.<br><br>3. <b>Round</b> - this phase is looped 10 times, for 9 main rounds plus one "final round"<br><br> a) <i>SubBytes</i> - each byte of the state is substituted for a different byte according to a lookup table ("S-box").<br><br> b) <i>ShiftRows</i> - the last three rows of the state matrix are transposed—shifted over a column or two or three.<br><br> c) <i>MixColumns</i> - matrix multiplication is performed on the columns of the state, combining the four bytes in each column. This is skipped in the final round.<br><br> d) <i>AddRoundKey</i> - the bytes of the current round key are XOR'd with the bytes of the state.<br><br>Included is a <code>bytes2matrix</code> function for converting our initial plaintext block into a state matrix. Write a <code>matrix2bytes</code> function to turn that matrix back into bytes, and submit the resulting plaintext as the flag.<br><br><b>Challenge files:</b><br>&nbsp; - <a href="/static/challenges/matrix_e1b463dddbee6d17959618cf370ff1a5.py" download="">matrix.py</a><br><br><b>Resources:</b><br>&nbsp; - <a href="https://www.youtube.com/watch?v=gP4PqVGudtg" target="_blank">YouTube: AES Rijndael Cipher explained as a Flash animation</a><br>
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Faes%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+        <li class="challenge active" data-category="105" data-stage="aes-understanding">
+            <div id="header-aes3" data-challenge="aes3" class="collapsible-header active">
+                
+                <i id="check-aes3" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="40599fa6-bf22-d790-31dc-3d15482e74e8"></i>
+                <i id="uncheck-aes3" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="5139975b-549a-5ab2-f1ba-af1ca62c8746"></i>
+                
+                <div class="challenge-text truncate">Round Keys</div>
+                <span class="right">
+                    
+                    20 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/aes3/solves/">
+                        <span id="solves-aes3">13436 Solves</span>
+                    </a>
+                    
+                    
+                    <span class="solutions_links solutionsHide" id="solutions-aes3">
+                      <b>·</b>
+                      <a class="gold-link preventToggle" href="/challenges/aes3/solutions/">
+                        53 Solutions
+                      </a>
+                    </span>
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body" style="display: block;">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    We're going to skip over the finer details of the <b>KeyExpansion</b> phase for now. The main point is that it takes in our 16 byte key and produces 11 4x4 matrices called "round keys" derived from our initial key. These round keys allow AES to get extra mileage out of the single key that we provided.<br><br>The <b>initial key addition</b> phase, which is next, has a single <i>AddRoundKey</i> step. The <i>AddRoundKey</i> step is straightforward: it XORs the current state with the current round key.<br><br><img style="max-width: 100%; display: block; margin: 0 auto;" src="/static/img/aes/AddRoundKey.png" alt="diagram showing AddRoundKey"><br><br><i>AddRoundKey</i> also occurs as the final step of each round. <i>AddRoundKey</i> is what makes AES a "keyed permutation" rather than just a permutation. It's the only part of AES where the key is mixed into the state, but is crucial for determining the permutation that occurs.<br><br>As you've seen in previous challenges, XOR is an easily invertible operation if you know the key, but tough to undo if you don't. Now imagine trying to recover plaintext which has been XOR'd with 11 different keys, and heavily jumbled between each XOR operation with a series of substitution and transposition ciphers. That's kinda what AES does! And we'll see just how effective the jumbling is in the next few challenges.<br><br>Complete the <code>add_round_key</code> function, then use the <code>matrix2bytes</code> function to get your next flag.<br><br><b>Challenge files:</b><br>&nbsp; - <a href="/static/challenges/add_round_key_b67b9a529ae739156107a74b14adde98.py" download="">add_round_key.py</a><br>
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Faes%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+        <li class="challenge active" data-category="103" data-stage="aes-understanding">
+            <div id="header-aes4" data-challenge="aes4" class="collapsible-header active">
+                
+                <i id="check-aes4" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="bed49e9f-2d29-4941-63ed-6b2d3eaec29c"></i>
+                <i id="uncheck-aes4" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="c290ddc9-d892-758b-f0db-dc5b653f4535"></i>
+                
+                <div class="challenge-text truncate">Confusion through Substitution</div>
+                <span class="right">
+                    
+                    25 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/aes4/solves/">
+                        <span id="solves-aes4">12120 Solves</span>
+                    </a>
+                    
+                    
+                    <span class="solutions_links solutionsHide" id="solutions-aes4">
+                      <b>·</b>
+                      <a class="gold-link preventToggle" href="/challenges/aes4/solutions/">
+                        47 Solutions
+                      </a>
+                    </span>
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body" style="display: block;">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    The first step of each AES round is <i>SubBytes</i>. This involves taking each byte of the state matrix and substituting it for a different byte in a preset 16x16 lookup table. The lookup table is called a "Substitution box" or "S-box" for short, and can be perplexing at first sight. Let's break it down.<br><br><img style="max-width: 100%; display: block; margin: 0 auto;" src="/static/img/aes/Substitution.png" alt="diagram showing Substitution"><br><br>In 1945 American mathematician Claude Shannon published a groundbreaking paper on Information Theory. It identified "confusion" as an essential property of a secure cipher. "Confusion" means that the relationship between the ciphertext and the key should be as complex as possible. Given just a ciphertext, there should be no way to learn anything about the key.<br><br>If a cipher has poor confusion, it is possible to express a relationship between ciphertext, key, and plaintext as a linear function. For instance, in a Caesar cipher, <code>ciphertext = plaintext + key</code>. That's an obvious relation, which is easy to reverse. More complicated linear transformations can be solved using techniques like Gaussian elimination. Even low-degree polynomials, e.g. an equation like <code>x^4 + 51x^3 + x</code>, can be solved efficiently using <a href="https://math.stackexchange.com/a/1078515" target="_blank">algebraic methods</a>. However, the higher the degree of a polynomial, generally the harder it becomes to solve – it can only be approximated by a larger and larger amount of linear functions.<br><br>The main purpose of the S-box is to transform the input in a way that is resistant to being approximated by linear functions. S-boxes are aiming for high <i>non-linearity</i>, and while AES's one is not perfect, it's pretty close. The fast lookup in an S-box is a shortcut for performing a very nonlinear function on the input bytes. This function involves taking the modular inverse in the <a href="https://www.samiam.org/galois.html" target="_blank">Galois field 2**8</a> and then applying an affine transformation which has been tweaked for maximum confusion. The simplest way to express the function is through the following high-degree polynomial:<br><br><img style="max-width: 100%; display: block; margin: 0 auto;" src="/static/img/aes/SBoxEq.png" alt="diagram showing S-Box equation"><br><br>To make the S-box, the function has been calculated on all input values from 0x00 to 0xff and the outputs put in the lookup table.<br><br>Implement <code>sub_bytes</code>, send the state matrix through the inverse S-box and then convert it to bytes to get the flag. <br><br><b>Challenge files:</b><br>&nbsp; - <a href="/static/challenges/sbox_8fc04ffb95faf5a5e6959195d5e2d94e.py" download="">sbox.py</a><br>
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Faes%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+        <li class="challenge active" data-category="101" data-stage="aes-understanding">
+            <div id="header-aes5" data-challenge="aes5" class="collapsible-header active">
+                
+                <i id="check-aes5" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="0ab0e937-8d7b-ea10-d71b-56f7242e3c8c"></i>
+                <i id="uncheck-aes5" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="629a9eaf-35c8-88e0-a01d-02ca1b2454bc"></i>
+                
+                <div class="challenge-text truncate">Diffusion through Permutation</div>
+                <span class="right">
+                    
+                    30 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/aes5/solves/">
+                        <span id="solves-aes5">11047 Solves</span>
+                    </a>
+                    
+                    
+                    <span class="solutions_links solutionsHide" id="solutions-aes5">
+                      <b>·</b>
+                      <a class="gold-link preventToggle" href="/challenges/aes5/solutions/">
+                        25 Solutions
+                      </a>
+                    </span>
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body" style="display: block;">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    We've seen how S-box substitution provides confusion. The other crucial property described by Shannon is "diffusion". This relates to how every part of a cipher's input should spread to every part of the output.<br><br>Substitution on its own creates non-linearity, however it doesn't distribute it over the entire state. Without diffusion, the same byte in the same position would get the same transformations applied to it each round. This would allow cryptanalysts to attack each byte position in the state matrix separately. We need to alternate substitutions by scrambling the state (in an invertible way) so that substitutions applied on one byte influence all other bytes in the state. Each input into the next S-box then becomes a function of multiple bytes, meaning that with every round the algebraic complexity of the system increases enormously.<br><br><span class="note"><i class="fas fa-brain"></i>An ideal amount of diffusion causes a change of one bit in the plaintext to lead to a change in statistically half the bits of the ciphertext. This desirable outcome is called the <a href="https://en.wikipedia.org/wiki/Avalanche_effect" target="_blank">Avalanche effect</a>.</span><br><br>The <i>ShiftRows</i> and <i>MixColumns</i> steps combine to achieve this. They work together to ensure every byte affects every other byte in the state within just two rounds. <br><br><i>ShiftRows</i> is the most simple transformation in AES. It keeps the first row of the state matrix the same. The second row is shifted over one column to the left, wrapping around. The third row is shifted two columns, the fourth row by three. Wikipedia puts it nicely: "the importance of this step is to avoid the columns being encrypted independently, in which case AES degenerates into four independent block ciphers."<br><br><img style="max-width: 100%; display: block; margin: 0 auto;" src="/static/img/aes/ShiftRows.png" alt="diagram showing ShiftRows"><br><br><span class="note"><i class="fas fa-pencil-alt"></i>The diagram (and the AES specification) show the <code>ShiftRows</code> operation occuring in column-major notation. However, the sample code below uses row-major notation for the state matrix as it is more natural in Python. As long as the same notation is used each time the matrix is accessed, the final result is identical. Due to access patterns and cache behaviour, using one type of notation can lead to better performance.</span><br><br><i>MixColumns</i> is more complex. It performs Matrix multiplication in Rijndael's Galois field between the columns of the state matrix and a preset matrix. Each single byte of each column therefore affects all the bytes of the resulting column. The implementation details are nuanced; <a href="https://www.samiam.org/mix-column.html" target="_blank">this page</a> and <a href="https://en.wikipedia.org/wiki/Rijndael_MixColumns" target="_blank">Wikipedia</a> do a good job of covering them. <br><br><img style="max-width: 100%; display: block; margin: 0 auto;" src="/static/img/aes/MixColumns.png" alt="diagram showing MixColumns"><br><br>We've provided code to perform MixColumns and the forward ShiftRows operation. After implementing <code>inv_shift_rows</code>, take the state, run <code>inv_mix_columns</code> on it, then <code>inv_shift_rows</code>, convert to bytes and you will have your flag.<br><br><b>Challenge files:</b><br>&nbsp; - <a href="/static/challenges/diffusion_ee6215282094b4ae8cd1b20697477712.py" download="">diffusion.py</a><br>
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Faes%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+        <li class="challenge active" data-category="102" data-stage="aes-understanding">
+            <div id="header-aes6" data-challenge="aes6" class="collapsible-header active">
+                
+                <i id="check-aes6" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="fc387cef-3bd4-dc28-8661-e044eaedb25e"></i>
+                <i id="uncheck-aes6" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="74b69232-7617-64c5-8af5-3f223da5e4e4"></i>
+                
+                <div class="challenge-text truncate">Bringing It All Together</div>
+                <span class="right">
+                    
+                    50 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/aes6/solves/">
+                        <span id="solves-aes6">9429 Solves</span>
+                    </a>
+                    
+                    
+                    <span class="solutions_links solutionsHide" id="solutions-aes6">
+                      <b>·</b>
+                      <a class="gold-link preventToggle" href="/challenges/aes6/solutions/">
+                        25 Solutions
+                      </a>
+                    </span>
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body" style="display: block;">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    <img align="right" src="/static/img/aes/Structure2.png" alt="diagram showing AES decryption"><br><br>Apart from the <b>KeyExpansion</b> phase, we've sketched out all the components of AES. We've shown how <i>SubBytes</i> provides confusion and <i>ShiftRows</i> and <i>MixColumns</i> provide diffusion, and how these two properties work together to repeatedly circulate non-linear transformations over the state. Finally, <i>AddRoundKey</i> seeds the key into this substitution-permutation network, making the cipher a keyed permutation.<br><br>Decryption involves performing the steps described in the "Structure of AES" challenge in reverse, applying the inverse operations. Note that the KeyExpansion still needs to be run first, and the round keys will be used in reverse order. <i>AddRoundKey</i> and its inverse are identical as XOR has the self-inverse property.<br><br>We've provided the key expansion code, and ciphertext that's been properly encrypted by AES-128. Copy in all the building blocks you've coded so far, and complete the <code>decrypt</code> function that implements the steps shown in the diagram. The decrypted plaintext is the flag.<br><br>Yes, you can cheat on this challenge, but where's the fun in that?<br><br>The code used in these exercises has been taken from Bo Zhu's super simple Python AES implementation, so we've reproduced the license here.<br><br><b>Challenge files:</b><br>&nbsp; - <a href="/static/challenges/aes_decrypt_f491744105801ec03d6a6f7a0e7f8101.py" download="">aes_decrypt.py</a><br>&nbsp; - <a href="/static/challenges/LICENSE_651b0602addd2b4bfa5d69ad7fca2dd5" download="">LICENSE</a><br><br><b>Resources:</b><br>&nbsp; - <a href="https://github.com/francisrstokes/githublog/blob/main/2022/6/15/rolling-your-own-crypto-aes.md" target="_blank">Rolling your own crypto: Everything you need to build AES from scratch</a><br>
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Faes%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+    </ul>
+</span>
+
+
+<span class="stage" data-stage="block-starter">
+    <hr>
+    <div class="challengeInfo">
+      <span><h4>Symmetric Starter</h4></span>
+      <span class="flexToggle"><a class="stage-collapse" data-collapse="block-starter" href="#">Toggle</a></span>
+    </div>
+    
+    <div class="clearfix"></div>
+    <ul class="collapsible popout" data-collapsible="expandable">
+        
+        <li class="challenge" data-category="82" data-stage="block-starter">
+            <div id="header-block_cipher_starter" data-challenge="block_cipher_starter" class="collapsible-header">
+                
+                <i id="check-block_cipher_starter" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="dde5705d-855e-7922-a4e7-c26608ea1837"></i>
+                <i id="uncheck-block_cipher_starter" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="617db65d-31bc-6aa4-a72a-3afe7fa6f8b6"></i>
+                
+                <div class="challenge-text truncate">Modes of Operation Starter</div>
+                <span class="right">
+                    
+                    15 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/block_cipher_starter/solves/">
+                        <span id="solves-block_cipher_starter">9996 Solves</span>
+                    </a>
+                    
+                    
+                    <span class="solutions_links solutionsHide" id="solutions-block_cipher_starter">
+                      <b>·</b>
+                      <a class="gold-link preventToggle" href="/challenges/block_cipher_starter/solutions/">
+                        11 Solutions
+                      </a>
+                    </span>
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    The previous set of challenges showed how AES performs a keyed permutation on a block of data. In practice, we need to encrypt messages much longer than a single block. A <i>mode of operation</i> describes how to use a cipher like AES on longer messages.<br><br>All modes have serious weaknesses when used incorrectly. The challenges in this category take you to a different section of the website where you can interact with APIs and exploit those weaknesses. Get yourself acquainted with the interface and use it to take your next flag!<br><br>Play at <a href="https://aes.cryptohack.org/block_cipher_starter" target="_blank">https://aes.cryptohack.org/block_cipher_starter</a>
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Faes%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+        <li class="challenge" data-category="69" data-stage="block-starter">
+            <div id="header-passwords_as_keys" data-challenge="passwords_as_keys" class="collapsible-header">
+                
+                <i id="check-passwords_as_keys" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="aa65e2bd-a312-d2b8-625c-408183c0f8d5"></i>
+                <i id="uncheck-passwords_as_keys" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="b459d3c1-a42f-15c8-9f92-386a00920cb2"></i>
+                
+                <div class="challenge-text truncate">Passwords as Keys</div>
+                <span class="right">
+                    
+                    50 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/passwords_as_keys/solves/">
+                        <span id="solves-passwords_as_keys">8524 Solves</span>
+                    </a>
+                    
+                    
+                    <span class="solutions_links solutionsHide" id="solutions-passwords_as_keys">
+                      <b>·</b>
+                      <a class="gold-link preventToggle" href="/challenges/passwords_as_keys/solutions/">
+                        44 Solutions
+                      </a>
+                    </span>
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    It is essential that keys in symmetric-key algorithms are random bytes, instead of passwords or other predictable data. The random bytes should be generated using a cryptographically-secure pseudorandom number generator (CSPRNG). If the keys are predictable in any way, then the security level of the cipher is reduced and it may be possible for an attacker who gets access to the ciphertext to decrypt it.<br><br>Just because a key looks like it is formed of random bytes, does not mean that it necessarily is. In this case the key has been derived from a simple password using a hashing function, which makes the ciphertext crackable.<br><br>For this challenge you may script your HTTP requests to the endpoints, or alternatively attack the ciphertext offline. Good luck!<br><br>Play at <a href="https://aes.cryptohack.org/passwords_as_keys" target="_blank">https://aes.cryptohack.org/passwords_as_keys</a>
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Faes%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+    </ul>
+</span>
+
+
+<span class="stage" data-stage="block">
+    <hr>
+    <div class="challengeInfo">
+      <span><h4>Block Ciphers 1</h4></span>
+      <span class="flexToggle"><a class="stage-collapse" data-collapse="block" href="#">Toggle</a></span>
+    </div>
+    
+    <div class="clearfix"></div>
+    <ul class="collapsible popout" data-collapsible="expandable">
+        
+        <li class="challenge" data-category="65" data-stage="block">
+            <div id="header-ecbcbcwtf" data-challenge="ecbcbcwtf" class="collapsible-header">
+                
+                <i id="check-ecbcbcwtf" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="a798b93c-dcf5-56ad-0a6b-acbf3a61a508"></i>
+                <i id="uncheck-ecbcbcwtf" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="f320491f-fcf9-fcdd-cf47-b0337f1a0a00"></i>
+                
+                <div class="challenge-text truncate">ECB CBC WTF</div>
+                <span class="right">
+                    
+                    55 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/ecbcbcwtf/solves/">
+                        <span id="solves-ecbcbcwtf">7208 Solves</span>
+                    </a>
+                    
+                    
+                    <span class="solutions_links solutionsHide" id="solutions-ecbcbcwtf">
+                      <b>·</b>
+                      <a class="gold-link preventToggle" href="/challenges/ecbcbcwtf/solutions/">
+                        46 Solutions
+                      </a>
+                    </span>
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    Here you can encrypt in CBC but only decrypt in ECB. That shouldn't be a weakness because they're different modes... right?<br><br>Play at <a href="https://aes.cryptohack.org/ecbcbcwtf" target="_blank">https://aes.cryptohack.org/ecbcbcwtf</a>
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Faes%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+        <li class="challenge" data-category="62" data-stage="block">
+            <div id="header-ecb_oracle" data-challenge="ecb_oracle" class="collapsible-header">
+                
+                <i id="check-ecb_oracle" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="658755e7-3a58-8bb9-0ba5-3c0ee617bf7b"></i>
+                <i id="uncheck-ecb_oracle" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="38d51ea9-eca3-f5bc-c305-a9bee67a2d31"></i>
+                
+                <div class="challenge-text truncate">ECB Oracle</div>
+                <span class="right">
+                    
+                    60 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/ecb_oracle/solves/">
+                        <span id="solves-ecb_oracle">7249 Solves</span>
+                    </a>
+                    
+                    
+                    <span class="solutions_links solutionsHide" id="solutions-ecb_oracle">
+                      <b>·</b>
+                      <a class="gold-link preventToggle" href="/challenges/ecb_oracle/solutions/">
+                        77 Solutions
+                      </a>
+                    </span>
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    ECB is the most simple mode, with each plaintext block encrypted entirely independently. In this case, your input is prepended to the secret flag and encrypted and that's it. We don't even provide a decrypt function. Perhaps you don't need a padding oracle when you have an "ECB oracle"?<br><br>Play at <a href="https://aes.cryptohack.org/ecb_oracle" target="_blank">https://aes.cryptohack.org/ecb_oracle</a>
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Faes%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+        <li class="challenge" data-category="66" data-stage="block">
+            <div id="header-flipping_cookie" data-challenge="flipping_cookie" class="collapsible-header">
+                
+                <i id="check-flipping_cookie" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="5dc2e0bb-0c22-fa57-b2be-7690144433fd"></i>
+                <i id="uncheck-flipping_cookie" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="a48b7c18-6f9e-4097-07b3-0c6c1fb0e8e7"></i>
+                
+                <div class="challenge-text truncate">Flipping Cookie</div>
+                <span class="right">
+                    
+                    60 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/flipping_cookie/solves/">
+                        <span id="solves-flipping_cookie">6477 Solves</span>
+                    </a>
+                    
+                    
+                    <span class="solutions_links solutionsHide" id="solutions-flipping_cookie">
+                      <b>·</b>
+                      <a class="gold-link preventToggle" href="/challenges/flipping_cookie/solutions/">
+                        53 Solutions
+                      </a>
+                    </span>
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    You can get a cookie for my website, but it won't help you read the flag... I think.<br><br>Play at <a href="https://aes.cryptohack.org/flipping_cookie" target="_blank">https://aes.cryptohack.org/flipping_cookie</a>
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Faes%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+        <li class="challenge" data-category="64" data-stage="block">
+            <div id="header-lazy_cbc" data-challenge="lazy_cbc" class="collapsible-header">
+                
+                <i id="check-lazy_cbc" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="6ee20794-3925-24b9-de6d-fe7bfd9ac65a"></i>
+                <i id="uncheck-lazy_cbc" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="7aa0a8ea-9ab3-fd9d-92af-5757f0238938"></i>
+                
+                <div class="challenge-text truncate">Lazy CBC</div>
+                <span class="right">
+                    
+                    60 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/lazy_cbc/solves/">
+                        <span id="solves-lazy_cbc">3987 Solves</span>
+                    </a>
+                    
+                    
+                    <span class="solutions_links solutionsHide" id="solutions-lazy_cbc">
+                      <b>·</b>
+                      <a class="gold-link preventToggle" href="/challenges/lazy_cbc/solutions/">
+                        28 Solutions
+                      </a>
+                    </span>
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    I'm just a lazy dev and want my CBC encryption to work. What's all this talk about initialisations vectors? Doesn't sound important.<br><br>Play at <a href="https://aes.cryptohack.org/lazy_cbc" target="_blank">https://aes.cryptohack.org/lazy_cbc</a>
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Faes%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+        <li class="challenge" data-category="111" data-stage="block">
+            <div id="header-triple_des" data-challenge="triple_des" class="collapsible-header">
+                
+                <i id="check-triple_des" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="034314db-6d53-87a8-7e1a-68e5a94f0318"></i>
+                <i id="uncheck-triple_des" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="a6329e36-e164-cc2c-5337-ef25970e92d8"></i>
+                
+                <div class="challenge-text truncate">Triple DES</div>
+                <span class="right">
+                    
+                    60 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/triple_des/solves/">
+                        <span id="solves-triple_des">3022 Solves</span>
+                    </a>
+                    
+                    
+                    <span class="solutions_links solutionsHide" id="solutions-triple_des">
+                      <b>·</b>
+                      <a class="gold-link preventToggle" href="/challenges/triple_des/solutions/">
+                        15 Solutions
+                      </a>
+                    </span>
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    Data Encryption Standard was the forerunner to AES, and is still widely used in some slow-moving areas like the Payment Card Industry. This challenge demonstrates a strange weakness of DES which a secure block cipher should not have.<br><br>Play at <a href="https://aes.cryptohack.org/triple_des" target="_blank">https://aes.cryptohack.org/triple_des</a><br><br>Challenge contributed by <a class="gold-link" href="/user/trillian">trillian</a>
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Faes%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+    </ul>
+</span>
+
+
+<span class="stage" data-stage="stream">
+    <hr>
+    <div class="challengeInfo">
+      <span><h4>Stream Ciphers</h4></span>
+      <span class="flexToggle"><a class="stage-collapse" data-collapse="stream" href="#">Toggle</a></span>
+    </div>
+    
+    <div class="clearfix"></div>
+    <ul class="collapsible popout" data-collapsible="expandable">
+        
+        <li class="challenge" data-category="67" data-stage="stream">
+            <div id="header-symmetry" data-challenge="symmetry" class="collapsible-header">
+                
+                <i id="check-symmetry" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="34a9ade5-d28a-987c-f9a8-c2fb722b0a22"></i>
+                <i id="uncheck-symmetry" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="6bae196c-0bb6-bbb4-e016-3d348b0635b8"></i>
+                
+                <div class="challenge-text truncate">Symmetry</div>
+                <span class="right">
+                    
+                    50 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/symmetry/solves/">
+                        <span id="solves-symmetry">5661 Solves</span>
+                    </a>
+                    
+                    
+                    <span class="solutions_links solutionsHide" id="solutions-symmetry">
+                      <b>·</b>
+                      <a class="gold-link preventToggle" href="/challenges/symmetry/solutions/">
+                        36 Solutions
+                      </a>
+                    </span>
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    Some block cipher modes, such as OFB, CTR, or CFB, turn a block cipher into a stream cipher. The idea behind stream ciphers is to produce a pseudorandom keystream which is then XORed with the plaintext. One advantage of stream ciphers is that they can work of plaintext of arbitrary length, with no padding required.<br><br>OFB is an obscure cipher mode, with no real benefits these days over using CTR. This challenge introduces an unusual property of OFB.<br><br>Play at <a href="https://aes.cryptohack.org/symmetry" target="_blank">https://aes.cryptohack.org/symmetry</a>
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Faes%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+        <li class="challenge" data-category="61" data-stage="stream">
+            <div id="header-bean_counter" data-challenge="bean_counter" class="collapsible-header">
+                
+                <i id="check-bean_counter" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="039c924b-41c3-7ddf-a6fe-406d2894d358"></i>
+                <i id="uncheck-bean_counter" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="7a2959ee-d2bf-4a5d-9087-5e8d4b18cac6"></i>
+                
+                <div class="challenge-text truncate">Bean Counter</div>
+                <span class="right">
+                    
+                    60 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/bean_counter/solves/">
+                        <span id="solves-bean_counter">5280 Solves</span>
+                    </a>
+                    
+                    
+                    <span class="solutions_links solutionsHide" id="solutions-bean_counter">
+                      <b>·</b>
+                      <a class="gold-link preventToggle" href="/challenges/bean_counter/solutions/">
+                        33 Solutions
+                      </a>
+                    </span>
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    I've struggled to get PyCrypto's counter mode doing what I want, so I've turned ECB mode into CTR myself. My counter can go both upwards and downwards to throw off cryptanalysts! There's no chance they'll be able to read my picture.<br><br>Play at <a href="https://aes.cryptohack.org/bean_counter" target="_blank">https://aes.cryptohack.org/bean_counter</a>
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Faes%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+        <li class="challenge" data-category="63" data-stage="stream">
+            <div id="header-ctrime" data-challenge="ctrime" class="collapsible-header">
+                
+                <i id="check-ctrime" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="9a4e9820-01eb-9d6d-50dc-44f5447e4ca9"></i>
+                <i id="uncheck-ctrime" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="759f7103-a528-2cad-2d55-de20b3dd2a1d"></i>
+                
+                <div class="challenge-text truncate">CTRIME</div>
+                <span class="right">
+                    
+                    70 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/ctrime/solves/">
+                        <span id="solves-ctrime">2765 Solves</span>
+                    </a>
+                    
+                    
+                    <span class="solutions_links solutionsHide" id="solutions-ctrime">
+                      <b>·</b>
+                      <a class="gold-link preventToggle" href="/challenges/ctrime/solutions/">
+                        18 Solutions
+                      </a>
+                    </span>
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    There may be a lot of redundancy in our plaintext, so why not compress it first?<br><br>Play at <a href="https://aes.cryptohack.org/ctrime" target="_blank">https://aes.cryptohack.org/ctrime</a>
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Faes%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+        <li class="challenge" data-category="137" data-stage="stream">
+            <div id="header-logon-zero" data-challenge="logon-zero" class="collapsible-header">
+                
+                <i id="check-logon-zero" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="4ee0f045-ede6-dec1-6dbb-2054752066d7"></i>
+                <i id="uncheck-logon-zero" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="e28b5241-b40e-b272-0d88-c661d19ad54b"></i>
+                
+                <div class="challenge-text truncate">Logon Zero</div>
+                <span class="right">
+                    
+                    80 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/logon-zero/solves/">
+                        <span id="solves-logon-zero">2021 Solves</span>
+                    </a>
+                    
+                    
+                    <span class="solutions_links solutionsHide" id="solutions-logon-zero">
+                      <b>·</b>
+                      <a class="gold-link preventToggle" href="/challenges/logon-zero/solutions/">
+                        16 Solutions
+                      </a>
+                    </span>
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    Before using the network, you must authenticate to Active Directory using our timeworn CFB-8 logon protocol.<br><br>Connect at <code>socket.cryptohack.org 13399</code><br><br><b>Challenge files:</b><br>&nbsp; - <a href="/static/challenges/13399_2c5dba2a8180a137c65b9dff313d88b5.py" download="">13399.py</a><br><br><br>Challenge contributed by <a class="gold-link" href="/user/$in">$in</a>
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Faes%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+        <li class="challenge" data-category="68" data-stage="stream">
+            <div id="header-stream_consciousness" data-challenge="stream_consciousness" class="collapsible-header">
+                
+                <i id="check-stream_consciousness" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="8894b8a1-a3ad-cb7f-8c89-be2d556b4fd0"></i>
+                <i id="uncheck-stream_consciousness" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="55fd4b7f-08b4-e5b0-afa0-a6b975f88529"></i>
+                
+                <div class="challenge-text truncate">Stream of Consciousness</div>
+                <span class="right">
+                    
+                    80 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/stream_consciousness/solves/">
+                        <span id="solves-stream_consciousness">2325 Solves</span>
+                    </a>
+                    
+                    
+                    <span class="solutions_links solutionsHide" id="solutions-stream_consciousness">
+                      <b>·</b>
+                      <a class="gold-link preventToggle" href="/challenges/stream_consciousness/solutions/">
+                        14 Solutions
+                      </a>
+                    </span>
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    Talk to me and hear a sentence from my encrypted stream of consciousness.<br><br>Play at <a href="https://aes.cryptohack.org/stream_consciousness" target="_blank">https://aes.cryptohack.org/stream_consciousness</a>
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Faes%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+        <li class="challenge" data-category="160" data-stage="stream">
+            <div id="header-dancing-queen" data-challenge="dancing-queen" class="collapsible-header">
+                
+                <i id="check-dancing-queen" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="9aa4943d-dd6b-969e-1654-b7d5f4e9f05a"></i>
+                <i id="uncheck-dancing-queen" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="cbc33c34-39b7-9cf0-8305-1c0f0dd767d2"></i>
+                
+                <div class="challenge-text truncate">Dancing Queen</div>
+                <span class="right">
+                    
+                    120 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/dancing-queen/solves/">
+                        <span id="solves-dancing-queen">1433 Solves</span>
+                    </a>
+                    
+                    
+                    <span class="solutions_links solutionsHide" id="solutions-dancing-queen">
+                      <b>·</b>
+                      <a class="gold-link preventToggle" href="/challenges/dancing-queen/solutions/">
+                        8 Solutions
+                      </a>
+                    </span>
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    I don't trust other developers so I made my own ChaCha20 implementation. In this way, I am sure you will never be able to read my flag!<br><br><b>Challenge files:</b><br>&nbsp; - <a href="/static/challenges/chacha20_c76e2a43164af8b6ecb0e145415ab931.py" download="">chacha20.py</a><br>&nbsp; - <a href="/static/challenges/output_108f5c189506fcb4309410776af3117d.txt" download="">output.txt</a><br><br><br>Challenge contributed by <a class="gold-link" href="/user/yaumn">yaumn</a> and <a class="gold-link" href="/user/Synacktiv">Synacktiv</a>
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Faes%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+        <li class="challenge" data-category="150" data-stage="stream">
+            <div id="header-oh_snap" data-challenge="oh_snap" class="collapsible-header">
+                
+                <i id="check-oh_snap" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="a487a0c5-cc3d-0a32-23e4-9986ba0891b6"></i>
+                <i id="uncheck-oh_snap" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="8a4af36d-ef9a-c696-0431-e2968b90ce09"></i>
+                
+                <div class="challenge-text truncate">Oh SNAP</div>
+                <span class="right">
+                    
+                    120 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/oh_snap/solves/">
+                        <span id="solves-oh_snap">1217 Solves</span>
+                    </a>
+                    
+                    
+                    <span class="solutions_links solutionsHide" id="solutions-oh_snap">
+                      <b>·</b>
+                      <a class="gold-link preventToggle" href="/challenges/oh_snap/solutions/">
+                        14 Solutions
+                      </a>
+                    </span>
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    Here's the start of my fast network authentication protocol, so far I've only implemented the "Ping" command so there shouldn't be any way to recover the key.<br><br>Play at <a href="https://aes.cryptohack.org/oh_snap" target="_blank">https://aes.cryptohack.org/oh_snap</a><br><br>Challenge contributed by <a class="gold-link" href="/user/trillian">trillian</a>
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Faes%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+    </ul>
+</span>
+
+
+<span class="stage" data-stage="padding">
+    <hr>
+    <div class="challengeInfo">
+      <span><h4>Padding Attacks</h4></span>
+      <span class="flexToggle"><a class="stage-collapse" data-collapse="padding" href="#">Toggle</a></span>
+    </div>
+    
+    <div class="clearfix"></div>
+    <ul class="collapsible popout" data-collapsible="expandable">
+        
+        <li class="challenge" data-category="296" data-stage="padding">
+            <div id="header-pad_thai" data-challenge="pad_thai" class="collapsible-header">
+                
+                <i id="check-pad_thai" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="9ccc4438-aee4-899f-b006-fe76fc8307f7"></i>
+                <i id="uncheck-pad_thai" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="e0f664bc-eb03-fd2c-5e17-1258ef1ed89f"></i>
+                
+                <div class="challenge-text truncate">Pad Thai</div>
+                <span class="right">
+                    
+                    80 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/pad_thai/solves/">
+                        <span id="solves-pad_thai">936 Solves</span>
+                    </a>
+                    
+                    
+                    <span class="solutions_links solutionsHide" id="solutions-pad_thai">
+                      <b>·</b>
+                      <a class="gold-link preventToggle" href="/challenges/pad_thai/solutions/">
+                        9 Solutions
+                      </a>
+                    </span>
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    Sometimes the classic challenges can be the most delicious<br><br>Connect at <code>socket.cryptohack.org 13421</code><br><br><b>Challenge files:</b><br>&nbsp; - <a href="/static/challenges/13421_2801f3744d21e8fbd0e7bfbef59f1fe2.py" download="">13421.py</a><br><br><br>Challenge contributed by <a class="gold-link" href="https://cryptohack.org/user/kropotkin69">Eli Sohl</a>
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Faes%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+        <li class="challenge" data-category="295" data-stage="padding">
+            <div id="header-good_pad_ugly" data-challenge="good_pad_ugly" class="collapsible-header">
+                
+                <i id="check-good_pad_ugly" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="c9faa9ef-432a-1ea2-b2f1-4fd49727345d"></i>
+                <i id="uncheck-good_pad_ugly" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="97579ce0-844d-65e7-4e29-1c57283d9439"></i>
+                
+                <div class="challenge-text truncate">The Good, The Pad, The Ugly</div>
+                <span class="right">
+                    
+                    100 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/good_pad_ugly/solves/">
+                        <span id="solves-good_pad_ugly">685 Solves</span>
+                    </a>
+                    
+                    
+                    <span class="solutions_links solutionsHide" id="solutions-good_pad_ugly">
+                      <b>·</b>
+                      <a class="gold-link preventToggle" href="/challenges/good_pad_ugly/solutions/">
+                        9 Solutions
+                      </a>
+                    </span>
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    The first twist of the classic challenge, how can you handle an oracle with errors?<br><br>Connect at <code>socket.cryptohack.org 13422</code><br><br><b>Challenge files:</b><br>&nbsp; - <a href="/static/challenges/13422_63dfe7365556f791c71b63a1c88d980c.py" download="">13422.py</a><br><br><br>Challenge contributed by <a class="gold-link" href="https://cryptohack.org/user/kropotkin69">Eli Sohl</a>
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Faes%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+        <li class="challenge" data-category="294" data-stage="padding">
+            <div id="header-oracular_spectacular" data-challenge="oracular_spectacular" class="collapsible-header">
+                
+                <i id="check-oracular_spectacular" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="f4bfa74a-e899-e957-4fd2-f248dc41c020"></i>
+                <i id="uncheck-oracular_spectacular" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="fb2e6fa9-184c-4f3c-fa7b-87737ad003e2"></i>
+                
+                <div class="challenge-text truncate">Oracular Spectacular</div>
+                <span class="right">
+                    
+                    150 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/oracular_spectacular/solves/">
+                        <span id="solves-oracular_spectacular">346 Solves</span>
+                    </a>
+                    
+                    
+                    <span class="solutions_links solutionsHide" id="solutions-oracular_spectacular">
+                      <b>·</b>
+                      <a class="gold-link preventToggle" href="/challenges/oracular_spectacular/solutions/">
+                        8 Solutions
+                      </a>
+                    </span>
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    This oracle lies! Can you still recover the message XOR are you going to have to give up? <br><br>Connect at <code>socket.cryptohack.org 13423</code><br><br><b>Challenge files:</b><br>&nbsp; - <a href="/static/challenges/13423_53c42344144deb9cbc08a8264e916cba.py" download="">13423.py</a><br><br><br>Challenge contributed by <a class="gold-link" href="https://cryptohack.org/user/kropotkin69">Eli Sohl</a>
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Faes%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+    </ul>
+</span>
+
+
+<span class="stage" data-stage="auth-enc">
+    <hr>
+    <div class="challengeInfo">
+      <span><h4>Authenticated Encryption</h4></span>
+      <span class="flexToggle"><a class="stage-collapse" data-collapse="auth-enc" href="#">Toggle</a></span>
+    </div>
+    
+    <div class="clearfix"></div>
+    <ul class="collapsible popout" data-collapsible="expandable">
+        
+        <li class="challenge" data-category="97" data-stage="auth-enc">
+            <div id="header-paper_plane" data-challenge="paper_plane" class="collapsible-header">
+                
+                <i id="check-paper_plane" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="956cfb63-bd80-5239-f5d3-4c352616c09a"></i>
+                <i id="uncheck-paper_plane" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="8a4d5f90-0ca6-d041-f90a-bb91b16eac9e"></i>
+                
+                <div class="challenge-text truncate">Paper Plane</div>
+                <span class="right">
+                    
+                    120 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/paper_plane/solves/">
+                        <span id="solves-paper_plane">1128 Solves</span>
+                    </a>
+                    
+                    
+                    <span class="solutions_links solutionsHide" id="solutions-paper_plane">
+                      <b>·</b>
+                      <a class="gold-link preventToggle" href="/challenges/paper_plane/solutions/">
+                        8 Solutions
+                      </a>
+                    </span>
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    I've found an authenticated encryption mode called Infinite Garble Extension where an error in a single bit will corrupt the rest of the ciphertext. Seems like a great way to protect chat messages from attacks using bitflipping, padding oracles etc?<br><br>Play at <a href="https://aes.cryptohack.org/paper_plane" target="_blank">https://aes.cryptohack.org/paper_plane</a><br><br>Challenge contributed by <a class="gold-link" href="/user/VincBreaker">VincBreaker</a>
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Faes%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+        <li class="challenge" data-category="114" data-stage="auth-enc">
+            <div id="header-forbidden_fruit" data-challenge="forbidden_fruit" class="collapsible-header">
+                
+                <i id="check-forbidden_fruit" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="225605d1-5c47-18d4-3445-90144b932fe7"></i>
+                <i id="uncheck-forbidden_fruit" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="1a61b6b5-b9fd-79fa-cb12-bdb6b63763d8"></i>
+                
+                <div class="challenge-text truncate">Forbidden Fruit</div>
+                <span class="right">
+                    
+                    150 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/forbidden_fruit/solves/">
+                        <span id="solves-forbidden_fruit">812 Solves</span>
+                    </a>
+                    
+                    
+                    <span class="solutions_links solutionsHide" id="solutions-forbidden_fruit">
+                      <b>·</b>
+                      <a class="gold-link preventToggle" href="/challenges/forbidden_fruit/solutions/">
+                        8 Solutions
+                      </a>
+                    </span>
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    Galois Counter Mode (GCM) is the most widely used block cipher mode in TLS today. It's an "authenticated encryption with associated data" cipher mode (<a href="https://en.wikipedia.org/wiki/Authenticated_encryption" target="_blank">AEAD</a>), yet not resistant to misuse. <br><br>See <a href="https://toadstyle.org/cryptopals/63.txt" target="_blank">here</a> for a great resource on the inner workings of GCM, as well as this attack.<br><br>Play at <a href="https://aes.cryptohack.org/forbidden_fruit" target="_blank">https://aes.cryptohack.org/forbidden_fruit</a>
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Faes%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+    </ul>
+</span>
+
+
+<span class="stage" data-stage="linear-cryptanalysis">
+    <hr>
+    <div class="challengeInfo">
+      <span><h4>Linear Cryptanalysis</h4></span>
+      <span class="flexToggle"><a class="stage-collapse" data-collapse="linear-cryptanalysis" href="#">Toggle</a></span>
+    </div>
+    
+    <div class="clearfix"></div>
+    <ul class="collapsible popout" data-collapsible="expandable">
+        
+        <li class="challenge" data-category="169" data-stage="linear-cryptanalysis">
+            <div id="header-beatboxer" data-challenge="beatboxer" class="collapsible-header">
+                
+                <i id="check-beatboxer" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="8ef808d9-3e41-1e03-eb7b-cdd76a561805"></i>
+                <i id="uncheck-beatboxer" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="be62af4c-eb2c-6d69-3691-08527f3e1e34"></i>
+                
+                <div class="challenge-text truncate">Beatboxer</div>
+                <span class="right">
+                    
+                    150 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/beatboxer/solves/">
+                        <span id="solves-beatboxer">472 Solves</span>
+                    </a>
+                    
+                    
+                    <span class="solutions_links solutionsHide" id="solutions-beatboxer">
+                      <b>·</b>
+                      <a class="gold-link preventToggle" href="/challenges/beatboxer/solutions/">
+                        11 Solutions
+                      </a>
+                    </span>
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    Welcome to my military grade encryption service! It's based on AES but with some tweaks to make it NSA-proof.<br><br>Connect at <code>socket.cryptohack.org 13406</code><br><br><b>Challenge files:</b><br>&nbsp; - <a href="/static/challenges/13406_d7fa07291de630ace1055895f9ae208b.py" download="">13406.py</a><br><br><br>Challenge contributed by <a class="gold-link" href="/user/yaumn">yaumn</a> and <a class="gold-link" href="/user/Synacktiv">Synacktiv</a>
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Faes%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+    </ul>
+</span>
+
+
+
+        </div>
+        <script src="/static/js/jquery.min.js"></script>
+        <script src="/static/js/materialize.min.js"></script>
+        <script defer="" src="/static/js/confetti.browser.min.js"></script>
+        <script src="/static/js/api.js"></script>
+        <script src="/static/js/moment-with-locales.min.js"></script>
+
+<script>
+moment.locale("en");
+function flask_moment_render(elem) {{
+    const timestamp = moment(elem.dataset.timestamp);
+    const func = elem.dataset.function;
+    const format = elem.dataset.format;
+    const timestamp2 = elem.dataset.timestamp2;
+    const no_suffix = elem.dataset.nosuffix;
+    const units = elem.dataset.units;
+    let args = [];
+    if (format)
+        args.push(format);
+    if (timestamp2)
+        args.push(moment(timestamp2));
+    if (no_suffix)
+        args.push(no_suffix);
+    if (units)
+        args.push(units);
+    elem.textContent = timestamp[func].apply(timestamp, args);
+    elem.classList.remove('flask-moment');
+    elem.style.display = "";
+}}
+function flask_moment_render_all() {{
+    const moments = document.querySelectorAll('.flask-moment');
+    moments.forEach(function(moment) {{
+        flask_moment_render(moment);
+        const refresh = moment.dataset.refresh;
+        if (refresh && refresh > 0) {{
+            (function(elem, interval) {{
+                setInterval(function() {{
+                    flask_moment_render(elem);
+                }}, interval);
+            }})(moment, refresh);
+        }}
+    }})
+}}
+document.addEventListener("DOMContentLoaded", flask_moment_render_all);
+</script>
+
+        <script>
+            function dismissNotification(id) {
+                api.makeCall("/dismiss/" + id + ".json", {_csrf_token: "evqcmr67h72vvdpmv99ne6wgw5oue9lvwhfiby9vxej6m1gmsw5wm1g575xu3cwt"}, function() {
+                    $("#notification" + id).slideUp();
+                });
+            }
+
+            $( document ).ready(function() {
+              $('select').material_select();
+            });
+
+            var pointsLevels = [0, 10, 20, 40, 80, 160, 320, 640, 1280, 1920, 2560, 3200, 3840, 4480, 5120, 5760, 6400, 7040, 7680, 8320, 8960, 9600, 10240, 10880, 11520, 12160, 12800, 13440, 14080, 14720, 15360, 16000, 16640, 17280, 17920, 18560, 19200, 19840, 20480];
+        </script>
+        
+        <script>
+        $(function() {
+            $('.button-collapse').sideNav();
+        });
+        </script>
+        <script id="toasts" type="text/javascript">
+            
+        </script>
+        
+
+
+<script>
+    var challenges_open = JSON.parse(localStorage.getItem("challenges-open")) || {"aes0": true, "aes1": true, "aes2": true, "aes3": true, "aes4": true, "aes5": true, "aes6": true};
+    Object.keys(challenges_open).forEach(function(el){
+        $(".collapsible-header#header-" + el).addClass("active");
+    });
+
+    $(".collapsible-header").on("click", function(){
+        var chall = $(this).data('challenge');
+        if(challenges_open.hasOwnProperty(chall)) {
+            delete challenges_open[chall];
+        } else {
+            challenges_open[chall] = true;
+            $('html, body').animate({
+                    scrollTop: $(this).offset().top -100
+            }, 700);
+        }
+        localStorage.setItem("challenges-open", JSON.stringify(challenges_open));
+    });
+
+    $(".preventToggle").on("click", function(){
+        event.stopPropagation();
+    });
+
+    var state = $(".collapsible-header.active").length == 0;
+    function updateButton(){
+        if(state){
+            $("#toggleState").html("Expand all challenges");
+        } else {
+            $("#toggleState").html("Collapse all challenges");
+        }
+
+    }
+    updateButton(state);
+    function toggle() {
+        if(state) {
+            $(".collapsible-header").each(function(i, x){ $(x).hasClass("active") || $(x).click(); });
+        } else {
+            $(".collapsible-header").each(function(i, x){ $(x).hasClass("active") && $(x).click(); });
+        }
+        state = !state;
+        updateButton(state);
+    }
+    function filterCategories(t) {
+        var v = t.options[t.selectedIndex].value;
+        if(v == "*")
+            $(".stage").show();
+        else {
+            $(".stage[data-stage=" + v + "]").show();
+            $(".stage[data-stage!=" + v + "]").hide();
+        }
+    }
+    function toggleSolved(){
+      $('.fas.fa-star').each(function() {
+        if($(this).css('display') == 'block'){
+          if($(this).parent().next().css('display') == 'block'){
+              $(this).parent().toggle();
+              $(this).parent().click();
+              $(this).parent().next().hide();
+          }
+          else{
+            $(this).parent().toggle();
+          }
+        }
+      });
+    }
+
+
+    $("#toggleSolved").on("click", function(e){
+        // e.preventDefault();
+        toggleSolved();
+        // var text = $(this).next().text();
+        // $(this).next().text(
+        // text == "Hide Solved Challenges" ? "Show Solved Challenges" : "Hide Solved Challenges");
+    });
+
+
+    $("#toggleState").on("click", function(e){
+        // e.preventDefault();
+        toggle();
+    });
+    $(".stage-collapse").on("click", function(e){
+        // e.preventDefault();
+        var stage = $(this).data('collapse');
+        var header_selector = ".challenge[data-stage=" + stage + "] .collapsible-header";
+        var state = $(header_selector + ".active").length != 0;
+        if(state)
+            $(header_selector).each(function(i, x){ $(x).hasClass("active") && $(x).click(); });
+        else
+            $(header_selector).each(function(i, x){ $(x).hasClass("active") || $(x).click(); });
+    });
+    $("form").submit(function(e) {
+        // Loading button
+        var loadBtn = $(this).find(".loader");
+        loadBtn.show();
+
+        var id = $(this).data("challenge");
+        var points = $(this).data("points");
+        var flag = $("#flag-" + id).val();
+        // var updatedScore = score + points;
+        console.log(id);
+        console.log(flag);
+        api.makeCall("/submit/" + id + ".json", {flag: flag, _csrf_token: "evqcmr67h72vvdpmv99ne6wgw5oue9lvwhfiby9vxej6m1gmsw5wm1g575xu3cwt"}, function(data) {
+            if(data.code) {
+                loadBtn.hide();
+                Materialize.toast(data.message, 4000);
+            }
+            else {
+                // Materialize.toast("Correct flag, nice one!", 4000);
+                $("#uncheck-" + id).hide();
+                $("#check-" + id).show();
+                $("#header-" + id).click();
+
+                // update solves box
+                var solves_text = data.solves == 1 ? "Solve" : "Solves";
+                $("#solves-" + id).html(data.solves + " " + solves_text);
+                $("#solves-" + id).parent().show();
+                $("#solutions-" + id).show();
+                $("#youvesolved-" + id).show();
+                $("#empty-" + id).hide();
+                $("#flagform-" + id).hide();
+
+                // update points at top
+                console.log(score);
+                console.log(points);
+                score = calculateLevel(score, points);
+                loadBtn.hide();
+                setTimeout(function(){ launchConfetti(); }, 250);
+            }
+        });
+        return false;
+    });
+</script>
+
+
+      </div>
+
+      <div id="levelUpPop" class="levelup">
+        <div class="levelUpCard">
+          <h3>Level Up</h3>
+          <img src="/static/img/levelup.png" width="180" height="202" alt="level up icon">
+          <p>You are now level <span id="currentlevel" class="gold-text">Current level</span></p>
+        </div>
+      </div>
+    
+
+    <footer>
+    <div class="footerLinks">
+      <div>
+        <h5>CryptoHack</h5>
+        <a id="changeTheme">Light Mode</a><br>
+        <a href="/faq/">FAQ</a><br>
+        <a href="/blog/">Blog</a><br>
+        <span class="footerIcon">
+          <a href="https://twitter.com/cryptohack__" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="https://discord.gg/h9E7cna5pV" aria-label="Discord"><img src="/static/img/Discord-Logo-Color.svg" width="25"></a>
+          <a href="https://patreon.com/cryptohack" aria-label="Patreon"><i class="fab fa-patreon"></i></a>
+        </span><br>
+
+      </div>
+
+      <div>
+        <h5>Courses</h5>
+        <a href="/courses/intro/">Introduction to CryptoHack</a><br>
+        <a href="/courses/modular/">Modular Arithmetic</a><br>
+        <a href="/courses/symmetric/">Symmetric Cryptography</a><br>
+        <a href="/courses/public-key/">Public-Key Cryptography</a><br>
+        <a href="/courses/elliptic/">Elliptic Curves</a><br>
+      </div>
+
+      <div>
+        <h5>Categories</h5>
+        <a href="/challenges/general/">General</a><br>
+        <a href="/challenges/aes/">Symmetric Ciphers</a><br>
+        <a href="/challenges/maths/">Mathematics</a><br>
+        <a href="/challenges/rsa/">RSA</a><br>
+        <a href="/challenges/diffie-hellman/">Diffie-Hellman</a><br>
+        <a href="/challenges/ecc/">Elliptic Curves</a><br>
+        <a href="/challenges/hashes/">Hash Functions</a><br>
+        <a href="/challenges/web/">Crypto on the Web</a><br>
+        <a href="/challenges/post-quantum/">Lattices</a><br>
+        <a href="/challenges/isogenies/">Isogenies</a><br>
+        <a href="/challenges/zkp/">Zero-Knowledge Proofs</a><br>
+        <a href="/challenges/misc/">Miscellaneous</a><br>
+        <a href="/challenges/ctf-archive/">CTF Archive</a><br>
+      </div>
+    </div>
+
+
+    <div class="credits">
+      <h5>Credits</h5>
+      Illustrations from <a href="https://icons8.com">Ouch.pics</a><br>
+      Drawn by <a href="https://dribbble.com/thierryfousse">Thierry Fousse</a> and <a href="https://icons8.com/illustrations/author/60ab64bc8e3740e9be238b13">Tatyana Krasutskaya</a>
+
+    </div>
+
+    <div class="copyright">
+      <span>
+        <a href="/privacy-policy/">Privacy Policy</a> &nbsp;
+      </span>
+
+      <span>
+        © <span class="" data-timestamp="2026-05-25T08:42:21Z" data-function="format" data-format="YYYY" data-refresh="0" style="">2026</span> CryptoHack
+      </span>
+    </div>
+    </footer>
+
+    <script type="text/javascript">
+    function updateThemeToggleFooter() {
+      var elem = document.querySelector('#changeTheme');
+      elem.innerHTML = isLightThemeSelected() ? 'Dark Mode' : 'Light Mode'
+    }
+
+    (function() {
+      updateThemeToggleFooter()
+    })();
+
+    function togglePageContentLightDark() {
+        var html = document.getElementsByTagName('html')[0]
+        var currentClass = html.className
+        var newClass = html.className == 'dark-mode' ? 'light-mode' : 'dark-mode'
+        html.className = newClass
+
+        document.cookie = 'theme=' + (newClass == 'light-mode' ? 'light' : 'dark') + ';SameSite=Strict;path=/;domain=cryptohack.org;expires=Fri, 31 Dec 9999 23:59:59 GMT'
+        console.log('Cookies are now: ' + document.cookie)
+
+        var elem = document.querySelector('#changeTheme');
+        elem.innerHTML = isLightThemeSelected() ? 'Dark Mode' : 'Light Mode'
+    }
+
+    $("#changeTheme").on("click", function(e){
+    togglePageContentLightDark();
+
+    if ($("#darktheme").length) {
+      if(isLightThemeSelected()){
+        $('#darktheme').prop('checked', false);
+        $('#lighttheme').prop('checked', true);
+      }
+      else{
+        $('#darktheme').prop('checked', true);
+        $('#lighttheme').prop('checked', false);
+      }
+    }
+    });
+    </script>
+<div class="material-tooltip" id="8a49f2b0-580f-7871-8891-3bcb333b47cb"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="c6ba31c6-71f5-200e-238a-7f71d3c7b708"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="760c2c2e-467d-3942-12ae-7248a65a044b"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="33030d81-b9f2-72dc-7a55-82d45d82e444"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="ce0aa979-4ad0-64ae-07b7-fe7944bcdf6a"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="fab14eb6-7c39-807d-0d49-852a8aae4e42"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="40599fa6-bf22-d790-31dc-3d15482e74e8"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="5139975b-549a-5ab2-f1ba-af1ca62c8746"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="bed49e9f-2d29-4941-63ed-6b2d3eaec29c"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="c290ddc9-d892-758b-f0db-dc5b653f4535"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="0ab0e937-8d7b-ea10-d71b-56f7242e3c8c"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="629a9eaf-35c8-88e0-a01d-02ca1b2454bc"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="fc387cef-3bd4-dc28-8661-e044eaedb25e"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="74b69232-7617-64c5-8af5-3f223da5e4e4"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="dde5705d-855e-7922-a4e7-c26608ea1837"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="617db65d-31bc-6aa4-a72a-3afe7fa6f8b6"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="aa65e2bd-a312-d2b8-625c-408183c0f8d5"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="b459d3c1-a42f-15c8-9f92-386a00920cb2"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="a798b93c-dcf5-56ad-0a6b-acbf3a61a508"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="f320491f-fcf9-fcdd-cf47-b0337f1a0a00"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="658755e7-3a58-8bb9-0ba5-3c0ee617bf7b"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="38d51ea9-eca3-f5bc-c305-a9bee67a2d31"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="5dc2e0bb-0c22-fa57-b2be-7690144433fd"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="a48b7c18-6f9e-4097-07b3-0c6c1fb0e8e7"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="6ee20794-3925-24b9-de6d-fe7bfd9ac65a"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="7aa0a8ea-9ab3-fd9d-92af-5757f0238938"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="034314db-6d53-87a8-7e1a-68e5a94f0318"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="a6329e36-e164-cc2c-5337-ef25970e92d8"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="34a9ade5-d28a-987c-f9a8-c2fb722b0a22"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="6bae196c-0bb6-bbb4-e016-3d348b0635b8"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="039c924b-41c3-7ddf-a6fe-406d2894d358"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="7a2959ee-d2bf-4a5d-9087-5e8d4b18cac6"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="9a4e9820-01eb-9d6d-50dc-44f5447e4ca9"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="759f7103-a528-2cad-2d55-de20b3dd2a1d"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="4ee0f045-ede6-dec1-6dbb-2054752066d7"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="e28b5241-b40e-b272-0d88-c661d19ad54b"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="8894b8a1-a3ad-cb7f-8c89-be2d556b4fd0"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="55fd4b7f-08b4-e5b0-afa0-a6b975f88529"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="9aa4943d-dd6b-969e-1654-b7d5f4e9f05a"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="cbc33c34-39b7-9cf0-8305-1c0f0dd767d2"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="a487a0c5-cc3d-0a32-23e4-9986ba0891b6"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="8a4af36d-ef9a-c696-0431-e2968b90ce09"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="9ccc4438-aee4-899f-b006-fe76fc8307f7"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="e0f664bc-eb03-fd2c-5e17-1258ef1ed89f"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="c9faa9ef-432a-1ea2-b2f1-4fd49727345d"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="97579ce0-844d-65e7-4e29-1c57283d9439"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="f4bfa74a-e899-e957-4fd2-f248dc41c020"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="fb2e6fa9-184c-4f3c-fa7b-87737ad003e2"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="956cfb63-bd80-5239-f5d3-4c352616c09a"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="8a4d5f90-0ca6-d041-f90a-bb91b16eac9e"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="225605d1-5c47-18d4-3445-90144b932fe7"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="1a61b6b5-b9fd-79fa-cb12-bdb6b63763d8"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="8ef808d9-3e41-1e03-eb7b-cdd76a561805"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="be62af4c-eb2c-6d69-3691-08527f3e1e34"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="hiddendiv common"></div><div class="drag-target" style="left: 0px; touch-action: pan-y; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></div></body></html>

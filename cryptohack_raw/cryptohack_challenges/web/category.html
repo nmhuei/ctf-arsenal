@@ -1,0 +1,1272 @@
+<!DOCTYPE html><html lang="en" dir="ltr" class="dark-mode"><head>
+        <title>CryptoHack – Crypto on the Web challenges</title>
+
+        <link rel="stylesheet" type="text/css" href="/static/css/materialize.min.css">
+        <link rel="stylesheet" type="text/css" href="/static/css/main.css?ver=2">
+        <link rel="stylesheet" type="text/css" href="/static/css/light.css">
+
+        <link rel="stylesheet" type="text/css" href="/static/css/flag-icon.min.css">
+        <link rel="stylesheet" type="text/css" href="/static/css/all.min.css">
+        <link rel="stylesheet" type="text/css" href="/static/css/v4-shims.min.css">
+
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        
+<link rel="stylesheet" href="/static/css/katex.min.css">
+<script defer="" src="/static/js/katex.min.js"></script>
+<script defer="" src="/static/js/katex-auto-render.min.js"></script>
+<script defer="" src="/static/js/katex-render-options.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, katex_render_options);
+    });
+</script>
+
+
+        <!-- Generic Metadata -->
+        <link rel="canonical" href="https://cryptohack.org">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://cryptohack.org">
+        <meta property="og:site_name" content="CryptoHack">
+        <meta property="og:image" content="https://cryptohack.org/static/img/banner.png">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@CryptoHack__">
+        <meta name="twitter:image" content="https://cryptohack.org/static/img/banner.png">
+
+        <!-- Favicon -->
+        <link rel="apple-touch-icon" sizes="57x57" href="/static/favicon/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="/static/favicon/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/static/favicon/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/static/favicon/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/static/favicon/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/static/favicon/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/static/favicon/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/static/favicon/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/static/favicon/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="36x36" href="/static/favicon/android-icon-36x36.png">
+        <link rel="icon" type="image/png" sizes="48x48" href="/static/favicon/android-icon-48x48.png">
+        <link rel="icon" type="image/png" sizes="72x72" href="/static/favicon/android-icon-72x72.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="/static/favicon/android-icon-96x96.png">
+        <link rel="icon" type="image/png" sizes="144x144" href="/static/favicon/android-icon-144x144.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="/static/favicon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="/static/favicon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon/favicon-16x16.png">
+
+        <script>
+            function isLightThemeSelected() {
+                return document.cookie.match(/theme=light/i) != null
+            }
+
+            function setThemeFromCookie() {
+                var html = document.getElementsByTagName('html')[0]
+                html.className = isLightThemeSelected() ? 'light-mode' : 'dark-mode'
+                console.log('Loaded cookie: ' + document.cookie)
+            }
+
+            (function() {
+              setThemeFromCookie()
+            })();
+        </script>
+    </head>
+    <body class="competition-page">
+      <div class="wrapper">
+        <header>
+            <nav class="top-nav nav-fixed">
+                <div class="nav-wrapper">
+
+                    <div><a href="#" data-activates="nav-mobile" class="button-collapse top-nav full"><i class="fas fa-bars" aria-label="Menu Bars"></i></a></div>
+                    <a class="logo-link" href="/"><span class="outline">CRYPTOHACK</span></a>
+
+                    
+
+                    <ul class="right hide-on-med-and-down">
+                        
+                        
+                        <li><a href="/register/">Register</a></li>
+                        
+                        <li><a href="/login/">Login</a></li>
+                        
+                    </ul>
+                </div>
+
+            </nav>
+            <ul id="nav-mobile" class="side-nav fixed" style="left: 0px;">
+
+
+                <li><a href="/courses/">
+                    <div class="side-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <div class="side-text">Courses</div>
+                </a></li>
+
+                <li><a href="/challenges/">
+                    <div class="side-icon"><i class="fas fa-flag"></i></div>
+                    <div class="side-text">Challenges</div>
+                </a></li>
+
+                <!-- <div class="divider" /></div> -->
+                
+                <li><a href="/scoreboard/">
+                    <div class="side-icon"><i class="fas fa-chart-line"></i></div>
+                    <div class="side-text">Scoreboard</div>
+                </a></li>
+
+                <li><a href="/blog/">
+                    <div class="side-icon"><i class="fas fa-brain" style="margin-left: -2px;"></i></div>
+                    <div class="side-text">Blog</div>
+                </a></li>
+
+                <li><a href="/chat/">
+                    <div class="side-icon"><i class="fas fa-comments"></i></div>
+<!--                     <div class="side-icon"><img src="/static/img/Discord-Logo-Color.svg" width="25" style="margin: 14px 0 0 -5px;"></div> -->
+                    <div class="side-text">Chat</div>
+                </a></li>
+
+                <li><a href="/careers/">
+                    <div class="side-icon"><i class="fas fa-briefcase"></i></div>
+                    <div class="side-text">Careers</div>
+                </a></li>
+
+                <li><a href="/faq/">
+                    <div class="side-icon"><i class="fas fa-question"></i></div>
+                    <div class="side-text">FAQ</div>
+                </a></li>
+
+                
+
+                
+
+                
+                
+                <li><a href="/register/">
+                        <div class="side-icon"><i class="fas fa-user-plus"></i></div>
+                        <div class="side-text">Register</div>
+                    </a></li>
+                
+                <li><a href="/login/">
+                        <div class="side-icon"><i class="fas fa-lock"></i></div>
+                        <div class="side-text">Login</div>
+                    </a></li>
+                
+            </ul>
+        </header>
+        <div class="cont">
+            
+        </div>
+        <div class="cont">
+            
+
+
+
+<div class="categoryDescription">
+  
+  <div class="categoryText">
+    <h2 class="categoryTitle">Crypto on the Web</h2>
+    <p>Billions of people use cryptography on a daily basis without realising it. The 2010s saw the widespread adoption of encryption on the web, accelerated by the Snowden disclosures: in 2015, 30% of pages loaded on Android were protected by Transport Layer Security (TLS), <a href="https://transparencyreport.google.com/https/overview?hl=en" target="_blank">but by 2020, it was 90%</a>. Alongside TLS, major websites employ hash functions for password storage, signed tokens for authorisation, and complex protocols for handling payment-card data.<br><br>However, as we've seen from other categories, cryptography is full of subtleties, and teams building web apps often get it wrong. This highly practical category explores common ways that cryptography is used in web apps, together with devastating implementation errors that are seen in the real world.</p>
+  </div>
+  <div class="categoryImage">
+  <img src="/static/img/category/web.png" alt="">
+  </div>
+  
+
+</div>
+
+
+<div class="row">
+    <div class="col s12 m6 noPadding">
+        <div class="left">
+        <div class="select-wrapper"><span class="caret">▼</span><input type="text" class="select-dropdown" readonly="true" data-activates="select-options-ebfb16b3-fea1-b00c-a0e2-da9097086728" value="Show all stages"><ul id="select-options-ebfb16b3-fea1-b00c-a0e2-da9097086728" class="dropdown-content select-dropdown"><li class=""><span>Show all stages</span></li><li class=""><span>JSON Web Tokens</span></li><li class=""><span>TLS Part 1: The Protocol</span></li><li class=""><span>Cloud</span></li></ul><select onchange="filterCategories(this);" class="initialized">
+            <option value="*">Show all stages</option>
+            
+            <option value="jwt">JSON Web Tokens</option>
+            
+            <option value="tls1">TLS Part 1: The Protocol</option>
+            
+            <option value="cloud">Cloud</option>
+            
+        </select></div>
+        </div>
+    </div>
+    <div class="col s12 m6 noPadding">
+      <p class="toggleCheckbox"><input type="checkbox" id="toggleSolved" class="filled-in"><label for="toggleSolved">Hide Solved Challenges</label></p>
+    </div>
+</div>
+
+<span class="stage" data-stage="jwt">
+    <hr>
+    <div class="challengeInfo">
+      <span><h4>JSON Web Tokens</h4></span>
+      <span class="flexToggle"><a class="stage-collapse" data-collapse="jwt" href="#">Toggle</a></span>
+    </div>
+    
+    <div class="clearfix"></div>
+    <ul class="collapsible popout" data-collapsible="expandable">
+        
+        <li class="challenge active" data-category="140" data-stage="jwt">
+            <div id="header-token-appreciation" data-challenge="token-appreciation" class="collapsible-header active">
+                
+                <i id="check-token-appreciation" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="04a0876e-0273-4b80-d73f-e0953bf96cf6"></i>
+                <i id="uncheck-token-appreciation" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="147775e1-cf18-2c3e-3087-c953e90b84fa"></i>
+                
+                <div class="challenge-text truncate">Token Appreciation</div>
+                <span class="right">
+                    
+                    5 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/token-appreciation/solves/">
+                        <span id="solves-token-appreciation">6366 Solves</span>
+                    </a>
+                    
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body" style="display: block;">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    JavaScript Object Signing and Encryption (JOSE) is a framework specifying ways to securely transmit information on the Internet. It's most well-known for JSON Web Tokens (JWTs), which are used to authorise yourself on a website or application. JWTs typically do this by storing your "login session" in your browser after you have authenticated yourself by entering your username and password. In other words, the website gives you a JWT that contains your user ID, and can be presented to the site to prove who you are without logging in again. JWTs look like this:<br><br><span class="codeBlock"> eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmbGFnIjoiY3J5cHRve2p3dF9jb250ZW50c19jYW5fYmVfZWFzaWx5X3ZpZXdlZH0iLCJ1c2VyIjoiQ3J5cHRvIE1jSGFjayIsImV4cCI6MjAwNTAzMzQ5M30.shKSmZfgGVvd2OSB2CGezzJ3N6WAULo3w9zCl_T47KQ </span><br><br>You can recognise it because it's base64-encoded data split into three parts (separated by a <code>.</code>): the header, the payload, and the signature. In fact, it's a variant of base64 encoding, where the <code>+</code> and <code>/</code> have been replaced by different special characters since they can cause issues in URLs.<br><br>Some developers believe that the JWT encoding is like encryption, so they put sensitive data inside the tokens. To prove them wrong, decode the JWT above to find the flag. There are online tools to do this quickly, but working with Python's <a href="https://pyjwt.readthedocs.io/en/stable/" target="_blank">PyJWT</a> library will prepare you best for future challenges.
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Fweb%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+        <li class="challenge active" data-category="139" data-stage="jwt">
+            <div id="header-jwt-sessions" data-challenge="jwt-sessions" class="collapsible-header active">
+                
+                <i id="check-jwt-sessions" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="b2863391-c7e8-2d47-206d-e8de8b88e6dd"></i>
+                <i id="uncheck-jwt-sessions" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="398a9093-69ad-f10e-2a7c-6a07540a6d4e"></i>
+                
+                <div class="challenge-text truncate">JWT Sessions</div>
+                <span class="right">
+                    
+                    10 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/jwt-sessions/solves/">
+                        <span id="solves-jwt-sessions">5345 Solves</span>
+                    </a>
+                    
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body" style="display: block;">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    The traditional way to store sessions is with session ID cookies. After you login to a website, a session object is created for you on the backend (the server), and your browser (the client) is given a cookie which identifies that object. As you make requests to the site, your browser automatically sends the session ID cookie to the backend server, which uses that ID to find your session in its own memory and thus authorise you to perform actions.<br><br>JWTs work differently. After you login, the server sends your web browser the whole session object in a JWT, containing a payload of key-value pairs describing your username, privileges, and other info. Also included is a signature created using the server's secret key, designed to prevent you from tampering with the payload. Your web browser saves the token into local storage.<br><br><img style="max-width: 100%; display: block; margin: 0 auto;" src="/static/img/jwt-usage.png" alt="diagram showing JWT usage"><br><br>On subsequent requests, your browser sends the token to the backend server. The server verifies the signature first, and then reads the token payload to authorise you.<br><br><span class="note"><i class="fas fa-lightbulb"></i> To summarise, with session ID cookies, sessions live on the server, but with JWTs, sessions live on the client.</span><br><br>The main advantage of JWTs over session ID cookies is that they are easy to scale. Organisations need a way to share sessions across multiple backend servers. When a client switches from using one server or resource to another, that client's session should still work. Furthermore, for large orgs there could be millions of sessions. Since JWTs live on the client, they solve these problems: any backend server can authorise a user just by checking the signature on the token and reading the data inside.<br><br>Unfortunately there are some downsides to JWTs, as they are often configured in an insecure way, and clients are free to modify them and see if the server will still verify them. We'll look at these exploits in the next challenges. For now, the flag is the name of the HTTP header used by the browser to send JWTs to the server.
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Fweb%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+        <li class="challenge active" data-category="143" data-stage="jwt">
+            <div id="header-no-way-jose" data-challenge="no-way-jose" class="collapsible-header active">
+                
+                <i id="check-no-way-jose" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="69fc8cc9-e244-1f35-96b2-4722599ccba0"></i>
+                <i id="uncheck-no-way-jose" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="4d1e7c9e-b9db-a9e6-b2b9-c47fd692f318"></i>
+                
+                <div class="challenge-text truncate">No Way JOSE</div>
+                <span class="right">
+                    
+                    20 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/no-way-jose/solves/">
+                        <span id="solves-no-way-jose">4368 Solves</span>
+                    </a>
+                    
+                    
+                    <span class="solutions_links solutionsHide" id="solutions-no-way-jose">
+                      <b>·</b>
+                      <a class="gold-link preventToggle" href="/challenges/no-way-jose/solutions/">
+                        8 Solutions
+                      </a>
+                    </span>
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body" style="display: block;">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    Let's look at JWT algorithms. The first part of a JWT is the JOSE header, and when you decode it, looks like this:<br><br><span class="codeBlock"> {"typ":"JWT","alg":"HS256"} </span><br><br>This tells the server it's a JWT and which algorithm to use to verify it. Can you see the issue here? The server has to process this untrusted input <i>before</i> it is actually able to verify the integrity of the token! In ideal cryptographic protocols, you verify messages you receive before performing any further operations on them, otherwise in Moxie Marlinspike's words, "it will somehow inevitably lead to doom".<br><br>The "none" algorithm in JWTs is a case in point. The link below takes you to a page where you can interact with a broken session API, which emulates a vulnerability that existed in a lot of JWT libraries. Use it to bypass authorisation and get the flag.<br><br>Play at <a href="https://web.cryptohack.org/no-way-jose" target="_blank">https://web.cryptohack.org/no-way-jose</a>
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Fweb%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+        <li class="challenge active" data-category="144" data-stage="jwt">
+            <div id="header-jwt-secrets" data-challenge="jwt-secrets" class="collapsible-header active">
+                
+                <i id="check-jwt-secrets" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="353e2622-8b36-391b-6447-f315e9b46bc6"></i>
+                <i id="uncheck-jwt-secrets" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="0ef45bb1-8156-b56a-80af-8e2868daec25"></i>
+                
+                <div class="challenge-text truncate">JWT Secrets</div>
+                <span class="right">
+                    
+                    25 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/jwt-secrets/solves/">
+                        <span id="solves-jwt-secrets">3975 Solves</span>
+                    </a>
+                    
+                    
+                    <span class="solutions_links solutionsHide" id="solutions-jwt-secrets">
+                      <b>·</b>
+                      <a class="gold-link preventToggle" href="/challenges/jwt-secrets/solutions/">
+                        6 Solutions
+                      </a>
+                    </span>
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body" style="display: block;">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    The most common signing algorithms used in JWTs are <i>HS256</i> and <i>RS256</i>. The first is a symmetric signing scheme using a HMAC with the SHA256 hash function. The second is an asymmetric signing scheme based on RSA.<br><br>A lot of guides on the internet recommend using <i>HS256</i> as it's more straightforward. The secret key used to sign a token is the same as the key used to verify it.<br><br>However, if the signing secret key is compromised, an attacker can sign arbitrary tokens and forge sessions of other users, potentially causing total compromise of a webapp. <i>HS256</i> makes the secret key harder to secure than an asymmetric keypair, as the key must be available on all servers that verify <i>HS256</i> tokens (unless better infrastructure with a separate token verifying service is in place, which usually isn't the case). In contrast, with the asymmetric scheme of RS256, the signing key can be better protected while the verifying key is distributed freely.<br><br><span class="note"><i class="fas fa-brain"></i> Even worse, developers sometimes use a default or weak HS256 secret key.</span><br><br>Here is a snippet of source code with one function to create a session and another function to authorise a session and check for admin permissions. But there's a strange comment about the secret key. What are you going to do?<br><br>Play at <a href="https://web.cryptohack.org/jwt-secrets" target="_blank">https://web.cryptohack.org/jwt-secrets</a>
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Fweb%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+        <li class="challenge active" data-category="145" data-stage="jwt">
+            <div id="header-rsa-or-hmac" data-challenge="rsa-or-hmac" class="collapsible-header active">
+                
+                <i id="check-rsa-or-hmac" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="11120db8-9961-0556-c001-8560ce290b4e"></i>
+                <i id="uncheck-rsa-or-hmac" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="63a54e39-49a6-cd5e-be86-d7811b46bd17"></i>
+                
+                <div class="challenge-text truncate">RSA or HMAC?</div>
+                <span class="right">
+                    
+                    35 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/rsa-or-hmac/solves/">
+                        <span id="solves-rsa-or-hmac">2549 Solves</span>
+                    </a>
+                    
+                    
+                    <span class="solutions_links solutionsHide" id="solutions-rsa-or-hmac">
+                      <b>·</b>
+                      <a class="gold-link preventToggle" href="/challenges/rsa-or-hmac/solutions/">
+                        12 Solutions
+                      </a>
+                    </span>
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body" style="display: block;">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    There's another issue caused by allowing attackers to specify their own algorithms but not carefully validating them. Attackers can mix and match the algorithms that are used to sign and verify data. When one of these is a symmetric algorithm and one is an asymmetric algorithm, this creates a beautiful vulnerability. <br><br><span class="note"><i class="fas fa-lightbulb"></i>The server is running PyJWT with a small patch to enable an exploit that existed in PyJWT versions &lt;= 1.5.0. To create the malicious signature, you will need to patch your PyJWT library too. If you want to patch, look at the line that was added in the <a href="https://github.com/jpadilla/pyjwt/commit/37926ea0dd207db070b45473438853447e4c1392">fix for the vulnerability</a>. Use <code>pip show pyjwt</code> to find the location of the PyJWT library on your computer, and make the edit. For versions of PyJWT &gt; 2.4.0 the code has been changed so you will have to edit <code>jwt/utils.py</code> instead of <code>jwt/algorithms.py</code></span><br><br>Play at <a href="https://web.cryptohack.org/rsa-or-hmac" target="_blank">https://web.cryptohack.org/rsa-or-hmac</a>
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Fweb%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+        <li class="challenge active" data-category="151" data-stage="jwt">
+            <div id="header-json-in-json" data-challenge="json-in-json" class="collapsible-header active">
+                
+                <i id="check-json-in-json" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="ed0dee12-9587-418b-520d-e2ecfd4f71c7"></i>
+                <i id="uncheck-json-in-json" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="9562e1ab-6ea1-65e9-e4e1-868de23e60cc"></i>
+                
+                <div class="challenge-text truncate">JSON in JSON</div>
+                <span class="right">
+                    
+                    40 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/json-in-json/solves/">
+                        <span id="solves-json-in-json">2643 Solves</span>
+                    </a>
+                    
+                    
+                    <span class="solutions_links solutionsHide" id="solutions-json-in-json">
+                      <b>·</b>
+                      <a class="gold-link preventToggle" href="/challenges/json-in-json/solutions/">
+                        10 Solutions
+                      </a>
+                    </span>
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body" style="display: block;">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    We've explored how flawed verification can break the security of JWTs, but it can sometimes be possible to exploit the code to sign unexpected data in the first place.<br><br>Play at <a href="https://web.cryptohack.org/json-in-json" target="_blank">https://web.cryptohack.org/json-in-json</a><br><br>Challenge contributed by <a class="gold-link" href="/user/sublevel_1157">sublevel_1157</a>
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Fweb%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+        <li class="challenge active" data-category="162" data-stage="jwt">
+            <div id="header-rsa-or-hmac-2" data-challenge="rsa-or-hmac-2" class="collapsible-header active">
+                
+                <i id="check-rsa-or-hmac-2" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="b338700f-e40a-04fa-063f-71642abe9e33"></i>
+                <i id="uncheck-rsa-or-hmac-2" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="08930400-1c2d-63eb-31a1-8141416238c5"></i>
+                
+                <div class="challenge-text truncate">RSA or HMAC? Part 2</div>
+                <span class="right">
+                    
+                    100 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/rsa-or-hmac-2/solves/">
+                        <span id="solves-rsa-or-hmac-2">1163 Solves</span>
+                    </a>
+                    
+                    
+                    <span class="solutions_links solutionsHide" id="solutions-rsa-or-hmac-2">
+                      <b>·</b>
+                      <a class="gold-link preventToggle" href="/challenges/rsa-or-hmac-2/solutions/">
+                        9 Solutions
+                      </a>
+                    </span>
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body" style="display: block;">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    It is possible to abuse JWT public keys without the public key being public? This challenge takes RSA or HMAC one step further, and now both a deeper knowledge of RSA maths and data formatting is involved. It's more realistic than the first part as web apps usually won't have a route disclosing their public key.<br><br><span class="note"><i class="fas fa-brain"></i>If you are attempting to implement the solution yourself (which is recommended over using a public script!), but the signature is not validating, take care that your formatting is 100% correct. We've added to the source the commands used to generate the private and public keys.</span><br><br><span class="note"><i class="fas fa-lightbulb"></i>The server is running PyJWT with a small patch, the same as the previous challenge. Check the notes from the previous challenge.</span><br><br>Play at <a href="https://web.cryptohack.org/rsa-or-hmac-2" target="_blank">https://web.cryptohack.org/rsa-or-hmac-2</a>
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Fweb%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+    </ul>
+</span>
+
+
+<span class="stage" data-stage="tls1">
+    <hr>
+    <div class="challengeInfo">
+      <span><h4>TLS Part 1: The Protocol</h4></span>
+      <span class="flexToggle"><a class="stage-collapse" data-collapse="tls1" href="#">Toggle</a></span>
+    </div>
+    
+    <div class="clearfix"></div>
+    <ul class="collapsible popout" data-collapsible="expandable">
+        
+        <li class="challenge" data-category="165" data-stage="tls1">
+            <div id="header-secure-protocols" data-challenge="secure-protocols" class="collapsible-header">
+                
+                <i id="check-secure-protocols" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="71b711d2-7da5-68f8-07d1-b0fa5c54753c"></i>
+                <i id="uncheck-secure-protocols" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="1d1b23f3-45cf-33ac-a781-3ce9ed1240a4"></i>
+                
+                <div class="challenge-text truncate">Secure Protocols</div>
+                <span class="right">
+                    
+                    5 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/secure-protocols/solves/">
+                        <span id="solves-secure-protocols">2381 Solves</span>
+                    </a>
+                    
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    The rest of CryptoHack focusses on cryptographic primitives, low-level building blocks such as symmetric ciphers, public-key algorithms, and hash functions. This section however looks at cryptographic protocols. Cryptographic protocols are what happen when primitives are combined together, enabling two or more parties to communicate securely.<br><br>A good cryptographic protocol addresses the three core ideas of security (the CIA triad):<br><br><ol> <li><b>Confidentiality</b>: keeping secrets</li> <li><b>Authenticity</b>: verifying identities</li> <li><b>Integrity</b>: ensuring safe transport</li> </ol><br><br>Transport Layer Security (TLS) is the most widespread cryptographic protocol; an average Internet user initiates hundreds of TLS connections every day. TLS aims to provide secure communication, meeting the above three requirements, over the insecure network infrastructure of the Internet. Most commonly TLS is used to secure HTTP traffic from a browser. To achieve this there are multiple major components, including TLS certificates, Certificate Authorities (CAs), a handshake phase, and more that we will cover.<br><br><span class="note"><i class="fas fa-pencil-alt"></i>Some still refer to TLS as SSL, which stands for Secure Sockets Layer, and was the older version of the protocol. The first version of TLS was defined in 1999.</span><br><br>Providing cryptographic security for Internet HTTP traffic is the core design goal of TLS. However, for TLS to be useful, security could not be the only goal. A wide range of devices communicate using TLS, from underpowered smartphones to powerful webservers, leading to three additional goals:<br><br><ul> <li><b>Interoperability</b>: aims to ensure that two devices can communicate even if they are using different TLS implementations which support different sets of algorithms.</li> <li><b>Extensibility</b>: means TLS can support many extra use-cases through optional extensions without overcomplicating the core protocol.</li> <li><b>Efficiency</b>: important so that the performance cost of TLS is not too high, especially on low-end devices where cryptographic operations are slow.</li> </ul><br><br>The last main point to cover here is that there have been several versions of TLS, each of which has improved the protocol, and patched known vulnerabilities. Almost all devices in use today can be counted upon to support TLS 1.2 (released 2008), which is still considered reasonably secure, even though the current version TLS 1.3 (released 2018) offers major improvements. A small percentage of servers still support the now-ancient TLS 1.0 and even SSL 3.0 (which are vulnerable to several exploits) due to misconfigurations or the need to allow ancient hardware to connect to them. This shows how interoperability can work against security. <br><br>To get the flag for this challenge, browse to <code>tls1.cryptohack.org</code> and find the name of the certificate authority organisation which issued the TLS certificate for the domain - this can be done purely within the browser. We'll explore the role of certificate authorities more in future challenges!<br><br><b>Resources:</b><br>&nbsp; - <a href="https://www.ssllabs.com/ssl-pulse/" target="_blank">SSL Labs Statistics</a><br>
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Fweb%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+        <li class="challenge" data-category="164" data-stage="tls1">
+            <div id="header-sharks-wire" data-challenge="sharks-wire" class="collapsible-header">
+                
+                <i id="check-sharks-wire" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="b464fb32-30c8-dae6-1ef0-44bf53e964d9"></i>
+                <i id="uncheck-sharks-wire" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="1d102d18-5311-0cc9-c84f-c9a787d03c88"></i>
+                
+                <div class="challenge-text truncate">Sharks on the Wire</div>
+                <span class="right">
+                    
+                    10 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/sharks-wire/solves/">
+                        <span id="solves-sharks-wire">1914 Solves</span>
+                    </a>
+                    
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    The best way to understand a network protocol is to watch real traffic. For this challenge you'll use the incredible <a href="https://www.wireshark.org/download.html" target="_blank">Wireshark</a> tool to investigate a TLS connection.<br><br>Wireshark is an open-source networking tool which can be used to easily record and analyse network traffic. It's widely used for troubleshooting so it's useful to know the basics of how to use it. Installation should be straightforward on Linux and macOS, on Windows it can be a little trickier, please <a href="https://www.wireshark.org/docs/wsug_html_chunked/ChBuildInstallWinInstall.html" target="_blank">check the docs</a>.<br><br>Once you have Wireshark installed, open the file "cryptohack.org.pcapng" linked below. This is a packet capture showing the first 50 packets when we visited <i>https://cryptohack.org</i> in the Firefox browser. A packet is a formatted unit of data transmitted over a network. In the upper pane you can see a list of these packets and Wireshark is smart enough to figure out the network protocols used in each one based on the data inside. When you click on a packet, you get a "dissection" of each field in the data and what it means in the middle pane. In the bottom pane is a view of the raw packet bytes.<br><br>In the next challenges we'll look at what is happening in these packets. For now let's just get the hang of the Wireshark interface.<br><br><span class="note"><i class="fas fa-lightbulb"></i>By default Wireshark only shows IP addresses in the source and destination columns. Click <code>View &gt; Resolution &gt; Resolve Network Addresses</code> to see some helpful names we added to the source and destination IPs to make the communication clearer. While Wireshark can resolve some public IPs by itself (like <code>178.62.74.206</code> becomes "cryptohack.org" using the DNS request in the packet capture), Wireshark could not resolve the private IPs in the capture so we annotated those ourselves in the provided file by right-clicking the IPs then <code>Edit Resolve Name</code>.</span><br><br>The search bar at the top of Wireshark allows the packets to be filtered using powerful expressions. You can also right-click packets on certain columns and click <code>Apply as Filter &gt; Selected</code> to apply the same criteria on the selected column to filter all packets in the capture. For instance, if you right-click and do this for a packet sent by the CryptoHack server in the "Source" column, the <code>ip.src == 178.62.74.206</code> filter will be applied. To remove the filter clear the search bar and hit enter.<br><br>How many packets were received by the CryptoHack.org server (i.e. CryptoHack.org was the destination) in this capture?<br><br><b>Challenge files:</b><br>&nbsp; - <a href="/static/challenges/cryptohack_6b3a90f7c585d399088758fda92fb9f6.org.pcapng" download="">cryptohack.org.pcapng</a><br>
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Fweb%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+        <li class="challenge" data-category="167" data-stage="tls1">
+            <div id="header-tls-handshake" data-challenge="tls-handshake" class="collapsible-header">
+                
+                <i id="check-tls-handshake" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="b21f4aa9-14ab-0b8f-4dff-e01b387df79f"></i>
+                <i id="uncheck-tls-handshake" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="8a21c2ab-f604-73b3-d256-e9c18949daee"></i>
+                
+                <div class="challenge-text truncate">TLS Handshake</div>
+                <span class="right">
+                    
+                    15 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/tls-handshake/solves/">
+                        <span id="solves-tls-handshake">1758 Solves</span>
+                    </a>
+                    
+                    
+                    <span class="solutions_links solutionsHide" id="solutions-tls-handshake">
+                      <b>·</b>
+                      <a class="gold-link preventToggle" href="/challenges/tls-handshake/solutions/">
+                        2 Solutions
+                      </a>
+                    </span>
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    This challenge uses the same packet capture as the previous challenge. Let's describe the communication we see at a high level.<br><br>The TLS communication only begins at packet 10, but what happens before provides important context:<br><br><ul> <li><b>Packets 1-2</b>: First, when we typed <i>cryptohack.org</i> into the address bar and hit enter, a Domain Name System (DNS) request was made to translate the domain name (<i>cryptohack.org</i>) to an IP address (<code>178.62.74.206</code>).</li> <li><b>Packets 3-4</b>: The "Safe Browsing" feature in Firefox reached out to a Google server to check that <i>cryptohack.org</i> was not a phishing or malicious domain.</li> <li><b>Packets 5-6</b>: DNS responses to our DNS requests came back, saying that <i>cryptohack.org</i> can be reached at IP address <code>178.62.74.206</code>.</li> <li><b>Packets 7-9</b>: A TCP three-way handshake (SYN, SYN-ACK, ACK) was initiated between our laptop and port 443 (the TLS port) of the server at <code>178.62.74.206</code>. This negotiated a stable connection between the two computers over the Internet before the real data transfer could start.</li> <li><b>Packet 10-11</b>: A TLS <i>ClientHello</i> message was sent from our laptop to the server. The next challenge will expand on this, but for now note this was our laptop sending a bunch of important parameters such as the ciphers it supports. Packet 11 is an ACK TCP packet sent from the server ACKnowledging it received the packet from our laptop.</li> <li><b>Packet 12-17</b>: The server sent TLS <i>ServerHello, Change Cipher Spec, and Application Data </i> messages. TLS 1.3 is designed to be really fast - the server sends back its own parameters, then signals <i>Change Cipher Spec</i> which means it is switching over to sending encrypted communications from now on. Then the server sends its TLS certificate encrypted.</li> <li><b>Packets 18-21</b>: An Online Certificate Status Protocol (OCSP) connection was made from our laptop to an OCSP server, to check that the TLS certificate presented by CryptoHack hadn't been revoked... yet another thing we'll explore later!</li> <li><b>Packets 22-27</b>: Our laptop sent a <i>Change Cipher Spec</i> message to note that it is switching over to sending encrypted data, and it finally made a HTTP request requesting the CryptoHack home page. The actual HTTP content of the connection can't be seen in the packet capture, as it's now encrypted!</li> <li><b>Packets 28-39</b>: The server started sending the contents of the CryptoHack homepage to our client over HTTP wrapped in TLS.</li> <li><b>Packets 40-50</b>: Firefox's HTML parser saw that it needed external resources from Content Delivery Networks such as <code>cdnjs.cloudflare.com</code> to load JavaScript resources on the page and sent DNS requests to resolve those domains. This isn't relevant to TLS apart from the notable fact that DNS requests on most systems by default are not encrypted (but DNS-over-HTTPS, which fixes this obvious leak, is starting to get more common).</li> </ul><br><br>Wow, that was a lot of packets just to start displaying a relatively simple website, and that wasn't even all of them! By spending some time playing around in Wireshark you should gain a better grasp on what data TLS protects as well as what it does not.<br><br>To solve this challenge, find the Random data sent from <i>cryptohack.org</i> in the <code>ServerHello</code> message of the packet capture. Randomness is contributed by both client and server, and it plays role in preventing replay attacks. A replay attack is when an attacker that has recorded an existing handshake tries to reuse the same messages to pretend to be a client or server in a new connection.<br><br> <br><br><b>Challenge files:</b><br>&nbsp; - <a href="/static/challenges/cryptohack_6b3a90f7c585d399088758fda92fb9f6.org.pcapng" download="">cryptohack.org.pcapng</a><br><br><b>Resources:</b><br>&nbsp; - <a href="https://tls13.xargs.org/" target="_blank">The Illustrated TLS 1.3 connection</a><br>
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Fweb%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+        <li class="challenge" data-category="166" data-stage="tls1">
+            <div id="header-saying-hello" data-challenge="saying-hello" class="collapsible-header">
+                
+                <i id="check-saying-hello" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="ff58a5d2-2ef6-13bb-e669-874a30b35973"></i>
+                <i id="uncheck-saying-hello" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="05c4c591-7136-9ed8-b5ef-67cc945c830f"></i>
+                
+                <div class="challenge-text truncate">Saying Hello</div>
+                <span class="right">
+                    
+                    20 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/saying-hello/solves/">
+                        <span id="solves-saying-hello">1645 Solves</span>
+                    </a>
+                    
+                    
+                    <span class="solutions_links solutionsHide" id="solutions-saying-hello">
+                      <b>·</b>
+                      <a class="gold-link preventToggle" href="/challenges/saying-hello/solutions/">
+                        4 Solutions
+                      </a>
+                    </span>
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    As we've seen, TLS connections begin with a <i>handshake</i>, where the client (normally a browser) and server agree on important parameters that will define the remainder of the connection. The parameters exchanged allow a shared secret to be generated, and after the handshake is complete, the shared secret is used to symmetrically encrypt subsequent application data.<br><br>At a high level TLS messages are called "records". The record format starts with a short header, which contains information about the TLS version, the content type of the message (handshake, change cipher spec, application data, and alert), and the data length. Then the data follows.<br><br>The first message sent is the <i>ClientHello</i>, where the client sends the server the following data: <ul> <li>A list of cipher suites it supports</li> <li>The highest TLS version it supports</li> <li>A list of extensions and compression methods it supports</li> <li>A random number (used to provide entropy in the key exchange, as seen in the previous challenge)</li> <li>A session ID to identify the connection</li> </ul><br><br>The TLS cipher suite that is negotiated is crucial as it specifies the cryptographic primitives that will be used. A cipher suite name is a human-readable representation of a cipher suite, and it looks like this: <code>ECDHE-RSA-AES128-GCM-SHA256</code>: <ol> <li><code>ECDHE</code> is the Elliptic-curve Diffie–Hellman algorithm used for key exchange.</li> <li><code>RSA</code> is used to sign the certificate. This field is sometimes missing, in which case the signature algorithm to be used is negotiated in the <code>signature_algorithms</code> extension. In Wireshark, you can see the client's desired signature algorithms in the <i>ClientHello</i> message.</li> <li><code>AES-128</code> is used to symmetrically encrypt the application data.</li> <li><code>GCM</code> is the mode of operation that will be used for AES.</li> <li><code>SHA256</code> will be used for handshake authentication.</li> </ol><br><br>You can check <a href="https://ciphersuite.info/cs/TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256/" target="_blank">ciphersuite.info</a> for more information about specific cipher suites.<br><br>Now for the challenge: the server "tls1.cryptohack.org" speaks both TLS 1.2 and TLS 1.3, and supports only a single TLS 1.2 cipher suite. What is this cipher suite? Give your answer in a similar format to the cipher suite name above (OpenSSL format).<br><br>To avoid a TLS 1.3 handshake, you can use <code>curl</code> or <code>openssl</code> commands with specific flags to specify that TLS 1.2 is the maximum version you support in your <i>ClientHello</i> message, or you can use an online tool like <a href="https://www.ssllabs.com/ssltest/analyze.html" target="_blank">Qualys SSL Labs</a> to get all the TLS information about the server to solve this.
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Fweb%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+        <li class="challenge" data-category="226" data-stage="tls1">
+            <div id="header-decrypting-tls12" data-challenge="decrypting-tls12" class="collapsible-header">
+                
+                <i id="check-decrypting-tls12" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="6adf1788-860d-8a39-7013-8651141f50f8"></i>
+                <i id="uncheck-decrypting-tls12" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="16c57b76-55ad-cf09-15dc-0963633927ca"></i>
+                
+                <div class="challenge-text truncate">Decrypting TLS 1.2</div>
+                <span class="right">
+                    
+                    30 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/decrypting-tls12/solves/">
+                        <span id="solves-decrypting-tls12">1214 Solves</span>
+                    </a>
+                    
+                    
+                    <span class="solutions_links solutionsHide" id="solutions-decrypting-tls12">
+                      <b>·</b>
+                      <a class="gold-link preventToggle" href="/challenges/decrypting-tls12/solutions/">
+                        3 Solutions
+                      </a>
+                    </span>
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    Let's rewind for a moment and talk about TLS 1.2, and why it has been superseded by TLS 1.3.<br><br>Attached is a packet capture "tls2.cryptohack.org.pcapng" of a TLS 1.2 connection being made to <code>tls2.cryptohack.org</code> using the <code>curl</code> command-line tool. Unlike the TLS 1.3 connection we were looking at in the previous packet capture, more of the handshake is visible in plaintext.<br><br><b>Plaintext Certificate</b><br><br>In packet 12 sent from the server to our laptop, we can see the full TLS Certificate. In TLS 1.3, the certificate is encrypted. Network security devices that run on corporate networks often relied on passively monitoring certificates to work out which connections to block; they can no longer use this method for TLS 1.3 connections.<br><br><span class="note"><i class="fas fa-pencil-alt"></i>Network security devices now use other methods to snoop on TLS 1.3 connections, we'll cover that in a later challenge.</span><br><br><b>Client Key Exchange</b><br><br>In packet 14 sent from laptop to server, there is a Client Key Exchange. Either RSA, various types of DHKE (Diffie-Hellmann Key Exchange), or PSK (Pre-Shared Key) algorithms can be used for key exchange. If RSA is used, then the client generates a random value called the premaster secret, encrypts it using the public key from the certificate sent by the server, and sends this to the server. Both laptop and server now have the means to calculate the master secret and therefore the shared session key, by combining the premaster secret with random values. If Diffie-Hellman is used as the key exchange algorithm, the client and server send each other their Diffie-Hellmann public values, allowing the same premaster secret to be calculated by both sides.<br><br>TLS 1.3 completely removed the Client Key Exchange step. It is no longer needed thanks to the more limited set of supported algorithms. Only Ephemeral Diffie Hellman key exchanges are supported (plus the much less commonly used PSK). The client now guesses which cipher suite the server will accept, and sends the Diffie-Hellman parameters in the Client Hello. Ultimately this saves a full network roundtrip when establishing a connection, making TLS 1.3 noticeably faster when browsing the Internet.<br><br><b>Decrypting non-ephemeral TLS 1.2</b><br><br>A major weakness of pre-TLS 1.3 cipher suites is that many cipher suites used long-term RSA (or less commonly static DH) keys for key exchange. As we just noted, the client sends the premaster secret encrypted by the RSA public key in the server certificate. We'll discuss how this relates to forward secrecy further in the next challenge. For now, you'll use the fact to decrypt a TLS 1.2 stream.<br><br>In the attached PCAP file for this challenge, the connection was made using the <code>TLS_RSA_WITH_AES_256_GCM_SHA384</code> cipher suite (<code>AES256-GCM-SHA384</code> in OpenSSL format). This uses RSA for key exchange.<br><br>You've hacked the <code>tls2.cryptohack.org</code> server and obtained the certificate's RSA private key. Use it to decrypt the TLS connection and find the flag in the HTTP/2 stream.<br><br><span class="note"><i class="fas fa-lightbulb"></i>In Wireshark's "TLS Decrypt" dialogue, you don't need to worry about the IP address, port or other fields except "Key File". Select the file and Wireshark will figure out the rest.</span><br><br><b>Challenge files:</b><br>&nbsp; - <a href="/static/challenges/tls2_f84f9216f7bd77b7a1337889393296e1.cryptohack.org.pcapng" download="">tls2.cryptohack.org.pcapng</a><br>&nbsp; - <a href="/static/challenges/privkey_aa0c8200134016bdbbb9e521b6e5f3e4.pem" download="">privkey.pem</a><br><br><b>Resources:</b><br>&nbsp; - <a href="https://wiki.wireshark.org/TLS#tls-decryption" target="_blank">Wireshark: TLS Decryption</a><br>
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Fweb%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+        <li class="challenge" data-category="227" data-stage="tls1">
+            <div id="header-decrypting-tls13" data-challenge="decrypting-tls13" class="collapsible-header">
+                
+                <i id="check-decrypting-tls13" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="56a281ed-4366-2c69-48b2-5376458c27d7"></i>
+                <i id="uncheck-decrypting-tls13" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="b6fe11c4-0fde-d463-1be1-030a02203e8d"></i>
+                
+                <div class="challenge-text truncate">Decrypting TLS 1.3</div>
+                <span class="right">
+                    
+                    35 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/decrypting-tls13/solves/">
+                        <span id="solves-decrypting-tls13">1150 Solves</span>
+                    </a>
+                    
+                    
+                    <span class="solutions_links solutionsHide" id="solutions-decrypting-tls13">
+                      <b>·</b>
+                      <a class="gold-link preventToggle" href="/challenges/decrypting-tls13/solutions/">
+                        3 Solutions
+                      </a>
+                    </span>
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    To recap, the TLS handshake can be split up into four main stages. Despite changes in TLS 1.3, these high-level stages remain: <ol> <li>Client and server exchange capabilities, and agree upon connection parameters.</li> <li>Certificate(s) presented are verified, or authentication occurs using other means.</li> <li>A shared master secret is agreed upon that will be used to derive encryption keys for the connection.</li> <li>Both sides verify that no handshake messages have been tampered with.</li> </ol><br><br>As we just saw, in the old days of RSA key exchanges, having your RSA private key compromised was really quite bad. If an attacker could observe TLS network traffic, and either access the RSA key or crack the RSA parameters directly from the certificate, they could compromise not just present and future network traffic, but also past traffic. There were suspicions that intelligence agencies were doing just that - recording all traffic that they could in order to break it one day. Therefore a drive began to make forward secrecy a requirement of modern TLS.<br><br>In a TLS connection using Ephemeral Diffie-Hellmann key exchange, when a client connects, the server generates an ephemeral key pair. This ephemeral key pair is used in the key exchange with the client to generate a session key for the connection. The server's certificate key pair (usually RSA, for performance reasons) is now used only to authenticate the TLS handshake. After the connection ends, the server should delete its ephemeral key pair, although in practice it may remain in server memory for awhile.<br><br>To decrypt TLS 1.3 connections we need the parameters that were used to generate the shared master secret. Attached is a keylogfile.txt which contains these Diffie-Hellman parameters, recorded by a client connecting to "tls3.cryptohack.org". Once again, decrypt this traffic to find the flag in the HTTP/2 stream.<br><br><b>Challenge files:</b><br>&nbsp; - <a href="/static/challenges/tls3_871583423e02a66acd81eb34ed967489.cryptohack.org.pcapng" download="">tls3.cryptohack.org.pcapng</a><br>&nbsp; - <a href="/static/challenges/keylogfile_c86a7e105b820e0780e903b0d8388fa3.txt" download="">keylogfile.txt</a><br><br><b>Resources:</b><br>&nbsp; - <a href="https://wiki.wireshark.org/TLS#tls-decryption" target="_blank">Wireshark: TLS Decryption</a><br>&nbsp; - <a href="https://web.archive.org/web/20230322192727/https://firefox-source-docs.mozilla.org/security/nss/legacy/key_log_format/index.html" target="_blank">NSS Key Log Format</a><br>&nbsp; - <a href="https://mailarchive.ietf.org/arch/msg/tls/CzjJB1g0uFypY8UDdr6P9SCQBqA/" target="_blank">Industry Concerns about TLS 1.3</a><br>
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Fweb%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+        <li class="challenge" data-category="225" data-stage="tls1">
+            <div id="header-authenticated-handshake" data-challenge="authenticated-handshake" class="collapsible-header">
+                
+                <i id="check-authenticated-handshake" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="4e12571e-2832-32c0-dde1-c1828bc3ffd8"></i>
+                <i id="uncheck-authenticated-handshake" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="b91b5d10-389b-ac4b-57c8-53cc5411e52e"></i>
+                
+                <div class="challenge-text truncate">Authenticated Handshake</div>
+                <span class="right">
+                    
+                    40 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/authenticated-handshake/solves/">
+                        <span id="solves-authenticated-handshake">641 Solves</span>
+                    </a>
+                    
+                    
+                    <span class="solutions_links solutionsHide" id="solutions-authenticated-handshake">
+                      <b>·</b>
+                      <a class="gold-link preventToggle" href="/challenges/authenticated-handshake/solutions/">
+                        4 Solutions
+                      </a>
+                    </span>
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    Authentication occurs in the TLS handshake in three messages: <ol> <li><b>Certificate</b>. Contains the identity of the server, with signatures on the certificate chaining up to a certificate authority trusted by the client. In mutual TLS, the client also sends a certificate of its own identity for the server to verify. We'll talk about certificates more in TLS Part 2.</li> <li><b>CertificateVerify</b>. The server makes a signature over the entire handshake so far using the private key corresponding to the public key in the Certificate message. This proves that the server owns the private key corresponding to that Certificate. Yet another weakness of TLS 1.2 is that not all parts of the handshake were included in this message, which was fixed in TLS 1.3.</li> <li><b>Finished</b>. At the end of the TLS handshake, both client and server authenticate the messages sent so far in the <i>Finished</i> message. This authenticates the whole handshake, and is important because any of the TLS messages could have been tampered with on the network, potentially in an attempt to downgrade the connection to use weaker cipher suites.</li> </ol><br><br>In the PCAP dumps, you can see that both client and server send the <i>Finished</i> messages just before switching over to sending encrypted HTTP. The TLS 1.3 spec says that this verification data is calculated as follows:<br><br><code>verify_data = HMAC(finished_key, Transcript-Hash(Handshake Context, Certificate*, CertificateVerify*))</code><br><br><ul> <li>The <code>HMAC</code> function uses the last algorithm specified in the agreed cipher suite, usually SHA256 or SHA384.</li> <li>The <code>finished_key</code> is the relevant handshake_traffic_secret, the <code>CLIENT_HANDSHAKE_TRAFFIC_SECRET</code> seen in the keylogfile.txt in the case for the client's <i>Finished</i>.</li> <li>The <code>Transcript-Hash</code> function works by concatenating together TLS messages (not including record layer headers) and hashing the result using the hash algorithm in the cipher suite.</li> </ul><br><br>In this challenge, we've included a PCAP dump of a connection, up until the point that the client sends its <i>ChangeCipherSpec</i> and <i>Finished</i> messages. Fill in the blanks in the "client_finished.py" script to calculate what the <code>verify_data</code> in the Client <i>Finished</i> message should look like, and submit that as your answer.<br><br><b>Challenge files:</b><br>&nbsp; - <a href="/static/challenges/client_finished_7be8188c90a19caa197cdc07982f17cb.py" download="">client_finished.py</a><br>&nbsp; - <a href="/static/challenges/keylogfile_8f26cf82ed35e28b7c8151bbb764f267.txt" download="">keylogfile.txt</a><br>&nbsp; - <a href="/static/challenges/no-finished-tls3_642a73844a64e902ef6c8564972e98ca.cryptohack.org.pcapng" download="">no-finished-tls3.cryptohack.org.pcapng</a><br><br><b>Resources:</b><br>&nbsp; - <a href="https://datatracker.ietf.org/doc/rfc8446/" target="_blank">RFC 8446 - The Transport Layer Security (TLS) Protocol Version 1.3</a><br>&nbsp; - <a href="https://tls13.xargs.org/" target="_blank">The Illustrated TLS 1.3 connection</a><br>&nbsp; - <a href="https://web.archive.org/web/20230322192727/https://firefox-source-docs.mozilla.org/security/nss/legacy/key_log_format/index.html" target="_blank">NSS Key Log Format</a><br>
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Fweb%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+    </ul>
+</span>
+
+
+<span class="stage" data-stage="cloud">
+    <hr>
+    <div class="challengeInfo">
+      <span><h4>Cloud</h4></span>
+      <span class="flexToggle"><a class="stage-collapse" data-collapse="cloud" href="#">Toggle</a></span>
+    </div>
+    
+    <div class="clearfix"></div>
+    <ul class="collapsible popout" data-collapsible="expandable">
+        
+        <li class="challenge" data-category="222" data-stage="cloud">
+            <div id="header-mega1" data-challenge="mega1" class="collapsible-header">
+                
+                <i id="check-mega1" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="0817443a-2ceb-c553-c701-8430dd3cecac"></i>
+                <i id="uncheck-mega1" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="eabc8bd8-7886-f155-9eab-0eaea5dead86"></i>
+                
+                <div class="challenge-text truncate">Megalomaniac 1</div>
+                <span class="right">
+                    
+                    100 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/mega1/solves/">
+                        <span id="solves-mega1">340 Solves</span>
+                    </a>
+                    
+                    
+                    <span class="solutions_links solutionsHide" id="solutions-mega1">
+                      <b>·</b>
+                      <a class="gold-link preventToggle" href="/challenges/mega1/solutions/">
+                        2 Solutions
+                      </a>
+                    </span>
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    In June 2022, a team of researchers from the Applied Crypto Group at ETH Zurich discovered a few flaws in the E2E cryptographic architecture of MEGA. This series of challenges will put you in the shoes of a Mega cloud storage server, interacting with clients logging into their personal storage. Please note that while the implementation is really close to the real one, it is not exactly the same, as the point is to illustrate the different concepts used to compromise users' private data while keeping the codebase relatively small.<br><br>First, recover the user's ShareKey!<br><br>Connect at <code>socket.cryptohack.org 13408</code><br><br><b>Challenge files:</b><br>&nbsp; - <a href="/static/challenges/13408_8af8453594df25af66eb645a12a0223d.py" download="">13408.py</a><br><br><b>Resources:</b><br>&nbsp; - <a href="https://mega-awry.io/" target="_blank">Malleable Encryption Goes Awry</a><br><br><br>Challenge contributed by <a class="gold-link" href="/user/$in">$in</a>
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Fweb%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+        <li class="challenge" data-category="223" data-stage="cloud">
+            <div id="header-mega2" data-challenge="mega2" class="collapsible-header">
+                
+                <i id="check-mega2" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="0ae598ef-fa58-72d8-7f3a-e5883fda037d"></i>
+                <i id="uncheck-mega2" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="f6270df1-72ec-f191-0fce-be184a5665cd"></i>
+                
+                <div class="challenge-text truncate">Megalomaniac 2</div>
+                <span class="right">
+                    
+                    120 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/mega2/solves/">
+                        <span id="solves-mega2">225 Solves</span>
+                    </a>
+                    
+                    
+                    <span class="solutions_links solutionsHide" id="solutions-mega2">
+                      <b>·</b>
+                      <a class="gold-link preventToggle" href="/challenges/mega2/solutions/">
+                        6 Solutions
+                      </a>
+                    </span>
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    In a realistic scenario, an evil server would want to be able to recover it with a minimal number of queries, good luck ;)<br><br>Connect at <code>socket.cryptohack.org 13409</code><br><br><b>Challenge files:</b><br>&nbsp; - <a href="/static/challenges/13409_25b97aea411687bd51fcdede9b7e970b.py" download="">13409.py</a><br><br><br>Challenge contributed by <a class="gold-link" href="/user/$in">$in</a>
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Fweb%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+        <li class="challenge" data-category="224" data-stage="cloud">
+            <div id="header-mega3" data-challenge="mega3" class="collapsible-header">
+                
+                <i id="check-mega3" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="82f1fe76-fd80-9249-8fac-7ee50e47a38a"></i>
+                <i id="uncheck-mega3" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="fe0588b7-0b12-f916-893e-801578763175"></i>
+                
+                <div class="challenge-text truncate">Megalomaniac 3</div>
+                <span class="right">
+                    
+                    120 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/mega3/solves/">
+                        <span id="solves-mega3">251 Solves</span>
+                    </a>
+                    
+                    
+                    <span class="solutions_links solutionsHide" id="solutions-mega3">
+                      <b>·</b>
+                      <a class="gold-link preventToggle" href="/challenges/mega3/solutions/">
+                        3 Solutions
+                      </a>
+                    </span>
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    Now it is about time to recover the actual data uploaded by a user!<br><br>Connect at <code>socket.cryptohack.org 13410</code><br><br><b>Challenge files:</b><br>&nbsp; - <a href="/static/challenges/13410_3ffe4019be4d03f6d8d9dacede314259.py" download="">13410.py</a><br><br><br>Challenge contributed by <a class="gold-link" href="/user/$in">$in</a>
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Fweb%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+    </ul>
+</span>
+
+
+
+        </div>
+        <script src="/static/js/jquery.min.js"></script>
+        <script src="/static/js/materialize.min.js"></script>
+        <script defer="" src="/static/js/confetti.browser.min.js"></script>
+        <script src="/static/js/api.js"></script>
+        <script src="/static/js/moment-with-locales.min.js"></script>
+
+<script>
+moment.locale("en");
+function flask_moment_render(elem) {{
+    const timestamp = moment(elem.dataset.timestamp);
+    const func = elem.dataset.function;
+    const format = elem.dataset.format;
+    const timestamp2 = elem.dataset.timestamp2;
+    const no_suffix = elem.dataset.nosuffix;
+    const units = elem.dataset.units;
+    let args = [];
+    if (format)
+        args.push(format);
+    if (timestamp2)
+        args.push(moment(timestamp2));
+    if (no_suffix)
+        args.push(no_suffix);
+    if (units)
+        args.push(units);
+    elem.textContent = timestamp[func].apply(timestamp, args);
+    elem.classList.remove('flask-moment');
+    elem.style.display = "";
+}}
+function flask_moment_render_all() {{
+    const moments = document.querySelectorAll('.flask-moment');
+    moments.forEach(function(moment) {{
+        flask_moment_render(moment);
+        const refresh = moment.dataset.refresh;
+        if (refresh && refresh > 0) {{
+            (function(elem, interval) {{
+                setInterval(function() {{
+                    flask_moment_render(elem);
+                }}, interval);
+            }})(moment, refresh);
+        }}
+    }})
+}}
+document.addEventListener("DOMContentLoaded", flask_moment_render_all);
+</script>
+
+        <script>
+            function dismissNotification(id) {
+                api.makeCall("/dismiss/" + id + ".json", {_csrf_token: "evqcmr67h72vvdpmv99ne6wgw5oue9lvwhfiby9vxej6m1gmsw5wm1g575xu3cwt"}, function() {
+                    $("#notification" + id).slideUp();
+                });
+            }
+
+            $( document ).ready(function() {
+              $('select').material_select();
+            });
+
+            var pointsLevels = [0, 10, 20, 40, 80, 160, 320, 640, 1280, 1920, 2560, 3200, 3840, 4480, 5120, 5760, 6400, 7040, 7680, 8320, 8960, 9600, 10240, 10880, 11520, 12160, 12800, 13440, 14080, 14720, 15360, 16000, 16640, 17280, 17920, 18560, 19200, 19840, 20480];
+        </script>
+        
+        <script>
+        $(function() {
+            $('.button-collapse').sideNav();
+        });
+        </script>
+        <script id="toasts" type="text/javascript">
+            
+        </script>
+        
+
+
+<script>
+    var challenges_open = JSON.parse(localStorage.getItem("challenges-open")) || {"json-in-json": true, "jwt-secrets": true, "jwt-sessions": true, "no-way-jose": true, "rsa-or-hmac": true, "rsa-or-hmac-2": true, "token-appreciation": true};
+    Object.keys(challenges_open).forEach(function(el){
+        $(".collapsible-header#header-" + el).addClass("active");
+    });
+
+    $(".collapsible-header").on("click", function(){
+        var chall = $(this).data('challenge');
+        if(challenges_open.hasOwnProperty(chall)) {
+            delete challenges_open[chall];
+        } else {
+            challenges_open[chall] = true;
+            $('html, body').animate({
+                    scrollTop: $(this).offset().top -100
+            }, 700);
+        }
+        localStorage.setItem("challenges-open", JSON.stringify(challenges_open));
+    });
+
+    $(".preventToggle").on("click", function(){
+        event.stopPropagation();
+    });
+
+    var state = $(".collapsible-header.active").length == 0;
+    function updateButton(){
+        if(state){
+            $("#toggleState").html("Expand all challenges");
+        } else {
+            $("#toggleState").html("Collapse all challenges");
+        }
+
+    }
+    updateButton(state);
+    function toggle() {
+        if(state) {
+            $(".collapsible-header").each(function(i, x){ $(x).hasClass("active") || $(x).click(); });
+        } else {
+            $(".collapsible-header").each(function(i, x){ $(x).hasClass("active") && $(x).click(); });
+        }
+        state = !state;
+        updateButton(state);
+    }
+    function filterCategories(t) {
+        var v = t.options[t.selectedIndex].value;
+        if(v == "*")
+            $(".stage").show();
+        else {
+            $(".stage[data-stage=" + v + "]").show();
+            $(".stage[data-stage!=" + v + "]").hide();
+        }
+    }
+    function toggleSolved(){
+      $('.fas.fa-star').each(function() {
+        if($(this).css('display') == 'block'){
+          if($(this).parent().next().css('display') == 'block'){
+              $(this).parent().toggle();
+              $(this).parent().click();
+              $(this).parent().next().hide();
+          }
+          else{
+            $(this).parent().toggle();
+          }
+        }
+      });
+    }
+
+
+    $("#toggleSolved").on("click", function(e){
+        // e.preventDefault();
+        toggleSolved();
+        // var text = $(this).next().text();
+        // $(this).next().text(
+        // text == "Hide Solved Challenges" ? "Show Solved Challenges" : "Hide Solved Challenges");
+    });
+
+
+    $("#toggleState").on("click", function(e){
+        // e.preventDefault();
+        toggle();
+    });
+    $(".stage-collapse").on("click", function(e){
+        // e.preventDefault();
+        var stage = $(this).data('collapse');
+        var header_selector = ".challenge[data-stage=" + stage + "] .collapsible-header";
+        var state = $(header_selector + ".active").length != 0;
+        if(state)
+            $(header_selector).each(function(i, x){ $(x).hasClass("active") && $(x).click(); });
+        else
+            $(header_selector).each(function(i, x){ $(x).hasClass("active") || $(x).click(); });
+    });
+    $("form").submit(function(e) {
+        // Loading button
+        var loadBtn = $(this).find(".loader");
+        loadBtn.show();
+
+        var id = $(this).data("challenge");
+        var points = $(this).data("points");
+        var flag = $("#flag-" + id).val();
+        // var updatedScore = score + points;
+        console.log(id);
+        console.log(flag);
+        api.makeCall("/submit/" + id + ".json", {flag: flag, _csrf_token: "evqcmr67h72vvdpmv99ne6wgw5oue9lvwhfiby9vxej6m1gmsw5wm1g575xu3cwt"}, function(data) {
+            if(data.code) {
+                loadBtn.hide();
+                Materialize.toast(data.message, 4000);
+            }
+            else {
+                // Materialize.toast("Correct flag, nice one!", 4000);
+                $("#uncheck-" + id).hide();
+                $("#check-" + id).show();
+                $("#header-" + id).click();
+
+                // update solves box
+                var solves_text = data.solves == 1 ? "Solve" : "Solves";
+                $("#solves-" + id).html(data.solves + " " + solves_text);
+                $("#solves-" + id).parent().show();
+                $("#solutions-" + id).show();
+                $("#youvesolved-" + id).show();
+                $("#empty-" + id).hide();
+                $("#flagform-" + id).hide();
+
+                // update points at top
+                console.log(score);
+                console.log(points);
+                score = calculateLevel(score, points);
+                loadBtn.hide();
+                setTimeout(function(){ launchConfetti(); }, 250);
+            }
+        });
+        return false;
+    });
+</script>
+
+
+      </div>
+
+      <div id="levelUpPop" class="levelup">
+        <div class="levelUpCard">
+          <h3>Level Up</h3>
+          <img src="/static/img/levelup.png" width="180" height="202" alt="level up icon">
+          <p>You are now level <span id="currentlevel" class="gold-text">Current level</span></p>
+        </div>
+      </div>
+    
+
+    <footer>
+    <div class="footerLinks">
+      <div>
+        <h5>CryptoHack</h5>
+        <a id="changeTheme">Light Mode</a><br>
+        <a href="/faq/">FAQ</a><br>
+        <a href="/blog/">Blog</a><br>
+        <span class="footerIcon">
+          <a href="https://twitter.com/cryptohack__" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="https://discord.gg/h9E7cna5pV" aria-label="Discord"><img src="/static/img/Discord-Logo-Color.svg" width="25"></a>
+          <a href="https://patreon.com/cryptohack" aria-label="Patreon"><i class="fab fa-patreon"></i></a>
+        </span><br>
+
+      </div>
+
+      <div>
+        <h5>Courses</h5>
+        <a href="/courses/intro/">Introduction to CryptoHack</a><br>
+        <a href="/courses/modular/">Modular Arithmetic</a><br>
+        <a href="/courses/symmetric/">Symmetric Cryptography</a><br>
+        <a href="/courses/public-key/">Public-Key Cryptography</a><br>
+        <a href="/courses/elliptic/">Elliptic Curves</a><br>
+      </div>
+
+      <div>
+        <h5>Categories</h5>
+        <a href="/challenges/general/">General</a><br>
+        <a href="/challenges/aes/">Symmetric Ciphers</a><br>
+        <a href="/challenges/maths/">Mathematics</a><br>
+        <a href="/challenges/rsa/">RSA</a><br>
+        <a href="/challenges/diffie-hellman/">Diffie-Hellman</a><br>
+        <a href="/challenges/ecc/">Elliptic Curves</a><br>
+        <a href="/challenges/hashes/">Hash Functions</a><br>
+        <a href="/challenges/web/">Crypto on the Web</a><br>
+        <a href="/challenges/post-quantum/">Lattices</a><br>
+        <a href="/challenges/isogenies/">Isogenies</a><br>
+        <a href="/challenges/zkp/">Zero-Knowledge Proofs</a><br>
+        <a href="/challenges/misc/">Miscellaneous</a><br>
+        <a href="/challenges/ctf-archive/">CTF Archive</a><br>
+      </div>
+    </div>
+
+
+    <div class="credits">
+      <h5>Credits</h5>
+      Illustrations from <a href="https://icons8.com">Ouch.pics</a><br>
+      Drawn by <a href="https://dribbble.com/thierryfousse">Thierry Fousse</a> and <a href="https://icons8.com/illustrations/author/60ab64bc8e3740e9be238b13">Tatyana Krasutskaya</a>
+
+    </div>
+
+    <div class="copyright">
+      <span>
+        <a href="/privacy-policy/">Privacy Policy</a> &nbsp;
+      </span>
+
+      <span>
+        © <span class="" data-timestamp="2026-05-25T08:43:07Z" data-function="format" data-format="YYYY" data-refresh="0" style="">2026</span> CryptoHack
+      </span>
+    </div>
+    </footer>
+
+    <script type="text/javascript">
+    function updateThemeToggleFooter() {
+      var elem = document.querySelector('#changeTheme');
+      elem.innerHTML = isLightThemeSelected() ? 'Dark Mode' : 'Light Mode'
+    }
+
+    (function() {
+      updateThemeToggleFooter()
+    })();
+
+    function togglePageContentLightDark() {
+        var html = document.getElementsByTagName('html')[0]
+        var currentClass = html.className
+        var newClass = html.className == 'dark-mode' ? 'light-mode' : 'dark-mode'
+        html.className = newClass
+
+        document.cookie = 'theme=' + (newClass == 'light-mode' ? 'light' : 'dark') + ';SameSite=Strict;path=/;domain=cryptohack.org;expires=Fri, 31 Dec 9999 23:59:59 GMT'
+        console.log('Cookies are now: ' + document.cookie)
+
+        var elem = document.querySelector('#changeTheme');
+        elem.innerHTML = isLightThemeSelected() ? 'Dark Mode' : 'Light Mode'
+    }
+
+    $("#changeTheme").on("click", function(e){
+    togglePageContentLightDark();
+
+    if ($("#darktheme").length) {
+      if(isLightThemeSelected()){
+        $('#darktheme').prop('checked', false);
+        $('#lighttheme').prop('checked', true);
+      }
+      else{
+        $('#darktheme').prop('checked', true);
+        $('#lighttheme').prop('checked', false);
+      }
+    }
+    });
+    </script>
+<div class="material-tooltip" id="04a0876e-0273-4b80-d73f-e0953bf96cf6"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="147775e1-cf18-2c3e-3087-c953e90b84fa"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="b2863391-c7e8-2d47-206d-e8de8b88e6dd"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="398a9093-69ad-f10e-2a7c-6a07540a6d4e"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="69fc8cc9-e244-1f35-96b2-4722599ccba0"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="4d1e7c9e-b9db-a9e6-b2b9-c47fd692f318"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="353e2622-8b36-391b-6447-f315e9b46bc6"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="0ef45bb1-8156-b56a-80af-8e2868daec25"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="11120db8-9961-0556-c001-8560ce290b4e"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="63a54e39-49a6-cd5e-be86-d7811b46bd17"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="ed0dee12-9587-418b-520d-e2ecfd4f71c7"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="9562e1ab-6ea1-65e9-e4e1-868de23e60cc"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="b338700f-e40a-04fa-063f-71642abe9e33"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="08930400-1c2d-63eb-31a1-8141416238c5"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="71b711d2-7da5-68f8-07d1-b0fa5c54753c"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="1d1b23f3-45cf-33ac-a781-3ce9ed1240a4"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="b464fb32-30c8-dae6-1ef0-44bf53e964d9"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="1d102d18-5311-0cc9-c84f-c9a787d03c88"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="b21f4aa9-14ab-0b8f-4dff-e01b387df79f"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="8a21c2ab-f604-73b3-d256-e9c18949daee"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="ff58a5d2-2ef6-13bb-e669-874a30b35973"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="05c4c591-7136-9ed8-b5ef-67cc945c830f"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="6adf1788-860d-8a39-7013-8651141f50f8"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="16c57b76-55ad-cf09-15dc-0963633927ca"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="56a281ed-4366-2c69-48b2-5376458c27d7"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="b6fe11c4-0fde-d463-1be1-030a02203e8d"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="4e12571e-2832-32c0-dde1-c1828bc3ffd8"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="b91b5d10-389b-ac4b-57c8-53cc5411e52e"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="0817443a-2ceb-c553-c701-8430dd3cecac"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="eabc8bd8-7886-f155-9eab-0eaea5dead86"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="0ae598ef-fa58-72d8-7f3a-e5883fda037d"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="f6270df1-72ec-f191-0fce-be184a5665cd"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="82f1fe76-fd80-9249-8fac-7ee50e47a38a"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="fe0588b7-0b12-f916-893e-801578763175"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="hiddendiv common"></div><div class="drag-target" style="left: 0px; touch-action: pan-y; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></div></body></html>

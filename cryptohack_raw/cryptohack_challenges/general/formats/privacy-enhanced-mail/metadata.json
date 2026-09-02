@@ -1,0 +1,39 @@
+{
+  "category": "General",
+  "category_slug": "general",
+  "stage": "Data Formats",
+  "stage_slug": "formats",
+  "title": "Privacy-Enhanced Mail?",
+  "slug": "privacy-enhanced-mail",
+  "data_challenge": "pem1",
+  "points": 25,
+  "solves": 9314,
+  "url": "https://cryptohack.org/challenges/general/",
+  "attachments": [
+    {
+      "text": "privacy_enhanced_mail.pem",
+      "href": "/static/challenges/privacy_enhanced_mail_1f696c053d76a78c2c531bb013a92d4a.pem",
+      "url": "https://cryptohack.org/static/challenges/privacy_enhanced_mail_1f696c053d76a78c2c531bb013a92d4a.pem",
+      "download": true,
+      "saved_as": "files/privacy_enhanced_mail_1f696c053d76a78c2c531bb013a92d4a.pem",
+      "status": 200,
+      "size": 1675
+    }
+  ],
+  "resources": [
+    {
+      "text": "ASN.1 vs DER vs PEM vs x509 vs PKCS#7 vs ....",
+      "href": "https://www.cryptologie.net/article/260/asn1-vs-der-vs-pem-vs-x509-vs-pkcs7-vs/",
+      "url": "https://www.cryptologie.net/article/260/asn1-vs-der-vs-pem-vs-x509-vs-pkcs7-vs/",
+      "download": false
+    },
+    {
+      "text": "A Warm Welcome to ASN.1 and DER",
+      "href": "https://letsencrypt.org/docs/a-warm-welcome-to-asn1-and-der/",
+      "url": "https://letsencrypt.org/docs/a-warm-welcome-to-asn1-and-der/",
+      "download": false
+    }
+  ],
+  "statement_html": "statement.html",
+  "statement_md": "statement.md"
+}

@@ -1,0 +1,746 @@
+{
+  "id": 69,
+  "name": "ASIS Arch",
+  "category": "Reverse",
+  "points": 53,
+  "author": null,
+  "tags": [
+    "Reverse"
+  ],
+  "hints": [],
+  "connection_info": null,
+  "solved_by_me": true,
+  "solves_count": 102,
+  "submit_endpoint": null,
+  "instance_info": {},
+  "downloaded_files": [
+    {
+      "url": "https://asisctf.com/tasks/ASIS-Arch_2671a9f8046f73ecbbaa579a1daca1819e975772.txz",
+      "name": "ASIS-Arch_2671a9f8046f73ecbbaa579a1daca1819e975772.txz",
+      "saved_path": "/home/light/Workspace/CTF/ASIS_CTF_2026/Reverse/ASIS_Arch/challenge/ASIS-Arch_2671a9f8046f73ecbbaa579a1daca1819e975772.txz",
+      "success": true,
+      "source": "platform_attachment",
+      "message": "Đã tải trực tiếp thành công"
+    }
+  ],
+  "raw": {
+    "id": 69,
+    "name": "ASIS Arch",
+    "description": "<h1>ASISARCH</h1>\n<p>We recovered a custom CPU emulator binary and a secure ROM image.\nThe architecture does not appear in any public manual. Recover the ISA, reverse the verification logic, and find the correct flag from new <a href=\"/tasks/ASIS-Arch_2671a9f8046f73ecbbaa579a1daca1819e975772.txz\"><strong>ASIS Arch</strong></a>.</p>\n<p>Run it as:</p>\n<pre><code class=\"language-sh\">chmod +x qemu-asisarch\n./qemu-asisarch -M asisboard -kernel challenge.rom -nographic\n</code></pre>\n<p>Flag format: <code>ASIS{...}</code></p>\n",
+    "points": 500,
+    "published_at": "2026-08-29 16:00:00",
+    "fixedPoints": 19,
+    "solves_count": 80,
+    "first_n_solves": [
+      {
+        "team_id": 1831,
+        "team_name": "krauq",
+        "challenge_name": "ASIS Arch",
+        "challenge_id": 69,
+        "solved_at": "2026-08-29 16:05:48",
+        "time_to_solve": "0d 00h 5m 48s"
+      },
+      {
+        "team_id": 1511,
+        "team_name": "H-T8",
+        "challenge_name": "ASIS Arch",
+        "challenge_id": 69,
+        "solved_at": "2026-08-29 16:07:56",
+        "time_to_solve": "0d 00h 7m 56s"
+      },
+      {
+        "team_id": 2209,
+        "team_name": "nmaqmadu",
+        "challenge_name": "ASIS Arch",
+        "challenge_id": 69,
+        "solved_at": "2026-08-29 16:08:09",
+        "time_to_solve": "0d 00h 8m 9s"
+      }
+    ],
+    "SolvedByCurrentTeam": false,
+    "dynamic_points": 64,
+    "rewardable_dynamic_points": 63,
+    "chartData": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      69,
+      11
+    ],
+    "categories": [
+      {
+        "id": 5,
+        "name": "Reverse",
+        "created_at": "2025-09-09T05:37:36.000000Z",
+        "updated_at": "2025-09-09T05:37:36.000000Z",
+        "pivot": {
+          "challenge_id": 69,
+          "category_id": 5
+        }
+      }
+    ],
+    "solves": [
+      {
+        "id": 3266,
+        "user_id": 2867,
+        "team_id": 1831,
+        "challenge_id": 69,
+        "created_at": "2026-08-29T16:05:48.000000Z",
+        "updated_at": "2026-08-29T16:05:48.000000Z"
+      },
+      {
+        "id": 3278,
+        "user_id": 2411,
+        "team_id": 1511,
+        "challenge_id": 69,
+        "created_at": "2026-08-29T16:07:56.000000Z",
+        "updated_at": "2026-08-29T16:07:56.000000Z"
+      },
+      {
+        "id": 3279,
+        "user_id": 3513,
+        "team_id": 2209,
+        "challenge_id": 69,
+        "created_at": "2026-08-29T16:08:09.000000Z",
+        "updated_at": "2026-08-29T16:08:09.000000Z"
+      },
+      {
+        "id": 3283,
+        "user_id": 2578,
+        "team_id": 1669,
+        "challenge_id": 69,
+        "created_at": "2026-08-29T16:08:54.000000Z",
+        "updated_at": "2026-08-29T16:08:54.000000Z"
+      },
+      {
+        "id": 3294,
+        "user_id": 3143,
+        "team_id": 2005,
+        "challenge_id": 69,
+        "created_at": "2026-08-29T16:10:29.000000Z",
+        "updated_at": "2026-08-29T16:10:29.000000Z"
+      },
+      {
+        "id": 3297,
+        "user_id": 3966,
+        "team_id": 2397,
+        "challenge_id": 69,
+        "created_at": "2026-08-29T16:11:26.000000Z",
+        "updated_at": "2026-08-29T16:11:26.000000Z"
+      },
+      {
+        "id": 3298,
+        "user_id": 3719,
+        "team_id": 2238,
+        "challenge_id": 69,
+        "created_at": "2026-08-29T16:11:41.000000Z",
+        "updated_at": "2026-08-29T16:11:41.000000Z"
+      },
+      {
+        "id": 3300,
+        "user_id": 4282,
+        "team_id": 2467,
+        "challenge_id": 69,
+        "created_at": "2026-08-29T16:12:04.000000Z",
+        "updated_at": "2026-08-29T16:12:04.000000Z"
+      },
+      {
+        "id": 3301,
+        "user_id": 2972,
+        "team_id": 1896,
+        "challenge_id": 69,
+        "created_at": "2026-08-29T16:12:23.000000Z",
+        "updated_at": "2026-08-29T16:12:23.000000Z"
+      },
+      {
+        "id": 3304,
+        "user_id": 3441,
+        "team_id": 2172,
+        "challenge_id": 69,
+        "created_at": "2026-08-29T16:12:39.000000Z",
+        "updated_at": "2026-08-29T16:12:39.000000Z"
+      },
+      {
+        "id": 3307,
+        "user_id": 2270,
+        "team_id": 1472,
+        "challenge_id": 69,
+        "created_at": "2026-08-29T16:13:05.000000Z",
+        "updated_at": "2026-08-29T16:13:05.000000Z"
+      },
+      {
+        "id": 3308,
+        "user_id": 4010,
+        "team_id": 2457,
+        "challenge_id": 69,
+        "created_at": "2026-08-29T16:13:10.000000Z",
+        "updated_at": "2026-08-29T16:13:10.000000Z"
+      },
+      {
+        "id": 3310,
+        "user_id": 2130,
+        "team_id": 1381,
+        "challenge_id": 69,
+        "created_at": "2026-08-29T16:13:44.000000Z",
+        "updated_at": "2026-08-29T16:13:44.000000Z"
+      },
+      {
+        "id": 3314,
+        "user_id": 4185,
+        "team_id": 2541,
+        "challenge_id": 69,
+        "created_at": "2026-08-29T16:14:06.000000Z",
+        "updated_at": "2026-08-29T16:14:06.000000Z"
+      },
+      {
+        "id": 3318,
+        "user_id": 2781,
+        "team_id": 1780,
+        "challenge_id": 69,
+        "created_at": "2026-08-29T16:14:58.000000Z",
+        "updated_at": "2026-08-29T16:14:58.000000Z"
+      },
+      {
+        "id": 3319,
+        "user_id": 3810,
+        "team_id": 2357,
+        "challenge_id": 69,
+        "created_at": "2026-08-29T16:15:04.000000Z",
+        "updated_at": "2026-08-29T16:15:04.000000Z"
+      },
+      {
+        "id": 3328,
+        "user_id": 4447,
+        "team_id": 2167,
+        "challenge_id": 69,
+        "created_at": "2026-08-29T16:16:30.000000Z",
+        "updated_at": "2026-08-29T16:16:30.000000Z"
+      },
+      {
+        "id": 3332,
+        "user_id": 4027,
+        "team_id": 2465,
+        "challenge_id": 69,
+        "created_at": "2026-08-29T16:17:07.000000Z",
+        "updated_at": "2026-08-29T16:17:07.000000Z"
+      },
+      {
+        "id": 3333,
+        "user_id": 4023,
+        "team_id": 1922,
+        "challenge_id": 69,
+        "created_at": "2026-08-29T16:17:10.000000Z",
+        "updated_at": "2026-08-29T16:17:10.000000Z"
+      },
+      {
+        "id": 3334,
+        "user_id": 3731,
+        "team_id": 2317,
+        "challenge_id": 69,
+        "created_at": "2026-08-29T16:17:17.000000Z",
+        "updated_at": "2026-08-29T16:17:17.000000Z"
+      },
+      {
+        "id": 3335,
+        "user_id": 3843,
+        "team_id": 2380,
+        "challenge_id": 69,
+        "created_at": "2026-08-29T16:17:22.000000Z",
+        "updated_at": "2026-08-29T16:17:22.000000Z"
+      },
+      {
+        "id": 3338,
+        "user_id": 3117,
+        "team_id": 1989,
+        "challenge_id": 69,
+        "created_at": "2026-08-29T16:17:57.000000Z",
+        "updated_at": "2026-08-29T16:17:57.000000Z"
+      },
+      {
+        "id": 3344,
+        "user_id": 4142,
+        "team_id": 2523,
+        "challenge_id": 69,
+        "created_at": "2026-08-29T16:18:40.000000Z",
+        "updated_at": "2026-08-29T16:18:40.000000Z"
+      },
+      {
+        "id": 3345,
+        "user_id": 3556,
+        "team_id": 1723,
+        "challenge_id": 69,
+        "created_at": "2026-08-29T16:18:52.000000Z",
+        "updated_at": "2026-08-29T16:18:52.000000Z"
+      },
+      {
+        "id": 3348,
+        "user_id": 3051,
+        "team_id": 1867,
+        "challenge_id": 69,
+        "created_at": "2026-08-29T16:19:24.000000Z",
+        "updated_at": "2026-08-29T16:19:24.000000Z"
+      },
+      {
+        "id": 3359,
+        "user_id": 3945,
+        "team_id": 2318,
+        "challenge_id": 69,
+        "created_at": "2026-08-29T16:20:57.000000Z",
+        "updated_at": "2026-08-29T16:20:57.000000Z"
+      },
+      {
+        "id": 3361,
+        "user_id": 2513,
+        "team_id": 1625,
+        "challenge_id": 69,
+        "created_at": "2026-08-29T16:21:19.000000Z",
+        "updated_at": "2026-08-29T16:21:19.000000Z"
+      },
+      {
+        "id": 3363,
+        "user_id": 4474,
+        "team_id": 2687,
+        "challenge_id": 69,
+        "created_at": "2026-08-29T16:21:26.000000Z",
+        "updated_at": "2026-08-29T16:21:26.000000Z"
+      },
+      {
+        "id": 3365,
+        "user_id": 4275,
+        "team_id": 2296,
+        "challenge_id": 69,
+        "created_at": "2026-08-29T16:21:39.000000Z",
+        "updated_at": "2026-08-29T16:21:39.000000Z"
+      },
+      {
+        "id": 3366,
+        "user_id": 2360,
+        "team_id": 1505,
+        "challenge_id": 69,
+        "created_at": "2026-08-29T16:21:44.000000Z",
+        "updated_at": "2026-08-29T16:21:44.000000Z"
+      },
+      {
+        "id": 3367,
+        "user_id": 3056,
+        "team_id": 1950,
+        "challenge_id": 69,
+        "created_at": "2026-08-29T16:21:47.000000Z",
+        "updated_at": "2026-08-29T16:21:47.000000Z"
+      },
+      {
+        "id": 3370,
+        "user_id": 3614,
+        "team_id": 1871,
+        "challenge_id": 69,
+        "created_at": "2026-08-29T16:22:04.000000Z",
+        "updated_at": "2026-08-29T16:22:04.000000Z"
+      },
+      {
+        "id": 3371,
+        "user_id": 3306,
+        "team_id": 2105,
+        "challenge_id": 69,
+        "created_at": "2026-08-29T16:22:09.000000Z",
+        "updated_at": "2026-08-29T16:22:09.000000Z"
+      },
+      {
+        "id": 3375,
+        "user_id": 3327,
+        "team_id": 2118,
+        "challenge_id": 69,
+        "created_at": "2026-08-29T16:23:00.000000Z",
+        "updated_at": "2026-08-29T16:23:00.000000Z"
+      },
+      {
+        "id": 3379,
+        "user_id": 4459,
+        "team_id": 2678,
+        "challenge_id": 69,
+        "created_at": "2026-08-29T16:23:29.000000Z",
+        "updated_at": "2026-08-29T16:23:29.000000Z"
+      },
+      {
+        "id": 3380,
+        "user_id": 3842,
+        "team_id": 2379,
+        "challenge_id": 69,
+        "created_at": "2026-08-29T16:23:36.000000Z",
+        "updated_at": "2026-08-29T16:23:36.000000Z"
+      },
+      {
+        "id": 3381,
+        "user_id": 3933,
+        "team_id": 2421,
+        "challenge_id": 69,
+        "created_at": "2026-08-29T16:23:50.000000Z",
+        "updated_at": "2026-08-29T16:23:50.000000Z"
+      },
+      {
+        "id": 3382,
+        "user_id": 3620,
+        "team_id": 2251,
+        "challenge_id": 69,
+        "created_at": "2026-08-29T16:24:08.000000Z",
+        "updated_at": "2026-08-29T16:24:08.000000Z"
+      },
+      {
+        "id": 3383,
+        "user_id": 4009,
+        "team_id": 2456,
+        "challenge_id": 69,
+        "created_at": "2026-08-29T16:24:16.000000Z",
+        "updated_at": "2026-08-29T16:24:16.000000Z"
+      },
+      {
+        "id": 3389,
+        "user_id": 4345,
+        "team_id": 2620,
+        "challenge_id": 69,
+        "created_at": "2026-08-29T16:25:42.000000Z",
+        "updated_at": "2026-08-29T16:25:42.000000Z"
+      },
+      {
+        "id": 3399,
+        "user_id": 4376,
+        "team_id": 2103,
+        "challenge_id": 69,
+        "created_at": "2026-08-29T16:26:59.000000Z",
+        "updated_at": "2026-08-29T16:26:59.000000Z"
+      },
+      {
+        "id": 3414,
+        "user_id": 3055,
+        "team_id": 1952,
+        "challenge_id": 69,
+        "created_at": "2026-08-29T16:28:02.000000Z",
+        "updated_at": "2026-08-29T16:28:02.000000Z"
+      },
+      {
+        "id": 3420,
+        "user_id": 2459,
+        "team_id": 1596,
+        "challenge_id": 69,
+        "created_at": "2026-08-29T16:29:37.000000Z",
+        "updated_at": "2026-08-29T16:29:37.000000Z"
+      },
+      {
+        "id": 3424,
+        "user_id": 4238,
+        "team_id": 2575,
+        "challenge_id": 69,
+        "created_at": "2026-08-29T16:30:00.000000Z",
+        "updated_at": "2026-08-29T16:30:00.000000Z"
+      },
+      {
+        "id": 3432,
+        "user_id": 4158,
+        "team_id": 2532,
+        "challenge_id": 69,
+        "created_at": "2026-08-29T16:31:37.000000Z",
+        "updated_at": "2026-08-29T16:31:37.000000Z"
+      },
+      {
+        "id": 3436,
+        "user_id": 3095,
+        "team_id": 1977,
+        "challenge_id": 69,
+        "created_at": "2026-08-29T16:32:07.000000Z",
+        "updated_at": "2026-08-29T16:32:07.000000Z"
+      },
+      {
+        "id": 3437,
+        "user_id": 4188,
+        "team_id": 2543,
+        "challenge_id": 69,
+        "created_at": "2026-08-29T16:32:18.000000Z",
+        "updated_at": "2026-08-29T16:32:18.000000Z"
+      },
+      {
+        "id": 3439,
+        "user_id": 3439,
+        "team_id": 2171,
+        "challenge_id": 69,
+        "created_at": "2026-08-29T16:32:56.000000Z",
+        "updated_at": "2026-08-29T16:32:56.000000Z"
+      },
+      {
+        "id": 3440,
+        "user_id": 3435,
+        "team_id": 2164,
+        "challenge_id": 69,
+        "created_at": "2026-08-29T16:34:04.000000Z",
+        "updated_at": "2026-08-29T16:34:04.000000Z"
+      },
+      {
+        "id": 3451,
+        "user_id": 4483,
+        "team_id": 2549,
+        "challenge_id": 69,
+        "created_at": "2026-08-29T16:36:11.000000Z",
+        "updated_at": "2026-08-29T16:36:11.000000Z"
+      },
+      {
+        "id": 3452,
+        "user_id": 3755,
+        "team_id": 2299,
+        "challenge_id": 69,
+        "created_at": "2026-08-29T16:36:24.000000Z",
+        "updated_at": "2026-08-29T16:36:24.000000Z"
+      },
+      {
+        "id": 3455,
+        "user_id": 4373,
+        "team_id": 2635,
+        "challenge_id": 69,
+        "created_at": "2026-08-29T16:36:50.000000Z",
+        "updated_at": "2026-08-29T16:36:50.000000Z"
+      },
+      {
+        "id": 3460,
+        "user_id": 2970,
+        "team_id": 1895,
+        "challenge_id": 69,
+        "created_at": "2026-08-29T16:38:10.000000Z",
+        "updated_at": "2026-08-29T16:38:10.000000Z"
+      },
+      {
+        "id": 3461,
+        "user_id": 2489,
+        "team_id": 1615,
+        "challenge_id": 69,
+        "created_at": "2026-08-29T16:38:23.000000Z",
+        "updated_at": "2026-08-29T16:38:23.000000Z"
+      },
+      {
+        "id": 3463,
+        "user_id": 4423,
+        "team_id": 2025,
+        "challenge_id": 69,
+        "created_at": "2026-08-29T16:39:02.000000Z",
+        "updated_at": "2026-08-29T16:39:02.000000Z"
+      },
+      {
+        "id": 3467,
+        "user_id": 3005,
+        "team_id": 1917,
+        "challenge_id": 69,
+        "created_at": "2026-08-29T16:40:03.000000Z",
+        "updated_at": "2026-08-29T16:40:03.000000Z"
+      },
+      {
+        "id": 3469,
+        "user_id": 4475,
+        "team_id": 2662,
+        "challenge_id": 69,
+        "created_at": "2026-08-29T16:41:00.000000Z",
+        "updated_at": "2026-08-29T16:41:00.000000Z"
+      },
+      {
+        "id": 3471,
+        "user_id": 2792,
+        "team_id": 1784,
+        "challenge_id": 69,
+        "created_at": "2026-08-29T16:41:12.000000Z",
+        "updated_at": "2026-08-29T16:41:12.000000Z"
+      },
+      {
+        "id": 3475,
+        "user_id": 3520,
+        "team_id": 2058,
+        "challenge_id": 69,
+        "created_at": "2026-08-29T16:41:54.000000Z",
+        "updated_at": "2026-08-29T16:41:54.000000Z"
+      },
+      {
+        "id": 3482,
+        "user_id": 4069,
+        "team_id": 2485,
+        "challenge_id": 69,
+        "created_at": "2026-08-29T16:43:36.000000Z",
+        "updated_at": "2026-08-29T16:43:36.000000Z"
+      },
+      {
+        "id": 3484,
+        "user_id": 4453,
+        "team_id": 2673,
+        "challenge_id": 69,
+        "created_at": "2026-08-29T16:43:53.000000Z",
+        "updated_at": "2026-08-29T16:43:53.000000Z"
+      },
+      {
+        "id": 3501,
+        "user_id": 2460,
+        "team_id": 1597,
+        "challenge_id": 69,
+        "created_at": "2026-08-29T16:47:20.000000Z",
+        "updated_at": "2026-08-29T16:47:20.000000Z"
+      },
+      {
+        "id": 3502,
+        "user_id": 3236,
+        "team_id": 1994,
+        "challenge_id": 69,
+        "created_at": "2026-08-29T16:47:21.000000Z",
+        "updated_at": "2026-08-29T16:47:21.000000Z"
+      },
+      {
+        "id": 3507,
+        "user_id": 3493,
+        "team_id": 2198,
+        "challenge_id": 69,
+        "created_at": "2026-08-29T16:48:35.000000Z",
+        "updated_at": "2026-08-29T16:48:35.000000Z"
+      },
+      {
+        "id": 3534,
+        "user_id": 2483,
+        "team_id": 1612,
+        "challenge_id": 69,
+        "created_at": "2026-08-29T16:53:16.000000Z",
+        "updated_at": "2026-08-29T16:53:16.000000Z"
+      },
+      {
+        "id": 3536,
+        "user_id": 3382,
+        "team_id": 2135,
+        "challenge_id": 69,
+        "created_at": "2026-08-29T16:54:09.000000Z",
+        "updated_at": "2026-08-29T16:54:09.000000Z"
+      },
+      {
+        "id": 3537,
+        "user_id": 3968,
+        "team_id": 2434,
+        "challenge_id": 69,
+        "created_at": "2026-08-29T16:54:15.000000Z",
+        "updated_at": "2026-08-29T16:54:15.000000Z"
+      },
+      {
+        "id": 3541,
+        "user_id": 2385,
+        "team_id": 1550,
+        "challenge_id": 69,
+        "created_at": "2026-08-29T16:55:37.000000Z",
+        "updated_at": "2026-08-29T16:55:37.000000Z"
+      },
+      {
+        "id": 3559,
+        "user_id": 4401,
+        "team_id": 2649,
+        "challenge_id": 69,
+        "created_at": "2026-08-29T16:58:51.000000Z",
+        "updated_at": "2026-08-29T16:58:51.000000Z"
+      },
+      {
+        "id": 3567,
+        "user_id": 3388,
+        "team_id": 2142,
+        "challenge_id": 69,
+        "created_at": "2026-08-29T17:00:44.000000Z",
+        "updated_at": "2026-08-29T17:00:44.000000Z"
+      },
+      {
+        "id": 3573,
+        "user_id": 3262,
+        "team_id": 2079,
+        "challenge_id": 69,
+        "created_at": "2026-08-29T17:02:10.000000Z",
+        "updated_at": "2026-08-29T17:02:10.000000Z"
+      },
+      {
+        "id": 3584,
+        "user_id": 4470,
+        "team_id": 2329,
+        "challenge_id": 69,
+        "created_at": "2026-08-29T17:04:05.000000Z",
+        "updated_at": "2026-08-29T17:04:05.000000Z"
+      },
+      {
+        "id": 3625,
+        "user_id": 2645,
+        "team_id": 1706,
+        "challenge_id": 69,
+        "created_at": "2026-08-29T17:11:34.000000Z",
+        "updated_at": "2026-08-29T17:11:34.000000Z"
+      },
+      {
+        "id": 3640,
+        "user_id": 3667,
+        "team_id": 2286,
+        "challenge_id": 69,
+        "created_at": "2026-08-29T17:13:25.000000Z",
+        "updated_at": "2026-08-29T17:13:25.000000Z"
+      },
+      {
+        "id": 3644,
+        "user_id": 4333,
+        "team_id": 2609,
+        "challenge_id": 69,
+        "created_at": "2026-08-29T17:13:48.000000Z",
+        "updated_at": "2026-08-29T17:13:48.000000Z"
+      },
+      {
+        "id": 3652,
+        "user_id": 4347,
+        "team_id": 2621,
+        "challenge_id": 69,
+        "created_at": "2026-08-29T17:15:09.000000Z",
+        "updated_at": "2026-08-29T17:15:09.000000Z"
+      },
+      {
+        "id": 3672,
+        "user_id": 3109,
+        "team_id": 1985,
+        "challenge_id": 69,
+        "created_at": "2026-08-29T17:18:06.000000Z",
+        "updated_at": "2026-08-29T17:18:06.000000Z"
+      },
+      {
+        "id": 3711,
+        "user_id": 3396,
+        "team_id": 2038,
+        "challenge_id": 69,
+        "created_at": "2026-08-29T17:23:48.000000Z",
+        "updated_at": "2026-08-29T17:23:48.000000Z"
+      },
+      {
+        "id": 3736,
+        "user_id": 2175,
+        "team_id": 1410,
+        "challenge_id": 69,
+        "created_at": "2026-08-29T17:27:32.000000Z",
+        "updated_at": "2026-08-29T17:27:32.000000Z"
+      },
+      {
+        "id": 3737,
+        "user_id": 3521,
+        "team_id": 2213,
+        "challenge_id": 69,
+        "created_at": "2026-08-29T17:27:41.000000Z",
+        "updated_at": "2026-08-29T17:27:41.000000Z"
+      }
+    ]
+  },
+  "submitted_flag": "ASIS{M1ddL3_3nd14n_N1bbL35_M4k3_Q3MU_D122y!}",
+  "status": {
+    "schema_version": 2,
+    "solve": "solved_by_me",
+    "flag": {
+      "value": "ASIS{M1ddL3_3nd14n_N1bbL35_M4k3_Q3MU_D122y!}",
+      "state": "submitted_correct"
+    },
+    "writeup": "none",
+    "writeup_auto": true,
+    "notes": "",
+    "labels": [],
+    "container": "none",
+    "synced_at": "2026-08-29T18:23:01Z",
+    "updated_at": "2026-08-29T18:23:01Z"
+  }
+}

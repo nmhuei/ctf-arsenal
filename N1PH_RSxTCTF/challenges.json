@@ -1,0 +1,240 @@
+{
+  "ctf_info": {
+    "title": "$N1PH€RSxTCTF",
+    "url": "https://stjctf2026.tamilctf.com",
+    "platform": "custom_rest",
+    "user": "bqa"
+  },
+  "total_challenges": 12,
+  "total_points": 5119,
+  "categories": {
+    "Web": 2,
+    "Crypto": 1,
+    "Pwn": 3,
+    "Reverse": 1,
+    "Forensics": 1,
+    "Misc": 1,
+    "Osint": 2,
+    "Boot2root": 1
+  },
+  "challenges": [
+    {
+      "id": "cmt40vpjc0nnyl7lok3p4o6f2",
+      "name": "PingBox",
+      "category": "Web",
+      "points": 266,
+      "author": "J054n",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 15,
+      "files": []
+    },
+    {
+      "id": "cmt3rqjfo007d13fvdnlt2p6x",
+      "name": "Moogle Arrived",
+      "category": "Web",
+      "points": 500,
+      "author": "ShaZ",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 0,
+      "files": []
+    },
+    {
+      "id": "cmt3sxo8n008o13fvjkfo5sc1",
+      "name": "S-box",
+      "category": "Crypto",
+      "points": 200,
+      "author": "Karthik",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 61,
+      "files": [
+        {
+          "url": "https://drive.google.com/file/d/1Npti_IthjSKk_hHNmpaCZ7L3wZtg_zzJ/view?usp=sharing",
+          "name": "main.py",
+          "saved_path": "/home/light/Workspace/CTF/N1PH_RSxTCTF/Crypto/S-box/main.py",
+          "success": true,
+          "source": "description_gdrive",
+          "message": "Downloaded via Google Drive handler"
+        }
+      ]
+    },
+    {
+      "id": "cmt3ssbeg007u2xforpapbq92",
+      "name": "Blessed are the Heap Makers",
+      "category": "Pwn",
+      "points": 619,
+      "author": "Ishmael42",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 3,
+      "files": [
+        {
+          "url": "https://drive.google.com/file/d/1_0YXMHtFM5ZHg99Np4bHSwx_J2ROE6zb/view?usp=sharing",
+          "name": "dist-to-participants-drive",
+          "saved_path": "/home/light/Workspace/CTF/N1PH_RSxTCTF/Pwn/Blessed_are_the_Heap_Makers/dist-to-participants-drive",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        },
+        {
+          "url": "https://drive.google.com/file/d/141n7CoJUQ4WW-GtNA_b0pe4uHMn7HRdy/view?usp=sharing",
+          "name": null,
+          "saved_path": null,
+          "success": false,
+          "source": "description_gdrive",
+          "message": "Google Drive download failed or requires manual access permission"
+        }
+      ]
+    },
+    {
+      "id": "cmt3w38q907byl7lozmlrd79v",
+      "name": "Our Time's passed, John",
+      "category": "Pwn",
+      "points": 796,
+      "author": "Ishmael42",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 2,
+      "files": [
+        {
+          "url": "https://drive.google.com/file/d/1VaE683hfysqWYs-8lXq5db5eUwwjtLR2/view?usp=sharing",
+          "name": "our-times-passed-john-dist-to-participant.zip",
+          "saved_path": "/home/light/Workspace/CTF/N1PH_RSxTCTF/Pwn/Our_Time's_passed,_John/our-times-passed-john-dist-to-participant.zip",
+          "success": true,
+          "source": "description_gdrive",
+          "message": "Downloaded via Google Drive handler"
+        }
+      ]
+    },
+    {
+      "id": "cmt3r14vp003j13fv86n0ndl1",
+      "name": "TurboCalc",
+      "category": "Pwn",
+      "points": 835,
+      "author": "zoozoo",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 2,
+      "files": [
+        {
+          "url": "https://drive.google.com/file/d/1p5PjXalFXfGnVVPdQjZW9xS0Je2Nm7BN/view?usp=sharing",
+          "name": "turbocalc.zip",
+          "saved_path": "/home/light/Workspace/CTF/N1PH_RSxTCTF/Pwn/TurboCalc/turbocalc.zip",
+          "success": true,
+          "source": "description_gdrive",
+          "message": "Downloaded via Google Drive handler"
+        }
+      ]
+    },
+    {
+      "id": "cmt3t01vu0001l7lo6unimg85",
+      "name": "METAL GOT SOLID FLAGS: THE PHANTOM CALL",
+      "category": "Reverse",
+      "points": 400,
+      "author": "Ishmael42",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 65,
+      "files": [
+        {
+          "url": "https://drive.google.com/file/d/1PHaosni3FNJkmmck5e6yTLB8Ti0HoQIA/view?usp=sharing",
+          "name": "mgsf-dist-to-paritcipant.zip",
+          "saved_path": "/home/light/Workspace/CTF/N1PH_RSxTCTF/Reverse/METAL_GOT_SOLID_FLAGS_THE_PHANTOM_CALL/mgsf-dist-to-paritcipant.zip",
+          "success": true,
+          "source": "description_gdrive",
+          "message": "Downloaded via Google Drive handler"
+        }
+      ]
+    },
+    {
+      "id": "cmt3t1fsf0001soc86bwpxo79",
+      "name": "Silent Downlink",
+      "category": "Forensics",
+      "points": 300,
+      "author": "J054n",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 7,
+      "files": [
+        {
+          "url": "https://drive.google.com/file/d/1ihtZO7tPyvMKdCBvhFuCLx1536xJselJ/view?usp=sharing",
+          "name": "transmission.wav",
+          "saved_path": "/home/light/Workspace/CTF/N1PH_RSxTCTF/Forensics/Silent_Downlink/transmission.wav",
+          "success": true,
+          "source": "description_gdrive",
+          "message": "Downloaded via Google Drive handler"
+        }
+      ]
+    },
+    {
+      "id": "cmt41g4rh0pz8l7loo0ag0k9b",
+      "name": "Sir, Just SIR!",
+      "category": "Misc",
+      "points": 445,
+      "author": "uh4ck3r",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 2,
+      "files": []
+    },
+    {
+      "id": "cmt3t68p80008uw878czjy0zc",
+      "name": "Los Pollos Hermanos",
+      "category": "Osint",
+      "points": 254,
+      "author": "0xy_D3vi1",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 13,
+      "files": []
+    },
+    {
+      "id": "cmt418i9m0ohosoc8cpbofmem",
+      "name": "This Cord?",
+      "category": "Osint",
+      "points": 224,
+      "author": "....",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 7,
+      "files": []
+    },
+    {
+      "id": "cmt3t2yc0000cl7lokhj6gdvg",
+      "name": "w4nn4d13's Trap",
+      "category": "Boot2root",
+      "points": 280,
+      "author": "w4nn4d13",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 1,
+      "files": []
+    }
+  ]
+}

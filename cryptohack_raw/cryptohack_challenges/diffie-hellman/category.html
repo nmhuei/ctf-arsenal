@@ -1,0 +1,1177 @@
+<!DOCTYPE html><html lang="en" dir="ltr" class="dark-mode"><head>
+        <title>CryptoHack – Diffie-Hellman challenges</title>
+
+        <link rel="stylesheet" type="text/css" href="/static/css/materialize.min.css">
+        <link rel="stylesheet" type="text/css" href="/static/css/main.css?ver=2">
+        <link rel="stylesheet" type="text/css" href="/static/css/light.css">
+
+        <link rel="stylesheet" type="text/css" href="/static/css/flag-icon.min.css">
+        <link rel="stylesheet" type="text/css" href="/static/css/all.min.css">
+        <link rel="stylesheet" type="text/css" href="/static/css/v4-shims.min.css">
+
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        
+<link rel="stylesheet" href="/static/css/katex.min.css">
+<script defer="" src="/static/js/katex.min.js"></script>
+<script defer="" src="/static/js/katex-auto-render.min.js"></script>
+<script defer="" src="/static/js/katex-render-options.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, katex_render_options);
+    });
+</script>
+
+
+        <!-- Generic Metadata -->
+        <link rel="canonical" href="https://cryptohack.org">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://cryptohack.org">
+        <meta property="og:site_name" content="CryptoHack">
+        <meta property="og:image" content="https://cryptohack.org/static/img/banner.png">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@CryptoHack__">
+        <meta name="twitter:image" content="https://cryptohack.org/static/img/banner.png">
+
+        <!-- Favicon -->
+        <link rel="apple-touch-icon" sizes="57x57" href="/static/favicon/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="/static/favicon/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/static/favicon/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/static/favicon/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/static/favicon/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/static/favicon/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/static/favicon/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/static/favicon/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/static/favicon/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="36x36" href="/static/favicon/android-icon-36x36.png">
+        <link rel="icon" type="image/png" sizes="48x48" href="/static/favicon/android-icon-48x48.png">
+        <link rel="icon" type="image/png" sizes="72x72" href="/static/favicon/android-icon-72x72.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="/static/favicon/android-icon-96x96.png">
+        <link rel="icon" type="image/png" sizes="144x144" href="/static/favicon/android-icon-144x144.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="/static/favicon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="/static/favicon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon/favicon-16x16.png">
+
+        <script>
+            function isLightThemeSelected() {
+                return document.cookie.match(/theme=light/i) != null
+            }
+
+            function setThemeFromCookie() {
+                var html = document.getElementsByTagName('html')[0]
+                html.className = isLightThemeSelected() ? 'light-mode' : 'dark-mode'
+                console.log('Loaded cookie: ' + document.cookie)
+            }
+
+            (function() {
+              setThemeFromCookie()
+            })();
+        </script>
+    </head>
+    <body class="competition-page">
+      <div class="wrapper">
+        <header>
+            <nav class="top-nav nav-fixed">
+                <div class="nav-wrapper">
+
+                    <div><a href="#" data-activates="nav-mobile" class="button-collapse top-nav full"><i class="fas fa-bars" aria-label="Menu Bars"></i></a></div>
+                    <a class="logo-link" href="/"><span class="outline">CRYPTOHACK</span></a>
+
+                    
+
+                    <ul class="right hide-on-med-and-down">
+                        
+                        
+                        <li><a href="/register/">Register</a></li>
+                        
+                        <li><a href="/login/">Login</a></li>
+                        
+                    </ul>
+                </div>
+
+            </nav>
+            <ul id="nav-mobile" class="side-nav fixed" style="left: 0px;">
+
+
+                <li><a href="/courses/">
+                    <div class="side-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <div class="side-text">Courses</div>
+                </a></li>
+
+                <li><a href="/challenges/">
+                    <div class="side-icon"><i class="fas fa-flag"></i></div>
+                    <div class="side-text">Challenges</div>
+                </a></li>
+
+                <!-- <div class="divider" /></div> -->
+                
+                <li><a href="/scoreboard/">
+                    <div class="side-icon"><i class="fas fa-chart-line"></i></div>
+                    <div class="side-text">Scoreboard</div>
+                </a></li>
+
+                <li><a href="/blog/">
+                    <div class="side-icon"><i class="fas fa-brain" style="margin-left: -2px;"></i></div>
+                    <div class="side-text">Blog</div>
+                </a></li>
+
+                <li><a href="/chat/">
+                    <div class="side-icon"><i class="fas fa-comments"></i></div>
+<!--                     <div class="side-icon"><img src="/static/img/Discord-Logo-Color.svg" width="25" style="margin: 14px 0 0 -5px;"></div> -->
+                    <div class="side-text">Chat</div>
+                </a></li>
+
+                <li><a href="/careers/">
+                    <div class="side-icon"><i class="fas fa-briefcase"></i></div>
+                    <div class="side-text">Careers</div>
+                </a></li>
+
+                <li><a href="/faq/">
+                    <div class="side-icon"><i class="fas fa-question"></i></div>
+                    <div class="side-text">FAQ</div>
+                </a></li>
+
+                
+
+                
+
+                
+                
+                <li><a href="/register/">
+                        <div class="side-icon"><i class="fas fa-user-plus"></i></div>
+                        <div class="side-text">Register</div>
+                    </a></li>
+                
+                <li><a href="/login/">
+                        <div class="side-icon"><i class="fas fa-lock"></i></div>
+                        <div class="side-text">Login</div>
+                    </a></li>
+                
+            </ul>
+        </header>
+        <div class="cont">
+            
+        </div>
+        <div class="cont">
+            
+
+
+
+<div class="categoryDescription">
+  
+  <div class="categoryText">
+    <h2 class="categoryTitle">Diffie-Hellman</h2>
+    <p>Whitfield Diffie and Martin Hellman's 1976 paper <a href="https://ee.stanford.edu/~hellman/publications/24.pdf">"New Directions in Cryptography"</a> heralded a huge leap forward for the field of cryptography. The paper defined the concepts of public-key cryptosystems, one-way trapdoor functions, and digital signatures, and described a key-exchange method for securely sharing secrets over an insecure channel. Although these were independently discovered at GCHQ some years earlier, Diffie and Hellman were first to share this landmark knowledge with the world.<br><br>The Diffie-Hellman key exchange (DH) is central to the security of the internet today. As part of the TLS handshake, it's typically used to securely compute a shared AES encryption key over the internet between a web browser and server. Although several other algorithms can be used for key exchange, DH is the only option available in the latest revision of the TLS spec (1.3), showing how it's held up over the years. This is mainly due to how easily DH can be adapted to support <a href="https://en.wikipedia.org/wiki/Forward_secrecy">"forward secrecy"</a>, which we'll discuss more below.<br><br>DH relies on the assumption that the discrete logarithm problem (DLP) is difficult to solve. However, in practice the parameters need to be chosen carefully or the discrete logarithm can be easy to crack, which we'll explore in these challenges. Furthermore, the most basic version of the protocol is vulnerable to a man-in-the-middle attack, showing how DH requires careful authentication of who you are talking to.</p>
+  </div>
+  <div class="categoryImage">
+  <img src="/static/img/category/diffie-hellman.png" alt="">
+  </div>
+  
+
+</div>
+
+
+<div class="row">
+    <div class="col s12 m6 noPadding">
+        <div class="left">
+        <div class="select-wrapper"><span class="caret">▼</span><input type="text" class="select-dropdown" readonly="true" data-activates="select-options-57377981-1ca8-f1bd-e807-983b1fdb8e6b" value="Show all stages"><ul id="select-options-57377981-1ca8-f1bd-e807-983b1fdb8e6b" class="dropdown-content select-dropdown"><li class=""><span>Show all stages</span></li><li class=""><span>Starter</span></li><li class=""><span>Man In The Middle</span></li><li class=""><span>Group Theory</span></li><li class=""><span>Misc</span></li></ul><select onchange="filterCategories(this);" class="initialized">
+            <option value="*">Show all stages</option>
+            
+            <option value="dh-starter">Starter</option>
+            
+            <option value="dh_mitm">Man In The Middle</option>
+            
+            <option value="dh_groups">Group Theory</option>
+            
+            <option value="misc">Misc</option>
+            
+        </select></div>
+        </div>
+    </div>
+    <div class="col s12 m6 noPadding">
+      <p class="toggleCheckbox"><input type="checkbox" id="toggleSolved" class="filled-in"><label for="toggleSolved">Hide Solved Challenges</label></p>
+    </div>
+</div>
+
+<span class="stage" data-stage="dh-starter">
+    <hr>
+    <div class="challengeInfo">
+      <span><h4>Starter</h4></span>
+      <span class="flexToggle"><a class="stage-collapse" data-collapse="dh-starter" href="#">Toggle</a></span>
+    </div>
+    
+    <div class="clearfix"></div>
+    <ul class="collapsible popout" data-collapsible="expandable">
+        
+        <li class="challenge active" data-category="7" data-stage="dh-starter">
+            <div id="header-dh-starter-1" data-challenge="dh-starter-1" class="collapsible-header active">
+                
+                <i id="check-dh-starter-1" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="99b161ac-bd15-0e7f-a333-6e209ac37fb5"></i>
+                <i id="uncheck-dh-starter-1" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="593c87ea-8fd7-b159-3f59-2511edd373f1"></i>
+                
+                <div class="challenge-text truncate">Working with Fields</div>
+                <span class="right">
+                    
+                    10 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/dh-starter-1/solves/">
+                        <span id="solves-dh-starter-1">9577 Solves</span>
+                    </a>
+                    
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body" style="display: block;">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    The set of integers modulo <span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi></mrow><annotation encoding="application/x-tex">N</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.6833em;"></span><span class="mord mathnormal" style="margin-right: 0.109em;">N</span></span></span></span></span>, together with the operations of both addition and multiplication forms a ring <span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="double-struck">Z</mi><mi mathvariant="normal">/</mi><mi>N</mi><mi mathvariant="double-struck">Z</mi></mrow><annotation encoding="application/x-tex">\mathbb{Z}/ N\mathbb{Z}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span class="mord mathbb">Z</span><span class="mord">/</span><span class="mord mathnormal" style="margin-right: 0.109em;">N</span><span class="mord mathbb">Z</span></span></span></span></span>. Fundamentally, this means that adding or multiplying any two elements in the set returns another element in the set.<br><br>When the modulus is prime: <span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><mo>=</mo><mi>p</mi></mrow><annotation encoding="application/x-tex">N = p</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.6833em;"></span><span class="mord mathnormal" style="margin-right: 0.109em;">N</span><span class="mspace" style="margin-right: 0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right: 0.2778em;"></span></span><span class="base"><span class="strut" style="height: 0.625em; vertical-align: -0.1944em;"></span><span class="mord mathnormal">p</span></span></span></span></span>, we are additionally guaranteed a multiplicative inverse of every element in the set, and so the ring is promoted to a field. In particular, we refer to this field as a finite field denoted <span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="double-struck">F</mi><mi>p</mi></msub></mrow><annotation encoding="application/x-tex">\Fp</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.975em; vertical-align: -0.2861em;"></span><span class="mord"><span class="mord mathbb">F</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.1514em;"><span class="" style="top: -2.55em; margin-left: 0em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">p</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.2861em;"><span class=""></span></span></span></span></span></span></span></span></span></span>.<br><br>The Diffie-Hellman protocol works with elements of some finite field <span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="double-struck">F</mi><mi>p</mi></msub></mrow><annotation encoding="application/x-tex">\Fp</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.975em; vertical-align: -0.2861em;"></span><span class="mord"><span class="mord mathbb">F</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.1514em;"><span class="" style="top: -2.55em; margin-left: 0em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">p</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.2861em;"><span class=""></span></span></span></span></span></span></span></span></span></span>, where the prime modulus is typically very large (thousands of bits), but for the following challenges we will keep numbers smaller for compactness.<br><br>Given the prime <span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo>=</mo><mn>991</mn></mrow><annotation encoding="application/x-tex">p = 991</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.625em; vertical-align: -0.1944em;"></span><span class="mord mathnormal">p</span><span class="mspace" style="margin-right: 0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right: 0.2778em;"></span></span><span class="base"><span class="strut" style="height: 0.6444em;"></span><span class="mord">991</span></span></span></span></span>, and the element <span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi><mo>=</mo><mn>209</mn></mrow><annotation encoding="application/x-tex">g = 209</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.625em; vertical-align: -0.1944em;"></span><span class="mord mathnormal" style="margin-right: 0.0359em;">g</span><span class="mspace" style="margin-right: 0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right: 0.2778em;"></span></span><span class="base"><span class="strut" style="height: 0.6444em;"></span><span class="mord">209</span></span></span></span></span>, find the inverse element <span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo>=</mo><msup><mi>g</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup></mrow><annotation encoding="application/x-tex">d = g^{-1}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.6944em;"></span><span class="mord mathnormal">d</span><span class="mspace" style="margin-right: 0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right: 0.2778em;"></span></span><span class="base"><span class="strut" style="height: 1.0085em; vertical-align: -0.1944em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right: 0.0359em;">g</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.8141em;"><span class="" style="top: -3.063em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">1</span></span></span></span></span></span></span></span></span></span></span></span></span> such that <span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi><mo>⋅</mo><mi>d</mi><mspace></mspace><mspace width="0.6667em"></mspace><mrow><mi mathvariant="normal">m</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">d</mi></mrow>  <mn>991</mn><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">g \cdot d \mod 991 = 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.6389em; vertical-align: -0.1944em;"></span><span class="mord mathnormal" style="margin-right: 0.0359em;">g</span><span class="mspace" style="margin-right: 0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right: 0.2222em;"></span></span><span class="base"><span class="strut" style="height: 0.6944em;"></span><span class="mord mathnormal">d</span><span class="mspace allowbreak"></span><span class="mspace" style="margin-right: 0.6667em;"></span></span><span class="base"><span class="strut" style="height: 0.6944em;"></span><span class="mord"><span class="mord"><span class="mord mathrm">mod</span></span></span><span class="mspace" style="margin-right: 0.1667em;"></span><span class="mspace" style="margin-right: 0.1667em;"></span><span class="mord">991</span><span class="mspace" style="margin-right: 0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right: 0.2778em;"></span></span><span class="base"><span class="strut" style="height: 0.6444em;"></span><span class="mord">1</span></span></span></span></span>.
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Fdiffie-hellman%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+        <li class="challenge active" data-category="9" data-stage="dh-starter">
+            <div id="header-dh-starter-2" data-challenge="dh-starter-2" class="collapsible-header active">
+                
+                <i id="check-dh-starter-2" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="7d2e70ee-fea7-a613-22f7-11426194053a"></i>
+                <i id="uncheck-dh-starter-2" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="b8025a18-f9cd-b756-914a-5c375a320290"></i>
+                
+                <div class="challenge-text truncate">Generators of Groups</div>
+                <span class="right">
+                    
+                    20 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/dh-starter-2/solves/">
+                        <span id="solves-dh-starter-2">8281 Solves</span>
+                    </a>
+                    
+                    
+                    <span class="solutions_links solutionsHide" id="solutions-dh-starter-2">
+                      <b>·</b>
+                      <a class="gold-link preventToggle" href="/challenges/dh-starter-2/solutions/">
+                        25 Solutions
+                      </a>
+                    </span>
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body" style="display: block;">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    Every element of a finite field <span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="double-struck">F</mi><mi>p</mi></msub></mrow><annotation encoding="application/x-tex">\Fp</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.975em; vertical-align: -0.2861em;"></span><span class="mord"><span class="mord mathbb">F</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.1514em;"><span class="" style="top: -2.55em; margin-left: 0em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">p</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.2861em;"><span class=""></span></span></span></span></span></span></span></span></span></span> can be used to make a subgroup <span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>H</mi></mrow><annotation encoding="application/x-tex">H</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.6833em;"></span><span class="mord mathnormal" style="margin-right: 0.0813em;">H</span></span></span></span></span> under repeated action of multiplication. In other words, for an element <span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi></mrow><annotation encoding="application/x-tex">g</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.625em; vertical-align: -0.1944em;"></span><span class="mord mathnormal" style="margin-right: 0.0359em;">g</span></span></span></span></span> the subgroup <span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>H</mi><mo>=</mo><mo stretchy="false">⟨</mo><mi>g</mi><mo stretchy="false">⟩</mo><mo>=</mo><mo stretchy="false">{</mo><mi>g</mi><mo separator="true">,</mo><msup><mi>g</mi><mn>2</mn></msup><mo separator="true">,</mo><msup><mi>g</mi><mn>3</mn></msup><mo separator="true">,</mo><mo>…</mo><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">H = \langle g \rangle = \{g, g^2, g^3, \ldots \}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.6833em;"></span><span class="mord mathnormal" style="margin-right: 0.0813em;">H</span><span class="mspace" style="margin-right: 0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right: 0.2778em;"></span></span><span class="base"><span class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span class="mopen">⟨</span><span class="mord mathnormal" style="margin-right: 0.0359em;">g</span><span class="mclose">⟩</span><span class="mspace" style="margin-right: 0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right: 0.2778em;"></span></span><span class="base"><span class="strut" style="height: 1.0641em; vertical-align: -0.25em;"></span><span class="mopen">{</span><span class="mord mathnormal" style="margin-right: 0.0359em;">g</span><span class="mpunct">,</span><span class="mspace" style="margin-right: 0.1667em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right: 0.0359em;">g</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.8141em;"><span class="" style="top: -3.063em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right: 0.1667em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right: 0.0359em;">g</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.8141em;"><span class="" style="top: -3.063em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right: 0.1667em;"></span><span class="minner">…</span><span class="mclose">}</span></span></span></span></span><br><br>A primitive element of <span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="double-struck">F</mi><mi>p</mi></msub></mrow><annotation encoding="application/x-tex">\Fp</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.975em; vertical-align: -0.2861em;"></span><span class="mord"><span class="mord mathbb">F</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.1514em;"><span class="" style="top: -2.55em; margin-left: 0em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">p</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.2861em;"><span class=""></span></span></span></span></span></span></span></span></span></span> is an element whose subgroup <span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>H</mi><mo>=</mo><msubsup><mi mathvariant="double-struck">F</mi><mi>p</mi><mo>∗</mo></msubsup></mrow><annotation encoding="application/x-tex">H = \Fp^*</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.6833em;"></span><span class="mord mathnormal" style="margin-right: 0.0813em;">H</span><span class="mspace" style="margin-right: 0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right: 0.2778em;"></span></span><span class="base"><span class="strut" style="height: 1.072em; vertical-align: -0.3831em;"></span><span class="mord"><span class="mord mathbb">F</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.6887em;"><span class="" style="top: -2.453em; margin-left: 0em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">p</span></span></span></span><span class="" style="top: -3.063em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mbin mtight">∗</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.3831em;"><span class=""></span></span></span></span></span></span></span></span></span></span>, <i>i.e.</i>, every non-zero element of <span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="double-struck">F</mi><mi>p</mi></msub></mrow><annotation encoding="application/x-tex">\Fp</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.975em; vertical-align: -0.2861em;"></span><span class="mord"><span class="mord mathbb">F</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.1514em;"><span class="" style="top: -2.55em; margin-left: 0em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">p</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.2861em;"><span class=""></span></span></span></span></span></span></span></span></span></span>, can be written as <span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>g</mi><mi>n</mi></msup><mspace></mspace><mspace width="0.6667em"></mspace><mrow><mi mathvariant="normal">m</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">d</mi></mrow>  <mi>p</mi></mrow><annotation encoding="application/x-tex">g^n \mod p</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.8588em; vertical-align: -0.1944em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right: 0.0359em;">g</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.6644em;"><span class="" style="top: -3.063em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span></span></span></span><span class="mspace allowbreak"></span><span class="mspace" style="margin-right: 0.6667em;"></span></span><span class="base"><span class="strut" style="height: 0.8889em; vertical-align: -0.1944em;"></span><span class="mord"><span class="mord"><span class="mord mathrm">mod</span></span></span><span class="mspace" style="margin-right: 0.1667em;"></span><span class="mspace" style="margin-right: 0.1667em;"></span><span class="mord mathnormal">p</span></span></span></span></span> for some integer <span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span></span>. Because of this, primitive elements are sometimes called generators of the finite field.<br><br>For the finite field with <span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo>=</mo><mn>28151</mn></mrow><annotation encoding="application/x-tex">p = 28151</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.625em; vertical-align: -0.1944em;"></span><span class="mord mathnormal">p</span><span class="mspace" style="margin-right: 0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right: 0.2778em;"></span></span><span class="base"><span class="strut" style="height: 0.6444em;"></span><span class="mord">28151</span></span></span></span></span> find the smallest element <span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi></mrow><annotation encoding="application/x-tex">g</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.625em; vertical-align: -0.1944em;"></span><span class="mord mathnormal" style="margin-right: 0.0359em;">g</span></span></span></span></span> which is a primitive element of <span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="double-struck">F</mi><mi>p</mi></msub></mrow><annotation encoding="application/x-tex">\Fp</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.975em; vertical-align: -0.2861em;"></span><span class="mord"><span class="mord mathbb">F</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.1514em;"><span class="" style="top: -2.55em; margin-left: 0em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">p</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.2861em;"><span class=""></span></span></span></span></span></span></span></span></span></span>.<br><br><span class="note"><i class="fas fa-pencil-alt"></i>This problem can be solved by brute-force, but there's also clever ways to speed up the calculation.</span>
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Fdiffie-hellman%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+        <li class="challenge active" data-category="8" data-stage="dh-starter">
+            <div id="header-dh-starter-3" data-challenge="dh-starter-3" class="collapsible-header active">
+                
+                <i id="check-dh-starter-3" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="a807e2ed-5a96-8f2f-8cc2-6d0ae721a2c6"></i>
+                <i id="uncheck-dh-starter-3" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="ada15468-2128-5e77-a5d0-60bbc5b6db3a"></i>
+                
+                <div class="challenge-text truncate">Computing Public Values</div>
+                <span class="right">
+                    
+                    25 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/dh-starter-3/solves/">
+                        <span id="solves-dh-starter-3">8365 Solves</span>
+                    </a>
+                    
+                    
+                    <span class="solutions_links solutionsHide" id="solutions-dh-starter-3">
+                      <b>·</b>
+                      <a class="gold-link preventToggle" href="/challenges/dh-starter-3/solutions/">
+                        6 Solutions
+                      </a>
+                    </span>
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body" style="display: block;">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    The Diffie-Hellman protocol is used because the discrete logarithm is assumed to be a "hard" computation for carefully chosen groups.<br><br>The first step of the protocol is to establish a prime <span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi></mrow><annotation encoding="application/x-tex">p</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.625em; vertical-align: -0.1944em;"></span><span class="mord mathnormal">p</span></span></span></span></span> and some generator of the finite field <span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi></mrow><annotation encoding="application/x-tex">g</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.625em; vertical-align: -0.1944em;"></span><span class="mord mathnormal" style="margin-right: 0.0359em;">g</span></span></span></span></span>. These must be carefully chosen to avoid special cases where the discrete log can be solved with efficient algorithms. For example, a safe prime <span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo>=</mo><mn>2</mn><mo>⋅</mo><mi>q</mi><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">p = 2 \cdot q +1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.625em; vertical-align: -0.1944em;"></span><span class="mord mathnormal">p</span><span class="mspace" style="margin-right: 0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right: 0.2778em;"></span></span><span class="base"><span class="strut" style="height: 0.6444em;"></span><span class="mord">2</span><span class="mspace" style="margin-right: 0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right: 0.2222em;"></span></span><span class="base"><span class="strut" style="height: 0.7778em; vertical-align: -0.1944em;"></span><span class="mord mathnormal" style="margin-right: 0.0359em;">q</span><span class="mspace" style="margin-right: 0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right: 0.2222em;"></span></span><span class="base"><span class="strut" style="height: 0.6444em;"></span><span class="mord">1</span></span></span></span></span> is usually picked such that the only factors of <span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">p - 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.7778em; vertical-align: -0.1944em;"></span><span class="mord mathnormal">p</span><span class="mspace" style="margin-right: 0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right: 0.2222em;"></span></span><span class="base"><span class="strut" style="height: 0.6444em;"></span><span class="mord">1</span></span></span></span></span> are <span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">{</mo><mn>2</mn><mo separator="true">,</mo><mi>q</mi><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">\{2,q\}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span class="mopen">{</span><span class="mord">2</span><span class="mpunct">,</span><span class="mspace" style="margin-right: 0.1667em;"></span><span class="mord mathnormal" style="margin-right: 0.0359em;">q</span><span class="mclose">}</span></span></span></span></span> where <span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>q</mi></mrow><annotation encoding="application/x-tex">q</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.625em; vertical-align: -0.1944em;"></span><span class="mord mathnormal" style="margin-right: 0.0359em;">q</span></span></span></span></span> is some other large prime. This protects DH from the <a href="https://en.wikipedia.org/wiki/Pohlig%E2%80%93Hellman_algorithm">Pohlig–Hellman algorithm</a>.<br><br>The user then picks a secret integer <span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>&lt;</mo><mi>p</mi><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">a &lt; p - 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.5782em; vertical-align: -0.0391em;"></span><span class="mord mathnormal">a</span><span class="mspace" style="margin-right: 0.2778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right: 0.2778em;"></span></span><span class="base"><span class="strut" style="height: 0.7778em; vertical-align: -0.1944em;"></span><span class="mord mathnormal">p</span><span class="mspace" style="margin-right: 0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right: 0.2222em;"></span></span><span class="base"><span class="strut" style="height: 0.6444em;"></span><span class="mord">1</span></span></span></span></span> and calculates <span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>g</mi><mi>a</mi></msup><mspace></mspace><mspace width="0.6667em"></mspace><mrow><mi mathvariant="normal">m</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">d</mi></mrow>  <mi>p</mi></mrow><annotation encoding="application/x-tex">g^a \mod p</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.8588em; vertical-align: -0.1944em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right: 0.0359em;">g</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.6644em;"><span class="" style="top: -3.063em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">a</span></span></span></span></span></span></span></span><span class="mspace allowbreak"></span><span class="mspace" style="margin-right: 0.6667em;"></span></span><span class="base"><span class="strut" style="height: 0.8889em; vertical-align: -0.1944em;"></span><span class="mord"><span class="mord"><span class="mord mathrm">mod</span></span></span><span class="mspace" style="margin-right: 0.1667em;"></span><span class="mspace" style="margin-right: 0.1667em;"></span><span class="mord mathnormal">p</span></span></span></span></span>. This can be transmitted over an insecure network and due to the assumed difficulty of the discrete logarithm, the secret integer should be infeasible to compute. The value <span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.4306em;"></span><span class="mord mathnormal">a</span></span></span></span></span> is known as the secret value, while <span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><msup><mi>g</mi><mi>a</mi></msup><mspace></mspace><mspace width="0.6667em"></mspace><mrow><mi mathvariant="normal">m</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">d</mi></mrow>  <mi>p</mi></mrow><annotation encoding="application/x-tex">A = g^a \mod p</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.6833em;"></span><span class="mord mathnormal">A</span><span class="mspace" style="margin-right: 0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right: 0.2778em;"></span></span><span class="base"><span class="strut" style="height: 0.8588em; vertical-align: -0.1944em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right: 0.0359em;">g</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.6644em;"><span class="" style="top: -3.063em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">a</span></span></span></span></span></span></span></span><span class="mspace allowbreak"></span><span class="mspace" style="margin-right: 0.6667em;"></span></span><span class="base"><span class="strut" style="height: 0.8889em; vertical-align: -0.1944em;"></span><span class="mord"><span class="mord"><span class="mord mathrm">mod</span></span></span><span class="mspace" style="margin-right: 0.1667em;"></span><span class="mspace" style="margin-right: 0.1667em;"></span><span class="mord mathnormal">p</span></span></span></span></span> is the public value.<br><br>Given the NIST parameters:<br><br><span class="codeBlock"> g: 2<br> p: 2410312426921032588552076022197566074856950548502459942654116941958108831682612228890093858261341614673227141477904012196503648957050582631942730706805009223062734745341073406696246014589361659774041027169249453200378729434170325843778659198143763193776859869524088940195577346119843545301547043747207749969763750084308926339295559968882457872412993810129130294592999947926365264059284647209730384947211681434464714438488520940127459844288859336526896320919633919 </span><br><br>Calculate the value of <span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>g</mi><mi>a</mi></msup><mspace></mspace><mspace width="0.6667em"></mspace><mrow><mi mathvariant="normal">m</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">d</mi></mrow>  <mi>p</mi></mrow><annotation encoding="application/x-tex">g^a \mod p</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.8588em; vertical-align: -0.1944em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right: 0.0359em;">g</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.6644em;"><span class="" style="top: -3.063em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">a</span></span></span></span></span></span></span></span><span class="mspace allowbreak"></span><span class="mspace" style="margin-right: 0.6667em;"></span></span><span class="base"><span class="strut" style="height: 0.8889em; vertical-align: -0.1944em;"></span><span class="mord"><span class="mord"><span class="mord mathrm">mod</span></span></span><span class="mspace" style="margin-right: 0.1667em;"></span><span class="mspace" style="margin-right: 0.1667em;"></span><span class="mord mathnormal">p</span></span></span></span></span> for<br><br><span class="codeBlock"> a: 972107443837033796245864316200458246846904598488981605856765890478853088246897345487328491037710219222038930943365848626194109830309179393018216763327572120124760140018038673999837643377590434413866611132403979547150659053897355593394492586978400044375465657296027592948349589216415363722668361328689588996541370097559090335137676411595949335857341797148926151694299575970292809805314431447043469447485957669949989090202320234337890323293401862304986599884732815 </span>
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Fdiffie-hellman%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+        <li class="challenge active" data-category="6" data-stage="dh-starter">
+            <div id="header-dh-starter-4" data-challenge="dh-starter-4" class="collapsible-header active">
+                
+                <i id="check-dh-starter-4" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="3a491d88-ad92-fa1e-1d62-31f47c19148d"></i>
+                <i id="uncheck-dh-starter-4" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="f9f95f56-dbde-c308-3d9c-14ccfb06d5d7"></i>
+                
+                <div class="challenge-text truncate">Computing Shared Secrets</div>
+                <span class="right">
+                    
+                    30 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/dh-starter-4/solves/">
+                        <span id="solves-dh-starter-4">7991 Solves</span>
+                    </a>
+                    
+                    
+                    <span class="solutions_links solutionsHide" id="solutions-dh-starter-4">
+                      <b>·</b>
+                      <a class="gold-link preventToggle" href="/challenges/dh-starter-4/solutions/">
+                        12 Solutions
+                      </a>
+                    </span>
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body" style="display: block;">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    Now it's time to calculate a shared secret using data received from your friend Alice. Like before, we will be using the NIST parameters:<br><br><span class="codeBlock"> g: 2<br> p: 2410312426921032588552076022197566074856950548502459942654116941958108831682612228890093858261341614673227141477904012196503648957050582631942730706805009223062734745341073406696246014589361659774041027169249453200378729434170325843778659198143763193776859869524088940195577346119843545301547043747207749969763750084308926339295559968882457872412993810129130294592999947926365264059284647209730384947211681434464714438488520940127459844288859336526896320919633919 </span><br><br>You have received the following integer from Alice:<br><br><span class="codeBlock"> A: 70249943217595468278554541264975482909289174351516133994495821400710625291840101960595720462672604202133493023241393916394629829526272643847352371534839862030410331485087487331809285533195024369287293217083414424096866925845838641840923193480821332056735592483730921055532222505605661664236182285229504265881752580410194731633895345823963910901731715743835775619780738974844840425579683385344491015955892106904647602049559477279345982530488299847663103078045601 </span><br><br>You generate your secret integer <span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi></mrow><annotation encoding="application/x-tex">b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.6944em;"></span><span class="mord mathnormal">b</span></span></span></span></span> and calculate your public value <span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><mo>=</mo><msup><mi>g</mi><mi>b</mi></msup><mspace></mspace><mspace width="0.6667em"></mspace><mrow><mi mathvariant="normal">m</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">d</mi></mrow>  <mi>p</mi></mrow><annotation encoding="application/x-tex">B = g^b \mod p</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.6833em;"></span><span class="mord mathnormal" style="margin-right: 0.0502em;">B</span><span class="mspace" style="margin-right: 0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right: 0.2778em;"></span></span><span class="base"><span class="strut" style="height: 1.0435em; vertical-align: -0.1944em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right: 0.0359em;">g</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.8491em;"><span class="" style="top: -3.063em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">b</span></span></span></span></span></span></span></span><span class="mspace allowbreak"></span><span class="mspace" style="margin-right: 0.6667em;"></span></span><span class="base"><span class="strut" style="height: 0.8889em; vertical-align: -0.1944em;"></span><span class="mord"><span class="mord"><span class="mord mathrm">mod</span></span></span><span class="mspace" style="margin-right: 0.1667em;"></span><span class="mspace" style="margin-right: 0.1667em;"></span><span class="mord mathnormal">p</span></span></span></span></span>, which you send to Alice.<br><br><span class="codeBlock"> b: 12019233252903990344598522535774963020395770409445296724034378433497976840167805970589960962221948290951873387728102115996831454482299243226839490999713763440412177965861508773420532266484619126710566414914227560103715336696193210379850575047730388378348266180934946139100479831339835896583443691529372703954589071507717917136906770122077739814262298488662138085608736103418601750861698417340264213867753834679359191427098195887112064503104510489610448294420720<br> B: 518386956790041579928056815914221837599234551655144585133414727838977145777213383018096662516814302583841858901021822273505120728451788412967971809038854090670743265187138208169355155411883063541881209288967735684152473260687799664130956969450297407027926009182761627800181901721840557870828019840218548188487260441829333603432714023447029942863076979487889569452186257333512355724725941390498966546682790608125613166744820307691068563387354936732643569654017172 </span><br><br><span class="note"><i class="fas fa-lightbulb"></i>Try and compute <span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.6833em;"></span><span class="mord mathnormal" style="margin-right: 0.0502em;">B</span></span></span></span></span> yourself and verify things are working using the values above.</span><br><br>You and Alice are now able to calculate a shared secret by using your secret values <span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo separator="true">,</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">a, b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.8889em; vertical-align: -0.1944em;"></span><span class="mord mathnormal">a</span><span class="mpunct">,</span><span class="mspace" style="margin-right: 0.1667em;"></span><span class="mord mathnormal">b</span></span></span></span></span> with each others public values <span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><mo separator="true">,</mo><mi>A</mi></mrow><annotation encoding="application/x-tex">B, A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.8778em; vertical-align: -0.1944em;"></span><span class="mord mathnormal" style="margin-right: 0.0502em;">B</span><span class="mpunct">,</span><span class="mspace" style="margin-right: 0.1667em;"></span><span class="mord mathnormal">A</span></span></span></span></span>. Note that computing this shared value is infeasible knowing only <span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">{</mo><mi>g</mi><mo separator="true">,</mo><mi>p</mi><mo separator="true">,</mo><mi>A</mi><mo separator="true">,</mo><mi>B</mi><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">\{g,p,A,B\}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span class="mopen">{</span><span class="mord mathnormal" style="margin-right: 0.0359em;">g</span><span class="mpunct">,</span><span class="mspace" style="margin-right: 0.1667em;"></span><span class="mord mathnormal">p</span><span class="mpunct">,</span><span class="mspace" style="margin-right: 0.1667em;"></span><span class="mord mathnormal">A</span><span class="mpunct">,</span><span class="mspace" style="margin-right: 0.1667em;"></span><span class="mord mathnormal" style="margin-right: 0.0502em;">B</span><span class="mclose">}</span></span></span></span></span>, it's the knowledge of <span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo separator="true">,</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">a, b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.8889em; vertical-align: -0.1944em;"></span><span class="mord mathnormal">a</span><span class="mpunct">,</span><span class="mspace" style="margin-right: 0.1667em;"></span><span class="mord mathnormal">b</span></span></span></span></span> which allows the generation of the shared value.<br><br>What is your shared secret?
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Fdiffie-hellman%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+        <li class="challenge active" data-category="5" data-stage="dh-starter">
+            <div id="header-dh-starter-5" data-challenge="dh-starter-5" class="collapsible-header active">
+                
+                <i id="check-dh-starter-5" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="f738be03-eb65-9501-e8c2-c86e23d26056"></i>
+                <i id="uncheck-dh-starter-5" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="2aeebcff-b9e5-e834-a888-ba91fd806c17"></i>
+                
+                <div class="challenge-text truncate">Deriving Symmetric Keys</div>
+                <span class="right">
+                    
+                    40 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/dh-starter-5/solves/">
+                        <span id="solves-dh-starter-5">7172 Solves</span>
+                    </a>
+                    
+                    
+                    <span class="solutions_links solutionsHide" id="solutions-dh-starter-5">
+                      <b>·</b>
+                      <a class="gold-link preventToggle" href="/challenges/dh-starter-5/solutions/">
+                        8 Solutions
+                      </a>
+                    </span>
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body" style="display: block;">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    Alice wants to send you her secret flag and asks you to generate a shared secret with her. She also tells you she will be using the NIST standard:<br><br><span class="codeBlock"> g: 2<br> p: 2410312426921032588552076022197566074856950548502459942654116941958108831682612228890093858261341614673227141477904012196503648957050582631942730706805009223062734745341073406696246014589361659774041027169249453200378729434170325843778659198143763193776859869524088940195577346119843545301547043747207749969763750084308926339295559968882457872412993810129130294592999947926365264059284647209730384947211681434464714438488520940127459844288859336526896320919633919 </span><br><br>You receive the following integer from Alice:<br><br><br><br><span class="codeBlock"> A: 112218739139542908880564359534373424013016249772931962692237907571990334483528877513809272625610512061159061737608547288558662879685086684299624481742865016924065000555267977830144740364467977206555914781236397216033805882207640219686011643468275165718132888489024688846101943642459655423609111976363316080620471928236879737944217503462265615774774318986375878440978819238346077908864116156831874695817477772477121232820827728424890845769152726027520772901423784 </span><br><br>You then generate your secret integer and calculate your public one, which you send to Alice.<br><br><span class="codeBlock"> b: 197395083814907028991785772714920885908249341925650951555219049411298436217190605190824934787336279228785809783531814507661385111220639329358048196339626065676869119737979175531770768861808581110311903548567424039264485661330995221907803300824165469977099494284722831845653985392791480264712091293580274947132480402319812110462641143884577706335859190668240694680261160210609506891842793868297672619625924001403035676872189455767944077542198064499486164431451944<br> B: 1241972460522075344783337556660700537760331108332735677863862813666578639518899293226399921252049655031563612905395145236854443334774555982204857895716383215705498970395379526698761468932147200650513626028263449605755661189525521343142979265044068409405667549241125597387173006460145379759986272191990675988873894208956851773331039747840312455221354589910726982819203421992729738296452820365553759182547255998984882158393688119629609067647494762616719047466973581</span><br><br>Individually you each use the shared secret to derive an AES private key. This allows you to encrypt large amounts of data over your channel without needing to exchange keys again.<br><br>Alice sends you the following IV and ciphertext:<br><br><span class="codeBlock"> {'iv': '737561146ff8194f45290f5766ed6aba', 'encrypted_flag': '39c99bf2f0c14678d6a5416faef954b5893c316fc3c48622ba1fd6a9fe85f3dc72a29c394cf4bc8aff6a7b21cae8e12c'} </span><br><br>Decrypt this to obtain your flag!<br><br><span class="note"><i class="fas fa-brain"></i>The <code>decrypt.py</code> script is provided to help you here and on future challenges too.</span><br><br><b>Challenge files:</b><br>&nbsp; - <a href="/static/challenges/source_0e330e41ce30ead878a4589929aa31a1.py" download="">source.py</a><br>&nbsp; - <a href="/static/challenges/decrypt_08c0fede9185868aba4a6ae21aca0148.py" download="">decrypt.py</a><br>
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Fdiffie-hellman%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+    </ul>
+</span>
+
+
+<span class="stage" data-stage="dh_mitm">
+    <hr>
+    <div class="challengeInfo">
+      <span><h4>Man In The Middle</h4></span>
+      <span class="flexToggle"><a class="stage-collapse" data-collapse="dh_mitm" href="#">Toggle</a></span>
+    </div>
+    
+    <div class="clearfix"></div>
+    <ul class="collapsible popout" data-collapsible="expandable">
+        
+        <li class="challenge" data-category="1" data-stage="dh_mitm">
+            <div id="header-parameter_injection" data-challenge="parameter_injection" class="collapsible-header">
+                
+                <i id="check-parameter_injection" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="ed1216a9-6fe9-9840-eb82-fbdeb7b00c3d"></i>
+                <i id="uncheck-parameter_injection" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="262105b6-83b4-2227-7907-6cf711ebb05c"></i>
+                
+                <div class="challenge-text truncate">Parameter Injection</div>
+                <span class="right">
+                    
+                    60 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/parameter_injection/solves/">
+                        <span id="solves-parameter_injection">5714 Solves</span>
+                    </a>
+                    
+                    
+                    <span class="solutions_links solutionsHide" id="solutions-parameter_injection">
+                      <b>·</b>
+                      <a class="gold-link preventToggle" href="/challenges/parameter_injection/solutions/">
+                        22 Solutions
+                      </a>
+                    </span>
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    You're in a position to not only intercept Alice and Bob's DH key exchange, but also rewrite their messages. Think about how you can play with the DH equation that they calculate, and therefore sidestep the need to crack any discrete logarithm problem.<br><br>Use the script from "Deriving Symmetric Keys" to decrypt the flag once you've recovered the shared secret.<br><br>Connect at <code>socket.cryptohack.org 13371</code>
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Fdiffie-hellman%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+        <li class="challenge" data-category="3" data-stage="dh_mitm">
+            <div id="header-export_grade" data-challenge="export_grade" class="collapsible-header">
+                
+                <i id="check-export_grade" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="1e5b5ec0-c8c4-8b62-7dae-30ef1d2ea40f"></i>
+                <i id="uncheck-export_grade" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="3c326167-296c-954b-23a0-f6437da6d3fb"></i>
+                
+                <div class="challenge-text truncate">Export-grade</div>
+                <span class="right">
+                    
+                    100 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/export_grade/solves/">
+                        <span id="solves-export_grade">4878 Solves</span>
+                    </a>
+                    
+                    
+                    <span class="solutions_links solutionsHide" id="solutions-export_grade">
+                      <b>·</b>
+                      <a class="gold-link preventToggle" href="/challenges/export_grade/solutions/">
+                        19 Solutions
+                      </a>
+                    </span>
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    Alice and Bob are using legacy codebases and need to negotiate parameters they both support. You've man-in-the-middled this negotiation step, and can passively observe thereafter. How are you going to ruin their day this time?<br><br>Connect at <code>socket.cryptohack.org 13379</code>
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Fdiffie-hellman%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+        <li class="challenge" data-category="2" data-stage="dh_mitm">
+            <div id="header-dh_static" data-challenge="dh_static" class="collapsible-header">
+                
+                <i id="check-dh_static" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="323f9684-059d-ea22-aca6-134af6bf14ae"></i>
+                <i id="uncheck-dh_static" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="7163b059-92a0-b067-ae47-9cb850d94cd3"></i>
+                
+                <div class="challenge-text truncate">Static Client</div>
+                <span class="right">
+                    
+                    100 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/dh_static/solves/">
+                        <span id="solves-dh_static">2347 Solves</span>
+                    </a>
+                    
+                    
+                    <span class="solutions_links solutionsHide" id="solutions-dh_static">
+                      <b>·</b>
+                      <a class="gold-link preventToggle" href="/challenges/dh_static/solutions/">
+                        11 Solutions
+                      </a>
+                    </span>
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    You've just finished eavesdropping on a conversation between Alice and Bob. Now you have a chance to talk to Bob. What are you going to say?<br><br>Connect at <code>socket.cryptohack.org 13373</code>
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Fdiffie-hellman%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+    </ul>
+</span>
+
+
+<span class="stage" data-stage="dh_groups">
+    <hr>
+    <div class="challengeInfo">
+      <span><h4>Group Theory</h4></span>
+      <span class="flexToggle"><a class="stage-collapse" data-collapse="dh_groups" href="#">Toggle</a></span>
+    </div>
+    
+    <div class="clearfix"></div>
+    <ul class="collapsible popout" data-collapsible="expandable">
+        
+        <li class="challenge" data-category="4" data-stage="dh_groups">
+            <div id="header-dh_additive" data-challenge="dh_additive" class="collapsible-header">
+                
+                <i id="check-dh_additive" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="ee90e92e-7767-96a9-9670-50b255d1a092"></i>
+                <i id="uncheck-dh_additive" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="5c7ea646-6d09-c269-ac1c-92e653c0d1e2"></i>
+                
+                <div class="challenge-text truncate">Additive</div>
+                <span class="right">
+                    
+                    70 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/dh_additive/solves/">
+                        <span id="solves-dh_additive">2530 Solves</span>
+                    </a>
+                    
+                    
+                    <span class="solutions_links solutionsHide" id="solutions-dh_additive">
+                      <b>·</b>
+                      <a class="gold-link preventToggle" href="/challenges/dh_additive/solutions/">
+                        12 Solutions
+                      </a>
+                    </span>
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    Alice and Bob decided to do their DHKE in an additive group rather than a multiplicative group. What could go wrong?<br><br>Use the script from "Deriving Symmetric Keys" to decrypt the flag once you've recovered the shared secret.<br><br>Connect at <code>socket.cryptohack.org 13380</code>
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Fdiffie-hellman%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+        <li class="challenge" data-category="89" data-stage="dh_groups">
+            <div id="header-dh_static2" data-challenge="dh_static2" class="collapsible-header">
+                
+                <i id="check-dh_static2" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="8a4150ae-a450-1ec5-cdea-8ec6169936e6"></i>
+                <i id="uncheck-dh_static2" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="7d7ab708-ed49-27ab-4100-7fb8c99eb038"></i>
+                
+                <div class="challenge-text truncate">Static Client 2</div>
+                <span class="right">
+                    
+                    120 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/dh_static2/solves/">
+                        <span id="solves-dh_static2">1668 Solves</span>
+                    </a>
+                    
+                    
+                    <span class="solutions_links solutionsHide" id="solutions-dh_static2">
+                      <b>·</b>
+                      <a class="gold-link preventToggle" href="/challenges/dh_static2/solutions/">
+                        15 Solutions
+                      </a>
+                    </span>
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    Bob got a bit more careful with the way he verifies parameters. He's still insisting on using the <span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi></mrow><annotation encoding="application/x-tex">p</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.625em; vertical-align: -0.1944em;"></span><span class="mord mathnormal">p</span></span></span></span></span> and <span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi></mrow><annotation encoding="application/x-tex">g</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.625em; vertical-align: -0.1944em;"></span><span class="mord mathnormal" style="margin-right: 0.0359em;">g</span></span></span></span></span> values provided by his partner. Wonder if he missed anything?<br><br>Connect at <code>socket.cryptohack.org 13378</code>
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Fdiffie-hellman%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+    </ul>
+</span>
+
+
+<span class="stage" data-stage="misc">
+    <hr>
+    <div class="challengeInfo">
+      <span><h4>Misc</h4></span>
+      <span class="flexToggle"><a class="stage-collapse" data-collapse="misc" href="#">Toggle</a></span>
+    </div>
+    
+    <div class="clearfix"></div>
+    <ul class="collapsible popout" data-collapsible="expandable">
+        
+        <li class="challenge" data-category="11" data-stage="misc">
+            <div id="header-scriptkiddie" data-challenge="scriptkiddie" class="collapsible-header">
+                
+                <i id="check-scriptkiddie" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="341345ed-43eb-4cf7-4af8-0fb9b9bcfb85"></i>
+                <i id="uncheck-scriptkiddie" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="336734b4-391d-8b4e-e51b-c830f56a6f23"></i>
+                
+                <div class="challenge-text truncate">Script Kiddie</div>
+                <span class="right">
+                    
+                    70 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/scriptkiddie/solves/">
+                        <span id="solves-scriptkiddie">2215 Solves</span>
+                    </a>
+                    
+                    
+                    <span class="solutions_links solutionsHide" id="solutions-scriptkiddie">
+                      <b>·</b>
+                      <a class="gold-link preventToggle" href="/challenges/scriptkiddie/solutions/">
+                        7 Solutions
+                      </a>
+                    </span>
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    Found this cool script on Github and I've been using it to keep my secrets from anyone listening in on the school wifi!<br><br><b>Challenge files:</b><br>&nbsp; - <a href="/static/challenges/script_70449139467b5442a859d310e6945690.py" download="">script.py</a><br>&nbsp; - <a href="/static/challenges/output_92cc8b7f0db768b53291efbf969ca3ca.txt" download="">output.txt</a><br>
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Fdiffie-hellman%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+        <li class="challenge" data-category="152" data-stage="misc">
+            <div id="header-matrix" data-challenge="matrix" class="collapsible-header">
+                
+                <i id="check-matrix" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="ab5ba0f8-da9c-029c-39d0-7e4e732f186e"></i>
+                <i id="uncheck-matrix" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="4ae64631-0288-1ea5-ada3-84ab67d8ded2"></i>
+                
+                <div class="challenge-text truncate">The Matrix</div>
+                <span class="right">
+                    
+                    75 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/matrix/solves/">
+                        <span id="solves-matrix">1223 Solves</span>
+                    </a>
+                    
+                    
+                    <span class="solutions_links solutionsHide" id="solutions-matrix">
+                      <b>·</b>
+                      <a class="gold-link preventToggle" href="/challenges/matrix/solutions/">
+                        8 Solutions
+                      </a>
+                    </span>
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    I must get out of here. I must get free, and in this mind is the key, my key!<br><br><b>Challenge files:</b><br>&nbsp; - <a href="/static/challenges/the_matrix_92a1330e0fc370fbacf7f001ae2933ee.sage" download="">the_matrix.sage</a><br>&nbsp; - <a href="/static/challenges/flag_403b981c77d39217c20390c1729b15f0.enc" download="">flag.enc</a><br><br><br>Challenge contributed by <a class="gold-link" href="/user/jschnei">jschnei</a>
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Fdiffie-hellman%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+        <li class="challenge" data-category="153" data-stage="misc">
+            <div id="header-matrix_reloaded" data-challenge="matrix_reloaded" class="collapsible-header">
+                
+                <i id="check-matrix_reloaded" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="d8f891f4-5cf3-d928-03c2-18468bb0386d"></i>
+                <i id="uncheck-matrix_reloaded" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="422a7285-bd8b-e37f-736a-dc714878e382"></i>
+                
+                <div class="challenge-text truncate">The Matrix Reloaded</div>
+                <span class="right">
+                    
+                    100 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/matrix_reloaded/solves/">
+                        <span id="solves-matrix_reloaded">808 Solves</span>
+                    </a>
+                    
+                    
+                    <span class="solutions_links solutionsHide" id="solutions-matrix_reloaded">
+                      <b>·</b>
+                      <a class="gold-link preventToggle" href="/challenges/matrix_reloaded/solutions/">
+                        5 Solutions
+                      </a>
+                    </span>
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    It's happening exactly as before... Well, not exactly.<br><br><b>Challenge files:</b><br>&nbsp; - <a href="/static/challenges/matrix_reloaded_5994d61c3210bacecfbcd343dc373864.zip" download="">matrix_reloaded.zip</a><br><br><br>Challenge contributed by <a class="gold-link" href="/user/jschnei">jschnei</a>
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Fdiffie-hellman%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+        <li class="challenge" data-category="154" data-stage="misc">
+            <div id="header-matrix_revolutions" data-challenge="matrix_revolutions" class="collapsible-header">
+                
+                <i id="check-matrix_revolutions" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="48875538-61c6-6e05-3c29-d52fa4471296"></i>
+                <i id="uncheck-matrix_revolutions" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="fe2e5dcf-84e5-5911-3b7d-e3d0e6238d90"></i>
+                
+                <div class="challenge-text truncate">The Matrix Revolutions</div>
+                <span class="right">
+                    
+                    125 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/matrix_revolutions/solves/">
+                        <span id="solves-matrix_revolutions">625 Solves</span>
+                    </a>
+                    
+                    
+                    <span class="solutions_links solutionsHide" id="solutions-matrix_revolutions">
+                      <b>·</b>
+                      <a class="gold-link preventToggle" href="/challenges/matrix_revolutions/solutions/">
+                        7 Solutions
+                      </a>
+                    </span>
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    Everything that has a beginning has an end, Neo.<br><br><b>Challenge files:</b><br>&nbsp; - <a href="/static/challenges/matrix_revolutions_2d9c03dde281a05e89519d9cd356d19c.zip" download="">matrix_revolutions.zip</a><br><br><br>Challenge contributed by <a class="gold-link" href="/user/jschnei">jschnei</a>
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Fdiffie-hellman%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+    </ul>
+</span>
+
+
+
+        </div>
+        <script src="/static/js/jquery.min.js"></script>
+        <script src="/static/js/materialize.min.js"></script>
+        <script defer="" src="/static/js/confetti.browser.min.js"></script>
+        <script src="/static/js/api.js"></script>
+        <script src="/static/js/moment-with-locales.min.js"></script>
+
+<script>
+moment.locale("en");
+function flask_moment_render(elem) {{
+    const timestamp = moment(elem.dataset.timestamp);
+    const func = elem.dataset.function;
+    const format = elem.dataset.format;
+    const timestamp2 = elem.dataset.timestamp2;
+    const no_suffix = elem.dataset.nosuffix;
+    const units = elem.dataset.units;
+    let args = [];
+    if (format)
+        args.push(format);
+    if (timestamp2)
+        args.push(moment(timestamp2));
+    if (no_suffix)
+        args.push(no_suffix);
+    if (units)
+        args.push(units);
+    elem.textContent = timestamp[func].apply(timestamp, args);
+    elem.classList.remove('flask-moment');
+    elem.style.display = "";
+}}
+function flask_moment_render_all() {{
+    const moments = document.querySelectorAll('.flask-moment');
+    moments.forEach(function(moment) {{
+        flask_moment_render(moment);
+        const refresh = moment.dataset.refresh;
+        if (refresh && refresh > 0) {{
+            (function(elem, interval) {{
+                setInterval(function() {{
+                    flask_moment_render(elem);
+                }}, interval);
+            }})(moment, refresh);
+        }}
+    }})
+}}
+document.addEventListener("DOMContentLoaded", flask_moment_render_all);
+</script>
+
+        <script>
+            function dismissNotification(id) {
+                api.makeCall("/dismiss/" + id + ".json", {_csrf_token: "evqcmr67h72vvdpmv99ne6wgw5oue9lvwhfiby9vxej6m1gmsw5wm1g575xu3cwt"}, function() {
+                    $("#notification" + id).slideUp();
+                });
+            }
+
+            $( document ).ready(function() {
+              $('select').material_select();
+            });
+
+            var pointsLevels = [0, 10, 20, 40, 80, 160, 320, 640, 1280, 1920, 2560, 3200, 3840, 4480, 5120, 5760, 6400, 7040, 7680, 8320, 8960, 9600, 10240, 10880, 11520, 12160, 12800, 13440, 14080, 14720, 15360, 16000, 16640, 17280, 17920, 18560, 19200, 19840, 20480];
+        </script>
+        
+        <script>
+        $(function() {
+            $('.button-collapse').sideNav();
+        });
+        </script>
+        <script id="toasts" type="text/javascript">
+            
+        </script>
+        
+
+
+<script>
+    var challenges_open = JSON.parse(localStorage.getItem("challenges-open")) || {"dh-starter-1": true, "dh-starter-2": true, "dh-starter-3": true, "dh-starter-4": true, "dh-starter-5": true};
+    Object.keys(challenges_open).forEach(function(el){
+        $(".collapsible-header#header-" + el).addClass("active");
+    });
+
+    $(".collapsible-header").on("click", function(){
+        var chall = $(this).data('challenge');
+        if(challenges_open.hasOwnProperty(chall)) {
+            delete challenges_open[chall];
+        } else {
+            challenges_open[chall] = true;
+            $('html, body').animate({
+                    scrollTop: $(this).offset().top -100
+            }, 700);
+        }
+        localStorage.setItem("challenges-open", JSON.stringify(challenges_open));
+    });
+
+    $(".preventToggle").on("click", function(){
+        event.stopPropagation();
+    });
+
+    var state = $(".collapsible-header.active").length == 0;
+    function updateButton(){
+        if(state){
+            $("#toggleState").html("Expand all challenges");
+        } else {
+            $("#toggleState").html("Collapse all challenges");
+        }
+
+    }
+    updateButton(state);
+    function toggle() {
+        if(state) {
+            $(".collapsible-header").each(function(i, x){ $(x).hasClass("active") || $(x).click(); });
+        } else {
+            $(".collapsible-header").each(function(i, x){ $(x).hasClass("active") && $(x).click(); });
+        }
+        state = !state;
+        updateButton(state);
+    }
+    function filterCategories(t) {
+        var v = t.options[t.selectedIndex].value;
+        if(v == "*")
+            $(".stage").show();
+        else {
+            $(".stage[data-stage=" + v + "]").show();
+            $(".stage[data-stage!=" + v + "]").hide();
+        }
+    }
+    function toggleSolved(){
+      $('.fas.fa-star').each(function() {
+        if($(this).css('display') == 'block'){
+          if($(this).parent().next().css('display') == 'block'){
+              $(this).parent().toggle();
+              $(this).parent().click();
+              $(this).parent().next().hide();
+          }
+          else{
+            $(this).parent().toggle();
+          }
+        }
+      });
+    }
+
+
+    $("#toggleSolved").on("click", function(e){
+        // e.preventDefault();
+        toggleSolved();
+        // var text = $(this).next().text();
+        // $(this).next().text(
+        // text == "Hide Solved Challenges" ? "Show Solved Challenges" : "Hide Solved Challenges");
+    });
+
+
+    $("#toggleState").on("click", function(e){
+        // e.preventDefault();
+        toggle();
+    });
+    $(".stage-collapse").on("click", function(e){
+        // e.preventDefault();
+        var stage = $(this).data('collapse');
+        var header_selector = ".challenge[data-stage=" + stage + "] .collapsible-header";
+        var state = $(header_selector + ".active").length != 0;
+        if(state)
+            $(header_selector).each(function(i, x){ $(x).hasClass("active") && $(x).click(); });
+        else
+            $(header_selector).each(function(i, x){ $(x).hasClass("active") || $(x).click(); });
+    });
+    $("form").submit(function(e) {
+        // Loading button
+        var loadBtn = $(this).find(".loader");
+        loadBtn.show();
+
+        var id = $(this).data("challenge");
+        var points = $(this).data("points");
+        var flag = $("#flag-" + id).val();
+        // var updatedScore = score + points;
+        console.log(id);
+        console.log(flag);
+        api.makeCall("/submit/" + id + ".json", {flag: flag, _csrf_token: "evqcmr67h72vvdpmv99ne6wgw5oue9lvwhfiby9vxej6m1gmsw5wm1g575xu3cwt"}, function(data) {
+            if(data.code) {
+                loadBtn.hide();
+                Materialize.toast(data.message, 4000);
+            }
+            else {
+                // Materialize.toast("Correct flag, nice one!", 4000);
+                $("#uncheck-" + id).hide();
+                $("#check-" + id).show();
+                $("#header-" + id).click();
+
+                // update solves box
+                var solves_text = data.solves == 1 ? "Solve" : "Solves";
+                $("#solves-" + id).html(data.solves + " " + solves_text);
+                $("#solves-" + id).parent().show();
+                $("#solutions-" + id).show();
+                $("#youvesolved-" + id).show();
+                $("#empty-" + id).hide();
+                $("#flagform-" + id).hide();
+
+                // update points at top
+                console.log(score);
+                console.log(points);
+                score = calculateLevel(score, points);
+                loadBtn.hide();
+                setTimeout(function(){ launchConfetti(); }, 250);
+            }
+        });
+        return false;
+    });
+</script>
+
+
+      </div>
+
+      <div id="levelUpPop" class="levelup">
+        <div class="levelUpCard">
+          <h3>Level Up</h3>
+          <img src="/static/img/levelup.png" width="180" height="202" alt="level up icon">
+          <p>You are now level <span id="currentlevel" class="gold-text">Current level</span></p>
+        </div>
+      </div>
+    
+
+    <footer>
+    <div class="footerLinks">
+      <div>
+        <h5>CryptoHack</h5>
+        <a id="changeTheme">Light Mode</a><br>
+        <a href="/faq/">FAQ</a><br>
+        <a href="/blog/">Blog</a><br>
+        <span class="footerIcon">
+          <a href="https://twitter.com/cryptohack__" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="https://discord.gg/h9E7cna5pV" aria-label="Discord"><img src="/static/img/Discord-Logo-Color.svg" width="25"></a>
+          <a href="https://patreon.com/cryptohack" aria-label="Patreon"><i class="fab fa-patreon"></i></a>
+        </span><br>
+
+      </div>
+
+      <div>
+        <h5>Courses</h5>
+        <a href="/courses/intro/">Introduction to CryptoHack</a><br>
+        <a href="/courses/modular/">Modular Arithmetic</a><br>
+        <a href="/courses/symmetric/">Symmetric Cryptography</a><br>
+        <a href="/courses/public-key/">Public-Key Cryptography</a><br>
+        <a href="/courses/elliptic/">Elliptic Curves</a><br>
+      </div>
+
+      <div>
+        <h5>Categories</h5>
+        <a href="/challenges/general/">General</a><br>
+        <a href="/challenges/aes/">Symmetric Ciphers</a><br>
+        <a href="/challenges/maths/">Mathematics</a><br>
+        <a href="/challenges/rsa/">RSA</a><br>
+        <a href="/challenges/diffie-hellman/">Diffie-Hellman</a><br>
+        <a href="/challenges/ecc/">Elliptic Curves</a><br>
+        <a href="/challenges/hashes/">Hash Functions</a><br>
+        <a href="/challenges/web/">Crypto on the Web</a><br>
+        <a href="/challenges/post-quantum/">Lattices</a><br>
+        <a href="/challenges/isogenies/">Isogenies</a><br>
+        <a href="/challenges/zkp/">Zero-Knowledge Proofs</a><br>
+        <a href="/challenges/misc/">Miscellaneous</a><br>
+        <a href="/challenges/ctf-archive/">CTF Archive</a><br>
+      </div>
+    </div>
+
+
+    <div class="credits">
+      <h5>Credits</h5>
+      Illustrations from <a href="https://icons8.com">Ouch.pics</a><br>
+      Drawn by <a href="https://dribbble.com/thierryfousse">Thierry Fousse</a> and <a href="https://icons8.com/illustrations/author/60ab64bc8e3740e9be238b13">Tatyana Krasutskaya</a>
+
+    </div>
+
+    <div class="copyright">
+      <span>
+        <a href="/privacy-policy/">Privacy Policy</a> &nbsp;
+      </span>
+
+      <span>
+        © <span class="" data-timestamp="2026-05-25T08:42:46Z" data-function="format" data-format="YYYY" data-refresh="0" style="">2026</span> CryptoHack
+      </span>
+    </div>
+    </footer>
+
+    <script type="text/javascript">
+    function updateThemeToggleFooter() {
+      var elem = document.querySelector('#changeTheme');
+      elem.innerHTML = isLightThemeSelected() ? 'Dark Mode' : 'Light Mode'
+    }
+
+    (function() {
+      updateThemeToggleFooter()
+    })();
+
+    function togglePageContentLightDark() {
+        var html = document.getElementsByTagName('html')[0]
+        var currentClass = html.className
+        var newClass = html.className == 'dark-mode' ? 'light-mode' : 'dark-mode'
+        html.className = newClass
+
+        document.cookie = 'theme=' + (newClass == 'light-mode' ? 'light' : 'dark') + ';SameSite=Strict;path=/;domain=cryptohack.org;expires=Fri, 31 Dec 9999 23:59:59 GMT'
+        console.log('Cookies are now: ' + document.cookie)
+
+        var elem = document.querySelector('#changeTheme');
+        elem.innerHTML = isLightThemeSelected() ? 'Dark Mode' : 'Light Mode'
+    }
+
+    $("#changeTheme").on("click", function(e){
+    togglePageContentLightDark();
+
+    if ($("#darktheme").length) {
+      if(isLightThemeSelected()){
+        $('#darktheme').prop('checked', false);
+        $('#lighttheme').prop('checked', true);
+      }
+      else{
+        $('#darktheme').prop('checked', true);
+        $('#lighttheme').prop('checked', false);
+      }
+    }
+    });
+    </script>
+<div class="material-tooltip" id="99b161ac-bd15-0e7f-a333-6e209ac37fb5"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="593c87ea-8fd7-b159-3f59-2511edd373f1"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="7d2e70ee-fea7-a613-22f7-11426194053a"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="b8025a18-f9cd-b756-914a-5c375a320290"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="a807e2ed-5a96-8f2f-8cc2-6d0ae721a2c6"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="ada15468-2128-5e77-a5d0-60bbc5b6db3a"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="3a491d88-ad92-fa1e-1d62-31f47c19148d"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="f9f95f56-dbde-c308-3d9c-14ccfb06d5d7"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="f738be03-eb65-9501-e8c2-c86e23d26056"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="2aeebcff-b9e5-e834-a888-ba91fd806c17"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="ed1216a9-6fe9-9840-eb82-fbdeb7b00c3d"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="262105b6-83b4-2227-7907-6cf711ebb05c"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="1e5b5ec0-c8c4-8b62-7dae-30ef1d2ea40f"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="3c326167-296c-954b-23a0-f6437da6d3fb"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="323f9684-059d-ea22-aca6-134af6bf14ae"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="7163b059-92a0-b067-ae47-9cb850d94cd3"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="ee90e92e-7767-96a9-9670-50b255d1a092"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="5c7ea646-6d09-c269-ac1c-92e653c0d1e2"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="8a4150ae-a450-1ec5-cdea-8ec6169936e6"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="7d7ab708-ed49-27ab-4100-7fb8c99eb038"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="341345ed-43eb-4cf7-4af8-0fb9b9bcfb85"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="336734b4-391d-8b4e-e51b-c830f56a6f23"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="ab5ba0f8-da9c-029c-39d0-7e4e732f186e"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="4ae64631-0288-1ea5-ada3-84ab67d8ded2"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="d8f891f4-5cf3-d928-03c2-18468bb0386d"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="422a7285-bd8b-e37f-736a-dc714878e382"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="48875538-61c6-6e05-3c29-d52fa4471296"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="fe2e5dcf-84e5-5911-3b7d-e3d0e6238d90"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="hiddendiv common"></div><div class="drag-target" style="left: 0px; touch-action: pan-y; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></div></body></html>

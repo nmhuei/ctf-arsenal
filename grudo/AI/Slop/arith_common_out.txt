@@ -1,0 +1,120 @@
+
+ header {'temp': 1.0, 'top_k': 0, 'top_p': 1.0, 'min_p': 0.0, 'descending': True} common_len 86 bits 10011011011010110001001101001001111001111101000101010001010010000001001110111100110110
+off 0 b'\x9bk\x13I\xe7\xd1QH\x13\xbc'
+
+ header {'temp': 1.0, 'top_k': 4096, 'top_p': 1.0, 'min_p': 0.0, 'descending': True} common_len 84 bits 100111100111110010101010100100010010110000000001010011111100010011101011101000100101
+off 0 b'\x9e|\xaa\x91,\x01O\xc4\xeb\xa2'
+header {'temp': 1.0, 'top_k': 0, 'top_p': 0.95, 'min_p': 0.0, 'descending': True} not allowed 40320
+header {'temp': 1.0, 'top_k': 0, 'top_p': 1.0, 'min_p': 0.05, 'descending': True} not allowed 50590
+header {'temp': 1.0, 'top_k': 0, 'top_p': 0.95, 'min_p': 0.05, 'descending': True} not allowed 50590
+
+ header {'temp': 0.8, 'top_k': 0, 'top_p': 1.0, 'min_p': 0.0, 'descending': True} common_len 98 bits 11001110001111000110000001100100011110010010110111001111011100000011110100001010000100101111010111
+off 0 b'\xce<`dy-\xcfp=\n\x12\xf5'
+
+ header {'temp': 0.8, 'top_k': 4096, 'top_p': 1.0, 'min_p': 0.0, 'descending': True} common_len 97 bits 1100111010101110111011011001010100101001110100000101011100001111001111111101001010000011001111001
+off 0 b'\xce\xae\xed\x95)\xd0W\x0f?\xd2\x83<'
+header {'temp': 0.8, 'top_k': 0, 'top_p': 0.95, 'min_p': 0.0, 'descending': True} not allowed 476
+header {'temp': 0.8, 'top_k': 0, 'top_p': 1.0, 'min_p': 0.05, 'descending': True} not allowed 50590
+header {'temp': 0.8, 'top_k': 0, 'top_p': 0.95, 'min_p': 0.05, 'descending': True} not allowed 50590
+
+ header {'temp': 1.0, 'top_k': 0, 'top_p': 1.0, 'min_p': 0.0, 'descending': False} common_len 87 bits 011001001001010011101100101101100001100000101110100111110011110101001000000111000000100
+off 0 b'd\x94\xec\xb6\x18.\x9f=H\x1c'
+
+ header {'temp': 1.0, 'top_k': 4096, 'top_p': 1.0, 'min_p': 0.0, 'descending': False} common_len 85 bits 0110000110000011010101010110111011010011111111101010100100010101111101110101101000010
+off 0 b'a\x83Un\xd3\xfe\xa9\x15\xf7Z'
+
+ header {'temp': 1.0, 'top_k': 0, 'top_p': 0.95, 'min_p': 0.0, 'descending': False} common_len 86 bits 01100100100101001110110010110110000110000010111010101000001110100111101101111100100111
+off 0 b'd\x94\xec\xb6\x18.\xa8:{|'
+header {'temp': 1.0, 'top_k': 0, 'top_p': 1.0, 'min_p': 0.05, 'descending': False} not allowed 50590
+header {'temp': 1.0, 'top_k': 0, 'top_p': 0.95, 'min_p': 0.05, 'descending': False} not allowed 50590
+
+ header {'temp': 0.8, 'top_k': 0, 'top_p': 1.0, 'min_p': 0.0, 'descending': False} common_len 98 bits 00110001110000111001111110011011100001101101001000100110011111110001101111000010100100101000001100
+off 0 b'1\xc3\x9f\x9b\x86\xd2&\x7f\x1b\xc2\x92\x83'
+
+ header {'temp': 0.8, 'top_k': 4096, 'top_p': 1.0, 'min_p': 0.0, 'descending': False} common_len 99 bits 001100010101000100010010011010101101011000101111101010001100111000011111001101010101010110010100111
+off 0 b'1Q\x12j\xd6/\xa8\xce\x1f5U\x94'
+
+ header {'temp': 0.8, 'top_k': 0, 'top_p': 0.95, 'min_p': 0.0, 'descending': False} common_len 99 bits 001100011100001110011111100110111000011011010010001011000011010101000110001110011011000001110101010
+off 0 b'1\xc3\x9f\x9b\x86\xd2,5F9\xb0u'
+header {'temp': 0.8, 'top_k': 0, 'top_p': 1.0, 'min_p': 0.05, 'descending': False} not allowed 50590
+header {'temp': 0.8, 'top_k': 0, 'top_p': 0.95, 'min_p': 0.05, 'descending': False} not allowed 50590
+
+ bos {'temp': 1.0, 'top_k': 0, 'top_p': 1.0, 'min_p': 0.0, 'descending': True} common_len 155 bits 11010011110000111000000110101001010111111100110101111010010100011110100110000100010100110110010100000000100100110000001001010011101001011111101100111011110
+off 0 b'\xd3\xc3\x81\xa9_\xcdzQ\xe9\x84Se\x00\x93\x02S\xa5\xfb;'
+
+ bos {'temp': 1.0, 'top_k': 4096, 'top_p': 1.0, 'min_p': 0.0, 'descending': True} common_len 154 bits 1111000111101001000011101101011000100100111101010011011111001111111000010001001101110001001000100010000011101110001111010001101100000101011000100100101001
+off 0 b'\xf1\xe9\x0e\xd6$\xf57\xcf\xe1\x13q" \xee=\x1b\x05bJ'
+bos {'temp': 1.0, 'top_k': 0, 'top_p': 0.95, 'min_p': 0.0, 'descending': True} not allowed 40320
+bos {'temp': 1.0, 'top_k': 0, 'top_p': 1.0, 'min_p': 0.05, 'descending': True} not allowed 32
+bos {'temp': 1.0, 'top_k': 0, 'top_p': 0.95, 'min_p': 0.05, 'descending': True} not allowed 32
+
+ bos {'temp': 0.8, 'top_k': 0, 'top_p': 1.0, 'min_p': 0.0, 'descending': True} common_len 169 bits 1111010111101110001110111111111011111000101100100011111110000010101011101110011101110101010011001111100000010111011101111010100101110110100100101110100000100100
+off 0 b'\xf5\xee;\xfe\xf8\xb2?\x82\xae\xe7uL\xf8\x17w\xa9v\x92\xe8$\xca'
+
+ bos {'temp': 0.8, 'top_k': 4096, 'top_p': 1.0, 'min_p': 0.0, 'descending': True} common_len 172 bits 1111110000011111000000001001011101100110111001001011100101110110101101110100001110010001101001011001011011011100100000001100100101000110101011101001100011110010
+off 0 b'\xfc\x1f\x00\x97f\xe4\xb9v\xb7C\x91\xa5\x96\xdc\x80\xc9F\xae\x98\xf2\x0e'
+bos {'temp': 0.8, 'top_k': 0, 'top_p': 0.95, 'min_p': 0.0, 'descending': True} not allowed 32
+bos {'temp': 0.8, 'top_k': 0, 'top_p': 1.0, 'min_p': 0.05, 'descending': True} not allowed 32
+bos {'temp': 0.8, 'top_k': 0, 'top_p': 0.95, 'min_p': 0.05, 'descending': True} not allowed 32
+
+ bos {'temp': 1.0, 'top_k': 0, 'top_p': 1.0, 'min_p': 0.0, 'descending': False} common_len 154 bits 0010110000111100011111100101011010100000001100100111111100110001000100010110110011110100010000111001010011010010101111010011010110110100110000011110010110
+off 0 b',<~V\xa02\x7f1\x11l\xf4C\x94\xd2\xbd5\xb4\xc1\xe5'
+
+ bos {'temp': 1.0, 'top_k': 4096, 'top_p': 1.0, 'min_p': 0.0, 'descending': False} common_len 154 bits 0000111000010110111100010010100111011011000010101100100111111000110010111000001010100000001110110100001111110010011011101111100100010111000110111111000100
+off 0 b'\x0e\x16\xf1)\xdb\n\xc9\xf8\xcb\x82\xa0;C\xf2n\xf9\x17\x1b\xf1'
+
+ bos {'temp': 1.0, 'top_k': 0, 'top_p': 0.95, 'min_p': 0.0, 'descending': False} common_len 154 bits 0010110000111100011111100101011010100000001100100111110101110101111100111010000001011111000001101100001111111110001011010111001101100111101110011100101011
+off 0 b',<~V\xa02}u\xf3\xa0_\x06\xc3\xfe-sg\xb9\xca'
+bos {'temp': 1.0, 'top_k': 0, 'top_p': 1.0, 'min_p': 0.05, 'descending': False} not allowed 32
+bos {'temp': 1.0, 'top_k': 0, 'top_p': 0.95, 'min_p': 0.05, 'descending': False} not allowed 32
+
+ bos {'temp': 0.8, 'top_k': 0, 'top_p': 1.0, 'min_p': 0.0, 'descending': False} common_len 173 bits 0000101000010001110001000000000100000111010011011100100000110011101110001001111011000110001001010110010011011110100000111000001011110011000111101011001000000010
+off 0 b'\n\x11\xc4\x01\x07M\xc83\xb8\x9e\xc6%d\xde\x83\x82\xf3\x1e\xb2\x02\xc5'
+
+ bos {'temp': 0.8, 'top_k': 4096, 'top_p': 1.0, 'min_p': 0.0, 'descending': False} common_len 170 bits 0000001111100000111111110110100010011001000110110100100111101110010110000101010001110000001000101011011001111110000100100100101111001011111100010001000010011111
+off 0 b'\x03\xe0\xffh\x99\x1bI\xeeXTp"\xb6~\x12K\xcb\xf1\x10\x9f\xdb'
+
+ bos {'temp': 0.8, 'top_k': 0, 'top_p': 0.95, 'min_p': 0.0, 'descending': False} common_len 169 bits 0000101000010001110001000000000100000111010011011100011100100011001011110110011101010011011100111010001111100101111011111000111111101110110001010001101111000100
+off 0 b'\n\x11\xc4\x01\x07M\xc7#/gSs\xa3\xe5\xef\x8f\xee\xc5\x1b\xc4\x02'
+bos {'temp': 0.8, 'top_k': 0, 'top_p': 1.0, 'min_p': 0.05, 'descending': False} not allowed 32
+bos {'temp': 0.8, 'top_k': 0, 'top_p': 0.95, 'min_p': 0.05, 'descending': False} not allowed 32
+
+ chat_empty {'temp': 1.0, 'top_k': 0, 'top_p': 1.0, 'min_p': 0.0, 'descending': True} common_len 163 bits 1111101111100001101000101100001101001111010001001001101111010000000110011111111000000000110111101100011001010101010011000011011110010111100101111010001010001111
+off 0 b'\xfb\xe1\xa2\xc3OD\x9b\xd0\x19\xfe\x00\xde\xc6UL7\x97\x97\xa2\x8f'
+
+ chat_empty {'temp': 1.0, 'top_k': 4096, 'top_p': 1.0, 'min_p': 0.0, 'descending': True} common_len 161 bits 1111110000001111111100100101000101111011010001101001110110100110100001110101011101100111000010110100001000100010010000110110001011100111011001011001011000101111
+off 0 b'\xfc\x0f\xf2Q{F\x9d\xa6\x87Wg\x0bB"Cb\xe7e\x96/'
+chat_empty {'temp': 1.0, 'top_k': 0, 'top_p': 0.95, 'min_p': 0.0, 'descending': True} not allowed 32
+chat_empty {'temp': 1.0, 'top_k': 0, 'top_p': 1.0, 'min_p': 0.05, 'descending': True} not allowed 32
+chat_empty {'temp': 1.0, 'top_k': 0, 'top_p': 0.95, 'min_p': 0.05, 'descending': True} not allowed 32
+
+ chat_empty {'temp': 0.8, 'top_k': 0, 'top_p': 1.0, 'min_p': 0.0, 'descending': True} common_len 187 bits 1111111110011000000001010101011111010011000000011111100110011101011000100011000110011110010110010010001100000011011111110001100010011011000110100011111001001001
+off 0 b'\xff\x98\x05W\xd3\x01\xf9\x9db1\x9eY#\x03\x7f\x18\x9b\x1a>I\x83\xfe\xfe'
+
+ chat_empty {'temp': 0.8, 'top_k': 4096, 'top_p': 1.0, 'min_p': 0.0, 'descending': True} common_len 187 bits 1111111110011000110010110101011101100111110011101000011001111111110010110100101110011101110110000100011010000000000100100000110111001100010011010101101101000100
+off 0 b'\xff\x98\xcbWg\xce\x86\x7f\xcbK\x9d\xd8F\x80\x12\r\xccM[D\rh{'
+chat_empty {'temp': 0.8, 'top_k': 0, 'top_p': 0.95, 'min_p': 0.0, 'descending': True} not allowed 32
+chat_empty {'temp': 0.8, 'top_k': 0, 'top_p': 1.0, 'min_p': 0.05, 'descending': True} not allowed 32
+chat_empty {'temp': 0.8, 'top_k': 0, 'top_p': 0.95, 'min_p': 0.05, 'descending': True} not allowed 32
+
+ chat_empty {'temp': 1.0, 'top_k': 0, 'top_p': 1.0, 'min_p': 0.0, 'descending': False} common_len 163 bits 0000010000011110010111010011110010110000101110110110100001110000111111010101000100110101010011101001001101110000111001000111110100101111000000011000110011001101
+off 0 b'\x04\x1e]<\xb0\xbbhp\xfdQ5N\x93p\xe4}/\x01\x8c\xcd'
+
+ chat_empty {'temp': 1.0, 'top_k': 4096, 'top_p': 1.0, 'min_p': 0.0, 'descending': False} common_len 163 bits 0000001111110000000011011010111010000100101110010101000111100111100111100010101100011100100101100001111100111100100100110111011010110011001000000011001110111101
+off 0 b'\x03\xf0\r\xae\x84\xb9Q\xe7\x9e+\x1c\x96\x1f<\x93v\xb3 3\xbd'
+
+ chat_empty {'temp': 1.0, 'top_k': 0, 'top_p': 0.95, 'min_p': 0.0, 'descending': False} common_len 161 bits 0000010000011110010111010011110010110000101110110110100001110100011110000001111001111100110010100000111101111100111101101010001011110110011100011010011011000111
+off 0 b'\x04\x1e]<\xb0\xbbhtx\x1e|\xca\x0f|\xf6\xa2\xf6q\xa6\xc7'
+chat_empty {'temp': 1.0, 'top_k': 0, 'top_p': 1.0, 'min_p': 0.05, 'descending': False} not allowed 32
+chat_empty {'temp': 1.0, 'top_k': 0, 'top_p': 0.95, 'min_p': 0.05, 'descending': False} not allowed 32
+
+ chat_empty {'temp': 0.8, 'top_k': 0, 'top_p': 1.0, 'min_p': 0.0, 'descending': False} common_len 186 bits 0000000001100111111110101010100000101100111111100000101100101000101111111101101100101110000110011101011001011101101111101101101111101110000000100011110010110010
+off 0 b'\x00g\xfa\xa8,\xfe\x0b(\xbf\xdb.\x19\xd6]\xbe\xdb\xee\x02<\xb2q\x1e\x9c'
+
+ chat_empty {'temp': 0.8, 'top_k': 4096, 'top_p': 1.0, 'min_p': 0.0, 'descending': False} common_len 186 bits 0000000001100111001101001010100010011000001100010111101110000010110011111101110000011100100001111011011010001011001011010100110001010010100001100001100111101001
+off 0 b'\x00g4\xa8\x981{\x82\xcf\xdc\x1c\x87\xb6\x8b-LR\x86\x19\xe9\xab\xb1:'
+
+ chat_empty {'temp': 0.8, 'top_k': 0, 'top_p': 0.95, 'min_p': 0.0, 'descending': False} common_len 188 bits 0000000001100111111110101010100000101100111111100000101100011111100001011000010100110111101011111011101111100100100101100011100010011111110110011111001010101101
+off 0 b'\x00g\xfa\xa8,\xfe\x0b\x1f\x85\x857\xaf\xbb\xe4\x968\x9f\xd9\xf2\xad\xb9\xdc\x0e'
+chat_empty {'temp': 0.8, 'top_k': 0, 'top_p': 1.0, 'min_p': 0.05, 'descending': False} not allowed 32
+chat_empty {'temp': 0.8, 'top_k': 0, 'top_p': 0.95, 'min_p': 0.05, 'descending': False} not allowed 32

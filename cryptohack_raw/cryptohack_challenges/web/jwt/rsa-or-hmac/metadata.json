@@ -1,0 +1,29 @@
+{
+  "category": "Crypto on the Web",
+  "category_slug": "web",
+  "stage": "JSON Web Tokens",
+  "stage_slug": "jwt",
+  "title": "RSA or HMAC?",
+  "slug": "rsa-or-hmac",
+  "data_challenge": "rsa-or-hmac",
+  "points": 35,
+  "solves": 2549,
+  "url": "https://cryptohack.org/challenges/web/",
+  "attachments": [],
+  "resources": [
+    {
+      "text": "fix for the vulnerability",
+      "href": "https://github.com/jpadilla/pyjwt/commit/37926ea0dd207db070b45473438853447e4c1392",
+      "url": "https://github.com/jpadilla/pyjwt/commit/37926ea0dd207db070b45473438853447e4c1392",
+      "download": false
+    },
+    {
+      "text": "https://web.cryptohack.org/rsa-or-hmac",
+      "href": "https://web.cryptohack.org/rsa-or-hmac",
+      "url": "https://web.cryptohack.org/rsa-or-hmac",
+      "download": false
+    }
+  ],
+  "statement_html": "statement.html",
+  "statement_md": "statement.md"
+}

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeuroServe — AI Inference Gateway</title>
+    <link rel="stylesheet" href="/static/ctfd-theme.css">
+    <style>
+        /* NeuroServe — challenge-specific tweaks on top of ctfd-theme.css */
+        .token-field {
+            width: 100%;
+            box-sizing: border-box;
+            font-family: var(--ctfd-font-mono);
+            font-size: 0.95rem;
+            letter-spacing: 0.12em;
+            padding: 0.75rem 0.9rem;
+            background: var(--ctfd-bg);
+            color: var(--ctfd-fg);
+            border: 1px solid var(--ctfd-border);
+            outline: none;
+            transition: border-color 0.2s;
+        }
+        .token-field:focus { border-color: var(--ctfd-border-bright); }
+        .token-field::placeholder { color: var(--ctfd-fg-muted); }
+        .field-label {
+            display: block;
+            font-family: var(--ctfd-font-mono);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-size: 0.68rem;
+            color: var(--ctfd-fg-muted);
+            margin-bottom: 0.5rem;
+        }
+        .submit-row { text-align: right; margin-top: 1.15rem; }
+        .result {
+            margin-top: 1.5rem;
+            padding: 0.75rem 1rem;
+            border: 1px solid var(--ctfd-border);
+            background: var(--ctfd-bg);
+            font-family: var(--ctfd-font-mono);
+            font-size: 0.8rem;
+            white-space: pre-wrap;
+            word-break: break-all;
+            display: none;
+        }
+        .result.success { border-color: var(--ctfd-green); color: var(--ctfd-green); }
+        .result.error   { border-color: var(--ctfd-red);   color: var(--ctfd-red); }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1px;
+            margin-top: 1.15rem;
+            background: var(--ctfd-border);
+            border: 1px solid var(--ctfd-border);
+        }
+        .feature { padding: 1rem; background: var(--ctfd-surface); }
+        .feature h3 {
+            font-family: var(--ctfd-font-mono);
+            font-size: 0.65rem;
+            letter-spacing: 0.12em;
+            color: var(--ctfd-fg-muted);
+            margin-bottom: 0.35rem;
+        }
+        .feature p { margin: 0; font-size: 0.75rem; color: var(--ctfd-fg-muted); }
+        @media (max-width: 620px) {
+            .features { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="ctfd-scanlines"></div>
+    <div class="ctfd-noise"></div>
+    <div class="ctfd-vignette"></div>
+
+    <main class="ctfd-wrap">
+        <header>
+            <p class="ctfd-eyebrow">[ NeuroServe &mdash; AI Inference Gateway &bull; v2.4.0 ]</p>
+            <h1>Model API Authentication</h1>
+        </header>
+
+        <section class="ctfd-card">
+            <div class="ctfd-card-header">Authenticate</div>
+            <p class="ctfd-muted">
+                Present your <strong>48-character</strong> alphanumeric (0-9a-zA-Z) API token to unlock
+                inference access. Tokens are validated against the gateway's stored credential.
+            </p>
+            <form id="authForm">
+                <label class="field-label" for="tokenInput">API token</label>
+                <input
+                    type="text"
+                    id="tokenInput"
+                    class="token-field"
+                    name="token"
+                    placeholder="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKL"
+                    autocomplete="off"
+                    spellcheck="false"
+                    maxlength="48">
+                <div class="submit-row">
+                    <button type="submit" class="btn btn-primary" id="authBtn">Authenticate</button>
+                </div>
+            </form>
+            <div class="result" id="result"></div>
+        </section>
+
+        <div class="features">
+            <div class="feature">
+                <h3>Low-Latency Inference</h3>
+                <p>Serial request pipeline</p>
+            </div>
+            <div class="feature">
+                <h3>Bearer Auth</h3>
+                <p>Per-tenant API tokens</p>
+            </div>
+            <div class="feature">
+                <h3>Model Registry</h3>
+                <p>Multi-model routing</p>
+            </div>
+        </div>
+
+        <footer>NeuroServe v2.4.0 &middot; AI Inference Gateway &middot; token-based access</footer>
+    </main>
+
+    <script>
+        const form = document.getElementById('authForm');
+        const tokenInput = document.getElementById('tokenInput');
+        const authBtn = document.getElementById('authBtn');
+        const result = document.getElementById('result');
+
+        form.addEventListener('submit', async e => {
+            e.preventDefault();
+            authBtn.disabled = true;
+            authBtn.textContent = 'Authenticating...';
+            result.style.display = 'none';
+
+            try {
+                const resp = await fetch('/api/authenticate', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ token: tokenInput.value.trim() })
+                });
+                const data = await resp.json();
+                result.style.display = 'block';
+                result.className = resp.ok && data.authenticated ? 'result success' : 'result error';
+                result.textContent = JSON.stringify(data, null, 2);
+            } catch (err) {
+                result.style.display = 'block';
+                result.className = 'result error';
+                result.textContent = 'Network error: ' + err.message;
+            }
+            authBtn.disabled = false;
+            authBtn.textContent = 'Authenticate';
+        });
+    </script>
+</body>
+</html>

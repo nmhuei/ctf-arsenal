@@ -1,0 +1,44 @@
+{
+  "id": "cmt3t1fsf0001soc86bwpxo79",
+  "name": "Silent Downlink",
+  "category": "Forensics",
+  "points": 300,
+  "author": "J054n",
+  "tags": [],
+  "hints": [],
+  "connection_info": null,
+  "solved_by_me": false,
+  "solves_count": 7,
+  "downloaded_files": [
+    {
+      "url": "https://drive.google.com/file/d/1ihtZO7tPyvMKdCBvhFuCLx1536xJselJ/view?usp=sharing",
+      "name": "transmission.wav",
+      "saved_path": "/home/light/Workspace/CTF/N1PH_RSxTCTF/Forensics/Silent_Downlink/transmission.wav",
+      "success": true,
+      "source": "description_gdrive",
+      "message": "Downloaded via Google Drive handler"
+    }
+  ],
+  "raw": {
+    "id": "cmt3t1fsf0001soc86bwpxo79",
+    "title": "Silent Downlink",
+    "description": "We logged an unscheduled downlink on a frequency that's supposed to be dead\nair. Whatever satellite this came from isn't supposed to be transmitting\nanymore - and it's still sending pictures.\n\nGoal: recover the flag from the transmission.\n\ndist: https://drive.google.com/file/d/1ihtZO7tPyvMKdCBvhFuCLx1536xJselJ/view?usp=sharing",
+    "category": "FORENSICS",
+    "difficulty": "MEDIUM",
+    "points": 300,
+    "maxPoints": 300,
+    "minPoints": 100,
+    "solves": 7,
+    "isSolved": false,
+    "isDynamic": false,
+    "deploymentType": "static",
+    "urls": [],
+    "socketInfo": null,
+    "externalUrl": null,
+    "author": "J054n",
+    "tags": [],
+    "hints": [],
+    "files": [],
+    "dependencies": []
+  }
+}

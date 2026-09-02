@@ -1,0 +1,14 @@
+# Edit this file for local setup changes
+# _heapq this one, we need :)
+*disabled*
+array _bisect _csv _json _lsprof _math_integer _pickle _queue _random
+_remote_debugging _struct _interpreters _interpchannels _interpqueues _zoneinfo
+math cmath _statistics binascii _bz2 _lzma _zstd zlib readline
+_md5 _sha1 _sha2 _sha3 _blake2 _hmac pyexpat _elementtree
+_codecs_cn _codecs_hk _codecs_iso2022 _codecs_jp _codecs_kr _codecs_tw
+_multibytecodec unicodedata fcntl grp mmap _posixsubprocess resource select
+_socket syslog termios _posixshmem _multiprocessing
+_ctypes _curses _curses_panel _sqlite3 _ssl _hashlib _uuid
+xxsubtype _xxtestfuzz _testbuffer _testinternalcapi _testcapi _testlimitedcapi
+_testclinic _testclinic_limited _testimportmultiple _testmultiphase
+_testsinglephase _ctypes_test xxlimited xxlimited_35 xxlimited_3_13

@@ -1,0 +1,574 @@
+<div class="challengeDescription">
+ <!-- <p> -->
+ Learning With Errors (LWE) refers to the computational problem of learning a linear function
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi>
+        f
+       </mi>
+       <mo stretchy="false">
+        (
+       </mo>
+       <mi>
+        A
+       </mi>
+       <mo stretchy="false">
+        )
+       </mo>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       f(A)
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 1em; vertical-align: -0.25em;">
+     </span>
+     <span class="mord mathnormal" style="margin-right: 0.1076em;">
+      f
+     </span>
+     <span class="mopen">
+      (
+     </span>
+     <span class="mord mathnormal">
+      A
+     </span>
+     <span class="mclose">
+      )
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ which takes values over a ring, given many noisy samples of the function. These samples look like the pair
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mo stretchy="false">
+        (
+       </mo>
+       <mi>
+        A
+       </mi>
+       <mo separator="true">
+        ,
+       </mo>
+       <mo stretchy="false">
+        ⟨
+       </mo>
+       <mi>
+        A
+       </mi>
+       <mo separator="true">
+        ,
+       </mo>
+       <mi>
+        S
+       </mi>
+       <mo stretchy="false">
+        ⟩
+       </mo>
+       <mo>
+        +
+       </mo>
+       <mi>
+        e
+       </mi>
+       <mo stretchy="false">
+        )
+       </mo>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       (A, \langle A, S \rangle + e)
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 1em; vertical-align: -0.25em;">
+     </span>
+     <span class="mopen">
+      (
+     </span>
+     <span class="mord mathnormal">
+      A
+     </span>
+     <span class="mpunct">
+      ,
+     </span>
+     <span class="mspace" style="margin-right: 0.1667em;">
+     </span>
+     <span class="mopen">
+      ⟨
+     </span>
+     <span class="mord mathnormal">
+      A
+     </span>
+     <span class="mpunct">
+      ,
+     </span>
+     <span class="mspace" style="margin-right: 0.1667em;">
+     </span>
+     <span class="mord mathnormal" style="margin-right: 0.0576em;">
+      S
+     </span>
+     <span class="mclose">
+      ⟩
+     </span>
+     <span class="mspace" style="margin-right: 0.2222em;">
+     </span>
+     <span class="mbin">
+      +
+     </span>
+     <span class="mspace" style="margin-right: 0.2222em;">
+     </span>
+    </span>
+    <span class="base">
+     <span class="strut" style="height: 1em; vertical-align: -0.25em;">
+     </span>
+     <span class="mord mathnormal">
+      e
+     </span>
+     <span class="mclose">
+      )
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ , where
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi>
+        S
+       </mi>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       S
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 0.6833em;">
+     </span>
+     <span class="mord mathnormal" style="margin-right: 0.0576em;">
+      S
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ is the secret element which defines the linear function,
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi>
+        e
+       </mi>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       e
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 0.4306em;">
+     </span>
+     <span class="mord mathnormal">
+      e
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ is some small error term from a known distribution, and
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi>
+        A
+       </mi>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       A
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 0.6833em;">
+     </span>
+     <span class="mord mathnormal">
+      A
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ is a known element of the ring. Note that
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mo stretchy="false">
+        ⟨
+       </mo>
+       <mi>
+        A
+       </mi>
+       <mo separator="true">
+        ,
+       </mo>
+       <mi>
+        S
+       </mi>
+       <mo stretchy="false">
+        ⟩
+       </mo>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       \langle A, S \rangle
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 1em; vertical-align: -0.25em;">
+     </span>
+     <span class="mopen">
+      ⟨
+     </span>
+     <span class="mord mathnormal">
+      A
+     </span>
+     <span class="mpunct">
+      ,
+     </span>
+     <span class="mspace" style="margin-right: 0.1667em;">
+     </span>
+     <span class="mord mathnormal" style="margin-right: 0.0576em;">
+      S
+     </span>
+     <span class="mclose">
+      ⟩
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ denotes the matrix multiplication of a matrix
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi>
+        A
+       </mi>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       A
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 0.6833em;">
+     </span>
+     <span class="mord mathnormal">
+      A
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ with vector
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi>
+        S
+       </mi>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       S
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 0.6833em;">
+     </span>
+     <span class="mord mathnormal" style="margin-right: 0.0576em;">
+      S
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ .
+ <br/>
+ <br/>
+ Cryptosystems based on LWE are quite varied, but they usually have several common features:
+ <br/>
+ <br/>
+ <ul>
+  <li>
+   They use modular arithmetic under two different moduli: the plaintext modulus and the ciphertext modulus.
+  </li>
+  <li>
+   The secret key is an element of a vector space modulo n.
+  </li>
+  <li>
+   Messages are encrypted by adding an encoded noisy message to a large dot-product.
+  </li>
+ </ul>
+ <br/>
+ <br/>
+ The noisy message is a properly-encoded sum of the message and a small error or noise term.
+ <br/>
+ <br/>
+ The dot-product is between the secret key and a random element of the vector space, where this random element is provided as part of the ciphertext.
+ <br/>
+ <br/>
+ This looks like
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mo stretchy="false">
+        (
+       </mo>
+       <mi>
+        A
+       </mi>
+       <mo separator="true">
+        ,
+       </mo>
+       <mo stretchy="false">
+        ⟨
+       </mo>
+       <mi>
+        A
+       </mi>
+       <mo separator="true">
+        ,
+       </mo>
+       <mi>
+        S
+       </mi>
+       <mo stretchy="false">
+        ⟩
+       </mo>
+       <mo>
+        +
+       </mo>
+       <mtext>
+        encoded
+       </mtext>
+       <mo stretchy="false">
+        (
+       </mo>
+       <mi>
+        m
+       </mi>
+       <mo separator="true">
+        ,
+       </mo>
+       <mi>
+        e
+       </mi>
+       <mo stretchy="false">
+        )
+       </mo>
+       <mo stretchy="false">
+        )
+       </mo>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       (A, \langle A,S \rangle + \text{encoded}(m, e))
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 1em; vertical-align: -0.25em;">
+     </span>
+     <span class="mopen">
+      (
+     </span>
+     <span class="mord mathnormal">
+      A
+     </span>
+     <span class="mpunct">
+      ,
+     </span>
+     <span class="mspace" style="margin-right: 0.1667em;">
+     </span>
+     <span class="mopen">
+      ⟨
+     </span>
+     <span class="mord mathnormal">
+      A
+     </span>
+     <span class="mpunct">
+      ,
+     </span>
+     <span class="mspace" style="margin-right: 0.1667em;">
+     </span>
+     <span class="mord mathnormal" style="margin-right: 0.0576em;">
+      S
+     </span>
+     <span class="mclose">
+      ⟩
+     </span>
+     <span class="mspace" style="margin-right: 0.2222em;">
+     </span>
+     <span class="mbin">
+      +
+     </span>
+     <span class="mspace" style="margin-right: 0.2222em;">
+     </span>
+    </span>
+    <span class="base">
+     <span class="strut" style="height: 1em; vertical-align: -0.25em;">
+     </span>
+     <span class="mord text">
+      <span class="mord">
+       encoded
+      </span>
+     </span>
+     <span class="mopen">
+      (
+     </span>
+     <span class="mord mathnormal">
+      m
+     </span>
+     <span class="mpunct">
+      ,
+     </span>
+     <span class="mspace" style="margin-right: 0.1667em;">
+     </span>
+     <span class="mord mathnormal">
+      e
+     </span>
+     <span class="mclose">
+      ))
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ , where
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi>
+        A
+       </mi>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       A
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 0.6833em;">
+     </span>
+     <span class="mord mathnormal">
+      A
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ is an element of the vector space.
+ <br/>
+ <br/>
+ If the secret key is known, then the dot-product can be subtracted out, leaving only the encoded message and noise. Thanks to the special way in which the message and noise are encoded, the noise can be removed from the encoding, leaving only the message behind.
+ <br/>
+ <br/>
+ There are two common approaches to storing the message and noise in LWE systems: you can either store the message in the high-bits of the LWE sample and the noise in the low-bits, or vice-versa.
+ <br/>
+ <br/>
+ <ul>
+  <li>
+   Some examples of LWE schemes where the message is stored in the high-bits are
+   <a href="https://cims.nyu.edu/~regev/papers/qcrypto.pdf" target="_blank">
+    Regev09
+   </a>
+   and BFV.
+  </li>
+  <li>
+   An example of an LWE scheme where the message is stored in the low-bits is BGV.
+  </li>
+ </ul>
+ <br/>
+ <br/>
+ What algorithm could be used to recover the message from the linear equations in polynomial time, if there was no added error?
+ <br/>
+ <br/>
+ <b>
+  Resources:
+ </b>
+ <br/>
+ -
+ <a href="https://cims.nyu.edu/~regev/papers/lwesurvey.pdf" target="_blank">
+  The Learning with Errors Problem
+ </a>
+ <br/>
+ -
+ <a href="https://web.archive.org/web/20231008081450/https://cryptopedia.dev/posts/kyber/" target="_blank">
+  Kyber - How does it work?
+ </a>
+ <br/>
+ <br/>
+ <br/>
+ Challenge contributed by
+ <a class="gold-link" href="/user/ireland">
+  ireland
+ </a>
+ <!-- </p> -->
+</div>

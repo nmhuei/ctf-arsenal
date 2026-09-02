@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PG-400 - System Logs</title>
+<link rel="stylesheet" href="/www/css/style.css">
+</head>
+<body>
+<div class="app-layout">
+  <nav class="sidebar">
+    <div class="sidebar-brand">
+      <span class="brand-icon">&#9651;</span>
+      <span>PG-400</span>
+    </div>
+    <ul class="nav-list">
+      <li><a href="/www/dashboard.html">Dashboard</a></li>
+      <li><a href="/www/settings.html">Network Settings</a></li>
+      <li><a href="/www/logs.html" class="active">System Logs</a></li>
+      <li><a href="/www/firmware.html">Firmware Update</a></li>
+    </ul>
+    <div class="sidebar-footer">
+      <a href="/www/index.html" class="logout-link">Logout</a>
+    </div>
+  </nav>
+  <main class="content">
+    <header class="topbar">
+      <h2>System Logs</h2>
+      <span class="clock" id="clock"></span>
+    </header>
+    <section class="page-body">
+      <div class="card log-card">
+        <div class="log-controls">
+          <select>
+            <option>All</option>
+            <option>System</option>
+            <option>Network</option>
+            <option>Auth</option>
+            <option>Firewall</option>
+          </select>
+          <button class="btn btn-secondary btn-sm" onclick="return false">Refresh</button>
+          <button class="btn btn-secondary btn-sm" onclick="return false">Export</button>
+        </div>
+<pre class="log-output">[2024-06-12 00:00:03] [SYSTEM]  pgated v4.2.1 starting on PG-400
+[2024-06-12 00:00:03] [SYSTEM]  Loading configuration from /etc/pgated.conf
+[2024-06-12 00:00:04] [SYSTEM]  Crypto engine initialized (AES-256-GCM)
+[2024-06-12 00:00:04] [NET]     eth0: link up, 1000 Mbps full-duplex
+[2024-06-12 00:00:04] [NET]     eth0: assigned 192.168.1.1/24
+[2024-06-12 00:00:05] [SYSTEM]  Firewall rules loaded (47 rules)
+[2024-06-12 00:00:05] [SYSTEM]  VPN tunnel IKEv2 established to 10.0.0.1
+[2024-06-12 00:00:05] [SYSTEM]  HTTP management interface on :8080
+[2024-06-12 06:14:22] [AUTH]    Login attempt from 192.168.1.100 - user: admin
+[2024-06-12 06:14:22] [AUTH]    Authentication successful for admin
+[2024-06-12 06:31:07] [NET]     ARP: 192.168.1.105 -> 02:ab:3c:d4:e5:f6
+[2024-06-12 07:00:00] [SYSTEM]  Scheduled log rotation complete
+[2024-06-12 08:14:10] [SYSTEM]  Firmware update check: current v4.2.1 is latest
+[2024-06-12 09:42:31] [FW]      DROP  TCP 203.0.113.45:44921 -> 192.168.1.1:22
+[2024-06-12 09:42:31] [FW]      DROP  TCP 203.0.113.45:44922 -> 192.168.1.1:23
+[2024-06-12 09:42:32] [FW]      DROP  TCP 203.0.113.45:44923 -> 192.168.1.1:443
+[2024-06-12 11:05:44] [AUTH]    Login attempt from 192.168.1.100 - user: admin
+[2024-06-12 11:05:44] [AUTH]    Authentication successful for admin
+[2024-06-12 14:30:00] [NET]     eth0: RX 1.2 GB  TX 340 MB
+[2024-06-12 18:00:00] [SYSTEM]  Scheduled log rotation complete
+[2024-06-12 22:17:09] [FW]      DROP  UDP 198.51.100.12:53214 -> 192.168.1.1:161</pre>
+      </div>
+    </section>
+  </main>
+</div>
+<footer>&copy; 2024 PhantomGate Systems Ltd.</footer>
+<script src="/www/js/app.js"></script>
+</body>
+</html>

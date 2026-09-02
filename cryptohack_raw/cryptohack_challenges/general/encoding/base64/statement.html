@@ -1,0 +1,39 @@
+<div class="challengeDescription">
+ <!-- <p> -->
+ Another common encoding scheme is Base64, which allows us to represent binary data as an ASCII string using an alphabet of 64 characters. One character of a Base64 string encodes 6 binary digits (bits), and so 4 characters of Base64 encode three 8-bit bytes.
+ <br/>
+ <br/>
+ Base64 is most commonly used online, so binary data such as images can be easily included into HTML or CSS files.
+ <br/>
+ <br/>
+ Take the below hex string,
+ <i>
+  decode
+ </i>
+ it into bytes and then
+ <i>
+  encode
+ </i>
+ it into Base64.
+ <br/>
+ <br/>
+ <span class="codeBlock">
+  72bca9b68fc16ac7beeb8f849dca1d8a783e8acf9679bf9269f7bf
+ </span>
+ <br/>
+ <br/>
+ <span class="note">
+  <i class="fas fa-lightbulb">
+  </i>
+  In Python, after importing the base64 module with
+  <code>
+   import base64
+  </code>
+  , you can use the
+  <code>
+   base64.b64encode()
+  </code>
+  function. Remember to decode the hex first as the challenge description states.
+ </span>
+ <!-- </p> -->
+</div>

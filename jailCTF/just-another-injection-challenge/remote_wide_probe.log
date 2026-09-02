@@ -1,0 +1,31 @@
+[+] using base solver module: /home/light/Workspace/CTF/jailCTF/just-another-injection-challenge/solve_checked.py
+[+] loaded 43 singleton labels for length recovery
+[*] recovering flag length
+    remote oracle: 37 queries in 1.74s
+[+] length signature identity -> [9]
+[+] flag length = 9
+[+] using 38 unique predicate chains as jq-calibrated accept-sets
+[+] calibrating accept-sets with 'jq' (jq-1.8.2)
+[+] candidate numeric universe: 212 values
+    calibrated 1/38 chains
+    calibrated 10/38 chains
+    calibrated 20/38 chains
+    calibrated 30/38 chains
+    calibrated 38/38 chains
+[+] calibration done in 0.11s
+[!] warning: 1 chains accept no candidate values
+[*] set broad phase: 124 features, 2673 oracle queries
+    remote oracle: 96 queries in 4.73s
+    progress: 96/2673 queries (4.7s)
+    remote oracle: 96 queries in 5.03s
+    progress: 192/2673 queries (9.8s)
+    remote oracle: 96 queries in 4.94s
+    progress: 288/2673 queries (14.7s)
+    remote oracle: 96 queries in 4.89s
+    progress: 384/2673 queries (19.6s)
+    remote oracle: 96 queries in 4.60s
+    progress: 480/2673 queries (24.2s)
+    remote oracle: 96 queries in 4.69s
+    progress: 576/2673 queries (28.9s)
+    remote oracle: 96 queries in 5.02s
+    progress: 672/2673 queries (33.9s)

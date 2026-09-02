@@ -1,0 +1,79 @@
+{
+  "id": 78,
+  "name": "Less is more",
+  "category": "Crypto",
+  "points": 201,
+  "author": null,
+  "tags": [
+    "Crypto"
+  ],
+  "hints": [],
+  "connection_info": null,
+  "solved_by_me": false,
+  "solves_count": 19,
+  "submit_endpoint": null,
+  "instance_info": {},
+  "downloaded_files": [
+    {
+      "url": "https://asisctf.com/tasks/less_is_more_c21e39cc296efe86ee76902cae855a705bd74214.txz",
+      "name": "less_is_more_c21e39cc296efe86ee76902cae855a705bd74214.txz",
+      "saved_path": "/home/light/Workspace/CTF/ASIS_CTF_2026/Crypto/Less_is_more/challenge/less_is_more_c21e39cc296efe86ee76902cae855a705bd74214.txz",
+      "success": true,
+      "source": "platform_attachment",
+      "message": "Đã tải trực tiếp thành công"
+    }
+  ],
+  "raw": {
+    "id": 78,
+    "name": "Less is more",
+    "description": "<h1>Less is more</h1>\n<p>We captured traffic from a prototype signing device. The implementation is small, but some records in the capture do not match a normal run. Note the <a href=\"/tasks/less_is_more_c21e39cc296efe86ee76902cae855a705bd74214.txz\"><strong>less is more</strong></a>.</p>\n<p>The device sealed its backup vault with a key derived from its secret matrices. Recover the vault key, open the vault, and take the <code>flag</code>.</p>\n",
+    "points": 500,
+    "published_at": "2026-08-29 14:45:00",
+    "fixedPoints": 19,
+    "solves_count": 0,
+    "first_n_solves": [],
+    "SolvedByCurrentTeam": false,
+    "dynamic_points": 500,
+    "rewardable_dynamic_points": 500,
+    "chartData": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "categories": [
+      {
+        "id": 4,
+        "name": "Crypto",
+        "created_at": "2025-09-09T05:37:30.000000Z",
+        "updated_at": "2025-09-09T05:37:30.000000Z",
+        "pivot": {
+          "challenge_id": 78,
+          "category_id": 4
+        }
+      }
+    ],
+    "solves": []
+  },
+  "status": {
+    "schema_version": 2,
+    "solve": "unsolved",
+    "flag": {
+      "value": null,
+      "state": "none"
+    },
+    "writeup": "none",
+    "writeup_auto": true,
+    "notes": "",
+    "labels": [],
+    "container": "none",
+    "synced_at": "2026-08-29T18:20:22Z",
+    "updated_at": "2026-08-29T18:20:22Z"
+  }
+}

@@ -1,0 +1,1649 @@
+<div class="challengeDescription">
+ <!-- <p> -->
+ Scalar multiplication of two points is defined by repeated addition:
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mo stretchy="false">
+        [
+       </mo>
+       <mn>
+        3
+       </mn>
+       <mo stretchy="false">
+        ]
+       </mo>
+       <mi>
+        P
+       </mi>
+       <mo>
+        =
+       </mo>
+       <mi>
+        P
+       </mi>
+       <mo>
+        +
+       </mo>
+       <mi>
+        P
+       </mi>
+       <mo>
+        +
+       </mo>
+       <mi>
+        P
+       </mi>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       [3]P = P + P + P
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 1em; vertical-align: -0.25em;">
+     </span>
+     <span class="mopen">
+      [
+     </span>
+     <span class="mord">
+      3
+     </span>
+     <span class="mclose">
+      ]
+     </span>
+     <span class="mord mathnormal" style="margin-right: 0.1389em;">
+      P
+     </span>
+     <span class="mspace" style="margin-right: 0.2778em;">
+     </span>
+     <span class="mrel">
+      =
+     </span>
+     <span class="mspace" style="margin-right: 0.2778em;">
+     </span>
+    </span>
+    <span class="base">
+     <span class="strut" style="height: 0.7667em; vertical-align: -0.0833em;">
+     </span>
+     <span class="mord mathnormal" style="margin-right: 0.1389em;">
+      P
+     </span>
+     <span class="mspace" style="margin-right: 0.2222em;">
+     </span>
+     <span class="mbin">
+      +
+     </span>
+     <span class="mspace" style="margin-right: 0.2222em;">
+     </span>
+    </span>
+    <span class="base">
+     <span class="strut" style="height: 0.7667em; vertical-align: -0.0833em;">
+     </span>
+     <span class="mord mathnormal" style="margin-right: 0.1389em;">
+      P
+     </span>
+     <span class="mspace" style="margin-right: 0.2222em;">
+     </span>
+     <span class="mbin">
+      +
+     </span>
+     <span class="mspace" style="margin-right: 0.2222em;">
+     </span>
+    </span>
+    <span class="base">
+     <span class="strut" style="height: 0.6833em;">
+     </span>
+     <span class="mord mathnormal" style="margin-right: 0.1389em;">
+      P
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ .
+ <br/>
+ <br/>
+ In the next few challenges, we will use scalar multiplication to create a shared secret over an insecure channel similarly to the Diffie-Hellman challenges.
+ <br/>
+ <br/>
+ Taken from "An Introduction to Mathematical Cryptography",
+ <i>
+  Jeffrey Hoffstein, Jill Pipher, Joseph H. Silverman
+ </i>
+ , the following algorithm will efficently calculate scalar multiplication of a point on an elliptic curve
+ <br/>
+ <br/>
+ <span class="mathBlock">
+  <b>
+   Double and Add algorithm for the scalar multiplication
+  </b>
+  <br/>
+  <br/>
+  Input:
+  <span>
+   <span class="katex">
+    <span class="katex-mathml">
+     <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <semantics>
+       <mrow>
+        <mi>
+         P
+        </mi>
+        <mo>
+         ∈
+        </mo>
+        <mi>
+         E
+        </mi>
+        <mo stretchy="false">
+         (
+        </mo>
+        <msub>
+         <mi mathvariant="double-struck">
+          F
+         </mi>
+         <mi>
+          p
+         </mi>
+        </msub>
+        <mo stretchy="false">
+         )
+        </mo>
+       </mrow>
+       <annotation encoding="application/x-tex">
+        P \in E(\Fp)
+       </annotation>
+      </semantics>
+     </math>
+    </span>
+    <span aria-hidden="true" class="katex-html">
+     <span class="base">
+      <span class="strut" style="height: 0.7224em; vertical-align: -0.0391em;">
+      </span>
+      <span class="mord mathnormal" style="margin-right: 0.1389em;">
+       P
+      </span>
+      <span class="mspace" style="margin-right: 0.2778em;">
+      </span>
+      <span class="mrel">
+       ∈
+      </span>
+      <span class="mspace" style="margin-right: 0.2778em;">
+      </span>
+     </span>
+     <span class="base">
+      <span class="strut" style="height: 1.0361em; vertical-align: -0.2861em;">
+      </span>
+      <span class="mord mathnormal" style="margin-right: 0.0576em;">
+       E
+      </span>
+      <span class="mopen">
+       (
+      </span>
+      <span class="mord">
+       <span class="mord mathbb">
+        F
+       </span>
+       <span class="msupsub">
+        <span class="vlist-t vlist-t2">
+         <span class="vlist-r">
+          <span class="vlist" style="height: 0.1514em;">
+           <span class="" style="top: -2.55em; margin-left: 0em; margin-right: 0.05em;">
+            <span class="pstrut" style="height: 2.7em;">
+            </span>
+            <span class="sizing reset-size6 size3 mtight">
+             <span class="mord mtight">
+              <span class="mord mathnormal mtight">
+               p
+              </span>
+             </span>
+            </span>
+           </span>
+          </span>
+          <span class="vlist-s">
+           ​
+          </span>
+         </span>
+         <span class="vlist-r">
+          <span class="vlist" style="height: 0.2861em;">
+           <span class="">
+           </span>
+          </span>
+         </span>
+        </span>
+       </span>
+      </span>
+      <span class="mclose">
+       )
+      </span>
+     </span>
+    </span>
+   </span>
+  </span>
+  and an integer
+  <span>
+   <span class="katex">
+    <span class="katex-mathml">
+     <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <semantics>
+       <mrow>
+        <mi>
+         n
+        </mi>
+        <mo>
+         &gt;
+        </mo>
+        <mn>
+         0
+        </mn>
+       </mrow>
+       <annotation encoding="application/x-tex">
+        n &gt; 0
+       </annotation>
+      </semantics>
+     </math>
+    </span>
+    <span aria-hidden="true" class="katex-html">
+     <span class="base">
+      <span class="strut" style="height: 0.5782em; vertical-align: -0.0391em;">
+      </span>
+      <span class="mord mathnormal">
+       n
+      </span>
+      <span class="mspace" style="margin-right: 0.2778em;">
+      </span>
+      <span class="mrel">
+       &gt;
+      </span>
+      <span class="mspace" style="margin-right: 0.2778em;">
+      </span>
+     </span>
+     <span class="base">
+      <span class="strut" style="height: 0.6444em;">
+      </span>
+      <span class="mord">
+       0
+      </span>
+     </span>
+    </span>
+   </span>
+  </span>
+  <br/>
+  Output:
+  <span>
+   <span class="katex">
+    <span class="katex-mathml">
+     <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <semantics>
+       <mrow>
+        <mi>
+         Q
+        </mi>
+        <mo>
+         =
+        </mo>
+        <mo stretchy="false">
+         [
+        </mo>
+        <mi>
+         n
+        </mi>
+        <mo stretchy="false">
+         ]
+        </mo>
+        <mi>
+         P
+        </mi>
+        <mo>
+         ∈
+        </mo>
+        <mi>
+         E
+        </mi>
+        <mo stretchy="false">
+         (
+        </mo>
+        <msub>
+         <mi mathvariant="double-struck">
+          F
+         </mi>
+         <mi>
+          p
+         </mi>
+        </msub>
+        <mo stretchy="false">
+         )
+        </mo>
+       </mrow>
+       <annotation encoding="application/x-tex">
+        Q = [n]P \in E(\Fp)
+       </annotation>
+      </semantics>
+     </math>
+    </span>
+    <span aria-hidden="true" class="katex-html">
+     <span class="base">
+      <span class="strut" style="height: 0.8778em; vertical-align: -0.1944em;">
+      </span>
+      <span class="mord mathnormal">
+       Q
+      </span>
+      <span class="mspace" style="margin-right: 0.2778em;">
+      </span>
+      <span class="mrel">
+       =
+      </span>
+      <span class="mspace" style="margin-right: 0.2778em;">
+      </span>
+     </span>
+     <span class="base">
+      <span class="strut" style="height: 1em; vertical-align: -0.25em;">
+      </span>
+      <span class="mopen">
+       [
+      </span>
+      <span class="mord mathnormal">
+       n
+      </span>
+      <span class="mclose">
+       ]
+      </span>
+      <span class="mord mathnormal" style="margin-right: 0.1389em;">
+       P
+      </span>
+      <span class="mspace" style="margin-right: 0.2778em;">
+      </span>
+      <span class="mrel">
+       ∈
+      </span>
+      <span class="mspace" style="margin-right: 0.2778em;">
+      </span>
+     </span>
+     <span class="base">
+      <span class="strut" style="height: 1.0361em; vertical-align: -0.2861em;">
+      </span>
+      <span class="mord mathnormal" style="margin-right: 0.0576em;">
+       E
+      </span>
+      <span class="mopen">
+       (
+      </span>
+      <span class="mord">
+       <span class="mord mathbb">
+        F
+       </span>
+       <span class="msupsub">
+        <span class="vlist-t vlist-t2">
+         <span class="vlist-r">
+          <span class="vlist" style="height: 0.1514em;">
+           <span class="" style="top: -2.55em; margin-left: 0em; margin-right: 0.05em;">
+            <span class="pstrut" style="height: 2.7em;">
+            </span>
+            <span class="sizing reset-size6 size3 mtight">
+             <span class="mord mtight">
+              <span class="mord mathnormal mtight">
+               p
+              </span>
+             </span>
+            </span>
+           </span>
+          </span>
+          <span class="vlist-s">
+           ​
+          </span>
+         </span>
+         <span class="vlist-r">
+          <span class="vlist" style="height: 0.2861em;">
+           <span class="">
+           </span>
+          </span>
+         </span>
+        </span>
+       </span>
+      </span>
+      <span class="mclose">
+       )
+      </span>
+     </span>
+    </span>
+   </span>
+  </span>
+  <br/>
+  <br/>
+  1. Set
+  <span>
+   <span class="katex">
+    <span class="katex-mathml">
+     <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <semantics>
+       <mrow>
+        <mi>
+         Q
+        </mi>
+        <mo>
+         =
+        </mo>
+        <mi>
+         P
+        </mi>
+       </mrow>
+       <annotation encoding="application/x-tex">
+        Q = P
+       </annotation>
+      </semantics>
+     </math>
+    </span>
+    <span aria-hidden="true" class="katex-html">
+     <span class="base">
+      <span class="strut" style="height: 0.8778em; vertical-align: -0.1944em;">
+      </span>
+      <span class="mord mathnormal">
+       Q
+      </span>
+      <span class="mspace" style="margin-right: 0.2778em;">
+      </span>
+      <span class="mrel">
+       =
+      </span>
+      <span class="mspace" style="margin-right: 0.2778em;">
+      </span>
+     </span>
+     <span class="base">
+      <span class="strut" style="height: 0.6833em;">
+      </span>
+      <span class="mord mathnormal" style="margin-right: 0.1389em;">
+       P
+      </span>
+     </span>
+    </span>
+   </span>
+  </span>
+  and
+  <span>
+   <span class="katex">
+    <span class="katex-mathml">
+     <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <semantics>
+       <mrow>
+        <mi>
+         R
+        </mi>
+        <mo>
+         =
+        </mo>
+        <mi>
+         O
+        </mi>
+       </mrow>
+       <annotation encoding="application/x-tex">
+        R = O
+       </annotation>
+      </semantics>
+     </math>
+    </span>
+    <span aria-hidden="true" class="katex-html">
+     <span class="base">
+      <span class="strut" style="height: 0.6833em;">
+      </span>
+      <span class="mord mathnormal" style="margin-right: 0.0077em;">
+       R
+      </span>
+      <span class="mspace" style="margin-right: 0.2778em;">
+      </span>
+      <span class="mrel">
+       =
+      </span>
+      <span class="mspace" style="margin-right: 0.2778em;">
+      </span>
+     </span>
+     <span class="base">
+      <span class="strut" style="height: 0.6833em;">
+      </span>
+      <span class="mord mathnormal" style="margin-right: 0.0278em;">
+       O
+      </span>
+     </span>
+    </span>
+   </span>
+  </span>
+  .
+  <br/>
+  2. Loop while n &gt; 0.
+  <br/>
+  3. If
+  <span>
+   <span class="katex">
+    <span class="katex-mathml">
+     <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <semantics>
+       <mrow>
+        <mi>
+         n
+        </mi>
+        <mo>
+         ≡
+        </mo>
+        <mn>
+         1
+        </mn>
+        <mspace>
+        </mspace>
+        <mspace width="0.6667em">
+        </mspace>
+        <mrow>
+         <mi mathvariant="normal">
+          m
+         </mi>
+         <mi mathvariant="normal">
+          o
+         </mi>
+         <mi mathvariant="normal">
+          d
+         </mi>
+        </mrow>
+        <mn>
+         2
+        </mn>
+       </mrow>
+       <annotation encoding="application/x-tex">
+        n \equiv 1 \mod 2
+       </annotation>
+      </semantics>
+     </math>
+    </span>
+    <span aria-hidden="true" class="katex-html">
+     <span class="base">
+      <span class="strut" style="height: 0.4637em;">
+      </span>
+      <span class="mord mathnormal">
+       n
+      </span>
+      <span class="mspace" style="margin-right: 0.2778em;">
+      </span>
+      <span class="mrel">
+       ≡
+      </span>
+      <span class="mspace" style="margin-right: 0.2778em;">
+      </span>
+     </span>
+     <span class="base">
+      <span class="strut" style="height: 0.6444em;">
+      </span>
+      <span class="mord">
+       1
+      </span>
+      <span class="mspace allowbreak">
+      </span>
+      <span class="mspace" style="margin-right: 0.6667em;">
+      </span>
+     </span>
+     <span class="base">
+      <span class="strut" style="height: 0.6944em;">
+      </span>
+      <span class="mord">
+       <span class="mord">
+        <span class="mord mathrm">
+         mod
+        </span>
+       </span>
+      </span>
+      <span class="mspace" style="margin-right: 0.1667em;">
+      </span>
+      <span class="mspace" style="margin-right: 0.1667em;">
+      </span>
+      <span class="mord">
+       2
+      </span>
+     </span>
+    </span>
+   </span>
+  </span>
+  , set
+  <span>
+   <span class="katex">
+    <span class="katex-mathml">
+     <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <semantics>
+       <mrow>
+        <mi>
+         R
+        </mi>
+        <mo>
+         =
+        </mo>
+        <mi>
+         R
+        </mi>
+        <mo>
+         +
+        </mo>
+        <mi>
+         Q
+        </mi>
+       </mrow>
+       <annotation encoding="application/x-tex">
+        R = R + Q
+       </annotation>
+      </semantics>
+     </math>
+    </span>
+    <span aria-hidden="true" class="katex-html">
+     <span class="base">
+      <span class="strut" style="height: 0.6833em;">
+      </span>
+      <span class="mord mathnormal" style="margin-right: 0.0077em;">
+       R
+      </span>
+      <span class="mspace" style="margin-right: 0.2778em;">
+      </span>
+      <span class="mrel">
+       =
+      </span>
+      <span class="mspace" style="margin-right: 0.2778em;">
+      </span>
+     </span>
+     <span class="base">
+      <span class="strut" style="height: 0.7667em; vertical-align: -0.0833em;">
+      </span>
+      <span class="mord mathnormal" style="margin-right: 0.0077em;">
+       R
+      </span>
+      <span class="mspace" style="margin-right: 0.2222em;">
+      </span>
+      <span class="mbin">
+       +
+      </span>
+      <span class="mspace" style="margin-right: 0.2222em;">
+      </span>
+     </span>
+     <span class="base">
+      <span class="strut" style="height: 0.8778em; vertical-align: -0.1944em;">
+      </span>
+      <span class="mord mathnormal">
+       Q
+      </span>
+     </span>
+    </span>
+   </span>
+  </span>
+  .
+  <br/>
+  4. Set
+  <span>
+   <span class="katex">
+    <span class="katex-mathml">
+     <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <semantics>
+       <mrow>
+        <mi>
+         Q
+        </mi>
+        <mo>
+         =
+        </mo>
+        <mo stretchy="false">
+         [
+        </mo>
+        <mn>
+         2
+        </mn>
+        <mo stretchy="false">
+         ]
+        </mo>
+        <mi>
+         Q
+        </mi>
+       </mrow>
+       <annotation encoding="application/x-tex">
+        Q = [2] Q
+       </annotation>
+      </semantics>
+     </math>
+    </span>
+    <span aria-hidden="true" class="katex-html">
+     <span class="base">
+      <span class="strut" style="height: 0.8778em; vertical-align: -0.1944em;">
+      </span>
+      <span class="mord mathnormal">
+       Q
+      </span>
+      <span class="mspace" style="margin-right: 0.2778em;">
+      </span>
+      <span class="mrel">
+       =
+      </span>
+      <span class="mspace" style="margin-right: 0.2778em;">
+      </span>
+     </span>
+     <span class="base">
+      <span class="strut" style="height: 1em; vertical-align: -0.25em;">
+      </span>
+      <span class="mopen">
+       [
+      </span>
+      <span class="mord">
+       2
+      </span>
+      <span class="mclose">
+       ]
+      </span>
+      <span class="mord mathnormal">
+       Q
+      </span>
+     </span>
+    </span>
+   </span>
+  </span>
+  and
+  <span>
+   <span class="katex">
+    <span class="katex-mathml">
+     <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <semantics>
+       <mrow>
+        <mi>
+         n
+        </mi>
+        <mo>
+         =
+        </mo>
+        <mo stretchy="false">
+         ⌊
+        </mo>
+        <mi>
+         n
+        </mi>
+        <mi mathvariant="normal">
+         /
+        </mi>
+        <mn>
+         2
+        </mn>
+        <mo stretchy="false">
+         ⌋
+        </mo>
+       </mrow>
+       <annotation encoding="application/x-tex">
+        n = \lfloor n/2 \rfloor
+       </annotation>
+      </semantics>
+     </math>
+    </span>
+    <span aria-hidden="true" class="katex-html">
+     <span class="base">
+      <span class="strut" style="height: 0.4306em;">
+      </span>
+      <span class="mord mathnormal">
+       n
+      </span>
+      <span class="mspace" style="margin-right: 0.2778em;">
+      </span>
+      <span class="mrel">
+       =
+      </span>
+      <span class="mspace" style="margin-right: 0.2778em;">
+      </span>
+     </span>
+     <span class="base">
+      <span class="strut" style="height: 1em; vertical-align: -0.25em;">
+      </span>
+      <span class="mopen">
+       ⌊
+      </span>
+      <span class="mord mathnormal">
+       n
+      </span>
+      <span class="mord">
+       /2
+      </span>
+      <span class="mclose">
+       ⌋
+      </span>
+     </span>
+    </span>
+   </span>
+  </span>
+  .
+  <br/>
+  5. If
+  <span>
+   <span class="katex">
+    <span class="katex-mathml">
+     <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <semantics>
+       <mrow>
+        <mi>
+         n
+        </mi>
+        <mo>
+         &gt;
+        </mo>
+        <mn>
+         0
+        </mn>
+       </mrow>
+       <annotation encoding="application/x-tex">
+        n &gt; 0
+       </annotation>
+      </semantics>
+     </math>
+    </span>
+    <span aria-hidden="true" class="katex-html">
+     <span class="base">
+      <span class="strut" style="height: 0.5782em; vertical-align: -0.0391em;">
+      </span>
+      <span class="mord mathnormal">
+       n
+      </span>
+      <span class="mspace" style="margin-right: 0.2778em;">
+      </span>
+      <span class="mrel">
+       &gt;
+      </span>
+      <span class="mspace" style="margin-right: 0.2778em;">
+      </span>
+     </span>
+     <span class="base">
+      <span class="strut" style="height: 0.6444em;">
+      </span>
+      <span class="mord">
+       0
+      </span>
+     </span>
+    </span>
+   </span>
+  </span>
+  , continue with loop at Step 2.
+  <br/>
+  6. Return the point
+  <span>
+   <span class="katex">
+    <span class="katex-mathml">
+     <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <semantics>
+       <mrow>
+        <mi>
+         R
+        </mi>
+       </mrow>
+       <annotation encoding="application/x-tex">
+        R
+       </annotation>
+      </semantics>
+     </math>
+    </span>
+    <span aria-hidden="true" class="katex-html">
+     <span class="base">
+      <span class="strut" style="height: 0.6833em;">
+      </span>
+      <span class="mord mathnormal" style="margin-right: 0.0077em;">
+       R
+      </span>
+     </span>
+    </span>
+   </span>
+  </span>
+  , which equals
+  <span>
+   <span class="katex">
+    <span class="katex-mathml">
+     <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <semantics>
+       <mrow>
+        <mo stretchy="false">
+         [
+        </mo>
+        <mi>
+         n
+        </mi>
+        <mo stretchy="false">
+         ]
+        </mo>
+        <mi>
+         P
+        </mi>
+       </mrow>
+       <annotation encoding="application/x-tex">
+        [n]P
+       </annotation>
+      </semantics>
+     </math>
+    </span>
+    <span aria-hidden="true" class="katex-html">
+     <span class="base">
+      <span class="strut" style="height: 1em; vertical-align: -0.25em;">
+      </span>
+      <span class="mopen">
+       [
+      </span>
+      <span class="mord mathnormal">
+       n
+      </span>
+      <span class="mclose">
+       ]
+      </span>
+      <span class="mord mathnormal" style="margin-right: 0.1389em;">
+       P
+      </span>
+     </span>
+    </span>
+   </span>
+  </span>
+  .
+  <br/>
+ </span>
+ <br/>
+ <br/>
+ <span class="note">
+  <i class="fas fa-pencil-alt">
+  </i>
+  This is not the most efficient algorithm, there are many interesting ways to improve this calculation up, but this will be sufficient for our work.
+ </span>
+ <br/>
+ <br/>
+ We will work with the following elliptic curve, and prime:
+ <br/>
+ <br/>
+ <span class="mathDisplay">
+  <span>
+   <span class="katex">
+    <span class="katex-mathml">
+     <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <semantics>
+       <mrow>
+        <mi>
+         E
+        </mi>
+        <mo>
+         :
+        </mo>
+        <msup>
+         <mi>
+          Y
+         </mi>
+         <mn>
+          2
+         </mn>
+        </msup>
+        <mo>
+         =
+        </mo>
+        <msup>
+         <mi>
+          X
+         </mi>
+         <mn>
+          3
+         </mn>
+        </msup>
+        <mo>
+         +
+        </mo>
+        <mn>
+         497
+        </mn>
+        <mi>
+         X
+        </mi>
+        <mo>
+         +
+        </mo>
+        <mn>
+         1768
+        </mn>
+        <mspace>
+        </mspace>
+        <mspace width="0.6667em">
+        </mspace>
+        <mrow>
+         <mi mathvariant="normal">
+          m
+         </mi>
+         <mi mathvariant="normal">
+          o
+         </mi>
+         <mi mathvariant="normal">
+          d
+         </mi>
+        </mrow>
+        <mn>
+         9739
+        </mn>
+       </mrow>
+       <annotation encoding="application/x-tex">
+        E: Y^2 = X^3 + 497 X + 1768 \mod 9739
+       </annotation>
+      </semantics>
+     </math>
+    </span>
+    <span aria-hidden="true" class="katex-html">
+     <span class="base">
+      <span class="strut" style="height: 0.6833em;">
+      </span>
+      <span class="mord mathnormal" style="margin-right: 0.0576em;">
+       E
+      </span>
+      <span class="mspace" style="margin-right: 0.2778em;">
+      </span>
+      <span class="mrel">
+       :
+      </span>
+      <span class="mspace" style="margin-right: 0.2778em;">
+      </span>
+     </span>
+     <span class="base">
+      <span class="strut" style="height: 0.8141em;">
+      </span>
+      <span class="mord">
+       <span class="mord mathnormal" style="margin-right: 0.2222em;">
+        Y
+       </span>
+       <span class="msupsub">
+        <span class="vlist-t">
+         <span class="vlist-r">
+          <span class="vlist" style="height: 0.8141em;">
+           <span class="" style="top: -3.063em; margin-right: 0.05em;">
+            <span class="pstrut" style="height: 2.7em;">
+            </span>
+            <span class="sizing reset-size6 size3 mtight">
+             <span class="mord mtight">
+              2
+             </span>
+            </span>
+           </span>
+          </span>
+         </span>
+        </span>
+       </span>
+      </span>
+      <span class="mspace" style="margin-right: 0.2778em;">
+      </span>
+      <span class="mrel">
+       =
+      </span>
+      <span class="mspace" style="margin-right: 0.2778em;">
+      </span>
+     </span>
+     <span class="base">
+      <span class="strut" style="height: 0.8974em; vertical-align: -0.0833em;">
+      </span>
+      <span class="mord">
+       <span class="mord mathnormal" style="margin-right: 0.0785em;">
+        X
+       </span>
+       <span class="msupsub">
+        <span class="vlist-t">
+         <span class="vlist-r">
+          <span class="vlist" style="height: 0.8141em;">
+           <span class="" style="top: -3.063em; margin-right: 0.05em;">
+            <span class="pstrut" style="height: 2.7em;">
+            </span>
+            <span class="sizing reset-size6 size3 mtight">
+             <span class="mord mtight">
+              3
+             </span>
+            </span>
+           </span>
+          </span>
+         </span>
+        </span>
+       </span>
+      </span>
+      <span class="mspace" style="margin-right: 0.2222em;">
+      </span>
+      <span class="mbin">
+       +
+      </span>
+      <span class="mspace" style="margin-right: 0.2222em;">
+      </span>
+     </span>
+     <span class="base">
+      <span class="strut" style="height: 0.7667em; vertical-align: -0.0833em;">
+      </span>
+      <span class="mord">
+       497
+      </span>
+      <span class="mord mathnormal" style="margin-right: 0.0785em;">
+       X
+      </span>
+      <span class="mspace" style="margin-right: 0.2222em;">
+      </span>
+      <span class="mbin">
+       +
+      </span>
+      <span class="mspace" style="margin-right: 0.2222em;">
+      </span>
+     </span>
+     <span class="base">
+      <span class="strut" style="height: 0.6444em;">
+      </span>
+      <span class="mord">
+       1768
+      </span>
+      <span class="mspace allowbreak">
+      </span>
+      <span class="mspace" style="margin-right: 0.6667em;">
+      </span>
+     </span>
+     <span class="base">
+      <span class="strut" style="height: 0.6944em;">
+      </span>
+      <span class="mord">
+       <span class="mord">
+        <span class="mord mathrm">
+         mod
+        </span>
+       </span>
+      </span>
+      <span class="mspace" style="margin-right: 0.1667em;">
+      </span>
+      <span class="mspace" style="margin-right: 0.1667em;">
+      </span>
+      <span class="mord">
+       9739
+      </span>
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ <br/>
+ <br/>
+ <span class="note">
+  <i class="fas fa-lightbulb">
+  </i>
+  You can test your algorithm by asserting:
+  <span>
+   <span class="katex">
+    <span class="katex-mathml">
+     <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <semantics>
+       <mrow>
+        <mo stretchy="false">
+         [
+        </mo>
+        <mn>
+         1337
+        </mn>
+        <mo stretchy="false">
+         ]
+        </mo>
+        <mi>
+         X
+        </mi>
+        <mo>
+         =
+        </mo>
+        <mo stretchy="false">
+         (
+        </mo>
+        <mn>
+         1089
+        </mn>
+        <mo separator="true">
+         ,
+        </mo>
+        <mn>
+         6931
+        </mn>
+        <mo stretchy="false">
+         )
+        </mo>
+       </mrow>
+       <annotation encoding="application/x-tex">
+        [1337] X = (1089, 6931)
+       </annotation>
+      </semantics>
+     </math>
+    </span>
+    <span aria-hidden="true" class="katex-html">
+     <span class="base">
+      <span class="strut" style="height: 1em; vertical-align: -0.25em;">
+      </span>
+      <span class="mopen">
+       [
+      </span>
+      <span class="mord">
+       1337
+      </span>
+      <span class="mclose">
+       ]
+      </span>
+      <span class="mord mathnormal" style="margin-right: 0.0785em;">
+       X
+      </span>
+      <span class="mspace" style="margin-right: 0.2778em;">
+      </span>
+      <span class="mrel">
+       =
+      </span>
+      <span class="mspace" style="margin-right: 0.2778em;">
+      </span>
+     </span>
+     <span class="base">
+      <span class="strut" style="height: 1em; vertical-align: -0.25em;">
+      </span>
+      <span class="mopen">
+       (
+      </span>
+      <span class="mord">
+       1089
+      </span>
+      <span class="mpunct">
+       ,
+      </span>
+      <span class="mspace" style="margin-right: 0.1667em;">
+      </span>
+      <span class="mord">
+       6931
+      </span>
+      <span class="mclose">
+       )
+      </span>
+     </span>
+    </span>
+   </span>
+  </span>
+  for
+  <span>
+   <span class="katex">
+    <span class="katex-mathml">
+     <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <semantics>
+       <mrow>
+        <mi>
+         X
+        </mi>
+        <mo>
+         =
+        </mo>
+        <mo stretchy="false">
+         (
+        </mo>
+        <mn>
+         5323
+        </mn>
+        <mo separator="true">
+         ,
+        </mo>
+        <mn>
+         5438
+        </mn>
+        <mo stretchy="false">
+         )
+        </mo>
+       </mrow>
+       <annotation encoding="application/x-tex">
+        X = (5323, 5438)
+       </annotation>
+      </semantics>
+     </math>
+    </span>
+    <span aria-hidden="true" class="katex-html">
+     <span class="base">
+      <span class="strut" style="height: 0.6833em;">
+      </span>
+      <span class="mord mathnormal" style="margin-right: 0.0785em;">
+       X
+      </span>
+      <span class="mspace" style="margin-right: 0.2778em;">
+      </span>
+      <span class="mrel">
+       =
+      </span>
+      <span class="mspace" style="margin-right: 0.2778em;">
+      </span>
+     </span>
+     <span class="base">
+      <span class="strut" style="height: 1em; vertical-align: -0.25em;">
+      </span>
+      <span class="mopen">
+       (
+      </span>
+      <span class="mord">
+       5323
+      </span>
+      <span class="mpunct">
+       ,
+      </span>
+      <span class="mspace" style="margin-right: 0.1667em;">
+      </span>
+      <span class="mord">
+       5438
+      </span>
+      <span class="mclose">
+       )
+      </span>
+     </span>
+    </span>
+   </span>
+  </span>
+  .
+ </span>
+ <br/>
+ <br/>
+ Using the above curve, and the points
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi>
+        P
+       </mi>
+       <mo>
+        =
+       </mo>
+       <mo stretchy="false">
+        (
+       </mo>
+       <mn>
+        2339
+       </mn>
+       <mo separator="true">
+        ,
+       </mo>
+       <mn>
+        2213
+       </mn>
+       <mo stretchy="false">
+        )
+       </mo>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       P = (2339, 2213)
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 0.6833em;">
+     </span>
+     <span class="mord mathnormal" style="margin-right: 0.1389em;">
+      P
+     </span>
+     <span class="mspace" style="margin-right: 0.2778em;">
+     </span>
+     <span class="mrel">
+      =
+     </span>
+     <span class="mspace" style="margin-right: 0.2778em;">
+     </span>
+    </span>
+    <span class="base">
+     <span class="strut" style="height: 1em; vertical-align: -0.25em;">
+     </span>
+     <span class="mopen">
+      (
+     </span>
+     <span class="mord">
+      2339
+     </span>
+     <span class="mpunct">
+      ,
+     </span>
+     <span class="mspace" style="margin-right: 0.1667em;">
+     </span>
+     <span class="mord">
+      2213
+     </span>
+     <span class="mclose">
+      )
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ , find the point
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi>
+        Q
+       </mi>
+       <mo stretchy="false">
+        (
+       </mo>
+       <mi>
+        x
+       </mi>
+       <mo separator="true">
+        ,
+       </mo>
+       <mi>
+        y
+       </mi>
+       <mo stretchy="false">
+        )
+       </mo>
+       <mo>
+        =
+       </mo>
+       <mo stretchy="false">
+        [
+       </mo>
+       <mn>
+        7863
+       </mn>
+       <mo stretchy="false">
+        ]
+       </mo>
+       <mi>
+        P
+       </mi>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       Q(x,y) = [7863] P
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 1em; vertical-align: -0.25em;">
+     </span>
+     <span class="mord mathnormal">
+      Q
+     </span>
+     <span class="mopen">
+      (
+     </span>
+     <span class="mord mathnormal">
+      x
+     </span>
+     <span class="mpunct">
+      ,
+     </span>
+     <span class="mspace" style="margin-right: 0.1667em;">
+     </span>
+     <span class="mord mathnormal" style="margin-right: 0.0359em;">
+      y
+     </span>
+     <span class="mclose">
+      )
+     </span>
+     <span class="mspace" style="margin-right: 0.2778em;">
+     </span>
+     <span class="mrel">
+      =
+     </span>
+     <span class="mspace" style="margin-right: 0.2778em;">
+     </span>
+    </span>
+    <span class="base">
+     <span class="strut" style="height: 1em; vertical-align: -0.25em;">
+     </span>
+     <span class="mopen">
+      [
+     </span>
+     <span class="mord">
+      7863
+     </span>
+     <span class="mclose">
+      ]
+     </span>
+     <span class="mord mathnormal" style="margin-right: 0.1389em;">
+      P
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ by implementing the above algorithm.
+ <br/>
+ <br/>
+ <span class="note">
+  <i class="fas fa-brain">
+  </i>
+  After calculating
+  <span>
+   <span class="katex">
+    <span class="katex-mathml">
+     <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <semantics>
+       <mrow>
+        <mi>
+         Q
+        </mi>
+       </mrow>
+       <annotation encoding="application/x-tex">
+        Q
+       </annotation>
+      </semantics>
+     </math>
+    </span>
+    <span aria-hidden="true" class="katex-html">
+     <span class="base">
+      <span class="strut" style="height: 0.8778em; vertical-align: -0.1944em;">
+      </span>
+      <span class="mord mathnormal">
+       Q
+      </span>
+     </span>
+    </span>
+   </span>
+  </span>
+  , substitute the coordinates into the curve. Assert that the point
+  <span>
+   <span class="katex">
+    <span class="katex-mathml">
+     <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <semantics>
+       <mrow>
+        <mi>
+         Q
+        </mi>
+       </mrow>
+       <annotation encoding="application/x-tex">
+        Q
+       </annotation>
+      </semantics>
+     </math>
+    </span>
+    <span aria-hidden="true" class="katex-html">
+     <span class="base">
+      <span class="strut" style="height: 0.8778em; vertical-align: -0.1944em;">
+      </span>
+      <span class="mord mathnormal">
+       Q
+      </span>
+     </span>
+    </span>
+   </span>
+  </span>
+  is in
+  <span>
+   <span class="katex">
+    <span class="katex-mathml">
+     <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <semantics>
+       <mrow>
+        <mi>
+         E
+        </mi>
+        <mo stretchy="false">
+         (
+        </mo>
+        <msub>
+         <mi mathvariant="double-struck">
+          F
+         </mi>
+         <mi>
+          p
+         </mi>
+        </msub>
+        <mo stretchy="false">
+         )
+        </mo>
+       </mrow>
+       <annotation encoding="application/x-tex">
+        E(\Fp)
+       </annotation>
+      </semantics>
+     </math>
+    </span>
+    <span aria-hidden="true" class="katex-html">
+     <span class="base">
+      <span class="strut" style="height: 1.0361em; vertical-align: -0.2861em;">
+      </span>
+      <span class="mord mathnormal" style="margin-right: 0.0576em;">
+       E
+      </span>
+      <span class="mopen">
+       (
+      </span>
+      <span class="mord">
+       <span class="mord mathbb">
+        F
+       </span>
+       <span class="msupsub">
+        <span class="vlist-t vlist-t2">
+         <span class="vlist-r">
+          <span class="vlist" style="height: 0.1514em;">
+           <span class="" style="top: -2.55em; margin-left: 0em; margin-right: 0.05em;">
+            <span class="pstrut" style="height: 2.7em;">
+            </span>
+            <span class="sizing reset-size6 size3 mtight">
+             <span class="mord mtight">
+              <span class="mord mathnormal mtight">
+               p
+              </span>
+             </span>
+            </span>
+           </span>
+          </span>
+          <span class="vlist-s">
+           ​
+          </span>
+         </span>
+         <span class="vlist-r">
+          <span class="vlist" style="height: 0.2861em;">
+           <span class="">
+           </span>
+          </span>
+         </span>
+        </span>
+       </span>
+      </span>
+      <span class="mclose">
+       )
+      </span>
+     </span>
+    </span>
+   </span>
+  </span>
+  .
+ </span>
+ <!-- </p> -->
+</div>

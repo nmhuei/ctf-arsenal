@@ -1,0 +1,1131 @@
+<div class="challengeDescription">
+ <!-- <p> -->
+ In the challenge "CSIDH prime power isogenies" we explored the
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi mathvariant="normal">
+        ℓ
+       </mi>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       \ell
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 0.6944em;">
+     </span>
+     <span class="mord">
+      ℓ
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ -isogeny graphs for the curves we use in CSIDH and saw that they were cyclic. We were able to compute how many vertices there were in the graph and effectively walk all the way around until we reached the starting node again.
+ <br/>
+ <br/>
+ We also know that given some point of order
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi mathvariant="normal">
+        ℓ
+       </mi>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       \ell
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 0.6944em;">
+     </span>
+     <span class="mord">
+      ℓ
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ on the curve, there seems to be only one way to walk from each node and that this graph is directed. This challenge is about how we can effectively (and efficiently) take one step "backwards" on the graph. This means if the
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi mathvariant="normal">
+        ℓ
+       </mi>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       \ell
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 0.6944em;">
+     </span>
+     <span class="mord">
+      ℓ
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ -isogeny graph has k nodes, instead of computing k-1
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi mathvariant="normal">
+        ℓ
+       </mi>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       \ell
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 0.6944em;">
+     </span>
+     <span class="mord">
+      ℓ
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ -isogenies to go backwards we can compute just a single isogeny in the other direction.
+ <br/>
+ <br/>
+ To do this, we will need to be able to compute the quadratic twist
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <msup>
+        <mi>
+         E
+        </mi>
+        <mi>
+         t
+        </mi>
+       </msup>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       E^{t}
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 0.7936em;">
+     </span>
+     <span class="mord">
+      <span class="mord mathnormal" style="margin-right: 0.0576em;">
+       E
+      </span>
+      <span class="msupsub">
+       <span class="vlist-t">
+        <span class="vlist-r">
+         <span class="vlist" style="height: 0.7936em;">
+          <span class="" style="top: -3.063em; margin-right: 0.05em;">
+           <span class="pstrut" style="height: 2.7em;">
+           </span>
+           <span class="sizing reset-size6 size3 mtight">
+            <span class="mord mtight">
+             <span class="mord mathnormal mtight">
+              t
+             </span>
+            </span>
+           </span>
+          </span>
+         </span>
+        </span>
+       </span>
+      </span>
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ of a curve. Look at this curve in Montgomery form. Notice that it is not isomorphic to
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi>
+        E
+       </mi>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       E
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 0.6833em;">
+     </span>
+     <span class="mord mathnormal" style="margin-right: 0.0576em;">
+      E
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ . Compute their j-invariants. Compute their order, are they isogenous?
+ <br/>
+ <br/>
+ To walk backwards on the graph we temporarily work on the quadratic twist. Practically, to walk one step backwards we map
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi>
+        E
+       </mi>
+       <mo>
+        →
+       </mo>
+       <msup>
+        <mi>
+         E
+        </mi>
+        <mi>
+         t
+        </mi>
+       </msup>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       E \to E^t
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 0.6833em;">
+     </span>
+     <span class="mord mathnormal" style="margin-right: 0.0576em;">
+      E
+     </span>
+     <span class="mspace" style="margin-right: 0.2778em;">
+     </span>
+     <span class="mrel">
+      →
+     </span>
+     <span class="mspace" style="margin-right: 0.2778em;">
+     </span>
+    </span>
+    <span class="base">
+     <span class="strut" style="height: 0.7936em;">
+     </span>
+     <span class="mord">
+      <span class="mord mathnormal" style="margin-right: 0.0576em;">
+       E
+      </span>
+      <span class="msupsub">
+       <span class="vlist-t">
+        <span class="vlist-r">
+         <span class="vlist" style="height: 0.7936em;">
+          <span class="" style="top: -3.063em; margin-right: 0.05em;">
+           <span class="pstrut" style="height: 2.7em;">
+           </span>
+           <span class="sizing reset-size6 size3 mtight">
+            <span class="mord mathnormal mtight">
+             t
+            </span>
+           </span>
+          </span>
+         </span>
+        </span>
+       </span>
+      </span>
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ . From this twisted curve, we compute as normal an isogeny of degree
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi mathvariant="normal">
+        ℓ
+       </mi>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       \ell
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 0.6944em;">
+     </span>
+     <span class="mord">
+      ℓ
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ using a point of order
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi mathvariant="normal">
+        ℓ
+       </mi>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       \ell
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 0.6944em;">
+     </span>
+     <span class="mord">
+      ℓ
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ on the twisted curve. Then, we untwist the codomain (by computing a second quadratic twist) to finish the computation.
+ <br/>
+ <br/>
+ To test your code, use the solution of "CSIDH prime power isogenies" and compare the result of taking
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi>
+        k
+       </mi>
+       <mo>
+        −
+       </mo>
+       <mn>
+        1
+       </mn>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       k-1
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 0.7778em; vertical-align: -0.0833em;">
+     </span>
+     <span class="mord mathnormal" style="margin-right: 0.0315em;">
+      k
+     </span>
+     <span class="mspace" style="margin-right: 0.2222em;">
+     </span>
+     <span class="mbin">
+      −
+     </span>
+     <span class="mspace" style="margin-right: 0.2222em;">
+     </span>
+    </span>
+    <span class="base">
+     <span class="strut" style="height: 0.6444em;">
+     </span>
+     <span class="mord">
+      1
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ "forward" 7-isogenies and a single "backwards" isogeny.
+ <br/>
+ <br/>
+ <span class="note">
+  <i class="fas fa-brain">
+  </i>
+  Note: if you are computing x-only isogenies you do not need to explicitly compute the twist, but instead compute random
+  <span>
+   <span class="katex">
+    <span class="katex-mathml">
+     <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <semantics>
+       <mrow>
+        <mi>
+         x
+        </mi>
+       </mrow>
+       <annotation encoding="application/x-tex">
+        x
+       </annotation>
+      </semantics>
+     </math>
+    </span>
+    <span aria-hidden="true" class="katex-html">
+     <span class="base">
+      <span class="strut" style="height: 0.4306em;">
+      </span>
+      <span class="mord mathnormal">
+       x
+      </span>
+     </span>
+    </span>
+   </span>
+  </span>
+  -coordinates in
+  <span>
+   <span class="katex">
+    <span class="katex-mathml">
+     <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <semantics>
+       <mrow>
+        <msub>
+         <mi mathvariant="double-struck">
+          F
+         </mi>
+         <mi>
+          p
+         </mi>
+        </msub>
+       </mrow>
+       <annotation encoding="application/x-tex">
+        \Fp
+       </annotation>
+      </semantics>
+     </math>
+    </span>
+    <span aria-hidden="true" class="katex-html">
+     <span class="base">
+      <span class="strut" style="height: 0.975em; vertical-align: -0.2861em;">
+      </span>
+      <span class="mord">
+       <span class="mord mathbb">
+        F
+       </span>
+       <span class="msupsub">
+        <span class="vlist-t vlist-t2">
+         <span class="vlist-r">
+          <span class="vlist" style="height: 0.1514em;">
+           <span class="" style="top: -2.55em; margin-left: 0em; margin-right: 0.05em;">
+            <span class="pstrut" style="height: 2.7em;">
+            </span>
+            <span class="sizing reset-size6 size3 mtight">
+             <span class="mord mtight">
+              <span class="mord mathnormal mtight">
+               p
+              </span>
+             </span>
+            </span>
+           </span>
+          </span>
+          <span class="vlist-s">
+           ​
+          </span>
+         </span>
+         <span class="vlist-r">
+          <span class="vlist" style="height: 0.2861em;">
+           <span class="">
+           </span>
+          </span>
+         </span>
+        </span>
+       </span>
+      </span>
+     </span>
+    </span>
+   </span>
+  </span>
+  . A point is on
+  <span>
+   <span class="katex">
+    <span class="katex-mathml">
+     <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <semantics>
+       <mrow>
+        <mi>
+         E
+        </mi>
+       </mrow>
+       <annotation encoding="application/x-tex">
+        E
+       </annotation>
+      </semantics>
+     </math>
+    </span>
+    <span aria-hidden="true" class="katex-html">
+     <span class="base">
+      <span class="strut" style="height: 0.6833em;">
+      </span>
+      <span class="mord mathnormal" style="margin-right: 0.0576em;">
+       E
+      </span>
+     </span>
+    </span>
+   </span>
+  </span>
+  when
+  <span>
+   <span class="katex">
+    <span class="katex-mathml">
+     <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <semantics>
+       <mrow>
+        <msup>
+         <mi>
+          x
+         </mi>
+         <mn>
+          3
+         </mn>
+        </msup>
+        <mo>
+         +
+        </mo>
+        <mi>
+         A
+        </mi>
+        <msup>
+         <mi>
+          x
+         </mi>
+         <mn>
+          2
+         </mn>
+        </msup>
+        <mo>
+         +
+        </mo>
+        <mi>
+         x
+        </mi>
+       </mrow>
+       <annotation encoding="application/x-tex">
+        x^{3} + Ax^{2} + x
+       </annotation>
+      </semantics>
+     </math>
+    </span>
+    <span aria-hidden="true" class="katex-html">
+     <span class="base">
+      <span class="strut" style="height: 0.8974em; vertical-align: -0.0833em;">
+      </span>
+      <span class="mord">
+       <span class="mord mathnormal">
+        x
+       </span>
+       <span class="msupsub">
+        <span class="vlist-t">
+         <span class="vlist-r">
+          <span class="vlist" style="height: 0.8141em;">
+           <span class="" style="top: -3.063em; margin-right: 0.05em;">
+            <span class="pstrut" style="height: 2.7em;">
+            </span>
+            <span class="sizing reset-size6 size3 mtight">
+             <span class="mord mtight">
+              <span class="mord mtight">
+               3
+              </span>
+             </span>
+            </span>
+           </span>
+          </span>
+         </span>
+        </span>
+       </span>
+      </span>
+      <span class="mspace" style="margin-right: 0.2222em;">
+      </span>
+      <span class="mbin">
+       +
+      </span>
+      <span class="mspace" style="margin-right: 0.2222em;">
+      </span>
+     </span>
+     <span class="base">
+      <span class="strut" style="height: 0.8974em; vertical-align: -0.0833em;">
+      </span>
+      <span class="mord mathnormal">
+       A
+      </span>
+      <span class="mord">
+       <span class="mord mathnormal">
+        x
+       </span>
+       <span class="msupsub">
+        <span class="vlist-t">
+         <span class="vlist-r">
+          <span class="vlist" style="height: 0.8141em;">
+           <span class="" style="top: -3.063em; margin-right: 0.05em;">
+            <span class="pstrut" style="height: 2.7em;">
+            </span>
+            <span class="sizing reset-size6 size3 mtight">
+             <span class="mord mtight">
+              <span class="mord mtight">
+               2
+              </span>
+             </span>
+            </span>
+           </span>
+          </span>
+         </span>
+        </span>
+       </span>
+      </span>
+      <span class="mspace" style="margin-right: 0.2222em;">
+      </span>
+      <span class="mbin">
+       +
+      </span>
+      <span class="mspace" style="margin-right: 0.2222em;">
+      </span>
+     </span>
+     <span class="base">
+      <span class="strut" style="height: 0.4306em;">
+      </span>
+      <span class="mord mathnormal">
+       x
+      </span>
+     </span>
+    </span>
+   </span>
+  </span>
+  is a square and
+  <span>
+   <span class="katex">
+    <span class="katex-mathml">
+     <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <semantics>
+       <mrow>
+        <msup>
+         <mi>
+          E
+         </mi>
+         <mi>
+          t
+         </mi>
+        </msup>
+       </mrow>
+       <annotation encoding="application/x-tex">
+        E^t
+       </annotation>
+      </semantics>
+     </math>
+    </span>
+    <span aria-hidden="true" class="katex-html">
+     <span class="base">
+      <span class="strut" style="height: 0.7936em;">
+      </span>
+      <span class="mord">
+       <span class="mord mathnormal" style="margin-right: 0.0576em;">
+        E
+       </span>
+       <span class="msupsub">
+        <span class="vlist-t">
+         <span class="vlist-r">
+          <span class="vlist" style="height: 0.7936em;">
+           <span class="" style="top: -3.063em; margin-right: 0.05em;">
+            <span class="pstrut" style="height: 2.7em;">
+            </span>
+            <span class="sizing reset-size6 size3 mtight">
+             <span class="mord mathnormal mtight">
+              t
+             </span>
+            </span>
+           </span>
+          </span>
+         </span>
+        </span>
+       </span>
+      </span>
+     </span>
+    </span>
+   </span>
+  </span>
+  when it is not. From this, we see that checking the squareness of
+  <span>
+   <span class="katex">
+    <span class="katex-mathml">
+     <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <semantics>
+       <mrow>
+        <msup>
+         <mi>
+          y
+         </mi>
+         <mn>
+          2
+         </mn>
+        </msup>
+       </mrow>
+       <annotation encoding="application/x-tex">
+        y^{2}
+       </annotation>
+      </semantics>
+     </math>
+    </span>
+    <span aria-hidden="true" class="katex-html">
+     <span class="base">
+      <span class="strut" style="height: 1.0085em; vertical-align: -0.1944em;">
+      </span>
+      <span class="mord">
+       <span class="mord mathnormal" style="margin-right: 0.0359em;">
+        y
+       </span>
+       <span class="msupsub">
+        <span class="vlist-t">
+         <span class="vlist-r">
+          <span class="vlist" style="height: 0.8141em;">
+           <span class="" style="top: -3.063em; margin-right: 0.05em;">
+            <span class="pstrut" style="height: 2.7em;">
+            </span>
+            <span class="sizing reset-size6 size3 mtight">
+             <span class="mord mtight">
+              <span class="mord mtight">
+               2
+              </span>
+             </span>
+            </span>
+           </span>
+          </span>
+         </span>
+        </span>
+       </span>
+      </span>
+     </span>
+    </span>
+   </span>
+  </span>
+  is enough to determine if you will take a step forwards or backwards when this
+  <span>
+   <span class="katex">
+    <span class="katex-mathml">
+     <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <semantics>
+       <mrow>
+        <mi>
+         x
+        </mi>
+       </mrow>
+       <annotation encoding="application/x-tex">
+        x
+       </annotation>
+      </semantics>
+     </math>
+    </span>
+    <span aria-hidden="true" class="katex-html">
+     <span class="base">
+      <span class="strut" style="height: 0.4306em;">
+      </span>
+      <span class="mord mathnormal">
+       x
+      </span>
+     </span>
+    </span>
+   </span>
+  </span>
+  -only point is used to compute an isogeny.
+ </span>
+ <br/>
+ <br/>
+ To compute the flag, walk one step "backwards" on the three-isogeny graph from the below curve. The flag is the Montgomery coefficient of this curve.
+ <br/>
+ <br/>
+ <span class="mathDisplay">
+  <span>
+   <span class="katex">
+    <span class="katex-mathml">
+     <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <semantics>
+       <mrow>
+        <msub>
+         <mi>
+          E
+         </mi>
+         <mn>
+          0
+         </mn>
+        </msub>
+        <mo>
+         :
+        </mo>
+        <msup>
+         <mi>
+          y
+         </mi>
+         <mn>
+          2
+         </mn>
+        </msup>
+        <mo>
+         =
+        </mo>
+        <msup>
+         <mi>
+          x
+         </mi>
+         <mn>
+          3
+         </mn>
+        </msup>
+        <mo>
+         +
+        </mo>
+        <mi>
+         x
+        </mi>
+        <mspace>
+        </mspace>
+        <mspace width="0.6667em">
+        </mspace>
+        <mrow>
+         <mi mathvariant="normal">
+          m
+         </mi>
+         <mi mathvariant="normal">
+          o
+         </mi>
+         <mi mathvariant="normal">
+          d
+         </mi>
+        </mrow>
+        <mn>
+         419
+        </mn>
+       </mrow>
+       <annotation encoding="application/x-tex">
+        E_0 : y^{2} = x^{3} + x \mod  419
+       </annotation>
+      </semantics>
+     </math>
+    </span>
+    <span aria-hidden="true" class="katex-html">
+     <span class="base">
+      <span class="strut" style="height: 0.8333em; vertical-align: -0.15em;">
+      </span>
+      <span class="mord">
+       <span class="mord mathnormal" style="margin-right: 0.0576em;">
+        E
+       </span>
+       <span class="msupsub">
+        <span class="vlist-t vlist-t2">
+         <span class="vlist-r">
+          <span class="vlist" style="height: 0.3011em;">
+           <span class="" style="top: -2.55em; margin-left: -0.0576em; margin-right: 0.05em;">
+            <span class="pstrut" style="height: 2.7em;">
+            </span>
+            <span class="sizing reset-size6 size3 mtight">
+             <span class="mord mtight">
+              0
+             </span>
+            </span>
+           </span>
+          </span>
+          <span class="vlist-s">
+           ​
+          </span>
+         </span>
+         <span class="vlist-r">
+          <span class="vlist" style="height: 0.15em;">
+           <span class="">
+           </span>
+          </span>
+         </span>
+        </span>
+       </span>
+      </span>
+      <span class="mspace" style="margin-right: 0.2778em;">
+      </span>
+      <span class="mrel">
+       :
+      </span>
+      <span class="mspace" style="margin-right: 0.2778em;">
+      </span>
+     </span>
+     <span class="base">
+      <span class="strut" style="height: 1.0085em; vertical-align: -0.1944em;">
+      </span>
+      <span class="mord">
+       <span class="mord mathnormal" style="margin-right: 0.0359em;">
+        y
+       </span>
+       <span class="msupsub">
+        <span class="vlist-t">
+         <span class="vlist-r">
+          <span class="vlist" style="height: 0.8141em;">
+           <span class="" style="top: -3.063em; margin-right: 0.05em;">
+            <span class="pstrut" style="height: 2.7em;">
+            </span>
+            <span class="sizing reset-size6 size3 mtight">
+             <span class="mord mtight">
+              <span class="mord mtight">
+               2
+              </span>
+             </span>
+            </span>
+           </span>
+          </span>
+         </span>
+        </span>
+       </span>
+      </span>
+      <span class="mspace" style="margin-right: 0.2778em;">
+      </span>
+      <span class="mrel">
+       =
+      </span>
+      <span class="mspace" style="margin-right: 0.2778em;">
+      </span>
+     </span>
+     <span class="base">
+      <span class="strut" style="height: 0.8974em; vertical-align: -0.0833em;">
+      </span>
+      <span class="mord">
+       <span class="mord mathnormal">
+        x
+       </span>
+       <span class="msupsub">
+        <span class="vlist-t">
+         <span class="vlist-r">
+          <span class="vlist" style="height: 0.8141em;">
+           <span class="" style="top: -3.063em; margin-right: 0.05em;">
+            <span class="pstrut" style="height: 2.7em;">
+            </span>
+            <span class="sizing reset-size6 size3 mtight">
+             <span class="mord mtight">
+              <span class="mord mtight">
+               3
+              </span>
+             </span>
+            </span>
+           </span>
+          </span>
+         </span>
+        </span>
+       </span>
+      </span>
+      <span class="mspace" style="margin-right: 0.2222em;">
+      </span>
+      <span class="mbin">
+       +
+      </span>
+      <span class="mspace" style="margin-right: 0.2222em;">
+      </span>
+     </span>
+     <span class="base">
+      <span class="strut" style="height: 0.4306em;">
+      </span>
+      <span class="mord mathnormal">
+       x
+      </span>
+      <span class="mspace allowbreak">
+      </span>
+      <span class="mspace" style="margin-right: 0.6667em;">
+      </span>
+     </span>
+     <span class="base">
+      <span class="strut" style="height: 0.6944em;">
+      </span>
+      <span class="mord">
+       <span class="mord">
+        <span class="mord mathrm">
+         mod
+        </span>
+       </span>
+      </span>
+      <span class="mspace" style="margin-right: 0.1667em;">
+      </span>
+      <span class="mspace" style="margin-right: 0.1667em;">
+      </span>
+      <span class="mord">
+       419
+      </span>
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ <br/>
+ <br/>
+ <span class="note">
+  <i class="fas fa-brain">
+  </i>
+  In the CSIDH exponent vector, when an integer is positive we take
+  <span>
+   <span class="katex">
+    <span class="katex-mathml">
+     <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <semantics>
+       <mrow>
+        <mi>
+         e
+        </mi>
+       </mrow>
+       <annotation encoding="application/x-tex">
+        e
+       </annotation>
+      </semantics>
+     </math>
+    </span>
+    <span aria-hidden="true" class="katex-html">
+     <span class="base">
+      <span class="strut" style="height: 0.4306em;">
+      </span>
+      <span class="mord mathnormal">
+       e
+      </span>
+     </span>
+    </span>
+   </span>
+  </span>
+  steps from the curve on the
+  <span>
+   <span class="katex">
+    <span class="katex-mathml">
+     <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <semantics>
+       <mrow>
+        <mi mathvariant="normal">
+         ℓ
+        </mi>
+       </mrow>
+       <annotation encoding="application/x-tex">
+        \ell
+       </annotation>
+      </semantics>
+     </math>
+    </span>
+    <span aria-hidden="true" class="katex-html">
+     <span class="base">
+      <span class="strut" style="height: 0.6944em;">
+      </span>
+      <span class="mord">
+       ℓ
+      </span>
+     </span>
+    </span>
+   </span>
+  </span>
+  -isogeny graph. When the integer is negative, we take
+  <span>
+   <span class="katex">
+    <span class="katex-mathml">
+     <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <semantics>
+       <mrow>
+        <mi>
+         e
+        </mi>
+       </mrow>
+       <annotation encoding="application/x-tex">
+        e
+       </annotation>
+      </semantics>
+     </math>
+    </span>
+    <span aria-hidden="true" class="katex-html">
+     <span class="base">
+      <span class="strut" style="height: 0.4306em;">
+      </span>
+      <span class="mord mathnormal">
+       e
+      </span>
+     </span>
+    </span>
+   </span>
+  </span>
+  steps from the
+  <emph>
+   quadratic twist
+  </emph>
+  of the curve on the
+  <span>
+   <span class="katex">
+    <span class="katex-mathml">
+     <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <semantics>
+       <mrow>
+        <mi mathvariant="normal">
+         ℓ
+        </mi>
+       </mrow>
+       <annotation encoding="application/x-tex">
+        \ell
+       </annotation>
+      </semantics>
+     </math>
+    </span>
+    <span aria-hidden="true" class="katex-html">
+     <span class="base">
+      <span class="strut" style="height: 0.6944em;">
+      </span>
+      <span class="mord">
+       ℓ
+      </span>
+     </span>
+    </span>
+   </span>
+  </span>
+  -isogeny graph.
+ </span>
+ <br/>
+ <br/>
+ <b>
+  Resources:
+ </b>
+ <br/>
+ -
+ <a href="https://ocw.mit.edu/courses/18-783-elliptic-curves-spring-2021/5e4e3bd15c9a81db2ac186628da095bf_MIT18_783S21_notes7.pdf" target="_blank">
+  The quadratic twist of an elliptic curve, Section 7.6, Andrew Sutherland
+ </a>
+ <br/>
+ -
+ <a href="https://yx7.cc/docs/isog/isog_icetalk_slides.pdf" target="_blank">
+  Isogenies: The basics, some applications, and nothing much in between, Lorenz Panny
+ </a>
+ <br/>
+ <!-- </p> -->
+</div>

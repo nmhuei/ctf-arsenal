@@ -1,0 +1,153 @@
+<div class="challengeDescription">
+ <!-- <p> -->
+ Recall that we only proved Schnorr's protocol to be SHVZK, and while this was enough to make maliciously secure NIZK's, this leaves the question of "what could happen if V isn't honest?"
+ <br/>
+ <br/>
+ This challenge is an implementation of Girault's identification protocol for proving knowledge of a witness for a DLOG relation, but modulo some composite
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi>
+        N
+       </mi>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       N
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 0.6833em;">
+     </span>
+     <span class="mord mathnormal" style="margin-right: 0.109em;">
+      N
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ instead of a prime.
+ <br/>
+ <br/>
+ You are the verifier, and the prover will show that they know the flag using an interactive
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi mathvariant="normal">
+        Σ
+       </mi>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       \Sigma
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 0.6833em;">
+     </span>
+     <span class="mord">
+      Σ
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ -Protocol. Extract the flag by selecting a malicious
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi>
+        e
+       </mi>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       e
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 0.4306em;">
+     </span>
+     <span class="mord mathnormal">
+      e
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ .
+ <br/>
+ <br/>
+ <span class="note">
+  <i class="fas fa-brain">
+  </i>
+  Note that proving something to be a
+  <span>
+   <span class="katex">
+    <span class="katex-mathml">
+     <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <semantics>
+       <mrow>
+        <mi mathvariant="normal">
+         Σ
+        </mi>
+       </mrow>
+       <annotation encoding="application/x-tex">
+        \Sigma
+       </annotation>
+      </semantics>
+     </math>
+    </span>
+    <span aria-hidden="true" class="katex-html">
+     <span class="base">
+      <span class="strut" style="height: 0.6833em;">
+      </span>
+      <span class="mord">
+       Σ
+      </span>
+     </span>
+    </span>
+   </span>
+  </span>
+  -Protocol only makes it secure against an "honest" verifier. If we want to use a protocol in a setting where the verifier can't be trusted to be honest, you can either make the proof non-interactive, or convert the SHVZK protocol into a maliciously secure ZK protocol, (there exist generic transformations which generally add another round of interaction.)
+ </span>
+ <br/>
+ <br/>
+ Connect at
+ <code>
+  socket.cryptohack.org 13429
+ </code>
+ <br/>
+ <br/>
+ <b>
+  Challenge files:
+ </b>
+ <br/>
+ -
+ <a download="" href="/static/challenges/13429_2520b4ebce10bd8b830bc5dc3d67da2b.py">
+  13429.py
+ </a>
+ <br/>
+ <br/>
+ <br/>
+ Challenge contributed by
+ <a class="gold-link" href="/user/oberon">
+  oberon
+ </a>
+ <!-- </p> -->
+</div>

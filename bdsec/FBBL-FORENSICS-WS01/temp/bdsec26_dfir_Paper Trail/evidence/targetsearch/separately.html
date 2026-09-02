@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Search results - FirstBangla Mail</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+
+<div class="topbar">
+  <div class="topbar-left">
+    <div class="brand">
+      <div class="brand-mark">FB</div>
+      <span class="brand-name">FirstBangla Mail</span>
+    </div>
+  </div>
+  <div class="topbar-center">
+    <form class="searchform" method="get" action="/search" role="search">
+      <button type="submit" class="searchform-icon" aria-label="Search">&#128269;</button>
+      <input type="text" name="q" placeholder="Search mail" value="separately" autocomplete="off">
+      
+      <a class="searchform-clear" href="/search" aria-label="Clear search">&#10005;</a>
+      
+    </form>
+  </div>
+  <div class="topbar-right">
+    <span class="user-chip">
+      <span class="user-avatar">A</span>
+      <span class="user-name">Arif Khan</span>
+    </span>
+    <a class="logout-link" href="/logout">Sign out</a>
+  </div>
+</div>
+<div class="layout">
+  <div class="sidebar">
+    <div class="compose-btn" title="Composing is disabled in this archive view">+ Compose</div>
+    <nav class="folder-nav">
+      <a class="folder-link " href="/mail/inbox">
+        <span class="folder-icon">&#128229;</span> Inbox
+        <span class="folder-count">761</span>
+      </a>
+      <a class="folder-link " href="/mail/sent">
+        <span class="folder-icon">&#128228;</span> Sent
+        <span class="folder-count">486</span>
+      </a>
+    </nav>
+    <div class="sidebar-footer">
+      arif.khan@firstbangla.com
+    </div>
+  </div>
+  <div class="main-pane">
+    <div class="pane-header">
+      <h1>Search results</h1>
+      <span class="filter-note">1 result(s) for "separately"</span>
+      <form class="sort-bar" method="get">
+        <input type="hidden" name="q" value="separately">
+        <label for="sort">Sort</label>
+        <select id="sort" name="sort" class="sort-select">
+          <option value="relevance" selected>Most relevant</option>
+          <option value="date_desc" >Newest first</option>
+          <option value="date_asc" >Oldest first</option>
+        </select>
+      </form>
+    </div>
+    <div class="mail-table">
+      
+      
+      <a class="mail-row" href="/mail/inbox/20240122-233000_0923_re-timing.eml">
+        <span class="mail-avatar">A</span>
+        <span class="mail-folder-tag">inbox</span>
+        <span class="mail-person">A. Reza</span>
+        <span class="mail-subject">Re: timing</span>
+        <span class="mail-snippet">&mdash; …the conference trip for a quiet week. Rajesh will reach out <mark>separately</mark> about staging the materials. In the meantime, set up a wallet you don&#39;t use for anything else.</span>
+        <span class="mail-date">22 Jan 2024, 11:30 PM</span>
+      </a>
+      
+    </div>
+  </div>
+</div>
+<script src="/static/app.js" defer></script>
+</body>
+</html>

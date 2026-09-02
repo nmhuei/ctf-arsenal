@@ -1,0 +1,11 @@
+FROM python:3.14.6-slim-trixie@sha256:44dd04494ee8f3b538294360e7c4b3acb87c8268e4d0a4828a6500b1eff50061
+
+RUN pip install --no-cache-dir mojo==1.0.0b2
+
+COPY --chmod=755 🔥.py /app/run
+RUN echo "jail{test_flag_for_local}" > /flag-test1234.txt
+
+EXPOSE 5000
+WORKDIR /app
+RUN apt-get update && apt-get install -y socat && rm -rf /var/lib/apt/lists/*
+CMD ["socat", "TCP-LISTEN:5000,reuseaddr,fork", "EXEC:/app/run"]

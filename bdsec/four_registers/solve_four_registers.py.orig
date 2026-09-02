@@ -1,0 +1,148 @@
+#!/usr/bin/env python3
+"""
+BDSec CTF 2026 — four_registers (ELF64, "only four registers")
+The binary is a 4-register VM. Line-by-line assembly is accumulated for 14
+lines then committed when the line "VEN" is typed. Finally it checks the
+resulting 32-bit registers, a carry flag, an opcode-usage mask, and an FNV-style
+hash of the program; on success it derives and prints the flag from the program
+trace.
+
+This script models the VM in Z3, solves for the unique 14-instruction program,
+then feeds it to the real binary to obtain the flag.
+"""
+import subprocess, os, sys
+from z3 import *
+
+V = lambda x: x & 0xFFFFFFFF
+
+OPS = {"MOVI": 0x13, "ADD": 0x27, "XOR": 0x39, "ROL": 0x4B, "SWAP": 0x5D, "MIX": 0x6F}
+INV = {v: k for k, v in OPS.items()}
+M   = 16777619          # hash multiplier
+MAGIC = 0xA5A5A5A5
+HASH0 = 0x811C9DC5      # FNV-1a offset basis
+INIT = [0x13579BDF, 0x2468ACE0, 0x0BADF00D, 0xC001D00D]
+TGT  = [0xD0F7F5A4, 0x71D63782, 0x2C458DAC, 0x8C64DE6C]
+TGT_HASH = 231944115
+N = 14
+
+def rol32(x, n):
+    return RotateLeft(x, n)
+
+def main():
+    s = Solver()
+    ops = [BitVec(f"op{i}", 8)  for i in range(N)]
+    r1s = [BitVec(f"r1{i}", 8)  for i in range(N)]
+    r2s = [BitVec(f"r2{i}", 8)  for i in range(N)]
+
+    for i in range(N):
+        op, r1, r2 = ops[i], r1s[i], r2s[i]
+        s.add(Or(*[op == c for c in OPS.values()]))
+        s.add(ULE(r1, 3))
+        s.add(Implies(op == OPS["ROL"],  And(UGE(r2, 1), ULE(r2, 31))))
+        s.add(Implies(op == OPS["MOVI"], ULE(r2, 0xFF)))
+        s.add(Implies(op == OPS["ADD"],  ULE(r2, 0xFF)))
+        s.add(Implies(op == OPS["XOR"],  ULE(r2, 0xFF)))
+        s.add(Implies(op == OPS["SWAP"], And(ULE(r2, 3), r2 != r1)))
+        s.add(Implies(op == OPS["MIX"],  And(ULE(r2, 3), r2 != r1)))
+    for c in OPS.values():
+        s.add(Or(*[ops[i] == c for i in range(N)]))
+
+    regs = [BitVecVal(x, 32) for x in [0x13579BDF, 0x2468ACE0, 0x0BADF00D, 0xC001D00D]]
+    carry = BitVecVal(0, 1)
+    hsh   = BitVecVal(HASH0, 32)
+    v29   = None
+
+    def rread(r, regs):
+        return If(r == 0, regs[0], If(r == 1, regs[1], If(r == 2, regs[2], regs[3])))
+
+    for i in range(N):
+        op, r, r2 = ops[i], r1s[i], r2s[i]
+
+        def make_vector(opcase, dr, val):
+            # new regs vector after writing val into register dr (r handles r1)
+            return [If(dr == j, val, regs[j]) for j in range(4)]
+
+        va = rread(r, regs)
+        vb = rread(r2, regs)
+
+        # candidate updates (all as write-into-r1)
+        movi = Concat(Extract(31, 8, va), r2)
+        z64 = lambda x: ZeroExt(64 - x.size(), x)
+        asum = z64(va) + z64(carry) + z64(r2)
+        addv = Extract(31, 0, asum)
+        addc = Extract(32, 32, asum)
+        xorv = va ^ Concat(r2, Concat(r2, Concat(r2, r2)))
+        rolv = rol32(va, ZeroExt(24, r2))
+        # MIX: reg[r1] = ROL32(reg[r2] ^ reg[r1], (reg[r2] & 7) + 1) + carry - 0x61C88647
+        mixv = rol32(vb ^ va, (vb & 7) + 1) + ZeroExt(31, carry) - BitVecVal(0x61C88647, 32)
+        mixc = Extract(31, 31, mixv)
+
+        # per-op vector operators
+        sw = [If(r == j, vb, If(r2 == j, va, regs[j])) for j in range(4)]
+        mov = [If(r == j, movi, regs[j]) for j in range(4)]
+        add = [If(r == j, addv, regs[j]) for j in range(4)]
+        xor = [If(r == j, xorv, regs[j]) for j in range(4)]
+        rol = [If(r == j, rolv, regs[j]) for j in range(4)]
+        mix = [If(r == j, mixv, regs[j]) for j in range(4)]
+
+        regs = [
+            If(op == OPS["SWAP"], sw[j],
+            If(op == OPS["MOVI"], mov[j],
+            If(op == OPS["ADD"],  add[j],
+            If(op == OPS["XOR"],  xor[j],
+            If(op == OPS["ROL"],  rol[j], mix[j])))))
+            for j in range(4)
+        ]
+        c_movi = BitVecVal(0, 1)
+        c_add  = addc
+        c_mix  = mixc
+        carry = If(op == OPS["SWAP"], carry,
+               If(op == OPS["MOVI"], c_movi,
+               If(op == OPS["ADD"],  c_add,
+               If(op == OPS["XOR"],  carry,
+               If(op == OPS["ROL"],  carry, c_mix)))))
+
+        # hash step (FNV-ish, all op/reg/imms promoted to 32-bit)
+        t = rol32((hsh ^ ZeroExt(24, op)) * M, 5)
+        t = rol32((ZeroExt(24, r) ^ t ^ MAGIC) * M, 5)
+        v29 = ZeroExt(24, r2) ^ t
+        hsh = rol32(((v29 ^ MAGIC) * M), 5) ^ MAGIC
+
+    for j in range(4):
+        s.add(regs[j] == TGT[j])
+    s.add(carry == 1)
+    s.add(v29 == TGT_HASH)
+
+    print("solving...")
+    r = s.check()
+    if r != sat:
+        print("UNSAT:", r)
+        sys.exit(1)
+    m = s.model()
+
+    prog = []
+    for i in range(N):
+        op = m.eval(ops[i]).as_long()
+        r1 = m.eval(r1s[i]).as_long()
+        r2 = m.eval(r2s[i]).as_long()
+        prog.append((INV[op], r1, r2))
+        print(f"  {i:2d}: {INV[op]:4} R{r1} {r2}")
+
+    asm = []
+    for name, r1, r2 in prog:
+        if name in ("SWAP", "MIX"):
+            asm.append(f"{name} R{r1} R{r2}")
+        else:
+            asm.append(f"{name} R{r1} {r2}")
+    asm.append("VEN")
+
+    binpath = sys.argv[1] if len(sys.argv) > 1 else "./four_registers"
+    out = subprocess.run([binpath], input="\n".join(asm) + "\n",
+                         capture_output=True, text=True)
+    print("--- binary output ---")
+    print(out.stdout)
+    print(out.stderr)
+    return prog, asm
+
+if __name__ == "__main__":
+    main()

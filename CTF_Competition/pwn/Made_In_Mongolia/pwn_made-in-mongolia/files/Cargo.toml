@@ -1,0 +1,17 @@
+[workspace]
+resolver = "3"
+members = ["app", "runner"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+license = "MIT"
+
+[workspace.dependencies]
+tracing = "0.1"
+tracing-logfmt = "0.3"
+
+[profile.release]
+lto = true
+codegen-units = 1
+strip = true

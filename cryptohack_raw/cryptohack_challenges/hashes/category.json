@@ -1,0 +1,264 @@
+{
+  "title": "Hash Functions",
+  "slug": "hashes",
+  "url": "https://cryptohack.org/challenges/hashes/",
+  "completed": "0",
+  "total": "14",
+  "description_text": "Hash Functions A hash function is a function which takes an arbitrary long string of bits and produces a fixed-length output. Hash functions have applications in data structures, string-searching and even in video game design. Here we're interested in a subset of hash functions which are suitable for cryptographic purposes. Cryptographic hash functions are designed to be one-way: functions that are practically impossible to invert. This is in contrast to the functions used in asymmetric cryptography, where trapdoor functions are infeasible to invert unless some additional secret knowledge is known. Cryptographic hash functions are used to verify message integrity, compute digital signatures, and safely store passwords in databases. In asymmetric cryptography, hash functions are particularly useful in compressing arbitrary length messages to a value which has a smaller bit-length than the modulus when signing messages with RSA or protocols such as (EC)DSA or Elgamal. For a hash function to be cryptographically secure, it must be resistant to the following three attacks: Pre-image attacks : given the output of a hash function x = hash(m) , it must be practically impossible to find a message m0 such that hash(m0) = x . This is another way of saying that the hash must be a one-way function. Second pre-image resistance: given a message m1 , it must be practically impossible to find a message m2 such that hash(m1) = hash(m2) . Collision resistance : it should be practically impossible to find two messages m1, m2 such that hash(m1) = hash(m2) . Note the difference to the second pre-image attack, in that we can vary both m1 and m2 . We can think of this as a linked set of dependencies, if a pre-image attack is known, so are second pre-image attacks and collision attacks. But if a collision attack is known, this doesn't generically allow pre-image attacks against the hash function. Ultimately, it is impossible for a hash function to be totally secure against these attacks, in the same way symmetric and asymmetric ciphers can have their protocols brute forced. Even given a perfect one-way function, as the output has a fixed length, there will be infinitely many inputs that yield any chosen output. The goal for a cryptographic hash function is then to have algorithms designed to make the above problems \"sufficiently\" hard assuming an attackers compute power. In the following challenges, we present custom hash functions which do not meet these criteria, or older cryptographic hash functions which have been found to be vulnerable to attacks.",
+  "stages": [
+    {
+      "title": "Probability",
+      "slug": "probability"
+    },
+    {
+      "title": "Collisions",
+      "slug": "collisions"
+    },
+    {
+      "title": "Length Extension",
+      "slug": "length-extension"
+    },
+    {
+      "title": "Pre-image attacks",
+      "slug": "pre-image"
+    },
+    {
+      "title": "Hash-based Cryptography",
+      "slug": "hashbased"
+    }
+  ],
+  "challenge_count": 14,
+  "challenges": [
+    {
+      "title": "Jack's Birthday Hash",
+      "stage": "Probability",
+      "path": "hashes/probability/jack-s-birthday-hash",
+      "attachments": []
+    },
+    {
+      "title": "Jack's Birthday Confusion",
+      "stage": "Probability",
+      "path": "hashes/probability/jack-s-birthday-confusion",
+      "attachments": []
+    },
+    {
+      "title": "Collider",
+      "stage": "Collisions",
+      "path": "hashes/collisions/collider",
+      "attachments": [
+        {
+          "text": "13389.py",
+          "href": "/static/challenges/13389_1044beb3c8949c7ee5813a8b1871e388.py",
+          "url": "https://cryptohack.org/static/challenges/13389_1044beb3c8949c7ee5813a8b1871e388.py",
+          "download": true,
+          "saved_as": "files/13389_1044beb3c8949c7ee5813a8b1871e388.py",
+          "status": 200,
+          "size": 2213
+        }
+      ]
+    },
+    {
+      "title": "Hash Stuffing",
+      "stage": "Collisions",
+      "path": "hashes/collisions/hash-stuffing",
+      "attachments": [
+        {
+          "text": "source.py",
+          "href": "/static/challenges/source_8435bf432bcd68b3bf16736a8a47a003.py",
+          "url": "https://cryptohack.org/static/challenges/source_8435bf432bcd68b3bf16736a8a47a003.py",
+          "download": true,
+          "saved_as": "files/source_8435bf432bcd68b3bf16736a8a47a003.py",
+          "status": 200,
+          "size": 1869
+        }
+      ]
+    },
+    {
+      "title": "PriMeD5",
+      "stage": "Collisions",
+      "path": "hashes/collisions/primed5",
+      "attachments": [
+        {
+          "text": "13392.py",
+          "href": "/static/challenges/13392_a01a0d939c2f1a41d4d48933acc31e1a.py",
+          "url": "https://cryptohack.org/static/challenges/13392_a01a0d939c2f1a41d4d48933acc31e1a.py",
+          "download": true,
+          "saved_as": "files/13392_a01a0d939c2f1a41d4d48933acc31e1a.py",
+          "status": 200,
+          "size": 1935
+        }
+      ]
+    },
+    {
+      "title": "Twin Keys",
+      "stage": "Collisions",
+      "path": "hashes/collisions/twin-keys",
+      "attachments": [
+        {
+          "text": "13397.py",
+          "href": "/static/challenges/13397_2da9a4fc83bf4d52892538136971b664.py",
+          "url": "https://cryptohack.org/static/challenges/13397_2da9a4fc83bf4d52892538136971b664.py",
+          "download": true,
+          "saved_as": "files/13397_2da9a4fc83bf4d52892538136971b664.py",
+          "status": 200,
+          "size": 2567
+        }
+      ]
+    },
+    {
+      "title": "No Difference",
+      "stage": "Collisions",
+      "path": "hashes/collisions/no-difference",
+      "attachments": [
+        {
+          "text": "13395.py",
+          "href": "/static/challenges/13395_5ed60003866ba89ca3db17fbd446b841.py",
+          "url": "https://cryptohack.org/static/challenges/13395_5ed60003866ba89ca3db17fbd446b841.py",
+          "download": true,
+          "saved_as": "files/13395_5ed60003866ba89ca3db17fbd446b841.py",
+          "status": 200,
+          "size": 3451
+        }
+      ]
+    },
+    {
+      "title": "MD0",
+      "stage": "Length Extension",
+      "path": "hashes/length-extension/md0",
+      "attachments": [
+        {
+          "text": "13388.py",
+          "href": "/static/challenges/13388_25e6ecf23e99d2590782f77b3327f862.py",
+          "url": "https://cryptohack.org/static/challenges/13388_25e6ecf23e99d2590782f77b3327f862.py",
+          "download": true,
+          "saved_as": "files/13388_25e6ecf23e99d2590782f77b3327f862.py",
+          "status": 200,
+          "size": 1728
+        }
+      ]
+    },
+    {
+      "title": "MDFlag",
+      "stage": "Length Extension",
+      "path": "hashes/length-extension/mdflag",
+      "attachments": [
+        {
+          "text": "13407.py",
+          "href": "/static/challenges/13407_f54e9b0e86fdf85b7ef0ad8762d0cf8e.py",
+          "url": "https://cryptohack.org/static/challenges/13407_f54e9b0e86fdf85b7ef0ad8762d0cf8e.py",
+          "download": true,
+          "saved_as": "files/13407_f54e9b0e86fdf85b7ef0ad8762d0cf8e.py",
+          "status": 200,
+          "size": 1024
+        }
+      ]
+    },
+    {
+      "title": "Mixed Up",
+      "stage": "Pre-image attacks",
+      "path": "hashes/pre-image/mixed-up",
+      "attachments": [
+        {
+          "text": "13402.py",
+          "href": "/static/challenges/13402_6e135c0f953665691b625db0710aa6ec.py",
+          "url": "https://cryptohack.org/static/challenges/13402_6e135c0f953665691b625db0710aa6ec.py",
+          "download": true,
+          "saved_as": "files/13402_6e135c0f953665691b625db0710aa6ec.py",
+          "status": 200,
+          "size": 1477
+        }
+      ]
+    },
+    {
+      "title": "Invariant",
+      "stage": "Pre-image attacks",
+      "path": "hashes/pre-image/invariant",
+      "attachments": [
+        {
+          "text": "13393.py",
+          "href": "/static/challenges/13393_6eac484069c511cc17a276266c645891.py",
+          "url": "https://cryptohack.org/static/challenges/13393_6eac484069c511cc17a276266c645891.py",
+          "download": true,
+          "saved_as": "files/13393_6eac484069c511cc17a276266c645891.py",
+          "status": 200,
+          "size": 3274
+        }
+      ]
+    },
+    {
+      "title": "Merkle Trees",
+      "stage": "Hash-based Cryptography",
+      "path": "hashes/hashbased/merkle-trees",
+      "attachments": [
+        {
+          "text": "generate.py",
+          "href": "/static/challenges/generate_15fce6199904ba00202bb32d01a11551.py",
+          "url": "https://cryptohack.org/static/challenges/generate_15fce6199904ba00202bb32d01a11551.py",
+          "download": true,
+          "saved_as": "files/generate_15fce6199904ba00202bb32d01a11551.py",
+          "status": 200,
+          "size": 882
+        },
+        {
+          "text": "output.txt",
+          "href": "/static/challenges/output_1091e36a2522c149f174d6721df7ab02.txt",
+          "url": "https://cryptohack.org/static/challenges/output_1091e36a2522c149f174d6721df7ab02.txt",
+          "download": true,
+          "saved_as": "files/output_1091e36a2522c149f174d6721df7ab02.txt",
+          "status": 200,
+          "size": 103323
+        }
+      ]
+    },
+    {
+      "title": "WOTS Up",
+      "stage": "Hash-based Cryptography",
+      "path": "hashes/hashbased/wots-up",
+      "attachments": [
+        {
+          "text": "chal.py",
+          "href": "/static/challenges/chal_dd02099acd9ffe4e8821daf5fc3b583c.py",
+          "url": "https://cryptohack.org/static/challenges/chal_dd02099acd9ffe4e8821daf5fc3b583c.py",
+          "download": true,
+          "saved_as": "files/chal_dd02099acd9ffe4e8821daf5fc3b583c.py",
+          "status": 200,
+          "size": 2353
+        },
+        {
+          "text": "data.json",
+          "href": "/static/challenges/data_fd54ee361e446499d28fb7c04c0669f4.json",
+          "url": "https://cryptohack.org/static/challenges/data_fd54ee361e446499d28fb7c04c0669f4.json",
+          "download": true,
+          "saved_as": "files/data_fd54ee361e446499d28fb7c04c0669f4.json",
+          "status": 200,
+          "size": 4525
+        }
+      ]
+    },
+    {
+      "title": "WOTS Up 2",
+      "stage": "Hash-based Cryptography",
+      "path": "hashes/hashbased/wots-up-2",
+      "attachments": [
+        {
+          "text": "chal.py",
+          "href": "/static/challenges/chal_455b7cde5b008daa22efc2ff172c9f28.py",
+          "url": "https://cryptohack.org/static/challenges/chal_455b7cde5b008daa22efc2ff172c9f28.py",
+          "download": true,
+          "saved_as": "files/chal_455b7cde5b008daa22efc2ff172c9f28.py",
+          "status": 200,
+          "size": 2591
+        },
+        {
+          "text": "data.json",
+          "href": "/static/challenges/data_c1cf7f9624cc5c43e06c5c10b551a0e3.json",
+          "url": "https://cryptohack.org/static/challenges/data_c1cf7f9624cc5c43e06c5c10b551a0e3.json",
+          "download": true,
+          "saved_as": "files/data_c1cf7f9624cc5c43e06c5c10b551a0e3.json",
+          "status": 200,
+          "size": 49494
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+
+=== bos [151643] ===
+step 0 consumed 10 tok 1637 sel 240 k 59999 n 10 tail 'IS'
+step 1 consumed 18 tok 1791 sel 92 k 59999 n 8 tail 'ISIM'
+step 2 consumed 31 tok 11139 sel 874 k 60000 n 13 tail 'ISIM_DEBUG'
+step 3 consumed 37 tok 284 sel 3 k 59999 n 6 tail 'ISIM_DEBUG ='
+step 4 consumed 53 tok 503 sel 1107 k 59999 n 16 tail 'ISIM_DEBUG =                   '
+step 5 consumed 63 tok 341 sel 18 k 60000 n 10 tail 'ISIM_DEBUG =                    {\n'
+step 6 consumed 73 tok 4293 sel 31 k 59999 n 10 tail 'ISIM_DEBUG =                    {\n                  '
+step 7 consumed 73 tok 330 sel 0 k 59999 n 0 tail 'ISIM_DEBUG =                    {\n                   "'
+step 8 consumed 82 tok 813 sel 724 k 60000 n 9 tail 'ISIM_DEBUG =                    {\n                   "old'
+step 9 consumed 96 tok 3909 sel 919 k 60000 n 14 tail 'ISIM_DEBUG =                    {\n                   "old.txt'
+step 10 consumed 96 tok 788 sel 0 k 59999 n 0 tail 'ISIM_DEBUG =                    {\n                   "old.txt":'
+step 11 consumed 96 tok 310 sel 4 k 59999 n 0 tail 'ISIM_DEBUG =                    {\n                   "old.txt":           '
+step 12 consumed 96 tok 14482 sel 57 k 60000 n 0 tail 'ISIM_DEBUG =                    {\n                   "old.txt":            "--'
+step 13 consumed 96 tok 2310 sel 2 k 59999 n 0 tail 'ISIM_DEBUG =                    {\n                   "old.txt":            "-- old'
+step 14 consumed 96 tok 5181 sel 26 k 60000 n 0 tail 'ISIM_DEBUG =                    {\n                   "old.txt":            "-- old flag'
+step 15 consumed 96 tok 369 sel 2 k 59971 n 0 tail 'ISIM_DEBUG =                    {\n                   "old.txt":            "-- old flag for'
+step 16 consumed 96 tok 7390 sel 0 k 52422 n 0 tail 'ISIM_DEBUG =                    {\n                   "old.txt":            "-- old flag for debug'
+step 17 consumed 96 tok 3546 sel 3 k 22109 n 0 tail 'ISIM_DEBUG =                    {\n                   "old.txt":            "-- old flag for debug info'
+step 18 consumed 96 tok 756 sel 0 k 2151 n 0 tail 'ISIM_DEBUG =                    {\n                   "old.txt":            "-- old flag for debug info",\n'
+step 19 consumed 96 tok 4293 sel 0 k 54 n 0 tail 'ISIM_DEBUG =                    {\n                   "old.txt":            "-- old flag for debug info",\n                  '
+step 20 consumed 96 tok 330 sel 0 k 63 n 0 tail 'ISIM_DEBUG =                    {\n                   "old.txt":            "-- old flag for debug info",\n                   "'
+step 21 consumed 96 tok 2258 sel 44 k 2905 n 0 tail 'ISIM_DEBUG =                    {\n                   "old.txt":            "-- old flag for debug info",\n                   "default'
+step 22 consumed 96 tok 3909 sel 0 k 3 n 0 tail 'ISIM_DEBUG =                    {\n                   "old.txt":            "-- old flag for debug info",\n                   "default.txt'
+step 23 consumed 96 tok 788 sel 0 k 2 n 0 tail 'ISIM_DEBUG =                    {\n                   "old.txt":            "-- old flag for debug info",\n                   "default.txt":'
+step 24 consumed 96 tok 688 sel 0 k 3 n 0 tail 'ISIM_DEBUG =                    {\n                   "old.txt":            "-- old flag for debug info",\n                   "default.txt":         '
+step 25 consumed 96 tok 14482 sel 0 k 2 n 0 tail 'ISIM_DEBUG =                    {\n                   "old.txt":            "-- old flag for debug info",\n                   "default.txt":          "--'
+step 26 consumed 96 tok 1638 sel 0 k 8 n 0 tail 'ISIM_DEBUG =                    {\n                   "old.txt":            "-- old flag for debug info",\n                   "default.txt":          "-- default'
+step 27 consumed 96 tok 5181 sel 0 k 3 n 0 tail '_DEBUG =                    {\n                   "old.txt":            "-- old flag for debug info",\n                   "default.txt":          "-- default flag'
+step 28 consumed 96 tok 369 sel 0 k 2 n 0 tail 'UG =                    {\n                   "old.txt":            "-- old flag for debug info",\n                   "default.txt":          "-- default flag for'
+step 29 consumed 96 tok 7390 sel 0 k 2 n 0 tail '                  {\n                   "old.txt":            "-- old flag for debug info",\n                   "default.txt":          "-- default flag for debug'
+step 30 consumed 96 tok 3546 sel 0 k 2 n 0 tail '             {\n                   "old.txt":            "-- old flag for debug info",\n                   "default.txt":          "-- default flag for debug info'
+step 31 consumed 96 tok 756 sel 0 k 3 n 0 tail '          {\n                   "old.txt":            "-- old flag for debug info",\n                   "default.txt":          "-- default flag for debug info",\n'
+step 32 consumed 96 tok 4293 sel 0 k 2 n 0 tail '             "old.txt":            "-- old flag for debug info",\n                   "default.txt":          "-- default flag for debug info",\n                  '
+step 33 consumed 96 tok 330 sel 0 k 2 n 0 tail '           "old.txt":            "-- old flag for debug info",\n                   "default.txt":          "-- default flag for debug info",\n                   "'
+step 34 consumed 96 tok 2258 sel 6 k 8 n 0 tail '    "old.txt":            "-- old flag for debug info",\n                   "default.txt":          "-- default flag for debug info",\n                   "default'
+step 35 consumed 159 tok 788 sel 1 k 2 n 63 tail '  "old.txt":            "-- old flag for debug info",\n                   "default.txt":          "-- default flag for debug info",\n                   "default":'
+BITS EXHAUSTED
+FINAL bos consumed 159 tokens [1637, 1791, 11139, 284, 503, 341, 4293, 330, 813, 3909, 788, 310, 14482, 2310, 5181, 369, 7390, 3546, 756, 4293, 330, 2258, 3909, 788, 688, 14482, 1638, 5181, 369, 7390, 3546, 756, 4293, 330, 2258, 788]
+ISIM_DEBUG =                    {
+                   "old.txt":            "-- old flag for debug info",
+                   "default.txt":          "-- default flag for debug info",
+                   "default":
+
+=== eos [151645] ===
+step 0 consumed 11 tok 12119 sel 869 k 59999 n 11 tail '.substring'
+step 1 consumed 17 tok 1507 sel 8 k 60000 n 6 tail '.substring(),'
+step 2 consumed 21 tok 330 sel 1 k 59999 n 4 tail '.substring(), "'
+step 3 consumed 25 tok 16 sel 1 k 59999 n 4 tail '.substring(), "1'
+step 4 consumed 31 tok 1138 sel 21 k 59999 n 6 tail '.substring(), "1")\n'
+step 5 consumed 36 tok 310 sel 2 k 59999 n 5 tail '.substring(), "1")\n           '
+step 6 consumed 50 tok 22950 sel 2097 k 59999 n 14 tail '.substring(), "1")\n            Push'
+step 7 consumed 58 tok 2052 sel 6 k 59999 n 8 tail '.substring(), "1")\n            PushMessage'
+step 8 consumed 73 tok 31319 sel 8150 k 60000 n 15 tail '.substring(), "1")\n            PushMessage.po'
+step 9 consumed 79 tok 16644 sel 1 k 59999 n 6 tail '.substring(), "1")\n            PushMessage.poPush'
+step 10 consumed 87 tok 2043 sel 23 k 60000 n 8 tail '.substring(), "1")\n            PushMessage.poPushManager'
+step 11 consumed 93 tok 9554 sel 10 k 60000 n 6 tail '.substring(), "1")\n            PushMessage.poPushManager.getInstance'
+step 12 consumed 96 tok 741 sel 1 k 59999 n 3 tail '.substring(), "1")\n            PushMessage.poPushManager.getInstance()\n'
+step 13 consumed 96 tok 310 sel 2 k 60000 n 0 tail '.substring(), "1")\n            PushMessage.poPushManager.getInstance()\n           '
+step 14 consumed 96 tok 659 sel 0 k 59999 n 0 tail '.substring(), "1")\n            PushMessage.poPushManager.getInstance()\n            .'
+step 15 consumed 96 tok 9077 sel 0 k 59999 n 0 tail '.substring(), "1")\n            PushMessage.poPushManager.getInstance()\n            .push'
+step 16 consumed 96 tok 2052 sel 0 k 59999 n 0 tail '.substring(), "1")\n            PushMessage.poPushManager.getInstance()\n            .pushMessage'
+step 17 consumed 96 tok 1006 sel 0 k 60000 n 0 tail '.substring(), "1")\n            PushMessage.poPushManager.getInstance()\n            .pushMessage(\n'
+step 18 consumed 96 tok 394 sel 0 k 59999 n 0 tail '.substring(), "1")\n            PushMessage.poPushManager.getInstance()\n            .pushMessage(\n               '
+step 19 consumed 96 tok 22950 sel 1 k 60000 n 0 tail '.substring(), "1")\n            PushMessage.poPushManager.getInstance()\n            .pushMessage(\n                Push'
+step 20 consumed 96 tok 2052 sel 0 k 60000 n 0 tail '.substring(), "1")\n            PushMessage.poPushManager.getInstance()\n            .pushMessage(\n                PushMessage'
+step 21 consumed 96 tok 1764 sel 17 k 59999 n 0 tail '.substring(), "1")\n            PushMessage.poPushManager.getInstance()\n            .pushMessage(\n                PushMessage.id'
+step 22 consumed 96 tok 0 sel 549 k 60000 n 0 tail '.substring(), "1")\n            PushMessage.poPushManager.getInstance()\n            .pushMessage(\n                PushMessage.id!'
+step 23 consumed 96 tok 438 sel 3 k 56269 n 0 tail '.substring(), "1")\n            PushMessage.poPushManager.getInstance()\n            .pushMessage(\n                PushMessage.id! as'
+step 24 consumed 96 tok 600 sel 0 k 14670 n 0 tail '.substring(), "1")\n            PushMessage.poPushManager.getInstance()\n            .pushMessage(\n                PushMessage.id! as i'
+step 25 consumed 96 tok 18 sel 1 k 147 n 0 tail '.substring(), "1")\n            PushMessage.poPushManager.getInstance()\n            .pushMessage(\n                PushMessage.id! as i3'
+step 26 consumed 96 tok 17 sel 0 k 3 n 0 tail '.substring(), "1")\n            PushMessage.poPushManager.getInstance()\n            .pushMessage(\n                PushMessage.id! as i32'
+step 27 consumed 96 tok 198 sel 2 k 728 n 0 tail '.substring(), "1")\n            PushMessage.poPushManager.getInstance()\n            .pushMessage(\n                PushMessage.id! as i32\n'
+step 28 consumed 96 tok 394 sel 0 k 17 n 0 tail '.substring(), "1")\n            PushMessage.poPushManager.getInstance()\n            .pushMessage(\n                PushMessage.id! as i32\n               '
+step 29 consumed 96 tok 659 sel 0 k 225 n 0 tail '.substring(), "1")\n            PushMessage.poPushManager.getInstance()\n            .pushMessage(\n                PushMessage.id! as i32\n                .'
+step 30 consumed 96 tok 983 sel 0 k 151 n 0 tail '.substring(), "1")\n            PushMessage.poPushManager.getInstance()\n            .pushMessage(\n                PushMessage.id! as i32\n                .to'
+step 31 consumed 96 tok 3904 sel 0 k 71 n 0 tail 'ubstring(), "1")\n            PushMessage.poPushManager.getInstance()\n            .pushMessage(\n                PushMessage.id! as i32\n                .to_string'
+step 32 consumed 96 tok 3148 sel 0 k 6 n 0 tail 'ring(), "1")\n            PushMessage.poPushManager.getInstance()\n            .pushMessage(\n                PushMessage.id! as i32\n                .to_string(),\n'
+step 33 consumed 96 tok 394 sel 0 k 2 n 0 tail '          PushMessage.poPushManager.getInstance()\n            .pushMessage(\n                PushMessage.id! as i32\n                .to_string(),\n               '
+step 34 consumed 96 tok 22950 sel 0 k 36 n 0 tail '     PushMessage.poPushManager.getInstance()\n            .pushMessage(\n                PushMessage.id! as i32\n                .to_string(),\n                Push'
+step 35 consumed 96 tok 2052 sel 0 k 2 n 0 tail 'shMessage.poPushManager.getInstance()\n            .pushMessage(\n                PushMessage.id! as i32\n                .to_string(),\n                PushMessage'
+step 36 consumed 96 tok 2389 sel 9 k 22 n 0 tail 'essage.poPushManager.getInstance()\n            .pushMessage(\n                PushMessage.id! as i32\n                .to_string(),\n                PushMessage.to'
+step 37 consumed 96 tok 0 sel 0 k 2 n 0 tail 'ssage.poPushManager.getInstance()\n            .pushMessage(\n                PushMessage.id! as i32\n                .to_string(),\n                PushMessage.to!'
+step 38 consumed 96 tok 438 sel 0 k 2 n 0 tail 'ge.poPushManager.getInstance()\n            .pushMessage(\n                PushMessage.id! as i32\n                .to_string(),\n                PushMessage.to! as'
+step 39 consumed 96 tok 600 sel 0 k 2 n 0 tail '.poPushManager.getInstance()\n            .pushMessage(\n                PushMessage.id! as i32\n                .to_string(),\n                PushMessage.to! as i'
+step 40 consumed 96 tok 18 sel 0 k 2 n 0 tail 'poPushManager.getInstance()\n            .pushMessage(\n                PushMessage.id! as i32\n                .to_string(),\n                PushMessage.to! as i3'
+step 41 consumed 96 tok 17 sel 0 k 2 n 0 tail 'oPushManager.getInstance()\n            .pushMessage(\n                PushMessage.id! as i32\n                .to_string(),\n                PushMessage.to! as i32'
+step 42 consumed 96 tok 345 sel 0 k 2 n 0 tail 'ushManager.getInstance()\n            .pushMessage(\n                PushMessage.id! as i32\n                .to_string(),\n                PushMessage.to! as i32,\n'
+step 43 consumed 96 tok 394 sel 0 k 2 n 0 tail 'nstance()\n            .pushMessage(\n                PushMessage.id! as i32\n                .to_string(),\n                PushMessage.to! as i32,\n               '
+step 44 consumed 96 tok 22950 sel 0 k 2 n 0 tail 'ce()\n            .pushMessage(\n                PushMessage.id! as i32\n                .to_string(),\n                PushMessage.to! as i32,\n                Push'
+step 45 consumed 96 tok 2052 sel 0 k 2 n 0 tail '          .pushMessage(\n                PushMessage.id! as i32\n                .to_string(),\n                PushMessage.to! as i32,\n                PushMessage'
+step 46 consumed 160 tok 6387 sel 1 k 2 n 64 tail '     .pushMessage(\n                PushMessage.id! as i32\n                .to_string(),\n                PushMessage.to! as i32,\n                PushMessage.from'
+BITS EXHAUSTED
+FINAL eos consumed 160 tokens [12119, 1507, 330, 16, 1138, 310, 22950, 2052, 31319, 16644, 2043, 9554, 741, 310, 659, 9077, 2052, 1006, 394, 22950, 2052, 1764, 0, 438, 600, 18, 17, 198, 394, 659, 983, 3904, 3148, 394, 22950, 2052, 2389, 0, 438, 600, 18, 17, 345, 394, 22950, 2052, 6387]
+.substring(), "1")
+            PushMessage.poPushManager.getInstance()
+            .pushMessage(
+                PushMessage.id! as i32
+                .to_string(),
+                PushMessage.to! as i32,
+                PushMessage.from

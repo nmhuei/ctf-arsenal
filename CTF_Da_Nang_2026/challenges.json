@@ -1,0 +1,430 @@
+{
+  "ctf_info": {
+    "title": "CTF Da Nang 2026",
+    "url": "https://ctf.digitaldragonsctf.com",
+    "platform": "ctfd",
+    "user": "hieunm.23ba14112@usth.edu.vn",
+    "team": null,
+    "game_id": null
+  },
+  "total_challenges": 16,
+  "total_points": 2130,
+  "categories": {
+    "Web": 3,
+    "Pwn": 3,
+    "Crypto": 3,
+    "Reverse": 3,
+    "Misc": 4
+  },
+  "challenges": [
+    {
+      "id": 56,
+      "name": "Web Challenge 1",
+      "category": "Web",
+      "points": 30,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": true,
+      "solves_count": 76,
+      "submit_endpoint": "https://ctf.digitaldragonsctf.com/api/v1/challenges/attempt",
+      "instance_info": {
+        "is_container": true,
+        "type": "ctfd_container",
+        "start_url": "https://ctf.digitaldragonsctf.com/plugins/ctfd-whale/container",
+        "stop_url": "https://ctf.digitaldragonsctf.com/plugins/ctfd-whale/container",
+        "extend_url": "https://ctf.digitaldragonsctf.com/plugins/ctfd-whale/container",
+        "status_url": "https://ctf.digitaldragonsctf.com/plugins/ctfd-whale/container"
+      },
+      "files": []
+    },
+    {
+      "id": 58,
+      "name": "Pwn Challenge 1",
+      "category": "Pwn",
+      "points": 30,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": true,
+      "solves_count": 128,
+      "submit_endpoint": "https://ctf.digitaldragonsctf.com/api/v1/challenges/attempt",
+      "instance_info": {
+        "is_container": true,
+        "type": "ctfd_container",
+        "start_url": "https://ctf.digitaldragonsctf.com/plugins/ctfd-whale/container",
+        "stop_url": "https://ctf.digitaldragonsctf.com/plugins/ctfd-whale/container",
+        "extend_url": "https://ctf.digitaldragonsctf.com/plugins/ctfd-whale/container",
+        "status_url": "https://ctf.digitaldragonsctf.com/plugins/ctfd-whale/container"
+      },
+      "files": [
+        {
+          "url": "https://ctf.digitaldragonsctf.com/files/9b6e38c4ffe64c5c/punchcard?token=eyJ1c2VyX2lkIjo0MjksInRlYW1faWQiOjEwMywiZmlsZV9pZCI6Nn0.aoqhfA.OUKMVnJFS2elODSFFXIm2GvSL0c",
+          "name": "punchcard",
+          "saved_path": "/home/light/Workspace/CTF/CTF_Da_Nang_2026/Pwn/Pwn_Challenge_1/punchcard",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": 59,
+      "name": "Crypto Challenge 1",
+      "category": "Crypto",
+      "points": 30,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": true,
+      "solves_count": 126,
+      "submit_endpoint": "https://ctf.digitaldragonsctf.com/api/v1/challenges/attempt",
+      "instance_info": {
+        "is_container": true,
+        "type": "ctfd_container",
+        "start_url": "https://ctf.digitaldragonsctf.com/plugins/ctfd-whale/container",
+        "stop_url": "https://ctf.digitaldragonsctf.com/plugins/ctfd-whale/container",
+        "extend_url": "https://ctf.digitaldragonsctf.com/plugins/ctfd-whale/container",
+        "status_url": "https://ctf.digitaldragonsctf.com/plugins/ctfd-whale/container"
+      },
+      "files": []
+    },
+    {
+      "id": 60,
+      "name": "Reverse Challenge 1",
+      "category": "Reverse",
+      "points": 30,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": true,
+      "solves_count": 132,
+      "submit_endpoint": "https://ctf.digitaldragonsctf.com/api/v1/challenges/attempt",
+      "instance_info": {
+        "is_container": true,
+        "type": "ctfd_container",
+        "start_url": "https://ctf.digitaldragonsctf.com/plugins/ctfd-whale/container",
+        "stop_url": "https://ctf.digitaldragonsctf.com/plugins/ctfd-whale/container",
+        "extend_url": "https://ctf.digitaldragonsctf.com/plugins/ctfd-whale/container",
+        "status_url": "https://ctf.digitaldragonsctf.com/plugins/ctfd-whale/container"
+      },
+      "files": []
+    },
+    {
+      "id": 63,
+      "name": "OSINT Challenge 1",
+      "category": "Misc",
+      "points": 30,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": true,
+      "solves_count": 137,
+      "submit_endpoint": "https://ctf.digitaldragonsctf.com/api/v1/challenges/attempt",
+      "instance_info": {
+        "is_container": true,
+        "type": "ctfd_container",
+        "start_url": "https://ctf.digitaldragonsctf.com/plugins/ctfd-whale/container",
+        "stop_url": "https://ctf.digitaldragonsctf.com/plugins/ctfd-whale/container",
+        "extend_url": "https://ctf.digitaldragonsctf.com/plugins/ctfd-whale/container",
+        "status_url": "https://ctf.digitaldragonsctf.com/plugins/ctfd-whale/container"
+      },
+      "files": []
+    },
+    {
+      "id": 64,
+      "name": "Web Challenge 2",
+      "category": "Web",
+      "points": 80,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": true,
+      "solves_count": 55,
+      "submit_endpoint": "https://ctf.digitaldragonsctf.com/api/v1/challenges/attempt",
+      "instance_info": {
+        "is_container": true,
+        "type": "ctfd_container",
+        "start_url": "https://ctf.digitaldragonsctf.com/plugins/ctfd-whale/container",
+        "stop_url": "https://ctf.digitaldragonsctf.com/plugins/ctfd-whale/container",
+        "extend_url": "https://ctf.digitaldragonsctf.com/plugins/ctfd-whale/container",
+        "status_url": "https://ctf.digitaldragonsctf.com/plugins/ctfd-whale/container"
+      },
+      "files": []
+    },
+    {
+      "id": 68,
+      "name": "Pwn Challenge 2",
+      "category": "Pwn",
+      "points": 100,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": true,
+      "solves_count": 123,
+      "submit_endpoint": "https://ctf.digitaldragonsctf.com/api/v1/challenges/attempt",
+      "instance_info": {
+        "is_container": true,
+        "type": "ctfd_container",
+        "start_url": "https://ctf.digitaldragonsctf.com/plugins/ctfd-whale/container",
+        "stop_url": "https://ctf.digitaldragonsctf.com/plugins/ctfd-whale/container",
+        "extend_url": "https://ctf.digitaldragonsctf.com/plugins/ctfd-whale/container",
+        "status_url": "https://ctf.digitaldragonsctf.com/plugins/ctfd-whale/container"
+      },
+      "files": [
+        {
+          "url": "https://ctf.digitaldragonsctf.com/files/2a7f2124f2dbdd3e/heap-fengshui-json-parser-dist.tar.gz?token=eyJ1c2VyX2lkIjo0MjksInRlYW1faWQiOjEwMywiZmlsZV9pZCI6N30.aoqhfQ.OMRJCLMGmK8ymp5fn7tIu6niLQs",
+          "name": "heap-fengshui-json-parser-dist.tar.gz",
+          "saved_path": "/home/light/Workspace/CTF/CTF_Da_Nang_2026/Pwn/Pwn_Challenge_2/heap-fengshui-json-parser-dist.tar.gz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": 69,
+      "name": "Crypto Challenge 2",
+      "category": "Crypto",
+      "points": 100,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": true,
+      "solves_count": 115,
+      "submit_endpoint": "https://ctf.digitaldragonsctf.com/api/v1/challenges/attempt",
+      "instance_info": {
+        "is_container": true,
+        "type": "ctfd_container",
+        "start_url": "https://ctf.digitaldragonsctf.com/plugins/ctfd-whale/container",
+        "stop_url": "https://ctf.digitaldragonsctf.com/plugins/ctfd-whale/container",
+        "extend_url": "https://ctf.digitaldragonsctf.com/plugins/ctfd-whale/container",
+        "status_url": "https://ctf.digitaldragonsctf.com/plugins/ctfd-whale/container"
+      },
+      "files": [
+        {
+          "url": "https://ctf.digitaldragonsctf.com/files/87e777e1831bcc12/lattice-in-the-machine-dist.tar.gz?token=eyJ1c2VyX2lkIjo0MjksInRlYW1faWQiOjEwMywiZmlsZV9pZCI6OH0.aoqhfQ.1gNERFZLCRpKlK6ZGUMmQNriW6U",
+          "name": "lattice-in-the-machine-dist.tar.gz",
+          "saved_path": "/home/light/Workspace/CTF/CTF_Da_Nang_2026/Crypto/Crypto_Challenge_2/lattice-in-the-machine-dist.tar.gz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": 70,
+      "name": "Reverse Challenge 2",
+      "category": "Reverse",
+      "points": 100,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": true,
+      "solves_count": 122,
+      "submit_endpoint": "https://ctf.digitaldragonsctf.com/api/v1/challenges/attempt",
+      "instance_info": {
+        "is_container": true,
+        "type": "ctfd_container",
+        "start_url": "https://ctf.digitaldragonsctf.com/plugins/ctfd-whale/container",
+        "stop_url": "https://ctf.digitaldragonsctf.com/plugins/ctfd-whale/container",
+        "extend_url": "https://ctf.digitaldragonsctf.com/plugins/ctfd-whale/container",
+        "status_url": "https://ctf.digitaldragonsctf.com/plugins/ctfd-whale/container"
+      },
+      "files": [
+        {
+          "url": "https://ctf.digitaldragonsctf.com/files/dcb1eb1965478f7c/onnx-model-secrets-dist.tar.gz?token=eyJ1c2VyX2lkIjo0MjksInRlYW1faWQiOjEwMywiZmlsZV9pZCI6OX0.aoqhfQ.HYmn7e2c0vQyKe0d_umV_ZWkKEM",
+          "name": "onnx-model-secrets-dist.tar.gz",
+          "saved_path": "/home/light/Workspace/CTF/CTF_Da_Nang_2026/Reverse/Reverse_Challenge_2/onnx-model-secrets-dist.tar.gz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": 71,
+      "name": "Misc Challenge 3",
+      "category": "Misc",
+      "points": 100,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": true,
+      "solves_count": 82,
+      "submit_endpoint": "https://ctf.digitaldragonsctf.com/api/v1/challenges/attempt",
+      "instance_info": {
+        "is_container": true,
+        "type": "ctfd_container",
+        "start_url": "https://ctf.digitaldragonsctf.com/plugins/ctfd-whale/container",
+        "stop_url": "https://ctf.digitaldragonsctf.com/plugins/ctfd-whale/container",
+        "extend_url": "https://ctf.digitaldragonsctf.com/plugins/ctfd-whale/container",
+        "status_url": "https://ctf.digitaldragonsctf.com/plugins/ctfd-whale/container"
+      },
+      "files": [
+        {
+          "url": "https://ctf.digitaldragonsctf.com/files/9496613b160162a1/prompt-injection-dist.tar.gz?token=eyJ1c2VyX2lkIjo0MjksInRlYW1faWQiOjEwMywiZmlsZV9pZCI6MTB9.aoqhfQ.NXMSRvxl1bp-drBSx-b_qphG_MA",
+          "name": "prompt-injection-dist.tar.gz",
+          "saved_path": "/home/light/Workspace/CTF/CTF_Da_Nang_2026/Misc/Misc_Challenge_3/prompt-injection-dist.tar.gz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": 72,
+      "name": "Web Challenge 3",
+      "category": "Web",
+      "points": 150,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": true,
+      "solves_count": 67,
+      "submit_endpoint": "https://ctf.digitaldragonsctf.com/api/v1/challenges/attempt",
+      "instance_info": {
+        "is_container": true,
+        "type": "ctfd_container",
+        "start_url": "https://ctf.digitaldragonsctf.com/plugins/ctfd-whale/container",
+        "stop_url": "https://ctf.digitaldragonsctf.com/plugins/ctfd-whale/container",
+        "extend_url": "https://ctf.digitaldragonsctf.com/plugins/ctfd-whale/container",
+        "status_url": "https://ctf.digitaldragonsctf.com/plugins/ctfd-whale/container"
+      },
+      "files": []
+    },
+    {
+      "id": 76,
+      "name": "Crypto Challenge 3",
+      "category": "Crypto",
+      "points": 150,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": true,
+      "solves_count": 111,
+      "submit_endpoint": "https://ctf.digitaldragonsctf.com/api/v1/challenges/attempt",
+      "instance_info": {
+        "is_container": true,
+        "type": "ctfd_container",
+        "start_url": "https://ctf.digitaldragonsctf.com/plugins/ctfd-whale/container",
+        "stop_url": "https://ctf.digitaldragonsctf.com/plugins/ctfd-whale/container",
+        "extend_url": "https://ctf.digitaldragonsctf.com/plugins/ctfd-whale/container",
+        "status_url": "https://ctf.digitaldragonsctf.com/plugins/ctfd-whale/container"
+      },
+      "files": []
+    },
+    {
+      "id": 77,
+      "name": "Reverse Challenge 3",
+      "category": "Reverse",
+      "points": 150,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": true,
+      "solves_count": 121,
+      "submit_endpoint": "https://ctf.digitaldragonsctf.com/api/v1/challenges/attempt",
+      "instance_info": {
+        "is_container": true,
+        "type": "ctfd_container",
+        "start_url": "https://ctf.digitaldragonsctf.com/plugins/ctfd-whale/container",
+        "stop_url": "https://ctf.digitaldragonsctf.com/plugins/ctfd-whale/container",
+        "extend_url": "https://ctf.digitaldragonsctf.com/plugins/ctfd-whale/container",
+        "status_url": "https://ctf.digitaldragonsctf.com/plugins/ctfd-whale/container"
+      },
+      "files": []
+    },
+    {
+      "id": 74,
+      "name": "Pwn Challenge 3",
+      "category": "Pwn",
+      "points": 200,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": true,
+      "solves_count": 85,
+      "submit_endpoint": "https://ctf.digitaldragonsctf.com/api/v1/challenges/attempt",
+      "instance_info": {
+        "is_container": true,
+        "type": "ctfd_container",
+        "start_url": "https://ctf.digitaldragonsctf.com/plugins/ctfd-whale/container",
+        "stop_url": "https://ctf.digitaldragonsctf.com/plugins/ctfd-whale/container",
+        "extend_url": "https://ctf.digitaldragonsctf.com/plugins/ctfd-whale/container",
+        "status_url": "https://ctf.digitaldragonsctf.com/plugins/ctfd-whale/container"
+      },
+      "files": [
+        {
+          "url": "https://ctf.digitaldragonsctf.com/files/c1f9abeda6d487be20d77d405ef80664/corrupt-vector-db-dist.tar.gz?token=eyJ1c2VyX2lkIjo0MjksInRlYW1faWQiOjEwMywiZmlsZV9pZCI6MTJ9.aoqhfQ.zX30jCx-vCir4MECRJ6lmNY_e6Y",
+          "name": "corrupt-vector-db-dist.tar.gz",
+          "saved_path": "/home/light/Workspace/CTF/CTF_Da_Nang_2026/Pwn/Pwn_Challenge_3/corrupt-vector-db-dist.tar.gz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": 75,
+      "name": "Misc Challenge 2",
+      "category": "Misc",
+      "points": 200,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": true,
+      "solves_count": 69,
+      "submit_endpoint": "https://ctf.digitaldragonsctf.com/api/v1/challenges/attempt",
+      "instance_info": {
+        "is_container": true,
+        "type": "ctfd_container",
+        "start_url": "https://ctf.digitaldragonsctf.com/plugins/ctfd-whale/container",
+        "stop_url": "https://ctf.digitaldragonsctf.com/plugins/ctfd-whale/container",
+        "extend_url": "https://ctf.digitaldragonsctf.com/plugins/ctfd-whale/container",
+        "status_url": "https://ctf.digitaldragonsctf.com/plugins/ctfd-whale/container"
+      },
+      "files": []
+    },
+    {
+      "id": 82,
+      "name": "Misc Challenge 4",
+      "category": "Misc",
+      "points": 650,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": "https://a3d18de0-81b3-45a1-a86b-2725bf8628ca.222.255.138.122.nip.io/",
+      "solved_by_me": false,
+      "solves_count": 1,
+      "submit_endpoint": "https://ctf.digitaldragonsctf.com/api/v1/challenges/attempt",
+      "instance_info": {
+        "is_container": true,
+        "type": "ctfd_container",
+        "start_url": "https://ctf.digitaldragonsctf.com/plugins/ctfd-whale/container",
+        "stop_url": "https://ctf.digitaldragonsctf.com/plugins/ctfd-whale/container",
+        "extend_url": "https://ctf.digitaldragonsctf.com/plugins/ctfd-whale/container",
+        "status_url": "https://ctf.digitaldragonsctf.com/plugins/ctfd-whale/container",
+        "status": "running",
+        "active_instance": "https://a3d18de0-81b3-45a1-a86b-2725bf8628ca.222.255.138.122.nip.io/",
+        "remaining_time": 3176
+      },
+      "files": []
+    }
+  ]
+}

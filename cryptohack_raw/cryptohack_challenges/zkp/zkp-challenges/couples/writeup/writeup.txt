@@ -1,0 +1,57 @@
+CryptoHack – Couples (ZKP) Writeup
+
+[Overview]
+The challenge implements a pairing-based BLS-like verification. The goal is to bypass the verification to retrieve the flag.
+
+[Core Logic]
+The verification checks:
+    e(xzH, G1) == e(received_H, xzG)
+
+[Bug]
+The vulnerability lies in the custom inverse() function:
+    inverse(0, p) returns 0 instead of failing.
+
+[Exploit Idea]
+We force:
+    poly(z, x) = x^(z+7) - x^3 ≡ 0 (mod p)
+
+Which implies:
+    x^(z+4) ≡ 1 (mod p)
+
+Using Fermat:
+    x^(p-1) ≡ 1
+
+So choose:
+    z = p - 5
+
+Then:
+    poly(p-5, x) = 0
+    → inverse(0, p) = 0 (bug)
+    → internal z = 0
+
+[Impact]
+All scalar multiplications with z become 0:
+    xzH = 0
+    xzG = 0
+
+Pairings become:
+    e(0, G1) = e(anything, 0) = 1
+
+Thus, verification always succeeds.
+
+[Exploit Steps]
+
+1. Send:
+   {"option":"set_internal_z","z":hex(p-5)}
+
+2. Send:
+   {"option":"do_proof","G":"(1,2,1)","hsh":"0x0"}
+
+[Result]
+Server returns the flag.
+
+[Summary]
+- Bug in inverse()
+- Force zero polynomial
+- Collapse pairing check
+- Bypass verification completely

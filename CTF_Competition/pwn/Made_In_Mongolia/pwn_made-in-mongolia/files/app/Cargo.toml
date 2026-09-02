@@ -1,0 +1,13 @@
+[package]
+name = "sfex-playground-app"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+axum = { version = "0.8", features = ["json"] }
+serde = { version = "1", features = ["derive"] }
+sfex-lang = { git = "https://github.com/roriau0422/sfex-lang.git", rev = "d9f6677e156304ee52b71eb31367309522b7f67e" }
+tokio = { version = "1", features = ["full"] }
+tracing.workspace = true
+tracing-logfmt.workspace = true

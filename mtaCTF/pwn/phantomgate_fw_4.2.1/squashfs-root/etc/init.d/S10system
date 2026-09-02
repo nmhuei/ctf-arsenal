@@ -1,0 +1,30 @@
+#!/bin/sh
+# S10system — basic system initialization
+
+case "$1" in
+    start)
+        echo "[S10] Mounting virtual filesystems..."
+        mount -t proc proc /proc 2>/dev/null
+        mount -t sysfs sysfs /sys 2>/dev/null
+        mount -t tmpfs -o size=16M tmpfs /tmp 2>/dev/null
+        mount -t tmpfs -o size=2M tmpfs /var/run 2>/dev/null
+        mount -t devpts devpts /dev/pts 2>/dev/null
+
+        echo "[S10] Setting hostname..."
+        hostname -F /etc/hostname
+
+        echo "[S10] Applying sysctl parameters..."
+        sysctl -p /etc/sysctl.conf >/dev/null 2>&1
+
+        echo "[S10] Starting syslogd..."
+        syslogd -C256
+        klogd
+
+        echo "[S10] System initialization complete"
+        ;;
+    stop)
+        echo "[S10] Stopping syslog..."
+        killall klogd 2>/dev/null
+        killall syslogd 2>/dev/null
+        ;;
+esac

@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Search results - FirstBangla Mail</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+
+<div class="topbar">
+  <div class="topbar-left">
+    <div class="brand">
+      <div class="brand-mark">FB</div>
+      <span class="brand-name">FirstBangla Mail</span>
+    </div>
+  </div>
+  <div class="topbar-center">
+    <form class="searchform" method="get" action="/search" role="search">
+      <button type="submit" class="searchform-icon" aria-label="Search">&#128269;</button>
+      <input type="text" name="q" placeholder="Search mail" value="wire details" autocomplete="off">
+      
+      <a class="searchform-clear" href="/search" aria-label="Clear search">&#10005;</a>
+      
+    </form>
+  </div>
+  <div class="topbar-right">
+    <span class="user-chip">
+      <span class="user-avatar">A</span>
+      <span class="user-name">Arif Khan</span>
+    </span>
+    <a class="logout-link" href="/logout">Sign out</a>
+  </div>
+</div>
+<div class="layout">
+  <div class="sidebar">
+    <div class="compose-btn" title="Composing is disabled in this archive view">+ Compose</div>
+    <nav class="folder-nav">
+      <a class="folder-link " href="/mail/inbox">
+        <span class="folder-icon">&#128229;</span> Inbox
+        <span class="folder-count">761</span>
+      </a>
+      <a class="folder-link " href="/mail/sent">
+        <span class="folder-icon">&#128228;</span> Sent
+        <span class="folder-count">486</span>
+      </a>
+    </nav>
+    <div class="sidebar-footer">
+      arif.khan@firstbangla.com
+    </div>
+  </div>
+  <div class="main-pane">
+    <div class="pane-header">
+      <h1>Search results</h1>
+      <span class="filter-note">2 result(s) for "wire details"</span>
+      <form class="sort-bar" method="get">
+        <input type="hidden" name="q" value="wire details">
+        <label for="sort">Sort</label>
+        <select id="sort" name="sort" class="sort-select">
+          <option value="relevance" selected>Most relevant</option>
+          <option value="date_desc" >Newest first</option>
+          <option value="date_asc" >Oldest first</option>
+        </select>
+      </form>
+    </div>
+    <div class="mail-table">
+      
+      
+      <a class="mail-row" href="/mail/inbox/20240309-231100_1041_re-the-director-again.eml">
+        <span class="mail-avatar">A</span>
+        <span class="mail-folder-tag">inbox</span>
+        <span class="mail-person">A. Reza</span>
+        <span class="mail-subject">Re: the Director again</span>
+        <span class="mail-snippet">&mdash; …ime to finalize logistics. I&#39;ll get you the venue and hotel <mark>details</mark> once Rajesh confirms availability on his end.</span>
+        <span class="mail-date">09 Mar 2024, 11:11 PM</span>
+      </a>
+      
+      <a class="mail-row" href="/mail/inbox/20240208-091500_0969_fintech-asia-summit-2024-bangkok-registr.eml">
+        <span class="mail-avatar">F</span>
+        <span class="mail-folder-tag">inbox</span>
+        <span class="mail-person">Farhana Rahman</span>
+        <span class="mail-subject">Fintech Asia Summit 2024 - Bangkok - Registration Confirmed</span>
+        <span class="mail-snippet">&mdash; …ll be booked by admin next week. Please share your passport <mark>details</mark> for the visa application. Regards, Farhana</span>
+        <span class="mail-date">08 Feb 2024, 09:15 AM</span>
+      </a>
+      
+    </div>
+  </div>
+</div>
+<script src="/static/app.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,1584 @@
+From f6299fd2a8c4837f279924dd185be9948a7fe55d Mon Sep 17 00:00:00 2001
+From: kitctf <gpnctf-24@kitctf.de>
+Date: Sat, 30 May 2026 12:59:17 +0200
+Subject: [PATCH 2/2] Hopefully remove free lunch
+
+---
+ Include/internal/pycore_pyhash.h   | 11 ++------
+ Lib/asyncio/queues.py              |  2 +-
+ Lib/codecs.py                      |  4 +--
+ Lib/concurrent/futures/_base.py    | 11 +++-----
+ Lib/ctypes/__init__.py             |  5 ++--
+ Lib/gzip.py                        |  2 +-
+ Lib/importlib/_bootstrap.py        |  4 +--
+ Lib/json/encoder.py                |  2 +-
+ Lib/multiprocessing/managers.py    |  4 +--
+ Lib/multiprocessing/synchronize.py |  2 +-
+ Lib/optparse.py                    |  2 +-
+ Lib/reprlib.py                     |  2 +-
+ Lib/symtable.py                    |  2 +-
+ Lib/tarfile.py                     |  2 +-
+ Lib/threading.py                   | 12 ++++-----
+ Lib/urllib/response.py             |  4 +--
+ Lib/weakref.py                     | 10 ++++----
+ Lib/xml/dom/minidom.py             |  2 +-
+ Lib/xml/etree/ElementTree.py       |  2 +-
+ Lib/xmlrpc/client.py               |  4 +--
+ Modules/_ctypes/_ctypes.c          | 40 ++++++++++++++----------------
+ Modules/_ctypes/callproc.c         | 26 +++++++++----------
+ Modules/_ctypes/cfield.c           |  2 +-
+ Modules/_elementtree.c             |  9 ++++---
+ Modules/_hashopenssl.c             |  6 ++---
+ Modules/_heapqmodule.c             |  1 +
+ Modules/_json.c                    | 10 ++++----
+ Modules/_pickle.c                  |  7 +++---
+ Modules/_testcapi/object.c         |  2 +-
+ Modules/_testclinic.c              |  4 +--
+ Modules/_threadmodule.c            | 35 ++++++++++----------------
+ Modules/_tkinter.c                 |  5 ++--
+ Modules/arraymodule.c              |  2 +-
+ Modules/hmacmodule.c               |  2 +-
+ Modules/overlapped.c               |  3 +--
+ Modules/selectmodule.c             |  4 +--
+ Objects/bytesobject.c              |  3 ++-
+ Objects/capsule.c                  |  4 +--
+ Objects/cellobject.c               |  6 ++---
+ Objects/classobject.c              |  4 +--
+ Objects/codeobject.c               |  8 +++---
+ Objects/descrobject.c              |  5 ++--
+ Objects/dictobject.c               |  4 +--
+ Objects/fileobject.c               |  4 +--
+ Objects/frameobject.c              |  4 +--
+ Objects/funcobject.c               |  8 +++---
+ Objects/genobject.c                | 12 ++++-----
+ Objects/memoryobject.c             |  6 ++---
+ Objects/methodobject.c             |  5 ++--
+ Objects/object.c                   | 10 ++++----
+ Objects/typeobject.c               | 12 ++++-----
+ Objects/unicodeobject.c            |  3 ++-
+ Objects/weakrefobject.c            | 17 ++++++-------
+ Python/bltinmodule.c               |  3 ++-
+ Python/context.c                   |  4 +--
+ Python/gc.c                        |  4 +--
+ Python/gc_free_threading.c         |  4 +--
+ Python/hamt.c                      | 10 ++++----
+ Python/import.c                    |  2 +-
+ Python/pystate.c                   |  4 +--
+ Python/symtable.c                  | 18 +++++++++++---
+ 61 files changed, 201 insertions(+), 210 deletions(-)
+
+diff --git a/Include/internal/pycore_pyhash.h b/Include/internal/pycore_pyhash.h
+index 3056dc44cc..cf47e47383 100644
+--- a/Include/internal/pycore_pyhash.h
++++ b/Include/internal/pycore_pyhash.h
+@@ -9,15 +9,8 @@
+ static inline Py_hash_t
+ _Py_HashPointerRaw(const void *ptr)
+ {
+-    uintptr_t x = (uintptr_t)ptr;
+-    Py_BUILD_ASSERT(sizeof(x) == sizeof(ptr));
+-
+-    // Bottom 3 or 4 bits are likely to be 0; rotate x by 4 to the right
+-    // to avoid excessive hash collisions for dicts and sets.
+-    x = (x >> 4) | (x << (8 * sizeof(uintptr_t) - 4));
+-
+-    Py_BUILD_ASSERT(sizeof(x) == sizeof(Py_hash_t));
+-    return (Py_hash_t)x;
++    (void)ptr;
++    return (Py_hash_t)1;
+ }
+ 
+ /* Hash secret
+diff --git a/Lib/asyncio/queues.py b/Lib/asyncio/queues.py
+index 756216fac8..b4e68d2f8e 100644
+--- a/Lib/asyncio/queues.py
++++ b/Lib/asyncio/queues.py
+@@ -77,7 +77,7 @@ def _wakeup_next(self, waiters):
+                 break
+ 
+     def __repr__(self):
+-        return f'<{type(self).__name__} at {id(self):#x} {self._format()}>'
++        return f'<{type(self).__name__} at 0x0 {self._format()}>'
+ 
+     def __str__(self):
+         return f'<{type(self).__name__} {self._format()}>'
+diff --git a/Lib/codecs.py b/Lib/codecs.py
+index e4a8010aba..3d5cd6a294 100644
+--- a/Lib/codecs.py
++++ b/Lib/codecs.py
+@@ -107,9 +107,9 @@ def __new__(cls, encode, decode, streamreader=None, streamwriter=None,
+         return self
+ 
+     def __repr__(self):
+-        return "<%s.%s object for encoding %s at %#x>" % \
++        return "<%s.%s object for encoding %s at 0x0>" % \
+                 (self.__class__.__module__, self.__class__.__qualname__,
+-                 self.name, id(self))
++                 self.name)
+ 
+     def __getnewargs__(self):
+         return tuple(self)
+diff --git a/Lib/concurrent/futures/_base.py b/Lib/concurrent/futures/_base.py
+index f506ce68ae..5a08a1db3f 100644
+--- a/Lib/concurrent/futures/_base.py
++++ b/Lib/concurrent/futures/_base.py
+@@ -339,20 +339,17 @@ def __repr__(self):
+         with self._condition:
+             if self._state == FINISHED:
+                 if self._exception:
+-                    return '<%s at %#x state=%s raised %s>' % (
++                    return '<%s at 0x0 state=%s raised %s>' % (
+                         self.__class__.__name__,
+-                        id(self),
+                         _STATE_TO_DESCRIPTION_MAP[self._state],
+                         self._exception.__class__.__name__)
+                 else:
+-                    return '<%s at %#x state=%s returned %s>' % (
++                    return '<%s at 0x0 state=%s returned %s>' % (
+                         self.__class__.__name__,
+-                        id(self),
+                         _STATE_TO_DESCRIPTION_MAP[self._state],
+                         self._result.__class__.__name__)
+-            return '<%s at %#x state=%s>' % (
++            return '<%s at 0x0 state=%s>' % (
+                     self.__class__.__name__,
+-                    id(self),
+                    _STATE_TO_DESCRIPTION_MAP[self._state])
+ 
+     def cancel(self):
+@@ -524,7 +521,7 @@ def set_running_or_notify_cancel(self):
+                 return True
+             else:
+                 LOGGER.critical('Future %s in unexpected state: %s',
+-                                id(self),
++                                0,
+                                 self._state)
+                 raise RuntimeError('Future in unexpected state')
+ 
+diff --git a/Lib/ctypes/__init__.py b/Lib/ctypes/__init__.py
+index 0b84a27f8c..ebdd10fd85 100644
+--- a/Lib/ctypes/__init__.py
++++ b/Lib/ctypes/__init__.py
+@@ -464,10 +464,9 @@ def _load_library(self, name, mode, handle, winmode):
+             return _dlopen(name, mode)
+ 
+     def __repr__(self):
+-        return "<%s '%s', handle %x at %#x>" % \
++        return "<%s '%s', handle %x at 0x0>" % \
+                (self.__class__.__name__, self._name,
+-                (self._handle & (_sys.maxsize*2 + 1)),
+-                id(self) & (_sys.maxsize*2 + 1))
++                0)
+ 
+     def __getattr__(self, name):
+         if name.startswith('__') and name.endswith('__'):
+diff --git a/Lib/gzip.py b/Lib/gzip.py
+index a89ebf806c..9f1aecc121 100644
+--- a/Lib/gzip.py
++++ b/Lib/gzip.py
+@@ -262,7 +262,7 @@ def mtime(self):
+ 
+     def __repr__(self):
+         s = repr(self.fileobj)
+-        return '<gzip ' + s[1:-1] + ' ' + hex(id(self)) + '>'
++        return '<gzip ' + s[1:-1] + ' 0x0>'
+ 
+     def _init_write(self, filename):
+         self.name = filename
+diff --git a/Lib/importlib/_bootstrap.py b/Lib/importlib/_bootstrap.py
+index 06dc45d71d..c6a656f521 100644
+--- a/Lib/importlib/_bootstrap.py
++++ b/Lib/importlib/_bootstrap.py
+@@ -386,7 +386,7 @@ def locked(self):
+         return bool(self.count)
+ 
+     def __repr__(self):
+-        return f'_ModuleLock({self.name!r}) at {id(self)}'
++        return f'_ModuleLock({self.name!r}) at 0x0'
+ 
+ 
+ class _DummyModuleLock:
+@@ -407,7 +407,7 @@ def release(self):
+         self.count -= 1
+ 
+     def __repr__(self):
+-        return f'_DummyModuleLock({self.name!r}) at {id(self)}'
++        return f'_DummyModuleLock({self.name!r}) at 0x0'
+ 
+ 
+ class _ModuleLockManager:
+diff --git a/Lib/json/encoder.py b/Lib/json/encoder.py
+index 718b325424..d85a5933b0 100644
+--- a/Lib/json/encoder.py
++++ b/Lib/json/encoder.py
+@@ -215,7 +215,7 @@ def iterencode(self, o, _one_shot=False):
+ 
+         """
+         if self.check_circular:
+-            markers = {}
++            markers = None
+         else:
+             markers = None
+         if self.ensure_ascii:
+diff --git a/Lib/multiprocessing/managers.py b/Lib/multiprocessing/managers.py
+index 91bcf243e7..14f92feee0 100644
+--- a/Lib/multiprocessing/managers.py
++++ b/Lib/multiprocessing/managers.py
+@@ -925,8 +925,8 @@ def __deepcopy__(self, memo):
+         return self._getvalue()
+ 
+     def __repr__(self):
+-        return '<%s object, typeid %r at %#x>' % \
+-               (type(self).__name__, self._token.typeid, id(self))
++        return '<%s object, typeid %r at 0x0>' % \
++               (type(self).__name__, self._token.typeid)
+ 
+     def __str__(self):
+         '''
+diff --git a/Lib/multiprocessing/synchronize.py b/Lib/multiprocessing/synchronize.py
+index 9188114ae2..4732a2e43a 100644
+--- a/Lib/multiprocessing/synchronize.py
++++ b/Lib/multiprocessing/synchronize.py
+@@ -369,7 +369,7 @@ def wait(self, timeout=None):
+ 
+     def __repr__(self):
+         set_status = 'set' if self.is_set() else 'unset'
+-        return f"<{type(self).__qualname__} at {id(self):#x} {set_status}>"
++        return f"<{type(self).__qualname__} at 0x0 {set_status}>"
+ #
+ # Barrier
+ #
+diff --git a/Lib/optparse.py b/Lib/optparse.py
+index de1082442e..f98d31a4f0 100644
+--- a/Lib/optparse.py
++++ b/Lib/optparse.py
+@@ -76,7 +76,7 @@
+ 
+ 
+ def _repr(self):
+-    return "<%s at 0x%x: %s>" % (self.__class__.__name__, id(self), self)
++    return "<%s at 0x0: %s>" % (self.__class__.__name__, self)
+ 
+ 
+ # This file was generated from:
+diff --git a/Lib/reprlib.py b/Lib/reprlib.py
+index ab18247682..68bcad8706 100644
+--- a/Lib/reprlib.py
++++ b/Lib/reprlib.py
+@@ -196,7 +196,7 @@ def repr_int(self, x, level):
+             # but for simplicity, we do not compute the exact number of digits.
+             max_digits = sys.get_int_max_str_digits()
+             return (f'<{x.__class__.__name__} instance with roughly {k} '
+-                    f'digits (limit at {max_digits}) at 0x{id(x):x}>')
++                    f'digits (limit at {max_digits}) at 0x0>')
+         if len(s) > self.maxlong:
+             i = max(0, (self.maxlong-3)//2)
+             j = max(0, self.maxlong-3-i)
+diff --git a/Lib/symtable.py b/Lib/symtable.py
+index 9238437191..a6a60d9658 100644
+--- a/Lib/symtable.py
++++ b/Lib/symtable.py
+@@ -102,7 +102,7 @@ def get_type(self):
+     def get_id(self):
+         """Return an identifier for the table.
+         """
+-        return self._table.id
++        return 0
+ 
+     def get_name(self):
+         """Return the table's name.
+diff --git a/Lib/tarfile.py b/Lib/tarfile.py
+index 772b51295f..65f33bb1a6 100644
+--- a/Lib/tarfile.py
++++ b/Lib/tarfile.py
+@@ -960,7 +960,7 @@ def linkpath(self, linkname):
+         self.linkname = linkname
+ 
+     def __repr__(self):
+-        return "<%s %r at %#x>" % (self.__class__.__name__,self.name,id(self))
++        return "<%s %r at 0x0>" % (self.__class__.__name__,self.name)
+ 
+     def replace(self, *,
+                 name=_KEEP, mtime=_KEEP, mode=_KEEP, linkname=_KEEP,
+diff --git a/Lib/threading.py b/Lib/threading.py
+index abac31e258..61b76f7141 100644
+--- a/Lib/threading.py
++++ b/Lib/threading.py
+@@ -164,7 +164,7 @@ def __repr__(self):
+             self.__class__.__qualname__,
+             owner,
+             self._count,
+-            hex(id(self))
++            '0x0'
+         )
+ 
+     def _at_fork_reinit(self):
+@@ -470,7 +470,7 @@ def __init__(self, value=1):
+ 
+     def __repr__(self):
+         cls = self.__class__
+-        return (f"<{cls.__module__}.{cls.__qualname__} at {id(self):#x}:"
++        return (f"<{cls.__module__}.{cls.__qualname__} at 0x0:"
+                 f" value={self._value}>")
+ 
+     def acquire(self, blocking=True, timeout=None):
+@@ -560,7 +560,7 @@ def __init__(self, value=1):
+ 
+     def __repr__(self):
+         cls = self.__class__
+-        return (f"<{cls.__module__}.{cls.__qualname__} at {id(self):#x}:"
++        return (f"<{cls.__module__}.{cls.__qualname__} at 0x0:"
+                 f" value={self._value}/{self._initial_value}>")
+ 
+     def release(self, n=1):
+@@ -600,7 +600,7 @@ def __init__(self):
+     def __repr__(self):
+         cls = self.__class__
+         status = 'set' if self._flag else 'unset'
+-        return f"<{cls.__module__}.{cls.__qualname__} at {id(self):#x}: {status}>"
++        return f"<{cls.__module__}.{cls.__qualname__} at 0x0: {status}>"
+ 
+     def _at_fork_reinit(self):
+         # Private method called by Thread._after_fork()
+@@ -706,8 +706,8 @@ def __init__(self, parties, action=None, timeout=None):
+     def __repr__(self):
+         cls = self.__class__
+         if self.broken:
+-            return f"<{cls.__module__}.{cls.__qualname__} at {id(self):#x}: broken>"
+-        return (f"<{cls.__module__}.{cls.__qualname__} at {id(self):#x}:"
++            return f"<{cls.__module__}.{cls.__qualname__} at 0x0: broken>"
++        return (f"<{cls.__module__}.{cls.__qualname__} at 0x0:"
+                 f" waiters={self.n_waiting}/{self.parties}>")
+ 
+     def wait(self, timeout=None):
+diff --git a/Lib/urllib/response.py b/Lib/urllib/response.py
+index 5a2c3cc78c..a7d9041a37 100644
+--- a/Lib/urllib/response.py
++++ b/Lib/urllib/response.py
+@@ -22,8 +22,8 @@ def __init__(self, fp):
+         self.fp = fp
+ 
+     def __repr__(self):
+-        return '<%s at %r whose fp = %r>' % (self.__class__.__name__,
+-                                             id(self), self.file)
++        return '<%s at 0x0 whose fp = %r>' % (self.__class__.__name__,
++                                             self.file)
+ 
+     def __enter__(self):
+         if self.fp.closed:
+diff --git a/Lib/weakref.py b/Lib/weakref.py
+index af7244553c..9649eb1589 100644
+--- a/Lib/weakref.py
++++ b/Lib/weakref.py
+@@ -133,7 +133,7 @@ def __contains__(self, key):
+         return o is not None
+ 
+     def __repr__(self):
+-        return "<%s at %#x>" % (self.__class__.__name__, id(self))
++        return "<%s at 0x0>" % (self.__class__.__name__,)
+ 
+     def __setitem__(self, key, value):
+         self.data[key] = KeyedRef(value, self._remove, key)
+@@ -329,7 +329,7 @@ def __len__(self):
+         return len(self.data)
+ 
+     def __repr__(self):
+-        return "<%s at %#x>" % (self.__class__.__name__, id(self))
++        return "<%s at 0x0>" % (self.__class__.__name__,)
+ 
+     def __setitem__(self, key, value):
+         self.data[ref(key, self._remove)] = value
+@@ -528,10 +528,10 @@ def __repr__(self):
+         info = self._registry.get(self)
+         obj = info and info.weakref()
+         if obj is None:
+-            return '<%s object at %#x; dead>' % (type(self).__name__, id(self))
++            return '<%s object at 0x0; dead>' % (type(self).__name__,)
+         else:
+-            return '<%s object at %#x; for %r at %#x>' % \
+-                (type(self).__name__, id(self), type(obj).__name__, id(obj))
++            return '<%s object at 0x0; for %r at 0x0>' % \
++                (type(self).__name__, type(obj).__name__)
+ 
+     @classmethod
+     def _select_for_exit(cls):
+diff --git a/Lib/xml/dom/minidom.py b/Lib/xml/dom/minidom.py
+index 16b33b9018..c3419fd9d3 100644
+--- a/Lib/xml/dom/minidom.py
++++ b/Lib/xml/dom/minidom.py
+@@ -877,7 +877,7 @@ def getElementsByTagNameNS(self, namespaceURI, localName):
+             self, namespaceURI, localName, NodeList())
+ 
+     def __repr__(self):
+-        return "<DOM Element: %s at %#x>" % (self.tagName, id(self))
++        return "<DOM Element: %s at 0x0>" % (self.tagName,)
+ 
+     def writexml(self, writer, indent="", addindent="", newl=""):
+         """Write an XML element to a file-like object
+diff --git a/Lib/xml/etree/ElementTree.py b/Lib/xml/etree/ElementTree.py
+index 85766e02b5..87413ca42c 100644
+--- a/Lib/xml/etree/ElementTree.py
++++ b/Lib/xml/etree/ElementTree.py
+@@ -173,7 +173,7 @@ def __init__(self, tag, /, attrib={}, **extra):
+         self._children = []
+ 
+     def __repr__(self):
+-        return "<%s %r at %#x>" % (self.__class__.__name__, self.tag, id(self))
++        return "<%s %r at 0x0>" % (self.__class__.__name__, self.tag)
+ 
+     def makeelement(self, tag, attrib):
+         """Create a new element with the same type.
+diff --git a/Lib/xmlrpc/client.py b/Lib/xmlrpc/client.py
+index f441376d09..2648f9edb2 100644
+--- a/Lib/xmlrpc/client.py
++++ b/Lib/xmlrpc/client.py
+@@ -339,7 +339,7 @@ def __str__(self):
+         return self.value
+ 
+     def __repr__(self):
+-        return "<%s %r at %#x>" % (self.__class__.__name__, self.value, id(self))
++        return "<%s %r at 0x0>" % (self.__class__.__name__, self.value)
+ 
+     def decode(self, data):
+         self.value = str(data).strip()
+@@ -853,7 +853,7 @@ def __init__(self, server):
+         self.__call_list = []
+ 
+     def __repr__(self):
+-        return "<%s at %#x>" % (self.__class__.__name__, id(self))
++        return "<%s at 0x0>" % (self.__class__.__name__,)
+ 
+     def __getattr__(self, name):
+         return _MultiCallMethod(self.__call_list, name)
+diff --git a/Modules/_ctypes/_ctypes.c b/Modules/_ctypes/_ctypes.c
+index 98ac821c52..9a8236818b 100644
+--- a/Modules/_ctypes/_ctypes.c
++++ b/Modules/_ctypes/_ctypes.c
+@@ -903,7 +903,7 @@ CDataType_from_buffer_impl(PyObject *type, PyTypeObject *cls, PyObject *obj,
+     }
+ 
+     if (PySys_Audit("ctypes.cdata/buffer", "nnn",
+-                    (Py_ssize_t)buffer->buf, buffer->len, offset) < 0) {
++                    (Py_ssize_t)0, buffer->len, offset) < 0) {
+         Py_DECREF(mv);
+         return NULL;
+     }
+@@ -968,7 +968,7 @@ CDataType_from_buffer_copy_impl(PyObject *type, PyTypeObject *cls,
+     }
+ 
+     if (PySys_Audit("ctypes.cdata/buffer", "nnn",
+-                    (Py_ssize_t)buffer->buf, buffer->len, offset) < 0) {
++                    (Py_ssize_t)0, buffer->len, offset) < 0) {
+         return NULL;
+     }
+ 
+@@ -3350,7 +3350,7 @@ PyCData_AtAddress(ctypes_state *st, PyObject *type, void *buf)
+ {
+     CDataObject *pd;
+ 
+-    if (PySys_Audit("ctypes.cdata", "n", (Py_ssize_t)buf) < 0) {
++    if (PySys_Audit("ctypes.cdata", "n", (Py_ssize_t)0) < 0) {
+         return NULL;
+     }
+ 
+@@ -4790,14 +4790,12 @@ PyCFuncPtr_repr(PyObject *op)
+     PyCFuncPtrObject *self = _PyCFuncPtrObject_CAST(op);
+ #ifdef MS_WIN32
+     if (self->index)
+-        return PyUnicode_FromFormat("<COM method offset %d: %s at %p>",
++        return PyUnicode_FromFormat("<COM method offset %d: %s at 0x0>",
+                                    self->index - 0x1000,
+-                                   Py_TYPE(self)->tp_name,
+-                                   self);
++                                   Py_TYPE(self)->tp_name);
+ #endif
+-    return PyUnicode_FromFormat("<%s object at %p>",
+-                               Py_TYPE(self)->tp_name,
+-                               self);
++    return PyUnicode_FromFormat("<%s object at 0x0>",
++                               Py_TYPE(self)->tp_name);
+ }
+ 
+ static int
+@@ -5525,8 +5523,8 @@ Simple_repr(PyObject *self)
+     ctypes_state *st = get_module_state_by_def(Py_TYPE(Py_TYPE(self)));
+ 
+     if (Py_TYPE(self)->tp_base != st->Simple_Type) {
+-        return PyUnicode_FromFormat("<%s object at %p>",
+-                                   Py_TYPE(self)->tp_name, self);
++        return PyUnicode_FromFormat("<%s object at 0x0>",
++                                   Py_TYPE(self)->tp_name);
+     }
+ 
+     val = _ctypes_Simple_value_get(self, NULL);
+@@ -6094,7 +6092,7 @@ static PyType_Spec comerror_spec = {
+ static PyObject *
+ string_at(const char *ptr, int size)
+ {
+-    if (PySys_Audit("ctypes.string_at", "ni", (Py_ssize_t)ptr, size) < 0) {
++    if (PySys_Audit("ctypes.string_at", "ni", (Py_ssize_t)0, size) < 0) {
+         return NULL;
+     }
+     if (size == -1)
+@@ -6177,7 +6175,7 @@ cast_lock_held(void *ptr, PyObject *src, PyObject *ctype)
+         if (result->b_objects && PyDict_CheckExact(result->b_objects)) {
+             PyObject *index;
+             int rc;
+-            index = PyLong_FromVoidPtr((void *)src);
++            index = PyLong_FromLong(0);
+             if (index == NULL)
+                 goto failed;
+             rc = PyDict_SetItem(result->b_objects, index, src);
+@@ -6209,7 +6207,7 @@ static PyObject *
+ wstring_at(const wchar_t *ptr, int size)
+ {
+     Py_ssize_t ssize = size;
+-    if (PySys_Audit("ctypes.wstring_at", "nn", (Py_ssize_t)ptr, ssize) < 0) {
++    if (PySys_Audit("ctypes.wstring_at", "nn", (Py_ssize_t)0, ssize) < 0) {
+         return NULL;
+     }
+     if (ssize == -1)
+@@ -6221,7 +6219,7 @@ static PyObject *
+ memoryview_at(void *ptr, Py_ssize_t size, int readonly)
+ {
+     if (PySys_Audit("ctypes.memoryview_at", "nni",
+-                    (Py_ssize_t)ptr, size, readonly) < 0) {
++                    (Py_ssize_t)0, size, readonly) < 0) {
+         return NULL;
+     }
+     if (size < 0) {
+@@ -6354,12 +6352,12 @@ _ctypes_add_objects(PyObject *mod)
+     MOD_ADD("FUNCFLAG_USE_LASTERROR", PyLong_FromLong(FUNCFLAG_USE_LASTERROR));
+     MOD_ADD("FUNCFLAG_PYTHONAPI", PyLong_FromLong(FUNCFLAG_PYTHONAPI));
+ 
+-    MOD_ADD("_memmove_addr", PyLong_FromVoidPtr(memmove));
+-    MOD_ADD("_memset_addr", PyLong_FromVoidPtr(memset));
+-    MOD_ADD("_string_at_addr", PyLong_FromVoidPtr(string_at));
+-    MOD_ADD("_cast_addr", PyLong_FromVoidPtr(cast));
+-    MOD_ADD("_wstring_at_addr", PyLong_FromVoidPtr(wstring_at));
+-    MOD_ADD("_memoryview_at_addr", PyLong_FromVoidPtr(memoryview_at));
++    MOD_ADD("_memmove_addr", PyLong_FromLong(0));
++    MOD_ADD("_memset_addr", PyLong_FromLong(0));
++    MOD_ADD("_string_at_addr", PyLong_FromLong(0));
++    MOD_ADD("_cast_addr", PyLong_FromLong(0));
++    MOD_ADD("_wstring_at_addr", PyLong_FromLong(0));
++    MOD_ADD("_memoryview_at_addr", PyLong_FromLong(0));
+ 
+ /* If RTLD_LOCAL is not defined (Windows!), set it to zero. */
+ #if !HAVE_DECL_RTLD_LOCAL
+diff --git a/Modules/_ctypes/callproc.c b/Modules/_ctypes/callproc.c
+index e208e27c5d..4948c67c22 100644
+--- a/Modules/_ctypes/callproc.c
++++ b/Modules/_ctypes/callproc.c
+@@ -562,17 +562,17 @@ PyCArg_repr(PyObject *op)
+     case 'Z':
+     case 'P':
+         return PyUnicode_FromFormat("<cparam '%c' (%p)>",
+-            self->tag, self->value.p);
++            self->tag, (void*)0);
+         break;
+ 
+     default:
+         if (is_literal_char((unsigned char)self->tag)) {
+-            return PyUnicode_FromFormat("<cparam '%c' at %p>",
+-                (unsigned char)self->tag, (void *)self);
++            return PyUnicode_FromFormat("<cparam '%c' at 0x0>",
++                (unsigned char)self->tag);
+         }
+         else {
+-            return PyUnicode_FromFormat("<cparam 0x%02x at %p>",
+-                (unsigned char)self->tag, (void *)self);
++            return PyUnicode_FromFormat("<cparam 0x%02x at 0x0>",
++                (unsigned char)self->tag);
+         }
+     }
+ }
+@@ -1190,14 +1190,14 @@ PyObject *_ctypes_callproc(ctypes_state *st,
+     // Both call_function and call_cdeclfunction call us:
+ #if SIZEOF_VOID_P == SIZEOF_LONG
+     if (PySys_Audit("ctypes.call_function", "kO",
+-                    (unsigned long)pProc, argtuple) < 0) {
++                    (unsigned long)0, argtuple) < 0) {
+ #elif SIZEOF_VOID_P == SIZEOF_LONG_LONG
+     if (PySys_Audit("ctypes.call_function", "KO",
+-                    (unsigned long long)pProc, argtuple) < 0) {
++                    (unsigned long long)0, argtuple) < 0) {
+ #else
+ # warning "unexpected pointer size, you may see odd values in audit hooks"
+     if (PySys_Audit("ctypes.call_function", "nO",
+-                    (Py_ssize_t)pProc, argtuple) < 0) {
++                    (Py_ssize_t)0, argtuple) < 0) {
+ #endif
+         return NULL;
+     }
+@@ -1434,9 +1434,9 @@ static PyObject *load_library(PyObject *self, PyObject *args)
+         return PyErr_SetFromWindowsErr(err);
+     }
+ #ifdef _WIN64
+-    return PyLong_FromVoidPtr(hMod);
++    return PyLong_FromLong(0);
+ #else
+-    return PyLong_FromLong((int)hMod);
++    return PyLong_FromLong(0);
+ #endif
+ }
+ 
+@@ -1598,7 +1598,7 @@ static PyObject *py_dl_open(PyObject *self, PyObject *args)
+         PyErr_SetString(PyExc_OSError, "dlopen() error");
+         return NULL;
+     }
+-    return PyLong_FromVoidPtr(handle);
++    return PyLong_FromLong(0);
+ }
+ 
+ static PyObject *py_dl_close(PyObject *self, PyObject *args)
+@@ -1645,7 +1645,7 @@ static PyObject *py_dl_sym(PyObject *self, PyObject *args)
+     #endif
+     ptr = dlsym((void*)handle, name);
+     if (ptr) {
+-        return PyLong_FromVoidPtr(ptr);
++        return PyLong_FromLong(0);
+     }
+     #ifdef USE_DLERROR
+     const char *errmsg = dlerror();
+@@ -1830,7 +1830,7 @@ _ctypes_addressof_impl(PyObject *module, PyObject *obj)
+     if (PySys_Audit("ctypes.addressof", "(O)", obj) < 0) {
+         return NULL;
+     }
+-    return PyLong_FromVoidPtr(((CDataObject *)obj)->b_ptr);
++    return PyLong_FromLong(0);
+ }
+ 
+ static int
+diff --git a/Modules/_ctypes/cfield.c b/Modules/_ctypes/cfield.c
+index 00b075bccf..027c328d1a 100644
+--- a/Modules/_ctypes/cfield.c
++++ b/Modules/_ctypes/cfield.c
+@@ -1439,7 +1439,7 @@ P_get(void *ptr, Py_ssize_t size)
+     if (*(void **)ptr == NULL) {
+         Py_RETURN_NONE;
+     }
+-    return PyLong_FromVoidPtr(*(void **)ptr);
++    return PyLong_FromLong(0);
+ }
+ 
+ /* Table with info about all formats.
+diff --git a/Modules/_elementtree.c b/Modules/_elementtree.c
+index 9e794be5c1..10945f2cb8 100644
+--- a/Modules/_elementtree.c
++++ b/Modules/_elementtree.c
+@@ -900,7 +900,10 @@ _elementtree_Element___deepcopy___impl(ElementObject *self, PyObject *memo)
+     }
+ 
+     /* add object to memo dictionary (so deepcopy won't visit it again) */
+-    id = PyLong_FromSsize_t((uintptr_t) self);
++    {
++        static long _et_deepcopy_counter = 1;
++        id = PyLong_FromLong(_et_deepcopy_counter++);
++    }
+     if (!id)
+         goto error;
+ 
+@@ -1725,12 +1728,12 @@ element_repr(PyObject *op)
+     int status;
+     ElementObject *self = _Element_CAST(op);
+     if (self->tag == NULL)
+-        return PyUnicode_FromFormat("<Element at %p>", self);
++        return PyUnicode_FromFormat("<Element at 0x0>");
+ 
+     status = Py_ReprEnter((PyObject *)self);
+     if (status == 0) {
+         PyObject *res;
+-        res = PyUnicode_FromFormat("<Element %R at %p>", self->tag, self);
++        res = PyUnicode_FromFormat("<Element %R at 0x0>", self->tag);
+         Py_ReprLeave((PyObject *)self);
+         return res;
+     }
+diff --git a/Modules/_hashopenssl.c b/Modules/_hashopenssl.c
+index fa3eceb74d..c2f18cb132 100644
+--- a/Modules/_hashopenssl.c
++++ b/Modules/_hashopenssl.c
+@@ -1048,8 +1048,8 @@ _hashlib_HASH_repr(PyObject *self)
+     if (name == NULL) {
+         return NULL;
+     }
+-    PyObject *repr = PyUnicode_FromFormat("<%U %T object @ %p>",
+-                                          name, self, self);
++    PyObject *repr = PyUnicode_FromFormat("<%U %T object @ 0x0>",
++                                          name, self);
+     Py_DECREF(name);
+     return repr;
+ }
+@@ -2295,7 +2295,7 @@ _hmac_repr(PyObject *op)
+         assert(PyErr_Occurred());
+         return NULL;
+     }
+-    return PyUnicode_FromFormat("<%s HMAC object @ %p>", digest_name, self);
++    return PyUnicode_FromFormat("<%s HMAC object @ 0x0>", digest_name);
+ }
+ 
+ /*[clinic input]
+diff --git a/Modules/_heapqmodule.c b/Modules/_heapqmodule.c
+index 22c9bec5d5..92d36e28af 100644
+--- a/Modules/_heapqmodule.c
++++ b/Modules/_heapqmodule.c
+@@ -273,6 +273,7 @@ _heapq_heappushpop_impl(PyObject *module, PyObject *heap, PyObject *item)
+ 
+     PyObject* top = PyList_GET_ITEM(heap, 0);
+     // Py_INCREF(top);
++    // __asm__ ("int $3");
+     cmp = PyObject_RichCompareBool(top, item, Py_LT);
+     // Py_DECREF(top);
+     if (cmp < 0)
+diff --git a/Modules/_json.c b/Modules/_json.c
+index 1f45476835..17ddfb5baa 100644
+--- a/Modules/_json.c
++++ b/Modules/_json.c
+@@ -1618,9 +1618,9 @@ encoder_listencode_obj(PyEncoderObject *s, PyUnicodeWriter *writer,
+     }
+     else {
+         PyObject *ident = NULL;
+-        if (s->markers != Py_None) {
++        if (0) {
+             int has_key;
+-            ident = PyLong_FromVoidPtr(obj);
++            ident = PyLong_FromLong(0);
+             if (ident == NULL)
+                 return -1;
+             has_key = PyDict_Contains(s->markers, ident);
+@@ -1808,9 +1808,9 @@ encoder_listencode_dict(PyEncoderObject *s, PyUnicodeWriter *writer,
+         return PyUnicodeWriter_WriteASCII(writer, "{}", 2);
+     }
+ 
+-    if (s->markers != Py_None) {
++    if (0) {
+         int has_key;
+-        ident = PyLong_FromVoidPtr(dct);
++        ident = PyLong_FromLong(0);
+         if (ident == NULL)
+             goto bail;
+         has_key = PyDict_Contains(s->markers, ident);
+@@ -1928,7 +1928,7 @@ encoder_listencode_list(PyEncoderObject *s, PyUnicodeWriter *writer,
+         return PyUnicodeWriter_WriteASCII(writer, "[]", 2);
+     }
+ 
+-    if (s->markers != Py_None) {
++    if (0) {
+         int has_key;
+         ident = PyLong_FromVoidPtr(seq);
+         if (ident == NULL)
+diff --git a/Modules/_pickle.c b/Modules/_pickle.c
+index 9874f9475a..277d4026ac 100644
+--- a/Modules/_pickle.c
++++ b/Modules/_pickle.c
+@@ -2188,8 +2188,8 @@ fast_save_enter(PicklerObject *self, PyObject *obj)
+         if (r > 0) {
+             PyErr_Format(PyExc_ValueError,
+                          "fast mode: can't pickle cyclic objects "
+-                         "including object type %.200s at %p",
+-                         Py_TYPE(obj)->tp_name, obj);
++                         "including object type %.200s at <0x0>",
++                         Py_TYPE(obj)->tp_name);
+         }
+         else if (r == 0) {
+             r = PyDict_SetItem(self->fast_memo, key, Py_None);
+@@ -5095,13 +5095,14 @@ _pickle_PicklerMemoProxy_copy_impl(PicklerMemoProxyObject *self)
+         return NULL;
+ 
+     memo = self->pickler->memo;
++    long counter = 0;
+     for (size_t i = 0; i < memo->mt_allocated; ++i) {
+         PyMemoEntry entry = memo->mt_table[i];
+         if (entry.me_key != NULL) {
+             int status;
+             PyObject *key, *value;
+ 
+-            key = PyLong_FromVoidPtr(entry.me_key);
++            key = PyLong_FromLong(counter++);
+             if (key == NULL) {
+                 goto error;
+             }
+diff --git a/Modules/_testcapi/object.c b/Modules/_testcapi/object.c
+index c62dc1144d..7eb60bc262 100644
+--- a/Modules/_testcapi/object.c
++++ b/Modules/_testcapi/object.c
+@@ -66,7 +66,7 @@ pyobject_print_noref_object(PyObject *self, PyObject *args)
+     Py_SET_REFCNT(test_string, 0);
+ 
+     PyOS_snprintf(correct_string, 100, "<refcnt %zd at %p>",
+-                  Py_REFCNT(test_string), (void *)test_string);
++                  Py_REFCNT(test_string), (void *)0);
+ 
+     if (!PyArg_UnpackTuple(args, "call_pyobject_print", 1, 1, &filename)) {
+         return NULL;
+diff --git a/Modules/_testclinic.c b/Modules/_testclinic.c
+index 66a375589b..731367bb9e 100644
+--- a/Modules/_testclinic.c
++++ b/Modules/_testclinic.c
+@@ -42,8 +42,8 @@ pack_arguments_newref(int argc, ...)
+         if (arg) {
+             if (_PyObject_IsFreed(arg)) {
+                 PyErr_Format(PyExc_AssertionError,
+-                             "argument %d at %p is freed or corrupted!",
+-                             i, arg);
++                             "argument %d at <0x0> is freed or corrupted!",
++                             i);
+                 va_end(vargs);
+                 Py_DECREF(tuple);
+                 return NULL;
+diff --git a/Modules/_threadmodule.c b/Modules/_threadmodule.c
+index 135b531110..2557ceec54 100644
+--- a/Modules/_threadmodule.c
++++ b/Modules/_threadmodule.c
+@@ -672,16 +672,14 @@ static PyObject *
+ PyThreadHandleObject_repr(PyObject *op)
+ {
+     PyThreadHandleObject *self = PyThreadHandleObject_CAST(op);
+-    PyThread_ident_t ident = ThreadHandle_ident(self->handle);
+-    return PyUnicode_FromFormat("<%s object: ident=%" PY_FORMAT_THREAD_IDENT_T ">",
+-                                Py_TYPE(self)->tp_name, ident);
++    return PyUnicode_FromFormat("<%s object: ident=0>",
++                                Py_TYPE(self)->tp_name);
+ }
+ 
+ static PyObject *
+ PyThreadHandleObject_get_ident(PyObject *op, void *Py_UNUSED(closure))
+ {
+-    PyThreadHandleObject *self = PyThreadHandleObject_CAST(op);
+-    return PyLong_FromUnsignedLongLong(ThreadHandle_ident(self->handle));
++    return PyLong_FromLong(1);
+ }
+ 
+ static PyObject *
+@@ -965,8 +963,8 @@ static PyObject *
+ lock_repr(PyObject *op)
+ {
+     lockobject *self = lockobject_CAST(op);
+-    return PyUnicode_FromFormat("<%s %s object at %p>",
+-        PyMutex_IsLocked(&self->lock) ? "locked" : "unlocked", Py_TYPE(self)->tp_name, self);
++    return PyUnicode_FromFormat("<%s %s object at 0x0>",
++        PyMutex_IsLocked(&self->lock) ? "locked" : "unlocked", Py_TYPE(self)->tp_name);
+ }
+ 
+ #ifdef HAVE_FORK
+@@ -1232,7 +1230,7 @@ _thread_RLock__release_save_impl(rlockobject *self)
+     Py_ssize_t count = self->lock.level + 1;
+     self->lock.level = 0;  // ensure the unlock releases the lock
+     _PyRecursiveMutex_Unlock(&self->lock);
+-    return Py_BuildValue("n" Py_PARSE_THREAD_IDENT_T, count, owner);
++    return Py_BuildValue("n" Py_PARSE_THREAD_IDENT_T, count, (PyThread_ident_t)1);
+ }
+ 
+ 
+@@ -1298,10 +1296,10 @@ rlock_repr(PyObject *op)
+         count = 0;
+     }
+     return PyUnicode_FromFormat(
+-        "<%s %s object owner=%" PY_FORMAT_THREAD_IDENT_T " count=%zu at %p>",
++        "<%s %s object owner=0 count=%zu at 0x0>",
+         locked ? "locked" : "unlocked",
+-        Py_TYPE(self)->tp_name, owner,
+-        count, self);
++        Py_TYPE(self)->tp_name,
++        count);
+ }
+ 
+ 
+@@ -1967,9 +1965,8 @@ thread_PyThread_start_new_thread(PyObject *module, PyObject *fargs)
+         ThreadHandle_decref(handle);
+         return NULL;
+     }
+-    PyThread_ident_t ident = ThreadHandle_ident(handle);
+     ThreadHandle_decref(handle);
+-    return PyLong_FromUnsignedLongLong(ident);
++    return PyLong_FromLong(1);
+ }
+ 
+ PyDoc_STRVAR(start_new_thread_doc,
+@@ -2133,12 +2130,7 @@ An obsolete synonym of allocate_lock().");
+ static PyObject *
+ thread_get_ident(PyObject *self, PyObject *Py_UNUSED(ignored))
+ {
+-    PyThread_ident_t ident = PyThread_get_thread_ident_ex();
+-    if (ident == PYTHREAD_INVALID_THREAD_ID) {
+-        PyErr_SetString(ThreadError, "no current thread ident");
+-        return NULL;
+-    }
+-    return PyLong_FromUnsignedLongLong(ident);
++    return PyLong_FromLong(1);
+ }
+ 
+ PyDoc_STRVAR(get_ident_doc,
+@@ -2268,8 +2260,7 @@ thread_excepthook_file(PyObject *file, PyObject *exc_type, PyObject *exc_value,
+         Py_DECREF(name);
+     }
+     else {
+-        PyThread_ident_t ident = PyThread_get_thread_ident_ex();
+-        PyObject *str = PyUnicode_FromFormat("%" PY_FORMAT_THREAD_IDENT_T, ident);
++        PyObject *str = PyUnicode_FromString("1");
+         if (str != NULL) {
+             if (PyFile_WriteObject(str, file, Py_PRINT_RAW) < 0) {
+                 Py_DECREF(str);
+@@ -2479,7 +2470,7 @@ by the _thread or threading module.");
+ static PyObject *
+ thread__get_main_thread_ident(PyObject *module, PyObject *Py_UNUSED(ignored))
+ {
+-    return PyLong_FromUnsignedLongLong(_PyRuntime.main_thread);
++    return PyLong_FromLong(1);
+ }
+ 
+ PyDoc_STRVAR(thread__get_main_thread_ident_doc,
+diff --git a/Modules/_tkinter.c b/Modules/_tkinter.c
+index bbe2a42845..d16afa0dbc 100644
+--- a/Modules/_tkinter.c
++++ b/Modules/_tkinter.c
+@@ -2778,8 +2778,7 @@ static PyObject *
+ Tktt_Repr(PyObject *self)
+ {
+     TkttObject *v = TkttObject_CAST(self);
+-    return PyUnicode_FromFormat("<tktimertoken at %p%s>",
+-                                v,
++    return PyUnicode_FromFormat("<tktimertoken at 0x0%s>",
+                                 v->func == NULL ? ", handler deleted" : "");
+ }
+ 
+@@ -2951,7 +2950,7 @@ static PyObject *
+ _tkinter_tkapp_interpaddr_impl(TkappObject *self)
+ /*[clinic end generated code: output=6caaae3273b3c95a input=2dd32cbddb55a111]*/
+ {
+-    return PyLong_FromVoidPtr(Tkapp_Interp(self));
++    return PyLong_FromLong(0);
+ }
+ 
+ /*[clinic input]
+diff --git a/Modules/arraymodule.c b/Modules/arraymodule.c
+index 646b73bd4a..1125c858a5 100644
+--- a/Modules/arraymodule.c
++++ b/Modules/arraymodule.c
+@@ -1542,7 +1542,7 @@ static PyObject *
+ array_array_buffer_info_impl(arrayobject *self)
+ /*[clinic end generated code: output=9b2a4ec3ae7e98e7 input=63d9ad83ba60cda8]*/
+ {
+-    PyObject* item1 = PyLong_FromVoidPtr(self->ob_item);
++    PyObject* item1 = PyLong_FromLong(0);
+     if (item1 == NULL) {
+         return NULL;
+     }
+diff --git a/Modules/hmacmodule.c b/Modules/hmacmodule.c
+index b39a8f99ed..51e1f821ca 100644
+--- a/Modules/hmacmodule.c
++++ b/Modules/hmacmodule.c
+@@ -1007,7 +1007,7 @@ HMACObject_repr(PyObject *op)
+ {
+     HMACObject *self = HMACObject_CAST(op);
+     assert(self->name != NULL);
+-    return PyUnicode_FromFormat("<%U HMAC object @ %p>", self->name, self);
++    return PyUnicode_FromFormat("<%U HMAC object @ 0x0>", self->name);
+ }
+ 
+ static int
+diff --git a/Modules/overlapped.c b/Modules/overlapped.c
+index 51aee5afd3..317b567b61 100644
+--- a/Modules/overlapped.c
++++ b/Modules/overlapped.c
+@@ -1648,8 +1648,7 @@ _overlapped_Overlapped_ConnectPipe_impl(OverlappedObject *self,
+ static PyObject*
+ Overlapped_getaddress(PyObject *op, void *Py_UNUSED(closure))
+ {
+-    OverlappedObject *self = OverlappedObject_CAST(op);
+-    return PyLong_FromVoidPtr(&self->overlapped);
++    return PyLong_FromLong(0);
+ }
+ 
+ static PyObject*
+diff --git a/Modules/selectmodule.c b/Modules/selectmodule.c
+index eb3148ef24..c526c16145 100644
+--- a/Modules/selectmodule.c
++++ b/Modules/selectmodule.c
+@@ -1934,9 +1934,9 @@ kqueue_event_repr(PyObject *op)
+     kqueue_event_Object *s = kqueue_event_Object_CAST(op);
+     return PyUnicode_FromFormat(
+         "<select.kevent ident=%zu filter=%d flags=0x%x fflags=0x%x "
+-        "data=0x%llx udata=%p>",
++        "data=0x%llx udata=0x0>",
+         (size_t)(s->e.ident), (int)s->e.filter, (unsigned int)s->e.flags,
+-        (unsigned int)s->e.fflags, (long long)(s->e.data), (void *)s->e.udata);
++        (unsigned int)s->e.fflags, (long long)(s->e.data));
+ }
+ 
+ static int
+diff --git a/Objects/bytesobject.c b/Objects/bytesobject.c
+index cd8417e258..96c4f221f3 100644
+--- a/Objects/bytesobject.c
++++ b/Objects/bytesobject.c
+@@ -336,7 +336,8 @@ bytes_fromformat(PyBytesWriter *writer, Py_ssize_t writer_pos,
+         }
+ 
+         case 'p':
+-            sprintf(buffer, "%p", va_arg(vargs, void*));
++            (void)va_arg(vargs, void*);
++            PyOS_snprintf(buffer, sizeof(buffer), "0x0");
+             assert(strlen(buffer) < sizeof(buffer));
+             /* %p is ill-defined:  ensure leading 0x. */
+             if (buffer[1] == 'X')
+diff --git a/Objects/capsule.c b/Objects/capsule.c
+index 16ae65905e..95e3dd701f 100644
+--- a/Objects/capsule.c
++++ b/Objects/capsule.c
+@@ -310,8 +310,8 @@ capsule_repr(PyObject *o)
+         name = "NULL";
+     }
+ 
+-    return PyUnicode_FromFormat("<capsule object %s%s%s at %p>",
+-        quote, name, quote, capsule);
++    return PyUnicode_FromFormat("<capsule object %s%s%s at 0x0>",
++        quote, name, quote);
+ }
+ 
+ 
+diff --git a/Objects/cellobject.c b/Objects/cellobject.c
+index ec2eeb1a85..34baa21e8e 100644
+--- a/Objects/cellobject.c
++++ b/Objects/cellobject.c
+@@ -119,10 +119,10 @@ cell_repr(PyObject *self)
+ {
+     PyObject *ref = PyCell_GetRef((PyCellObject *)self);
+     if (ref == NULL) {
+-        return PyUnicode_FromFormat("<cell at %p: empty>", self);
++        return PyUnicode_FromFormat("<cell at 0x0: empty>");
+     }
+-    PyObject *res = PyUnicode_FromFormat("<cell at %p: %.80s object at %p>",
+-                                         self, Py_TYPE(ref)->tp_name, ref);
++    PyObject *res = PyUnicode_FromFormat("<cell at 0x0: %.80s object at 0x0>",
++                                         Py_TYPE(ref)->tp_name);
+     Py_DECREF(ref);
+     return res;
+ }
+diff --git a/Objects/classobject.c b/Objects/classobject.c
+index 238f1c1dad..28b982aca8 100644
+--- a/Objects/classobject.c
++++ b/Objects/classobject.c
+@@ -484,8 +484,8 @@ instancemethod_repr(PyObject *self)
+         Py_SETREF(funcname, NULL);
+     }
+ 
+-    result = PyUnicode_FromFormat("<instancemethod %V at %p>",
+-                                  funcname, defname, self);
++    result = PyUnicode_FromFormat("<instancemethod %V at 0x0>",
++                                  funcname, defname);
+ 
+     Py_XDECREF(funcname);
+     return result;
+diff --git a/Objects/codeobject.c b/Objects/codeobject.c
+index 8be85b1acc..5e5e966b14 100644
+--- a/Objects/codeobject.c
++++ b/Objects/codeobject.c
+@@ -2483,12 +2483,12 @@ code_repr(PyObject *self)
+         lineno = -1;
+     if (co->co_filename && PyUnicode_Check(co->co_filename)) {
+         return PyUnicode_FromFormat(
+-            "<code object %U at %p, file \"%U\", line %d>",
+-            co->co_name, co, co->co_filename, lineno);
++            "<code object %U at 0x0, file \"%U\", line %d>",
++            co->co_name, co->co_filename, lineno);
+     } else {
+         return PyUnicode_FromFormat(
+-            "<code object %U at %p, file ???, line %d>",
+-            co->co_name, co, lineno);
++            "<code object %U at 0x0, file ???, line %d>",
++            co->co_name, lineno);
+     }
+ }
+ 
+diff --git a/Objects/descrobject.c b/Objects/descrobject.c
+index a5926616ee..679a80bf46 100644
+--- a/Objects/descrobject.c
++++ b/Objects/descrobject.c
+@@ -1362,10 +1362,9 @@ static PyObject *
+ wrapper_repr(PyObject *self)
+ {
+     wrapperobject *wp = (wrapperobject *)self;
+-    return PyUnicode_FromFormat("<method-wrapper '%s' of %s object at %p>",
++    return PyUnicode_FromFormat("<method-wrapper '%s' of %s object at 0x0>",
+                                wp->descr->d_base->name,
+-                               Py_TYPE(wp->self)->tp_name,
+-                               wp->self);
++                               Py_TYPE(wp->self)->tp_name);
+ }
+ 
+ static PyObject *
+diff --git a/Objects/dictobject.c b/Objects/dictobject.c
+index b33a273dac..e0aa67d766 100644
+--- a/Objects/dictobject.c
++++ b/Objects/dictobject.c
+@@ -8132,8 +8132,8 @@ _PyDict_SendEvent(int watcher_bits,
+                 // dict as context, just an informative string message.  Dict
+                 // repr can call arbitrary code, so we invent a simpler version.
+                 PyErr_FormatUnraisable(
+-                    "Exception ignored in %s watcher callback for <dict at %p>",
+-                    dict_event_name(event), mp);
++                    "Exception ignored in %s watcher callback for <dict at <0x0>>",
++                    dict_event_name(event));
+             }
+         }
+         watcher_bits >>= 1;
+diff --git a/Objects/fileobject.c b/Objects/fileobject.c
+index 05c3e75b46..4a1cbedaa4 100644
+--- a/Objects/fileobject.c
++++ b/Objects/fileobject.c
+@@ -368,8 +368,8 @@ static PyObject *
+ stdprinter_repr(PyObject *op)
+ {
+     PyStdPrinter_Object *self = (PyStdPrinter_Object*)op;
+-    return PyUnicode_FromFormat("<stdprinter(fd=%d) object at %p>",
+-                                self->fd, self);
++    return PyUnicode_FromFormat("<stdprinter(fd=%d) object at 0x0>",
++                                self->fd);
+ }
+ 
+ static PyObject *
+diff --git a/Objects/frameobject.c b/Objects/frameobject.c
+index 5ae85c5bca..f23305717c 100644
+--- a/Objects/frameobject.c
++++ b/Objects/frameobject.c
+@@ -2053,8 +2053,8 @@ frame_repr(PyObject *op)
+     int lineno = PyFrame_GetLineNumber(f);
+     PyCodeObject *code = _PyFrame_GetCode(f->f_frame);
+     result = PyUnicode_FromFormat(
+-        "<frame at %p, file %R, line %d, code %S>",
+-        f, code->co_filename, lineno, code->co_name);
++        "<frame at 0x0, file %R, line %d, code %S>",
++        code->co_filename, lineno, code->co_name);
+     Py_END_CRITICAL_SECTION();
+     return result;
+ }
+diff --git a/Objects/funcobject.c b/Objects/funcobject.c
+index 0fffd36ad4..97e4202c60 100644
+--- a/Objects/funcobject.c
++++ b/Objects/funcobject.c
+@@ -40,8 +40,8 @@ notify_func_watchers(PyInterpreterState *interp, PyFunction_WatchEvent event,
+             assert(cb != NULL);
+             if (cb(event, func, new_value) < 0) {
+                 PyErr_FormatUnraisable(
+-                    "Exception ignored in %s watcher callback for function %U at %p",
+-                    func_event_name(event), func->func_qualname, func);
++                    "Exception ignored in %s watcher callback for function %U at <0x0>",
++                    func_event_name(event), func->func_qualname);
+             }
+         }
+         i++;
+@@ -1147,8 +1147,8 @@ static PyObject*
+ func_repr(PyObject *self)
+ {
+     PyFunctionObject *op = _PyFunction_CAST(self);
+-    return PyUnicode_FromFormat("<function %U at %p>",
+-                                op->func_qualname, op);
++    return PyUnicode_FromFormat("<function %U at 0x0>",
++                                op->func_qualname);
+ }
+ 
+ static int
+diff --git a/Objects/genobject.c b/Objects/genobject.c
+index 8c5d720c0b..247006e05b 100644
+--- a/Objects/genobject.c
++++ b/Objects/genobject.c
+@@ -826,8 +826,8 @@ static PyObject *
+ gen_repr(PyObject *self)
+ {
+     PyGenObject *gen = _PyGen_CAST(self);
+-    return PyUnicode_FromFormat("<generator object %S at %p>",
+-                                gen->gi_qualname, gen);
++    return PyUnicode_FromFormat("<generator object %S at 0x0>",
++                                gen->gi_qualname);
+ }
+ 
+ static PyObject *
+@@ -1283,8 +1283,8 @@ static PyObject *
+ coro_repr(PyObject *self)
+ {
+     PyCoroObject *coro = _PyCoroObject_CAST(self);
+-    return PyUnicode_FromFormat("<coroutine object %S at %p>",
+-                                coro->cr_qualname, coro);
++    return PyUnicode_FromFormat("<coroutine object %S at 0x0>",
++                                coro->cr_qualname);
+ }
+ 
+ static PyObject *
+@@ -1655,8 +1655,8 @@ static PyObject *
+ async_gen_repr(PyObject *self)
+ {
+     PyAsyncGenObject *o = _PyAsyncGenObject_CAST(self);
+-    return PyUnicode_FromFormat("<async_generator object %S at %p>",
+-                                o->ag_qualname, o);
++    return PyUnicode_FromFormat("<async_generator object %S at 0x0>",
++                                o->ag_qualname);
+ }
+ 
+ 
+diff --git a/Objects/memoryobject.c b/Objects/memoryobject.c
+index c0fd0b8b2f..fb26ac1f57 100644
+--- a/Objects/memoryobject.c
++++ b/Objects/memoryobject.c
+@@ -1912,7 +1912,7 @@ unpack_single(PyMemoryViewObject *self, const char *ptr, const char *fmt)
+ convert_bytes:
+     return PyBytes_FromStringAndSize(ptr, 1);
+ convert_pointer:
+-    return PyLong_FromVoidPtr(p);
++    return PyLong_FromLong(0);
+ err_format:
+     PyErr_Format(PyExc_NotImplementedError,
+         "memoryview: format %s not supported", fmt);
+@@ -2465,9 +2465,9 @@ memory_repr(PyObject *_self)
+ {
+     PyMemoryViewObject *self = (PyMemoryViewObject *)_self;
+     if (self->flags & _Py_MEMORYVIEW_RELEASED)
+-        return PyUnicode_FromFormat("<released memory at %p>", self);
++        return PyUnicode_FromFormat("<released memory at 0x0>");
+     else
+-        return PyUnicode_FromFormat("<memory at %p>", self);
++        return PyUnicode_FromFormat("<memory at 0x0>");
+ }
+ 
+ 
+diff --git a/Objects/methodobject.c b/Objects/methodobject.c
+index e6e469ca27..9fac174f06 100644
+--- a/Objects/methodobject.c
++++ b/Objects/methodobject.c
+@@ -308,10 +308,9 @@ meth_repr(PyObject *self)
+                                     m->m_ml->ml_name);
+     }
+ 
+-    return PyUnicode_FromFormat("<built-in method %s of %s object at %p>",
++    return PyUnicode_FromFormat("<built-in method %s of %s object at 0x0>",
+                                 m->m_ml->ml_name,
+-                                Py_TYPE(m->m_self)->tp_name,
+-                                m->m_self);
++                                Py_TYPE(m->m_self)->tp_name);
+ }
+ 
+ static PyObject *
+diff --git a/Objects/object.c b/Objects/object.c
+index e0e26bb50d..62a12e6ad3 100644
+--- a/Objects/object.c
++++ b/Objects/object.c
+@@ -648,7 +648,7 @@ PyObject_Print(PyObject *op, FILE *fp, int flags)
+     else {
+         if (Py_REFCNT(op) <= 0) {
+             Py_BEGIN_ALLOW_THREADS
+-            fprintf(fp, "<refcnt %zd at %p>", Py_REFCNT(op), (void *)op);
++            fprintf(fp, "<refcnt %zd at 0x0>", Py_REFCNT(op));
+             Py_END_ALLOW_THREADS
+         }
+         else {
+@@ -723,7 +723,7 @@ PyObject_Dump(PyObject* op)
+     if (_PyObject_IsFreed(op)) {
+         /* It seems like the object memory has been freed:
+            don't access it to prevent a segmentation fault. */
+-        fprintf(stderr, "<object at %p is freed>\n", op);
++        fprintf(stderr, "<object at 0x0 is freed>\n");
+         fflush(stderr);
+         return;
+     }
+@@ -764,8 +764,8 @@ PyObject_Repr(PyObject *v)
+     if (v == NULL)
+         return PyUnicode_FromString("<NULL>");
+     if (Py_TYPE(v)->tp_repr == NULL)
+-        return PyUnicode_FromFormat("<%s object at %p>",
+-                                    Py_TYPE(v)->tp_name, v);
++        return PyUnicode_FromFormat("<%s object at 0x0>",
++                                    Py_TYPE(v)->tp_name);
+ 
+     PyThreadState *tstate = _PyThreadState_GET();
+ #ifdef Py_DEBUG
+@@ -3248,7 +3248,7 @@ _PyObject_AssertFailed(PyObject *obj, const char *expr, const char *msg,
+     if (_PyObject_IsFreed(obj)) {
+         /* It seems like the object memory has been freed:
+            don't access it to prevent a segmentation fault. */
+-        fprintf(stderr, "<object at %p is freed>\n", obj);
++        fprintf(stderr, "<object at 0x0 is freed>\n");
+         fflush(stderr);
+     }
+     else {
+diff --git a/Objects/typeobject.c b/Objects/typeobject.c
+index 7cca137f74..384658a2f7 100644
+--- a/Objects/typeobject.c
++++ b/Objects/typeobject.c
+@@ -2392,7 +2392,7 @@ type_repr(PyObject *self)
+     if (type->tp_name == NULL) {
+         // type_repr() called before the type is fully initialized
+         // by PyType_Ready().
+-        return PyUnicode_FromFormat("<class at %p>", type);
++        return PyUnicode_FromFormat("<class at 0x0>");
+     }
+ 
+     PyObject *mod = type_module(type);
+@@ -7466,10 +7466,10 @@ object_repr(PyObject *self)
+         return NULL;
+     }
+     if (mod != NULL && !_PyUnicode_Equal(mod, &_Py_ID(builtins)))
+-        rtn = PyUnicode_FromFormat("<%U.%U object at %p>", mod, name, self);
++        rtn = PyUnicode_FromFormat("<%U.%U object at 0x0>", mod, name);
+     else
+-        rtn = PyUnicode_FromFormat("<%s object at %p>",
+-                                  type->tp_name, self);
++        rtn = PyUnicode_FromFormat("<%s object at 0x0>",
++                                  type->tp_name);
+     Py_XDECREF(mod);
+     Py_DECREF(name);
+     return rtn;
+@@ -10863,8 +10863,8 @@ slot_tp_repr(PyObject *self)
+     else if (PyErr_Occurred()) {
+         return NULL;
+     }
+-    return PyUnicode_FromFormat("<%s object at %p>",
+-                                Py_TYPE(self)->tp_name, self);
++    return PyUnicode_FromFormat("<%s object at 0x0>",
++                                Py_TYPE(self)->tp_name);
+ }
+ 
+ SLOT0(slot_tp_str, __str__)
+diff --git a/Objects/unicodeobject.c b/Objects/unicodeobject.c
+index b92743a884..1a6c98cc91 100644
+--- a/Objects/unicodeobject.c
++++ b/Objects/unicodeobject.c
+@@ -2864,7 +2864,8 @@ unicode_fromformat_arg(_PyUnicodeWriter *writer,
+     {
+         char number[MAX_INTMAX_CHARS];
+ 
+-        len = sprintf(number, "%p", va_arg(*vargs, void*));
++        (void)va_arg(*vargs, void*);
++        len = sprintf(number, "%p", (void*)0);
+         assert(len >= 0);
+ 
+         /* %p is ill-defined:  ensure leading 0x. */
+diff --git a/Objects/weakrefobject.c b/Objects/weakrefobject.c
+index 61fa3ddad0..6ba7c6137c 100644
+--- a/Objects/weakrefobject.c
++++ b/Objects/weakrefobject.c
+@@ -217,20 +217,20 @@ weakref_repr(PyObject *self)
+ {
+     PyObject* obj = _PyWeakref_GET_REF(self);
+     if (obj == NULL) {
+-        return PyUnicode_FromFormat("<weakref at %p; dead>", self);
++        return PyUnicode_FromFormat("<weakref at 0x0; dead>");
+     }
+ 
+     PyObject *name = _PyObject_LookupSpecial(obj, &_Py_ID(__name__));
+     PyObject *repr;
+     if (name == NULL || !PyUnicode_Check(name)) {
+         repr = PyUnicode_FromFormat(
+-            "<weakref at %p; to '%T' at %p>",
+-            self, obj, obj);
++            "<weakref at 0x0; to '%T' at 0x0>",
++            obj);
+     }
+     else {
+         repr = PyUnicode_FromFormat(
+-            "<weakref at %p; to '%T' at %p (%U)>",
+-            self, obj, obj, name);
++            "<weakref at 0x0; to '%T' at 0x0 (%U)>",
++            obj, name);
+     }
+     Py_DECREF(obj);
+     Py_XDECREF(name);
+@@ -607,14 +607,13 @@ proxy_repr(PyObject *proxy)
+     PyObject *repr;
+     if (obj != NULL) {
+         repr = PyUnicode_FromFormat(
+-            "<weakproxy at %p; to '%T' at %p>",
+-            proxy, obj, obj);
++            "<weakproxy at 0x0; to '%T' at 0x0>",
++            obj);
+         Py_DECREF(obj);
+     }
+     else {
+         repr = PyUnicode_FromFormat(
+-            "<weakproxy at %p; dead>",
+-            proxy);
++            "<weakproxy at 0x0; dead>");
+     }
+     return repr;
+ }
+diff --git a/Python/bltinmodule.c b/Python/bltinmodule.c
+index 35b30a2433..5a4915a9b0 100644
+--- a/Python/bltinmodule.c
++++ b/Python/bltinmodule.c
+@@ -1412,7 +1412,8 @@ static PyObject *
+ builtin_id_impl(PyModuleDef *self, PyObject *v)
+ /*[clinic end generated code: output=4908a6782ed343e9 input=5a534136419631f4]*/
+ {
+-    PyObject *id = PyLong_FromVoidPtr(v);
++    static long _id_counter = 1;
++    PyObject *id = PyLong_FromLong(_id_counter++);
+ 
+     if (id && PySys_Audit("builtins.id", "O", id) < 0) {
+         Py_DECREF(id);
+diff --git a/Python/context.c b/Python/context.c
+index 62b582f271..55d412ec5d 100644
+--- a/Python/context.c
++++ b/Python/context.c
+@@ -994,7 +994,7 @@ contextvar_tp_repr(PyObject *op)
+         }
+     }
+ 
+-    if (PyUnicodeWriter_Format(writer, " at %p>", self) < 0) {
++    if (PyUnicodeWriter_Format(writer, " at 0x0>") < 0) {
+         goto error;
+     }
+     return PyUnicodeWriter_Finish(writer);
+@@ -1192,7 +1192,7 @@ token_tp_repr(PyObject *op)
+     if (PyUnicodeWriter_WriteRepr(writer, (PyObject *)self->tok_var) < 0) {
+         goto error;
+     }
+-    if (PyUnicodeWriter_Format(writer, " at %p>", self) < 0) {
++    if (PyUnicodeWriter_Format(writer, " at 0x0>") < 0) {
+         goto error;
+     }
+     return PyUnicodeWriter_Finish(writer);
+diff --git a/Python/gc.c b/Python/gc.c
+index 54ac1b089e..668c3d11c8 100644
+--- a/Python/gc.c
++++ b/Python/gc.c
+@@ -1004,8 +1004,8 @@ clear_weakrefs(PyGC_Head *unreachable)
+ static void
+ debug_cycle(const char *msg, PyObject *op)
+ {
+-    PySys_FormatStderr("gc: %s <%s %p>\n",
+-                       msg, Py_TYPE(op)->tp_name, op);
++    // PySys_FormatStderr("gc: %s <%s %p>\n",
++    //                    msg, Py_TYPE(op)->tp_name, op);
+ }
+ 
+ /* Handle uncollectable garbage (cycles with tp_del slots, and stuff reachable
+diff --git a/Python/gc_free_threading.c b/Python/gc_free_threading.c
+index 4e36189580..caf2e1ad23 100644
+--- a/Python/gc_free_threading.c
++++ b/Python/gc_free_threading.c
+@@ -1695,8 +1695,8 @@ _PyGC_Init(PyInterpreterState *interp)
+ static void
+ debug_cycle(const char *msg, PyObject *op)
+ {
+-    PySys_FormatStderr("gc: %s <%s %p>\n",
+-                       msg, Py_TYPE(op)->tp_name, op);
++    // PySys_FormatStderr("gc: %s <%s %p>\n",
++    //                    msg, Py_TYPE(op)->tp_name, op);
+ }
+ 
+ /* Run first-time finalizers (if any) on all the objects in collectable.
+diff --git a/Python/hamt.c b/Python/hamt.c
+index e4719e71a5..d905a0e324 100644
+--- a/Python/hamt.c
++++ b/Python/hamt.c
+@@ -1160,8 +1160,8 @@ hamt_node_bitmap_dump(PyHamtNode_Bitmap *node,
+     if (tmp2 == NULL) {
+         goto error;
+     }
+-    if (PyUnicodeWriter_Format(writer, "bitmap=%S id=%p):\n",
+-                               tmp2, node) < 0)
++    if (PyUnicodeWriter_Format(writer, "bitmap=%S id=0x0):\n",
++                               tmp2) < 0)
+     {
+         Py_DECREF(tmp2);
+         goto error;
+@@ -1529,8 +1529,8 @@ hamt_node_collision_dump(PyHamtNode_Collision *node,
+         goto error;
+     }
+ 
+-    if (PyUnicodeWriter_Format(writer, "CollisionNode(size=%zd id=%p):\n",
+-                          	   Py_SIZE(node), node) < 0)
++    if (PyUnicodeWriter_Format(writer, "CollisionNode(size=%zd id=0x0):\n",
++                          	   Py_SIZE(node)) < 0)
+     {
+         goto error;
+     }
+@@ -1895,7 +1895,7 @@ hamt_node_array_dump(PyHamtNode_Array *node,
+         goto error;
+     }
+ 
+-    if (PyUnicodeWriter_Format(writer, "ArrayNode(id=%p):\n", node) < 0) {
++    if (PyUnicodeWriter_Format(writer, "ArrayNode(id=0x0):\n") < 0) {
+         goto error;
+     }
+ 
+diff --git a/Python/import.c b/Python/import.c
+index 60a5ee6e77..9f069aee07 100644
+--- a/Python/import.c
++++ b/Python/import.c
+@@ -658,7 +658,7 @@ PyState_AddModule(PyObject* module, PyModuleDef* def)
+         index < PyList_GET_SIZE(MODULES_BY_INDEX(interp)) &&
+         module == PyList_GET_ITEM(MODULES_BY_INDEX(interp), index))
+     {
+-        _Py_FatalErrorFormat(__func__, "module %p already added", module);
++        _Py_FatalErrorFormat(__func__, "module <0x0> already added");
+         return -1;
+     }
+ 
+diff --git a/Python/pystate.c b/Python/pystate.c
+index ff712019af..3ff71f52f0 100644
+--- a/Python/pystate.c
++++ b/Python/pystate.c
+@@ -2710,7 +2710,7 @@ _PyThread_CurrentFrames(void)
+             if (frame == NULL) {
+                 continue;
+             }
+-            PyObject *id = PyLong_FromUnsignedLong(t->thread_id);
++            PyObject *id = PyLong_FromLong(1);
+             if (id == NULL) {
+                 goto fail;
+             }
+@@ -2774,7 +2774,7 @@ _PyThread_CurrentExceptions(void)
+             if (err_info == NULL) {
+                 continue;
+             }
+-            PyObject *id = PyLong_FromUnsignedLong(t->thread_id);
++            PyObject *id = PyLong_FromLong(1);
+             if (id == NULL) {
+                 goto fail;
+             }
+diff --git a/Python/symtable.c b/Python/symtable.c
+index 2263a2d8db..514bde2ece 100644
+--- a/Python/symtable.c
++++ b/Python/symtable.c
+@@ -176,8 +176,8 @@ static PyObject *
+ ste_repr(PyObject *op)
+ {
+     PySTEntryObject *ste = (PySTEntryObject *)op;
+-    return PyUnicode_FromFormat("<symtable entry %U(%R), line %d>",
+-                                ste->ste_name, ste->ste_id, ste->ste_loc.lineno);
++    return PyUnicode_FromFormat("<symtable entry %U(0), line %d>",
++                                ste->ste_name, ste->ste_loc.lineno);
+ }
+ 
+ static void
+@@ -199,8 +199,18 @@ ste_dealloc(PyObject *op)
+ 
+ #define OFF(x) offsetof(PySTEntryObject, x)
+ 
++static PyObject *
++ste_get_id(PySTEntryObject *self, void *Py_UNUSED(ignored))
++{
++    return PyLong_FromLong(0);
++}
++
++static PyGetSetDef ste_getsetlist[] = {
++    {"id", (getter)ste_get_id, NULL, NULL},
++    {NULL}
++};
++
+ static PyMemberDef ste_memberlist[] = {
+-    {"id",       _Py_T_OBJECT, OFF(ste_id), Py_READONLY},
+     {"name",     _Py_T_OBJECT, OFF(ste_name), Py_READONLY},
+     {"symbols",  _Py_T_OBJECT, OFF(ste_symbols), Py_READONLY},
+     {"varnames", _Py_T_OBJECT, OFF(ste_varnames), Py_READONLY},
+@@ -241,7 +251,7 @@ PyTypeObject PySTEntry_Type = {
+     0,                                          /* tp_iternext */
+     0,                                          /* tp_methods */
+     ste_memberlist,                             /* tp_members */
+-    0,                                          /* tp_getset */
++    ste_getsetlist,                             /* tp_getset */
+     0,                                          /* tp_base */
+     0,                                          /* tp_dict */
+     0,                                          /* tp_descr_get */
+-- 
+2.39.5
+

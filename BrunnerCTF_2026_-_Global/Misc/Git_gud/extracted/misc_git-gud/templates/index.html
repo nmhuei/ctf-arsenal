@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Git Gud</title>
+<style>
+  :root {
+    --bg: #0d1117; --card: #161b22; --line: #21262d;
+    --text: #e6edf3; --muted: #8b949e;
+    --accent: #58a6ff; --add: #3fb950; --del: #f85149; --gold: #e3b341;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 15px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 40px 20px 80px; }
+  header { text-align: center; margin-bottom: 32px; }
+  h1 {
+    font-size: 48px; margin: 0; font-weight: 800; letter-spacing: -1px;
+    background: linear-gradient(90deg, #58a6ff, #a371f7, #f778ba);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  header p { color: var(--muted); margin: 6px 0 0; }
+  .card {
+    background: var(--card); border: 1px solid var(--line);
+    border-radius: 12px; padding: 20px; margin-bottom: 20px;
+  }
+  .card h2 { margin: 0 0 14px; font-size: 18px; }
+  form.upload { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+  #filename { flex: 1; min-width: 120px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .btn {
+    color: #0d1117; border: 0; font-weight: 700; line-height: 1;
+    padding: 11px 18px; border-radius: 8px; cursor: pointer; font-size: 15px;
+    display: inline-block;
+  }
+  .btn-blue { background: var(--accent); }
+  .btn-green { background: var(--add); }
+  .btn:disabled { opacity: .5; cursor: default; }
+  .file-input { display: none; }
+  #msg { color: var(--muted); margin: 12px 0 0; min-height: 20px; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  @media (max-width: 640px) { .grid { grid-template-columns: 1fr; } }
+  .hidden { display: none; }
+  .row {
+    display: flex; justify-content: space-between; align-items: center;
+    gap: 10px; padding: 8px 0; border-bottom: 1px solid var(--line);
+  }
+  .row:last-child { border-bottom: 0; }
+  .name { font-weight: 600; }
+  .sub { color: var(--muted); font-size: 13px; }
+  .rank { font-size: 20px; width: 28px; text-align: center; }
+  .add { color: var(--add); font-weight: 700; }
+  .del { color: var(--del); font-weight: 700; }
+  code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+  details { border-bottom: 1px solid var(--line); }
+  details:last-child { border-bottom: 0; }
+  summary {
+    cursor: pointer; padding: 10px 0; display: flex; gap: 12px;
+    align-items: center; list-style: none;
+  }
+  summary::-webkit-details-marker { display: none; }
+  summary .sha { color: var(--accent); }
+  summary .who { flex: 1; color: var(--muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .commit-body { padding: 4px 0 14px 4px; color: var(--muted); font-size: 14px; }
+  .status-badge {
+    display: inline-block; width: 22px; text-align: center;
+    border-radius: 5px; font-family: ui-monospace, monospace; font-weight: 700;
+    background: #21262d; margin-right: 8px;
+  }
+  .empty { color: var(--muted); font-style: italic; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Git Gud</h1>
+    <p>Upload a <code>.tar</code> of a git repository to see its stats.</p>
+  </header>
+
+  <div class="card">
+    <form class="upload" id="form">
+      <input type="file" id="file" accept=".tar" class="file-input">
+      <label for="file" class="btn btn-green">Browse</label>
+      <span id="filename" class="sub">No file selected</span>
+      <button type="submit" id="btn" class="btn btn-blue">Analyze</button>
+    </form>
+    <p id="msg"></p>
+  </div>
+
+  <div id="results" class="hidden">
+    <div class="grid">
+      <div class="card">
+        <h2>🏆 Hall of Fame</h2>
+        <div id="fame"></div>
+      </div>
+      <div class="card">
+        <h2>💩 Hall of Shame</h2>
+        <div id="shame"></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Unstaged changes</h2>
+      <div id="status"></div>
+    </div>
+
+    <div class="card">
+      <h2>Commits <span class="sub" id="commit-count"></span></h2>
+      <div id="commits"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+const $ = (s) => document.querySelector(s);
+
+function el(tag, cls, text) {
+  const node = document.createElement(tag);
+  if (cls) node.className = cls;
+  if (text !== undefined) node.textContent = text;
+  return node;
+}
+
+function setMsg(t) { $("#msg").textContent = t; }
+
+$("#file").addEventListener("change", () => {
+  const f = $("#file").files[0];
+  $("#filename").textContent = f ? f.name : "No file selected";
+});
+
+function leaderboard(commits) {
+  const map = new Map();
+  for (const c of commits) {
+    const key = c.email || c.author;
+    const e = map.get(key) || { author: c.author, email: c.email, commits: 0, added: 0, removed: 0 };
+    e.commits++; e.added += c.added; e.removed += c.removed;
+    map.set(key, e);
+  }
+  const arr = [...map.values()];
+  arr.forEach((e) => { e.total = e.added + e.removed; });
+  arr.sort((a, b) => b.total - a.total);
+  return arr;
+}
+
+function renderBoard(target, people, medals) {
+  target.innerHTML = "";
+  if (!people.length) {
+    target.appendChild(el("p", "empty", "Not enough contributors yet."));
+    return;
+  }
+  people.forEach((p, i) => {
+    const row = el("div", "row");
+    const left = el("div");
+    left.style.display = "flex";
+    left.style.alignItems = "center";
+    left.style.gap = "10px";
+    left.appendChild(el("div", "rank", medals[i] || "•"));
+    const info = el("div");
+    info.appendChild(el("div", "name", p.author));
+    info.appendChild(el("div", "sub", p.commits + " commit" + (p.commits === 1 ? "" : "s")));
+    left.appendChild(info);
+    const right = el("div");
+    right.appendChild(el("span", "add", "+" + p.total));
+    row.appendChild(left);
+    row.appendChild(right);
+    target.appendChild(row);
+  });
+}
+
+function render(data) {
+  const commits = data.commits || [];
+  const board = leaderboard(commits);
+  renderBoard($("#fame"), board.slice(0, 3), ["🥇", "🥈", "🥉"]);
+  renderBoard($("#shame"), board.length > 3 ? board.slice(-3).reverse() : [], ["💩", "🗑️", "😬"]);
+
+  // Unstaged changes (git status)
+  const status = $("#status");
+  status.innerHTML = "";
+  const entries = data.status || [];
+  if (!entries.length) {
+    status.appendChild(el("p", "empty", "Working tree clean."));
+  } else {
+    entries.forEach((s) => {
+      const row = el("div", "row");
+      const left = el("div");
+      const badge = el("span", "status-badge", (s.index + s.worktree).trim() || "?");
+      left.appendChild(badge);
+      left.appendChild(el("code", null, s.old_path ? s.old_path + " → " + s.path : s.path));
+      row.appendChild(left);
+      status.appendChild(row);
+    });
+  }
+
+  // Commit list (expandable)
+  const list = $("#commits");
+  list.innerHTML = "";
+  $("#commit-count").textContent = "(" + commits.length + ")";
+  commits.forEach((c) => {
+    const d = el("details");
+    const sum = el("summary");
+    sum.appendChild(el("code", "sha", c.id.slice(0, 8)));
+    sum.appendChild(el("span", "who", c.author));
+    sum.appendChild(el("span", "add", "+" + c.added));
+    sum.appendChild(el("span", "del", "-" + c.removed));
+    d.appendChild(sum);
+    const body = el("div", "commit-body");
+    body.appendChild(el("div", null, "Commit: " + c.id));
+    body.appendChild(el("div", null, "Author: " + c.author + " <" + c.email + ">"));
+    body.appendChild(el("div", null, "Date: " + c.date));
+    body.appendChild(el("div", null, "Lines added: " + c.added + " · removed: " + c.removed));
+    d.appendChild(body);
+    list.appendChild(d);
+  });
+
+  $("#results").classList.remove("hidden");
+}
+
+$("#form").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const input = $("#file");
+  if (!input.files.length) return;
+  const btn = $("#btn");
+  btn.disabled = true;
+  try {
+    const fd = new FormData();
+    fd.append("file", input.files[0]);
+    setMsg("Uploading…");
+    const up = await fetch("/upload", { method: "POST", body: fd });
+    const upData = await up.json();
+    if (!up.ok) { setMsg(upData.message || upData.error || "Upload failed."); return; }
+
+    setMsg("Analyzing repository…");
+    const res = await fetch("/stats/" + encodeURIComponent(upData.id));
+    const data = await res.json();
+    if (!res.ok) { setMsg(data.error || "Could not load stats."); return; }
+
+    render(data);
+    setMsg("");
+  } catch (err) {
+    setMsg("Error: " + err.message);
+  } finally {
+    btn.disabled = false;
+  }
+});
+</script>
+</body>
+</html>

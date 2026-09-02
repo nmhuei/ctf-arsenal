@@ -1,0 +1,27 @@
+<section class="scanner-panel" aria-labelledby="scanner-title">
+  <div class="scanner-copy">
+    <p class="eyebrow">Table Service</p>
+    <h1 id="scanner-title">Scanwich Station</h1>
+    <p class="lead">A table-side QR reader for hungry guests and suspicious menus.</p>
+  </div>
+
+  <form class="upload-box" action="{{ url_for('scan') }}" method="post" enctype="multipart/form-data">
+    <label class="drop-zone">
+      <span class="drop-title">Pick a menu ticket</span>
+      <span class="drop-note" data-file-label>No file selected</span>
+      <input type="file" name="image" data-ticket-input>
+    </label>
+    <button class="scan-button" type="submit">Serve</button>
+  </form>
+</section>
+
+<script>
+(() => {
+  const input = document.querySelector("[data-ticket-input]");
+  const label = document.querySelector("[data-file-label]");
+
+  input.addEventListener("change", () => {
+    label.textContent = input.files.length ? input.files[0].name : "No file selected";
+  });
+})();
+</script>

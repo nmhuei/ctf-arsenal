@@ -1,0 +1,157 @@
+<div class="challengeDescription">
+ <!-- <p> -->
+ This challenge uses the same packet capture as the previous challenge. Let's describe the communication we see at a high level.
+ <br/>
+ <br/>
+ The TLS communication only begins at packet 10, but what happens before provides important context:
+ <br/>
+ <br/>
+ <ul>
+  <li>
+   <b>
+    Packets 1-2
+   </b>
+   : First, when we typed
+   <i>
+    cryptohack.org
+   </i>
+   into the address bar and hit enter, a Domain Name System (DNS) request was made to translate the domain name (
+   <i>
+    cryptohack.org
+   </i>
+   ) to an IP address (
+   <code>
+    178.62.74.206
+   </code>
+   ).
+  </li>
+  <li>
+   <b>
+    Packets 3-4
+   </b>
+   : The "Safe Browsing" feature in Firefox reached out to a Google server to check that
+   <i>
+    cryptohack.org
+   </i>
+   was not a phishing or malicious domain.
+  </li>
+  <li>
+   <b>
+    Packets 5-6
+   </b>
+   : DNS responses to our DNS requests came back, saying that
+   <i>
+    cryptohack.org
+   </i>
+   can be reached at IP address
+   <code>
+    178.62.74.206
+   </code>
+   .
+  </li>
+  <li>
+   <b>
+    Packets 7-9
+   </b>
+   : A TCP three-way handshake (SYN, SYN-ACK, ACK) was initiated between our laptop and port 443 (the TLS port) of the server at
+   <code>
+    178.62.74.206
+   </code>
+   . This negotiated a stable connection between the two computers over the Internet before the real data transfer could start.
+  </li>
+  <li>
+   <b>
+    Packet 10-11
+   </b>
+   : A TLS
+   <i>
+    ClientHello
+   </i>
+   message was sent from our laptop to the server. The next challenge will expand on this, but for now note this was our laptop sending a bunch of important parameters such as the ciphers it supports. Packet 11 is an ACK TCP packet sent from the server ACKnowledging it received the packet from our laptop.
+  </li>
+  <li>
+   <b>
+    Packet 12-17
+   </b>
+   : The server sent TLS
+   <i>
+    ServerHello, Change Cipher Spec, and Application Data
+   </i>
+   messages. TLS 1.3 is designed to be really fast - the server sends back its own parameters, then signals
+   <i>
+    Change Cipher Spec
+   </i>
+   which means it is switching over to sending encrypted communications from now on. Then the server sends its TLS certificate encrypted.
+  </li>
+  <li>
+   <b>
+    Packets 18-21
+   </b>
+   : An Online Certificate Status Protocol (OCSP) connection was made from our laptop to an OCSP server, to check that the TLS certificate presented by CryptoHack hadn't been revoked... yet another thing we'll explore later!
+  </li>
+  <li>
+   <b>
+    Packets 22-27
+   </b>
+   : Our laptop sent a
+   <i>
+    Change Cipher Spec
+   </i>
+   message to note that it is switching over to sending encrypted data, and it finally made a HTTP request requesting the CryptoHack home page. The actual HTTP content of the connection can't be seen in the packet capture, as it's now encrypted!
+  </li>
+  <li>
+   <b>
+    Packets 28-39
+   </b>
+   : The server started sending the contents of the CryptoHack homepage to our client over HTTP wrapped in TLS.
+  </li>
+  <li>
+   <b>
+    Packets 40-50
+   </b>
+   : Firefox's HTML parser saw that it needed external resources from Content Delivery Networks such as
+   <code>
+    cdnjs.cloudflare.com
+   </code>
+   to load JavaScript resources on the page and sent DNS requests to resolve those domains. This isn't relevant to TLS apart from the notable fact that DNS requests on most systems by default are not encrypted (but DNS-over-HTTPS, which fixes this obvious leak, is starting to get more common).
+  </li>
+ </ul>
+ <br/>
+ <br/>
+ Wow, that was a lot of packets just to start displaying a relatively simple website, and that wasn't even all of them! By spending some time playing around in Wireshark you should gain a better grasp on what data TLS protects as well as what it does not.
+ <br/>
+ <br/>
+ To solve this challenge, find the Random data sent from
+ <i>
+  cryptohack.org
+ </i>
+ in the
+ <code>
+  ServerHello
+ </code>
+ message of the packet capture. Randomness is contributed by both client and server, and it plays role in preventing replay attacks. A replay attack is when an attacker that has recorded an existing handshake tries to reuse the same messages to pretend to be a client or server in a new connection.
+ <br/>
+ <br/>
+ <br/>
+ <br/>
+ <b>
+  Challenge files:
+ </b>
+ <br/>
+ -
+ <a download="" href="/static/challenges/cryptohack_6b3a90f7c585d399088758fda92fb9f6.org.pcapng">
+  cryptohack.org.pcapng
+ </a>
+ <br/>
+ <br/>
+ <b>
+  Resources:
+ </b>
+ <br/>
+ -
+ <a href="https://tls13.xargs.org/" target="_blank">
+  The Illustrated TLS 1.3 connection
+ </a>
+ <br/>
+ <!-- </p> -->
+</div>

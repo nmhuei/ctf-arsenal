@@ -1,0 +1,59 @@
+<div class="challengeDescription">
+ <!-- <p> -->
+ Several of the challenges are dynamic and require you to talk to our challenge servers over the network. This allows you to perform man-in-the-middle attacks on people trying to communicate, or directly attack a vulnerable service. To keep things consistent, our interactive servers always send and receive JSON objects.
+ <br/>
+ <br/>
+ Such network communication can be made easy in Python with the
+ <code>
+  pwntools
+ </code>
+ module. This is not part of the Python standard library, so needs to be installed with pip using the command line
+ <code>
+  pip install pwntools
+ </code>
+ .
+ <br/>
+ <br/>
+ For this challenge, connect to
+ <code>
+  socket.cryptohack.org
+ </code>
+ on port
+ <code>
+  11112
+ </code>
+ . Send a JSON object with the key
+ <code>
+  buy
+ </code>
+ and value
+ <code>
+  flag
+ </code>
+ .
+ <br/>
+ <br/>
+ <span class="note">
+  <i class="fas fa-brain">
+  </i>
+  The example script below contains the beginnings of a solution for you to modify, and you can reuse it for later challenges.
+ </span>
+ <br/>
+ <br/>
+ Connect at
+ <code>
+  socket.cryptohack.org 11112
+ </code>
+ <br/>
+ <br/>
+ <b>
+  Challenge files:
+ </b>
+ <br/>
+ -
+ <a download="" href="/static/challenges/pwntools_example_72a60ff13df200692898bb14a316ee0b.py">
+  pwntools_example.py
+ </a>
+ <br/>
+ <!-- </p> -->
+</div>

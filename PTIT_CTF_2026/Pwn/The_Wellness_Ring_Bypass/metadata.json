@@ -1,0 +1,42 @@
+{
+  "id": 24,
+  "name": "The Wellness Ring Bypass",
+  "category": "Pwn",
+  "points": 154,
+  "author": null,
+  "tags": [
+    "DynamicContainer"
+  ],
+  "hints": [],
+  "connection_info": null,
+  "solved_by_me": false,
+  "solves_count": 11,
+  "downloaded_files": [
+    {
+      "url": "https://jeo.infosecptit.org/assets/15b28bf7a8a49f1130df6b4bd23815efc718754cae804e539b7d6149a571e404/The Wellness Ring Bypass-20260814T081410Z-1-001.zip",
+      "name": "The Wellness Ring Bypass-20260814T081410Z-1-001.zip",
+      "saved_path": "/home/light/Workspace/CTF/PTIT_CTF_2026/Pwn/The_Wellness_Ring_Bypass/The Wellness Ring Bypass-20260814T081410Z-1-001.zip",
+      "success": true,
+      "source": "platform_attachment",
+      "message": "Direct download successful"
+    }
+  ],
+  "raw": {
+    "id": 24,
+    "title": "The Wellness Ring Bypass",
+    "content": "Để chuẩn bị cho cuộc thi Pwn2Own Ireland 2026, nhh và vietnq đã chốt hạ mục tiêu là chiếc nhẫn thông minh Oura Ring 5, một thử thách hoàn toàn mới. Tuy nhiên khi debug firmware và dùng đủ mọi thủ thuật fuzzing cả tuần vẫn không thấy crash. Bạn hãy giúp 2 anh chàng này tìm bug và khai thác chiếc nhẫn này nhé!",
+    "category": "Pwn",
+    "hints": null,
+    "score": 154,
+    "type": "DynamicContainer",
+    "context": {
+      "closeTime": null,
+      "instanceEntry": null,
+      "url": "/assets/15b28bf7a8a49f1130df6b4bd23815efc718754cae804e539b7d6149a571e404/The Wellness Ring Bypass-20260814T081410Z-1-001.zip",
+      "fileSize": 7291
+    },
+    "limit": 0,
+    "attempts": 0,
+    "deadline": null
+  }
+}

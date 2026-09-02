@@ -1,0 +1,322 @@
+08/23/26 16:01:46, 
+08/23/26 16:01:46, ****************************
+08/23/26 16:01:46, Starting factorization of 803855454786320296632238674906141081938111250236884983107257253200573075747010995897
+08/23/26 16:01:46, using pretesting plan: normal
+08/23/26 16:01:46, no tune info: using qs/gnfs crossover of 95 digits
+08/23/26 16:01:46, no tune info: using qs/snfs crossover of 95 digits
+08/23/26 16:01:46, ****************************
+08/23/26 16:01:46, rho: x^2 + 3, starting 1000 iterations on C84
+08/23/26 16:01:46, rho: x^2 + 2, starting 1000 iterations on C84
+08/23/26 16:01:46, rho: x^2 + 1, starting 1000 iterations on C84
+08/23/26 16:01:46, current ECM pretesting depth: 0.000000
+08/23/26 16:01:46, scheduled 34 curves at B1=2000 toward target pretesting depth of 25.846154
+08/23/26 16:01:46, Finished 34 curves using GMP-ECM method on C84 input, B1=2k, B2=gmp-ecm default
+08/23/26 16:01:46, current ECM pretesting depth: 15.132605
+08/23/26 16:01:46, scheduled 86 curves at B1=11000 toward target pretesting depth of 25.846154
+08/23/26 16:01:46, Finished 86 curves using GMP-ECM method on C84 input, B1=11k, B2=gmp-ecm default
+08/23/26 16:01:46, current ECM pretesting depth: 20.232476
+08/23/26 16:01:46, scheduled 214 curves at B1=50000 toward target pretesting depth of 25.846154
+08/23/26 16:01:46, Finished 214 curves using GMP-ECM method on C84 input, B1=50k, B2=gmp-ecm default
+08/23/26 16:01:46, current ECM pretesting depth: 25.332838
+08/23/26 16:01:46, scheduled 44 curves at B1=250000 toward target pretesting depth of 25.846154
+08/23/26 16:01:46, Finished 44 curves using GMP-ECM method on C84 input, B1=250k, B2=gmp-ecm default
+08/23/26 16:01:46, final ECM pretested depth: 25.844466
+08/23/26 16:01:46, scheduler: switching to sieve method
+08/23/26 16:01:47, starting SIQS on c84: 803855454786320296632238674906141081938111250236884983107257253200573075747010995897
+08/23/26 16:01:47, random seed: 6958302171488120551
+08/23/26 16:01:47, ==== sieve params ====
+08/23/26 16:01:47, n = 84 digits, 279 bits
+08/23/26 16:01:47, factor base: 58992 primes (max prime = 1552669)
+08/23/26 16:01:47, single large prime cutoff: 147503555 (95 * pmax)
+08/23/26 16:01:47, double large prime range from 2410781023561 to 1295044231432140
+08/23/26 16:01:47, DLP MFB = 1.85
+08/23/26 16:01:47, allocating 7 large prime slices of factor base
+08/23/26 16:01:47, buckets hold 2048 elements
+08/23/26 16:01:47, large prime hashtables have 1261568 bytes
+08/23/26 16:01:47, using SSE2 enabled 32k sieve core
+08/23/26 16:01:47, sieve interval: 11 blocks of size 32768
+08/23/26 16:01:47, polynomial A has ~ 11 factors
+08/23/26 16:01:47, using multiplier of 1
+08/23/26 16:01:47, using Q2(x) polynomials for kN mod 8 = 1
+08/23/26 16:01:47, using SPV correction of 19 bits, starting at offset 24
+08/23/26 16:01:47, trial factoring cutoff at 89 bits
+08/23/26 16:01:47, ==== sieving started (12 threads) ====
+08/23/26 16:02:29, trial division touched 16422384 sieve locations out of 132778950656
+08/23/26 16:02:29, total reports = 16422384, total surviving reports = 5633772
+08/23/26 16:02:29, total blocks sieved = 4052092, avg surviving reports per block = 1.39
+08/23/26 16:02:29, dlp-ecm: 0 failures, 571778 attempts, 2070624 outside range, 2758546 prp, 487445 useful
+08/23/26 16:02:29, 60665 relations found: 18321 full + 42344 from 701948 partial, using 184186 polys (646 A polys)
+08/23/26 16:02:29, on average, sieving found 3.91 rels/poly and 16998.19 rels/sec
+08/23/26 16:02:29, trial division touched 16422384 sieve locations out of 132778950656
+08/23/26 16:02:29, ==== post processing stage (msieve-1.38) ====
+08/23/26 16:02:29, QS elapsed time = 42.3733 seconds.
+08/23/26 16:02:29, begin singleton removal with 720269 relations
+08/23/26 16:02:30, reduce to 138872 relations in 11 passes
+08/23/26 16:02:30, recovered 138872 relations
+08/23/26 16:02:30, recovered 97364 polynomials
+08/23/26 16:02:30, attempting to build 60665 cycles
+08/23/26 16:02:30, found 60665 cycles from 138872 relations in 5 passes
+08/23/26 16:02:30, distribution of cycle lengths:
+08/23/26 16:02:30,    length 1 : 18321
+08/23/26 16:02:30,    length 2 : 13294
+08/23/26 16:02:30,    length 3 : 11058
+08/23/26 16:02:30,    length 4 : 7431
+08/23/26 16:02:30,    length 5 : 4720
+08/23/26 16:02:30,    length 6 : 2703
+08/23/26 16:02:30,    length 7 : 1541
+08/23/26 16:02:30,    length 9+: 1597
+08/23/26 16:02:30, largest cycle: 17 relations
+08/23/26 16:02:30, matrix is 58992 x 60665 (13.5 MB) with weight 3043448 (50.17/col)
+08/23/26 16:02:30, sparse part has weight 3043448 (50.17/col)
+08/23/26 16:02:30, filtering completed in 4 passes
+08/23/26 16:02:30, matrix is 52527 x 52591 (11.5 MB) with weight 2590780 (49.26/col)
+08/23/26 16:02:30, sparse part has weight 2590780 (49.26/col)
+08/23/26 16:02:30, saving the first 48 matrix rows for later
+08/23/26 16:02:30, matrix is 52479 x 52591 (10.0 MB) with weight 2274716 (43.25/col)
+08/23/26 16:02:30, sparse part has weight 2103092 (39.99/col)
+08/23/26 16:02:30, matrix includes 64 packed rows
+08/23/26 16:02:30, using block size 21036 for processor cache size 12288 kB
+08/23/26 16:02:30, commencing Lanczos iteration
+08/23/26 16:02:30, memory use: 8.3 MB
+08/23/26 16:02:34, lanczos halted after 832 iterations (dim = 52477)
+08/23/26 16:02:34, recovered 16 nontrivial dependencies
+08/23/26 16:02:34, prp42 = 817351164800080248007393188134421407477753
+08/23/26 16:02:34, prp42 = 983488480111163810066445994341369866362049
+08/23/26 16:02:34, Lanczos elapsed time = 4.7709 seconds.
+08/23/26 16:02:34, Sqrt elapsed time = 0.2640 seconds.
+08/23/26 16:02:34, SIQS elapsed time = 47.4108 seconds.
+08/23/26 16:02:34, 
+08/23/26 16:02:34, 
+08/23/26 16:02:34, Total factoring time = 48.1073 seconds
+08/23/26 16:02:34, 
+08/23/26 16:02:34, ****************************
+08/23/26 16:02:34, Starting factorization of 1374897230920489386987957111300125246071865030443987463188362271527034943605714958641
+08/23/26 16:02:34, using pretesting plan: normal
+08/23/26 16:02:34, no tune info: using qs/gnfs crossover of 95 digits
+08/23/26 16:02:34, no tune info: using qs/snfs crossover of 95 digits
+08/23/26 16:02:34, ****************************
+08/23/26 16:02:34, rho: x^2 + 3, starting 1000 iterations on C85
+08/23/26 16:02:34, rho: x^2 + 2, starting 1000 iterations on C85
+08/23/26 16:02:34, rho: x^2 + 1, starting 1000 iterations on C85
+08/23/26 16:02:34, current ECM pretesting depth: 0.000000
+08/23/26 16:02:34, scheduled 34 curves at B1=2000 toward target pretesting depth of 26.153846
+08/23/26 16:02:34, Finished 34 curves using GMP-ECM method on C85 input, B1=2k, B2=gmp-ecm default
+08/23/26 16:02:34, current ECM pretesting depth: 15.132605
+08/23/26 16:02:34, scheduled 86 curves at B1=11000 toward target pretesting depth of 26.153846
+08/23/26 16:02:34, Finished 86 curves using GMP-ECM method on C85 input, B1=11k, B2=gmp-ecm default
+08/23/26 16:02:34, current ECM pretesting depth: 20.232476
+08/23/26 16:02:34, scheduled 214 curves at B1=50000 toward target pretesting depth of 26.153846
+08/23/26 16:02:34, Finished 214 curves using GMP-ECM method on C85 input, B1=50k, B2=gmp-ecm default
+08/23/26 16:02:34, current ECM pretesting depth: 25.332838
+08/23/26 16:02:34, scheduled 71 curves at B1=250000 toward target pretesting depth of 26.153846
+08/23/26 16:02:34, Finished 71 curves using GMP-ECM method on C85 input, B1=250k, B2=gmp-ecm default
+08/23/26 16:02:34, final ECM pretested depth: 26.158420
+08/23/26 16:02:34, scheduler: switching to sieve method
+08/23/26 16:02:35, starting SIQS on c85: 1374897230920489386987957111300125246071865030443987463188362271527034943605714958641
+08/23/26 16:02:35, random seed: 12799635520858327940
+08/23/26 16:02:35, ==== sieve params ====
+08/23/26 16:02:35, n = 85 digits, 280 bits
+08/23/26 16:02:35, factor base: 59824 primes (max prime = 1572331)
+08/23/26 16:02:35, single large prime cutoff: 149371445 (95 * pmax)
+08/23/26 16:02:35, double large prime range from 2472224773561 to 1325546683035462
+08/23/26 16:02:35, DLP MFB = 1.85
+08/23/26 16:02:35, allocating 7 large prime slices of factor base
+08/23/26 16:02:35, buckets hold 2048 elements
+08/23/26 16:02:35, large prime hashtables have 1261568 bytes
+08/23/26 16:02:35, using SSE2 enabled 32k sieve core
+08/23/26 16:02:35, sieve interval: 11 blocks of size 32768
+08/23/26 16:02:35, polynomial A has ~ 11 factors
+08/23/26 16:02:35, using multiplier of 1
+08/23/26 16:02:35, using Q2(x) polynomials for kN mod 8 = 1
+08/23/26 16:02:35, using SPV correction of 19 bits, starting at offset 30
+08/23/26 16:02:35, trial factoring cutoff at 90 bits
+08/23/26 16:02:35, ==== sieving started (12 threads) ====
+08/23/26 16:03:10, trial division touched 13113274 sieve locations out of 116989886464
+08/23/26 16:03:10, total reports = 13113274, total surviving reports = 4921634
+08/23/26 16:03:10, total blocks sieved = 3570248, avg surviving reports per block = 1.38
+08/23/26 16:03:10, dlp-ecm: 0 failures, 468940 attempts, 1810308 outside range, 2392559 prp, 412851 useful
+08/23/26 16:03:10, 61870 relations found: 20418 full + 41452 from 642260 partial, using 162284 polys (532 A polys)
+08/23/26 16:03:10, on average, sieving found 4.08 rels/poly and 18736.87 rels/sec
+08/23/26 16:03:10, trial division touched 13113274 sieve locations out of 116989886464
+08/23/26 16:03:10, ==== post processing stage (msieve-1.38) ====
+08/23/26 16:03:10, QS elapsed time = 35.3676 seconds.
+08/23/26 16:03:10, begin singleton removal with 662678 relations
+08/23/26 16:03:11, reduce to 132771 relations in 11 passes
+08/23/26 16:03:11, recovered 132771 relations
+08/23/26 16:03:11, recovered 90701 polynomials
+08/23/26 16:03:11, attempting to build 61870 cycles
+08/23/26 16:03:11, found 61870 cycles from 132771 relations in 4 passes
+08/23/26 16:03:11, distribution of cycle lengths:
+08/23/26 16:03:11,    length 1 : 20418
+08/23/26 16:03:11,    length 2 : 14980
+08/23/26 16:03:11,    length 3 : 11239
+08/23/26 16:03:11,    length 4 : 7075
+08/23/26 16:03:11,    length 5 : 4038
+08/23/26 16:03:11,    length 6 : 2139
+08/23/26 16:03:11,    length 7 : 1062
+08/23/26 16:03:11,    length 9+: 919
+08/23/26 16:03:11, largest cycle: 17 relations
+08/23/26 16:03:11, matrix is 59824 x 61870 (13.0 MB) with weight 2902996 (46.92/col)
+08/23/26 16:03:11, sparse part has weight 2902996 (46.92/col)
+08/23/26 16:03:11, filtering completed in 4 passes
+08/23/26 16:03:11, matrix is 51602 x 51666 (10.7 MB) with weight 2385512 (46.17/col)
+08/23/26 16:03:11, sparse part has weight 2385512 (46.17/col)
+08/23/26 16:03:11, saving the first 48 matrix rows for later
+08/23/26 16:03:11, matrix is 51554 x 51666 (9.3 MB) with weight 2079429 (40.25/col)
+08/23/26 16:03:11, sparse part has weight 1913158 (37.03/col)
+08/23/26 16:03:11, matrix includes 64 packed rows
+08/23/26 16:03:11, using block size 20666 for processor cache size 12288 kB
+08/23/26 16:03:11, commencing Lanczos iteration
+08/23/26 16:03:11, memory use: 7.7 MB
+08/23/26 16:03:14, lanczos halted after 817 iterations (dim = 51552)
+08/23/26 16:03:14, recovered 16 nontrivial dependencies
+08/23/26 16:03:14, prp43 = 1207304697449320227361991168269579532553019
+08/23/26 16:03:14, prp43 = 1138815440563797106067653819329702423531139
+08/23/26 16:03:14, Lanczos elapsed time = 3.9165 seconds.
+08/23/26 16:03:14, Sqrt elapsed time = 0.0352 seconds.
+08/23/26 16:03:14, SIQS elapsed time = 39.3259 seconds.
+08/23/26 16:03:14, 
+08/23/26 16:03:14, 
+08/23/26 16:03:14, Total factoring time = 40.0709 seconds
+08/23/26 16:03:14, 
+08/23/26 16:03:14, ****************************
+08/23/26 16:03:14, Starting factorization of 568864255617218463757762331562162938196758766213517971897386306909128571711714362993
+08/23/26 16:03:14, using pretesting plan: normal
+08/23/26 16:03:14, no tune info: using qs/gnfs crossover of 95 digits
+08/23/26 16:03:14, no tune info: using qs/snfs crossover of 95 digits
+08/23/26 16:03:14, ****************************
+08/23/26 16:03:14, rho: x^2 + 3, starting 1000 iterations on C84
+08/23/26 16:03:14, rho: x^2 + 2, starting 1000 iterations on C84
+08/23/26 16:03:14, rho: x^2 + 1, starting 1000 iterations on C84
+08/23/26 16:03:14, current ECM pretesting depth: 0.000000
+08/23/26 16:03:14, scheduled 34 curves at B1=2000 toward target pretesting depth of 25.846154
+08/23/26 16:03:14, Finished 34 curves using GMP-ECM method on C84 input, B1=2k, B2=gmp-ecm default
+08/23/26 16:03:14, current ECM pretesting depth: 15.132605
+08/23/26 16:03:14, scheduled 86 curves at B1=11000 toward target pretesting depth of 25.846154
+08/23/26 16:03:14, Finished 86 curves using GMP-ECM method on C84 input, B1=11k, B2=gmp-ecm default
+08/23/26 16:03:14, current ECM pretesting depth: 20.232476
+08/23/26 16:03:14, scheduled 214 curves at B1=50000 toward target pretesting depth of 25.846154
+08/23/26 16:03:14, Finished 214 curves using GMP-ECM method on C84 input, B1=50k, B2=gmp-ecm default
+08/23/26 16:03:14, current ECM pretesting depth: 25.332838
+08/23/26 16:03:14, scheduled 44 curves at B1=250000 toward target pretesting depth of 25.846154
+08/23/26 16:03:14, Finished 44 curves using GMP-ECM method on C84 input, B1=250k, B2=gmp-ecm default
+08/23/26 16:03:14, final ECM pretested depth: 25.844466
+08/23/26 16:03:14, scheduler: switching to sieve method
+08/23/26 16:03:15, starting SIQS on c84: 568864255617218463757762331562162938196758766213517971897386306909128571711714362993
+08/23/26 16:03:15, random seed: 7521799398991930253
+08/23/26 16:03:15, ==== sieve params ====
+08/23/26 16:03:15, n = 86 digits, 285 bits
+08/23/26 16:03:15, factor base: 58992 primes (max prime = 1552543)
+08/23/26 16:03:15, single large prime cutoff: 147491585 (95 * pmax)
+08/23/26 16:03:15, double large prime range from 2410389766849 to 1294849814979603
+08/23/26 16:03:15, DLP MFB = 1.85
+08/23/26 16:03:15, allocating 7 large prime slices of factor base
+08/23/26 16:03:15, buckets hold 2048 elements
+08/23/26 16:03:15, large prime hashtables have 1261568 bytes
+08/23/26 16:03:15, using SSE2 enabled 32k sieve core
+08/23/26 16:03:15, sieve interval: 11 blocks of size 32768
+08/23/26 16:03:15, polynomial A has ~ 11 factors
+08/23/26 16:03:15, using multiplier of 97
+08/23/26 16:03:15, using Q2(x) polynomials for kN mod 8 = 1
+08/23/26 16:03:15, using SPV correction of 21 bits, starting at offset 36
+08/23/26 16:03:15, trial factoring cutoff at 91 bits
+08/23/26 16:03:15, ==== sieving started (12 threads) ====
+08/23/26 16:03:53, trial division touched 11613321 sieve locations out of 116954562560
+08/23/26 16:03:53, total reports = 11613321, total surviving reports = 4545493
+08/23/26 16:03:53, total blocks sieved = 3569170, avg surviving reports per block = 1.27
+08/23/26 16:03:53, dlp-ecm: 0 failures, 404671 attempts, 1767520 outside range, 2112289 prp, 357989 useful
+08/23/26 16:03:53, 62153 relations found: 21700 full + 40453 from 597302 partial, using 162235 polys (325 A polys)
+08/23/26 16:03:53, on average, sieving found 3.82 rels/poly and 16057.31 rels/sec
+08/23/26 16:03:53, trial division touched 11613321 sieve locations out of 116954562560
+08/23/26 16:03:53, ==== post processing stage (msieve-1.38) ====
+08/23/26 16:03:53, QS elapsed time = 38.5496 seconds.
+08/23/26 16:03:54, begin singleton removal with 619002 relations
+08/23/26 16:03:54, reduce to 126697 relations in 8 passes
+08/23/26 16:03:54, recovered 126697 relations
+08/23/26 16:03:54, recovered 87850 polynomials
+08/23/26 16:03:54, attempting to build 62153 cycles
+08/23/26 16:03:54, found 62153 cycles from 126697 relations in 4 passes
+08/23/26 16:03:54, distribution of cycle lengths:
+08/23/26 16:03:54,    length 1 : 21700
+08/23/26 16:03:54,    length 2 : 16635
+08/23/26 16:03:54,    length 3 : 11297
+08/23/26 16:03:54,    length 4 : 6340
+08/23/26 16:03:54,    length 5 : 3283
+08/23/26 16:03:54,    length 6 : 1593
+08/23/26 16:03:54,    length 7 : 728
+08/23/26 16:03:54,    length 9+: 577
+08/23/26 16:03:54, largest cycle: 16 relations
+08/23/26 16:03:54, matrix is 58992 x 62153 (12.9 MB) with weight 2890456 (46.51/col)
+08/23/26 16:03:54, sparse part has weight 2890456 (46.51/col)
+08/23/26 16:03:54, filtering completed in 4 passes
+08/23/26 16:03:54, matrix is 48958 x 49022 (10.0 MB) with weight 2219239 (45.27/col)
+08/23/26 16:03:54, sparse part has weight 2219239 (45.27/col)
+08/23/26 16:03:54, saving the first 48 matrix rows for later
+08/23/26 16:03:54, matrix is 48910 x 49022 (8.2 MB) with weight 1871796 (38.18/col)
+08/23/26 16:03:54, sparse part has weight 1671699 (34.10/col)
+08/23/26 16:03:54, matrix includes 64 packed rows
+08/23/26 16:03:54, using block size 19608 for processor cache size 12288 kB
+08/23/26 16:03:55, commencing Lanczos iteration
+08/23/26 16:03:55, memory use: 7.0 MB
+08/23/26 16:03:57, lanczos halted after 776 iterations (dim = 48906)
+08/23/26 16:03:57, recovered 15 nontrivial dependencies
+08/23/26 16:03:57, prp42 = 767005851120782639106478060835468317348237
+08/23/26 16:03:57, prp42 = 741668730148497598863397042740110962492789
+08/23/26 16:03:57, Lanczos elapsed time = 3.3405 seconds.
+08/23/26 16:03:57, Sqrt elapsed time = 0.2988 seconds.
+08/23/26 16:03:57, SIQS elapsed time = 42.1895 seconds.
+08/23/26 16:03:57, 
+08/23/26 16:03:57, 
+08/23/26 16:03:57, Total factoring time = 42.9230 seconds
+08/23/26 16:08:19, 
+08/23/26 16:08:19, ****************************
+08/23/26 16:08:19, Starting factorization of 809202123321579685401617788106445594231775612578151779805866771945418402394099133599
+08/23/26 16:08:19, using pretesting plan: normal
+08/23/26 16:08:19, no tune info: using qs/gnfs crossover of 95 digits
+08/23/26 16:08:19, no tune info: using qs/snfs crossover of 95 digits
+08/23/26 16:08:19, ****************************
+08/23/26 16:08:19, rho: x^2 + 3, starting 1000 iterations on C84
+08/23/26 16:08:19, rho: x^2 + 2, starting 1000 iterations on C84
+08/23/26 16:08:19, rho: x^2 + 1, starting 1000 iterations on C84
+08/23/26 16:08:19, current ECM pretesting depth: 0.000000
+08/23/26 16:08:19, scheduled 34 curves at B1=2000 toward target pretesting depth of 25.846154
+08/23/26 16:08:19, Finished 34 curves using GMP-ECM method on C84 input, B1=2k, B2=gmp-ecm default
+08/23/26 16:08:19, current ECM pretesting depth: 15.132605
+08/23/26 16:08:19, scheduled 86 curves at B1=11000 toward target pretesting depth of 25.846154
+08/23/26 16:08:19, Finished 86 curves using GMP-ECM method on C84 input, B1=11k, B2=gmp-ecm default
+08/23/26 16:08:19, current ECM pretesting depth: 20.232476
+08/23/26 16:08:19, scheduled 214 curves at B1=50000 toward target pretesting depth of 25.846154
+08/23/26 16:08:19, Finished 214 curves using GMP-ECM method on C84 input, B1=50k, B2=gmp-ecm default
+08/23/26 16:08:19, current ECM pretesting depth: 25.332838
+08/23/26 16:08:19, scheduled 44 curves at B1=250000 toward target pretesting depth of 25.846154
+08/23/26 16:08:19, Finished 44 curves using GMP-ECM method on C84 input, B1=250k, B2=gmp-ecm default
+08/23/26 16:08:19, final ECM pretested depth: 25.844466
+08/23/26 16:08:19, scheduler: switching to sieve method
+08/23/26 16:08:20, starting SIQS on c84: 809202123321579685401617788106445594231775612578151779805866771945418402394099133599
+08/23/26 16:08:20, random seed: 17872028657184905817
+08/23/26 16:09:43, 
+08/23/26 16:09:43, ****************************
+08/23/26 16:09:43, Starting factorization of 1344839536112243620501324976695886562234532087103774597217916276223749525010544176213
+08/23/26 16:09:43, using pretesting plan: normal
+08/23/26 16:09:43, no tune info: using qs/gnfs crossover of 95 digits
+08/23/26 16:09:43, no tune info: using qs/snfs crossover of 95 digits
+08/23/26 16:09:43, ****************************
+08/23/26 16:09:43, rho: x^2 + 3, starting 1000 iterations on C85
+08/23/26 16:09:43, rho: x^2 + 2, starting 1000 iterations on C85
+08/23/26 16:09:44, rho: x^2 + 1, starting 1000 iterations on C85
+08/23/26 16:09:44, current ECM pretesting depth: 0.000000
+08/23/26 16:09:44, scheduled 34 curves at B1=2000 toward target pretesting depth of 26.153846
+08/23/26 16:09:44, Finished 34 curves using GMP-ECM method on C85 input, B1=2k, B2=gmp-ecm default
+08/23/26 16:09:44, current ECM pretesting depth: 15.132605
+08/23/26 16:09:44, scheduled 86 curves at B1=11000 toward target pretesting depth of 26.153846
+08/23/26 16:09:44, Finished 86 curves using GMP-ECM method on C85 input, B1=11k, B2=gmp-ecm default
+08/23/26 16:09:44, current ECM pretesting depth: 20.232476
+08/23/26 16:09:44, scheduled 214 curves at B1=50000 toward target pretesting depth of 26.153846
+08/23/26 16:09:44, Finished 214 curves using GMP-ECM method on C85 input, B1=50k, B2=gmp-ecm default
+08/23/26 16:09:44, current ECM pretesting depth: 25.332838
+08/23/26 16:09:44, scheduled 71 curves at B1=250000 toward target pretesting depth of 26.153846
+08/23/26 16:09:44, Finished 71 curves using GMP-ECM method on C85 input, B1=250k, B2=gmp-ecm default
+08/23/26 16:09:44, final ECM pretested depth: 26.158420
+08/23/26 16:09:44, scheduler: switching to sieve method
+08/23/26 16:09:44, starting SIQS on c85: 1344839536112243620501324976695886562234532087103774597217916276223749525010544176213
+08/23/26 16:09:44, random seed: 11066064282387846508

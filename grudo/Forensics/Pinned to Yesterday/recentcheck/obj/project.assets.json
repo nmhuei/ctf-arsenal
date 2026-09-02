@@ -1,0 +1,429 @@
+{
+  "version": 3,
+  "targets": {
+    "net6.0": {
+      "ExtensionBlocks/2026.5.0": {
+        "type": "package",
+        "dependencies": {
+          "GuidMapping": "1.3.0",
+          "System.Text.Encoding.CodePages": "9.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/ExtensionBlocks.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/ExtensionBlocks.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "GuidMapping/2026.5.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/GuidMapping.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/GuidMapping.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.NETCore.Platforms/7.0.4": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/_._": {}
+        }
+      },
+      "Registry/2026.5.0": {
+        "type": "package",
+        "dependencies": {
+          "Serilog": "4.2.0",
+          "System.Text.Encoding.CodePages": "9.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Registry.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Registry.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "RegistryPluginBase/2026.5.0": {
+        "type": "package",
+        "dependencies": {
+          "ExtensionBlocks": "2026.5.0",
+          "GuidMapping": "2026.5.0",
+          "Microsoft.NETCore.Platforms": "7.0.4",
+          "Registry": "2026.5.0",
+          "System.Text.Encoding.CodePages": "10.0.7"
+        },
+        "compile": {
+          "lib/netstandard2.0/RegistryPluginBase.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/RegistryPluginBase.dll": {}
+        }
+      },
+      "Serilog/4.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Serilog.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Serilog.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Memory/4.6.3": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp2.1/_._": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.1/_._": {}
+        }
+      },
+      "System.Runtime.CompilerServices.Unsafe/6.1.2": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/System.Runtime.CompilerServices.Unsafe.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/System.Runtime.CompilerServices.Unsafe.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
+        }
+      },
+      "System.Text.Encoding.CodePages/10.0.7": {
+        "type": "package",
+        "dependencies": {
+          "System.Memory": "4.6.3",
+          "System.Runtime.CompilerServices.Unsafe": "6.1.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/System.Text.Encoding.CodePages.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Text.Encoding.CodePages.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/netcoreapp2.0/System.Text.Encoding.CodePages.targets": {}
+        }
+      },
+      "RegistryPlugin.RecentDocs/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "RegistryPluginBase": "2026.5.0",
+          "System.Text.Encoding.CodePages": "10.0.7"
+        },
+        "compile": {
+          "bin/placeholder/RegistryPlugin.RecentDocs.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RegistryPlugin.RecentDocs.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ExtensionBlocks/2026.5.0": {
+      "sha512": "DdD+lfQ44zRiV0OR/OwkRUjKK566b7kYNTChsW1hMPCbK2I14DMxE9rqnRFpTzBuLs184Y2q7sQPPXP3RSi3Vg==",
+      "type": "package",
+      "path": "extensionblocks/2026.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "extensionblocks.2026.5.0.nupkg.sha512",
+        "extensionblocks.nuspec",
+        "icon.png",
+        "lib/netstandard2.0/ExtensionBlocks.dll",
+        "lib/netstandard2.0/ExtensionBlocks.xml"
+      ]
+    },
+    "GuidMapping/2026.5.0": {
+      "sha512": "lWJz8BT0t0DFAdfeaNW9Lt+YobNF9YFz13iypcM3t7SMcr/5Ky/THblbPe48v2Q1aVqICdt6lPq/qJVqz1s0lQ==",
+      "type": "package",
+      "path": "guidmapping/2026.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "guidmapping.2026.5.0.nupkg.sha512",
+        "guidmapping.nuspec",
+        "icon.png",
+        "lib/netstandard2.0/GuidMapping.dll",
+        "lib/netstandard2.0/GuidMapping.xml"
+      ]
+    },
+    "Microsoft.NETCore.Platforms/7.0.4": {
+      "sha512": "yLEHlNN7O5WiND89r42sepgVwy5W/ZoTiFEdJDV7MHR1lW02LL7Nipz2TD5qM/Kx9W3/k3NP+PAP2qUdOm+leg==",
+      "type": "package",
+      "path": "microsoft.netcore.platforms/7.0.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/netstandard1.0/_._",
+        "microsoft.netcore.platforms.7.0.4.nupkg.sha512",
+        "microsoft.netcore.platforms.nuspec",
+        "runtime.json",
+        "useSharedDesignerContext.txt"
+      ]
+    },
+    "Registry/2026.5.0": {
+      "sha512": "ETgi/AvoA7vnI8uXRSWpCDo2+ogcAJg4MXFqeX2XuqmXSqJNEM0i0dwWTzXLVxWnpsdJEkqzehsXefOUSKdbrA==",
+      "type": "package",
+      "path": "registry/2026.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "icon.png",
+        "lib/netstandard2.0/Registry.dll",
+        "lib/netstandard2.0/Registry.xml",
+        "registry.2026.5.0.nupkg.sha512",
+        "registry.nuspec"
+      ]
+    },
+    "RegistryPluginBase/2026.5.0": {
+      "sha512": "tI0ymnW2LEZ/0obUh3aM1+EjSTfWj041gV3hKIqfoghxXujXv+YgJYcnUf9/M336fRVWngKd75gyCBnky8wR4w==",
+      "type": "package",
+      "path": "registrypluginbase/2026.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/RegistryPluginBase.dll",
+        "registrypluginbase.2026.5.0.nupkg.sha512",
+        "registrypluginbase.nuspec"
+      ]
+    },
+    "Serilog/4.2.0": {
+      "sha512": "gmoWVOvKgbME8TYR+gwMf7osROiWAURterc6Rt2dQyX7wtjZYpqFiA/pY6ztjGQKKV62GGCyOcmtP1UKMHgSmA==",
+      "type": "package",
+      "path": "serilog/4.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "icon.png",
+        "lib/net462/Serilog.dll",
+        "lib/net462/Serilog.xml",
+        "lib/net471/Serilog.dll",
+        "lib/net471/Serilog.xml",
+        "lib/net6.0/Serilog.dll",
+        "lib/net6.0/Serilog.xml",
+        "lib/net8.0/Serilog.dll",
+        "lib/net8.0/Serilog.xml",
+        "lib/net9.0/Serilog.dll",
+        "lib/net9.0/Serilog.xml",
+        "lib/netstandard2.0/Serilog.dll",
+        "lib/netstandard2.0/Serilog.xml",
+        "serilog.4.2.0.nupkg.sha512",
+        "serilog.nuspec"
+      ]
+    },
+    "System.Memory/4.6.3": {
+      "sha512": "qdcDOgnFZY40+Q9876JUHnlHu7bosOHX8XISRoH94fwk6hgaeQGSgfZd8srWRZNt5bV9ZW2TljcegDNxsf+96A==",
+      "type": "package",
+      "path": "system.memory/4.6.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "PACKAGE.md",
+        "buildTransitive/net461/System.Memory.targets",
+        "buildTransitive/net462/_._",
+        "lib/net462/System.Memory.dll",
+        "lib/net462/System.Memory.xml",
+        "lib/netcoreapp2.1/_._",
+        "lib/netstandard2.0/System.Memory.dll",
+        "lib/netstandard2.0/System.Memory.xml",
+        "lib/netstandard2.1/_._",
+        "system.memory.4.6.3.nupkg.sha512",
+        "system.memory.nuspec"
+      ]
+    },
+    "System.Runtime.CompilerServices.Unsafe/6.1.2": {
+      "sha512": "2hBr6zdbIBTDE3EhK7NSVNdX58uTK6iHW/P/Axmm9sl1xoGSLqDvMtpecn226TNwHByFokYwJmt/aQQNlO5CRw==",
+      "type": "package",
+      "path": "system.runtime.compilerservices.unsafe/6.1.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "PACKAGE.md",
+        "buildTransitive/net461/System.Runtime.CompilerServices.Unsafe.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net6.0/_._",
+        "buildTransitive/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.targets",
+        "lib/net462/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/net462/System.Runtime.CompilerServices.Unsafe.xml",
+        "lib/net6.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/net6.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "lib/net7.0/_._",
+        "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "system.runtime.compilerservices.unsafe.6.1.2.nupkg.sha512",
+        "system.runtime.compilerservices.unsafe.nuspec"
+      ]
+    },
+    "System.Text.Encoding.CodePages/10.0.7": {
+      "sha512": "jVwqeYm6ihKbC8+f9dC+VGlWb6areYWTi+3aHuawZXazkiVs3DxQTNeiMYbcZ/H+JzVkPXfkLUUzUFPQneobFg==",
+      "type": "package",
+      "path": "system.text.encoding.codepages/10.0.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "PACKAGE.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/System.Text.Encoding.CodePages.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net8.0/_._",
+        "buildTransitive/netcoreapp2.0/System.Text.Encoding.CodePages.targets",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net10.0/System.Text.Encoding.CodePages.dll",
+        "lib/net10.0/System.Text.Encoding.CodePages.xml",
+        "lib/net462/System.Text.Encoding.CodePages.dll",
+        "lib/net462/System.Text.Encoding.CodePages.xml",
+        "lib/net8.0/System.Text.Encoding.CodePages.dll",
+        "lib/net8.0/System.Text.Encoding.CodePages.xml",
+        "lib/net9.0/System.Text.Encoding.CodePages.dll",
+        "lib/net9.0/System.Text.Encoding.CodePages.xml",
+        "lib/netstandard2.0/System.Text.Encoding.CodePages.dll",
+        "lib/netstandard2.0/System.Text.Encoding.CodePages.xml",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "runtimes/win/lib/net10.0/System.Text.Encoding.CodePages.dll",
+        "runtimes/win/lib/net10.0/System.Text.Encoding.CodePages.xml",
+        "runtimes/win/lib/net8.0/System.Text.Encoding.CodePages.dll",
+        "runtimes/win/lib/net8.0/System.Text.Encoding.CodePages.xml",
+        "runtimes/win/lib/net9.0/System.Text.Encoding.CodePages.dll",
+        "runtimes/win/lib/net9.0/System.Text.Encoding.CodePages.xml",
+        "system.text.encoding.codepages.10.0.7.nupkg.sha512",
+        "system.text.encoding.codepages.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
+    "RegistryPlugin.RecentDocs/1.0.0": {
+      "type": "project",
+      "path": "../ez_registry_plugins/RegistryPlugin.RecentDocs/RegistryPlugin.RecentDocs.csproj",
+      "msbuildProject": "../ez_registry_plugins/RegistryPlugin.RecentDocs/RegistryPlugin.RecentDocs.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net6.0": [
+      "Registry >= 2026.5.0",
+      "RegistryPlugin.RecentDocs >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "/home/light/.nuget/packages/": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/home/light/Workspace/CTF/grudo/Forensics/Pinned to Yesterday/recentcheck/recentcheck.csproj",
+      "projectName": "recentcheck",
+      "projectPath": "/home/light/Workspace/CTF/grudo/Forensics/Pinned to Yesterday/recentcheck/recentcheck.csproj",
+      "packagesPath": "/home/light/.nuget/packages/",
+      "outputPath": "/home/light/Workspace/CTF/grudo/Forensics/Pinned to Yesterday/recentcheck/obj/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/home/light/.nuget/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net6.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "projectReferences": {
+            "/home/light/Workspace/CTF/grudo/Forensics/Pinned to Yesterday/ez_registry_plugins/RegistryPlugin.RecentDocs/RegistryPlugin.RecentDocs.csproj": {
+              "projectPath": "/home/light/Workspace/CTF/grudo/Forensics/Pinned to Yesterday/ez_registry_plugins/RegistryPlugin.RecentDocs/RegistryPlugin.RecentDocs.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net6.0": {
+        "targetAlias": "net6.0",
+        "dependencies": {
+          "Registry": {
+            "target": "Package",
+            "version": "[2026.5.0, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[6.0.8, 6.0.8]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.linux-x64",
+            "version": "[6.0.8, 6.0.8]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[6.0.8, 6.0.8]"
+          }
+        ],
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.400/RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

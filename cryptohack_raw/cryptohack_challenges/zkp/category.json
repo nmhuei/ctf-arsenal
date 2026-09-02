@@ -1,0 +1,242 @@
+{
+  "title": "ZKPs",
+  "slug": "zkp",
+  "url": "https://cryptohack.org/challenges/zkp/",
+  "completed": "0",
+  "total": "17",
+  "description_text": "ZKPs Zero-knowledge proofs (ZKPs) are a technique that enable one party (the prover) to demonstrate to another party (the verifier) the truth of a certain statement without revealing any additional information besides the fact that the statement is true. The foundation for ZKPs was laid in 1985 by Goldwasser, Micali, Rackoff, Babai, and Moran, who won the first Gödel Prize for their contribution to theoretical computer science. ZKPs are an active field of research, and have many practical applications, including authentication systems, verified computing, and privacy-preserving blockchains.",
+  "stages": [
+    {
+      "title": "Sigma Protocol",
+      "slug": "zkp-intro"
+    },
+    {
+      "title": "ZKP Challenges",
+      "slug": "zkp-challenges"
+    }
+  ],
+  "challenge_count": 17,
+  "challenges": [
+    {
+      "title": "ZKP Introduction",
+      "stage": "Sigma Protocol",
+      "path": "zkp/zkp-intro/zkp-introduction",
+      "attachments": []
+    },
+    {
+      "title": "Proofs of Knowledge",
+      "stage": "Sigma Protocol",
+      "path": "zkp/zkp-intro/proofs-of-knowledge",
+      "attachments": [
+        {
+          "text": "13425.py",
+          "href": "/static/challenges/13425_eae1ef15ed9cf9c7ea84ae9e7e27ccab.py",
+          "url": "https://cryptohack.org/static/challenges/13425_eae1ef15ed9cf9c7ea84ae9e7e27ccab.py",
+          "download": true,
+          "saved_as": "files/13425_eae1ef15ed9cf9c7ea84ae9e7e27ccab.py",
+          "status": 200,
+          "size": 2303
+        }
+      ]
+    },
+    {
+      "title": "Special Soundness",
+      "stage": "Sigma Protocol",
+      "path": "zkp/zkp-intro/special-soundness",
+      "attachments": [
+        {
+          "text": "13426.py",
+          "href": "/static/challenges/13426_2434b3b3f4044a63115e18e476f420db.py",
+          "url": "https://cryptohack.org/static/challenges/13426_2434b3b3f4044a63115e18e476f420db.py",
+          "download": true,
+          "saved_as": "files/13426_2434b3b3f4044a63115e18e476f420db.py",
+          "status": 200,
+          "size": 2639
+        }
+      ]
+    },
+    {
+      "title": "Honest Verifier Zero Knowledge",
+      "stage": "Sigma Protocol",
+      "path": "zkp/zkp-intro/honest-verifier-zero-knowledge",
+      "attachments": [
+        {
+          "text": "13427.py",
+          "href": "/static/challenges/13427_ee325da3215875e43f67b397f8d111c7.py",
+          "url": "https://cryptohack.org/static/challenges/13427_ee325da3215875e43f67b397f8d111c7.py",
+          "download": true,
+          "saved_as": "files/13427_ee325da3215875e43f67b397f8d111c7.py",
+          "status": 200,
+          "size": 1933
+        }
+      ]
+    },
+    {
+      "title": "Non-Interactive",
+      "stage": "Sigma Protocol",
+      "path": "zkp/zkp-intro/non-interactive",
+      "attachments": [
+        {
+          "text": "13428.py",
+          "href": "/static/challenges/13428_1607c0c5ffb6d27cc09b7a9fd1fab436.py",
+          "url": "https://cryptohack.org/static/challenges/13428_1607c0c5ffb6d27cc09b7a9fd1fab436.py",
+          "download": true,
+          "saved_as": "files/13428_1607c0c5ffb6d27cc09b7a9fd1fab436.py",
+          "status": 200,
+          "size": 2523
+        }
+      ]
+    },
+    {
+      "title": "Too Honest",
+      "stage": "Sigma Protocol",
+      "path": "zkp/zkp-intro/too-honest",
+      "attachments": [
+        {
+          "text": "13429.py",
+          "href": "/static/challenges/13429_2520b4ebce10bd8b830bc5dc3d67da2b.py",
+          "url": "https://cryptohack.org/static/challenges/13429_2520b4ebce10bd8b830bc5dc3d67da2b.py",
+          "download": true,
+          "saved_as": "files/13429_2520b4ebce10bd8b830bc5dc3d67da2b.py",
+          "status": 200,
+          "size": 2163
+        }
+      ]
+    },
+    {
+      "title": "OR Proof",
+      "stage": "Sigma Protocol",
+      "path": "zkp/zkp-intro/or-proof",
+      "attachments": []
+    },
+    {
+      "title": "Hamiltonicity 1",
+      "stage": "Sigma Protocol",
+      "path": "zkp/zkp-intro/hamiltonicity-1",
+      "attachments": []
+    },
+    {
+      "title": "Hamiltonicity 2",
+      "stage": "Sigma Protocol",
+      "path": "zkp/zkp-intro/hamiltonicity-2",
+      "attachments": []
+    },
+    {
+      "title": "Fischlin Transform",
+      "stage": "Sigma Protocol",
+      "path": "zkp/zkp-intro/fischlin-transform",
+      "attachments": []
+    },
+    {
+      "title": "Ticket Maestro",
+      "stage": "Sigma Protocol",
+      "path": "zkp/zkp-intro/ticket-maestro",
+      "attachments": []
+    },
+    {
+      "title": "Pairing-Based Cryptography",
+      "stage": "ZKP Challenges",
+      "path": "zkp/zkp-challenges/pairing-based-cryptography",
+      "attachments": [
+        {
+          "text": "generate.py",
+          "href": "/static/challenges/generate_c8c4cc90fd7a3febddb72b6ce176fdac.py",
+          "url": "https://cryptohack.org/static/challenges/generate_c8c4cc90fd7a3febddb72b6ce176fdac.py",
+          "download": true,
+          "saved_as": "files/generate_c8c4cc90fd7a3febddb72b6ce176fdac.py",
+          "status": 200,
+          "size": 708
+        },
+        {
+          "text": "output.txt",
+          "href": "/static/challenges/output_2d8920fd1c945fde7ff1ad5fc0810aa7.txt",
+          "url": "https://cryptohack.org/static/challenges/output_2d8920fd1c945fde7ff1ad5fc0810aa7.txt",
+          "download": true,
+          "saved_as": "files/output_2d8920fd1c945fde7ff1ad5fc0810aa7.txt",
+          "status": 200,
+          "size": 330630
+        }
+      ]
+    },
+    {
+      "title": "Mister Saplin's Preview",
+      "stage": "ZKP Challenges",
+      "path": "zkp/zkp-challenges/mister-saplin-s-preview",
+      "attachments": [
+        {
+          "text": "13414.py",
+          "href": "/static/challenges/13414_4df443a2121f5089f1e908ba332052fd.py",
+          "url": "https://cryptohack.org/static/challenges/13414_4df443a2121f5089f1e908ba332052fd.py",
+          "download": true,
+          "saved_as": "files/13414_4df443a2121f5089f1e908ba332052fd.py",
+          "status": 200,
+          "size": 3584
+        }
+      ]
+    },
+    {
+      "title": "Couples",
+      "stage": "ZKP Challenges",
+      "path": "zkp/zkp-challenges/couples",
+      "attachments": [
+        {
+          "text": "13415.py",
+          "href": "/static/challenges/13415_a2dc0b5a478b678eb0d2cc27a5688140.py",
+          "url": "https://cryptohack.org/static/challenges/13415_a2dc0b5a478b678eb0d2cc27a5688140.py",
+          "download": true,
+          "saved_as": "files/13415_a2dc0b5a478b678eb0d2cc27a5688140.py",
+          "status": 200,
+          "size": 2822
+        }
+      ]
+    },
+    {
+      "title": "Let's Prove It",
+      "stage": "ZKP Challenges",
+      "path": "zkp/zkp-challenges/let-s-prove-it",
+      "attachments": [
+        {
+          "text": "13430.py",
+          "href": "/static/challenges/13430_19b73b517a70b737c42b93115f9426ea.py",
+          "url": "https://cryptohack.org/static/challenges/13430_19b73b517a70b737c42b93115f9426ea.py",
+          "download": true,
+          "saved_as": "files/13430_19b73b517a70b737c42b93115f9426ea.py",
+          "status": 200,
+          "size": 3455
+        }
+      ]
+    },
+    {
+      "title": "Mister Saplins The Prover",
+      "stage": "ZKP Challenges",
+      "path": "zkp/zkp-challenges/mister-saplins-the-prover",
+      "attachments": [
+        {
+          "text": "13432.py",
+          "href": "/static/challenges/13432_6a34c1f5a8bd1c37685eb36fc5fcbf47.py",
+          "url": "https://cryptohack.org/static/challenges/13432_6a34c1f5a8bd1c37685eb36fc5fcbf47.py",
+          "download": true,
+          "saved_as": "files/13432_6a34c1f5a8bd1c37685eb36fc5fcbf47.py",
+          "status": 200,
+          "size": 2396
+        }
+      ]
+    },
+    {
+      "title": "Let's Prove It Again",
+      "stage": "ZKP Challenges",
+      "path": "zkp/zkp-challenges/let-s-prove-it-again",
+      "attachments": [
+        {
+          "text": "13431.py",
+          "href": "/static/challenges/13431_68413c617b29be47b6e9197b61a5a11a.py",
+          "url": "https://cryptohack.org/static/challenges/13431_68413c617b29be47b6e9197b61a5a11a.py",
+          "download": true,
+          "saved_as": "files/13431_68413c617b29be47b6e9197b61a5a11a.py",
+          "status": 200,
+          "size": 3528
+        }
+      ]
+    }
+  ]
+}

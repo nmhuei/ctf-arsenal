@@ -1,0 +1,331 @@
+{
+  "title": "Symmetric Ciphers",
+  "slug": "aes",
+  "url": "https://cryptohack.org/challenges/aes/",
+  "completed": "0",
+  "total": "27",
+  "description_text": "Symmetric Ciphers Symmetric-key ciphers are algorithms that use the same key both to encrypt and decrypt data. The goal is to use short secret keys to securely and efficiently send long messages. The most famous symmetric-key cipher is Advanced Encryption Standard ( AES ), standardised in 2001. It's so widespread that modern processors even contain special instruction sets to perform AES operations. The first series of challenges here guides you through the inner workings of AES, showing you how its separate components work together to make it a secure cipher. By the end you will have built your own code for doing AES decryption! We can split symmetric-key ciphers into two types, block ciphers and stream ciphers. Block ciphers break up a plaintext into fixed-length blocks, and send each block through an encryption function together with a secret key. Stream ciphers meanwhile encrypt one byte of plaintext at a time, by XORing a pseudo-random keystream with the data. AES is a block cipher but can be turned into a stream cipher using modes of operation such as CTR. Block ciphers only specify how to encrypt and decrypt individual blocks, and a mode of operation must be used to apply the cipher to longer messages. This is the point where real world implementations often fail spectacularly, since developers do not understand the subtle implications of using particular modes. The remainder of the challenges see you attacking common misuses of various modes.",
+  "stages": [
+    {
+      "title": "How AES Works",
+      "slug": "aes-understanding"
+    },
+    {
+      "title": "Symmetric Starter",
+      "slug": "block-starter"
+    },
+    {
+      "title": "Block Ciphers 1",
+      "slug": "block"
+    },
+    {
+      "title": "Stream Ciphers",
+      "slug": "stream"
+    },
+    {
+      "title": "Padding Attacks",
+      "slug": "padding"
+    },
+    {
+      "title": "Authenticated Encryption",
+      "slug": "auth-enc"
+    },
+    {
+      "title": "Linear Cryptanalysis",
+      "slug": "linear-cryptanalysis"
+    }
+  ],
+  "challenge_count": 27,
+  "challenges": [
+    {
+      "title": "Keyed Permutations",
+      "stage": "How AES Works",
+      "path": "aes/aes-understanding/keyed-permutations",
+      "attachments": []
+    },
+    {
+      "title": "Resisting Bruteforce",
+      "stage": "How AES Works",
+      "path": "aes/aes-understanding/resisting-bruteforce",
+      "attachments": []
+    },
+    {
+      "title": "Structure of AES",
+      "stage": "How AES Works",
+      "path": "aes/aes-understanding/structure-of-aes",
+      "attachments": [
+        {
+          "text": "matrix.py",
+          "href": "/static/challenges/matrix_e1b463dddbee6d17959618cf370ff1a5.py",
+          "url": "https://cryptohack.org/static/challenges/matrix_e1b463dddbee6d17959618cf370ff1a5.py",
+          "download": true,
+          "saved_as": "files/matrix_e1b463dddbee6d17959618cf370ff1a5.py",
+          "status": 200,
+          "size": 382
+        }
+      ]
+    },
+    {
+      "title": "Round Keys",
+      "stage": "How AES Works",
+      "path": "aes/aes-understanding/round-keys",
+      "attachments": [
+        {
+          "text": "add_round_key.py",
+          "href": "/static/challenges/add_round_key_b67b9a529ae739156107a74b14adde98.py",
+          "url": "https://cryptohack.org/static/challenges/add_round_key_b67b9a529ae739156107a74b14adde98.py",
+          "download": true,
+          "saved_as": "files/add_round_key_b67b9a529ae739156107a74b14adde98.py",
+          "status": 200,
+          "size": 295
+        }
+      ]
+    },
+    {
+      "title": "Confusion through Substitution",
+      "stage": "How AES Works",
+      "path": "aes/aes-understanding/confusion-through-substitution",
+      "attachments": [
+        {
+          "text": "sbox.py",
+          "href": "/static/challenges/sbox_8fc04ffb95faf5a5e6959195d5e2d94e.py",
+          "url": "https://cryptohack.org/static/challenges/sbox_8fc04ffb95faf5a5e6959195d5e2d94e.py",
+          "download": true,
+          "saved_as": "files/sbox_8fc04ffb95faf5a5e6959195d5e2d94e.py",
+          "status": 200,
+          "size": 3422
+        }
+      ]
+    },
+    {
+      "title": "Diffusion through Permutation",
+      "stage": "How AES Works",
+      "path": "aes/aes-understanding/diffusion-through-permutation",
+      "attachments": [
+        {
+          "text": "diffusion.py",
+          "href": "/static/challenges/diffusion_ee6215282094b4ae8cd1b20697477712.py",
+          "url": "https://cryptohack.org/static/challenges/diffusion_ee6215282094b4ae8cd1b20697477712.py",
+          "download": true,
+          "saved_as": "files/diffusion_ee6215282094b4ae8cd1b20697477712.py",
+          "status": 200,
+          "size": 1146
+        }
+      ]
+    },
+    {
+      "title": "Bringing It All Together",
+      "stage": "How AES Works",
+      "path": "aes/aes-understanding/bringing-it-all-together",
+      "attachments": [
+        {
+          "text": "aes_decrypt.py",
+          "href": "/static/challenges/aes_decrypt_f491744105801ec03d6a6f7a0e7f8101.py",
+          "url": "https://cryptohack.org/static/challenges/aes_decrypt_f491744105801ec03d6a6f7a0e7f8101.py",
+          "download": true,
+          "saved_as": "files/aes_decrypt_f491744105801ec03d6a6f7a0e7f8101.py",
+          "status": 200,
+          "size": 2273
+        },
+        {
+          "text": "LICENSE",
+          "href": "/static/challenges/LICENSE_651b0602addd2b4bfa5d69ad7fca2dd5",
+          "url": "https://cryptohack.org/static/challenges/LICENSE_651b0602addd2b4bfa5d69ad7fca2dd5",
+          "download": true,
+          "saved_as": "files/license_651b0602addd2b4bfa5d69ad7fca2dd5",
+          "status": 200,
+          "size": 1072
+        }
+      ]
+    },
+    {
+      "title": "Modes of Operation Starter",
+      "stage": "Symmetric Starter",
+      "path": "aes/block-starter/modes-of-operation-starter",
+      "attachments": []
+    },
+    {
+      "title": "Passwords as Keys",
+      "stage": "Symmetric Starter",
+      "path": "aes/block-starter/passwords-as-keys",
+      "attachments": []
+    },
+    {
+      "title": "ECB CBC WTF",
+      "stage": "Block Ciphers 1",
+      "path": "aes/block/ecb-cbc-wtf",
+      "attachments": []
+    },
+    {
+      "title": "ECB Oracle",
+      "stage": "Block Ciphers 1",
+      "path": "aes/block/ecb-oracle",
+      "attachments": []
+    },
+    {
+      "title": "Flipping Cookie",
+      "stage": "Block Ciphers 1",
+      "path": "aes/block/flipping-cookie",
+      "attachments": []
+    },
+    {
+      "title": "Lazy CBC",
+      "stage": "Block Ciphers 1",
+      "path": "aes/block/lazy-cbc",
+      "attachments": []
+    },
+    {
+      "title": "Triple DES",
+      "stage": "Block Ciphers 1",
+      "path": "aes/block/triple-des",
+      "attachments": []
+    },
+    {
+      "title": "Symmetry",
+      "stage": "Stream Ciphers",
+      "path": "aes/stream/symmetry",
+      "attachments": []
+    },
+    {
+      "title": "Bean Counter",
+      "stage": "Stream Ciphers",
+      "path": "aes/stream/bean-counter",
+      "attachments": []
+    },
+    {
+      "title": "CTRIME",
+      "stage": "Stream Ciphers",
+      "path": "aes/stream/ctrime",
+      "attachments": []
+    },
+    {
+      "title": "Logon Zero",
+      "stage": "Stream Ciphers",
+      "path": "aes/stream/logon-zero",
+      "attachments": [
+        {
+          "text": "13399.py",
+          "href": "/static/challenges/13399_2c5dba2a8180a137c65b9dff313d88b5.py",
+          "url": "https://cryptohack.org/static/challenges/13399_2c5dba2a8180a137c65b9dff313d88b5.py",
+          "download": true,
+          "saved_as": "files/13399_2c5dba2a8180a137c65b9dff313d88b5.py",
+          "status": 200,
+          "size": 2647
+        }
+      ]
+    },
+    {
+      "title": "Stream of Consciousness",
+      "stage": "Stream Ciphers",
+      "path": "aes/stream/stream-of-consciousness",
+      "attachments": []
+    },
+    {
+      "title": "Dancing Queen",
+      "stage": "Stream Ciphers",
+      "path": "aes/stream/dancing-queen",
+      "attachments": [
+        {
+          "text": "chacha20.py",
+          "href": "/static/challenges/chacha20_c76e2a43164af8b6ecb0e145415ab931.py",
+          "url": "https://cryptohack.org/static/challenges/chacha20_c76e2a43164af8b6ecb0e145415ab931.py",
+          "download": true,
+          "saved_as": "files/chacha20_c76e2a43164af8b6ecb0e145415ab931.py",
+          "status": 200,
+          "size": 2435
+        },
+        {
+          "text": "output.txt",
+          "href": "/static/challenges/output_108f5c189506fcb4309410776af3117d.txt",
+          "url": "https://cryptohack.org/static/challenges/output_108f5c189506fcb4309410776af3117d.txt",
+          "download": true,
+          "saved_as": "files/output_108f5c189506fcb4309410776af3117d.txt",
+          "status": 200,
+          "size": 327
+        }
+      ]
+    },
+    {
+      "title": "Oh SNAP",
+      "stage": "Stream Ciphers",
+      "path": "aes/stream/oh-snap",
+      "attachments": []
+    },
+    {
+      "title": "Pad Thai",
+      "stage": "Padding Attacks",
+      "path": "aes/padding/pad-thai",
+      "attachments": [
+        {
+          "text": "13421.py",
+          "href": "/static/challenges/13421_2801f3744d21e8fbd0e7bfbef59f1fe2.py",
+          "url": "https://cryptohack.org/static/challenges/13421_2801f3744d21e8fbd0e7bfbef59f1fe2.py",
+          "download": true,
+          "saved_as": "files/13421_2801f3744d21e8fbd0e7bfbef59f1fe2.py",
+          "status": 200,
+          "size": 1885
+        }
+      ]
+    },
+    {
+      "title": "The Good, The Pad, The Ugly",
+      "stage": "Padding Attacks",
+      "path": "aes/padding/the-good-the-pad-the-ugly",
+      "attachments": [
+        {
+          "text": "13422.py",
+          "href": "/static/challenges/13422_63dfe7365556f791c71b63a1c88d980c.py",
+          "url": "https://cryptohack.org/static/challenges/13422_63dfe7365556f791c71b63a1c88d980c.py",
+          "download": true,
+          "saved_as": "files/13422_63dfe7365556f791c71b63a1c88d980c.py",
+          "status": 200,
+          "size": 2192
+        }
+      ]
+    },
+    {
+      "title": "Oracular Spectacular",
+      "stage": "Padding Attacks",
+      "path": "aes/padding/oracular-spectacular",
+      "attachments": [
+        {
+          "text": "13423.py",
+          "href": "/static/challenges/13423_53c42344144deb9cbc08a8264e916cba.py",
+          "url": "https://cryptohack.org/static/challenges/13423_53c42344144deb9cbc08a8264e916cba.py",
+          "download": true,
+          "saved_as": "files/13423_53c42344144deb9cbc08a8264e916cba.py",
+          "status": 200,
+          "size": 2202
+        }
+      ]
+    },
+    {
+      "title": "Paper Plane",
+      "stage": "Authenticated Encryption",
+      "path": "aes/auth-enc/paper-plane",
+      "attachments": []
+    },
+    {
+      "title": "Forbidden Fruit",
+      "stage": "Authenticated Encryption",
+      "path": "aes/auth-enc/forbidden-fruit",
+      "attachments": []
+    },
+    {
+      "title": "Beatboxer",
+      "stage": "Linear Cryptanalysis",
+      "path": "aes/linear-cryptanalysis/beatboxer",
+      "attachments": [
+        {
+          "text": "13406.py",
+          "href": "/static/challenges/13406_d7fa07291de630ace1055895f9ae208b.py",
+          "url": "https://cryptohack.org/static/challenges/13406_d7fa07291de630ace1055895f9ae208b.py",
+          "download": true,
+          "saved_as": "files/13406_d7fa07291de630ace1055895f9ae208b.py",
+          "status": 200,
+          "size": 9514
+        }
+      ]
+    }
+  ]
+}

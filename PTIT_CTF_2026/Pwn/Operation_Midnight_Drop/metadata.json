@@ -1,0 +1,42 @@
+{
+  "id": 14,
+  "name": "Operation Midnight Drop",
+  "category": "Pwn",
+  "points": 102,
+  "author": null,
+  "tags": [
+    "DynamicContainer"
+  ],
+  "hints": [],
+  "connection_info": null,
+  "solved_by_me": false,
+  "solves_count": 27,
+  "downloaded_files": [
+    {
+      "url": "https://jeo.infosecptit.org/assets/4bf857937f4af5854a218b683e0fb20ae00ba3b5f9b443a0ae95d4b1f49d9bff/operation.zip",
+      "name": "operation.zip",
+      "saved_path": "/home/light/Workspace/CTF/PTIT_CTF_2026/Pwn/Operation_Midnight_Drop/operation.zip",
+      "success": true,
+      "source": "platform_attachment",
+      "message": "Direct download successful"
+    }
+  ],
+  "raw": {
+    "id": 14,
+    "title": "Operation Midnight Drop",
+    "content": "Một lỗ hổng zero-day đang được các hacker khai thác ngoài thực tế một cách tích cực để tấn công hệ thống log. Nhiệm vụ của bạn là: dịch ngược, tìm bug và viết mã khai thác chứng minh để báo cáo cho nhà phát triển trước khi quá muộn.",
+    "category": "Pwn",
+    "hints": null,
+    "score": 102,
+    "type": "DynamicContainer",
+    "context": {
+      "closeTime": null,
+      "instanceEntry": null,
+      "url": "/assets/4bf857937f4af5854a218b683e0fb20ae00ba3b5f9b443a0ae95d4b1f49d9bff/operation.zip",
+      "fileSize": 5691
+    },
+    "limit": 0,
+    "attempts": 0,
+    "deadline": null
+  }
+}

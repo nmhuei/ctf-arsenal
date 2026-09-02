@@ -1,0 +1,32 @@
+Jan 15 00:00:01 pg400 syslogd: started: BusyBox v1.36.1
+Jan 15 00:00:01 pg400 klogd: started
+Jan 15 00:00:02 pg400 kernel: Linux version 5.15.148 (buildroot@phantom) (arm-linux-gnueabihf-gcc 12.3.0) #1 SMP Mon Jan 15 00:00:00 UTC 2024
+Jan 15 00:00:02 pg400 kernel: CPU: ARMv7 Processor [410fc075] revision 5 (ARMv7), cr=10c5387d
+Jan 15 00:00:02 pg400 kernel: Machine model: PhantomGate PG-400 Security Gateway
+Jan 15 00:00:02 pg400 kernel: Memory: 128MB = 128MB total
+Jan 15 00:00:02 pg400 kernel: Calibrating delay loop... 1196.85 BogoMIPS
+Jan 15 00:00:03 pg400 kernel: NET: Registered protocol family 2
+Jan 15 00:00:03 pg400 kernel: eth0: Cadence GEM rev 0x00020118 at 0xe000b000 irq 54 (02:pg:40:0a:b3:91)
+Jan 15 00:00:03 pg400 kernel: eth1: Cadence GEM rev 0x00020118 at 0xe000c000 irq 55 (02:pg:40:0a:b3:92)
+Jan 15 00:00:04 pg400 S10system: Mounting virtual filesystems...
+Jan 15 00:00:04 pg400 S10system: Setting hostname...
+Jan 15 00:00:04 pg400 S10system: Applying sysctl parameters...
+Jan 15 00:00:04 pg400 S10system: System initialization complete
+Jan 15 00:00:05 pg400 S20network: Configuring network interfaces...
+Jan 15 00:00:05 pg400 netd: Initializing network subsystem
+Jan 15 00:00:05 pg400 netd: Configuring eth0 static: 192.168.1.1/255.255.255.0 gw 192.168.1.254
+Jan 15 00:00:06 pg400 S20network: Network ready
+Jan 15 00:00:06 pg400 S30pgated: Starting pgated...
+Jan 15 00:00:06 pg400 pgated[142]: loading config from /etc/pgated.conf
+Jan 15 00:00:06 pg400 pgated[142]: listening on 0.0.0.0:8080
+Jan 15 00:00:07 pg400 S40firewall: Loading firewall rules...
+Jan 15 00:00:07 pg400 firewall: Loaded 12 firewall rules
+Jan 15 00:00:07 pg400 S40firewall: Firewall active
+Jan 15 00:00:07 pg400 S50services: Starting auxiliary services...
+Jan 15 00:00:08 pg400 watchdog: Watchdog daemon started (interval=10s)
+Jan 15 00:00:08 pg400 updater: Starting firmware update agent (server=https://update.phantomgate-systems.com channel=stable)
+Jan 15 00:00:08 pg400 updater: Checking for update (current=4.2.1)...
+Jan 15 00:00:09 pg400 updater: No update available
+Jan 15 00:00:12 pg400 ntpd: synchronized to pool.ntp.org, offset -0.023s
+Jan 15 00:01:02 pg400 pgated[142]: accepted connection from 192.168.1.105:49832
+Jan 15 00:05:18 pg400 watchdog: all systems nominal

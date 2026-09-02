@@ -1,0 +1,38 @@
+{
+  "id": "0313e6ce1a3a557a",
+  "name": "Payphone",
+  "category": "pwn",
+  "points": 656,
+  "author": "flame",
+  "tags": [],
+  "hints": [],
+  "connection_info": null,
+  "solved_by_me": false,
+  "solves_count": 9,
+  "downloaded_files": [
+    {
+      "url": "https://2026.haruulzangi.mn/uploads/e46ba0370dcc28c8ac4d669936d866e83bd86e423d3eb98a4fe98338c4b2924f/pwn_payphone.tar.gz",
+      "name": "pwn_payphone.tar.gz",
+      "saved_path": "/home/light/Workspace/CTF/2026_haruulzangi_CTF/pwn/Payphone/pwn_payphone.tar.gz",
+      "success": true,
+      "source": "platform_attachment",
+      "message": "Direct download successful"
+    }
+  ],
+  "raw": {
+    "id": "0313e6ce1a3a557a",
+    "name": "Payphone",
+    "description": "Make a call and listen closely.\n\nRun `/flag` to get the flag.\n\nPayphone places the call, so you need somewhere for it to call: a\npublicly reachable TCP listener of your own.\n\nPayphone holds the key to the real challenge, use it to decrypt the transmission:\n\n```sh\nPAYPHONE_BUNDLE_KEY='<key>' openssl enc -d -aes-256-cbc -pbkdf2 -iter 200000 -md sha256 -pass env:PAYPHONE_BUNDLE_KEY -in payphone-binaries.tar.zst.enc -out payphone-binaries.tar.zst\ntar --use-compress-program=unzstd -xf payphone-binaries.tar.zst\n```\n\n> [!CONNECTION]\n> https://payphone-gige4buw.challenge.2026.haruulzangi.mn",
+    "category": "pwn",
+    "author": "flame",
+    "files": [
+      {
+        "name": "pwn_payphone.tar.gz",
+        "url": "/uploads/e46ba0370dcc28c8ac4d669936d866e83bd86e423d3eb98a4fe98338c4b2924f/pwn_payphone.tar.gz"
+      }
+    ],
+    "points": 656,
+    "solves": 9,
+    "sortWeight": 0
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "id": "6c999c688c63208b",
+  "name": "Cabinet",
+  "category": "pwn",
+  "points": 254,
+  "author": "bekkaze",
+  "tags": [],
+  "hints": [],
+  "connection_info": null,
+  "solved_by_me": false,
+  "solves_count": 45,
+  "downloaded_files": [
+    {
+      "url": "https://2026.haruulzangi.mn/uploads/5305766cfbde751fe332961e954204132a3d4162da84c49cfbdf33979452e160/pwn_cabinet.tar.gz",
+      "name": "pwn_cabinet.tar.gz",
+      "saved_path": "/home/light/Workspace/CTF/CTF_Competition/pwn/Cabinet/pwn_cabinet.tar.gz",
+      "success": true,
+      "source": "platform_attachment",
+      "message": "Direct download successful"
+    }
+  ],
+  "raw": {
+    "id": "6c999c688c63208b",
+    "name": "Cabinet",
+    "description": "The Commons makes your human half prove it at a public kiosk: play the\nterminal's little platformer, and it signs off that a person was here. The\ngame is the whole authentication. Teach the cabinet to sign for a session\nthat never happened.\n\nThe service is headless: it replays a recorded input stream, so play and\nrecord locally first, then submit the recording here. Run the handout as\n`cabinet play` to play (a/d move, w jump, j stomp, hold l for fine\nmovement, q to quit and save) -- it writes an input recording. Feed that\nfile to this endpoint in the `cabinet replay` format: a u32 big-endian\nframe count, then that many per-frame input bytes.\n\n> [!CONNECTION]\n> https://cabinet-bbe3ecg3.challenge.2026.haruulzangi.mn",
+    "category": "pwn",
+    "author": "bekkaze",
+    "files": [
+      {
+        "name": "pwn_cabinet.tar.gz",
+        "url": "/uploads/5305766cfbde751fe332961e954204132a3d4162da84c49cfbdf33979452e160/pwn_cabinet.tar.gz"
+      }
+    ],
+    "points": 254,
+    "solves": 45,
+    "sortWeight": 0
+  }
+}

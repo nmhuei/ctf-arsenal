@@ -1,0 +1,420 @@
+{
+  "title": "Elliptic Curves",
+  "slug": "ecc",
+  "url": "https://cryptohack.org/challenges/ecc/",
+  "completed": "0",
+  "total": "23",
+  "description_text": "Elliptic Curves The use of elliptic curves for public-key cryptography was first suggested in 1985. After resisting decades of attacks, they started to see widespread use from around 2005, providing several benefits over previous public-key cryptosystems such as RSA. Smaller EC keys offer greater strength, with a 256-bit EC key having the same security level as a 3072-bit RSA key. Furthermore, several operations using those keys (including signing) can be more efficient both time- and memory-wise. Finally, since ECC is more complex than RSA, it has the welcome effect of encouraging developers to make use of trusted libraries rather than rolling their own. These challenges aim to give you an intuition for the trapdoor function behind ECC; dip your toes into the mathematical structure underlying it; and have you breaking popular schemes like ECDSA.",
+  "stages": [
+    {
+      "title": "Background",
+      "slug": "ecc-background"
+    },
+    {
+      "title": "Starter",
+      "slug": "ecc-starter"
+    },
+    {
+      "title": "Parameter Choice",
+      "slug": "ecc-parameters"
+    },
+    {
+      "title": "Parameter Choice 2",
+      "slug": "ecc-parameters-2"
+    },
+    {
+      "title": "Signatures",
+      "slug": "ecc-signatures"
+    },
+    {
+      "title": "Edwards Curves",
+      "slug": "ecc-edwards"
+    },
+    {
+      "title": "Side Channels",
+      "slug": "ecc-side-channels"
+    }
+  ],
+  "challenge_count": 23,
+  "challenges": [
+    {
+      "title": "Background Reading",
+      "stage": "Background",
+      "path": "ecc/ecc-background/background-reading",
+      "attachments": []
+    },
+    {
+      "title": "Point Negation",
+      "stage": "Starter",
+      "path": "ecc/ecc-starter/point-negation",
+      "attachments": []
+    },
+    {
+      "title": "Point Addition",
+      "stage": "Starter",
+      "path": "ecc/ecc-starter/point-addition",
+      "attachments": []
+    },
+    {
+      "title": "Scalar Multiplication",
+      "stage": "Starter",
+      "path": "ecc/ecc-starter/scalar-multiplication",
+      "attachments": []
+    },
+    {
+      "title": "Curves and Logs",
+      "stage": "Starter",
+      "path": "ecc/ecc-starter/curves-and-logs",
+      "attachments": []
+    },
+    {
+      "title": "Efficient Exchange",
+      "stage": "Starter",
+      "path": "ecc/ecc-starter/efficient-exchange",
+      "attachments": [
+        {
+          "text": "decrypt.py",
+          "href": "/static/challenges/decrypt_08c0fede9185868aba4a6ae21aca0148.py",
+          "url": "https://cryptohack.org/static/challenges/decrypt_08c0fede9185868aba4a6ae21aca0148.py",
+          "download": true,
+          "saved_as": "files/decrypt_08c0fede9185868aba4a6ae21aca0148.py",
+          "status": 200,
+          "size": 854
+        }
+      ]
+    },
+    {
+      "title": "Smooth Criminal",
+      "stage": "Parameter Choice",
+      "path": "ecc/ecc-parameters/smooth-criminal",
+      "attachments": [
+        {
+          "text": "source.py",
+          "href": "/static/challenges/source_ba064d03b53a5fd7321dd0007b72906b.py",
+          "url": "https://cryptohack.org/static/challenges/source_ba064d03b53a5fd7321dd0007b72906b.py",
+          "download": true,
+          "saved_as": "files/source_ba064d03b53a5fd7321dd0007b72906b.py",
+          "status": 200,
+          "size": 2615
+        },
+        {
+          "text": "output.txt",
+          "href": "/static/challenges/output_6cf0cf5ca7ab93bb829e557dd77e08ff.txt",
+          "url": "https://cryptohack.org/static/challenges/output_6cf0cf5ca7ab93bb829e557dd77e08ff.txt",
+          "download": true,
+          "saved_as": "files/output_6cf0cf5ca7ab93bb829e557dd77e08ff.txt",
+          "status": 200,
+          "size": 254
+        }
+      ]
+    },
+    {
+      "title": "Exceptional Curves",
+      "stage": "Parameter Choice",
+      "path": "ecc/ecc-parameters/exceptional-curves",
+      "attachments": [
+        {
+          "text": "source.sage",
+          "href": "/static/challenges/source_51cefb9344efd163a8f0c62470aac279.sage",
+          "url": "https://cryptohack.org/static/challenges/source_51cefb9344efd163a8f0c62470aac279.sage",
+          "download": true,
+          "saved_as": "files/source_51cefb9344efd163a8f0c62470aac279.sage",
+          "status": 200,
+          "size": 1918
+        },
+        {
+          "text": "output.txt",
+          "href": "/static/challenges/output_db96ba0b779440f32de9b556d0514b35.txt",
+          "url": "https://cryptohack.org/static/challenges/output_db96ba0b779440f32de9b556d0514b35.txt",
+          "download": true,
+          "saved_as": "files/output_db96ba0b779440f32de9b556d0514b35.txt",
+          "status": 200,
+          "size": 788
+        }
+      ]
+    },
+    {
+      "title": "Micro Transmissions",
+      "stage": "Parameter Choice",
+      "path": "ecc/ecc-parameters/micro-transmissions",
+      "attachments": [
+        {
+          "text": "source.sage",
+          "href": "/static/challenges/source_78fc27e69b84e3cf75538d4bff66c4a8.sage",
+          "url": "https://cryptohack.org/static/challenges/source_78fc27e69b84e3cf75538d4bff66c4a8.sage",
+          "download": true,
+          "saved_as": "files/source_78fc27e69b84e3cf75538d4bff66c4a8.sage",
+          "status": 200,
+          "size": 1472
+        },
+        {
+          "text": "output.txt",
+          "href": "/static/challenges/output_aabbd844dd2b52cbab4978e8f0b3b95c.txt",
+          "url": "https://cryptohack.org/static/challenges/output_aabbd844dd2b52cbab4978e8f0b3b95c.txt",
+          "download": true,
+          "saved_as": "files/output_aabbd844dd2b52cbab4978e8f0b3b95c.txt",
+          "status": 200,
+          "size": 715
+        }
+      ]
+    },
+    {
+      "title": "Elliptic Nodes",
+      "stage": "Parameter Choice",
+      "path": "ecc/ecc-parameters/elliptic-nodes",
+      "attachments": [
+        {
+          "text": "output.txt",
+          "href": "/static/challenges/output_470597e226bbe018d357db4af841ef48.txt",
+          "url": "https://cryptohack.org/static/challenges/output_470597e226bbe018d357db4af841ef48.txt",
+          "download": true,
+          "saved_as": "files/output_470597e226bbe018d357db4af841ef48.txt",
+          "status": 200,
+          "size": 166
+        },
+        {
+          "text": "source.py",
+          "href": "/static/challenges/source_4755240157baa8a69793602383932b17.py",
+          "url": "https://cryptohack.org/static/challenges/source_4755240157baa8a69793602383932b17.py",
+          "download": true,
+          "saved_as": "files/source_4755240157baa8a69793602383932b17.py",
+          "status": 200,
+          "size": 1637
+        }
+      ]
+    },
+    {
+      "title": "Moving Problems",
+      "stage": "Parameter Choice",
+      "path": "ecc/ecc-parameters/moving-problems",
+      "attachments": [
+        {
+          "text": "source.sage",
+          "href": "/static/challenges/source_d3b18de2c91f41f6e7431fb9854cf74f.sage",
+          "url": "https://cryptohack.org/static/challenges/source_d3b18de2c91f41f6e7431fb9854cf74f.sage",
+          "download": true,
+          "saved_as": "files/source_d3b18de2c91f41f6e7431fb9854cf74f.sage",
+          "status": 200,
+          "size": 1234
+        },
+        {
+          "text": "output.txt",
+          "href": "/static/challenges/output_6dc28a4d1223789dc760b8ce9235a667.txt",
+          "url": "https://cryptohack.org/static/challenges/output_6dc28a4d1223789dc760b8ce9235a667.txt",
+          "download": true,
+          "saved_as": "files/output_6dc28a4d1223789dc760b8ce9235a667.txt",
+          "status": 200,
+          "size": 434
+        }
+      ]
+    },
+    {
+      "title": "A Twisted Mind",
+      "stage": "Parameter Choice 2",
+      "path": "ecc/ecc-parameters-2/a-twisted-mind",
+      "attachments": [
+        {
+          "text": "13416.py",
+          "href": "/static/challenges/13416_dd153eac2721ba79d1fb34d574791d15.py",
+          "url": "https://cryptohack.org/static/challenges/13416_dd153eac2721ba79d1fb34d574791d15.py",
+          "download": true,
+          "saved_as": "files/13416_dd153eac2721ba79d1fb34d574791d15.py",
+          "status": 200,
+          "size": 3009
+        }
+      ]
+    },
+    {
+      "title": "An Exceptional Twisted Mind",
+      "stage": "Parameter Choice 2",
+      "path": "ecc/ecc-parameters-2/an-exceptional-twisted-mind",
+      "attachments": [
+        {
+          "text": "13417.py",
+          "href": "/static/challenges/13417_ad4ad7eaab29474bcba890bad92ce145.py",
+          "url": "https://cryptohack.org/static/challenges/13417_ad4ad7eaab29474bcba890bad92ce145.py",
+          "download": true,
+          "saved_as": "files/13417_ad4ad7eaab29474bcba890bad92ce145.py",
+          "status": 200,
+          "size": 3224
+        }
+      ]
+    },
+    {
+      "title": "Checkpoint",
+      "stage": "Parameter Choice 2",
+      "path": "ecc/ecc-parameters-2/checkpoint",
+      "attachments": [
+        {
+          "text": "13419.py",
+          "href": "/static/challenges/13419_b1d972f9f40f4d7140def981e7cf5d2e.py",
+          "url": "https://cryptohack.org/static/challenges/13419_b1d972f9f40f4d7140def981e7cf5d2e.py",
+          "download": true,
+          "saved_as": "files/13419_b1d972f9f40f4d7140def981e7cf5d2e.py",
+          "status": 200,
+          "size": 3829
+        }
+      ]
+    },
+    {
+      "title": "An Evil Twisted Mind",
+      "stage": "Parameter Choice 2",
+      "path": "ecc/ecc-parameters-2/an-evil-twisted-mind",
+      "attachments": [
+        {
+          "text": "13418.py",
+          "href": "/static/challenges/13418_695b1481532c74b80c84a5e5f6956bb3.py",
+          "url": "https://cryptohack.org/static/challenges/13418_695b1481532c74b80c84a5e5f6956bb3.py",
+          "download": true,
+          "saved_as": "files/13418_695b1481532c74b80c84a5e5f6956bb3.py",
+          "status": 200,
+          "size": 3151
+        }
+      ]
+    },
+    {
+      "title": "Real Curve Crypto",
+      "stage": "Parameter Choice 2",
+      "path": "ecc/ecc-parameters-2/real-curve-crypto",
+      "attachments": [
+        {
+          "text": "output.txt",
+          "href": "/static/challenges/output_8d82e413d29d7810ee8eff5d1226453d.txt",
+          "url": "https://cryptohack.org/static/challenges/output_8d82e413d29d7810ee8eff5d1226453d.txt",
+          "download": true,
+          "saved_as": "files/output_8d82e413d29d7810ee8eff5d1226453d.txt",
+          "status": 200,
+          "size": 852
+        },
+        {
+          "text": "source.py",
+          "href": "/static/challenges/source_cee18f5928ec01cfbfffe8faf981f63e.py",
+          "url": "https://cryptohack.org/static/challenges/source_cee18f5928ec01cfbfffe8faf981f63e.py",
+          "download": true,
+          "saved_as": "files/source_cee18f5928ec01cfbfffe8faf981f63e.py",
+          "status": 200,
+          "size": 1199
+        }
+      ]
+    },
+    {
+      "title": "Digestive",
+      "stage": "Signatures",
+      "path": "ecc/ecc-signatures/digestive",
+      "attachments": []
+    },
+    {
+      "title": "Curveball",
+      "stage": "Signatures",
+      "path": "ecc/ecc-signatures/curveball",
+      "attachments": [
+        {
+          "text": "13382.py",
+          "href": "/static/challenges/13382_edfe1f04767ab6d72d689fc13a002dcc.py",
+          "url": "https://cryptohack.org/static/challenges/13382_edfe1f04767ab6d72d689fc13a002dcc.py",
+          "download": true,
+          "saved_as": "files/13382_edfe1f04767ab6d72d689fc13a002dcc.py",
+          "status": 200,
+          "size": 2962
+        }
+      ]
+    },
+    {
+      "title": "ProSign 3",
+      "stage": "Signatures",
+      "path": "ecc/ecc-signatures/prosign-3",
+      "attachments": [
+        {
+          "text": "13381.py",
+          "href": "/static/challenges/13381_7fd5a5da326879dc4a3995cad969a165.py",
+          "url": "https://cryptohack.org/static/challenges/13381_7fd5a5da326879dc4a3995cad969a165.py",
+          "download": true,
+          "saved_as": "files/13381_7fd5a5da326879dc4a3995cad969a165.py",
+          "status": 200,
+          "size": 2447
+        }
+      ]
+    },
+    {
+      "title": "No Random, No Bias",
+      "stage": "Signatures",
+      "path": "ecc/ecc-signatures/no-random-no-bias",
+      "attachments": [
+        {
+          "text": "source.py",
+          "href": "/static/challenges/source_a911b46ac71942190489524c4456a1be.py",
+          "url": "https://cryptohack.org/static/challenges/source_a911b46ac71942190489524c4456a1be.py",
+          "download": true,
+          "saved_as": "files/source_a911b46ac71942190489524c4456a1be.py",
+          "status": 200,
+          "size": 1465
+        },
+        {
+          "text": "output.txt",
+          "href": "/static/challenges/output_b141b43860f2ca53f0e36df40f42f2db.txt",
+          "url": "https://cryptohack.org/static/challenges/output_b141b43860f2ca53f0e36df40f42f2db.txt",
+          "download": true,
+          "saved_as": "files/output_b141b43860f2ca53f0e36df40f42f2db.txt",
+          "status": 200,
+          "size": 1013
+        }
+      ]
+    },
+    {
+      "title": "Edwards Goes Degenerate",
+      "stage": "Edwards Curves",
+      "path": "ecc/ecc-edwards/edwards-goes-degenerate",
+      "attachments": [
+        {
+          "text": "source.py",
+          "href": "/static/challenges/source_4dbd62b026616ba5f1c257632d4972c4.py",
+          "url": "https://cryptohack.org/static/challenges/source_4dbd62b026616ba5f1c257632d4972c4.py",
+          "download": true,
+          "saved_as": "files/source_4dbd62b026616ba5f1c257632d4972c4.py",
+          "status": 200,
+          "size": 3247
+        },
+        {
+          "text": "output.txt",
+          "href": "/static/challenges/output_09a749469d6013824d26be039494ae00.txt",
+          "url": "https://cryptohack.org/static/challenges/output_09a749469d6013824d26be039494ae00.txt",
+          "download": true,
+          "saved_as": "files/output_09a749469d6013824d26be039494ae00.txt",
+          "status": 200,
+          "size": 402
+        }
+      ]
+    },
+    {
+      "title": "Montgomery's Ladder",
+      "stage": "Side Channels",
+      "path": "ecc/ecc-side-channels/montgomery-s-ladder",
+      "attachments": []
+    },
+    {
+      "title": "Double and Broken",
+      "stage": "Side Channels",
+      "path": "ecc/ecc-side-channels/double-and-broken",
+      "attachments": [
+        {
+          "text": "source_snippet.py",
+          "href": "/static/challenges/source_snippet_0b89127bb905d47db49281e0449d6bd6.py",
+          "url": "https://cryptohack.org/static/challenges/source_snippet_0b89127bb905d47db49281e0449d6bd6.py",
+          "download": true,
+          "saved_as": "files/source_snippet_0b89127bb905d47db49281e0449d6bd6.py",
+          "status": 200,
+          "size": 674
+        },
+        {
+          "text": "collected_data.txt",
+          "href": "/static/challenges/collected_data_3b1eecad8d7b9a4e92b93efcdbf8113b.txt",
+          "url": "https://cryptohack.org/static/challenges/collected_data_3b1eecad8d7b9a4e92b93efcdbf8113b.txt",
+          "download": true,
+          "saved_as": "files/collected_data_3b1eecad8d7b9a4e92b93efcdbf8113b.txt",
+          "status": 200,
+          "size": 85525
+        }
+      ]
+    }
+  ]
+}

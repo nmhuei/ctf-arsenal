@@ -1,0 +1,112 @@
+services:
+  genesis:
+    build:
+      context: .
+      dockerfile: docker/mylocalton-genesis.Dockerfile
+      args:
+        MLT_IMAGE: ${MLT_IMAGE:-ghcr.io/neodix42/mylocalton-docker}
+        TON_BRANCH: ${TON_BRANCH:-latest}
+    image: ${LOCAL_MLT_IMAGE:-open-world-localton}:${TON_BRANCH:-latest}
+    entrypoint: /scripts/update-wallet.sh
+    restart: unless-stopped
+    environment:
+      - GENESIS=true
+      - NAME=genesis
+      - HIDE_PRIVATE_KEYS=true
+      - REGENERATE_WALLETS=true
+      - SIMPLE_FAUCET_INITIAL_BALANCE=0
+      - HIGHLOAD_FAUCET_INITIAL_BALANCE=0
+      - DATA_FAUCET_INITIAL_BALANCE=0
+      - VALIDATOR_0_INITIAL_BALANCE=0
+      - VALIDATOR_1_INITIAL_BALANCE=0
+      - VALIDATOR_2_INITIAL_BALANCE=0
+      - VALIDATOR_3_INITIAL_BALANCE=0
+      - VALIDATOR_4_INITIAL_BALANCE=0
+      - VALIDATOR_5_INITIAL_BALANCE=0
+      - VERSION_CAPABILITIES=14
+    volumes:
+      - ton-shared:/usr/share/data
+      - ton-db:/var/ton-work/db
+    networks:
+      - ton-internal
+    healthcheck:
+      test: /usr/local/bin/lite-client -a 127.0.0.1:40004 -p /var/ton-work/db/liteserver.pub -t 3 -c last
+      interval: ${HEALTHCHECK_INTERVAL:-15s}
+      timeout: 5s
+      retries: 20
+
+  tonhttpapi:
+    image: ${TONHTTPAPI_IMAGE:-toncenter/ton-http-api-cpp:v2.1.13}
+    restart: unless-stopped
+    depends_on:
+      genesis:
+        condition: service_healthy
+    environment:
+      - THACPP_TONLIB_CONFIG_PATH=/usr/share/data/global.config.json
+      - THACPP_TONLIB_KEYSTORE_PATH=/tmp/keystore/
+      - THACPP_TONLIB_BOC_ENDPOINTS=[]
+      - THACPP_FS_WORKER_THREADS=1
+      - THACPP_HTTP_WORKER_THREADS=2
+      - THACPP_LOG_LEVEL=warning
+      - THACPP_LOG_PATH=@stdout
+      - THACPP_SYSTEM_LOG_LEVEL=error
+      - THACPP_SYSTEM_LOG_PATH=/logs/userver-logs.txt
+      - THACPP_JSONRPC_LOG_LEVEL=error
+      - THACPP_JSONRPC_LOG_PATH=/logs/jsonrpc-logs.txt
+      - THACPP_HTTP_WORKER_USER_AGENT=empty
+      - THACPP_STATIC_CONTENT_DIR=/static
+      - THACPP_MAX_STACK_ENTRY_DEPTH=256
+    volumes:
+      - ton-shared:/usr/share/data:ro
+    networks:
+      - ton-internal
+
+  file-server:
+    image: ${FILE_SERVER_IMAGE:-python:bullseye}
+    restart: unless-stopped
+    depends_on:
+      - genesis
+    command: python3 -m http.server 8000 -d /usr/share/data
+    volumes:
+      - ton-shared:/usr/share/data:ro
+    networks:
+      - ton-internal
+
+  ton-challenge:
+    build: .
+    restart: unless-stopped
+    depends_on:
+      - genesis
+      - tonhttpapi
+      - file-server
+    ports:
+      - "1337:1337"
+      - "3000:3000"
+    volumes:
+      - ton-shared:/ton-shared:ro
+    environment:
+      - FLAG=${FLAG:-SEKAI{flag}}
+      - PUBLIC_BASE_URL=${PUBLIC_BASE_URL:-http://127.0.0.1:3000}
+      - SHARED_DATA_DIR=/ton-shared
+      - MAIN_WALLET_PK_PATH=/ton-shared/main-wallet.pk
+      - INTERNAL_TON_API_V2_BASE_URL=http://tonhttpapi:8081/api/v2
+      - INTERNAL_CONFIG_BASE_URL=http://file-server:8000
+      - MAIN_WALLET_WORKCHAIN=-1
+      - MAIN_WALLET_WALLET_ID=42
+      - CHALLENGE_DEPLOY_VALUE=${CHALLENGE_DEPLOY_VALUE:-202}
+      - PLAYER_INITIAL_BALANCE=${PLAYER_INITIAL_BALANCE:-1}
+      - CHAIN_WAIT_TIMEOUT_MS=${CHAIN_WAIT_TIMEOUT_MS:-60000}
+      - CHAIN_POLL_INTERVAL_MS=${CHAIN_POLL_INTERVAL_MS:-1500}
+      - INSTANCE_TTL_MS=${INSTANCE_TTL_MS:-600000}
+      - SESSION_SWEEP_INTERVAL_MS=${SESSION_SWEEP_INTERVAL_MS:-30000}
+      - NC_PORT=${NC_PORT:-1337}
+      - POW_DIFFICULTY=${POW_DIFFICULTY:-3}
+    networks:
+      - ton-internal
+
+volumes:
+  ton-shared:
+  ton-db:
+
+networks:
+  ton-internal:

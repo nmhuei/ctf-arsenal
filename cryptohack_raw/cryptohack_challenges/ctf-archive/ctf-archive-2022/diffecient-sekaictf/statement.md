@@ -1,0 +1,21 @@
+"Welcome to the Diffecient Security Key Database API, for securely and efficiently saving tons of long security keys! Feel \*free\* to query your security keys, and pay a little to add your own to our state-of-the-art database. We trust our product so much that we even save our own keys here!"
+  
+  
+Challenge contributed by
+[deuterium](/user/deuterium)
+  
+  
+Connect at
+`archive.cryptohack.org 29201`
+  
+  
+**Challenge files:**
+  
+-
+[ctf.xinetd](/static/challenges/ctf_4fd3271f12db04f35e077cd790c61caf.xinetd)
+  
+-
+[source.py](/static/challenges/source_5e7a5a2817d4ccabe6934463ea79a302.py)
+  
+-
+[Dockerfile](/static/challenges/Dockerfile_7d59caff58579b4c42df86e13c1d5f66)

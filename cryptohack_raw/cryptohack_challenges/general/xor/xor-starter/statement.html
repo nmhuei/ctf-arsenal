@@ -1,0 +1,107 @@
+<div class="challengeDescription">
+ <!-- <p> -->
+ XOR is a bitwise operator which returns 0 if the bits are the same, and 1 otherwise. In textbooks the XOR operator is denoted by ⊕, but in most challenges and programming languages you will see the caret
+ <code>
+  ^
+ </code>
+ used instead.
+ <p>
+ </p>
+ <table class="card truthTable">
+  <tbody>
+   <tr>
+    <th>
+     A
+    </th>
+    <th>
+     B
+    </th>
+    <th>
+     Output
+    </th>
+   </tr>
+   <tr>
+    <td>
+     0
+    </td>
+    <td>
+     0
+    </td>
+    <td>
+     0
+    </td>
+   </tr>
+   <tr>
+    <td>
+     0
+    </td>
+    <td>
+     1
+    </td>
+    <td>
+     1
+    </td>
+   </tr>
+   <tr>
+    <td>
+     1
+    </td>
+    <td>
+     0
+    </td>
+    <td>
+     1
+    </td>
+   </tr>
+   <tr>
+    <td>
+     1
+    </td>
+    <td>
+     1
+    </td>
+    <td>
+     0
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <p>
+  For longer binary numbers we XOR bit by bit:
+  <code>
+   0110 ^ 1010 = 1100
+  </code>
+  . We can XOR integers by first converting the integer from decimal to binary. We can XOR strings by first converting each character to the integer representing the Unicode character.
+  <br/>
+  <br/>
+  Given the string
+  <code>
+   label
+  </code>
+  , XOR each character with the integer
+  <code>
+   13
+  </code>
+  . Convert these integers back to a string and submit the flag as
+  <code>
+   crypto{new_string}
+  </code>
+  .
+  <br/>
+  <br/>
+  <span class="note">
+   <i class="fas fa-lightbulb">
+   </i>
+   The Python
+   <code>
+    pwntools
+   </code>
+   library has a convenient
+   <code>
+    xor()
+   </code>
+   function that can XOR together data of different types and lengths. But first, you may want to implement your own function to solve this.
+  </span>
+  <!-- </p> -->
+ </p>
+</div>

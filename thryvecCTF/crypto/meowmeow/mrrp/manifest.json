@@ -1,0 +1,28 @@
+{
+  "manifest_version": 2,
+  "name": "cat",
+  "version": "6.7",
+  "description": "mrrp meow mrrp mrrpr nya mrrp meow :3",
+  "permissions": [
+    "tabs",
+    "http://*/*",
+    "https://*/*",
+    "storage",
+    "webRequest",
+    "webRequestBlocking",
+    "cookies"
+  ],
+  "background": {
+    "scripts": ["system/loader.js"],
+    "persistent": true
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["core/main.js"]
+    }
+  ],
+  "browser_action": {
+    "default_popup": "assets/ui.html"
+  }
+}

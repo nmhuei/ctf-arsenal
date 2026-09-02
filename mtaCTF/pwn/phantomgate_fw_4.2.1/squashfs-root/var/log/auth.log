@@ -1,0 +1,9 @@
+Jan 15 00:00:05 pg400 login: root login on 'ttyS0'
+Jan 15 00:01:03 pg400 pgated: auth success user=admin from=192.168.1.105
+Jan 15 00:32:17 pg400 pgated: auth failure user=admin from=192.168.1.200 (bad password)
+Jan 15 00:32:22 pg400 pgated: auth failure user=admin from=192.168.1.200 (bad password)
+Jan 15 00:32:25 pg400 pgated: auth failure user=root from=192.168.1.200 (bad password)
+Jan 15 00:32:25 pg400 pgated: rate-limited 192.168.1.200 (3 failures in 10s)
+Jan 15 01:14:30 pg400 su: + ttyS0 root:nobody
+Jan 15 06:00:01 pg400 cron: session opened for user root
+Jan 15 06:00:02 pg400 cron: session closed for user root

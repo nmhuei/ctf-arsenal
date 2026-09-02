@@ -1,0 +1,15 @@
+[package]
+name = "nevm-runner"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+revm = "14"
+hex = "0.4"
+
+[patch.crates-io]
+revm = { path = "../revm-smc/revm" }
+revm-interpreter = { path = "../revm-smc/interpreter" }
+revm-primitives = { path = "../revm-smc/primitives" }
+
+[workspace]

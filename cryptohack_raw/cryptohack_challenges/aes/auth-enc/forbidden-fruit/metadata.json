@@ -1,0 +1,35 @@
+{
+  "category": "Symmetric Ciphers",
+  "category_slug": "aes",
+  "stage": "Authenticated Encryption",
+  "stage_slug": "auth-enc",
+  "title": "Forbidden Fruit",
+  "slug": "forbidden-fruit",
+  "data_challenge": "forbidden_fruit",
+  "points": 150,
+  "solves": 812,
+  "url": "https://cryptohack.org/challenges/aes/",
+  "attachments": [],
+  "resources": [
+    {
+      "text": "AEAD",
+      "href": "https://en.wikipedia.org/wiki/Authenticated_encryption",
+      "url": "https://en.wikipedia.org/wiki/Authenticated_encryption",
+      "download": false
+    },
+    {
+      "text": "here",
+      "href": "https://toadstyle.org/cryptopals/63.txt",
+      "url": "https://toadstyle.org/cryptopals/63.txt",
+      "download": false
+    },
+    {
+      "text": "https://aes.cryptohack.org/forbidden_fruit",
+      "href": "https://aes.cryptohack.org/forbidden_fruit",
+      "url": "https://aes.cryptohack.org/forbidden_fruit",
+      "download": false
+    }
+  ],
+  "statement_html": "statement.html",
+  "statement_md": "statement.md"
+}

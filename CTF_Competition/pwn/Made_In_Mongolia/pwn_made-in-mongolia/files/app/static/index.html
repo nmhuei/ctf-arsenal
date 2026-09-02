@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A fast, focused browser playground for the SFEX language.">
+  <title>SFEX Playground</title>
+  <link rel="stylesheet" href="/assets/app.css">
+  <script src="/assets/app.js" defer></script>
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="SFEX playground home">
+      <span class="brand-mark">S<span>F</span>X</span>
+      <span class="brand-copy">SFEX <small>PLAYGROUND</small></span>
+    </a>
+    <div class="topbar-meta">
+      <span class="version"><i></i> v0.3.41</span>
+      <a class="repo-link" href="https://github.com/roriau0422/sfex-lang" target="_blank" rel="noreferrer">
+        GitHub
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">SITUATION FRAMEWORK EXCHANGE</p>
+      <h1>Code should adapt<br><em>to the moment.</em></h1>
+      <p class="lede">Explore context-oriented programming in the browser. Write a story, run it, and watch SFEX respond.</p>
+    </section>
+
+    <section class="workspace" aria-label="SFEX code playground">
+      <div class="panel editor-panel">
+        <div class="panel-header">
+          <div class="file-label"><span class="sfex-icon">S</span> main.sfex</div>
+          <div class="editor-actions">
+            <button class="quiet-button" id="reset-button" type="button">Reset</button>
+            <span class="key-hint">⌘ ↵</span>
+            <button class="run-button" id="run-button" type="button">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 7 8 5-8 5Z"/></svg>
+              <span>Run code</span>
+            </button>
+          </div>
+        </div>
+        <div class="editor-shell">
+          <pre class="line-numbers" id="line-numbers" aria-hidden="true">1</pre>
+          <textarea id="code" spellcheck="false" autocomplete="off" autocapitalize="off" aria-label="SFEX source code">Story:
+    Name is "Ulaanbaatar"
+    Temperature is -12
+
+    Print "Hello from " + Name + "!"
+
+    If Temperature < 0:
+        Print "A perfect day to write SFEX."
+    Else:
+        Print "The steppe is warming up."</textarea>
+        </div>
+      </div>
+
+      <div class="panel output-panel">
+        <div class="panel-header">
+          <div class="terminal-label">
+            <span class="terminal-dots"><i></i><i></i><i></i></span>
+            OUTPUT
+          </div>
+          <div class="run-status idle" id="run-status"><i></i><span>READY</span></div>
+        </div>
+        <div class="terminal" id="terminal" aria-live="polite">
+          <div class="terminal-empty" id="terminal-empty">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 9 3 3-3 3M13 15h4"/></svg>
+            <p>Run your story to see its output.</p>
+          </div>
+          <pre id="output"></pre>
+        </div>
+        <div class="output-footer">
+          <span>stdout + stderr</span>
+          <span id="runtime">unrestricted runtime · unrestricted output</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="language-notes" aria-label="SFEX language features">
+      <article>
+        <span>01</span>
+        <h2>Stories, not scripts</h2>
+        <p>Programs begin with a <code>Story</code> and read like intent, not ceremony.</p>
+      </article>
+      <article>
+        <span>02</span>
+        <h2>Context is native</h2>
+        <p><code>Situation</code> and <code>Switch</code> let behavior change with its surroundings.</p>
+      </article>
+      <article>
+        <span>03</span>
+        <h2>Human defaults</h2>
+        <p>Precise decimals, one-based lists, and Unicode-aware strings out of the box.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <span>Built for the curious.</span>
+    <span>SFEX v0.3.41</span>
+  </footer>
+</body>
+</html>

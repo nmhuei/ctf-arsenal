@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="result-layout">
+  <div>
+    {% include "_upload_form.html" %}
+
+    <section class="result-panel {{ status|default('') }}" aria-labelledby="result-title">
+      <div class="result-heading">
+        <div>
+          <p class="eyebrow">Kitchen Pass</p>
+          <h2 id="result-title">Order Slip</h2>
+        </div>
+        {% if filename %}
+          <span class="file-chip">{{ filename }}</span>
+        {% endif %}
+      </div>
+
+      {% if message %}
+        <p class="message">{{ message }}</p>
+      {% else %}
+        <p class="message">The scanner left the counter with ticket {{ returncode }}.</p>
+      {% endif %}
+
+      {% if output %}
+        <pre class="output">{{ output }}</pre>
+      {% else %}
+        <pre class="output muted">No menu code found.</pre>
+      {% endif %}
+
+      {% if error %}
+        <pre class="output error">{{ error }}</pre>
+      {% endif %}
+    </section>
+  </div>
+</div>
+{% endblock %}

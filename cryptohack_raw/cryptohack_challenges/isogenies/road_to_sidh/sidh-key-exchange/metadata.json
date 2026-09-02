@@ -1,0 +1,39 @@
+{
+  "category": "Isogenies",
+  "category_slug": "isogenies",
+  "stage": "Road to SIDH",
+  "stage_slug": "road_to_sidh",
+  "title": "SIDH Key Exchange",
+  "slug": "sidh-key-exchange",
+  "data_challenge": "sidh_key_exchange",
+  "points": 80,
+  "solves": 327,
+  "url": "https://cryptohack.org/challenges/isogenies/",
+  "attachments": [
+    {
+      "text": "source.sage",
+      "href": "/static/challenges/source_900b394e3f090ae9a3a0f1fb90f3c985.sage",
+      "url": "https://cryptohack.org/static/challenges/source_900b394e3f090ae9a3a0f1fb90f3c985.sage",
+      "download": true,
+      "saved_as": "files/source_900b394e3f090ae9a3a0f1fb90f3c985.sage",
+      "status": 200,
+      "size": 2078
+    }
+  ],
+  "resources": [
+    {
+      "text": "Supersingular isogeny key exchange for beginners, Craig Costello",
+      "href": "https://eprint.iacr.org/2019/1321",
+      "url": "https://eprint.iacr.org/2019/1321",
+      "download": false
+    },
+    {
+      "text": "Towards quantum-resistant cryptosystems from supersingular elliptic curve isogenies, Luca De Feo, David Jao, Jérôme Plût",
+      "href": "https://eprint.iacr.org/2011/506",
+      "url": "https://eprint.iacr.org/2011/506",
+      "download": false
+    }
+  ],
+  "statement_html": "statement.html",
+  "statement_md": "statement.md"
+}

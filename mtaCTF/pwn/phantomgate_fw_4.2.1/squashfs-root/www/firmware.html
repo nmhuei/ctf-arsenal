@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PG-400 - Firmware Update</title>
+<link rel="stylesheet" href="/www/css/style.css">
+</head>
+<body>
+<div class="app-layout">
+  <nav class="sidebar">
+    <div class="sidebar-brand">
+      <span class="brand-icon">&#9651;</span>
+      <span>PG-400</span>
+    </div>
+    <ul class="nav-list">
+      <li><a href="/www/dashboard.html">Dashboard</a></li>
+      <li><a href="/www/settings.html">Network Settings</a></li>
+      <li><a href="/www/logs.html">System Logs</a></li>
+      <li><a href="/www/firmware.html" class="active">Firmware Update</a></li>
+    </ul>
+    <div class="sidebar-footer">
+      <a href="/www/index.html" class="logout-link">Logout</a>
+    </div>
+  </nav>
+  <main class="content">
+    <header class="topbar">
+      <h2>Firmware Update</h2>
+      <span class="clock" id="clock"></span>
+    </header>
+    <section class="page-body">
+      <div class="card" style="max-width:540px">
+        <h3>Current Firmware</h3>
+        <table class="info-table">
+          <tr><td>Version</td><td>v4.2.1</td></tr>
+          <tr><td>Build Date</td><td>2024-03-15</td></tr>
+          <tr><td>Checksum (SHA-256)</td><td style="font-size:.75rem">a3f1c9...e704b2</td></tr>
+        </table>
+      </div>
+      <div class="card" style="max-width:540px">
+        <h3>Upload Firmware Image</h3>
+        <form class="settings-form" onsubmit="return false">
+          <div class="upload-area">
+            <p>Drag firmware file here or click to browse</p>
+            <input type="file" accept=".bin,.img,.fw" style="display:none">
+          </div>
+          <p class="card-note">Accepted formats: .bin, .img, .fw (max 16 MB)</p>
+          <button type="submit" class="btn btn-primary" disabled>Upload &amp; Install</button>
+        </form>
+      </div>
+      <div class="card" style="max-width:540px">
+        <h3>Check for Updates</h3>
+        <p class="card-note">Connect to PhantomGate update server to check for new firmware.</p>
+        <button class="btn btn-secondary" onclick="return false">Check Now</button>
+        <p class="card-note" style="margin-top:.5rem;color:#6b7280">Last checked: 2024-06-10 08:14 UTC</p>
+      </div>
+    </section>
+  </main>
+</div>
+<footer>&copy; 2024 PhantomGate Systems Ltd.</footer>
+<script src="/www/js/app.js"></script>
+</body>
+</html>

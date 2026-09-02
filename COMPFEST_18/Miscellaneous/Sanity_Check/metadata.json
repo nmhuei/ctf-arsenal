@@ -1,0 +1,77 @@
+{
+  "id": 28,
+  "name": "Sanity Check",
+  "category": "Miscellaneous",
+  "points": 10,
+  "author": null,
+  "tags": [],
+  "hints": [],
+  "connection_info": null,
+  "solved_by_me": false,
+  "solves_count": 169,
+  "submit_endpoint": "https://mirror-ctf.compfest.id/api/v1/challenges/attempt",
+  "instance_info": {},
+  "downloaded_files": [],
+  "raw": {
+    "id": 28,
+    "name": "Sanity Check",
+    "value": 10,
+    "description": "Check the rules and AI Policy channel on our discord server",
+    "attribution": null,
+    "connection_info": null,
+    "next_id": null,
+    "category": "Miscellaneous",
+    "state": "visible",
+    "max_attempts": 0,
+    "logic": "any",
+    "initial": 500,
+    "decay": 10,
+    "minimum": 10,
+    "function": "logarithmic",
+    "type": "dynamic",
+    "type_data": {
+      "id": "dynamic",
+      "name": "dynamic",
+      "templates": {
+        "create": "/plugins/dynamic_challenges/assets/create.html",
+        "update": "/plugins/dynamic_challenges/assets/update.html",
+        "view": "/plugins/dynamic_challenges/assets/view.html"
+      },
+      "scripts": {
+        "create": "/plugins/dynamic_challenges/assets/create.js",
+        "update": "/plugins/dynamic_challenges/assets/update.js",
+        "view": "/plugins/dynamic_challenges/assets/view.js"
+      }
+    },
+    "solves": 159,
+    "solved_by_me": false,
+    "attempts": 0,
+    "files": [],
+    "tags": [],
+    "hints": [],
+    "rating": null,
+    "ratings": {
+      "up": 20,
+      "down": 0,
+      "count": 20
+    },
+    "solution_id": null,
+    "solution_state": "hidden",
+    "view": "<div class=\"modal-dialog modal-xl\" role=\"document\" x-data=\"Challenge\" x-init='id = 28; max_attempts = 0; attempts = 0; ratingValue = null; ratingReview = null; loadSolves();'>\n  <div class=\"modal-content\">\n    <div class=\"modal-body p-0\">\n      <button type=\"button\" class=\"btn-close position-absolute top-0 end-0 mt-3 me-3\" style=\"z-index:1\" data-bs-dismiss=\"modal\" aria-label=\"Close\"></button>\n      <div class=\"challenge-modal-layout\">\n        <div class=\"challenge-main-col\">\n\n          <div class=\"challenge-header\">\n            <div class=\"challenge-header-left\">\n              <h2 class=\"challenge-name mb-1\">\n                Sanity Check\n              </h2>\n\n              \n              \n              \n            </div>\n            <div class=\"challenge-header-right\">\n              <span class=\"challenge-value\">10</span>\n              <small>points</small>\n            </div>\n          </div>\n\n          <div class=\"d-flex align-items-center justify-content-between mb-3\">\n            <div>\n              \n              <small class=\"challenge-ratings text-muted\">\n                \n                  \n                    <span><i class=\"fa-solid fa-thumbs-up\"></i> 20</span>\n                    <span class=\"px-2\">\n                      \n                      (100% liked)\n                      \n                    </span>\n                    <span><i class=\"fa-solid fa-thumbs-down\"></i> 0</span>\n                  \n                \n              </small>\n              \n            </div>\n            \n          </div>\n\n          \n\n          <div class=\"challenge-description-group\">\n            <h6 class=\"fw-semibold mb-0\">Description</h6>\n            <span class=\"challenge-desc\"><p>Check the rules and AI Policy channel on our discord server</p>\n</span>\n          </div>\n\n          <div class=\"challenge-bottom-section\">\n\n          <div class=\"challenge-connection-section mb-3\">\n            \n              \n            \n          </div>\n\n          \n\n          <template x-if=\"max_attempts > 0\">\n            <p>\n              <span x-text=\"attempts\"></span>/<span x-text=\"max_attempts\"></span> attempts\n            </p>\n          </template>\n\n          <div class=\"row submit-row\">\n            <div class=\"col pe-0\">\n              \n                <input\n                    id=\"challenge-id\" class=\"challenge-id\" type=\"hidden\"\n                    value=\"28\"\n                >\n                <input\n                    id=\"challenge-input\" class=\"challenge-input form-control\" style=\"font-family: var(--bs-font-monospace)\"\n                    type=\"text\" name=\"submission\"\n                    @keyup.enter=\"submitChallenge()\"\n                    placeholder=\"COMPFEST18{[A-z0-9_-]+}\" x-model=\"submission\"\n                >\n              \n            </div>\n\n            <div class=\"col-auto mt-3 mt-sm-0 key-submit\">\n              \n                <button\n                    id=\"challenge-submit\"\n                    class=\"challenge-submit auth-submit-button btn btn-primary h-100\" type=\"submit\"\n                    @click.debounce.500ms=\"submitChallenge()\"\n                >\n                  <span>Submit</span>\n                </button>\n              \n            </div>\n          </div>\n\n          <div class=\"row notification-row\">\n            <div class=\"col-12\">\n              <template x-if=\"response\">\n                <div class=\"alert text-center w-100 mt-3\"\n                    :class=\"{\n                      'alert-success': response.data.status == 'correct',\n                      'alert-info': response.data.status == 'already_solved',\n                      'alert-danger': response.data.status == 'incorrect',\n                      'alert-warning': response.data.status == 'paused',\n                    }\" role=\"alert\"\n                >\n                  <strong x-text=\"response.data.message\"></strong>\n                  <div x-show=\"(response.data.status == 'correct' || response.data.status == 'already_solved')\">\n                    <div x-show=\"getNextId()\">\n                      <button @click=\"nextChallenge()\" class=\"btn btn-info mt-3\">\n                        Next Challenge\n                      </button>\n                    </div>\n\n                    \n                    <div>\n                      <button x-show=\"!share_url\" @click=\"getShareUrl()\" class=\"btn btn-sm btn-outline-info mt-3\">\n                        Share\n                      </button>\n                      <div class=\"btn-group mt-3\" role=\"group\" x-show=\"share_url\">\n                        <button type=\"button\" class=\"btn btn-sm btn-outline-secondary\" @click=\"copyShareUrl()\" data-bs-toggle=\"tooltip\" data-bs-title=\"Copied!\">\n                          <i class=\"fa-solid fa-copy\"></i>\n                        </button>\n                        <a :href=\"'https://twitter.com/intent/tweet?url=' + encodeURIComponent(share_url)\" role=\"button\" class=\"btn btn-sm btn-outline-secondary\" target=\"_blank\">\n                          <i class=\"fa-brands fa-twitter\"></i>\n                        </a>\n                        <a :href=\"'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(share_url)\" role=\"button\" class=\"btn btn-sm btn-outline-secondary\" target=\"_blank\">\n                          <i class=\"fa-brands fa-facebook-f\"></i>\n                        </a>\n                        <a :href=\"'http://www.linkedin.com/shareArticle?url=' + encodeURIComponent(share_url)\" role=\"button\" class=\"btn btn-sm btn-outline-secondary\" target=\"_blank\">\n                          <i class=\"fa-brands fa-linkedin-in\"></i>\n                        </a>\n                      </div>\n                    </div>\n                    \n\n                    \n                    <div class=\"mt-3\">\n                      <hr>\n                      <div class=\"text-center\">\n                        <p class=\"mb-2\">Rate this challenge:</p>\n                        <div class=\"rating-buttons mb-2\" x-init=\"selectedRating = ratingValue || 0;\">\n                          <button \n                            class=\"btn btn-outline-success me-2\" \n                            :class=\"{ 'active': selectedRating === 1 }\"\n                            @click=\"selectedRating = 1\"\n                          >\n                            <i class=\"fa-solid fa-thumbs-up\"></i>\n                          </button>\n                          <button \n                            class=\"btn btn-outline-danger\" \n                            :class=\"{ 'active': selectedRating === -1 }\"\n                            @click=\"selectedRating = -1\"\n                          >\n                            <i class=\"fa-solid fa-thumbs-down\"></i>\n                          </button>\n                        </div>\n                        <div class=\"mt-3\">\n                          <textarea \n                            class=\"form-control\" \n                            rows=\"2\" \n                            x-model=\"ratingReview\"\n                            placeholder=\"Write a review (optional)\"\n                            maxlength=\"2000\"\n                          ></textarea>\n                        </div>\n                        <div class=\"mt-3\">\n                          <button \n                            @click=\"submitRating()\"\n                            class=\"btn btn-primary\"\n                            :disabled=\"!selectedRating\"\n                          >\n                            Submit\n                          </button>\n                        </div>\n                        <div x-show=\"ratingSubmitted\" class=\"text-success mt-2\">\n                          <small>Thank you for your rating!</small>\n                        </div>\n                      </div>\n                    </div>\n                    \n                  </div>\n                </div>\n              </template>\n            </div>\n          </div>\n\n          \n          \n          \n\n          \n          <div x-show=\"getSolutionId()\" class=\"mt-3\">\n            <button class=\"btn btn-sm btn-outline-secondary\" @click=\"showSolution()\" x-show=\"!solutionVisible\">\n              View Solution\n            </button>\n            <div x-show=\"solutionVisible\" x-cloak>\n              <h6 class=\"mt-3\">Solution</h6>\n              <template x-if=\"solution\">\n                <div x-html=\"solution\" style=\"white-space: pre-wrap;\"></div>\n              </template>\n            </div>\n          </div>\n          \n          </div>\n        </div>\n\n        \n        \n        <div class=\"challenge-solves-col\" :class=\"{ 'is-collapsed': solvesCollapsed }\">\n          <button\n            type=\"button\"\n            class=\"btn btn-sm btn-outline-secondary challenge-solves-toggle\"\n            @click=\"toggleSolves()\"\n            :aria-expanded=\"(!solvesCollapsed).toString()\"\n            aria-controls=\"challenge-solves-list\"\n            :aria-label=\"solvesCollapsed ? 'Expand solves panel' : 'Collapse solves panel'\"\n            :title=\"solvesCollapsed ? 'Expand solves panel' : 'Collapse solves panel'\"\n          >\n            <i class=\"fas fa-chevron-left\"></i>\n          </button>\n          <div class=\"challenge-solves-clip\" id=\"challenge-solves-list\" :aria-hidden=\"solvesCollapsed.toString()\">\n            <div class=\"challenge-solves-content\">\n              <div class=\"challenge-solves-header\">\n                <h6 class=\"mb-0 challenge-solves-title\">\n                  159 Solves\n                </h6>\n              </div>\n              <div class=\"challenge-solves-list\">\n                <table class=\"table table-sm align-middle\">\n                  <thead>\n                  <tr>\n                    <th>Name</th>\n                    <th>Date</th>\n                  </tr>\n                  </thead>\n                  <tbody>\n                  <template x-for=\"solve in solves\">\n                    <tr>\n                      <td>\n                        <a :href=\"solve.account_url\" x-text=\"solve.name\"></a>\n                      </td>\n                      <td><small x-text=\"solve.date\"></small></td>\n                    </tr>\n                  </template>\n                  </tbody>\n                </table>\n              </div>\n            </div>\n          </div>\n        </div>\n        \n        \n      </div>\n    </div>\n  </div>\n</div>"
+  },
+  "status": {
+    "schema_version": 2,
+    "solve": "unsolved",
+    "flag": {
+      "value": null,
+      "state": "none"
+    },
+    "writeup": "none",
+    "writeup_auto": true,
+    "notes": "",
+    "labels": [],
+    "container": "none",
+    "synced_at": "2026-08-29T02:58:53Z",
+    "updated_at": "2026-08-29T02:58:53Z"
+  }
+}

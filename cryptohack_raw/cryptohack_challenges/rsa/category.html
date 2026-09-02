@@ -1,0 +1,1885 @@
+<!DOCTYPE html><html lang="en" dir="ltr" class="dark-mode"><head>
+        <title>CryptoHack – RSA challenges</title>
+
+        <link rel="stylesheet" type="text/css" href="/static/css/materialize.min.css">
+        <link rel="stylesheet" type="text/css" href="/static/css/main.css?ver=2">
+        <link rel="stylesheet" type="text/css" href="/static/css/light.css">
+
+        <link rel="stylesheet" type="text/css" href="/static/css/flag-icon.min.css">
+        <link rel="stylesheet" type="text/css" href="/static/css/all.min.css">
+        <link rel="stylesheet" type="text/css" href="/static/css/v4-shims.min.css">
+
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        
+<link rel="stylesheet" href="/static/css/katex.min.css">
+<script defer="" src="/static/js/katex.min.js"></script>
+<script defer="" src="/static/js/katex-auto-render.min.js"></script>
+<script defer="" src="/static/js/katex-render-options.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, katex_render_options);
+    });
+</script>
+
+
+        <!-- Generic Metadata -->
+        <link rel="canonical" href="https://cryptohack.org">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://cryptohack.org">
+        <meta property="og:site_name" content="CryptoHack">
+        <meta property="og:image" content="https://cryptohack.org/static/img/banner.png">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@CryptoHack__">
+        <meta name="twitter:image" content="https://cryptohack.org/static/img/banner.png">
+
+        <!-- Favicon -->
+        <link rel="apple-touch-icon" sizes="57x57" href="/static/favicon/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="/static/favicon/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/static/favicon/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/static/favicon/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/static/favicon/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/static/favicon/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/static/favicon/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/static/favicon/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/static/favicon/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="36x36" href="/static/favicon/android-icon-36x36.png">
+        <link rel="icon" type="image/png" sizes="48x48" href="/static/favicon/android-icon-48x48.png">
+        <link rel="icon" type="image/png" sizes="72x72" href="/static/favicon/android-icon-72x72.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="/static/favicon/android-icon-96x96.png">
+        <link rel="icon" type="image/png" sizes="144x144" href="/static/favicon/android-icon-144x144.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="/static/favicon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="/static/favicon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon/favicon-16x16.png">
+
+        <script>
+            function isLightThemeSelected() {
+                return document.cookie.match(/theme=light/i) != null
+            }
+
+            function setThemeFromCookie() {
+                var html = document.getElementsByTagName('html')[0]
+                html.className = isLightThemeSelected() ? 'light-mode' : 'dark-mode'
+                console.log('Loaded cookie: ' + document.cookie)
+            }
+
+            (function() {
+              setThemeFromCookie()
+            })();
+        </script>
+    </head>
+    <body class="competition-page">
+      <div class="wrapper">
+        <header>
+            <nav class="top-nav nav-fixed">
+                <div class="nav-wrapper">
+
+                    <div><a href="#" data-activates="nav-mobile" class="button-collapse top-nav full"><i class="fas fa-bars" aria-label="Menu Bars"></i></a></div>
+                    <a class="logo-link" href="/"><span class="outline">CRYPTOHACK</span></a>
+
+                    
+
+                    <ul class="right hide-on-med-and-down">
+                        
+                        
+                        <li><a href="/register/">Register</a></li>
+                        
+                        <li><a href="/login/">Login</a></li>
+                        
+                    </ul>
+                </div>
+
+            </nav>
+            <ul id="nav-mobile" class="side-nav fixed" style="left: 0px;">
+
+
+                <li><a href="/courses/">
+                    <div class="side-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <div class="side-text">Courses</div>
+                </a></li>
+
+                <li><a href="/challenges/">
+                    <div class="side-icon"><i class="fas fa-flag"></i></div>
+                    <div class="side-text">Challenges</div>
+                </a></li>
+
+                <!-- <div class="divider" /></div> -->
+                
+                <li><a href="/scoreboard/">
+                    <div class="side-icon"><i class="fas fa-chart-line"></i></div>
+                    <div class="side-text">Scoreboard</div>
+                </a></li>
+
+                <li><a href="/blog/">
+                    <div class="side-icon"><i class="fas fa-brain" style="margin-left: -2px;"></i></div>
+                    <div class="side-text">Blog</div>
+                </a></li>
+
+                <li><a href="/chat/">
+                    <div class="side-icon"><i class="fas fa-comments"></i></div>
+<!--                     <div class="side-icon"><img src="/static/img/Discord-Logo-Color.svg" width="25" style="margin: 14px 0 0 -5px;"></div> -->
+                    <div class="side-text">Chat</div>
+                </a></li>
+
+                <li><a href="/careers/">
+                    <div class="side-icon"><i class="fas fa-briefcase"></i></div>
+                    <div class="side-text">Careers</div>
+                </a></li>
+
+                <li><a href="/faq/">
+                    <div class="side-icon"><i class="fas fa-question"></i></div>
+                    <div class="side-text">FAQ</div>
+                </a></li>
+
+                
+
+                
+
+                
+                
+                <li><a href="/register/">
+                        <div class="side-icon"><i class="fas fa-user-plus"></i></div>
+                        <div class="side-text">Register</div>
+                    </a></li>
+                
+                <li><a href="/login/">
+                        <div class="side-icon"><i class="fas fa-lock"></i></div>
+                        <div class="side-text">Login</div>
+                    </a></li>
+                
+            </ul>
+        </header>
+        <div class="cont">
+            
+        </div>
+        <div class="cont">
+            
+
+
+
+<div class="categoryDescription">
+  
+  <div class="categoryText">
+    <h2 class="categoryTitle">RSA</h2>
+    <p>RSA, first described in 1977, is the most famous public-key cryptosystem. It has two main use-cases: </p> <ul> <li><a href="https://en.wikipedia.org/wiki/Public-key_cryptography">Public key encryption</a> enables a user, Alice, to distribute a public key and others can use that public key to encrypt messages to her. Alice can then use her private key to decrypt the messages.</li> <li><a href="https://en.wikipedia.org/wiki/Digital_signature">Digital signatures</a> enable Alice to use her private key to "sign" a message. Anyone can use Alice's public key to verify that the signature was created with her corresponding private key, and that the message hasn't been tampered with.</li> </ul> <p> Although RSA's security is based on the difficulty of factoring large composite numbers, in recent years the cryptosystem has received criticism for how easy it is to implement incorrectly. Major flaws have been found in common deployments, the most notorious of these being the <a href="https://en.wikipedia.org/wiki/ROCA_vulnerability">ROCA vulnerability</a> which led to Estonia suspending 760,000 national ID cards.<br><br>These challenges introduce you to the many footguns of RSA, and soon see you performing attacks which have caused millions of dollars of damage in the real world.</p>
+  </div>
+  <div class="categoryImage">
+  <img src="/static/img/category/rsa.png" alt="">
+  </div>
+  
+
+</div>
+
+
+<div class="row">
+    <div class="col s12 m6 noPadding">
+        <div class="left">
+        <div class="select-wrapper"><span class="caret">▼</span><input type="text" class="select-dropdown" readonly="true" data-activates="select-options-63e9efc7-0c9b-0e62-c07c-b0ecc032b8f0" value="Show all stages"><ul id="select-options-63e9efc7-0c9b-0e62-c07c-b0ecc032b8f0" class="dropdown-content select-dropdown"><li class=""><span>Show all stages</span></li><li class=""><span>Starter</span></li><li class=""><span>Primes Part 1</span></li><li class=""><span>Public exponent</span></li><li class=""><span>Primes Part 2</span></li><li class=""><span>Padding</span></li><li class=""><span>Signatures Part 1</span></li><li class=""><span>Signatures Part 2</span></li></ul><select onchange="filterCategories(this);" class="initialized">
+            <option value="*">Show all stages</option>
+            
+            <option value="rsa_starter">Starter</option>
+            
+            <option value="primes_1">Primes Part 1</option>
+            
+            <option value="public_exponent">Public exponent</option>
+            
+            <option value="primes_2">Primes Part 2</option>
+            
+            <option value="rsa_padding">Padding</option>
+            
+            <option value="rsa_signing">Signatures Part 1</option>
+            
+            <option value="rsa_signing_2">Signatures Part 2</option>
+            
+        </select></div>
+        </div>
+    </div>
+    <div class="col s12 m6 noPadding">
+      <p class="toggleCheckbox"><input type="checkbox" id="toggleSolved" class="filled-in"><label for="toggleSolved">Hide Solved Challenges</label></p>
+    </div>
+</div>
+
+<span class="stage" data-stage="rsa_starter">
+    <hr>
+    <div class="challengeInfo">
+      <span><h4>Starter</h4></span>
+      <span class="flexToggle"><a class="stage-collapse" data-collapse="rsa_starter" href="#">Toggle</a></span>
+    </div>
+    
+    <div class="clearfix"></div>
+    <ul class="collapsible popout" data-collapsible="expandable">
+        
+        <li class="challenge active" data-category="32" data-stage="rsa_starter">
+            <div id="header-rsa_starter_1" data-challenge="rsa_starter_1" class="collapsible-header active">
+                
+                <i id="check-rsa_starter_1" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="b0808ad8-748e-c84c-015f-27014dbc5f9e"></i>
+                <i id="uncheck-rsa_starter_1" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="222cdec5-3e12-6408-91ef-b0e3db2bf538"></i>
+                
+                <div class="challenge-text truncate">Modular Exponentiation</div>
+                <span class="right">
+                    
+                    10 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/rsa_starter_1/solves/">
+                        <span id="solves-rsa_starter_1">17575 Solves</span>
+                    </a>
+                    
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body" style="display: block;">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    All operations in RSA involve <a href="https://en.wikipedia.org/wiki/Modular_exponentiation">modular exponentiation</a>.<br><br>Modular exponentiation is an operation that is used extensively in cryptography and is normally written like: <span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mn>10</mn></msup><mspace></mspace><mspace width="0.6667em"></mspace><mrow><mi mathvariant="normal">m</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">d</mi></mrow>  <mn>17</mn></mrow><annotation encoding="application/x-tex">2^{10} \mod 17</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.8141em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.8141em;"><span class="" style="top: -3.063em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">10</span></span></span></span></span></span></span></span></span><span class="mspace allowbreak"></span><span class="mspace" style="margin-right: 0.6667em;"></span></span><span class="base"><span class="strut" style="height: 0.6944em;"></span><span class="mord"><span class="mord"><span class="mord mathrm">mod</span></span></span><span class="mspace" style="margin-right: 0.1667em;"></span><span class="mspace" style="margin-right: 0.1667em;"></span><span class="mord">17</span></span></span></span></span><br><br>You can think of this as raising some number to a certain power (<span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mn>10</mn></msup><mo>=</mo><mn>1024</mn></mrow><annotation encoding="application/x-tex">2^{10} = 1024</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.8141em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.8141em;"><span class="" style="top: -3.063em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">10</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right: 0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right: 0.2778em;"></span></span><span class="base"><span class="strut" style="height: 0.6444em;"></span><span class="mord">1024</span></span></span></span></span>), and then taking the remainder of the division by some other number (<span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1024</mn><mspace></mspace><mspace width="0.6667em"></mspace><mrow><mi mathvariant="normal">m</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">d</mi></mrow>  <mn>17</mn><mo>=</mo><mn>4</mn></mrow><annotation encoding="application/x-tex">1024 \mod 17 = 4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.6444em;"></span><span class="mord">1024</span><span class="mspace allowbreak"></span><span class="mspace" style="margin-right: 0.6667em;"></span></span><span class="base"><span class="strut" style="height: 0.6944em;"></span><span class="mord"><span class="mord"><span class="mord mathrm">mod</span></span></span><span class="mspace" style="margin-right: 0.1667em;"></span><span class="mspace" style="margin-right: 0.1667em;"></span><span class="mord">17</span><span class="mspace" style="margin-right: 0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right: 0.2778em;"></span></span><span class="base"><span class="strut" style="height: 0.6444em;"></span><span class="mord">4</span></span></span></span></span>). In Python there's a built-in operator for performing this operation: <code>pow(base, exponent, modulus)</code>.<br><br>In RSA, modular exponentiation, together with the problem of prime factorisation, helps us to build a "<a href="https://en.wikipedia.org/wiki/Trapdoor_function">trapdoor function</a>". This is a function that is easy to compute in one direction, but hard to do in reverse unless you have the right information. It allows us to encrypt a message, and only the person with the key can perform the inverse operation to decrypt it.<br><br>To grab the flag, find the solution to <span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>10</mn><msup><mn>1</mn><mn>17</mn></msup><mspace></mspace><mspace width="0.6667em"></mspace><mrow><mi mathvariant="normal">m</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">d</mi></mrow>  <mn>22663</mn></mrow><annotation encoding="application/x-tex">101^{17} \mod 22663</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.8141em;"></span><span class="mord">10</span><span class="mord"><span class="mord">1</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.8141em;"><span class="" style="top: -3.063em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">17</span></span></span></span></span></span></span></span></span><span class="mspace allowbreak"></span><span class="mspace" style="margin-right: 0.6667em;"></span></span><span class="base"><span class="strut" style="height: 0.6944em;"></span><span class="mord"><span class="mord"><span class="mord mathrm">mod</span></span></span><span class="mspace" style="margin-right: 0.1667em;"></span><span class="mspace" style="margin-right: 0.1667em;"></span><span class="mord">22663</span></span></span></span></span>
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Frsa%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+        <li class="challenge active" data-category="34" data-stage="rsa_starter">
+            <div id="header-rsa_starter_2" data-challenge="rsa_starter_2" class="collapsible-header active">
+                
+                <i id="check-rsa_starter_2" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="810c4783-becd-1608-b202-9023058bedb3"></i>
+                <i id="uncheck-rsa_starter_2" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="1cc2e340-954a-1deb-1083-695eccd14e38"></i>
+                
+                <div class="challenge-text truncate">Public Keys</div>
+                <span class="right">
+                    
+                    15 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/rsa_starter_2/solves/">
+                        <span id="solves-rsa_starter_2">16783 Solves</span>
+                    </a>
+                    
+                    
+                    <span class="solutions_links solutionsHide" id="solutions-rsa_starter_2">
+                      <b>·</b>
+                      <a class="gold-link preventToggle" href="/challenges/rsa_starter_2/solutions/">
+                        19 Solutions
+                      </a>
+                    </span>
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body" style="display: block;">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    RSA encryption is modular exponentiation of a message with an exponent <span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>e</mi></mrow><annotation encoding="application/x-tex">e</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.4306em;"></span><span class="mord mathnormal">e</span></span></span></span></span> and a modulus <span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi></mrow><annotation encoding="application/x-tex">N</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.6833em;"></span><span class="mord mathnormal" style="margin-right: 0.109em;">N</span></span></span></span></span> which is normally a product of two primes: <span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><mo>=</mo><mi>p</mi><mo>⋅</mo><mi>q</mi></mrow><annotation encoding="application/x-tex">N = p \cdot q</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.6833em;"></span><span class="mord mathnormal" style="margin-right: 0.109em;">N</span><span class="mspace" style="margin-right: 0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right: 0.2778em;"></span></span><span class="base"><span class="strut" style="height: 0.6389em; vertical-align: -0.1944em;"></span><span class="mord mathnormal">p</span><span class="mspace" style="margin-right: 0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right: 0.2222em;"></span></span><span class="base"><span class="strut" style="height: 0.625em; vertical-align: -0.1944em;"></span><span class="mord mathnormal" style="margin-right: 0.0359em;">q</span></span></span></span></span>.<br><br>Together, the exponent and modulus form an RSA "public key" <span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mi>N</mi><mo separator="true">,</mo><mi>e</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(N, e)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right: 0.109em;">N</span><span class="mpunct">,</span><span class="mspace" style="margin-right: 0.1667em;"></span><span class="mord mathnormal">e</span><span class="mclose">)</span></span></span></span></span>. The most common value for <span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>e</mi></mrow><annotation encoding="application/x-tex">e</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.4306em;"></span><span class="mord mathnormal">e</span></span></span></span></span> is <code>0x10001</code> or <span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>65537</mn></mrow><annotation encoding="application/x-tex">65537</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.6444em;"></span><span class="mord">65537</span></span></span></span></span>.<br><br>"Encrypt" the number <span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>12</mn></mrow><annotation encoding="application/x-tex">12</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.6444em;"></span><span class="mord">12</span></span></span></span></span> using the exponent <span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>e</mi><mo>=</mo><mn>65537</mn></mrow><annotation encoding="application/x-tex">e = 65537</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.4306em;"></span><span class="mord mathnormal">e</span><span class="mspace" style="margin-right: 0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right: 0.2778em;"></span></span><span class="base"><span class="strut" style="height: 0.6444em;"></span><span class="mord">65537</span></span></span></span></span> and the primes <span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo>=</mo><mn>17</mn></mrow><annotation encoding="application/x-tex">p = 17</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.625em; vertical-align: -0.1944em;"></span><span class="mord mathnormal">p</span><span class="mspace" style="margin-right: 0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right: 0.2778em;"></span></span><span class="base"><span class="strut" style="height: 0.6444em;"></span><span class="mord">17</span></span></span></span></span> and <span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>q</mi><mo>=</mo><mn>23</mn></mrow><annotation encoding="application/x-tex">q = 23</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.625em; vertical-align: -0.1944em;"></span><span class="mord mathnormal" style="margin-right: 0.0359em;">q</span><span class="mspace" style="margin-right: 0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right: 0.2778em;"></span></span><span class="base"><span class="strut" style="height: 0.6444em;"></span><span class="mord">23</span></span></span></span></span>. What number do you get as the ciphertext?
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Frsa%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+        <li class="challenge active" data-category="33" data-stage="rsa_starter">
+            <div id="header-rsa_starter_3" data-challenge="rsa_starter_3" class="collapsible-header active">
+                
+                <i id="check-rsa_starter_3" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="d04cff30-9542-a6f2-69c9-3e57e0cc1eaa"></i>
+                <i id="uncheck-rsa_starter_3" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="4c240d42-1c77-443f-82f6-e10d0f9ef320"></i>
+                
+                <div class="challenge-text truncate">Euler's Totient</div>
+                <span class="right">
+                    
+                    20 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/rsa_starter_3/solves/">
+                        <span id="solves-rsa_starter_3">15947 Solves</span>
+                    </a>
+                    
+                    
+                    <span class="solutions_links solutionsHide" id="solutions-rsa_starter_3">
+                      <b>·</b>
+                      <a class="gold-link preventToggle" href="/challenges/rsa_starter_3/solutions/">
+                        18 Solutions
+                      </a>
+                    </span>
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body" style="display: block;">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    RSA relies on the difficulty of the factorisation of the modulus <code>N</code>. If the prime factors can be deduced, then we can calculate the <a href="https://leimao.github.io/article/RSA-Algorithm/" target="_blank" rel="noopener">Euler totient</a> of <code>N</code> and thus decrypt the ciphertext.<br><br>Given <span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><mo>=</mo><mi>p</mi><mo>⋅</mo><mi>q</mi></mrow><annotation encoding="application/x-tex">N = p \cdot q</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.6833em;"></span><span class="mord mathnormal" style="margin-right: 0.109em;">N</span><span class="mspace" style="margin-right: 0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right: 0.2778em;"></span></span><span class="base"><span class="strut" style="height: 0.6389em; vertical-align: -0.1944em;"></span><span class="mord mathnormal">p</span><span class="mspace" style="margin-right: 0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right: 0.2222em;"></span></span><span class="base"><span class="strut" style="height: 0.625em; vertical-align: -0.1944em;"></span><span class="mord mathnormal" style="margin-right: 0.0359em;">q</span></span></span></span></span> and two primes:<br><br><span class="codeBlock"> p = 857504083339712752489993810777<br> q = 1029224947942998075080348647219 </span><br><br>What is Euler's totient <span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ϕ</mi><mo stretchy="false">(</mo><mi>N</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\phi(N)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span class="mord mathnormal">ϕ</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right: 0.109em;">N</span><span class="mclose">)</span></span></span></span></span>?
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Frsa%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+        <li class="challenge active" data-category="31" data-stage="rsa_starter">
+            <div id="header-rsa_starter_4" data-challenge="rsa_starter_4" class="collapsible-header active">
+                
+                <i id="check-rsa_starter_4" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="9098085c-4116-ad23-e79d-999e4ec12ed1"></i>
+                <i id="uncheck-rsa_starter_4" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="7e4ba36d-eb60-600a-8069-8f58375bba1f"></i>
+                
+                <div class="challenge-text truncate">Private Keys</div>
+                <span class="right">
+                    
+                    20 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/rsa_starter_4/solves/">
+                        <span id="solves-rsa_starter_4">15124 Solves</span>
+                    </a>
+                    
+                    
+                    <span class="solutions_links solutionsHide" id="solutions-rsa_starter_4">
+                      <b>·</b>
+                      <a class="gold-link preventToggle" href="/challenges/rsa_starter_4/solutions/">
+                        26 Solutions
+                      </a>
+                    </span>
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body" style="display: block;">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    The private key <span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi></mrow><annotation encoding="application/x-tex">d</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.6944em;"></span><span class="mord mathnormal">d</span></span></span></span></span> is used to decrypt ciphertexts created with the corresponding public key (it's also used to "sign" a message but we'll get to that later).<br><br>The private key is the secret piece of information, or "trapdoor", which allows us to quickly invert the encryption function. If RSA is implemented well, if you do not have the private key the fastest way to decrypt the ciphertext is to factorise the modulus which is very hard to do for large integers.<br><br>In RSA, the private key is the <a href="https://en.wikipedia.org/wiki/Modular_multiplicative_inverse">modular multiplicative inverse</a> of the exponent <span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>e</mi></mrow><annotation encoding="application/x-tex">e</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.4306em;"></span><span class="mord mathnormal">e</span></span></span></span></span> modulo <span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ϕ</mi><mo stretchy="false">(</mo><mi>N</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\phi(N)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span class="mord mathnormal">ϕ</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right: 0.109em;">N</span><span class="mclose">)</span></span></span></span></span>, Euler's totient of <span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi></mrow><annotation encoding="application/x-tex">N</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.6833em;"></span><span class="mord mathnormal" style="margin-right: 0.109em;">N</span></span></span></span></span>.<br><br>Given the two primes:<br><br><span class="codeBlock"> p = 857504083339712752489993810777<br> q = 1029224947942998075080348647219 </span><br><br>and the exponent <span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>e</mi><mo>=</mo><mn>65537</mn></mrow><annotation encoding="application/x-tex">e = 65537</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.4306em;"></span><span class="mord mathnormal">e</span><span class="mspace" style="margin-right: 0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right: 0.2778em;"></span></span><span class="base"><span class="strut" style="height: 0.6444em;"></span><span class="mord">65537</span></span></span></span></span>, what is the private key <span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo>≡</mo><msup><mi>e</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mspace></mspace><mspace width="0.6667em"></mspace><mrow><mi mathvariant="normal">m</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">d</mi></mrow>  <mi>ϕ</mi><mo stretchy="false">(</mo><mi>N</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">d \equiv e^{-1} \mod \phi(N)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.6944em;"></span><span class="mord mathnormal">d</span><span class="mspace" style="margin-right: 0.2778em;"></span><span class="mrel">≡</span><span class="mspace" style="margin-right: 0.2778em;"></span></span><span class="base"><span class="strut" style="height: 0.8141em;"></span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.8141em;"><span class="" style="top: -3.063em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">1</span></span></span></span></span></span></span></span></span><span class="mspace allowbreak"></span><span class="mspace" style="margin-right: 0.6667em;"></span></span><span class="base"><span class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span class="mord"><span class="mord"><span class="mord mathrm">mod</span></span></span><span class="mspace" style="margin-right: 0.1667em;"></span><span class="mspace" style="margin-right: 0.1667em;"></span><span class="mord mathnormal">ϕ</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right: 0.109em;">N</span><span class="mclose">)</span></span></span></span></span>?
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Frsa%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+        <li class="challenge active" data-category="29" data-stage="rsa_starter">
+            <div id="header-rsa_starter_5" data-challenge="rsa_starter_5" class="collapsible-header active">
+                
+                <i id="check-rsa_starter_5" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="08978046-498f-f395-516a-64b63362b96e"></i>
+                <i id="uncheck-rsa_starter_5" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="7b6b51f9-9825-424d-b0c1-bfc542a6f581"></i>
+                
+                <div class="challenge-text truncate">RSA Decryption</div>
+                <span class="right">
+                    
+                    20 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/rsa_starter_5/solves/">
+                        <span id="solves-rsa_starter_5">14544 Solves</span>
+                    </a>
+                    
+                    
+                    <span class="solutions_links solutionsHide" id="solutions-rsa_starter_5">
+                      <b>·</b>
+                      <a class="gold-link preventToggle" href="/challenges/rsa_starter_5/solutions/">
+                        21 Solutions
+                      </a>
+                    </span>
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body" style="display: block;">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    I've encrypted a secret number for your eyes only using your public key parameters:<br><br><span class="codeBlock"> N = 882564595536224140639625987659416029426239230804614613279163<br> e = 65537 </span><br><br>Use the private key that you found for these parameters in the previous challenge to decrypt this ciphertext:<br><br><span class="codeBlock"> c = 77578995801157823671636298847186723593814843845525223303932 </span>
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Frsa%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+        <li class="challenge active" data-category="30" data-stage="rsa_starter">
+            <div id="header-rsa_starter_6" data-challenge="rsa_starter_6" class="collapsible-header active">
+                
+                <i id="check-rsa_starter_6" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="5f464f90-162c-4055-634d-9f5bfb2e5917"></i>
+                <i id="uncheck-rsa_starter_6" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="6e403d5b-d679-9568-9915-1f31e2a026dd"></i>
+                
+                <div class="challenge-text truncate">RSA Signatures</div>
+                <span class="right">
+                    
+                    25 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/rsa_starter_6/solves/">
+                        <span id="solves-rsa_starter_6">11207 Solves</span>
+                    </a>
+                    
+                    
+                    <span class="solutions_links solutionsHide" id="solutions-rsa_starter_6">
+                      <b>·</b>
+                      <a class="gold-link preventToggle" href="/challenges/rsa_starter_6/solutions/">
+                        30 Solutions
+                      </a>
+                    </span>
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body" style="display: block;">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    How can you ensure that the person receiving your message knows that you wrote it?<br><br>You've been asked out on a date, and you want to send a message telling them that you'd love to go, however a jealous lover isn't so happy about this.<br><br>When you send your message saying yes, your jealous lover intercepts the message and corrupts it so it now says no!<br><br>We can protect against these attacks by cryptographically signing the message.<br><br>Imagine you write a message <span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi></mrow><annotation encoding="application/x-tex">m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.4306em;"></span><span class="mord mathnormal">m</span></span></span></span></span>. You encrypt this message with your <b>friend's public key</b>: <span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi><mo>=</mo><msup><mi>m</mi><msub><mi>e</mi><mn>0</mn></msub></msup><mspace></mspace><mspace width="0.6667em"></mspace><mrow><mi mathvariant="normal">m</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">d</mi></mrow>  <msub><mi>N</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">c = m^{e_{0}} \mod N_{0}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.4306em;"></span><span class="mord mathnormal">c</span><span class="mspace" style="margin-right: 0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right: 0.2778em;"></span></span><span class="base"><span class="strut" style="height: 0.6644em;"></span><span class="mord"><span class="mord mathnormal">m</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.6644em;"><span class="" style="top: -3.063em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.3173em;"><span class="" style="top: -2.357em; margin-left: 0em; margin-right: 0.0714em;"><span class="pstrut" style="height: 2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">0</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.143em;"><span class=""></span></span></span></span></span></span></span></span></span></span></span></span></span></span><span class="mspace allowbreak"></span><span class="mspace" style="margin-right: 0.6667em;"></span></span><span class="base"><span class="strut" style="height: 0.8444em; vertical-align: -0.15em;"></span><span class="mord"><span class="mord"><span class="mord mathrm">mod</span></span></span><span class="mspace" style="margin-right: 0.1667em;"></span><span class="mspace" style="margin-right: 0.1667em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right: 0.109em;">N</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.3011em;"><span class="" style="top: -2.55em; margin-left: -0.109em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">0</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.15em;"><span class=""></span></span></span></span></span></span></span></span></span></span>.<br><br>To sign this message, you calculate the hash of the message: <span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>H</mi><mo stretchy="false">(</mo><mi>m</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">H(m)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span class="mord mathnormal" style="margin-right: 0.0813em;">H</span><span class="mopen">(</span><span class="mord mathnormal">m</span><span class="mclose">)</span></span></span></span></span> and "encrypt" this with <b>your private key</b>: <span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mo>=</mo><mi>H</mi><mo stretchy="false">(</mo><mi>m</mi><msup><mo stretchy="false">)</mo><msub><mi>d</mi><mn>1</mn></msub></msup><mspace></mspace><mspace width="0.6667em"></mspace><mrow><mi mathvariant="normal">m</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">d</mi></mrow>  <msub><mi>N</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">S = H(m)^{d_{1}} \mod N_{1}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.6833em;"></span><span class="mord mathnormal" style="margin-right: 0.0576em;">S</span><span class="mspace" style="margin-right: 0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right: 0.2778em;"></span></span><span class="base"><span class="strut" style="height: 1.0991em; vertical-align: -0.25em;"></span><span class="mord mathnormal" style="margin-right: 0.0813em;">H</span><span class="mopen">(</span><span class="mord mathnormal">m</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.8491em;"><span class="" style="top: -3.063em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathnormal mtight">d</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.3173em;"><span class="" style="top: -2.357em; margin-left: 0em; margin-right: 0.0714em;"><span class="pstrut" style="height: 2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.143em;"><span class=""></span></span></span></span></span></span></span></span></span></span></span></span></span></span><span class="mspace allowbreak"></span><span class="mspace" style="margin-right: 0.6667em;"></span></span><span class="base"><span class="strut" style="height: 0.8444em; vertical-align: -0.15em;"></span><span class="mord"><span class="mord"><span class="mord mathrm">mod</span></span></span><span class="mspace" style="margin-right: 0.1667em;"></span><span class="mspace" style="margin-right: 0.1667em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right: 0.109em;">N</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.3011em;"><span class="" style="top: -2.55em; margin-left: -0.109em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.15em;"><span class=""></span></span></span></span></span></span></span></span></span></span>.<br><br><span class="note"><i class="fas fa-pencil-alt"></i>In real cryptosystems, it's <a href="https://crypto.stackexchange.com/a/12138" target="_blank" rel="noopener">best practice to use separate keys</a> for encrypting and signing messages.</span><br><br>Your friend can decrypt the message using <b>their private key</b>: <span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>=</mo><msup><mi>c</mi><msub><mi>d</mi><mn>0</mn></msub></msup><mspace></mspace><mspace width="0.6667em"></mspace><mrow><mi mathvariant="normal">m</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">d</mi></mrow>  <msub><mi>N</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">m = c^{d_{0}} \mod N_{0}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.4306em;"></span><span class="mord mathnormal">m</span><span class="mspace" style="margin-right: 0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right: 0.2778em;"></span></span><span class="base"><span class="strut" style="height: 0.8491em;"></span><span class="mord"><span class="mord mathnormal">c</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.8491em;"><span class="" style="top: -3.063em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathnormal mtight">d</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.3173em;"><span class="" style="top: -2.357em; margin-left: 0em; margin-right: 0.0714em;"><span class="pstrut" style="height: 2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">0</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.143em;"><span class=""></span></span></span></span></span></span></span></span></span></span></span></span></span></span><span class="mspace allowbreak"></span><span class="mspace" style="margin-right: 0.6667em;"></span></span><span class="base"><span class="strut" style="height: 0.8444em; vertical-align: -0.15em;"></span><span class="mord"><span class="mord"><span class="mord mathrm">mod</span></span></span><span class="mspace" style="margin-right: 0.1667em;"></span><span class="mspace" style="margin-right: 0.1667em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right: 0.109em;">N</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.3011em;"><span class="" style="top: -2.55em; margin-left: -0.109em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">0</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.15em;"><span class=""></span></span></span></span></span></span></span></span></span></span>. Using your public key they calculate <span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>=</mo><msup><mi>S</mi><msub><mi>e</mi><mn>1</mn></msub></msup><mspace></mspace><mspace width="0.6667em"></mspace><mrow><mi mathvariant="normal">m</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">d</mi></mrow>  <msub><mi>N</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">s = S^{e_{1}} \mod N_{1}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.4306em;"></span><span class="mord mathnormal">s</span><span class="mspace" style="margin-right: 0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right: 0.2778em;"></span></span><span class="base"><span class="strut" style="height: 0.6833em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right: 0.0576em;">S</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.6644em;"><span class="" style="top: -3.063em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.3173em;"><span class="" style="top: -2.357em; margin-left: 0em; margin-right: 0.0714em;"><span class="pstrut" style="height: 2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.143em;"><span class=""></span></span></span></span></span></span></span></span></span></span></span></span></span></span><span class="mspace allowbreak"></span><span class="mspace" style="margin-right: 0.6667em;"></span></span><span class="base"><span class="strut" style="height: 0.8444em; vertical-align: -0.15em;"></span><span class="mord"><span class="mord"><span class="mord mathrm">mod</span></span></span><span class="mspace" style="margin-right: 0.1667em;"></span><span class="mspace" style="margin-right: 0.1667em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right: 0.109em;">N</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.3011em;"><span class="" style="top: -2.55em; margin-left: -0.109em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.15em;"><span class=""></span></span></span></span></span></span></span></span></span></span>.<br><br>Now by computing <span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>H</mi><mo stretchy="false">(</mo><mi>m</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">H(m)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span class="mord mathnormal" style="margin-right: 0.0813em;">H</span><span class="mopen">(</span><span class="mord mathnormal">m</span><span class="mclose">)</span></span></span></span></span> and comparing it to <span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi></mrow><annotation encoding="application/x-tex">s</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.4306em;"></span><span class="mord mathnormal">s</span></span></span></span></span>: <code>assert H(m) == s</code>, they can ensure that the message you sent them, is the message that they received! As long as your private key is safe, no one else could have signed this message!<br><br>Sign the flag <code>crypto{Immut4ble_m3ssag1ng}</code> using your private key and the <code>SHA256</code> hash function.<br><br><span class="note"><i class="fas fa-brain"></i>The output of the hash function needs to be converted into a number that can be used with RSA math. Remember the helpful <code>bytes_to_long()</code> function that can be imported from <code>Crypto.Util.number</code>.</span><br><br><b>Challenge files:</b><br>&nbsp; - <a href="/static/challenges/private_0a1880d1fffce9403686130a1f932b10.key" download="">private.key</a><br>
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Frsa%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+    </ul>
+</span>
+
+
+<span class="stage" data-stage="primes_1">
+    <hr>
+    <div class="challengeInfo">
+      <span><h4>Primes Part 1</h4></span>
+      <span class="flexToggle"><a class="stage-collapse" data-collapse="primes_1" href="#">Toggle</a></span>
+    </div>
+    
+    <div class="clearfix"></div>
+    <ul class="collapsible popout" data-collapsible="expandable">
+        
+        <li class="challenge" data-category="23" data-stage="primes_1">
+            <div id="header-rsa_factoring" data-challenge="rsa_factoring" class="collapsible-header">
+                
+                <i id="check-rsa_factoring" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="d2755d7f-bf3b-da8a-453a-9e741c40631b"></i>
+                <i id="uncheck-rsa_factoring" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="3e9e5bd1-48c1-9890-c9dd-11b6792f3b57"></i>
+                
+                <div class="challenge-text truncate">Factoring</div>
+                <span class="right">
+                    
+                    15 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/rsa_factoring/solves/">
+                        <span id="solves-rsa_factoring">11146 Solves</span>
+                    </a>
+                    
+                    
+                    <span class="solutions_links solutionsHide" id="solutions-rsa_factoring">
+                      <b>·</b>
+                      <a class="gold-link preventToggle" href="/challenges/rsa_factoring/solutions/">
+                        15 Solutions
+                      </a>
+                    </span>
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    So far we've been using the product of small primes for the modulus, but small primes aren't much good for RSA as they can be factorised using <a href="https://en.wikipedia.org/wiki/Lenstra_elliptic-curve_factorization">modern</a> <a href="https://en.wikipedia.org/wiki/General_number_field_sieve">methods</a>.<br><br>What is a "small prime"? There was an <a href="https://en.wikipedia.org/wiki/RSA_Factoring_Challenge">RSA Factoring Challenge</a> with cash prizes given to teams who could factorise RSA moduli. This gave insight to the public into how long various key sizes would remain safe. Computers get faster, algorithms get better, so in cryptography it's always prudent to err on the side of caution.<br><br>These days, using primes that are at least 1024 bits long is recommended—multiplying two such 1024 primes gives you a modulus that is 2048 bits large. RSA with a 2048-bit modulus is called RSA-2048.<br><br>Some say that to really remain future-proof you should use RSA-4096 or even RSA-8192. However, there is a tradeoff here; it takes longer to generate large prime numbers, plus modular exponentiations are predictably slower with a large modulus.<br><br>Factorise the 150-bit number <code>510143758735509025530880200653196460532653147</code> into its two constituent primes. Give the smaller one as your answer.<br><br><b>Resources:</b><br>&nbsp; - <a href="https://crypto.stackexchange.com/questions/1978/how-big-an-rsa-key-is-considered-secure-today/1982#1982" target="_blank">How big an RSA key is considered secure today?</a><br>&nbsp; - <a href="https://github.com/elliptic-shiho/primefac-fork" target="_blank">primefac-fork</a><br>
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Frsa%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+        <li class="challenge" data-category="21" data-stage="primes_1">
+            <div id="header-inferius" data-challenge="inferius" class="collapsible-header">
+                
+                <i id="check-inferius" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="1a354b49-a013-f18f-8687-813a4f4ebda5"></i>
+                <i id="uncheck-inferius" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="f3dcf088-a349-7c9c-afe7-22f85bce28e0"></i>
+                
+                <div class="challenge-text truncate">Inferius Prime</div>
+                <span class="right">
+                    
+                    30 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/inferius/solves/">
+                        <span id="solves-inferius">7493 Solves</span>
+                    </a>
+                    
+                    
+                    <span class="solutions_links solutionsHide" id="solutions-inferius">
+                      <b>·</b>
+                      <a class="gold-link preventToggle" href="/challenges/inferius/solutions/">
+                        16 Solutions
+                      </a>
+                    </span>
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    Here is my super-strong RSA implementation, because it's 1600 bits strong it should be unbreakable... at least I think so!<br><br><b>Challenge files:</b><br>&nbsp; - <a href="/static/challenges/inferius_2facb420dc30897696869e3fd11b4b4f.py" download="">inferius.py</a><br>&nbsp; - <a href="/static/challenges/output_cf39018a5db981bd454ddcdcf6595167.txt" download="">output.txt</a><br>
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Frsa%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+        <li class="challenge" data-category="24" data-stage="primes_1">
+            <div id="header-monoprime" data-challenge="monoprime" class="collapsible-header">
+                
+                <i id="check-monoprime" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="db9c5d7a-8286-262a-d4a7-7eae6bad2a1e"></i>
+                <i id="uncheck-monoprime" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="8643d96b-c642-5d8b-d818-ffdb5855de95"></i>
+                
+                <div class="challenge-text truncate">Monoprime</div>
+                <span class="right">
+                    
+                    30 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/monoprime/solves/">
+                        <span id="solves-monoprime">10180 Solves</span>
+                    </a>
+                    
+                    
+                    <span class="solutions_links solutionsHide" id="solutions-monoprime">
+                      <b>·</b>
+                      <a class="gold-link preventToggle" href="/challenges/monoprime/solutions/">
+                        28 Solutions
+                      </a>
+                    </span>
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    Why is everyone so obsessed with multiplying two primes for RSA. Why not just use one?<br><br><b>Challenge files:</b><br>&nbsp; - <a href="/static/challenges/output_086036e35349a406b94bfac9a7af6cca.txt" download="">output.txt</a><br><br><b>Resources:</b><br>&nbsp; - <a href="https://crypto.stackexchange.com/questions/5170/why-do-we-need-in-rsa-the-modulus-to-be-product-of-2-primes" target="_blank">Why do we need in RSA the modulus to be product of 2 primes?</a><br>
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Frsa%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+        <li class="challenge" data-category="20" data-stage="primes_1">
+            <div id="header-square" data-challenge="square" class="collapsible-header">
+                
+                <i id="check-square" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="ac68e340-f6f5-7251-a9cc-6f31ae2143e1"></i>
+                <i id="uncheck-square" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="663725ba-5926-494a-2045-f0c0267c8d57"></i>
+                
+                <div class="challenge-text truncate">Square Eyes</div>
+                <span class="right">
+                    
+                    35 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/square/solves/">
+                        <span id="solves-square">6986 Solves</span>
+                    </a>
+                    
+                    
+                    <span class="solutions_links solutionsHide" id="solutions-square">
+                      <b>·</b>
+                      <a class="gold-link preventToggle" href="/challenges/square/solutions/">
+                        21 Solutions
+                      </a>
+                    </span>
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    It was taking forever to get a 2048 bit prime, so I just generated one and used it twice.<br><br><span class="note"><i class="fas fa-brain"></i> If you're stuck, look again at the formula for Euler's totient.</span><br><br><b>Challenge files:</b><br>&nbsp; - <a href="/static/challenges/output_00dace150c0bc52f7abf03fc3e9529d2.txt" download="">output.txt</a><br>
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Frsa%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+        <li class="challenge" data-category="22" data-stage="primes_1">
+            <div id="header-manyprime" data-challenge="manyprime" class="collapsible-header">
+                
+                <i id="check-manyprime" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="749d0cfd-652b-d9c7-f0eb-ac7aac870efb"></i>
+                <i id="uncheck-manyprime" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="357f384a-301b-274d-d26c-807c00e9b53a"></i>
+                
+                <div class="challenge-text truncate">Manyprime</div>
+                <span class="right">
+                    
+                    40 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/manyprime/solves/">
+                        <span id="solves-manyprime">8930 Solves</span>
+                    </a>
+                    
+                    
+                    <span class="solutions_links solutionsHide" id="solutions-manyprime">
+                      <b>·</b>
+                      <a class="gold-link preventToggle" href="/challenges/manyprime/solutions/">
+                        33 Solutions
+                      </a>
+                    </span>
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    Using one prime factor was definitely a bad idea so I'll try using over 30 instead.<br><br><span class="note"><i class="fas fa-brain"></i> If it's taking forever to factorise, read up on factorisation algorithms and make sure you're using one that's optimised for this scenario.</span><br><br><b>Challenge files:</b><br>&nbsp; - <a href="/static/challenges/output_5a478a5d4764257d0bbdfaed340fcbdd.txt" download="">output.txt</a><br><br><b>Resources:</b><br>&nbsp; - <a href="https://doc.sagemath.org/html/en/reference/interfaces/sage/interfaces/ecm.html" target="_blank">The Elliptic Curve Factorization Method</a><br>
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Frsa%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+    </ul>
+</span>
+
+
+<span class="stage" data-stage="public_exponent">
+    <hr>
+    <div class="challengeInfo">
+      <span><h4>Public exponent</h4></span>
+      <span class="flexToggle"><a class="stage-collapse" data-collapse="public_exponent" href="#">Toggle</a></span>
+    </div>
+    
+    <div class="clearfix"></div>
+    <ul class="collapsible popout" data-collapsible="expandable">
+        
+        <li class="challenge" data-category="15" data-stage="public_exponent">
+            <div id="header-salty" data-challenge="salty" class="collapsible-header">
+                
+                <i id="check-salty" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="8febd8f5-4a39-6dd6-2f1a-5131b929ffbd"></i>
+                <i id="uncheck-salty" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="cd8bde0b-2244-6e68-976c-add484891de4"></i>
+                
+                <div class="challenge-text truncate">Salty</div>
+                <span class="right">
+                    
+                    20 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/salty/solves/">
+                        <span id="solves-salty">9125 Solves</span>
+                    </a>
+                    
+                    
+                    <span class="solutions_links solutionsHide" id="solutions-salty">
+                      <b>·</b>
+                      <a class="gold-link preventToggle" href="/challenges/salty/solutions/">
+                        21 Solutions
+                      </a>
+                    </span>
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    Smallest exponent should be fastest, right?<br><br><b>Challenge files:</b><br>&nbsp; - <a href="/static/challenges/salty_9854bdcadc3f8b8f58008a24d392c1bf.py" download="">salty.py</a><br>&nbsp; - <a href="/static/challenges/output_95f558e889cc66920c24a961f1fb8181.txt" download="">output.txt</a><br>
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Frsa%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+        <li class="challenge" data-category="17" data-stage="public_exponent">
+            <div id="header-modulus_inutilis" data-challenge="modulus_inutilis" class="collapsible-header">
+                
+                <i id="check-modulus_inutilis" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="ae682642-d3c0-466e-d30c-19860ac35625"></i>
+                <i id="uncheck-modulus_inutilis" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="562f789d-420a-1b7a-5996-d67dce958be5"></i>
+                
+                <div class="challenge-text truncate">Modulus Inutilis</div>
+                <span class="right">
+                    
+                    50 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/modulus_inutilis/solves/">
+                        <span id="solves-modulus_inutilis">8478 Solves</span>
+                    </a>
+                    
+                    
+                    <span class="solutions_links solutionsHide" id="solutions-modulus_inutilis">
+                      <b>·</b>
+                      <a class="gold-link preventToggle" href="/challenges/modulus_inutilis/solutions/">
+                        25 Solutions
+                      </a>
+                    </span>
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    My primes should be more than large enough now!<br><br><b>Challenge files:</b><br>&nbsp; - <a href="/static/challenges/modulus_inutilis_d2e0022b0165d99403eafeb0bea01231.py" download="">modulus_inutilis.py</a><br>&nbsp; - <a href="/static/challenges/output_30cff153b7432055fc947fc5abdb57d3.txt" download="">output.txt</a><br>
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Frsa%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+        <li class="challenge" data-category="16" data-stage="public_exponent">
+            <div id="header-big" data-challenge="big" class="collapsible-header">
+                
+                <i id="check-big" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="707341b5-eec4-fd6c-6e23-7b1e49bfe50f"></i>
+                <i id="uncheck-big" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="1903e04b-9f50-abac-314d-fe4e886a326d"></i>
+                
+                <div class="challenge-text truncate">Everything is Big</div>
+                <span class="right">
+                    
+                    70 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/big/solves/">
+                        <span id="solves-big">5128 Solves</span>
+                    </a>
+                    
+                    
+                    <span class="solutions_links solutionsHide" id="solutions-big">
+                      <b>·</b>
+                      <a class="gold-link preventToggle" href="/challenges/big/solutions/">
+                        21 Solutions
+                      </a>
+                    </span>
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    We have a supercomputer at work, so I've made sure my encryption is secure by picking massive numbers!<br><br><b>Challenge files:</b><br>&nbsp; - <a href="/static/challenges/source_a9eaeb4b534011e36229bf45be4ea455.py" download="">source.py</a><br>&nbsp; - <a href="/static/challenges/output_1884d0ba92d19ad074549e174cdf5a70.txt" download="">output.txt</a><br>
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Frsa%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+        <li class="challenge" data-category="91" data-stage="public_exponent">
+            <div id="header-wires" data-challenge="wires" class="collapsible-header">
+                
+                <i id="check-wires" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="9412df54-57f6-de1a-7c0e-b5ee0db565ef"></i>
+                <i id="uncheck-wires" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="700b5d2b-f451-99f5-d316-9c009fa66ccf"></i>
+                
+                <div class="challenge-text truncate">Crossed Wires</div>
+                <span class="right">
+                    
+                    100 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/wires/solves/">
+                        <span id="solves-wires">4569 Solves</span>
+                    </a>
+                    
+                    
+                    <span class="solutions_links solutionsHide" id="solutions-wires">
+                      <b>·</b>
+                      <a class="gold-link preventToggle" href="/challenges/wires/solutions/">
+                        21 Solutions
+                      </a>
+                    </span>
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    I asked my friends to encrypt our secret flag before sending it to me, but instead of using my key, they've all used their own! Can you help?<br><br><b>Challenge files:</b><br>&nbsp; - <a href="/static/challenges/source_b3c3c786c649d363d27995545cf95dab.py" download="">source.py</a><br>&nbsp; - <a href="/static/challenges/output_434cbf2b937bac1177bed299b2049a92.txt" download="">output.txt</a><br><br><b>Resources:</b><br>&nbsp; - <a href="https://www.di-mgt.com.au/rsa_factorize_n.html" target="_blank">RSA: how to factorize N given d</a><br>
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Frsa%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+        <li class="challenge" data-category="18" data-stage="public_exponent">
+            <div id="header-big2" data-challenge="big2" class="collapsible-header">
+                
+                <i id="check-big2" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="faf53014-8f81-5898-aa68-2852657c18a1"></i>
+                <i id="uncheck-big2" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="886c9818-e00d-03e5-ec8e-8091882268e7"></i>
+                
+                <div class="challenge-text truncate">Everything is Still Big</div>
+                <span class="right">
+                    
+                    100 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/big2/solves/">
+                        <span id="solves-big2">3851 Solves</span>
+                    </a>
+                    
+                    
+                    <span class="solutions_links solutionsHide" id="solutions-big2">
+                      <b>·</b>
+                      <a class="gold-link preventToggle" href="/challenges/big2/solutions/">
+                        11 Solutions
+                      </a>
+                    </span>
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    Okay so I got a bit carefree with my last script, but this time I've protected myself while keeping everything really big. Nothing will stop me and my supercomputer now!<br><br><b>Challenge files:</b><br>&nbsp; - <a href="/static/challenges/source_359e2ea194f56fb72f63e7dff31b54ee.py" download="">source.py</a><br>&nbsp; - <a href="/static/challenges/output_f554de954a6cd0a94142afc264107558.txt" download="">output.txt</a><br><br><b>Resources:</b><br>&nbsp; - <a href="https://www.ams.org/notices/199902/boneh.pdf" target="_blank">Twenty Years of Attacks on the RSA Cryptosystem</a><br>
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Frsa%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+        <li class="challenge" data-category="19" data-stage="public_exponent">
+            <div id="header-johan" data-challenge="johan" class="collapsible-header">
+                
+                <i id="check-johan" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="945dbcf9-1985-8092-e504-22a274ea3648"></i>
+                <i id="uncheck-johan" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="fee5d82e-50ed-0bd1-43d8-00ad99700520"></i>
+                
+                <div class="challenge-text truncate">Endless Emails</div>
+                <span class="right">
+                    
+                    150 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/johan/solves/">
+                        <span id="solves-johan">3235 Solves</span>
+                    </a>
+                    
+                    
+                    <span class="solutions_links solutionsHide" id="solutions-johan">
+                      <b>·</b>
+                      <a class="gold-link preventToggle" href="/challenges/johan/solutions/">
+                        28 Solutions
+                      </a>
+                    </span>
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    Poor Johan has been answering emails all day and many of the students are asking the same question. Can you read his messages?<br><br><b>Challenge files:</b><br>&nbsp; - <a href="/static/challenges/johan_335f59b72545e3e27e60453719d50288.py" download="">johan.py</a><br>&nbsp; - <a href="/static/challenges/output_0ef6d6343784e59e2f44f61d2d29896f.txt" download="">output.txt</a><br><br><b>Resources:</b><br>&nbsp; - <a href="https://www.ams.org/notices/199902/boneh.pdf" target="_blank">Twenty Years of Attacks on the RSA Cryptosystem</a><br>
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Frsa%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+    </ul>
+</span>
+
+
+<span class="stage" data-stage="primes_2">
+    <hr>
+    <div class="challengeInfo">
+      <span><h4>Primes Part 2</h4></span>
+      <span class="flexToggle"><a class="stage-collapse" data-collapse="primes_2" href="#">Toggle</a></span>
+    </div>
+    
+    <div class="clearfix"></div>
+    <ul class="collapsible popout" data-collapsible="expandable">
+        
+        <li class="challenge" data-category="26" data-stage="primes_2">
+            <div id="header-infinite_descent" data-challenge="infinite_descent" class="collapsible-header">
+                
+                <i id="check-infinite_descent" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="f989c6a8-796b-dc93-dd64-41ee61f2c6dc"></i>
+                <i id="uncheck-infinite_descent" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="cad93ebf-b0a0-14d8-ded6-d665e8ff3ba2"></i>
+                
+                <div class="challenge-text truncate">Infinite Descent</div>
+                <span class="right">
+                    
+                    50 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/infinite_descent/solves/">
+                        <span id="solves-infinite_descent">3970 Solves</span>
+                    </a>
+                    
+                    
+                    <span class="solutions_links solutionsHide" id="solutions-infinite_descent">
+                      <b>·</b>
+                      <a class="gold-link preventToggle" href="/challenges/infinite_descent/solutions/">
+                        19 Solutions
+                      </a>
+                    </span>
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    Finding large primes is slow, so I've devised an optimisation.<br><br><b>Challenge files:</b><br>&nbsp; - <a href="/static/challenges/descent_240fda375202c97a3cbaf3fdedbb8266.py" download="">descent.py</a><br>&nbsp; - <a href="/static/challenges/output_14f82a67efe7b7edffb810dbb7ab5f27.txt" download="">output.txt</a><br>
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Frsa%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+        <li class="challenge" data-category="28" data-stage="primes_2">
+            <div id="header-marin" data-challenge="marin" class="collapsible-header">
+                
+                <i id="check-marin" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="f5713f94-9062-6f5d-60e6-4437744aae2d"></i>
+                <i id="uncheck-marin" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="836ed74c-db32-3031-0a01-1f4309fdf271"></i>
+                
+                <div class="challenge-text truncate">Marin's Secrets</div>
+                <span class="right">
+                    
+                    50 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/marin/solves/">
+                        <span id="solves-marin">3846 Solves</span>
+                    </a>
+                    
+                    
+                    <span class="solutions_links solutionsHide" id="solutions-marin">
+                      <b>·</b>
+                      <a class="gold-link preventToggle" href="/challenges/marin/solutions/">
+                        22 Solutions
+                      </a>
+                    </span>
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    I've found a super fast way to generate primes from my secret list.<br><br><b>Challenge files:</b><br>&nbsp; - <a href="/static/challenges/marin_06e647881a0f6f2480d48c7f18f0274e.py" download="">marin.py</a><br>&nbsp; - <a href="/static/challenges/output_f194012343666ced1a6699d196c8adc5.txt" download="">output.txt</a><br>
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Frsa%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+        <li class="challenge" data-category="83" data-stage="primes_2">
+            <div id="header-fast_primes" data-challenge="fast_primes" class="collapsible-header">
+                
+                <i id="check-fast_primes" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="7c9e8425-d347-84af-da5b-d90796d3cc8d"></i>
+                <i id="uncheck-fast_primes" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="4deace9a-9e5b-6cba-274b-c61fef7d9855"></i>
+                
+                <div class="challenge-text truncate">Fast Primes</div>
+                <span class="right">
+                    
+                    75 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/fast_primes/solves/">
+                        <span id="solves-fast_primes">2565 Solves</span>
+                    </a>
+                    
+                    
+                    <span class="solutions_links solutionsHide" id="solutions-fast_primes">
+                      <b>·</b>
+                      <a class="gold-link preventToggle" href="/challenges/fast_primes/solutions/">
+                        6 Solutions
+                      </a>
+                    </span>
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    I need to produce millions of RSA keys quickly and the standard way just doesn't cut it. Here's yet another fast way to generate primes which has actually resisted years of review.<br><br><b>Challenge files:</b><br>&nbsp; - <a href="/static/challenges/fast_primes_d50f598035bc3bedfa9fcff8cc08ece7.py" download="">fast_primes.py</a><br>&nbsp; - <a href="/static/challenges/key_17a08b7040db46308f8b9a19894f9f95.pem" download="">key.pem</a><br>&nbsp; - <a href="/static/challenges/ciphertext_98a448b6bbcd080909d235e5da5e9d56.txt" download="">ciphertext.txt</a><br>
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Frsa%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+        <li class="challenge" data-category="27" data-stage="primes_2">
+            <div id="header-ron_was_wrong" data-challenge="ron_was_wrong" class="collapsible-header">
+                
+                <i id="check-ron_was_wrong" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="bfb55f9d-0bc9-fe8e-639c-12036b1e41af"></i>
+                <i id="uncheck-ron_was_wrong" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="2678d1f9-5978-3e09-146d-9ce4fa1ea0ef"></i>
+                
+                <div class="challenge-text truncate">Ron was Wrong, Whit is Right</div>
+                <span class="right">
+                    
+                    90 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/ron_was_wrong/solves/">
+                        <span id="solves-ron_was_wrong">2551 Solves</span>
+                    </a>
+                    
+                    
+                    <span class="solutions_links solutionsHide" id="solutions-ron_was_wrong">
+                      <b>·</b>
+                      <a class="gold-link preventToggle" href="/challenges/ron_was_wrong/solutions/">
+                        19 Solutions
+                      </a>
+                    </span>
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    Here's a bunch of RSA public keys I gathered from people on the net together with messages that they sent.<br><br>As excerpt.py shows, everyone was using PKCS#1 OAEP to encrypt their own messages. It shouldn't be possible to decrypt them, but perhaps there are issues with some of the keys?<br><br><b>Challenge files:</b><br>&nbsp; - <a href="/static/challenges/excerpt_fde5288e8de326c341ced61e9fea92ba.py" download="">excerpt.py</a><br>&nbsp; - <a href="/static/challenges/keys_and_messages_701dba5b1a84cb168547ec18227a7740.zip" download="">keys_and_messages.zip</a><br><br><b>Resources:</b><br>&nbsp; - <a href="https://sbseminar.wordpress.com/2012/02/16/the-recent-difficulties-with-rsa/" target="_blank">The recent difficulties with RSA</a><br>
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Frsa%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+        <li class="challenge" data-category="136" data-stage="primes_2">
+            <div id="header-rsa_backdoor" data-challenge="rsa_backdoor" class="collapsible-header">
+                
+                <i id="check-rsa_backdoor" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="702f56a4-44cb-f32d-a9b0-f0278ddce919"></i>
+                <i id="uncheck-rsa_backdoor" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="15c03404-2215-c9b7-6021-28dde697b88d"></i>
+                
+                <div class="challenge-text truncate">RSA Backdoor Viability</div>
+                <span class="right">
+                    
+                    175 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/rsa_backdoor/solves/">
+                        <span id="solves-rsa_backdoor">1905 Solves</span>
+                    </a>
+                    
+                    
+                    <span class="solutions_links solutionsHide" id="solutions-rsa_backdoor">
+                      <b>·</b>
+                      <a class="gold-link preventToggle" href="/challenges/rsa_backdoor/solutions/">
+                        7 Solutions
+                      </a>
+                    </span>
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    It seems like my method to generate fast primes was not completely secure. I came up with a new approach to improve security, including a factorization backdoor in case I ever lose my private key. You'll definitely need some complex techniques to break this! <br><br><span class="note"><i class="fas fa-brain"></i> You may need to tweak the recursion limit (<code>sys.setrecursionlimit(n)</code> in Python) in your programming language to get your solution working.</span><br><br><b>Challenge files:</b><br>&nbsp; - <a href="/static/challenges/complex_primes_2d261cc3ab7fb63530d172e045861190.py" download="">complex_primes.py</a><br>&nbsp; - <a href="/static/challenges/output_57c296f30a4d023c3c29f9b311da7c85.txt" download="">output.txt</a><br><br><br>Challenge contributed by <a class="gold-link" href="/user/joachim">joachim</a>
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Frsa%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+    </ul>
+</span>
+
+
+<span class="stage" data-stage="rsa_padding">
+    <hr>
+    <div class="challengeInfo">
+      <span><h4>Padding</h4></span>
+      <span class="flexToggle"><a class="stage-collapse" data-collapse="rsa_padding" href="#">Toggle</a></span>
+    </div>
+    
+    <div class="clearfix"></div>
+    <ul class="collapsible popout" data-collapsible="expandable">
+        
+        <li class="challenge" data-category="100" data-stage="rsa_padding">
+            <div id="header-bespoke" data-challenge="bespoke" class="collapsible-header">
+                
+                <i id="check-bespoke" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="4c151320-7a75-bcd2-69a5-aa112ce0c3b9"></i>
+                <i id="uncheck-bespoke" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="aeed0fab-b97f-c205-0c62-eaa121995bdc"></i>
+                
+                <div class="challenge-text truncate">Bespoke Padding</div>
+                <span class="right">
+                    
+                    100 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/bespoke/solves/">
+                        <span id="solves-bespoke">1706 Solves</span>
+                    </a>
+                    
+                    
+                    <span class="solutions_links solutionsHide" id="solutions-bespoke">
+                      <b>·</b>
+                      <a class="gold-link preventToggle" href="/challenges/bespoke/solutions/">
+                        15 Solutions
+                      </a>
+                    </span>
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    Been cooking up my own padding scheme, now my encrypted flag is different everytime!<br><br>Connect at <code>socket.cryptohack.org 13386</code><br><br><b>Challenge files:</b><br>&nbsp; - <a href="/static/challenges/13386_42e6fb9bddd96dc87c9b79435e226329.py" download="">13386.py</a><br>
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Frsa%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+        <li class="challenge" data-category="25" data-stage="rsa_padding">
+            <div id="header-null_padding" data-challenge="null_padding" class="collapsible-header">
+                
+                <i id="check-null_padding" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="c5af6399-72b1-80af-2475-808ddb2ab0f4"></i>
+                <i id="uncheck-null_padding" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="28a70688-3e0a-58d1-56c0-bb4c8b879916"></i>
+                
+                <div class="challenge-text truncate">Null or Never</div>
+                <span class="right">
+                    
+                    100 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/null_padding/solves/">
+                        <span id="solves-null_padding">1848 Solves</span>
+                    </a>
+                    
+                    
+                    <span class="solutions_links solutionsHide" id="solutions-null_padding">
+                      <b>·</b>
+                      <a class="gold-link preventToggle" href="/challenges/null_padding/solutions/">
+                        19 Solutions
+                      </a>
+                    </span>
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    Can custom padding save one from some of the mistakes we already covered?<br><br><b>Challenge files:</b><br>&nbsp; - <a href="/static/challenges/pad_encrypt_17109ca1e3e5d0c90e47b9dd13fb6a60.py" download="">pad_encrypt.py</a><br>&nbsp; - <a href="/static/challenges/output_a9b926b2ff21c0aeac188cd5191b1396.txt" download="">output.txt</a><br>
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Frsa%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+    </ul>
+</span>
+
+
+<span class="stage" data-stage="rsa_signing">
+    <hr>
+    <div class="challengeInfo">
+      <span><h4>Signatures Part 1</h4></span>
+      <span class="flexToggle"><a class="stage-collapse" data-collapse="rsa_signing" href="#">Toggle</a></span>
+    </div>
+    
+    <div class="clearfix"></div>
+    <ul class="collapsible popout" data-collapsible="expandable">
+        
+        <li class="challenge" data-category="38" data-stage="rsa_signing">
+            <div id="header-signing_server" data-challenge="signing_server" class="collapsible-header">
+                
+                <i id="check-signing_server" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="20303112-9102-c802-f008-5401bb765194"></i>
+                <i id="uncheck-signing_server" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="708790f8-ad85-4183-b6fe-674c117db9e7"></i>
+                
+                <div class="challenge-text truncate">Signing Server</div>
+                <span class="right">
+                    
+                    60 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/signing_server/solves/">
+                        <span id="solves-signing_server">2572 Solves</span>
+                    </a>
+                    
+                    
+                    <span class="solutions_links solutionsHide" id="solutions-signing_server">
+                      <b>·</b>
+                      <a class="gold-link preventToggle" href="/challenges/signing_server/solutions/">
+                        16 Solutions
+                      </a>
+                    </span>
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    My boss has so many emails he's set up a server to just sign everything automatically. He also stores encrypted messages to himself for easy access. I wonder what he's been saying.<br><br>Connect at <code>socket.cryptohack.org 13374</code><br><br><b>Challenge files:</b><br>&nbsp; - <a href="/static/challenges/13374_fff7c798c8d0c351fd2d05aad6b9d9f0.py" download="">13374.py</a><br>
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Frsa%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+        <li class="challenge" data-category="126" data-stage="rsa_signing">
+            <div id="header-lets_decrypt" data-challenge="lets_decrypt" class="collapsible-header">
+                
+                <i id="check-lets_decrypt" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="c97b42c0-0e65-4197-df80-d3fbeb7f3fae"></i>
+                <i id="uncheck-lets_decrypt" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="d96b778c-3a58-7775-ccb6-95e668f81b52"></i>
+                
+                <div class="challenge-text truncate">Let's Decrypt</div>
+                <span class="right">
+                    
+                    80 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/lets_decrypt/solves/">
+                        <span id="solves-lets_decrypt">1833 Solves</span>
+                    </a>
+                    
+                    
+                    <span class="solutions_links solutionsHide" id="solutions-lets_decrypt">
+                      <b>·</b>
+                      <a class="gold-link preventToggle" href="/challenges/lets_decrypt/solutions/">
+                        9 Solutions
+                      </a>
+                    </span>
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    If you can prove you own CryptoHack.org, then you get access to one of our secrets.<br><br>Connect at <code>socket.cryptohack.org 13391</code><br><br><b>Challenge files:</b><br>&nbsp; - <a href="/static/challenges/13391_5bb4e548ed254cef357799685c887460.py" download="">13391.py</a><br>
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Frsa%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+        <li class="challenge" data-category="37" data-stage="rsa_signing">
+            <div id="header-rsa_blinding" data-challenge="rsa_blinding" class="collapsible-header">
+                
+                <i id="check-rsa_blinding" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="67624814-7bef-8b79-cca4-0a804a1a4484"></i>
+                <i id="uncheck-rsa_blinding" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="2eba91cf-5b70-c6ea-46b8-d96ded9aeb61"></i>
+                
+                <div class="challenge-text truncate">Blinding Light</div>
+                <span class="right">
+                    
+                    120 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/rsa_blinding/solves/">
+                        <span id="solves-rsa_blinding">1769 Solves</span>
+                    </a>
+                    
+                    
+                    <span class="solutions_links solutionsHide" id="solutions-rsa_blinding">
+                      <b>·</b>
+                      <a class="gold-link preventToggle" href="/challenges/rsa_blinding/solutions/">
+                        18 Solutions
+                      </a>
+                    </span>
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    Here's my token signing and verification server. I'm not sure it's doing signing properly, but I've implemented some safeguards to ensure it won't hand out admin tokens to just anyone.<br><br>Connect at <code>socket.cryptohack.org 13376</code><br><br><b>Challenge files:</b><br>&nbsp; - <a href="/static/challenges/13376_43ed0ce3200294aa8cd3a797abd12fc9.py" download="">13376.py</a><br>
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Frsa%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+    </ul>
+</span>
+
+
+<span class="stage" data-stage="rsa_signing_2">
+    <hr>
+    <div class="challengeInfo">
+      <span><h4>Signatures Part 2</h4></span>
+      <span class="flexToggle"><a class="stage-collapse" data-collapse="rsa_signing_2" href="#">Toggle</a></span>
+    </div>
+    
+    <div class="clearfix"></div>
+    <ul class="collapsible popout" data-collapsible="expandable">
+        
+        <li class="challenge" data-category="36" data-stage="rsa_signing_2">
+            <div id="header-pedro" data-challenge="pedro" class="collapsible-header">
+                
+                <i id="check-pedro" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="4fa0892f-0f73-55f9-c068-59584b93e187"></i>
+                <i id="uncheck-pedro" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="9419677b-cfd3-36ac-a7ab-251d9a45d8ab"></i>
+                
+                <div class="challenge-text truncate">Vote for Pedro</div>
+                <span class="right">
+                    
+                    150 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/pedro/solves/">
+                        <span id="solves-pedro">1488 Solves</span>
+                    </a>
+                    
+                    
+                    <span class="solutions_links solutionsHide" id="solutions-pedro">
+                      <b>·</b>
+                      <a class="gold-link preventToggle" href="/challenges/pedro/solutions/">
+                        13 Solutions
+                      </a>
+                    </span>
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    If you want my flag, you better vote for Pedro! Can you sign your vote to the server as Alice?<br><br>Connect at <code>socket.cryptohack.org 13375</code><br><br><b>Challenge files:</b><br>&nbsp; - <a href="/static/challenges/13375_7eaca879f3911da349a7248f302c6344.py" download="">13375.py</a><br>&nbsp; - <a href="/static/challenges/alice_668771701429c4137ea2c6c62249f619.key" download="">alice.key</a><br>
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Frsa%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+        <li class="challenge" data-category="133" data-stage="rsa_signing_2">
+            <div id="header-lets_decrypt_2" data-challenge="lets_decrypt_2" class="collapsible-header">
+                
+                <i id="check-lets_decrypt_2" class="fas fa-star gold-text tooltipped" style="display: none;" data-tooltip="You have solved this challenge" data-tooltip-id="80e3bedd-1a5c-d002-0486-eaa878e971dc"></i>
+                <i id="uncheck-lets_decrypt_2" class="far fa-star grey-text tooltipped" data-tooltip="You have not yet solved this challenge" data-tooltip-id="2c03b9e5-b14c-96d5-2c4a-584bb89dc7db"></i>
+                
+                <div class="challenge-text truncate">Let's Decrypt Again</div>
+                <span class="right">
+                    
+                    175 pts <b>·</b>
+                    
+                    <span class="mobileSolves">
+                    
+                    <a class="gold-link preventToggle" href="/challenges/lets_decrypt_2/solves/">
+                        <span id="solves-lets_decrypt_2">960 Solves</span>
+                    </a>
+                    
+                    
+                    <span class="solutions_links solutionsHide" id="solutions-lets_decrypt_2">
+                      <b>·</b>
+                      <a class="gold-link preventToggle" href="/challenges/lets_decrypt_2/solutions/">
+                        10 Solutions
+                      </a>
+                    </span>
+                    
+                    </span>
+                </span>
+            </div>
+            <div class="collapsible-body">
+                <div class="challengeDescription">
+                <!-- <p> -->
+                    Let's Decrypt was too easy, let's do it again!<br><br>Connect at <code>socket.cryptohack.org 13394</code><br><br><b>Challenge files:</b><br>&nbsp; - <a href="/static/challenges/13394_b45cc5d677b4748dffa4c6ffd5a6bc67.py" download="">13394.py</a><br><br><br>Challenge contributed by <a class="gold-link" href="/user/Robin_Jadoul">Robin_Jadoul</a> and <a class="gold-link" href="/user/Thunderlord">Thunderlord</a>
+                <!-- </p> -->
+                </div>
+
+                
+                <p class="challengeMessage">
+                    You must be <a href="/login/?next=%2Fchallenges%2Frsa%2F"><b>logged in</b></a> to submit your flag.
+                </p>
+                <br>
+
+                
+        </div></li>
+        
+    </ul>
+</span>
+
+
+
+        </div>
+        <script src="/static/js/jquery.min.js"></script>
+        <script src="/static/js/materialize.min.js"></script>
+        <script defer="" src="/static/js/confetti.browser.min.js"></script>
+        <script src="/static/js/api.js"></script>
+        <script src="/static/js/moment-with-locales.min.js"></script>
+
+<script>
+moment.locale("en");
+function flask_moment_render(elem) {{
+    const timestamp = moment(elem.dataset.timestamp);
+    const func = elem.dataset.function;
+    const format = elem.dataset.format;
+    const timestamp2 = elem.dataset.timestamp2;
+    const no_suffix = elem.dataset.nosuffix;
+    const units = elem.dataset.units;
+    let args = [];
+    if (format)
+        args.push(format);
+    if (timestamp2)
+        args.push(moment(timestamp2));
+    if (no_suffix)
+        args.push(no_suffix);
+    if (units)
+        args.push(units);
+    elem.textContent = timestamp[func].apply(timestamp, args);
+    elem.classList.remove('flask-moment');
+    elem.style.display = "";
+}}
+function flask_moment_render_all() {{
+    const moments = document.querySelectorAll('.flask-moment');
+    moments.forEach(function(moment) {{
+        flask_moment_render(moment);
+        const refresh = moment.dataset.refresh;
+        if (refresh && refresh > 0) {{
+            (function(elem, interval) {{
+                setInterval(function() {{
+                    flask_moment_render(elem);
+                }}, interval);
+            }})(moment, refresh);
+        }}
+    }})
+}}
+document.addEventListener("DOMContentLoaded", flask_moment_render_all);
+</script>
+
+        <script>
+            function dismissNotification(id) {
+                api.makeCall("/dismiss/" + id + ".json", {_csrf_token: "evqcmr67h72vvdpmv99ne6wgw5oue9lvwhfiby9vxej6m1gmsw5wm1g575xu3cwt"}, function() {
+                    $("#notification" + id).slideUp();
+                });
+            }
+
+            $( document ).ready(function() {
+              $('select').material_select();
+            });
+
+            var pointsLevels = [0, 10, 20, 40, 80, 160, 320, 640, 1280, 1920, 2560, 3200, 3840, 4480, 5120, 5760, 6400, 7040, 7680, 8320, 8960, 9600, 10240, 10880, 11520, 12160, 12800, 13440, 14080, 14720, 15360, 16000, 16640, 17280, 17920, 18560, 19200, 19840, 20480];
+        </script>
+        
+        <script>
+        $(function() {
+            $('.button-collapse').sideNav();
+        });
+        </script>
+        <script id="toasts" type="text/javascript">
+            
+        </script>
+        
+
+
+<script>
+    var challenges_open = JSON.parse(localStorage.getItem("challenges-open")) || {"rsa_starter_1": true, "rsa_starter_2": true, "rsa_starter_3": true, "rsa_starter_4": true, "rsa_starter_5": true, "rsa_starter_6": true};
+    Object.keys(challenges_open).forEach(function(el){
+        $(".collapsible-header#header-" + el).addClass("active");
+    });
+
+    $(".collapsible-header").on("click", function(){
+        var chall = $(this).data('challenge');
+        if(challenges_open.hasOwnProperty(chall)) {
+            delete challenges_open[chall];
+        } else {
+            challenges_open[chall] = true;
+            $('html, body').animate({
+                    scrollTop: $(this).offset().top -100
+            }, 700);
+        }
+        localStorage.setItem("challenges-open", JSON.stringify(challenges_open));
+    });
+
+    $(".preventToggle").on("click", function(){
+        event.stopPropagation();
+    });
+
+    var state = $(".collapsible-header.active").length == 0;
+    function updateButton(){
+        if(state){
+            $("#toggleState").html("Expand all challenges");
+        } else {
+            $("#toggleState").html("Collapse all challenges");
+        }
+
+    }
+    updateButton(state);
+    function toggle() {
+        if(state) {
+            $(".collapsible-header").each(function(i, x){ $(x).hasClass("active") || $(x).click(); });
+        } else {
+            $(".collapsible-header").each(function(i, x){ $(x).hasClass("active") && $(x).click(); });
+        }
+        state = !state;
+        updateButton(state);
+    }
+    function filterCategories(t) {
+        var v = t.options[t.selectedIndex].value;
+        if(v == "*")
+            $(".stage").show();
+        else {
+            $(".stage[data-stage=" + v + "]").show();
+            $(".stage[data-stage!=" + v + "]").hide();
+        }
+    }
+    function toggleSolved(){
+      $('.fas.fa-star').each(function() {
+        if($(this).css('display') == 'block'){
+          if($(this).parent().next().css('display') == 'block'){
+              $(this).parent().toggle();
+              $(this).parent().click();
+              $(this).parent().next().hide();
+          }
+          else{
+            $(this).parent().toggle();
+          }
+        }
+      });
+    }
+
+
+    $("#toggleSolved").on("click", function(e){
+        // e.preventDefault();
+        toggleSolved();
+        // var text = $(this).next().text();
+        // $(this).next().text(
+        // text == "Hide Solved Challenges" ? "Show Solved Challenges" : "Hide Solved Challenges");
+    });
+
+
+    $("#toggleState").on("click", function(e){
+        // e.preventDefault();
+        toggle();
+    });
+    $(".stage-collapse").on("click", function(e){
+        // e.preventDefault();
+        var stage = $(this).data('collapse');
+        var header_selector = ".challenge[data-stage=" + stage + "] .collapsible-header";
+        var state = $(header_selector + ".active").length != 0;
+        if(state)
+            $(header_selector).each(function(i, x){ $(x).hasClass("active") && $(x).click(); });
+        else
+            $(header_selector).each(function(i, x){ $(x).hasClass("active") || $(x).click(); });
+    });
+    $("form").submit(function(e) {
+        // Loading button
+        var loadBtn = $(this).find(".loader");
+        loadBtn.show();
+
+        var id = $(this).data("challenge");
+        var points = $(this).data("points");
+        var flag = $("#flag-" + id).val();
+        // var updatedScore = score + points;
+        console.log(id);
+        console.log(flag);
+        api.makeCall("/submit/" + id + ".json", {flag: flag, _csrf_token: "evqcmr67h72vvdpmv99ne6wgw5oue9lvwhfiby9vxej6m1gmsw5wm1g575xu3cwt"}, function(data) {
+            if(data.code) {
+                loadBtn.hide();
+                Materialize.toast(data.message, 4000);
+            }
+            else {
+                // Materialize.toast("Correct flag, nice one!", 4000);
+                $("#uncheck-" + id).hide();
+                $("#check-" + id).show();
+                $("#header-" + id).click();
+
+                // update solves box
+                var solves_text = data.solves == 1 ? "Solve" : "Solves";
+                $("#solves-" + id).html(data.solves + " " + solves_text);
+                $("#solves-" + id).parent().show();
+                $("#solutions-" + id).show();
+                $("#youvesolved-" + id).show();
+                $("#empty-" + id).hide();
+                $("#flagform-" + id).hide();
+
+                // update points at top
+                console.log(score);
+                console.log(points);
+                score = calculateLevel(score, points);
+                loadBtn.hide();
+                setTimeout(function(){ launchConfetti(); }, 250);
+            }
+        });
+        return false;
+    });
+</script>
+
+
+      </div>
+
+      <div id="levelUpPop" class="levelup">
+        <div class="levelUpCard">
+          <h3>Level Up</h3>
+          <img src="/static/img/levelup.png" width="180" height="202" alt="level up icon">
+          <p>You are now level <span id="currentlevel" class="gold-text">Current level</span></p>
+        </div>
+      </div>
+    
+
+    <footer>
+    <div class="footerLinks">
+      <div>
+        <h5>CryptoHack</h5>
+        <a id="changeTheme">Light Mode</a><br>
+        <a href="/faq/">FAQ</a><br>
+        <a href="/blog/">Blog</a><br>
+        <span class="footerIcon">
+          <a href="https://twitter.com/cryptohack__" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="https://discord.gg/h9E7cna5pV" aria-label="Discord"><img src="/static/img/Discord-Logo-Color.svg" width="25"></a>
+          <a href="https://patreon.com/cryptohack" aria-label="Patreon"><i class="fab fa-patreon"></i></a>
+        </span><br>
+
+      </div>
+
+      <div>
+        <h5>Courses</h5>
+        <a href="/courses/intro/">Introduction to CryptoHack</a><br>
+        <a href="/courses/modular/">Modular Arithmetic</a><br>
+        <a href="/courses/symmetric/">Symmetric Cryptography</a><br>
+        <a href="/courses/public-key/">Public-Key Cryptography</a><br>
+        <a href="/courses/elliptic/">Elliptic Curves</a><br>
+      </div>
+
+      <div>
+        <h5>Categories</h5>
+        <a href="/challenges/general/">General</a><br>
+        <a href="/challenges/aes/">Symmetric Ciphers</a><br>
+        <a href="/challenges/maths/">Mathematics</a><br>
+        <a href="/challenges/rsa/">RSA</a><br>
+        <a href="/challenges/diffie-hellman/">Diffie-Hellman</a><br>
+        <a href="/challenges/ecc/">Elliptic Curves</a><br>
+        <a href="/challenges/hashes/">Hash Functions</a><br>
+        <a href="/challenges/web/">Crypto on the Web</a><br>
+        <a href="/challenges/post-quantum/">Lattices</a><br>
+        <a href="/challenges/isogenies/">Isogenies</a><br>
+        <a href="/challenges/zkp/">Zero-Knowledge Proofs</a><br>
+        <a href="/challenges/misc/">Miscellaneous</a><br>
+        <a href="/challenges/ctf-archive/">CTF Archive</a><br>
+      </div>
+    </div>
+
+
+    <div class="credits">
+      <h5>Credits</h5>
+      Illustrations from <a href="https://icons8.com">Ouch.pics</a><br>
+      Drawn by <a href="https://dribbble.com/thierryfousse">Thierry Fousse</a> and <a href="https://icons8.com/illustrations/author/60ab64bc8e3740e9be238b13">Tatyana Krasutskaya</a>
+
+    </div>
+
+    <div class="copyright">
+      <span>
+        <a href="/privacy-policy/">Privacy Policy</a> &nbsp;
+      </span>
+
+      <span>
+        © <span class="" data-timestamp="2026-05-25T08:42:34Z" data-function="format" data-format="YYYY" data-refresh="0" style="">2026</span> CryptoHack
+      </span>
+    </div>
+    </footer>
+
+    <script type="text/javascript">
+    function updateThemeToggleFooter() {
+      var elem = document.querySelector('#changeTheme');
+      elem.innerHTML = isLightThemeSelected() ? 'Dark Mode' : 'Light Mode'
+    }
+
+    (function() {
+      updateThemeToggleFooter()
+    })();
+
+    function togglePageContentLightDark() {
+        var html = document.getElementsByTagName('html')[0]
+        var currentClass = html.className
+        var newClass = html.className == 'dark-mode' ? 'light-mode' : 'dark-mode'
+        html.className = newClass
+
+        document.cookie = 'theme=' + (newClass == 'light-mode' ? 'light' : 'dark') + ';SameSite=Strict;path=/;domain=cryptohack.org;expires=Fri, 31 Dec 9999 23:59:59 GMT'
+        console.log('Cookies are now: ' + document.cookie)
+
+        var elem = document.querySelector('#changeTheme');
+        elem.innerHTML = isLightThemeSelected() ? 'Dark Mode' : 'Light Mode'
+    }
+
+    $("#changeTheme").on("click", function(e){
+    togglePageContentLightDark();
+
+    if ($("#darktheme").length) {
+      if(isLightThemeSelected()){
+        $('#darktheme').prop('checked', false);
+        $('#lighttheme').prop('checked', true);
+      }
+      else{
+        $('#darktheme').prop('checked', true);
+        $('#lighttheme').prop('checked', false);
+      }
+    }
+    });
+    </script>
+<div class="material-tooltip" id="b0808ad8-748e-c84c-015f-27014dbc5f9e"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="222cdec5-3e12-6408-91ef-b0e3db2bf538"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="810c4783-becd-1608-b202-9023058bedb3"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="1cc2e340-954a-1deb-1083-695eccd14e38"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="d04cff30-9542-a6f2-69c9-3e57e0cc1eaa"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="4c240d42-1c77-443f-82f6-e10d0f9ef320"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="9098085c-4116-ad23-e79d-999e4ec12ed1"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="7e4ba36d-eb60-600a-8069-8f58375bba1f"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="08978046-498f-f395-516a-64b63362b96e"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="7b6b51f9-9825-424d-b0c1-bfc542a6f581"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="5f464f90-162c-4055-634d-9f5bfb2e5917"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="6e403d5b-d679-9568-9915-1f31e2a026dd"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="d2755d7f-bf3b-da8a-453a-9e741c40631b"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="3e9e5bd1-48c1-9890-c9dd-11b6792f3b57"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="1a354b49-a013-f18f-8687-813a4f4ebda5"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="f3dcf088-a349-7c9c-afe7-22f85bce28e0"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="db9c5d7a-8286-262a-d4a7-7eae6bad2a1e"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="8643d96b-c642-5d8b-d818-ffdb5855de95"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="ac68e340-f6f5-7251-a9cc-6f31ae2143e1"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="663725ba-5926-494a-2045-f0c0267c8d57"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="749d0cfd-652b-d9c7-f0eb-ac7aac870efb"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="357f384a-301b-274d-d26c-807c00e9b53a"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="8febd8f5-4a39-6dd6-2f1a-5131b929ffbd"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="cd8bde0b-2244-6e68-976c-add484891de4"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="ae682642-d3c0-466e-d30c-19860ac35625"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="562f789d-420a-1b7a-5996-d67dce958be5"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="707341b5-eec4-fd6c-6e23-7b1e49bfe50f"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="1903e04b-9f50-abac-314d-fe4e886a326d"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="9412df54-57f6-de1a-7c0e-b5ee0db565ef"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="700b5d2b-f451-99f5-d316-9c009fa66ccf"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="faf53014-8f81-5898-aa68-2852657c18a1"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="886c9818-e00d-03e5-ec8e-8091882268e7"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="945dbcf9-1985-8092-e504-22a274ea3648"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="fee5d82e-50ed-0bd1-43d8-00ad99700520"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="f989c6a8-796b-dc93-dd64-41ee61f2c6dc"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="cad93ebf-b0a0-14d8-ded6-d665e8ff3ba2"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="f5713f94-9062-6f5d-60e6-4437744aae2d"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="836ed74c-db32-3031-0a01-1f4309fdf271"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="7c9e8425-d347-84af-da5b-d90796d3cc8d"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="4deace9a-9e5b-6cba-274b-c61fef7d9855"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="bfb55f9d-0bc9-fe8e-639c-12036b1e41af"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="2678d1f9-5978-3e09-146d-9ce4fa1ea0ef"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="702f56a4-44cb-f32d-a9b0-f0278ddce919"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="15c03404-2215-c9b7-6021-28dde697b88d"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="4c151320-7a75-bcd2-69a5-aa112ce0c3b9"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="aeed0fab-b97f-c205-0c62-eaa121995bdc"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="c5af6399-72b1-80af-2475-808ddb2ab0f4"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="28a70688-3e0a-58d1-56c0-bb4c8b879916"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="20303112-9102-c802-f008-5401bb765194"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="708790f8-ad85-4183-b6fe-674c117db9e7"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="c97b42c0-0e65-4197-df80-d3fbeb7f3fae"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="d96b778c-3a58-7775-ccb6-95e668f81b52"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="67624814-7bef-8b79-cca4-0a804a1a4484"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="2eba91cf-5b70-c6ea-46b8-d96ded9aeb61"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="4fa0892f-0f73-55f9-c068-59584b93e187"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="9419677b-cfd3-36ac-a7ab-251d9a45d8ab"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="80e3bedd-1a5c-d002-0486-eaa878e971dc"><span>You have solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="material-tooltip" id="2c03b9e5-b14c-96d5-2c4a-584bb89dc7db"><span>You have not yet solved this challenge</span><div class="backdrop" style="top: 0px; left: 0px;"></div></div><div class="hiddendiv common"></div><div class="drag-target" style="left: 0px; touch-action: pan-y; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></div></body></html>

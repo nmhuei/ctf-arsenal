@@ -1,0 +1,296 @@
+{
+  "title": "Lattices",
+  "slug": "post-quantum",
+  "url": "https://cryptohack.org/challenges/post-quantum/",
+  "completed": "0",
+  "total": "18",
+  "description_text": "Lattices Research into quantum computing has posed several questions and challenges for cryptography. The most popular public-key algorithms which the world has been relying on for decades - factorization (used in RSA), and discrete logarithm problems (used in both finite field and elliptic-curve Diffie-Hellman) can theoretically be solved in polynomial time on a quantum computer using Shor's algorithm. Shor's algorithm shows that factoring integers would be extremely fast on an ideal, large quantum computer. \"Ideal, large\" are important caveats here, since as of 2022, the largest number that has been publicly factored using Shor's algorithm is 21. Still, advances in quantum technology have motivated the development of post-quantum cryptography (PQC), which is based on algorithms which even quantum computers cannot break efficiently, according to current knowledge. Post-quantum cryptography focusses on developing asymmetric/public-key algorithms. This is because symmetric algorithms and hash functions seem to do much better in a post-quantum world. The best algorithm for attacking symmetric ciphers, Grover's algorithm, halves their security level. Therefore doubling the keysize should be enough; for instance, AES-256 should retain 128 bits of security. On the other hand, RSA keys would have to be 1 terabyte large to achieve a reasonable level of security against Shor's algorithm. The NIST Post-Quantum Cryptography Standardization process began in 2017 to find the best asymmetric algorithms to be used in protocols like TLS in future. Good algorithms must not only resist classical and quantum attacks but should also have small public and private keys and should execute quickly. Of the proposed schemes, Lattice-based cryptography has shown the most promise in terms of balancing security and performance. Lattices are also a powerful tool in cryptanalysis. The Lenstra–Lenstra–Lovász (LLL) lattice basis reduction algorithm has been used to break knapsack cryptosystems, RSA with particular parameters, and NTRUEncrypt. This category begins with a series of challenges that build up an intuition of how lattices work and are used in cryptanalysis.",
+  "stages": [
+    {
+      "title": "Lattices",
+      "slug": "lattices"
+    },
+    {
+      "title": "Learning With Errors 1",
+      "slug": "lwe"
+    },
+    {
+      "title": "Learning With Errors 2",
+      "slug": "lwe2"
+    }
+  ],
+  "challenge_count": 18,
+  "challenges": [
+    {
+      "title": "Vectors",
+      "stage": "Lattices",
+      "path": "post-quantum/lattices/vectors",
+      "attachments": []
+    },
+    {
+      "title": "Size and Basis",
+      "stage": "Lattices",
+      "path": "post-quantum/lattices/size-and-basis",
+      "attachments": []
+    },
+    {
+      "title": "Gram Schmidt",
+      "stage": "Lattices",
+      "path": "post-quantum/lattices/gram-schmidt",
+      "attachments": []
+    },
+    {
+      "title": "What's a Lattice?",
+      "stage": "Lattices",
+      "path": "post-quantum/lattices/what-s-a-lattice",
+      "attachments": []
+    },
+    {
+      "title": "Gaussian Reduction",
+      "stage": "Lattices",
+      "path": "post-quantum/lattices/gaussian-reduction",
+      "attachments": []
+    },
+    {
+      "title": "Find the Lattice",
+      "stage": "Lattices",
+      "path": "post-quantum/lattices/find-the-lattice",
+      "attachments": [
+        {
+          "text": "source.py",
+          "href": "/static/challenges/source_ca1901b901faf91d690cb35998d0b80e.py",
+          "url": "https://cryptohack.org/static/challenges/source_ca1901b901faf91d690cb35998d0b80e.py",
+          "download": true,
+          "saved_as": "files/source_ca1901b901faf91d690cb35998d0b80e.py",
+          "status": 200,
+          "size": 870
+        },
+        {
+          "text": "output.txt",
+          "href": "/static/challenges/output_bc9603ab4045eea70eae450862d4be91.txt",
+          "url": "https://cryptohack.org/static/challenges/output_bc9603ab4045eea70eae450862d4be91.txt",
+          "download": true,
+          "saved_as": "files/output_bc9603ab4045eea70eae450862d4be91.txt",
+          "status": 200,
+          "size": 496
+        }
+      ]
+    },
+    {
+      "title": "Backpack Cryptography",
+      "stage": "Lattices",
+      "path": "post-quantum/lattices/backpack-cryptography",
+      "attachments": [
+        {
+          "text": "source.py",
+          "href": "/static/challenges/source_83f1e856dc3e1d8c6628abb227a797cb.py",
+          "url": "https://cryptohack.org/static/challenges/source_83f1e856dc3e1d8c6628abb227a797cb.py",
+          "download": true,
+          "saved_as": "files/source_83f1e856dc3e1d8c6628abb227a797cb.py",
+          "status": 200,
+          "size": 1567
+        },
+        {
+          "text": "output.txt",
+          "href": "/static/challenges/output_e2fe6134f7dd580dcedacdbe71846d0e.txt",
+          "url": "https://cryptohack.org/static/challenges/output_e2fe6134f7dd580dcedacdbe71846d0e.txt",
+          "download": true,
+          "saved_as": "files/output_e2fe6134f7dd580dcedacdbe71846d0e.txt",
+          "status": 200,
+          "size": 31635
+        }
+      ]
+    },
+    {
+      "title": "LWE Background",
+      "stage": "Learning With Errors 1",
+      "path": "post-quantum/lwe/lwe-background",
+      "attachments": []
+    },
+    {
+      "title": "LWE Intro",
+      "stage": "Learning With Errors 1",
+      "path": "post-quantum/lwe/lwe-intro",
+      "attachments": []
+    },
+    {
+      "title": "LWE High Bits Message",
+      "stage": "Learning With Errors 1",
+      "path": "post-quantum/lwe/lwe-high-bits-message",
+      "attachments": [
+        {
+          "text": "lwe-high-bits.sage",
+          "href": "/static/challenges/lwe-high-bits_a83f7bfc0f6e3bfd1b962842feb5d91d.sage",
+          "url": "https://cryptohack.org/static/challenges/lwe-high-bits_a83f7bfc0f6e3bfd1b962842feb5d91d.sage",
+          "download": true,
+          "saved_as": "files/lwe-high-bits_a83f7bfc0f6e3bfd1b962842feb5d91d.sage",
+          "status": 200,
+          "size": 399
+        },
+        {
+          "text": "output.txt",
+          "href": "/static/challenges/output_575f13474e5a8cc76e938508bce813c2.txt",
+          "url": "https://cryptohack.org/static/challenges/output_575f13474e5a8cc76e938508bce813c2.txt",
+          "download": true,
+          "saved_as": "files/output_575f13474e5a8cc76e938508bce813c2.txt",
+          "status": 200,
+          "size": 913
+        }
+      ]
+    },
+    {
+      "title": "LWE Low Bits Message",
+      "stage": "Learning With Errors 1",
+      "path": "post-quantum/lwe/lwe-low-bits-message",
+      "attachments": [
+        {
+          "text": "lwe-low-bits.sage",
+          "href": "/static/challenges/lwe-low-bits_a2c45284086e181a601486fe22f873ff.sage",
+          "url": "https://cryptohack.org/static/challenges/lwe-low-bits_a2c45284086e181a601486fe22f873ff.sage",
+          "download": true,
+          "saved_as": "files/lwe-low-bits_a2c45284086e181a601486fe22f873ff.sage",
+          "status": 200,
+          "size": 346
+        },
+        {
+          "text": "output.txt",
+          "href": "/static/challenges/output_9eb8e78124c8c48ec9eb687bf1d10a4e.txt",
+          "url": "https://cryptohack.org/static/challenges/output_9eb8e78124c8c48ec9eb687bf1d10a4e.txt",
+          "download": true,
+          "saved_as": "files/output_9eb8e78124c8c48ec9eb687bf1d10a4e.txt",
+          "status": 200,
+          "size": 900
+        }
+      ]
+    },
+    {
+      "title": "From Private to Public Key LWE",
+      "stage": "Learning With Errors 1",
+      "path": "post-quantum/lwe/from-private-to-public-key-lwe",
+      "attachments": []
+    },
+    {
+      "title": "Noise Free",
+      "stage": "Learning With Errors 2",
+      "path": "post-quantum/lwe2/noise-free",
+      "attachments": [
+        {
+          "text": "13411.py",
+          "href": "/static/challenges/13411_65376bbf8bb3f8b630960f62ac39f614.py",
+          "url": "https://cryptohack.org/static/challenges/13411_65376bbf8bb3f8b630960f62ac39f614.py",
+          "download": true,
+          "saved_as": "files/13411_65376bbf8bb3f8b630960f62ac39f614.py",
+          "status": 200,
+          "size": 1800
+        }
+      ]
+    },
+    {
+      "title": "Bounded Noise",
+      "stage": "Learning With Errors 2",
+      "path": "post-quantum/lwe2/bounded-noise",
+      "attachments": [
+        {
+          "text": "bounded_noise.sage",
+          "href": "/static/challenges/bounded_noise_e86bbb663297048112cdbd476951da41.sage",
+          "url": "https://cryptohack.org/static/challenges/bounded_noise_e86bbb663297048112cdbd476951da41.sage",
+          "download": true,
+          "saved_as": "files/bounded_noise_e86bbb663297048112cdbd476951da41.sage",
+          "status": 200,
+          "size": 624
+        },
+        {
+          "text": "output.txt",
+          "href": "/static/challenges/output_82aed503c474858718e4d34cfbd06cff.txt",
+          "url": "https://cryptohack.org/static/challenges/output_82aed503c474858718e4d34cfbd06cff.txt",
+          "download": true,
+          "saved_as": "files/output_82aed503c474858718e4d34cfbd06cff.txt",
+          "status": 200,
+          "size": 112297
+        }
+      ]
+    },
+    {
+      "title": "Nativity",
+      "stage": "Learning With Errors 2",
+      "path": "post-quantum/lwe2/nativity",
+      "attachments": [
+        {
+          "text": "nativity.py",
+          "href": "/static/challenges/nativity_3be57fcbd4a8a94592a21f621031b233.py",
+          "url": "https://cryptohack.org/static/challenges/nativity_3be57fcbd4a8a94592a21f621031b233.py",
+          "download": true,
+          "saved_as": "files/nativity_3be57fcbd4a8a94592a21f621031b233.py",
+          "status": 200,
+          "size": 1256
+        },
+        {
+          "text": "public_key.txt",
+          "href": "/static/challenges/public_key_dbd7dcf356ea5c595d390470faad2c29.txt",
+          "url": "https://cryptohack.org/static/challenges/public_key_dbd7dcf356ea5c595d390470faad2c29.txt",
+          "download": true,
+          "saved_as": "files/public_key_dbd7dcf356ea5c595d390470faad2c29.txt",
+          "status": 200,
+          "size": 194002
+        },
+        {
+          "text": "ciphertexts.txt",
+          "href": "/static/challenges/ciphertexts_453500a870e03399fe8e5ed3674b6030.txt",
+          "url": "https://cryptohack.org/static/challenges/ciphertexts_453500a870e03399fe8e5ed3674b6030.txt",
+          "download": true,
+          "saved_as": "files/ciphertexts_453500a870e03399fe8e5ed3674b6030.txt",
+          "status": 200,
+          "size": 148508
+        }
+      ]
+    },
+    {
+      "title": "Missing Modulus",
+      "stage": "Learning With Errors 2",
+      "path": "post-quantum/lwe2/missing-modulus",
+      "attachments": [
+        {
+          "text": "13412.py",
+          "href": "/static/challenges/13412_0e7057d3edeba39b0b5be6b929f6a83b.py",
+          "url": "https://cryptohack.org/static/challenges/13412_0e7057d3edeba39b0b5be6b929f6a83b.py",
+          "download": true,
+          "saved_as": "files/13412_0e7057d3edeba39b0b5be6b929f6a83b.py",
+          "status": 200,
+          "size": 2209
+        }
+      ]
+    },
+    {
+      "title": "Noise Cheap",
+      "stage": "Learning With Errors 2",
+      "path": "post-quantum/lwe2/noise-cheap",
+      "attachments": [
+        {
+          "text": "13413.py",
+          "href": "/static/challenges/13413_0c0d299900953fdef5b48dafe6245d32.py",
+          "url": "https://cryptohack.org/static/challenges/13413_0c0d299900953fdef5b48dafe6245d32.py",
+          "download": true,
+          "saved_as": "files/13413_0c0d299900953fdef5b48dafe6245d32.py",
+          "status": 200,
+          "size": 1832
+        }
+      ]
+    },
+    {
+      "title": "Too Many Errors",
+      "stage": "Learning With Errors 2",
+      "path": "post-quantum/lwe2/too-many-errors",
+      "attachments": [
+        {
+          "text": "13390.py",
+          "href": "/static/challenges/13390_7ed55387d10ab932e673c9df3cc8bbfc.py",
+          "url": "https://cryptohack.org/static/challenges/13390_7ed55387d10ab932e673c9df3cc8bbfc.py",
+          "download": true,
+          "saved_as": "files/13390_7ed55387d10ab932e673c9df3cc8bbfc.py",
+          "status": 200,
+          "size": 1560
+        }
+      ]
+    }
+  ]
+}

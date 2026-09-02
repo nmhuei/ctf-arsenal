@@ -1,0 +1,25 @@
+[package]
+name = "open-world"
+description = "Explore the World"
+version = "0.1.0"
+
+[toolchain]
+acton = "1.0.0"
+
+[contracts.JettonWallet]
+src = "contracts/JettonWallet.tolk"
+
+[contracts.JettonMinter]
+src = "contracts/JettonMinter.tolk"
+depends = ["JettonWallet"]
+
+[contracts.Challenge]
+src = "contracts/Challenge.tolk"
+depends = ["JettonMinter"]
+
+[import-mappings]
+acton = ".acton"
+contracts = "contracts"
+gen = "gen"
+tests = "tests"
+wrappers = "wrappers"

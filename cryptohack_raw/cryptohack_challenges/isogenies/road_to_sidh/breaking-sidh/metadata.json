@@ -1,0 +1,57 @@
+{
+  "category": "Isogenies",
+  "category_slug": "isogenies",
+  "stage": "Road to SIDH",
+  "stage_slug": "road_to_sidh",
+  "title": "Breaking SIDH",
+  "slug": "breaking-sidh",
+  "data_challenge": "breaking_sidh",
+  "points": 250,
+  "solves": 217,
+  "url": "https://cryptohack.org/challenges/isogenies/",
+  "attachments": [
+    {
+      "text": "source.sage",
+      "href": "/static/challenges/source_0e46e87ca6110ad062f6ce1819ded232.sage",
+      "url": "https://cryptohack.org/static/challenges/source_0e46e87ca6110ad062f6ce1819ded232.sage",
+      "download": true,
+      "saved_as": "files/source_0e46e87ca6110ad062f6ce1819ded232.sage",
+      "status": 200,
+      "size": 3960
+    }
+  ],
+  "resources": [
+    {
+      "text": "An efficient key recovery attack on SIDH, Wouter Castryck, Thomas Decru",
+      "href": "https://eprint.iacr.org/2022/975",
+      "url": "https://eprint.iacr.org/2022/975",
+      "download": false
+    },
+    {
+      "text": "A Direct Key Recovery Attack on SIDH, Luciano Maino, Chloe Martindale, Lorenz Panny, Giacomo Pope, Benjamin Wesolowski",
+      "href": "https://eprint.iacr.org/2023/640",
+      "url": "https://eprint.iacr.org/2023/640",
+      "download": false
+    },
+    {
+      "text": "Breaking SIDH in polynomial time, Damien Robert",
+      "href": "https://eprint.iacr.org/2022/1038",
+      "url": "https://eprint.iacr.org/2022/1038",
+      "download": false
+    },
+    {
+      "text": "A Note on Reimplementing the Castryck-Decru Attack and Lessons Learned for SageMath, Rémy Oudompheng, Giacomo Pope",
+      "href": "https://eprint.iacr.org/2022/1283",
+      "url": "https://eprint.iacr.org/2022/1283",
+      "download": false
+    },
+    {
+      "text": "You could have broken SIDH, Lorenz Panny",
+      "href": "https://yx7.cc/blah/2022-08-22.html",
+      "url": "https://yx7.cc/blah/2022-08-22.html",
+      "download": false
+    }
+  ],
+  "statement_html": "statement.html",
+  "statement_md": "statement.md"
+}

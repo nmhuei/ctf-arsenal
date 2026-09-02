@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PhantomGate PG-400 - Login</title>
+<link rel="stylesheet" href="/www/css/style.css">
+</head>
+<body class="login-page">
+<div class="login-container">
+  <div class="login-logo">
+    <div class="device-icon">&#9651;</div>
+    <h1>PhantomGate <span class="model">PG-400</span></h1>
+    <p class="tagline">Secure Gateway Management</p>
+  </div>
+  <form id="loginForm" class="login-form">
+    <div class="form-group">
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" autocomplete="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" autocomplete="current-password" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Sign In</button>
+    <div id="loginError" class="error-msg" style="display:none"></div>
+  </form>
+  <div class="login-info">
+    <p>Firmware v4.2.1 &bull; Build 20240315</p>
+  </div>
+</div>
+<footer class="login-footer">&copy; 2024 PhantomGate Systems Ltd.</footer>
+<script src="/www/js/app.js"></script>
+</body>
+</html>

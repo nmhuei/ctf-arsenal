@@ -1,0 +1,38 @@
+{
+  "id": "f818a8b595cce32f",
+  "name": "Sur Kharvaa",
+  "category": "misc",
+  "points": 233,
+  "author": "bekkaze",
+  "tags": [],
+  "hints": [],
+  "connection_info": null,
+  "solved_by_me": false,
+  "solves_count": 52,
+  "downloaded_files": [
+    {
+      "url": "https://2026.haruulzangi.mn/uploads/1140783cf8eedf50f6ce4754ce978cc9c343b4122438caa65a4d41c7c395b42f/misc_sur-kharvaa.tar.gz",
+      "name": "misc_sur-kharvaa.tar.gz",
+      "saved_path": "/home/light/Workspace/CTF/CTF_Competition/misc/Sur_Kharvaa/misc_sur-kharvaa.tar.gz",
+      "success": true,
+      "source": "platform_attachment",
+      "message": "Direct download successful"
+    }
+  ],
+  "raw": {
+    "id": "f818a8b595cce32f",
+    "name": "Sur Kharvaa",
+    "description": "Sûr kharvaa - archery. Loose one arrow of Python at the target: POST its\nraw bytes to `/shoot`, and it runs in a throwaway sandbox. The target is\nnot hidden - read it at `/target.py`.\n\nStriking the target is only the first mark. The range belongs to the\nkeeper, and only the keeper may read the record.\n\n> [!CONNECTION]\n> https://sur-kharvaa-k2xk2v3n.challenge.2026.haruulzangi.mn",
+    "category": "misc",
+    "author": "bekkaze",
+    "files": [
+      {
+        "name": "misc_sur-kharvaa.tar.gz",
+        "url": "/uploads/1140783cf8eedf50f6ce4754ce978cc9c343b4122438caa65a4d41c7c395b42f/misc_sur-kharvaa.tar.gz"
+      }
+    ],
+    "points": 233,
+    "solves": 52,
+    "sortWeight": 0
+  }
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PG-400 - Network Settings</title>
+<link rel="stylesheet" href="/www/css/style.css">
+</head>
+<body>
+<div class="app-layout">
+  <nav class="sidebar">
+    <div class="sidebar-brand">
+      <span class="brand-icon">&#9651;</span>
+      <span>PG-400</span>
+    </div>
+    <ul class="nav-list">
+      <li><a href="/www/dashboard.html">Dashboard</a></li>
+      <li><a href="/www/settings.html" class="active">Network Settings</a></li>
+      <li><a href="/www/logs.html">System Logs</a></li>
+      <li><a href="/www/firmware.html">Firmware Update</a></li>
+    </ul>
+    <div class="sidebar-footer">
+      <a href="/www/index.html" class="logout-link">Logout</a>
+    </div>
+  </nav>
+  <main class="content">
+    <header class="topbar">
+      <h2>Network Settings</h2>
+      <span class="clock" id="clock"></span>
+    </header>
+    <section class="page-body">
+      <div class="card" style="max-width:540px">
+        <h3>Interface: eth0</h3>
+        <form class="settings-form" onsubmit="return false">
+          <div class="form-group">
+            <label>IP Address</label>
+            <input type="text" value="192.168.1.1" readonly>
+          </div>
+          <div class="form-group">
+            <label>Subnet Mask</label>
+            <input type="text" value="255.255.255.0" readonly>
+          </div>
+          <div class="form-group">
+            <label>Gateway</label>
+            <input type="text" value="192.168.1.254" readonly>
+          </div>
+          <div class="form-group">
+            <label>Primary DNS</label>
+            <input type="text" value="8.8.8.8" readonly>
+          </div>
+          <div class="form-group">
+            <label>Secondary DNS</label>
+            <input type="text" value="8.8.4.4" readonly>
+          </div>
+          <div class="form-group">
+            <label>MTU</label>
+            <input type="text" value="1500" readonly>
+          </div>
+          <button type="submit" class="btn btn-primary">Save Changes</button>
+        </form>
+      </div>
+    </section>
+  </main>
+</div>
+<footer>&copy; 2024 PhantomGate Systems Ltd.</footer>
+<script src="/www/js/app.js"></script>
+</body>
+</html>

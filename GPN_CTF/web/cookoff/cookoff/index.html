@@ -1,0 +1,142 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Karlsruhe Cook-Off 2026</title>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+<script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dompurify@3.4.7/dist/purify.min.js"></script>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+<style>
+  body {
+    max-width: 900px;
+    margin: 2rem auto;
+    font-family: system-ui, sans-serif;
+    background: #fff8ef;
+    color: #2d1b10;
+  }
+
+  header, section {
+    margin-bottom: 2rem;
+  }
+
+  .dishes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .dish {
+    background: white;
+    border: 1px solid #e7c9a9;
+    border-radius: 12px;
+    padding: 1rem;
+  }
+
+  .dish img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  button {
+    margin-top: .75rem;
+    padding: .5rem .8rem;
+    border: 0;
+    border-radius: 8px;
+    background: #9b4d1a;
+    color: white;
+    cursor: pointer;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    max-width: 600px;
+    padding: .5rem;
+  }
+
+  .shared {
+    background: #fff;
+    border-left: 5px solid #9b4d1a;
+    padding: 1rem;
+  }
+</style>
+
+<header>
+  <h1>Karlsruhe Cook-Off</h1>
+  <p>Vote for the best dish. Bragging rights are on the line.</p>
+</header>
+
+<section id="shared-section" hidden>
+  <h2>Shared message</h2>
+  <div id="shared-text" class="shared"></div>
+</section>
+
+<section>
+  <h2>Finalists</h2>
+
+  <form method="GET">
+    <div class="dishes">
+      <label class="dish">
+        <a class="glightbox" href="https://images.unsplash.com/photo-1546069901-ba9599a7e63c" data-description="Garden salad with citrus dressing">
+          <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c" alt="Garden salad">
+        </a>
+        <h3>Garden Goblin Salad</h3>
+        <input type="radio" name="vote" value="salad">
+        Vote for this
+      </label>
+
+      <label class="dish">
+        <a class="glightbox" href="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38" data-description="Wood-fired pizza with basil">
+          <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38" alt="Pizza">
+        </a>
+        <h3>Margherita Supreme</h3>
+        <input type="radio" name="vote" value="pizza">
+        Vote for this
+      </label>
+
+      <label class="dish">
+        <a class="glightbox" href="https://images.unsplash.com/photo-1551024506-0bccd828d307" data-description="Fresh donut with berry glaze">
+          <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307" alt="Donut">
+        </a>
+        <h3>Donut of Destiny</h3>
+        <input type="radio" name="vote" value="donut">
+        Vote for this
+      </label>
+    </div>
+
+    <script>GLightbox()</script>
+
+    <div class="g-recaptcha" data-sitekey="TODO_SITEKEY"></div>
+
+    <button type=button onclick=random()>Random choice</button>
+    <button type="submit">
+        Submit vote
+    </button>
+  </form>
+</section>
+
+<section>
+  <h2>Share the competition</h2>
+  <form method="GET">
+    <input name="shareText" type="text" placeholder="Write a message to share with friends">
+    <button type="submit">Create share link</button>
+  </form>
+</section>
+
+
+<script>
+  const shareText = new URLSearchParams(location.search).get("shareText");
+  if (shareText !== null) {
+    document.getElementById("shared-section").hidden = false;
+    document.getElementById("shared-text").innerHTML = DOMPurify.sanitize(shareText);
+  }
+  
+  function random() {
+    const options = document.querySelectorAll('input[name="vote"]');
+    const randomOption = options[Math.floor(Math.random() * options.length)];
+    randomOption.click();
+  }
+</script>

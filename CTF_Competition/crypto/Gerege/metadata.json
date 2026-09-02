@@ -1,0 +1,38 @@
+{
+  "id": "418d33509766bed1",
+  "name": "Gerege",
+  "category": "crypto",
+  "points": 191,
+  "author": "fg0x0",
+  "tags": [],
+  "hints": [],
+  "connection_info": null,
+  "solved_by_me": false,
+  "solves_count": 74,
+  "downloaded_files": [
+    {
+      "url": "https://2026.haruulzangi.mn/uploads/c792c74007589f9b744a09411ea4c421675dcc616446cfdda4fd4642b5c8cf39/crypto_gerege.tar.gz",
+      "name": "crypto_gerege.tar.gz",
+      "saved_path": "/home/light/Workspace/CTF/CTF_Competition/crypto/Gerege/crypto_gerege.tar.gz",
+      "success": true,
+      "source": "platform_attachment",
+      "message": "Direct download successful"
+    }
+  ],
+  "raw": {
+    "id": "418d33509766bed1",
+    "name": "Gerege",
+    "description": "The old empire hung a gerege from a rider's belt and every gate let them\npass. UB-CENTRAL kept the idea: a bearer proves, in zero knowledge, that\ntheir tablet carries the Khan's authority - the tablet itself never crosses\nthe wire, only a seal that it exists. The seal is a Chaum-Pedersen proof of\ndiscrete-log equality, made non-interactive and bound to a live gate\nsession.\n\nYou arrive with nothing, so the gate stamps you an envoy. No one is issued\na Khan tablet, and the Khan pairing is a hard discrete log away.\n\nThe scheme is published in full at `/docs`, and the reference is attached.\nOpen the Khan archive anyway.\n\n> [!CONNECTION]\n> https://gerege-w3zpsa4k.challenge.2026.haruulzangi.mn",
+    "category": "crypto",
+    "author": "fg0x0",
+    "files": [
+      {
+        "name": "crypto_gerege.tar.gz",
+        "url": "/uploads/c792c74007589f9b744a09411ea4c421675dcc616446cfdda4fd4642b5c8cf39/crypto_gerege.tar.gz"
+      }
+    ],
+    "points": 191,
+    "solves": 74,
+    "sortWeight": 0
+  }
+}

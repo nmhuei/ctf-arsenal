@@ -1,0 +1,12 @@
+version: "3"
+services:
+  asis-qfilter:
+    build: .
+    platform: linux/amd64
+    restart: always
+    ulimits:
+      nofile: 1024
+    ports:
+      - "1337:1337"
+    expose:
+      - "1337"

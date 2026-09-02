@@ -1,0 +1,36 @@
+{
+  "name": "mattermark-frontmatter-renderer",
+  "private": true,
+  "version": "1.0.0",
+  "packageManager": "pnpm@11.9.0",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx src/dev.ts",
+    "dev:api": "tsx src/server.ts",
+    "dev:web": "vite",
+    "build": "pnpm run build:client && pnpm run build:server",
+    "build:client": "vite build",
+    "build:server": "tsc -p tsconfig.server.json",
+    "typecheck": "tsc --noEmit",
+    "start": "NODE_ENV=production node server-dist/server.js",
+    "preview": "NODE_ENV=production node server-dist/server.js"
+  },
+  "dependencies": {
+    "@hono/node-server": "^2.1.0",
+    "gray-matter": "latest",
+    "hono": "^4.13.1"
+  },
+  "devDependencies": {
+    "@types/node": "^26.2.0",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.4",
+    "@vitejs/plugin-react": "latest",
+    "lucide-react": "latest",
+    "marked": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "tsx": "^4.23.11",
+    "typescript": "^7.0.2",
+    "vite": "latest"
+  }
+}

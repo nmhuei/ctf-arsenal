@@ -1,0 +1,45 @@
+URL https://ctf-spcs.mf.grsu.by/api/game/2/challenges/77 STATUS 200
+{
+  "id": 77,
+  "title": "Pinned to Yesterday",
+  "content": "Author: **@vvanuss**  \n**medium**  \n\n   \n   \nYou have **a set of Windows artifacts** from an analyst workstation.\n   \n**Recover** three values:\n    \n- **The PDF filename** that is first in RecentDocs\\\\.pdf\n- **The working folder name** from TypedPaths associated with ShellBagsExplorer\n- **The executable filename** from the sample Prefetch    \n   \n**Flag:**  \nFormat: **grodno{pdf_folder_exe}**   \nExample: **grodno{doc.pdf_tools_notepad.exe}**\n\n----\n\nУ вас есть **набор Windows-артефактов** с рабочей станции аналитика. \n\n**Восстановите** три значения:   \n- **Имя PDF-файла**, который стоит первым в MRU для RecentDocs\\\\.pdf\n- **Имя рабочей папки** из TypedPaths, связанной с ShellBagsExplorer\n- **Имя исполняемого файла** из sample Prefetch \n    \n**Флаг:**  \nФормат: **grodno{pdf_folder_exe}**  \nПример: **grodno{doc.pdf_tools_notepad.exe}** ",
+  "category": "Forensics",
+  "hints": [],
+  "score": 900,
+  "type": "StaticAttachment",
+  "context": {
+    "closeTime": null,
+    "instanceEntry": null,
+    "url": "https://drive.google.com/file/d/1ALP8maluPC26mL5u2gi8-6BBiU_7yGwR/view?usp=sharing",
+    "fileSize": null
+  },
+  "limit": 0,
+  "attempts": 109,
+  "deadline": null
+}
+URL https://ctf-spcs.mf.grsu.by/api/game/2/challenges STATUS 200
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="Junior Crypt CTF 2026" name="description" />
+    <meta content="GRODNO::CTF, GZCTF" name="keywords" />
+    <meta property="og:image" content="/favicon.webp" />
+    <link href="/favicon.webp" rel="icon" type="image/webp" />
+    <title>GRODNO::CTF</title>
+    <meta property="csp-nonce" nonce="0mnuhMru5ycJ">
+    <script type="module" crossorigin src="/static/index.aifexxbs.js" nonce="0mnuhMru5ycJ"></script>
+    <link rel="modulepreload" crossorigin href="/static/m8wroubk.js" nonce="0mnuhMru5ycJ">
+    <link rel="modulepreload" crossorigin href="/static/cywsnfop.js" nonce="0mnuhMru5ycJ">
+    <link rel="modulepreload" crossorigin href="/static/nbxuxiez.js" nonce="0mnuhMru5ycJ">
+    <link rel="stylesheet" crossorigin href="/static/n2zozewc.css" nonce="0mnuhMru5ycJ">
+    <link rel="preload" as="style" href="/static/c4zro9hd.css">
+    <link rel="stylesheet" href="/static/c4zro9hd.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    <div id="nonce-container" style="display: none" data-nonce="0mnuhMru5ycJ"></div>
+  </body>
+</html>
+

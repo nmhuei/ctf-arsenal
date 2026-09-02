@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Sign in - FirstBangla Mail</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body class="login-body">
+  <div class="login-wrap">
+    <div class="login-card">
+      <div class="login-logo">
+        <div class="login-logo-mark">FB</div>
+        <div class="login-logo-text">
+          <div class="login-title">FirstBangla Mail</div>
+          <div class="login-subtitle">First Bangla Bank Ltd. — Secure Webmail</div>
+        </div>
+      </div>
+      
+      <form method="post" action="/login">
+        <input type="hidden" name="csrf_token" value="ImQ3MmY2ZGE4NzdjOGQwYTYzNDgwN2Y5MzYyMWQ2OWE5NWMwZjRiM2Yi.al5hNw.rGthnofRame8HwJ4j650IXmI_fQ">
+        <label class="field-label" for="email">Email address</label>
+        <input class="field-input" type="email" id="email" name="email" placeholder="you@firstbangla.com" autocomplete="username" required>
+
+        <label class="field-label" for="password">Password</label>
+        <input class="field-input" type="password" id="password" name="password" placeholder="Password" autocomplete="current-password" required>
+
+        <button class="login-btn" type="submit">Sign in</button>
+      </form>
+      <div class="login-footer">
+        &copy; First Bangla Bank Ltd. Internal Mail System. Unauthorized access is prohibited and monitored.
+      </div>
+    </div>
+  </div>
+</body>
+</html>

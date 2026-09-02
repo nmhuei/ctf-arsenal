@@ -1,0 +1,129 @@
+{
+  "id": 99,
+  "name": "Silent Carrier",
+  "category": "Hardware",
+  "points": 300,
+  "author": null,
+  "tags": [
+    "Hardware"
+  ],
+  "hints": [],
+  "connection_info": null,
+  "solved_by_me": false,
+  "solves_count": 10,
+  "submit_endpoint": null,
+  "instance_info": {},
+  "downloaded_files": [
+    {
+      "url": "https://asisctf.com/tasks/Silent_Carrier_90e22b763b55c21688be352fdd0e92144e5d7196.txz",
+      "name": "Silent_Carrier_90e22b763b55c21688be352fdd0e92144e5d7196.txz",
+      "saved_path": "/home/light/Workspace/CTF/ASIS_CTF_2026/Hardware/Silent_Carrier/challenge/Silent_Carrier_90e22b763b55c21688be352fdd0e92144e5d7196.txz",
+      "success": true,
+      "source": "platform_attachment",
+      "message": "Đã tải trực tiếp thành công"
+    }
+  ],
+  "raw": {
+    "id": 99,
+    "name": "Silent Carrier",
+    "description": "<p>We caught a <a href=\"/tasks/Silent_Carrier_90e22b763b55c21688be352fdd0e92144e5d7196.txz\"><strong>transmission</strong></a> that sounds like absolutely nothing useful.</p>\n<p>Naturally, it is almost certainly hiding something useful.</p>\n",
+    "points": 500,
+    "published_at": "2026-08-29 16:00:00",
+    "fixedPoints": 19,
+    "solves_count": 3,
+    "first_n_solves": [
+      {
+        "team_id": 2456,
+        "team_name": "sch",
+        "challenge_name": "Silent Carrier",
+        "challenge_id": 99,
+        "solved_at": "2026-08-29 16:52:21",
+        "time_to_solve": "0d 00h 52m 21s"
+      },
+      {
+        "team_id": 1511,
+        "team_name": "H-T8",
+        "challenge_name": "Silent Carrier",
+        "challenge_id": 99,
+        "solved_at": "2026-08-29 17:08:40",
+        "time_to_solve": "0d 01h 8m 40s"
+      },
+      {
+        "team_id": 2457,
+        "team_name": "세상에 이란일이",
+        "challenge_name": "Silent Carrier",
+        "challenge_id": 99,
+        "solved_at": "2026-08-29 17:17:36",
+        "time_to_solve": "0d 01h 17m 36s"
+      }
+    ],
+    "SolvedByCurrentTeam": false,
+    "dynamic_points": 450,
+    "rewardable_dynamic_points": 423,
+    "chartData": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      2
+    ],
+    "categories": [
+      {
+        "id": 7,
+        "name": "Hardware",
+        "created_at": "2025-09-09T05:37:59.000000Z",
+        "updated_at": "2025-09-09T05:37:59.000000Z",
+        "pivot": {
+          "challenge_id": 99,
+          "category_id": 7
+        }
+      }
+    ],
+    "solves": [
+      {
+        "id": 3529,
+        "user_id": 4009,
+        "team_id": 2456,
+        "challenge_id": 99,
+        "created_at": "2026-08-29T16:52:21.000000Z",
+        "updated_at": "2026-08-29T16:52:21.000000Z"
+      },
+      {
+        "id": 3602,
+        "user_id": 2320,
+        "team_id": 1511,
+        "challenge_id": 99,
+        "created_at": "2026-08-29T17:08:40.000000Z",
+        "updated_at": "2026-08-29T17:08:40.000000Z"
+      },
+      {
+        "id": 3669,
+        "user_id": 4015,
+        "team_id": 2457,
+        "challenge_id": 99,
+        "created_at": "2026-08-29T17:17:36.000000Z",
+        "updated_at": "2026-08-29T17:17:36.000000Z"
+      }
+    ]
+  },
+  "status": {
+    "schema_version": 2,
+    "solve": "unsolved",
+    "flag": {
+      "value": null,
+      "state": "none"
+    },
+    "writeup": "none",
+    "writeup_auto": true,
+    "notes": "",
+    "labels": [],
+    "container": "none",
+    "synced_at": "2026-08-29T18:20:22Z",
+    "updated_at": "2026-08-29T18:20:22Z"
+  }
+}

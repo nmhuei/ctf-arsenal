@@ -1,0 +1,38 @@
+{
+  "id": "osint_sporty_eater",
+  "name": "Sporty Eater",
+  "category": "osint",
+  "points": 245,
+  "author": "TitanCode",
+  "tags": [],
+  "hints": [],
+  "connection_info": null,
+  "solved_by_me": false,
+  "solves_count": 20,
+  "downloaded_files": [
+    {
+      "url": "https://files.adheeshg.in/uploads/38125bc718b8eb6c3cf05ba4f1577ff129de4cd029e4e658fabae8a71069d6ea/osint_sporty-eater.tar.gz",
+      "name": "osint_sporty-eater.tar.gz",
+      "saved_path": "/home/light/Workspace/CTF/CTF_Competition/osint/Sporty_Eater/osint_sporty-eater.tar.gz",
+      "success": true,
+      "source": "platform_attachment",
+      "message": "Direct download successful"
+    }
+  ],
+  "raw": {
+    "id": "osint_sporty_eater",
+    "name": "Sporty Eater",
+    "description": "I forgot which restaurant this is. I took this photograph on 22 May 2026,\na few days after I came here for a very famous match. The restaurant has\nalso won several Times Food & Nightlife awards.\n\nFind the restaurant, the venue where the match was played, the home team,\nand the away team.\n\nFlag format: zdk{Restaurant_Name-Venue-Home_Team-Away_Team}\n\n",
+    "category": "osint",
+    "author": "TitanCode",
+    "files": [
+      {
+        "name": "osint_sporty-eater.tar.gz",
+        "url": "https://files.adheeshg.in/uploads/38125bc718b8eb6c3cf05ba4f1577ff129de4cd029e4e658fabae8a71069d6ea/osint_sporty-eater.tar.gz"
+      }
+    ],
+    "points": 245,
+    "solves": 20,
+    "sortWeight": 0
+  }
+}

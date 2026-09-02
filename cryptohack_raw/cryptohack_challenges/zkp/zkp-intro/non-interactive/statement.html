@@ -1,0 +1,1424 @@
+<div class="challengeDescription">
+ <!-- <p> -->
+ We have now shown that the Schnorr protocol for proving knowledge of a discrete logarithm relation is a
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi mathvariant="normal">
+        Σ
+       </mi>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       \Sigma
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 0.6833em;">
+     </span>
+     <span class="mord">
+      Σ
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ -Protocol! We did this by showing that it has the correct 3 move pattern, and satisfies the properties of Completeness, Special Soundness and SHVZK (Special Honest-Verifier Zero-Knowledge.)
+ <br/>
+ <br/>
+ While this took a little bit of work to prove, being a
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi mathvariant="normal">
+        Σ
+       </mi>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       \Sigma
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 0.6833em;">
+     </span>
+     <span class="mord">
+      Σ
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ -Protocol carries many nice advantages. For example, in this challenge we will explore how any
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi mathvariant="normal">
+        Σ
+       </mi>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       \Sigma
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 0.6833em;">
+     </span>
+     <span class="mord">
+      Σ
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ -Protocol can be made into a non-interaction zero knowledge proof (NIZK) essentially for free, using a generic transformation, first formalised by Fiat and Shamir!
+ <br/>
+ <br/>
+ Recall how SHVZK noted that for the honest verifier case, the only input the verifier has to the protocol is to supply a uniformly random
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi>
+        t
+       </mi>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       t
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 0.6151em;">
+     </span>
+     <span class="mord mathnormal">
+      t
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ -bit string, after the prover has committed to an
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi>
+        a
+       </mi>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       a
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 0.4306em;">
+     </span>
+     <span class="mord mathnormal">
+      a
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ value.
+ <br/>
+ <br/>
+ It follows that the receiver doesn't necessarily need to sample this randomness itself, as long as it is uniformly randomly sampled
+ <emph>
+  after
+ </emph>
+ the prover has committed to his
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi>
+        a
+       </mi>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       a
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 0.4306em;">
+     </span>
+     <span class="mord mathnormal">
+      a
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ value. Luckily we have a primitive in cryptography which takes an input, and returns a (supposedly) uniformly random value based on that input: a hash function!
+ <br/>
+ <br/>
+ The observation of Fiat and Shamir was that we can replace the random value from the prover by the output of a hash function run on the first message of the protocol, and get the same security properties.
+ <br/>
+ <br/>
+ Note that this does allow the Prover to re-sample many
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi>
+        e
+       </mi>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       e
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 0.4306em;">
+     </span>
+     <span class="mord mathnormal">
+      e
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ values very quickly by just brute forcing
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi>
+        a
+       </mi>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       a
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 0.4306em;">
+     </span>
+     <span class="mord mathnormal">
+      a
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ values locally. However from the Special Soundness and SHVZK we know that for a given
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi>
+        a
+       </mi>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       a
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 0.4306em;">
+     </span>
+     <span class="mord mathnormal">
+      a
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ , a Prover who does not know the witness
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi>
+        w
+       </mi>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       w
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 0.4306em;">
+     </span>
+     <span class="mord mathnormal" style="margin-right: 0.0269em;">
+      w
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ will only be able to answer at most one
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi>
+        e
+       </mi>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       e
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 0.4306em;">
+     </span>
+     <span class="mord mathnormal">
+      e
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ with a valid
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi>
+        z
+       </mi>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       z
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 0.4306em;">
+     </span>
+     <span class="mord mathnormal" style="margin-right: 0.044em;">
+      z
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ . This means each query to the hash function will have a
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mn>
+        1
+       </mn>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       1
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 0.6444em;">
+     </span>
+     <span class="mord">
+      1
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ in
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <msup>
+        <mn>
+         2
+        </mn>
+        <mi>
+         t
+        </mi>
+       </msup>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       2^{t}
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 0.7936em;">
+     </span>
+     <span class="mord">
+      <span class="mord">
+       2
+      </span>
+      <span class="msupsub">
+       <span class="vlist-t">
+        <span class="vlist-r">
+         <span class="vlist" style="height: 0.7936em;">
+          <span class="" style="top: -3.063em; margin-right: 0.05em;">
+           <span class="pstrut" style="height: 2.7em;">
+           </span>
+           <span class="sizing reset-size6 size3 mtight">
+            <span class="mord mtight">
+             <span class="mord mathnormal mtight">
+              t
+             </span>
+            </span>
+           </span>
+          </span>
+         </span>
+        </span>
+       </span>
+      </span>
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ probability of leading to a valid transcript
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mo stretchy="false">
+        (
+       </mo>
+       <mi>
+        a
+       </mi>
+       <mo separator="true">
+        ,
+       </mo>
+       <mi>
+        e
+       </mi>
+       <mo>
+        =
+       </mo>
+       <mtext>
+        hash
+       </mtext>
+       <mo stretchy="false">
+        (
+       </mo>
+       <mi>
+        a
+       </mi>
+       <mo stretchy="false">
+        )
+       </mo>
+       <mo separator="true">
+        ,
+       </mo>
+       <mi>
+        z
+       </mi>
+       <mo stretchy="false">
+        )
+       </mo>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       (a, e=\text{hash}(a), z)
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 1em; vertical-align: -0.25em;">
+     </span>
+     <span class="mopen">
+      (
+     </span>
+     <span class="mord mathnormal">
+      a
+     </span>
+     <span class="mpunct">
+      ,
+     </span>
+     <span class="mspace" style="margin-right: 0.1667em;">
+     </span>
+     <span class="mord mathnormal">
+      e
+     </span>
+     <span class="mspace" style="margin-right: 0.2778em;">
+     </span>
+     <span class="mrel">
+      =
+     </span>
+     <span class="mspace" style="margin-right: 0.2778em;">
+     </span>
+    </span>
+    <span class="base">
+     <span class="strut" style="height: 1em; vertical-align: -0.25em;">
+     </span>
+     <span class="mord text">
+      <span class="mord">
+       hash
+      </span>
+     </span>
+     <span class="mopen">
+      (
+     </span>
+     <span class="mord mathnormal">
+      a
+     </span>
+     <span class="mclose">
+      )
+     </span>
+     <span class="mpunct">
+      ,
+     </span>
+     <span class="mspace" style="margin-right: 0.1667em;">
+     </span>
+     <span class="mord mathnormal" style="margin-right: 0.044em;">
+      z
+     </span>
+     <span class="mclose">
+      )
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ , so the chances of a (polynomial in the security parameter) bounded cheating prover forging a proof is negligible.
+ <br/>
+ <br/>
+ <span class="note">
+  <i class="fas fa-pencil-alt">
+  </i>
+  Note: the exact values put into the hash are very important here. In general you want to hash all the public inputs and first messages, and in more complicated protocols (and in CTFs) it is very common to see vulnerabilities based on Fiat-Shamir transforms where not the entire input was hashed, letting malicious provers modify parts of their initial message/public input data after computing
+  <span>
+   <span class="katex">
+    <span class="katex-mathml">
+     <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <semantics>
+       <mrow>
+        <mi>
+         e
+        </mi>
+       </mrow>
+       <annotation encoding="application/x-tex">
+        e
+       </annotation>
+      </semantics>
+     </math>
+    </span>
+    <span aria-hidden="true" class="katex-html">
+     <span class="base">
+      <span class="strut" style="height: 0.4306em;">
+      </span>
+      <span class="mord mathnormal">
+       e
+      </span>
+     </span>
+    </span>
+   </span>
+  </span>
+  , and forging proofs in this way.
+ </span>
+ <br/>
+ <br/>
+ <span class="note">
+  <i class="fas fa-brain">
+  </i>
+  Unnecessary theory for those interested: The notion of a "Proof of Knowledge" (as formalised by Bellare and Goldreich in '92) is as follows: If there exists an extractor, which given black box access to an efficient Prover P, can efficiently extract a witness
+  <span>
+   <span class="katex">
+    <span class="katex-mathml">
+     <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <semantics>
+       <mrow>
+        <mi>
+         w
+        </mi>
+       </mrow>
+       <annotation encoding="application/x-tex">
+        w
+       </annotation>
+      </semantics>
+     </math>
+    </span>
+    <span aria-hidden="true" class="katex-html">
+     <span class="base">
+      <span class="strut" style="height: 0.4306em;">
+      </span>
+      <span class="mord mathnormal" style="margin-right: 0.0269em;">
+       w
+      </span>
+     </span>
+    </span>
+   </span>
+  </span>
+  , then P "knows"
+  <span>
+   <span class="katex">
+    <span class="katex-mathml">
+     <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <semantics>
+       <mrow>
+        <mi>
+         w
+        </mi>
+       </mrow>
+       <annotation encoding="application/x-tex">
+        w
+       </annotation>
+      </semantics>
+     </math>
+    </span>
+    <span aria-hidden="true" class="katex-html">
+     <span class="base">
+      <span class="strut" style="height: 0.4306em;">
+      </span>
+      <span class="mord mathnormal" style="margin-right: 0.0269em;">
+       w
+      </span>
+     </span>
+    </span>
+   </span>
+  </span>
+  .
+  <br/>
+  <br/>
+  For a special-sound sigma protocol, the following is an extractor (E) which can recover
+  <span>
+   <span class="katex">
+    <span class="katex-mathml">
+     <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <semantics>
+       <mrow>
+        <mi>
+         w
+        </mi>
+       </mrow>
+       <annotation encoding="application/x-tex">
+        w
+       </annotation>
+      </semantics>
+     </math>
+    </span>
+    <span aria-hidden="true" class="katex-html">
+     <span class="base">
+      <span class="strut" style="height: 0.4306em;">
+      </span>
+      <span class="mord mathnormal" style="margin-right: 0.0269em;">
+       w
+      </span>
+     </span>
+    </span>
+   </span>
+  </span>
+  given black-box rewinding access to P:
+  <br/>
+  <br/>
+  <ol>
+   <li>
+    E receives
+    <span>
+     <span class="katex">
+      <span class="katex-mathml">
+       <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <semantics>
+         <mrow>
+          <mi>
+           a
+          </mi>
+         </mrow>
+         <annotation encoding="application/x-tex">
+          a
+         </annotation>
+        </semantics>
+       </math>
+      </span>
+      <span aria-hidden="true" class="katex-html">
+       <span class="base">
+        <span class="strut" style="height: 0.4306em;">
+        </span>
+        <span class="mord mathnormal">
+         a
+        </span>
+       </span>
+      </span>
+     </span>
+    </span>
+    from P, sends some random
+    <span>
+     <span class="katex">
+      <span class="katex-mathml">
+       <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <semantics>
+         <mrow>
+          <mi>
+           e
+          </mi>
+         </mrow>
+         <annotation encoding="application/x-tex">
+          e
+         </annotation>
+        </semantics>
+       </math>
+      </span>
+      <span aria-hidden="true" class="katex-html">
+       <span class="base">
+        <span class="strut" style="height: 0.4306em;">
+        </span>
+        <span class="mord mathnormal">
+         e
+        </span>
+       </span>
+      </span>
+     </span>
+    </span>
+    , and receives
+    <span>
+     <span class="katex">
+      <span class="katex-mathml">
+       <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <semantics>
+         <mrow>
+          <mi>
+           z
+          </mi>
+         </mrow>
+         <annotation encoding="application/x-tex">
+          z
+         </annotation>
+        </semantics>
+       </math>
+      </span>
+      <span aria-hidden="true" class="katex-html">
+       <span class="base">
+        <span class="strut" style="height: 0.4306em;">
+        </span>
+        <span class="mord mathnormal" style="margin-right: 0.044em;">
+         z
+        </span>
+       </span>
+      </span>
+     </span>
+    </span>
+   </li>
+   <li>
+    E then rewinds P back to it's state just after it sent
+    <span>
+     <span class="katex">
+      <span class="katex-mathml">
+       <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <semantics>
+         <mrow>
+          <mi>
+           a
+          </mi>
+         </mrow>
+         <annotation encoding="application/x-tex">
+          a
+         </annotation>
+        </semantics>
+       </math>
+      </span>
+      <span aria-hidden="true" class="katex-html">
+       <span class="base">
+        <span class="strut" style="height: 0.4306em;">
+        </span>
+        <span class="mord mathnormal">
+         a
+        </span>
+       </span>
+      </span>
+     </span>
+    </span>
+   </li>
+   <li>
+    E then resamples a random
+    <span>
+     <span class="katex">
+      <span class="katex-mathml">
+       <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <semantics>
+         <mrow>
+          <msup>
+           <mi>
+            e
+           </mi>
+           <mo lspace="0em" mathvariant="normal" rspace="0em">
+            ′
+           </mo>
+          </msup>
+         </mrow>
+         <annotation encoding="application/x-tex">
+          e'
+         </annotation>
+        </semantics>
+       </math>
+      </span>
+      <span aria-hidden="true" class="katex-html">
+       <span class="base">
+        <span class="strut" style="height: 0.7519em;">
+        </span>
+        <span class="mord">
+         <span class="mord mathnormal">
+          e
+         </span>
+         <span class="msupsub">
+          <span class="vlist-t">
+           <span class="vlist-r">
+            <span class="vlist" style="height: 0.7519em;">
+             <span class="" style="top: -3.063em; margin-right: 0.05em;">
+              <span class="pstrut" style="height: 2.7em;">
+              </span>
+              <span class="sizing reset-size6 size3 mtight">
+               <span class="mord mtight">
+                <span class="mord mtight">
+                 ′
+                </span>
+               </span>
+              </span>
+             </span>
+            </span>
+           </span>
+          </span>
+         </span>
+        </span>
+       </span>
+      </span>
+     </span>
+    </span>
+    and sends that to P, and receives a
+    <span>
+     <span class="katex">
+      <span class="katex-mathml">
+       <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <semantics>
+         <mrow>
+          <msup>
+           <mi>
+            z
+           </mi>
+           <mo lspace="0em" mathvariant="normal" rspace="0em">
+            ′
+           </mo>
+          </msup>
+         </mrow>
+         <annotation encoding="application/x-tex">
+          z'
+         </annotation>
+        </semantics>
+       </math>
+      </span>
+      <span aria-hidden="true" class="katex-html">
+       <span class="base">
+        <span class="strut" style="height: 0.7519em;">
+        </span>
+        <span class="mord">
+         <span class="mord mathnormal" style="margin-right: 0.044em;">
+          z
+         </span>
+         <span class="msupsub">
+          <span class="vlist-t">
+           <span class="vlist-r">
+            <span class="vlist" style="height: 0.7519em;">
+             <span class="" style="top: -3.063em; margin-right: 0.05em;">
+              <span class="pstrut" style="height: 2.7em;">
+              </span>
+              <span class="sizing reset-size6 size3 mtight">
+               <span class="mord mtight">
+                <span class="mord mtight">
+                 ′
+                </span>
+               </span>
+              </span>
+             </span>
+            </span>
+           </span>
+          </span>
+         </span>
+        </span>
+       </span>
+      </span>
+     </span>
+    </span>
+    from P.
+   </li>
+   <li>
+    E now has two satisfying transcripts
+    <span>
+     <span class="katex">
+      <span class="katex-mathml">
+       <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <semantics>
+         <mrow>
+          <mo stretchy="false">
+           (
+          </mo>
+          <mi>
+           a
+          </mi>
+          <mo separator="true">
+           ,
+          </mo>
+          <mi>
+           e
+          </mi>
+          <mo separator="true">
+           ,
+          </mo>
+          <mi>
+           z
+          </mi>
+          <mo stretchy="false">
+           )
+          </mo>
+         </mrow>
+         <annotation encoding="application/x-tex">
+          (a,e,z)
+         </annotation>
+        </semantics>
+       </math>
+      </span>
+      <span aria-hidden="true" class="katex-html">
+       <span class="base">
+        <span class="strut" style="height: 1em; vertical-align: -0.25em;">
+        </span>
+        <span class="mopen">
+         (
+        </span>
+        <span class="mord mathnormal">
+         a
+        </span>
+        <span class="mpunct">
+         ,
+        </span>
+        <span class="mspace" style="margin-right: 0.1667em;">
+        </span>
+        <span class="mord mathnormal">
+         e
+        </span>
+        <span class="mpunct">
+         ,
+        </span>
+        <span class="mspace" style="margin-right: 0.1667em;">
+        </span>
+        <span class="mord mathnormal" style="margin-right: 0.044em;">
+         z
+        </span>
+        <span class="mclose">
+         )
+        </span>
+       </span>
+      </span>
+     </span>
+    </span>
+    ,
+    <span>
+     <span class="katex">
+      <span class="katex-mathml">
+       <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <semantics>
+         <mrow>
+          <mo stretchy="false">
+           (
+          </mo>
+          <mi>
+           a
+          </mi>
+          <mo separator="true">
+           ,
+          </mo>
+          <msup>
+           <mi>
+            e
+           </mi>
+           <mo lspace="0em" mathvariant="normal" rspace="0em">
+            ′
+           </mo>
+          </msup>
+          <mo separator="true">
+           ,
+          </mo>
+          <msup>
+           <mi>
+            z
+           </mi>
+           <mo lspace="0em" mathvariant="normal" rspace="0em">
+            ′
+           </mo>
+          </msup>
+          <mo stretchy="false">
+           )
+          </mo>
+         </mrow>
+         <annotation encoding="application/x-tex">
+          (a,e',z')
+         </annotation>
+        </semantics>
+       </math>
+      </span>
+      <span aria-hidden="true" class="katex-html">
+       <span class="base">
+        <span class="strut" style="height: 1.0019em; vertical-align: -0.25em;">
+        </span>
+        <span class="mopen">
+         (
+        </span>
+        <span class="mord mathnormal">
+         a
+        </span>
+        <span class="mpunct">
+         ,
+        </span>
+        <span class="mspace" style="margin-right: 0.1667em;">
+        </span>
+        <span class="mord">
+         <span class="mord mathnormal">
+          e
+         </span>
+         <span class="msupsub">
+          <span class="vlist-t">
+           <span class="vlist-r">
+            <span class="vlist" style="height: 0.7519em;">
+             <span class="" style="top: -3.063em; margin-right: 0.05em;">
+              <span class="pstrut" style="height: 2.7em;">
+              </span>
+              <span class="sizing reset-size6 size3 mtight">
+               <span class="mord mtight">
+                <span class="mord mtight">
+                 ′
+                </span>
+               </span>
+              </span>
+             </span>
+            </span>
+           </span>
+          </span>
+         </span>
+        </span>
+        <span class="mpunct">
+         ,
+        </span>
+        <span class="mspace" style="margin-right: 0.1667em;">
+        </span>
+        <span class="mord">
+         <span class="mord mathnormal" style="margin-right: 0.044em;">
+          z
+         </span>
+         <span class="msupsub">
+          <span class="vlist-t">
+           <span class="vlist-r">
+            <span class="vlist" style="height: 0.7519em;">
+             <span class="" style="top: -3.063em; margin-right: 0.05em;">
+              <span class="pstrut" style="height: 2.7em;">
+              </span>
+              <span class="sizing reset-size6 size3 mtight">
+               <span class="mord mtight">
+                <span class="mord mtight">
+                 ′
+                </span>
+               </span>
+              </span>
+             </span>
+            </span>
+           </span>
+          </span>
+         </span>
+        </span>
+        <span class="mclose">
+         )
+        </span>
+       </span>
+      </span>
+     </span>
+    </span>
+    where
+    <span>
+     <span class="katex">
+      <span class="katex-mathml">
+       <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <semantics>
+         <mrow>
+          <mi>
+           e
+          </mi>
+          <mo mathvariant="normal">
+           ≠
+          </mo>
+          <msup>
+           <mi>
+            e
+           </mi>
+           <mo lspace="0em" mathvariant="normal" rspace="0em">
+            ′
+           </mo>
+          </msup>
+         </mrow>
+         <annotation encoding="application/x-tex">
+          e \neq e'
+         </annotation>
+        </semantics>
+       </math>
+      </span>
+      <span aria-hidden="true" class="katex-html">
+       <span class="base">
+        <span class="strut" style="height: 0.8889em; vertical-align: -0.1944em;">
+        </span>
+        <span class="mord mathnormal">
+         e
+        </span>
+        <span class="mspace" style="margin-right: 0.2778em;">
+        </span>
+        <span class="mrel">
+         <span class="mrel">
+          <span class="mord vbox">
+           <span class="thinbox">
+            <span class="rlap">
+             <span class="strut" style="height: 0.8889em; vertical-align: -0.1944em;">
+             </span>
+             <span class="inner">
+              <span class="mord">
+               <span class="mrel">
+                
+               </span>
+              </span>
+             </span>
+             <span class="fix">
+             </span>
+            </span>
+           </span>
+          </span>
+         </span>
+         <span class="mrel">
+          =
+         </span>
+        </span>
+        <span class="mspace" style="margin-right: 0.2778em;">
+        </span>
+       </span>
+       <span class="base">
+        <span class="strut" style="height: 0.7519em;">
+        </span>
+        <span class="mord">
+         <span class="mord mathnormal">
+          e
+         </span>
+         <span class="msupsub">
+          <span class="vlist-t">
+           <span class="vlist-r">
+            <span class="vlist" style="height: 0.7519em;">
+             <span class="" style="top: -3.063em; margin-right: 0.05em;">
+              <span class="pstrut" style="height: 2.7em;">
+              </span>
+              <span class="sizing reset-size6 size3 mtight">
+               <span class="mord mtight">
+                <span class="mord mtight">
+                 ′
+                </span>
+               </span>
+              </span>
+             </span>
+            </span>
+           </span>
+          </span>
+         </span>
+        </span>
+       </span>
+      </span>
+     </span>
+    </span>
+    , so by special soundness can recover
+    <span>
+     <span class="katex">
+      <span class="katex-mathml">
+       <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <semantics>
+         <mrow>
+          <mi>
+           w
+          </mi>
+         </mrow>
+         <annotation encoding="application/x-tex">
+          w
+         </annotation>
+        </semantics>
+       </math>
+      </span>
+      <span aria-hidden="true" class="katex-html">
+       <span class="base">
+        <span class="strut" style="height: 0.4306em;">
+        </span>
+        <span class="mord mathnormal" style="margin-right: 0.0269em;">
+         w
+        </span>
+       </span>
+      </span>
+     </span>
+    </span>
+   </li>
+  </ol>
+  <br/>
+  <br/>
+  This rewinding technique is a standard way of showing that for some well defined prover, simply being able to rewind it to an earlier state is enough for it to leak
+  <span>
+   <span class="katex">
+    <span class="katex-mathml">
+     <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <semantics>
+       <mrow>
+        <mi>
+         w
+        </mi>
+       </mrow>
+       <annotation encoding="application/x-tex">
+        w
+       </annotation>
+      </semantics>
+     </math>
+    </span>
+    <span aria-hidden="true" class="katex-html">
+     <span class="base">
+      <span class="strut" style="height: 0.4306em;">
+      </span>
+      <span class="mord mathnormal" style="margin-right: 0.0269em;">
+       w
+      </span>
+     </span>
+    </span>
+   </span>
+  </span>
+  .
+  <br/>
+  <br/>
+  For Fiat Shamir, you may notice this extractor no longer works if
+  <span>
+   <span class="katex">
+    <span class="katex-mathml">
+     <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <semantics>
+       <mrow>
+        <mi>
+         e
+        </mi>
+        <mo>
+         =
+        </mo>
+        <mi>
+         H
+        </mi>
+        <mo stretchy="false">
+         (
+        </mo>
+        <mi>
+         a
+        </mi>
+        <mo stretchy="false">
+         )
+        </mo>
+       </mrow>
+       <annotation encoding="application/x-tex">
+        e=H(a)
+       </annotation>
+      </semantics>
+     </math>
+    </span>
+    <span aria-hidden="true" class="katex-html">
+     <span class="base">
+      <span class="strut" style="height: 0.4306em;">
+      </span>
+      <span class="mord mathnormal">
+       e
+      </span>
+      <span class="mspace" style="margin-right: 0.2778em;">
+      </span>
+      <span class="mrel">
+       =
+      </span>
+      <span class="mspace" style="margin-right: 0.2778em;">
+      </span>
+     </span>
+     <span class="base">
+      <span class="strut" style="height: 1em; vertical-align: -0.25em;">
+      </span>
+      <span class="mord mathnormal" style="margin-right: 0.0813em;">
+       H
+      </span>
+      <span class="mopen">
+       (
+      </span>
+      <span class="mord mathnormal">
+       a
+      </span>
+      <span class="mclose">
+       )
+      </span>
+     </span>
+    </span>
+   </span>
+  </span>
+  is always the same. This is where cryptographers model hash functions as something called a
+  <em>
+   Random Oracle
+  </em>
+  (RO). RO's are an idealised version of a hash function, which upon receiving an input for the first time returns a uniformly random value, and notes down what it returned. If it receives the same message again it returns the same value as previously.
+  <br/>
+  <br/>
+  Fiat-Shamir NIZK's are typically proved secure in the Programmable Random Oracle model, where we give the extractor the ability to see queries to the RO and control the initial output of the RO. The extractor then observes when P calls RO(
+  <span>
+   <span class="katex">
+    <span class="katex-mathml">
+     <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <semantics>
+       <mrow>
+        <mi>
+         a
+        </mi>
+       </mrow>
+       <annotation encoding="application/x-tex">
+        a
+       </annotation>
+      </semantics>
+     </math>
+    </span>
+    <span aria-hidden="true" class="katex-html">
+     <span class="base">
+      <span class="strut" style="height: 0.4306em;">
+      </span>
+      <span class="mord mathnormal">
+       a
+      </span>
+     </span>
+    </span>
+   </span>
+  </span>
+  ), makes it return one random value, rewinds P and the RO back to before the query, and makes the RO return a different random value the second time.
+  <br/>
+  <br/>
+  These transformations (and their limitations) are generally assumed knowledge within the research community, and one of the strengths of constructions like
+  <span>
+   <span class="katex">
+    <span class="katex-mathml">
+     <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <semantics>
+       <mrow>
+        <mi mathvariant="normal">
+         Σ
+        </mi>
+       </mrow>
+       <annotation encoding="application/x-tex">
+        \Sigma
+       </annotation>
+      </semantics>
+     </math>
+    </span>
+    <span aria-hidden="true" class="katex-html">
+     <span class="base">
+      <span class="strut" style="height: 0.6833em;">
+      </span>
+      <span class="mord">
+       Σ
+      </span>
+     </span>
+    </span>
+   </span>
+  </span>
+  -Protocols is that showing your protocol is one is enough to let you handwave away the "nizk-ification" as "using Fiat Shamir in the RO model we get...". But for those interested in a formal treatment, see fx.
+  <a href="https://eprint.iacr.org/2023/147.pdf">
+   this result from Eurocrypt '22
+  </a>
+ </span>
+ <br/>
+ <br/>
+ What is especially cool about this transformation (beside it making the protocol fully non interactive) is that it also removes all of the verifiers inputs from the protocol. This means that there is nothing a malicious verifier can actually do to try and break the protocol/diverge from what an honest verifier would do. So the fact that the sigma protocol is Honest Verifier Zero Knowledge, means this generic Fiat-Shamir transform also makes the protocol Zero-Knowledge even against malicious adversaries.
+ <br/>
+ <br/>
+ This has made this protocol a provably secure, efficient way of securely and non interactively proving knowledge of a secret DLOG relation, against potentially malicious verifiers.
+ <br/>
+ <br/>
+ In this challenge you'll construct a Fiat-Shamir NIZK proving knowledge of the DLOG relation.
+ <br/>
+ <br/>
+ Connect at
+ <code>
+  socket.cryptohack.org 13428
+ </code>
+ <br/>
+ <br/>
+ <b>
+  Challenge files:
+ </b>
+ <br/>
+ -
+ <a download="" href="/static/challenges/13428_1607c0c5ffb6d27cc09b7a9fd1fab436.py">
+  13428.py
+ </a>
+ <br/>
+ <br/>
+ <br/>
+ Challenge contributed by
+ <a class="gold-link" href="/user/killerdog">
+  killerdog
+ </a>
+ <!-- </p> -->
+</div>

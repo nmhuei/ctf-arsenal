@@ -1,0 +1,29 @@
+{
+  "category": "Crypto on the Web",
+  "category_slug": "web",
+  "stage": "TLS Part 1: The Protocol",
+  "stage_slug": "tls1",
+  "title": "Saying Hello",
+  "slug": "saying-hello",
+  "data_challenge": "saying-hello",
+  "points": 20,
+  "solves": 1645,
+  "url": "https://cryptohack.org/challenges/web/",
+  "attachments": [],
+  "resources": [
+    {
+      "text": "ciphersuite.info",
+      "href": "https://ciphersuite.info/cs/TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256/",
+      "url": "https://ciphersuite.info/cs/TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256/",
+      "download": false
+    },
+    {
+      "text": "Qualys SSL Labs",
+      "href": "https://www.ssllabs.com/ssltest/analyze.html",
+      "url": "https://www.ssllabs.com/ssltest/analyze.html",
+      "download": false
+    }
+  ],
+  "statement_html": "statement.html",
+  "statement_md": "statement.md"
+}

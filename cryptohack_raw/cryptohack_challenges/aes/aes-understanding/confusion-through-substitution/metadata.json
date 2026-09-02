@@ -1,0 +1,39 @@
+{
+  "category": "Symmetric Ciphers",
+  "category_slug": "aes",
+  "stage": "How AES Works",
+  "stage_slug": "aes-understanding",
+  "title": "Confusion through Substitution",
+  "slug": "confusion-through-substitution",
+  "data_challenge": "aes4",
+  "points": 25,
+  "solves": 12120,
+  "url": "https://cryptohack.org/challenges/aes/",
+  "attachments": [
+    {
+      "text": "sbox.py",
+      "href": "/static/challenges/sbox_8fc04ffb95faf5a5e6959195d5e2d94e.py",
+      "url": "https://cryptohack.org/static/challenges/sbox_8fc04ffb95faf5a5e6959195d5e2d94e.py",
+      "download": true,
+      "saved_as": "files/sbox_8fc04ffb95faf5a5e6959195d5e2d94e.py",
+      "status": 200,
+      "size": 3422
+    }
+  ],
+  "resources": [
+    {
+      "text": "algebraic methods",
+      "href": "https://math.stackexchange.com/a/1078515",
+      "url": "https://math.stackexchange.com/a/1078515",
+      "download": false
+    },
+    {
+      "text": "Galois field 2**8",
+      "href": "https://www.samiam.org/galois.html",
+      "url": "https://www.samiam.org/galois.html",
+      "download": false
+    }
+  ],
+  "statement_html": "statement.html",
+  "statement_md": "statement.md"
+}

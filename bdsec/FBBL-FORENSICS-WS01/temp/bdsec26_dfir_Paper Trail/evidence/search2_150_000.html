@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Search results - FirstBangla Mail</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+
+<div class="topbar">
+  <div class="topbar-left">
+    <div class="brand">
+      <div class="brand-mark">FB</div>
+      <span class="brand-name">FirstBangla Mail</span>
+    </div>
+  </div>
+  <div class="topbar-center">
+    <form class="searchform" method="get" action="/search" role="search">
+      <button type="submit" class="searchform-icon" aria-label="Search">&#128269;</button>
+      <input type="text" name="q" placeholder="Search mail" value="150,000" autocomplete="off">
+      
+      <a class="searchform-clear" href="/search" aria-label="Clear search">&#10005;</a>
+      
+    </form>
+  </div>
+  <div class="topbar-right">
+    <span class="user-chip">
+      <span class="user-avatar">A</span>
+      <span class="user-name">Arif Khan</span>
+    </span>
+    <a class="logout-link" href="/logout">Sign out</a>
+  </div>
+</div>
+<div class="layout">
+  <div class="sidebar">
+    <div class="compose-btn" title="Composing is disabled in this archive view">+ Compose</div>
+    <nav class="folder-nav">
+      <a class="folder-link " href="/mail/inbox">
+        <span class="folder-icon">&#128229;</span> Inbox
+        <span class="folder-count">761</span>
+      </a>
+      <a class="folder-link " href="/mail/sent">
+        <span class="folder-icon">&#128228;</span> Sent
+        <span class="folder-count">486</span>
+      </a>
+    </nav>
+    <div class="sidebar-footer">
+      arif.khan@firstbangla.com
+    </div>
+  </div>
+  <div class="main-pane">
+    <div class="pane-header">
+      <h1>Search results</h1>
+      <span class="filter-note">2 result(s) for "150,000"</span>
+      <form class="sort-bar" method="get">
+        <input type="hidden" name="q" value="150,000">
+        <label for="sort">Sort</label>
+        <select id="sort" name="sort" class="sort-select">
+          <option value="relevance" selected>Most relevant</option>
+          <option value="date_desc" >Newest first</option>
+          <option value="date_asc" >Oldest first</option>
+        </select>
+      </form>
+    </div>
+    <div class="mail-table">
+      
+      
+      <a class="mail-row" href="/mail/inbox/20240514-113249_1202_invoice-5150-partex-star-group.eml">
+        <span class="mail-avatar">R</span>
+        <span class="mail-folder-tag">inbox</span>
+        <span class="mail-person">Ruma Haque</span>
+        <span class="mail-subject">Invoice #5150 - Partex Star Group</span>
+        <span class="mail-snippet">&mdash; … with Partex Star Group. Please find attached the invoice #5<mark>150</mark> for your reference. The total amount is BDT 404,966, payable within 30 days. Please let us know if you require any c…</span>
+        <span class="mail-date">14 May 2024, 11:32 AM</span>
+      </a>
+      
+      <a class="mail-row" href="/mail/inbox/20230811-160500_0510_urgent-confidential-transfer-approval-ne.eml">
+        <span class="mail-avatar">R</span>
+        <span class="mail-folder-tag">inbox</span>
+        <span class="mail-person">Rahim Uddin</span>
+        <span class="mail-subject">Urgent: Confidential Transfer Approval Needed</span>
+        <span class="mail-snippet">&mdash; …up before month-end closing. The transfer amount is BDT 620,<mark>000</mark> for the warehouse logistics contract. Please expedite as our supplier is waiting. Regards, Rahim Uddin Procurement, …</span>
+        <span class="mail-date">11 Aug 2023, 04:05 PM</span>
+      </a>
+      
+    </div>
+  </div>
+</div>
+<script src="/static/app.js" defer></script>
+</body>
+</html>

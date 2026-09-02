@@ -1,0 +1,8 @@
+namespace Models;
+
+public enum EXECUTION_STATE : uint
+{
+	ES_CONTINUOUS = 2147483648u,
+	ES_DISPLAY_REQUIRED = 2u,
+	ES_SYSTEM_REQUIRED = 1u
+}

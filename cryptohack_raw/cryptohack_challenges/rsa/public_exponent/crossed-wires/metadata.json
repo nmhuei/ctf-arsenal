@@ -1,0 +1,42 @@
+{
+  "category": "RSA",
+  "category_slug": "rsa",
+  "stage": "Public exponent",
+  "stage_slug": "public_exponent",
+  "title": "Crossed Wires",
+  "slug": "crossed-wires",
+  "data_challenge": "wires",
+  "points": 100,
+  "solves": 4569,
+  "url": "https://cryptohack.org/challenges/rsa/",
+  "attachments": [
+    {
+      "text": "source.py",
+      "href": "/static/challenges/source_b3c3c786c649d363d27995545cf95dab.py",
+      "url": "https://cryptohack.org/static/challenges/source_b3c3c786c649d363d27995545cf95dab.py",
+      "download": true,
+      "saved_as": "files/source_b3c3c786c649d363d27995545cf95dab.py",
+      "status": 200,
+      "size": 589
+    },
+    {
+      "text": "output.txt",
+      "href": "/static/challenges/output_434cbf2b937bac1177bed299b2049a92.txt",
+      "url": "https://cryptohack.org/static/challenges/output_434cbf2b937bac1177bed299b2049a92.txt",
+      "download": true,
+      "saved_as": "files/output_434cbf2b937bac1177bed299b2049a92.txt",
+      "status": 200,
+      "size": 5057
+    }
+  ],
+  "resources": [
+    {
+      "text": "RSA: how to factorize N given d",
+      "href": "https://www.di-mgt.com.au/rsa_factorize_n.html",
+      "url": "https://www.di-mgt.com.au/rsa_factorize_n.html",
+      "download": false
+    }
+  ],
+  "statement_html": "statement.html",
+  "statement_md": "statement.md"
+}

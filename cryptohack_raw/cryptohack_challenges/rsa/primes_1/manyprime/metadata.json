@@ -1,0 +1,33 @@
+{
+  "category": "RSA",
+  "category_slug": "rsa",
+  "stage": "Primes Part 1",
+  "stage_slug": "primes_1",
+  "title": "Manyprime",
+  "slug": "manyprime",
+  "data_challenge": "manyprime",
+  "points": 40,
+  "solves": 8930,
+  "url": "https://cryptohack.org/challenges/rsa/",
+  "attachments": [
+    {
+      "text": "output.txt",
+      "href": "/static/challenges/output_5a478a5d4764257d0bbdfaed340fcbdd.txt",
+      "url": "https://cryptohack.org/static/challenges/output_5a478a5d4764257d0bbdfaed340fcbdd.txt",
+      "download": true,
+      "saved_as": "files/output_5a478a5d4764257d0bbdfaed340fcbdd.txt",
+      "status": 200,
+      "size": 1245
+    }
+  ],
+  "resources": [
+    {
+      "text": "The Elliptic Curve Factorization Method",
+      "href": "https://doc.sagemath.org/html/en/reference/interfaces/sage/interfaces/ecm.html",
+      "url": "https://doc.sagemath.org/html/en/reference/interfaces/sage/interfaces/ecm.html",
+      "download": false
+    }
+  ],
+  "statement_html": "statement.html",
+  "statement_md": "statement.md"
+}

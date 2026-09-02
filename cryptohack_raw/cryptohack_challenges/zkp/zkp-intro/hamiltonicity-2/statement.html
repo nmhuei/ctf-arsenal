@@ -1,0 +1,180 @@
+<div class="challengeDescription">
+ <!-- <p> -->
+ In the last challenge we showed how
+ <em>
+  not
+ </em>
+ to do the Fiat-Shamir transform for a multi-round
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi mathvariant="normal">
+        Σ
+       </mi>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       \Sigma
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 0.6833em;">
+     </span>
+     <span class="mord">
+      Σ
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ -Protocol. This time we've been a little bit more careful and implemented iterated Fiat-Shamir hashing properly.
+ <br/>
+ <br/>
+ Can you break it again?
+ <br/>
+ <br/>
+ <span class="note">
+  <i class="fas fa-pencil-alt">
+  </i>
+  As this protocol is somewhat complicated, we have included the script
+  <code>
+   example.py
+  </code>
+  , which uses the
+  <code>
+   pwntools process()
+  </code>
+  function to locally run the challenge.
+  <br/>
+  <br/>
+  This script will run the Prover side protocol honestly, to give you a starting point. And it will successfully solve the challenge when
+  <span>
+   <span class="katex">
+    <span class="katex-mathml">
+     <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <semantics>
+       <mrow>
+        <mi>
+         G
+        </mi>
+       </mrow>
+       <annotation encoding="application/x-tex">
+        G
+       </annotation>
+      </semantics>
+     </math>
+    </span>
+    <span aria-hidden="true" class="katex-html">
+     <span class="base">
+      <span class="strut" style="height: 0.6833em;">
+      </span>
+      <span class="mord mathnormal">
+       G
+      </span>
+     </span>
+    </span>
+   </span>
+  </span>
+  is set to a graph which has a Hamiltonian cycle, which the prover knows!
+  <br/>
+  <br/>
+  Such a graph has been included in the challenge file, but will only be used by the verifier if the "LocalTest" boolean is set to True, so to locally test out the protocol you can set this to True, and run
+  <span>
+   <span class="katex">
+    <span class="katex-mathml">
+     <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <semantics>
+       <mrow>
+        <mi>
+         e
+        </mi>
+        <mi>
+         x
+        </mi>
+        <mi>
+         a
+        </mi>
+        <mi>
+         m
+        </mi>
+        <mi>
+         p
+        </mi>
+        <mi>
+         l
+        </mi>
+        <mi>
+         e
+        </mi>
+        <mi mathvariant="normal">
+         .
+        </mi>
+        <mi>
+         p
+        </mi>
+        <mi>
+         y
+        </mi>
+       </mrow>
+       <annotation encoding="application/x-tex">
+        example.py
+       </annotation>
+      </semantics>
+     </math>
+    </span>
+    <span aria-hidden="true" class="katex-html">
+     <span class="base">
+      <span class="strut" style="height: 0.8889em; vertical-align: -0.1944em;">
+      </span>
+      <span class="mord mathnormal">
+       e
+      </span>
+      <span class="mord mathnormal">
+       x
+      </span>
+      <span class="mord mathnormal">
+       am
+      </span>
+      <span class="mord mathnormal" style="margin-right: 0.0197em;">
+       pl
+      </span>
+      <span class="mord mathnormal">
+       e
+      </span>
+      <span class="mord">
+       .
+      </span>
+      <span class="mord mathnormal">
+       p
+      </span>
+      <span class="mord mathnormal" style="margin-right: 0.0359em;">
+       y
+      </span>
+     </span>
+    </span>
+   </span>
+  </span>
+  to get the local flag!
+ </span>
+ <br/>
+ <br/>
+ <b>
+  This challenge is hosted on the CTF archive. Find the corresponding challenge in that category, solve it, then enter the flag here.
+ </b>
+ <br/>
+ <br/>
+ Challenge contributed by
+ <a class="gold-link" href="/user/killerdog">
+  killerdog
+ </a>
+ and
+ <a class="gold-link" href="#">
+  Lance Roy
+ </a>
+ <!-- </p> -->
+</div>

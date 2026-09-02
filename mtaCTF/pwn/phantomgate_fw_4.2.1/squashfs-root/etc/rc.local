@@ -1,0 +1,24 @@
+#!/bin/sh
+# /etc/rc.local — executed at the end of each multiuser runlevel
+#
+# PhantomGate PG-400 system startup
+
+echo "PhantomGate PG-400 — Firmware v4.2.1 (Build 20240315)" > /etc/motd
+
+# Start core services
+/usr/sbin/pg_netd start
+/usr/sbin/pg_firewall start
+
+# Start application gateway
+if [ -x /usr/sbin/pgated ]; then
+    /usr/sbin/pgated -c /etc/pgated.conf -d
+    echo "[rc.local] pgated started"
+fi
+
+# Start auxiliary services
+/usr/sbin/pg_logger &
+/usr/sbin/pg_watchdog &
+/usr/sbin/pg_updater &
+/usr/sbin/pg_monitor &
+
+exit 0

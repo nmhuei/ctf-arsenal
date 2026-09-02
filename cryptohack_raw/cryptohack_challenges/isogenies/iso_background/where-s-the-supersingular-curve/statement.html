@@ -1,0 +1,242 @@
+<div class="challengeDescription">
+ <!-- <p> -->
+ For the majority of this category (and all challenges at the time of writing) we are interested in computing isogenies between supersingular curves. Cryptographically, we are interested in supersingular elliptic curves because the
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi mathvariant="normal">
+        ℓ
+       </mi>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       \ell
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 0.6944em;">
+     </span>
+     <span class="mord">
+      ℓ
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ -isogeny graph for supersingular elliptic curves are
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mo stretchy="false">
+        (
+       </mo>
+       <mi mathvariant="normal">
+        ℓ
+       </mi>
+       <mo>
+        +
+       </mo>
+       <mn>
+        1
+       </mn>
+       <mo stretchy="false">
+        )
+       </mo>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       (\ell+1)
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 1em; vertical-align: -0.25em;">
+     </span>
+     <span class="mopen">
+      (
+     </span>
+     <span class="mord">
+      ℓ
+     </span>
+     <span class="mspace" style="margin-right: 0.2222em;">
+     </span>
+     <span class="mbin">
+      +
+     </span>
+     <span class="mspace" style="margin-right: 0.2222em;">
+     </span>
+    </span>
+    <span class="base">
+     <span class="strut" style="height: 1em; vertical-align: -0.25em;">
+     </span>
+     <span class="mord">
+      1
+     </span>
+     <span class="mclose">
+      )
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ -regular graphs (each vertex on the graph has
+ <span>
+  <span class="katex">
+   <span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi mathvariant="normal">
+        ℓ
+       </mi>
+       <mo>
+        +
+       </mo>
+       <mn>
+        1
+       </mn>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       \ell + 1
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <span aria-hidden="true" class="katex-html">
+    <span class="base">
+     <span class="strut" style="height: 0.7778em; vertical-align: -0.0833em;">
+     </span>
+     <span class="mord">
+      ℓ
+     </span>
+     <span class="mspace" style="margin-right: 0.2222em;">
+     </span>
+     <span class="mbin">
+      +
+     </span>
+     <span class="mspace" style="margin-right: 0.2222em;">
+     </span>
+    </span>
+    <span class="base">
+     <span class="strut" style="height: 0.6444em;">
+     </span>
+     <span class="mord">
+      1
+     </span>
+    </span>
+   </span>
+  </span>
+ </span>
+ neighbours) as well as Ramanujan graphs with optimal expansion properties. Essentially this means it is easy to get lost walking randomly around the graph, and hard isogeny problems are based on the fact that knowing the beginning and end of these walks is not enough to recover the path itself.
+ <br/>
+ <br/>
+ <span class="note">
+  <i class="fas fa-pencil-alt">
+  </i>
+  Mathematically, the name "supersingular" came from the fact that the endomorphism ring of these elliptic curves are "super-sized". They're not singular curves (all elliptic curves are non-singular!) but the "singularity" part of this comes from "special" (or rare) rather than singular in the geometric sense. In higher dimension we talk about superspecial abelian varieties and really this makes sense for elliptic curves too! These supersingular curves are very special and for very large characteristic, happening upon a supersingular curve is extremely unlikely (probability
+  <span>
+   <span class="katex">
+    <span class="katex-mathml">
+     <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <semantics>
+       <mrow>
+        <msup>
+         <mi>
+          p
+         </mi>
+         <mrow>
+          <mo>
+           −
+          </mo>
+          <mn>
+           1
+          </mn>
+         </mrow>
+        </msup>
+       </mrow>
+       <annotation encoding="application/x-tex">
+        p^{-1}
+       </annotation>
+      </semantics>
+     </math>
+    </span>
+    <span aria-hidden="true" class="katex-html">
+     <span class="base">
+      <span class="strut" style="height: 1.0085em; vertical-align: -0.1944em;">
+      </span>
+      <span class="mord">
+       <span class="mord mathnormal">
+        p
+       </span>
+       <span class="msupsub">
+        <span class="vlist-t">
+         <span class="vlist-r">
+          <span class="vlist" style="height: 0.8141em;">
+           <span class="" style="top: -3.063em; margin-right: 0.05em;">
+            <span class="pstrut" style="height: 2.7em;">
+            </span>
+            <span class="sizing reset-size6 size3 mtight">
+             <span class="mord mtight">
+              <span class="mord mtight">
+               −
+              </span>
+              <span class="mord mtight">
+               1
+              </span>
+             </span>
+            </span>
+           </span>
+          </span>
+         </span>
+        </span>
+       </span>
+      </span>
+     </span>
+    </span>
+   </span>
+  </span>
+  ). An open problem is how to hash to a random supersingular curve!
+ </span>
+ <br/>
+ <br/>
+ For this challenge there is a list of curves to pick from — can you identify the supersingular elliptic curve? Unironically, the wikipedia resource below is a great start and we've also included some lecture notes by Andrew Sutherland which are a fantastic resource.
+ <br/>
+ <br/>
+ The flag is the Montgomery coefficient A of the supersingular elliptic curve in the list of curves provided.
+ <br/>
+ <br/>
+ <b>
+  Challenge files:
+ </b>
+ <br/>
+ -
+ <a download="" href="/static/challenges/curves_1e476e7d608576c05a13b269d1481602.sage">
+  curves.sage
+ </a>
+ <br/>
+ <br/>
+ <b>
+  Resources:
+ </b>
+ <br/>
+ -
+ <a href="https://ocw.mit.edu/courses/18-783-elliptic-curves-spring-2021/6b139f926bbbe94db322ea23300b0246_MIT18_783S21_notes13.pdf" target="_blank">
+  Ordinary and supersingular elliptic curves, Section 13.2, Andrew Sutherland
+ </a>
+ <br/>
+ -
+ <a href="https://en.wikipedia.org/wiki/Supersingular_elliptic_curve" target="_blank">
+  Supersingular elliptic curve, Wikipedia
+ </a>
+ <br/>
+ <!-- </p> -->
+</div>

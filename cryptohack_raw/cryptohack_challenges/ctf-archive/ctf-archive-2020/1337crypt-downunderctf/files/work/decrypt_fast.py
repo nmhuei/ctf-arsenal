@@ -1,0 +1,26 @@
+from Crypto.Util.number import long_to_bytes
+
+p = 2935364106535139906333591503377582939381721393690202314466560911701433667360322396295180516559615392237039688297820021521444911725181652950607917775587738278110208262688664608072452024523876658155267042861794877825056315579558414653361594548912030480061259150738476079361771329847882571082413327789954581385161360420656553466950114597475767917716702008548398826974454402257185719150203783009309422161207
+
+with open('../output_b0bbcffd6c89c7f6ec66b8be6669bf2d.txt') as f:
+    lines = f.readlines()
+
+c = eval(lines[3].split('=')[1].strip())
+
+print(f"[+] Total ciphertexts: {len(c)}")
+
+exp = (p - 1) // 2
+bits = []
+for ci in c:
+    # pow(ci, (p-1)//2, p) gives 1 or p-1
+    res = pow(ci, exp, p)
+    if res == 1:
+        bits.append('1')
+    else:
+        bits.append('0')
+
+bin_str = ''.join(bits)
+flag_long = int(bin_str, 2)
+flag = long_to_bytes(flag_long)
+
+print(f"[+] FLAG: {flag.decode()}")

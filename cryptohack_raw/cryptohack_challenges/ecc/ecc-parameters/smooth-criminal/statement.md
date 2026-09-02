@@ -1,0 +1,10 @@
+Spent my morning reading up on ECC and now I'm ready to start encrypting my messages. Sent a flag to Bob today, but you'll never read it.
+  
+  
+**Challenge files:**
+  
+-
+[source.py](/static/challenges/source_ba064d03b53a5fd7321dd0007b72906b.py)
+  
+-
+[output.txt](/static/challenges/output_6cf0cf5ca7ab93bb829e557dd77e08ff.txt)

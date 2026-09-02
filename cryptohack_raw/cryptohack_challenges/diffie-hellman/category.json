@@ -1,0 +1,190 @@
+{
+  "title": "Diffie-Hellman",
+  "slug": "diffie-hellman",
+  "url": "https://cryptohack.org/challenges/diffie-hellman/",
+  "completed": "0",
+  "total": "14",
+  "description_text": "Diffie-Hellman Whitfield Diffie and Martin Hellman's 1976 paper \"New Directions in Cryptography\" heralded a huge leap forward for the field of cryptography. The paper defined the concepts of public-key cryptosystems, one-way trapdoor functions, and digital signatures, and described a key-exchange method for securely sharing secrets over an insecure channel. Although these were independently discovered at GCHQ some years earlier, Diffie and Hellman were first to share this landmark knowledge with the world. The Diffie-Hellman key exchange (DH) is central to the security of the internet today. As part of the TLS handshake, it's typically used to securely compute a shared AES encryption key over the internet between a web browser and server. Although several other algorithms can be used for key exchange, DH is the only option available in the latest revision of the TLS spec (1.3), showing how it's held up over the years. This is mainly due to how easily DH can be adapted to support \"forward secrecy\" , which we'll discuss more below. DH relies on the assumption that the discrete logarithm problem (DLP) is difficult to solve. However, in practice the parameters need to be chosen carefully or the discrete logarithm can be easy to crack, which we'll explore in these challenges. Furthermore, the most basic version of the protocol is vulnerable to a man-in-the-middle attack, showing how DH requires careful authentication of who you are talking to.",
+  "stages": [
+    {
+      "title": "Starter",
+      "slug": "dh-starter"
+    },
+    {
+      "title": "Man In The Middle",
+      "slug": "dh_mitm"
+    },
+    {
+      "title": "Group Theory",
+      "slug": "dh_groups"
+    },
+    {
+      "title": "Misc",
+      "slug": "misc"
+    }
+  ],
+  "challenge_count": 14,
+  "challenges": [
+    {
+      "title": "Working with Fields",
+      "stage": "Starter",
+      "path": "diffie-hellman/dh-starter/working-with-fields",
+      "attachments": []
+    },
+    {
+      "title": "Generators of Groups",
+      "stage": "Starter",
+      "path": "diffie-hellman/dh-starter/generators-of-groups",
+      "attachments": []
+    },
+    {
+      "title": "Computing Public Values",
+      "stage": "Starter",
+      "path": "diffie-hellman/dh-starter/computing-public-values",
+      "attachments": []
+    },
+    {
+      "title": "Computing Shared Secrets",
+      "stage": "Starter",
+      "path": "diffie-hellman/dh-starter/computing-shared-secrets",
+      "attachments": []
+    },
+    {
+      "title": "Deriving Symmetric Keys",
+      "stage": "Starter",
+      "path": "diffie-hellman/dh-starter/deriving-symmetric-keys",
+      "attachments": [
+        {
+          "text": "source.py",
+          "href": "/static/challenges/source_0e330e41ce30ead878a4589929aa31a1.py",
+          "url": "https://cryptohack.org/static/challenges/source_0e330e41ce30ead878a4589929aa31a1.py",
+          "download": true,
+          "saved_as": "files/source_0e330e41ce30ead878a4589929aa31a1.py",
+          "status": 200,
+          "size": 666
+        },
+        {
+          "text": "decrypt.py",
+          "href": "/static/challenges/decrypt_08c0fede9185868aba4a6ae21aca0148.py",
+          "url": "https://cryptohack.org/static/challenges/decrypt_08c0fede9185868aba4a6ae21aca0148.py",
+          "download": true,
+          "saved_as": "files/decrypt_08c0fede9185868aba4a6ae21aca0148.py",
+          "status": 200,
+          "size": 854
+        }
+      ]
+    },
+    {
+      "title": "Parameter Injection",
+      "stage": "Man In The Middle",
+      "path": "diffie-hellman/dh_mitm/parameter-injection",
+      "attachments": []
+    },
+    {
+      "title": "Export-grade",
+      "stage": "Man In The Middle",
+      "path": "diffie-hellman/dh_mitm/export-grade",
+      "attachments": []
+    },
+    {
+      "title": "Static Client",
+      "stage": "Man In The Middle",
+      "path": "diffie-hellman/dh_mitm/static-client",
+      "attachments": []
+    },
+    {
+      "title": "Additive",
+      "stage": "Group Theory",
+      "path": "diffie-hellman/dh_groups/additive",
+      "attachments": []
+    },
+    {
+      "title": "Static Client 2",
+      "stage": "Group Theory",
+      "path": "diffie-hellman/dh_groups/static-client-2",
+      "attachments": []
+    },
+    {
+      "title": "Script Kiddie",
+      "stage": "Misc",
+      "path": "diffie-hellman/misc/script-kiddie",
+      "attachments": [
+        {
+          "text": "script.py",
+          "href": "/static/challenges/script_70449139467b5442a859d310e6945690.py",
+          "url": "https://cryptohack.org/static/challenges/script_70449139467b5442a859d310e6945690.py",
+          "download": true,
+          "saved_as": "files/script_70449139467b5442a859d310e6945690.py",
+          "status": 200,
+          "size": 2450
+        },
+        {
+          "text": "output.txt",
+          "href": "/static/challenges/output_92cc8b7f0db768b53291efbf969ca3ca.txt",
+          "url": "https://cryptohack.org/static/challenges/output_92cc8b7f0db768b53291efbf969ca3ca.txt",
+          "download": true,
+          "saved_as": "files/output_92cc8b7f0db768b53291efbf969ca3ca.txt",
+          "status": 200,
+          "size": 1558
+        }
+      ]
+    },
+    {
+      "title": "The Matrix",
+      "stage": "Misc",
+      "path": "diffie-hellman/misc/the-matrix",
+      "attachments": [
+        {
+          "text": "the_matrix.sage",
+          "href": "/static/challenges/the_matrix_92a1330e0fc370fbacf7f001ae2933ee.sage",
+          "url": "https://cryptohack.org/static/challenges/the_matrix_92a1330e0fc370fbacf7f001ae2933ee.sage",
+          "download": true,
+          "saved_as": "files/the_matrix_92a1330e0fc370fbacf7f001ae2933ee.sage",
+          "status": 200,
+          "size": 881
+        },
+        {
+          "text": "flag.enc",
+          "href": "/static/challenges/flag_403b981c77d39217c20390c1729b15f0.enc",
+          "url": "https://cryptohack.org/static/challenges/flag_403b981c77d39217c20390c1729b15f0.enc",
+          "download": true,
+          "saved_as": "files/flag_403b981c77d39217c20390c1729b15f0.enc",
+          "status": 200,
+          "size": 2549
+        }
+      ]
+    },
+    {
+      "title": "The Matrix Reloaded",
+      "stage": "Misc",
+      "path": "diffie-hellman/misc/the-matrix-reloaded",
+      "attachments": [
+        {
+          "text": "matrix_reloaded.zip",
+          "href": "/static/challenges/matrix_reloaded_5994d61c3210bacecfbcd343dc373864.zip",
+          "url": "https://cryptohack.org/static/challenges/matrix_reloaded_5994d61c3210bacecfbcd343dc373864.zip",
+          "download": true,
+          "saved_as": "files/matrix_reloaded_5994d61c3210bacecfbcd343dc373864.zip",
+          "status": 200,
+          "size": 75164
+        }
+      ]
+    },
+    {
+      "title": "The Matrix Revolutions",
+      "stage": "Misc",
+      "path": "diffie-hellman/misc/the-matrix-revolutions",
+      "attachments": [
+        {
+          "text": "matrix_revolutions.zip",
+          "href": "/static/challenges/matrix_revolutions_2d9c03dde281a05e89519d9cd356d19c.zip",
+          "url": "https://cryptohack.org/static/challenges/matrix_revolutions_2d9c03dde281a05e89519d9cd356d19c.zip",
+          "download": true,
+          "saved_as": "files/matrix_revolutions_2d9c03dde281a05e89519d9cd356d19c.zip",
+          "status": 200,
+          "size": 15174
+        }
+      ]
+    }
+  ]
+}

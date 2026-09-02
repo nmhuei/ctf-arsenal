@@ -1,0 +1,13 @@
+[package]
+name = "sfex-playground-runner"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[[bin]]
+name = "runner"
+path = "src/main.rs"
+
+[[bin]]
+name = "flag"
+path = "src/bin/flag.rs"

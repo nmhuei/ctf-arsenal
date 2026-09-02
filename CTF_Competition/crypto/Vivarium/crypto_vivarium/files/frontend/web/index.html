@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>Vivarium</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <canvas id="snake" class="snake-layer" aria-hidden="true"></canvas>
+
+  <main class="shell">
+    <header>
+      <h1>Code in the <em>vivarium.</em></h1>
+    </header>
+
+    <section class="workspace" aria-label="Python workspace">
+      <div class="pane editor-pane">
+        <div class="pane-bar">
+          <div class="file"><span class="python-mark">Py</span> specimen.py</div>
+        </div>
+        <div class="editor-wrap">
+          <div class="gutter" id="gutter" aria-hidden="true">1</div>
+          <textarea id="code" aria-label="Python source code" spellcheck="false" autocomplete="off">numbers = range(1, 6)
+print([number ** 2 for number in numbers])</textarea>
+        </div>
+        <div class="actions">
+          <span class="hint"><kbd>Ctrl</kbd> + <kbd>Enter</kbd> to run</span>
+          <button id="run" type="button"><span class="play"></span><span id="run-label">Run specimen</span></button>
+        </div>
+      </div>
+
+      <div class="pane output-pane">
+        <div class="pane-bar">
+          <div class="file">Observation log</div>
+          <div class="status idle" id="status"><span class="status-dot"></span><span id="status-text">Ready</span></div>
+        </div>
+        <pre class="console empty" id="console"><span><span class="empty-art">⌁</span>
+Run the specimen to observe its output.</span></pre>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

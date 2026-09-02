@@ -1,0 +1,13 @@
+# /etc/profile — system-wide shell profile
+
+export PATH="/usr/sbin:/usr/bin:/sbin:/bin"
+export HOME="/root"
+export TERM="${TERM:-vt100}"
+export PS1='\u@\h:\w\$ '
+export EDITOR=vi
+umask 022
+
+alias ll='ls -la'
+alias la='ls -A'
+
+[ -f /etc/motd ] && cat /etc/motd

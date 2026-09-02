@@ -1,0 +1,411 @@
+{
+  "ctf_info": {
+    "title": "CTF COMPFEST 18",
+    "url": "https://mirror-ctf.compfest.id",
+    "platform": "ctfd",
+    "user": "bqa_1",
+    "team": null,
+    "game_id": null,
+    "ctftime_id": 3290,
+    "event_window": {
+      "start": "2026-08-29T00:00:00+00:00",
+      "end": "2026-08-31T00:00:00+00:00",
+      "source": "ctfd:window.init",
+      "confidence": "medium"
+    }
+  },
+  "total_challenges": 12,
+  "total_points": 2748,
+  "categories": {
+    "Miscellaneous": 1,
+    "Cryptography": 2,
+    "Blockchain": 2,
+    "Reverse Engineering": 1,
+    "Forensics": 3,
+    "Web Exploitation": 1,
+    "Binary Exploitation": 2
+  },
+  "challenges": [
+    {
+      "id": 28,
+      "name": "Sanity Check",
+      "category": "Miscellaneous",
+      "points": 10,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 159,
+      "submit_endpoint": "https://mirror-ctf.compfest.id/api/v1/challenges/attempt",
+      "instance_info": {},
+      "files": []
+    },
+    {
+      "id": 10,
+      "name": "The 67th Line",
+      "category": "Cryptography",
+      "points": 100,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 46,
+      "submit_endpoint": "https://mirror-ctf.compfest.id/api/v1/challenges/attempt",
+      "instance_info": {},
+      "files": []
+    },
+    {
+      "id": 15,
+      "name": "Phantom Ledger",
+      "category": "Blockchain",
+      "points": 100,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": "http://34.2.147.230:8502/",
+      "solved_by_me": false,
+      "solves_count": 47,
+      "submit_endpoint": "https://mirror-ctf.compfest.id/api/v1/challenges/attempt",
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://mirror-ctf.compfest.id/files/e9cab76feea4fb2866a5643088c3c99e/PhantomVault.sol?token=eyJ1c2VyX2lkIjoxMzU3LCJ0ZWFtX2lkIjo1OTksImZpbGVfaWQiOjIwfQ.apJFOw.gIFlUR2l0M663WfNfrl_EqNnMLU",
+          "name": "PhantomVault.sol",
+          "saved_path": "/home/light/Workspace/CTF/COMPFEST_18/Blockchain/Phantom_Ledger/challenge/PhantomVault.sol",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công"
+        },
+        {
+          "url": "https://mirror-ctf.compfest.id/files/d93cec18493b2e01b95b5bb643547165/Setup.sol?token=eyJ1c2VyX2lkIjoxMzU3LCJ0ZWFtX2lkIjo1OTksImZpbGVfaWQiOjIxfQ.apJFOw.TJVMJtI6gCndJg9xJ5Wb2iubiIY",
+          "name": "Setup.sol",
+          "saved_path": "/home/light/Workspace/CTF/COMPFEST_18/Blockchain/Phantom_Ledger/challenge/Setup.sol",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "name": "Compfest Coin",
+      "category": "Blockchain",
+      "points": 100,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": "http://34.2.147.230:8501/",
+      "solved_by_me": false,
+      "solves_count": 31,
+      "submit_endpoint": "https://mirror-ctf.compfest.id/api/v1/challenges/attempt",
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://mirror-ctf.compfest.id/files/db9e8ef87c4a0c6a19ae112d95d611c4/Move.toml?token=eyJ1c2VyX2lkIjoxMzU3LCJ0ZWFtX2lkIjo1OTksImZpbGVfaWQiOjY4fQ.apJFOw.Zx1Lke7_A-v9lLvlJU-4ecgI5zE",
+          "name": "Move.toml",
+          "saved_path": "/home/light/Workspace/CTF/COMPFEST_18/Blockchain/Compfest_Coin/challenge/Move.toml",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công"
+        },
+        {
+          "url": "https://mirror-ctf.compfest.id/files/82cb996e856ea9a7fbc1e252d40faf93/assets.move?token=eyJ1c2VyX2lkIjoxMzU3LCJ0ZWFtX2lkIjo1OTksImZpbGVfaWQiOjY5fQ.apJFOw.FF9dyZxiB-MMnPVQ3f2y2mRN4LQ",
+          "name": "assets.move",
+          "saved_path": "/home/light/Workspace/CTF/COMPFEST_18/Blockchain/Compfest_Coin/challenge/assets.move",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công"
+        },
+        {
+          "url": "https://mirror-ctf.compfest.id/files/3b3b00463f46070351c905dbe1b2506c/config.move?token=eyJ1c2VyX2lkIjoxMzU3LCJ0ZWFtX2lkIjo1OTksImZpbGVfaWQiOjcwfQ.apJFOw.Y5vfzp5aoSMM1d3F8RUQhDlBDLQ",
+          "name": "config.move",
+          "saved_path": "/home/light/Workspace/CTF/COMPFEST_18/Blockchain/Compfest_Coin/challenge/config.move",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công"
+        },
+        {
+          "url": "https://mirror-ctf.compfest.id/files/aaeca7d828ba59ab63edf0829c265404/math.move?token=eyJ1c2VyX2lkIjoxMzU3LCJ0ZWFtX2lkIjo1OTksImZpbGVfaWQiOjcxfQ.apJFOw.sw3HqmCR21fcKjnoXbbDgJUdZ5Q",
+          "name": "math.move",
+          "saved_path": "/home/light/Workspace/CTF/COMPFEST_18/Blockchain/Compfest_Coin/challenge/math.move",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công"
+        },
+        {
+          "url": "https://mirror-ctf.compfest.id/files/a11cf35453b7062c0b2eeefe3cc9ffe0/oracle.move?token=eyJ1c2VyX2lkIjoxMzU3LCJ0ZWFtX2lkIjo1OTksImZpbGVfaWQiOjcyfQ.apJFOw.VCYTzYDLyHiXlWMn_GSOj3fSfew",
+          "name": "oracle.move",
+          "saved_path": "/home/light/Workspace/CTF/COMPFEST_18/Blockchain/Compfest_Coin/challenge/oracle.move",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công"
+        },
+        {
+          "url": "https://mirror-ctf.compfest.id/files/841e4c8417ef2ff9f64646cbdc092fb0/pool.move?token=eyJ1c2VyX2lkIjoxMzU3LCJ0ZWFtX2lkIjo1OTksImZpbGVfaWQiOjczfQ.apJFOw.pm_QT8PLeBXAK1J6FoZcSF2uJhg",
+          "name": "pool.move",
+          "saved_path": "/home/light/Workspace/CTF/COMPFEST_18/Blockchain/Compfest_Coin/challenge/pool.move",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công"
+        },
+        {
+          "url": "https://mirror-ctf.compfest.id/files/02a1862327073ff2e673394e20037526/registry.move?token=eyJ1c2VyX2lkIjoxMzU3LCJ0ZWFtX2lkIjo1OTksImZpbGVfaWQiOjc0fQ.apJFOw.YzQpTxpK1RTEh5NLO9LO9VR12H0",
+          "name": "registry.move",
+          "saved_path": "/home/light/Workspace/CTF/COMPFEST_18/Blockchain/Compfest_Coin/challenge/registry.move",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công"
+        },
+        {
+          "url": "https://mirror-ctf.compfest.id/files/22b2f6d008deab41e643280d98be63ef/setup.move?token=eyJ1c2VyX2lkIjoxMzU3LCJ0ZWFtX2lkIjo1OTksImZpbGVfaWQiOjc1fQ.apJFOw.BfhuxKyqfcF8saubqzLfrMEG_w4",
+          "name": "setup.move",
+          "saved_path": "/home/light/Workspace/CTF/COMPFEST_18/Blockchain/Compfest_Coin/challenge/setup.move",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công"
+        },
+        {
+          "url": "https://mirror-ctf.compfest.id/files/88289a44f44a754f1c3f406192129346/vault.move?token=eyJ1c2VyX2lkIjoxMzU3LCJ0ZWFtX2lkIjo1OTksImZpbGVfaWQiOjc2fQ.apJFOw.I5CCBLFgiDWYn-Z_5IisI8Y_cG4",
+          "name": "vault.move",
+          "saved_path": "/home/light/Workspace/CTF/COMPFEST_18/Blockchain/Compfest_Coin/challenge/vault.move",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "name": "The Last Bitbender",
+      "category": "Reverse Engineering",
+      "points": 100,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": "Start an instance to receive your TCP host and port.",
+      "solved_by_me": false,
+      "solves_count": 54,
+      "submit_endpoint": "https://mirror-ctf.compfest.id/api/v1/challenges/attempt",
+      "instance_info": {
+        "is_container": true,
+        "type": "ctfd_container",
+        "start_url": "https://mirror-ctf.compfest.id/plugins/ctfd-whale/container",
+        "stop_url": "https://mirror-ctf.compfest.id/plugins/ctfd-whale/container",
+        "extend_url": "https://mirror-ctf.compfest.id/plugins/ctfd-whale/container",
+        "status_url": "https://mirror-ctf.compfest.id/plugins/ctfd-whale/container",
+        "status": "stopped"
+      },
+      "files": [
+        {
+          "url": "https://mirror-ctf.compfest.id/files/30d14f8959b8d81379222a9486d6e812/chall.exe?token=eyJ1c2VyX2lkIjoxMzU3LCJ0ZWFtX2lkIjo1OTksImZpbGVfaWQiOjQ3fQ.apJFOw.pJ1xMmHjsL7n5SRH_WAKGJP4XHE",
+          "name": "chall.exe",
+          "saved_path": "/home/light/Workspace/CTF/COMPFEST_18/Reverse_Engineering/The_Last_Bitbender/challenge/chall.exe",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công"
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "name": "hello",
+      "category": "Cryptography",
+      "points": 100,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": "nc 34.2.147.230 3000",
+      "solved_by_me": false,
+      "solves_count": 70,
+      "submit_endpoint": "https://mirror-ctf.compfest.id/api/v1/challenges/attempt",
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://mirror-ctf.compfest.id/files/1040c0f9bcbcac289df7c7716686cb4b/chall.sage?token=eyJ1c2VyX2lkIjoxMzU3LCJ0ZWFtX2lkIjo1OTksImZpbGVfaWQiOjQ4fQ.apJFOw.nxnC9L3c8sH1TG2przjlf9qrRoA",
+          "name": "chall.sage",
+          "saved_path": "/home/light/Workspace/CTF/COMPFEST_18/Cryptography/hello/challenge/chall.sage",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công"
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "name": "BurhanGuild Loader Incident",
+      "category": "Forensics",
+      "points": 100,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": "nc 34.2.147.230 7010",
+      "solved_by_me": false,
+      "solves_count": 49,
+      "submit_endpoint": "https://mirror-ctf.compfest.id/api/v1/challenges/attempt",
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://mirror-ctf.compfest.id/files/42805fa50f934ca9f6e01e0d2bddde57/attachment.zip?token=eyJ1c2VyX2lkIjoxMzU3LCJ0ZWFtX2lkIjo1OTksImZpbGVfaWQiOjQ1fQ.apJFPA.0o97DgdNeZc8vivgWwD3JEe0iUw",
+          "name": "attachment.zip",
+          "saved_path": "/home/light/Workspace/CTF/COMPFEST_18/Forensics/BurhanGuild_Loader_Incident/challenge/attachment.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "name": "Egg",
+      "category": "Web Exploitation",
+      "points": 275,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": "Start an instance to receive your HTTP URL.",
+      "solved_by_me": false,
+      "solves_count": 16,
+      "submit_endpoint": "https://mirror-ctf.compfest.id/api/v1/challenges/attempt",
+      "instance_info": {
+        "is_container": true,
+        "type": "ctfd_container",
+        "start_url": "https://mirror-ctf.compfest.id/plugins/ctfd-whale/container",
+        "stop_url": "https://mirror-ctf.compfest.id/plugins/ctfd-whale/container",
+        "extend_url": "https://mirror-ctf.compfest.id/plugins/ctfd-whale/container",
+        "status_url": "https://mirror-ctf.compfest.id/plugins/ctfd-whale/container",
+        "status": "stopped"
+      },
+      "files": []
+    },
+    {
+      "id": 4,
+      "name": "未来日記",
+      "category": "Binary Exploitation",
+      "points": 379,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": "nc 34.2.147.230 5001",
+      "solved_by_me": false,
+      "solves_count": 12,
+      "submit_endpoint": "https://mirror-ctf.compfest.id/api/v1/challenges/attempt",
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://mirror-ctf.compfest.id/files/f30f8ddd85d0bb42065fad3e329f80c3/public.zip?token=eyJ1c2VyX2lkIjoxMzU3LCJ0ZWFtX2lkIjo1OTksImZpbGVfaWQiOjgzfQ.apJFPA.i0Gj2frtQLDwxupp5ctd04aEEBQ",
+          "name": "public.zip",
+          "saved_path": "/home/light/Workspace/CTF/COMPFEST_18/Binary_Exploitation/未来日記/challenge/public.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công"
+        },
+        {
+          "url": "https://media4.giphy.com/media/v1.Y2lkPTZjMDliOTUydzRxZHQ0a2R1Z2M4NGN0YnNxem45MDdocmh3emIzZXdtMDNwcnA4cyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/UxO1b2PiFzK1i/source.gif",
+          "name": "yuno gasai yandere",
+          "saved_path": "/home/light/Workspace/CTF/COMPFEST_18/Binary_Exploitation/未来日記/challenge/yuno gasai yandere",
+          "success": true,
+          "source": "description_direct_file",
+          "message": "Đã tải trực tiếp thành công"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "name": "save the water",
+      "category": "Forensics",
+      "points": 484,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": "nc 34.2.147.230 7000",
+      "solved_by_me": false,
+      "solves_count": 5,
+      "submit_endpoint": "https://mirror-ctf.compfest.id/api/v1/challenges/attempt",
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://mirror-ctf.compfest.id/files/f45e88d94f78d72fbae4c7ba786e2c24/public.7z?token=eyJ1c2VyX2lkIjoxMzU3LCJ0ZWFtX2lkIjo1OTksImZpbGVfaWQiOjQ0fQ.apJFPA.Ki8FhgfShn9nogSitiunfK4phbM",
+          "name": "public.7z",
+          "saved_path": "/home/light/Workspace/CTF/COMPFEST_18/Forensics/save_the_water/challenge/public.7z",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "name": "Intern",
+      "category": "Forensics",
+      "points": 500,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": "Start an instance to receive your TCP host and port.",
+      "solved_by_me": false,
+      "solves_count": 0,
+      "submit_endpoint": "https://mirror-ctf.compfest.id/api/v1/challenges/attempt",
+      "instance_info": {
+        "is_container": true,
+        "type": "ctfd_container",
+        "start_url": "https://mirror-ctf.compfest.id/plugins/ctfd-whale/container",
+        "stop_url": "https://mirror-ctf.compfest.id/plugins/ctfd-whale/container",
+        "extend_url": "https://mirror-ctf.compfest.id/plugins/ctfd-whale/container",
+        "status_url": "https://mirror-ctf.compfest.id/plugins/ctfd-whale/container",
+        "status": "stopped"
+      },
+      "files": [
+        {
+          "url": "https://drive.google.com/file/d/1uZKu7_eFSJxJb9RJfj94bchoDHzyPkck/view?usp=sharing",
+          "name": null,
+          "saved_path": null,
+          "success": false,
+          "source": "description_gdrive",
+          "message": "Google Drive quota exceeded / cần quyền truy cập: file đã vượt hạn mức tải hoặc không chia sẻ công khai."
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "redis-cli 0-day",
+      "category": "Binary Exploitation",
+      "points": 500,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": "Start an instance to receive your TCP host and port.",
+      "solved_by_me": false,
+      "solves_count": 0,
+      "submit_endpoint": "https://mirror-ctf.compfest.id/api/v1/challenges/attempt",
+      "instance_info": {
+        "is_container": true,
+        "type": "ctfd_container",
+        "start_url": "https://mirror-ctf.compfest.id/plugins/ctfd-whale/container",
+        "stop_url": "https://mirror-ctf.compfest.id/plugins/ctfd-whale/container",
+        "extend_url": "https://mirror-ctf.compfest.id/plugins/ctfd-whale/container",
+        "status_url": "https://mirror-ctf.compfest.id/plugins/ctfd-whale/container",
+        "status": "stopped"
+      },
+      "files": [
+        {
+          "url": "https://mirror-ctf.compfest.id/files/a8bdf912c99ad2d7b4cddb8458985fae/redis-cli?token=eyJ1c2VyX2lkIjoxMzU3LCJ0ZWFtX2lkIjo1OTksImZpbGVfaWQiOjg0fQ.apJFPA.LzRBCLiL0p4qKfXVwI51fMgAkrA",
+          "name": "redis-cli",
+          "saved_path": "/home/light/Workspace/CTF/COMPFEST_18/Binary_Exploitation/redis-cli_0-day/challenge/redis-cli",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công"
+        },
+        {
+          "url": "https://mirror-ctf.compfest.id/files/0336243df5a8f896df1f9a5cc8303a3e/README.txt?token=eyJ1c2VyX2lkIjoxMzU3LCJ0ZWFtX2lkIjo1OTksImZpbGVfaWQiOjg1fQ.apJFPA.2EQvH-OfqL4KKIvfF_NmWTQ5CZw",
+          "name": "README.txt",
+          "saved_path": "/home/light/Workspace/CTF/COMPFEST_18/Binary_Exploitation/redis-cli_0-day/challenge/README.txt",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công"
+        }
+      ]
+    }
+  ]
+}

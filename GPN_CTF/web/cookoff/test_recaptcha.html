@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<head>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+  <div class="g-recaptcha" data-sitekey="invalid123" data-error-callback="onError"></div>
+  <script>
+    function onError() {
+      console.log("SUCCESS: onError was called!");
+      document.body.innerHTML += "<h1>SUCCESS: onError was called!</h1>";
+    }
+    setTimeout(() => {
+      console.log("Checking if callback fired...");
+      document.body.innerHTML += "<h1>Timeout reached</h1>";
+    }, 5000);
+  </script>
+</body>
+</html>

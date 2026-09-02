@@ -1,0 +1,45 @@
+{
+  "category": "Symmetric Ciphers",
+  "category_slug": "aes",
+  "stage": "How AES Works",
+  "stage_slug": "aes-understanding",
+  "title": "Diffusion through Permutation",
+  "slug": "diffusion-through-permutation",
+  "data_challenge": "aes5",
+  "points": 30,
+  "solves": 11047,
+  "url": "https://cryptohack.org/challenges/aes/",
+  "attachments": [
+    {
+      "text": "diffusion.py",
+      "href": "/static/challenges/diffusion_ee6215282094b4ae8cd1b20697477712.py",
+      "url": "https://cryptohack.org/static/challenges/diffusion_ee6215282094b4ae8cd1b20697477712.py",
+      "download": true,
+      "saved_as": "files/diffusion_ee6215282094b4ae8cd1b20697477712.py",
+      "status": 200,
+      "size": 1146
+    }
+  ],
+  "resources": [
+    {
+      "text": "Avalanche effect",
+      "href": "https://en.wikipedia.org/wiki/Avalanche_effect",
+      "url": "https://en.wikipedia.org/wiki/Avalanche_effect",
+      "download": false
+    },
+    {
+      "text": "this page",
+      "href": "https://www.samiam.org/mix-column.html",
+      "url": "https://www.samiam.org/mix-column.html",
+      "download": false
+    },
+    {
+      "text": "Wikipedia",
+      "href": "https://en.wikipedia.org/wiki/Rijndael_MixColumns",
+      "url": "https://en.wikipedia.org/wiki/Rijndael_MixColumns",
+      "download": false
+    }
+  ],
+  "statement_html": "statement.html",
+  "statement_md": "statement.md"
+}

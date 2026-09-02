@@ -1,0 +1,24 @@
+#!/bin/sh
+# S50services — auxiliary service daemons
+
+case "$1" in
+    start)
+        echo "[S50] Starting log daemon..."
+        /usr/sbin/pg_logger &
+
+        echo "[S50] Starting watchdog..."
+        /usr/sbin/pg_watchdog &
+
+        echo "[S50] Starting update agent..."
+        /usr/sbin/pg_updater &
+
+        echo "[S50] Starting system monitor..."
+        /usr/sbin/pg_monitor &
+
+        echo "[S50] All services started"
+        ;;
+    stop)
+        echo "[S50] Stopping auxiliary services..."
+        killall pg_logger pg_watchdog pg_updater pg_monitor 2>/dev/null
+        ;;
+esac

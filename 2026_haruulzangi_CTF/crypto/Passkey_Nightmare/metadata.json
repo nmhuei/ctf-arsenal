@@ -1,0 +1,38 @@
+{
+  "id": "77ec2c7f5d9fbbc8",
+  "name": "Passkey Nightmare",
+  "category": "crypto",
+  "points": 258,
+  "author": "flame",
+  "tags": [],
+  "hints": [],
+  "connection_info": null,
+  "solved_by_me": false,
+  "solves_count": 44,
+  "downloaded_files": [
+    {
+      "url": "https://2026.haruulzangi.mn/uploads/070969e84b5ee8678acee7a0319e08a300dbbd4bd7a4c49b735aef4eea45d7a0/crypto_passkey-nightmare.tar.gz",
+      "name": "crypto_passkey-nightmare.tar.gz",
+      "saved_path": "/home/light/Workspace/CTF/2026_haruulzangi_CTF/crypto/Passkey_Nightmare/crypto_passkey-nightmare.tar.gz",
+      "success": true,
+      "source": "platform_attachment",
+      "message": "Direct download successful"
+    }
+  ],
+  "raw": {
+    "id": "77ec2c7f5d9fbbc8",
+    "name": "Passkey Nightmare",
+    "description": "Mattermark added passkeys to protect its flag. It only accepts direct\nattestation from authenticators signed by a private certification\nauthority, so creating your own credential should be impossible.\n\nThe frontend source code is attached. Find a way to become trusted and\nregister a passkey that the service will accept.\n\n> [!CONNECTION]\n> https://passkey-nightmare-yfkirzul.challenge.2026.haruulzangi.mn",
+    "category": "crypto",
+    "author": "flame",
+    "files": [
+      {
+        "name": "crypto_passkey-nightmare.tar.gz",
+        "url": "/uploads/070969e84b5ee8678acee7a0319e08a300dbbd4bd7a4c49b735aef4eea45d7a0/crypto_passkey-nightmare.tar.gz"
+      }
+    ],
+    "points": 258,
+    "solves": 44,
+    "sortWeight": 0
+  }
+}

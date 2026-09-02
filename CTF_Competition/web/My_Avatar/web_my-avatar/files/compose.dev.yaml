@@ -1,0 +1,6 @@
+services:
+  caddy:
+    environment:
+      DOMAIN: ":80"
+    ports: !override
+      - "8080:80"

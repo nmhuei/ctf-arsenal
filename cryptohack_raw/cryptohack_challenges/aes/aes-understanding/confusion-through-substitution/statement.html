@@ -1,0 +1,65 @@
+<div class="challengeDescription">
+ <!-- <p> -->
+ The first step of each AES round is
+ <i>
+  SubBytes
+ </i>
+ . This involves taking each byte of the state matrix and substituting it for a different byte in a preset 16x16 lookup table. The lookup table is called a "Substitution box" or "S-box" for short, and can be perplexing at first sight. Let's break it down.
+ <br/>
+ <br/>
+ <img alt="diagram showing Substitution" src="/static/img/aes/Substitution.png" style="max-width: 100%; display: block; margin: 0 auto;"/>
+ <br/>
+ <br/>
+ In 1945 American mathematician Claude Shannon published a groundbreaking paper on Information Theory. It identified "confusion" as an essential property of a secure cipher. "Confusion" means that the relationship between the ciphertext and the key should be as complex as possible. Given just a ciphertext, there should be no way to learn anything about the key.
+ <br/>
+ <br/>
+ If a cipher has poor confusion, it is possible to express a relationship between ciphertext, key, and plaintext as a linear function. For instance, in a Caesar cipher,
+ <code>
+  ciphertext = plaintext + key
+ </code>
+ . That's an obvious relation, which is easy to reverse. More complicated linear transformations can be solved using techniques like Gaussian elimination. Even low-degree polynomials, e.g. an equation like
+ <code>
+  x^4 + 51x^3 + x
+ </code>
+ , can be solved efficiently using
+ <a href="https://math.stackexchange.com/a/1078515" target="_blank">
+  algebraic methods
+ </a>
+ . However, the higher the degree of a polynomial, generally the harder it becomes to solve – it can only be approximated by a larger and larger amount of linear functions.
+ <br/>
+ <br/>
+ The main purpose of the S-box is to transform the input in a way that is resistant to being approximated by linear functions. S-boxes are aiming for high
+ <i>
+  non-linearity
+ </i>
+ , and while AES's one is not perfect, it's pretty close. The fast lookup in an S-box is a shortcut for performing a very nonlinear function on the input bytes. This function involves taking the modular inverse in the
+ <a href="https://www.samiam.org/galois.html" target="_blank">
+  Galois field 2**8
+ </a>
+ and then applying an affine transformation which has been tweaked for maximum confusion. The simplest way to express the function is through the following high-degree polynomial:
+ <br/>
+ <br/>
+ <img alt="diagram showing S-Box equation" src="/static/img/aes/SBoxEq.png" style="max-width: 100%; display: block; margin: 0 auto;"/>
+ <br/>
+ <br/>
+ To make the S-box, the function has been calculated on all input values from 0x00 to 0xff and the outputs put in the lookup table.
+ <br/>
+ <br/>
+ Implement
+ <code>
+  sub_bytes
+ </code>
+ , send the state matrix through the inverse S-box and then convert it to bytes to get the flag.
+ <br/>
+ <br/>
+ <b>
+  Challenge files:
+ </b>
+ <br/>
+ -
+ <a download="" href="/static/challenges/sbox_8fc04ffb95faf5a5e6959195d5e2d94e.py">
+  sbox.py
+ </a>
+ <br/>
+ <!-- </p> -->
+</div>

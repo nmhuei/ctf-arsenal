@@ -1,0 +1,751 @@
+{
+  "ctf_info": {
+    "title": "Vòng loại PTIT CTF 2026",
+    "url": "https://jeo.infosecptit.org",
+    "platform": "gzctf",
+    "user": "B23DCCE070"
+  },
+  "total_challenges": 35,
+  "total_points": 8135,
+  "categories": {
+    "Crypto": 7,
+    "Pwn": 7,
+    "Web": 7,
+    "Reverse": 7,
+    "Forensics": 7
+  },
+  "challenges": [
+    {
+      "id": 25,
+      "name": "CIA - What does 'I' stand for?",
+      "category": "Crypto",
+      "points": 368,
+      "author": null,
+      "tags": [
+        "DynamicContainer"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 3,
+      "files": []
+    },
+    {
+      "id": 22,
+      "name": "Missing Pen...",
+      "category": "Crypto",
+      "points": 124,
+      "author": null,
+      "tags": [
+        "DynamicContainer"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 15,
+      "files": []
+    },
+    {
+      "id": 29,
+      "name": "SOFAR - Vault",
+      "category": "Crypto",
+      "points": 500,
+      "author": null,
+      "tags": [
+        "StaticAttachment"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 1,
+      "files": [
+        {
+          "url": "https://jeo.infosecptit.org/assets/77a90e8969b53d65e0bdea8d155a1bc39ac76ed7b1d03b54232ec05d4052f0c3/SOFAR - Vault.zip",
+          "name": "SOFAR - Vault.zip",
+          "saved_path": "/home/light/Workspace/CTF/PTIT_CTF_2026/Crypto/SOFAR_-_Vault/SOFAR - Vault.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "name": "SSSH",
+      "category": "Crypto",
+      "points": 180,
+      "author": null,
+      "tags": [
+        "DynamicContainer"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 9,
+      "files": [
+        {
+          "url": "https://jeo.infosecptit.org/assets/f933f934d96c40035e30531b05de6e973cb82d3f05d7416f21b7698007ccc6a0/server.py",
+          "name": "server.py",
+          "saved_path": "/home/light/Workspace/CTF/PTIT_CTF_2026/Crypto/SSSH/server.py",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Signaling",
+      "category": "Crypto",
+      "points": 108,
+      "author": null,
+      "tags": [
+        "StaticAttachment"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 20,
+      "files": [
+        {
+          "url": "https://jeo.infosecptit.org/assets/eb4714faebce1db06aa6adf1105fe378033a1ce221ea87d0a23778a5634b19fe/Signaling.zip",
+          "name": "Signaling.zip",
+          "saved_path": "/home/light/Workspace/CTF/PTIT_CTF_2026/Crypto/Signaling/Signaling.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Stranger Papers",
+      "category": "Crypto",
+      "points": 500,
+      "author": null,
+      "tags": [
+        "StaticAttachment"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 0,
+      "files": [
+        {
+          "url": "https://mega.nz/file/cd4jFJwL#9I2XCsmzXEfooSh0TnCkNL8D9PkjwmyycC5OB_Dk-S4",
+          "name": "cd4jFJwL",
+          "saved_path": "/home/light/Workspace/CTF/PTIT_CTF_2026/Crypto/Stranger_Papers/cd4jFJwL",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "name": "That Should Be nhh",
+      "category": "Crypto",
+      "points": 100,
+      "author": null,
+      "tags": [
+        "StaticAttachment"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 67,
+      "files": [
+        {
+          "url": "https://jeo.infosecptit.org/assets/e1e3b9a2d76cc8670bffef8ccd858573968cc78bb95f591a2387bfea378145a6/enc.sage",
+          "name": "enc.sage",
+          "saved_path": "/home/light/Workspace/CTF/PTIT_CTF_2026/Crypto/That_Should_Be_nhh/enc.sage",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "AI2Own",
+      "category": "Pwn",
+      "points": 500,
+      "author": null,
+      "tags": [
+        "DynamicContainer"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 0,
+      "files": []
+    },
+    {
+      "id": 14,
+      "name": "Operation Midnight Drop",
+      "category": "Pwn",
+      "points": 102,
+      "author": null,
+      "tags": [
+        "DynamicContainer"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 27,
+      "files": [
+        {
+          "url": "https://jeo.infosecptit.org/assets/4bf857937f4af5854a218b683e0fb20ae00ba3b5f9b443a0ae95d4b1f49d9bff/operation.zip",
+          "name": "operation.zip",
+          "saved_path": "/home/light/Workspace/CTF/PTIT_CTF_2026/Pwn/Operation_Midnight_Drop/operation.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "name": "The Wellness Ring Bypass",
+      "category": "Pwn",
+      "points": 154,
+      "author": null,
+      "tags": [
+        "DynamicContainer"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 11,
+      "files": [
+        {
+          "url": "https://jeo.infosecptit.org/assets/15b28bf7a8a49f1130df6b4bd23815efc718754cae804e539b7d6149a571e404/The Wellness Ring Bypass-20260814T081410Z-1-001.zip",
+          "name": "The Wellness Ring Bypass-20260814T081410Z-1-001.zip",
+          "saved_path": "/home/light/Workspace/CTF/PTIT_CTF_2026/Pwn/The_Wellness_Ring_Bypass/The Wellness Ring Bypass-20260814T081410Z-1-001.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "name": "baby-heap-V2",
+      "category": "Pwn",
+      "points": 136,
+      "author": null,
+      "tags": [
+        "DynamicContainer"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 13,
+      "files": [
+        {
+          "url": "https://jeo.infosecptit.org/assets/780a4ea7a0732992c87f7a7ffd12bf0e31217ccb617ce563869e8c3abe45f357/heap_basic_V2.zip",
+          "name": "heap_basic_V2.zip",
+          "saved_path": "/home/light/Workspace/CTF/PTIT_CTF_2026/Pwn/baby-heap-V2/heap_basic_V2.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "name": "baby-heap-V2-revenge",
+      "category": "Pwn",
+      "points": 319,
+      "author": null,
+      "tags": [
+        "DynamicContainer"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 4,
+      "files": [
+        {
+          "url": "https://jeo.infosecptit.org/assets/72aff996f719396f3cd2d45feb624d3cd95fc14629f305f4f9f5e779837a6ee0/baby-heap-V2-patch.zip",
+          "name": "baby-heap-V2-patch.zip",
+          "saved_path": "/home/light/Workspace/CTF/PTIT_CTF_2026/Pwn/baby-heap-V2-revenge/baby-heap-V2-patch.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "name": "blackbox-V4",
+      "category": "Pwn",
+      "points": 500,
+      "author": null,
+      "tags": [
+        "DynamicContainer"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 0,
+      "files": []
+    },
+    {
+      "id": 9,
+      "name": "seccomp-V3",
+      "category": "Pwn",
+      "points": 279,
+      "author": null,
+      "tags": [
+        "DynamicContainer"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 5,
+      "files": [
+        {
+          "url": "https://jeo.infosecptit.org/assets/abccc17e406464609717738f290e8bf429810bce7580e1ef969e1be7132e7d89/seccomp_V3.zip",
+          "name": "seccomp_V3.zip",
+          "saved_path": "/home/light/Workspace/CTF/PTIT_CTF_2026/Pwn/seccomp-V3/seccomp_V3.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Approve Please, Genie!",
+      "category": "Web",
+      "points": 500,
+      "author": null,
+      "tags": [
+        "DynamicContainer"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 1,
+      "files": []
+    },
+    {
+      "id": 16,
+      "name": "Brain Rot",
+      "category": "Web",
+      "points": 100,
+      "author": null,
+      "tags": [
+        "DynamicContainer"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 89,
+      "files": []
+    },
+    {
+      "id": 23,
+      "name": "LEMON MELON COOKIE",
+      "category": "Web",
+      "points": 100,
+      "author": null,
+      "tags": [
+        "DynamicContainer"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 38,
+      "files": []
+    },
+    {
+      "id": 37,
+      "name": "Machine Love",
+      "category": "Web",
+      "points": 100,
+      "author": null,
+      "tags": [
+        "DynamicContainer"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 59,
+      "files": []
+    },
+    {
+      "id": 36,
+      "name": "PTIT Portfolio Renderer",
+      "category": "Web",
+      "points": 102,
+      "author": null,
+      "tags": [
+        "DynamicContainer"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 26,
+      "files": []
+    },
+    {
+      "id": 15,
+      "name": "Palworld Mod",
+      "category": "Web",
+      "points": 144,
+      "author": null,
+      "tags": [
+        "DynamicContainer"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 12,
+      "files": [
+        {
+          "url": "https://jeo.infosecptit.org/assets/3e198e66fae31c372346d405caa0b82de65fea1214313296998913b2ab79ea12/palworld_mod_src_for_player.zip",
+          "name": "palworld_mod_src_for_player.zip",
+          "saved_path": "/home/light/Workspace/CTF/PTIT_CTF_2026/Web/Palworld_Mod/palworld_mod_src_for_player.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "name": "Độ Mixi",
+      "category": "Web",
+      "points": 100,
+      "author": null,
+      "tags": [
+        "DynamicContainer"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 95,
+      "files": [
+        {
+          "url": "https://jeo.infosecptit.org/assets/b3032c8f7de851564dfd50607bd6d53e7c1db034f042ff0e25a0985355826cae/Web - Độ Mixi.7z",
+          "name": "Web - Độ Mixi.7z",
+          "saved_path": "/home/light/Workspace/CTF/PTIT_CTF_2026/Web/Độ_Mixi/Web - Độ Mixi.7z",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "name": "Pablo Escobar",
+      "category": "Reverse",
+      "points": 368,
+      "author": null,
+      "tags": [
+        "StaticAttachment"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 3,
+      "files": [
+        {
+          "url": "https://jeo.infosecptit.org/assets/257fec34a3b0ad32bc18a700fa898e379003bc739da884694eb781a0ca3daf54/dist.zip",
+          "name": "dist.zip",
+          "saved_path": "/home/light/Workspace/CTF/PTIT_CTF_2026/Reverse/Pablo_Escobar/dist.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "name": "GhostVM",
+      "category": "Reverse",
+      "points": 100,
+      "author": null,
+      "tags": [
+        "StaticAttachment"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 36,
+      "files": [
+        {
+          "url": "https://jeo.infosecptit.org/assets/cc83b884f3e61eee452a7107746e81141414d725bccceb8e2abaf3c016db7601/GhostVM.zip",
+          "name": "GhostVM.zip",
+          "saved_path": "/home/light/Workspace/CTF/PTIT_CTF_2026/Reverse/GhostVM/GhostVM.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "MMO",
+      "category": "Reverse",
+      "points": 100,
+      "author": null,
+      "tags": [
+        "StaticAttachment"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 33,
+      "files": [
+        {
+          "url": "https://transfer.it/t/0577OtgBVTaT",
+          "name": "0577OtgBVTaT",
+          "saved_path": "/home/light/Workspace/CTF/PTIT_CTF_2026/Reverse/MMO/0577OtgBVTaT",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "name": "P(roc)E(ss)",
+      "category": "Reverse",
+      "points": 319,
+      "author": null,
+      "tags": [
+        "DynamicContainer"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 4,
+      "files": []
+    },
+    {
+      "id": 32,
+      "name": "PhoneFarm",
+      "category": "Reverse",
+      "points": 100,
+      "author": null,
+      "tags": [
+        "StaticAttachment"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 53,
+      "files": [
+        {
+          "url": "https://jeo.infosecptit.org/assets/bb95b4966246f91d487ef081a5ab9e4da6e099a87acb66a524e6baeebbcf84ad/PhoneFarm.zip",
+          "name": "PhoneFarm.zip",
+          "saved_path": "/home/light/Workspace/CTF/PTIT_CTF_2026/Reverse/PhoneFarm/PhoneFarm.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "name": "Tiger Bạc",
+      "category": "Reverse",
+      "points": 500,
+      "author": null,
+      "tags": [
+        "StaticAttachment"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 0,
+      "files": []
+    },
+    {
+      "id": 13,
+      "name": "Winux",
+      "category": "Reverse",
+      "points": 100,
+      "author": null,
+      "tags": [
+        "StaticAttachment"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 32,
+      "files": [
+        {
+          "url": "https://jeo.infosecptit.org/assets/cc35f770d8246334533c4e78af9685dc6fd94296ae40bdbcba4b7c5f2644037e/Winux.zip",
+          "name": "Winux.zip",
+          "saved_path": "/home/light/Workspace/CTF/PTIT_CTF_2026/Reverse/Winux/Winux.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "name": "Bug bounty?",
+      "category": "Forensics",
+      "points": 103,
+      "author": null,
+      "tags": [
+        "DynamicContainer"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 25,
+      "files": [
+        {
+          "url": "https://mega.nz/file/PewkARTJ#pk3jguwY4vH6DhtuO5eYqX3ciOAekcnvlX_041wtWoI",
+          "name": "PewkARTJ",
+          "saved_path": "/home/light/Workspace/CTF/PTIT_CTF_2026/Forensics/Bug_bounty/PewkARTJ",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "name": "QR",
+      "category": "Forensics",
+      "points": 100,
+      "author": null,
+      "tags": [
+        "StaticAttachment"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 75,
+      "files": [
+        {
+          "url": "https://jeo.infosecptit.org/assets/d191d20349a84ba86c37a902e630feb3a3c3f8b2ae1452c03f5e0f36aabfc904/Forensics - QR.7z",
+          "name": "Forensics - QR.7z",
+          "saved_path": "/home/light/Workspace/CTF/PTIT_CTF_2026/Forensics/QR/Forensics - QR.7z",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "name": "Suspicious",
+      "category": "Forensics",
+      "points": 319,
+      "author": null,
+      "tags": [
+        "DynamicContainer"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 4,
+      "files": [
+        {
+          "url": "https://mega.nz/file/KfhBHITZ#oxCE7xUeK3CDtACC4Mb9d1XHM5D3N1mSIrVuNgpSE7k",
+          "name": "KfhBHITZ",
+          "saved_path": "/home/light/Workspace/CTF/PTIT_CTF_2026/Forensics/Suspicious/KfhBHITZ",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Sơn Tùng M-TP",
+      "category": "Forensics",
+      "points": 110,
+      "author": null,
+      "tags": [
+        "StaticAttachment"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 19,
+      "files": [
+        {
+          "url": "https://mega.nz/file/aLB1GTIY#Xi91XrbLGKGKARCvlEgf6nJ3QgqO0ZQHHKg8gB3ZyMk",
+          "name": "aLB1GTIY",
+          "saved_path": "/home/light/Workspace/CTF/PTIT_CTF_2026/Forensics/Sơn_Tùng_M-TP/aLB1GTIY",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "name": "anhcd",
+      "category": "Forensics",
+      "points": 105,
+      "author": null,
+      "tags": [
+        "StaticAttachment"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 22,
+      "files": [
+        {
+          "url": "https://jeo.infosecptit.org/assets/efda58307f955597741637c71d4147619c9b379fdc483630f3a46a4a707c9b17/Forensics - anhcd.7z",
+          "name": "Forensics - anhcd.7z",
+          "saved_path": "/home/light/Workspace/CTF/PTIT_CTF_2026/Forensics/anhcd/Forensics - anhcd.7z",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "🐧",
+      "category": "Forensics",
+      "points": 427,
+      "author": null,
+      "tags": [
+        "DynamicContainer"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 2,
+      "files": [
+        {
+          "url": "https://mega.nz/file/5dwnkCDC#mIVSJceV_KETUvt92JIopa8nbQsgEORcD4G0Beql-1o",
+          "name": "5dwnkCDC",
+          "saved_path": "/home/light/Workspace/CTF/PTIT_CTF_2026/Forensics/🐧/5dwnkCDC",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Direct download successful"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "name": "🪟",
+      "category": "Forensics",
+      "points": 368,
+      "author": null,
+      "tags": [
+        "DynamicContainer"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 3,
+      "files": []
+    }
+  ]
+}

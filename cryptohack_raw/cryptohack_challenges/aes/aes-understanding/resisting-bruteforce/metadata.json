@@ -1,0 +1,47 @@
+{
+  "category": "Symmetric Ciphers",
+  "category_slug": "aes",
+  "stage": "How AES Works",
+  "stage_slug": "aes-understanding",
+  "title": "Resisting Bruteforce",
+  "slug": "resisting-bruteforce",
+  "data_challenge": "aes1",
+  "points": 10,
+  "solves": 17702,
+  "url": "https://cryptohack.org/challenges/aes/",
+  "attachments": [],
+  "resources": [
+    {
+      "text": "random permutation",
+      "href": "https://en.wikipedia.org/wiki/Pseudorandom_permutation",
+      "url": "https://en.wikipedia.org/wiki/Pseudorandom_permutation",
+      "download": false
+    },
+    {
+      "text": "Somebody estimated",
+      "href": "https://crypto.stackexchange.com/a/48669",
+      "url": "https://crypto.stackexchange.com/a/48669",
+      "download": false
+    },
+    {
+      "text": "an attack",
+      "href": "https://en.wikipedia.org/wiki/Biclique_attack",
+      "url": "https://en.wikipedia.org/wiki/Biclique_attack",
+      "download": false
+    },
+    {
+      "text": "Shor's algorithm",
+      "href": "https://en.wikipedia.org/wiki/Shor%27s_algorithm",
+      "url": "https://en.wikipedia.org/wiki/Shor%27s_algorithm",
+      "download": false
+    },
+    {
+      "text": "Grover's algorithm",
+      "href": "https://en.wikipedia.org/wiki/Grover's_algorithm",
+      "url": "https://en.wikipedia.org/wiki/Grover's_algorithm",
+      "download": false
+    }
+  ],
+  "statement_html": "statement.html",
+  "statement_md": "statement.md"
+}
