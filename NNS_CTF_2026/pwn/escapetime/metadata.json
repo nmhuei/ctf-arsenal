@@ -1,0 +1,65 @@
+{
+  "id": "pwn_escapetime",
+  "name": "escapetime",
+  "category": "pwn",
+  "points": 228,
+  "author": "Qyn",
+  "tags": [],
+  "hints": [],
+  "connection_info": null,
+  "solved_by_me": false,
+  "solves_count": 18,
+  "submit_endpoint": null,
+  "instance_info": {},
+  "downloaded_files": [
+    {
+      "url": "https://attachments.nnsc.tf/uploads/71d7dada6ab92f8e8ecb35985ade531c9f5f3714739238c2c2142a823c48f519/pwn_escapetime.tar.gz",
+      "name": "pwn_escapetime.tar.gz",
+      "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/pwn/escapetime/challenge/pwn_escapetime.tar.gz",
+      "success": true,
+      "source": "platform_attachment",
+      "message": "Đã tải trực tiếp thành công",
+      "verification": {
+        "etag": "\"096611d7d61f9a3f277efaf3926bf7cc\"",
+        "final_url": "https://attachments.nnsc.tf/uploads/71d7dada6ab92f8e8ecb35985ade531c9f5f3714739238c2c2142a823c48f519/pwn_escapetime.tar.gz",
+        "last_modified": "Fri, 04 Sep 2026 00:53:15 GMT",
+        "schema_version": 1,
+        "sha256": null,
+        "size": 5567421,
+        "url": "https://attachments.nnsc.tf/uploads/71d7dada6ab92f8e8ecb35985ade531c9f5f3714739238c2c2142a823c48f519/pwn_escapetime.tar.gz",
+        "verified_at": "2026-09-04T16:05:45Z"
+      }
+    }
+  ],
+  "raw": {
+    "id": "pwn_escapetime",
+    "name": "escapetime",
+    "description": "WebAssembly is supposed to stay inside the sandbox, thankfully wasmtime uses rust and has a heap sandbox. That will keep us safe!\n\n> [!NOTE]\n> This is a 0day challenge and we are hoping you keep th{is|ese} 0day{|s} to yourself until the vulnerabilit{y|ies} {is|are} patched.\n\n",
+    "category": "pwn",
+    "author": "Qyn",
+    "files": [
+      {
+        "name": "pwn_escapetime.tar.gz",
+        "url": "https://attachments.nnsc.tf/uploads/71d7dada6ab92f8e8ecb35985ade531c9f5f3714739238c2c2142a823c48f519/pwn_escapetime.tar.gz"
+      }
+    ],
+    "points": 500,
+    "solves": 0,
+    "sortWeight": 0
+  },
+  "status": {
+    "schema_version": 2,
+    "solve": "unsolved",
+    "flag": {
+      "value": null,
+      "state": "none"
+    },
+    "writeup": "none",
+    "writeup_auto": true,
+    "notes": "",
+    "labels": [],
+    "container": "none",
+    "synced_at": "2026-09-05T07:11:32Z",
+    "updated_at": "2026-09-05T07:11:32Z"
+  }
+}

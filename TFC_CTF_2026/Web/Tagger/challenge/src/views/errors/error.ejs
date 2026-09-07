@@ -1,0 +1,17 @@
+<%- include('../partials/header') %>
+
+<section class="error-page window">
+  <div class="window-bar danger-bar">
+    <span>SYSTEM_ALERT.EXE</span>
+    <div class="window-controls"><i></i><i></i><i></i></div>
+  </div>
+  <div class="error-body">
+    <span class="error-code"><%= status %></span>
+    <p class="eyebrow">CONNECTION ERROR</p>
+    <h1><%= title %></h1>
+    <p><%= message %></p>
+    <a class="button button-primary" href="<%= currentUser ? '/chat' : '/login' %>">RETURN TO BASE</a>
+  </div>
+</section>
+
+<%- include('../partials/footer') %>

@@ -1,0 +1,65 @@
+{
+  "id": "blockchain_Block Rehearsal",
+  "name": "Block Rehearsal",
+  "category": "blockchain",
+  "points": 220,
+  "author": "hoover",
+  "tags": [],
+  "hints": [],
+  "connection_info": null,
+  "solved_by_me": false,
+  "solves_count": 19,
+  "submit_endpoint": null,
+  "instance_info": {},
+  "downloaded_files": [
+    {
+      "url": "https://attachments.nnsc.tf/uploads/ce4266054527f852cd6342d0842868b865f0eb9fd860e45c1434bc89df51c981/blockchain_block-rehearsal.tar.gz",
+      "name": "blockchain_block-rehearsal.tar.gz",
+      "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/blockchain/Block_Rehearsal/challenge/blockchain_block-rehearsal.tar.gz",
+      "success": true,
+      "source": "platform_attachment",
+      "message": "Đã tải trực tiếp thành công",
+      "verification": {
+        "etag": "\"630fe2b7653e542cd5579ea4c6b39dc5\"",
+        "final_url": "https://attachments.nnsc.tf/uploads/ce4266054527f852cd6342d0842868b865f0eb9fd860e45c1434bc89df51c981/blockchain_block-rehearsal.tar.gz",
+        "last_modified": "Fri, 04 Sep 2026 15:25:52 GMT",
+        "schema_version": 1,
+        "sha256": null,
+        "size": 3803,
+        "url": "https://attachments.nnsc.tf/uploads/ce4266054527f852cd6342d0842868b865f0eb9fd860e45c1434bc89df51c981/blockchain_block-rehearsal.tar.gz",
+        "verified_at": "2026-09-04T16:05:47Z"
+      }
+    }
+  ],
+  "raw": {
+    "id": "blockchain_Block Rehearsal",
+    "name": "Block Rehearsal",
+    "description": "Ever wondered how Mina handles block proposals? No? Well, there is a time\nfor everything!\n\n> [!NOTE]\n> This is a 0day challenge and we are hoping you keep th{is|ese} 0day{|s} to yourself until the vulnerabilit{y|ies} {is|are} patched.\n\n",
+    "category": "blockchain",
+    "author": "hoover",
+    "files": [
+      {
+        "name": "blockchain_block-rehearsal.tar.gz",
+        "url": "https://attachments.nnsc.tf/uploads/ce4266054527f852cd6342d0842868b865f0eb9fd860e45c1434bc89df51c981/blockchain_block-rehearsal.tar.gz"
+      }
+    ],
+    "points": 500,
+    "solves": 0,
+    "sortWeight": 0
+  },
+  "status": {
+    "schema_version": 2,
+    "solve": "unsolved",
+    "flag": {
+      "value": null,
+      "state": "none"
+    },
+    "writeup": "none",
+    "writeup_auto": true,
+    "notes": "",
+    "labels": [],
+    "container": "none",
+    "synced_at": "2026-09-05T07:11:32Z",
+    "updated_at": "2026-09-05T07:11:33Z"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "id": "web_NNS Travel",
+  "name": "NNS Travel",
+  "category": "web",
+  "points": 57,
+  "author": "piprett",
+  "tags": [],
+  "hints": [],
+  "connection_info": null,
+  "solved_by_me": false,
+  "solves_count": 380,
+  "submit_endpoint": null,
+  "instance_info": {},
+  "downloaded_files": [
+    {
+      "url": "https://attachments.nnsc.tf/uploads/35e096fd597ef593da759e5e089bf74c99ff5aea408c0b70b3f180f348f40da4/web_nns-travel.tar.gz",
+      "name": "web_nns-travel.tar.gz",
+      "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/web/NNS_Travel/challenge/web_nns-travel.tar.gz",
+      "success": true,
+      "source": "platform_attachment",
+      "message": "Đã tải trực tiếp thành công",
+      "verification": {
+        "etag": "\"7d175577804c8c4dcdb57c9807d6d219\"",
+        "final_url": "https://attachments.nnsc.tf/uploads/35e096fd597ef593da759e5e089bf74c99ff5aea408c0b70b3f180f348f40da4/web_nns-travel.tar.gz",
+        "last_modified": "Thu, 03 Sep 2026 18:23:38 GMT",
+        "schema_version": 1,
+        "sha256": null,
+        "size": 50567,
+        "url": "https://attachments.nnsc.tf/uploads/35e096fd597ef593da759e5e089bf74c99ff5aea408c0b70b3f180f348f40da4/web_nns-travel.tar.gz",
+        "verified_at": "2026-09-04T16:05:44Z"
+      }
+    }
+  ],
+  "raw": {
+    "id": "web_NNS Travel",
+    "name": "NNS Travel",
+    "description": "NNS Air has launched a brand new travel agency: NNS Air Travel Agency. Now you just need to find the tickets they ordered for you.\n\nThe flag is located at `/flag.txt`.\n\n",
+    "category": "web",
+    "author": "piprett",
+    "files": [
+      {
+        "name": "web_nns-travel.tar.gz",
+        "url": "https://attachments.nnsc.tf/uploads/35e096fd597ef593da759e5e089bf74c99ff5aea408c0b70b3f180f348f40da4/web_nns-travel.tar.gz"
+      }
+    ],
+    "points": 299,
+    "solves": 11,
+    "sortWeight": 100
+  },
+  "status": {
+    "schema_version": 2,
+    "solve": "unsolved",
+    "flag": {
+      "value": null,
+      "state": "none"
+    },
+    "writeup": "none",
+    "writeup_auto": true,
+    "notes": "",
+    "labels": [],
+    "container": "none",
+    "synced_at": "2026-09-05T07:11:32Z",
+    "updated_at": "2026-09-05T07:11:32Z"
+  }
+}

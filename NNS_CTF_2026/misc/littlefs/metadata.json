@@ -1,0 +1,65 @@
+{
+  "id": "misc_littlefs",
+  "name": "littlefs",
+  "category": "misc",
+  "points": 84,
+  "author": "simen",
+  "tags": [],
+  "hints": [],
+  "connection_info": null,
+  "solved_by_me": false,
+  "solves_count": 97,
+  "submit_endpoint": null,
+  "instance_info": {},
+  "downloaded_files": [
+    {
+      "url": "https://attachments.nnsc.tf/uploads/a9d71f03d752c5e15b43d2ed4de6964c5052c41aa248cd33cb96bd48c3389eae/misc_littlefs.tar.gz",
+      "name": "misc_littlefs.tar.gz",
+      "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/misc/littlefs/challenge/misc_littlefs.tar.gz",
+      "success": true,
+      "source": "platform_attachment",
+      "message": "Đã tải trực tiếp thành công",
+      "verification": {
+        "etag": "\"57ce5b9b78e9ec9a4ca586f0b52f17f0\"",
+        "final_url": "https://attachments.nnsc.tf/uploads/a9d71f03d752c5e15b43d2ed4de6964c5052c41aa248cd33cb96bd48c3389eae/misc_littlefs.tar.gz",
+        "last_modified": "Thu, 03 Sep 2026 00:04:19 GMT",
+        "schema_version": 1,
+        "sha256": null,
+        "size": 19919,
+        "url": "https://attachments.nnsc.tf/uploads/a9d71f03d752c5e15b43d2ed4de6964c5052c41aa248cd33cb96bd48c3389eae/misc_littlefs.tar.gz",
+        "verified_at": "2026-09-04T16:05:44Z"
+      }
+    }
+  ],
+  "raw": {
+    "id": "misc_littlefs",
+    "name": "littlefs",
+    "description": "I found this device with a NOR flash to that just prints out the flag.\nUnfortunately, I could not read the terminal output.\n\nHowever, I was able to connect my logic analyser. That is a tool that can record the communication between different components in the device.\nYou can open the `.logicdata` file using Saleae Logic.\nTo make the recording, channel 0 was connected to MOSI, channel 1 to CS, channel 2 to SCK and channel 3 to MISO.\n\n",
+    "category": "misc",
+    "author": "simen",
+    "files": [
+      {
+        "name": "misc_littlefs.tar.gz",
+        "url": "https://attachments.nnsc.tf/uploads/a9d71f03d752c5e15b43d2ed4de6964c5052c41aa248cd33cb96bd48c3389eae/misc_littlefs.tar.gz"
+      }
+    ],
+    "points": 500,
+    "solves": 0,
+    "sortWeight": 100
+  },
+  "status": {
+    "schema_version": 2,
+    "solve": "unsolved",
+    "flag": {
+      "value": null,
+      "state": "none"
+    },
+    "writeup": "none",
+    "writeup_auto": true,
+    "notes": "",
+    "labels": [],
+    "container": "none",
+    "synced_at": "2026-09-05T07:11:32Z",
+    "updated_at": "2026-09-05T07:11:32Z"
+  }
+}

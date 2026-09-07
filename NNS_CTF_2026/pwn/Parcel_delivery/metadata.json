@@ -1,0 +1,65 @@
+{
+  "id": "pwn_Parcel delivery",
+  "name": "Parcel delivery",
+  "category": "pwn",
+  "points": 83,
+  "author": "Kriz",
+  "tags": [],
+  "hints": [],
+  "connection_info": null,
+  "solved_by_me": false,
+  "solves_count": 100,
+  "submit_endpoint": null,
+  "instance_info": {},
+  "downloaded_files": [
+    {
+      "url": "https://attachments.nnsc.tf/uploads/4bdf9518de35a7940d3a79a4b333ca15f569d101846d380a06f5f04ca7da587c/pwn_parcel-delivery.tar.gz",
+      "name": "pwn_parcel-delivery.tar.gz",
+      "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/pwn/Parcel_delivery/challenge/pwn_parcel-delivery.tar.gz",
+      "success": true,
+      "source": "platform_attachment",
+      "message": "Đã tải trực tiếp thành công",
+      "verification": {
+        "etag": "\"0f75ad89e523871cc25bd6b5761f862f\"",
+        "final_url": "https://attachments.nnsc.tf/uploads/4bdf9518de35a7940d3a79a4b333ca15f569d101846d380a06f5f04ca7da587c/pwn_parcel-delivery.tar.gz",
+        "last_modified": "Fri, 04 Sep 2026 14:38:54 GMT",
+        "schema_version": 1,
+        "sha256": null,
+        "size": 4390,
+        "url": "https://attachments.nnsc.tf/uploads/4bdf9518de35a7940d3a79a4b333ca15f569d101846d380a06f5f04ca7da587c/pwn_parcel-delivery.tar.gz",
+        "verified_at": "2026-09-04T16:05:45Z"
+      }
+    }
+  ],
+  "raw": {
+    "id": "pwn_Parcel delivery",
+    "name": "Parcel delivery",
+    "description": "can you make sure my parcels get delivered??? there are heaps of them!!\n\n> [!NOTE]\n> The flag is located at `/flag.txt`\n\n",
+    "category": "pwn",
+    "author": "Kriz",
+    "files": [
+      {
+        "name": "pwn_parcel-delivery.tar.gz",
+        "url": "https://attachments.nnsc.tf/uploads/4bdf9518de35a7940d3a79a4b333ca15f569d101846d380a06f5f04ca7da587c/pwn_parcel-delivery.tar.gz"
+      }
+    ],
+    "points": 500,
+    "solves": 0,
+    "sortWeight": 0
+  },
+  "status": {
+    "schema_version": 2,
+    "solve": "unsolved",
+    "flag": {
+      "value": null,
+      "state": "none"
+    },
+    "writeup": "none",
+    "writeup_auto": true,
+    "notes": "",
+    "labels": [],
+    "container": "none",
+    "synced_at": "2026-09-05T07:11:32Z",
+    "updated_at": "2026-09-05T07:11:32Z"
+  }
+}

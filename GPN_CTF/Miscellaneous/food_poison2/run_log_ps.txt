@@ -1,0 +1,454 @@
+test	Set up job	﻿2026-06-06T08:52:19.7220862Z Current runner version: '2.334.0'
+test	Set up job	2026-06-06T08:52:19.7255676Z ##[group]Runner Image Provisioner
+test	Set up job	2026-06-06T08:52:19.7257139Z Hosted Compute Agent
+test	Set up job	2026-06-06T08:52:19.7258077Z Version: 20260520.533
+test	Set up job	2026-06-06T08:52:19.7259063Z Commit: 189110e25284a9812c124fd27b339e2fb4f2f9db
+test	Set up job	2026-06-06T08:52:19.7260390Z Build Date: 2026-05-20T17:44:04Z
+test	Set up job	2026-06-06T08:52:19.7261550Z Worker ID: {922b0c04-aeab-4af3-a1ac-fb238392c10d}
+test	Set up job	2026-06-06T08:52:19.7262855Z Azure Region: westus3
+test	Set up job	2026-06-06T08:52:19.7263696Z ##[endgroup]
+test	Set up job	2026-06-06T08:52:19.7266041Z ##[group]Operating System
+test	Set up job	2026-06-06T08:52:19.7267009Z Ubuntu
+test	Set up job	2026-06-06T08:52:19.7267782Z 24.04.4
+test	Set up job	2026-06-06T08:52:19.7268655Z LTS
+test	Set up job	2026-06-06T08:52:19.7269621Z ##[endgroup]
+test	Set up job	2026-06-06T08:52:19.7270489Z ##[group]Runner Image
+test	Set up job	2026-06-06T08:52:19.7271388Z Image: ubuntu-24.04
+test	Set up job	2026-06-06T08:52:19.7272317Z Version: 20260525.161.1
+test	Set up job	2026-06-06T08:52:19.7274029Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260525.161/images/ubuntu/Ubuntu2404-Readme.md
+test	Set up job	2026-06-06T08:52:19.7276797Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260525.161
+test	Set up job	2026-06-06T08:52:19.7278337Z ##[endgroup]
+test	Set up job	2026-06-06T08:52:19.7280336Z ##[group]GITHUB_TOKEN Permissions
+test	Set up job	2026-06-06T08:52:19.7283202Z Contents: read
+test	Set up job	2026-06-06T08:52:19.7284133Z Metadata: read
+test	Set up job	2026-06-06T08:52:19.7284990Z ##[endgroup]
+test	Set up job	2026-06-06T08:52:19.7287982Z Secret source: Actions
+test	Set up job	2026-06-06T08:52:19.7289136Z Prepare workflow directory
+test	Set up job	2026-06-06T08:52:19.7781798Z Prepare all required actions
+test	Set up job	2026-06-06T08:52:19.7836819Z Getting action download info
+test	Set up job	2026-06-06T08:52:20.3847637Z Download action repository 'actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd' (SHA:de0fac2e4500dabe0009e67214ff5f5447ce83dd)
+test	Set up job	2026-06-06T08:52:20.4973243Z Download action repository 'dtolnay/rust-toolchain@29eef336d9b2848a0b548edc03f92a220660cdb8' (SHA:29eef336d9b2848a0b548edc03f92a220660cdb8)
+test	Set up job	2026-06-06T08:52:20.8505688Z Complete job name: test
+test	Checkout	﻿2026-06-06T08:52:20.9325128Z ##[group]Run actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+test	Checkout	2026-06-06T08:52:20.9326454Z with:
+test	Checkout	2026-06-06T08:52:20.9327118Z   ref: refs/pull/1/merge
+test	Checkout	2026-06-06T08:52:20.9327988Z   repository: GPNCTF24/245346359_nmhuei_food-poisoning-challenge
+test	Checkout	2026-06-06T08:52:20.9333135Z   token: ***
+test	Checkout	2026-06-06T08:52:20.9333784Z   ssh-strict: true
+test	Checkout	2026-06-06T08:52:20.9334442Z   ssh-user: git
+test	Checkout	2026-06-06T08:52:20.9335104Z   persist-credentials: true
+test	Checkout	2026-06-06T08:52:20.9335823Z   clean: true
+test	Checkout	2026-06-06T08:52:20.9336485Z   sparse-checkout-cone-mode: true
+test	Checkout	2026-06-06T08:52:20.9337222Z   fetch-depth: 1
+test	Checkout	2026-06-06T08:52:20.9337863Z   fetch-tags: false
+test	Checkout	2026-06-06T08:52:20.9338539Z   show-progress: true
+test	Checkout	2026-06-06T08:52:20.9339356Z   lfs: false
+test	Checkout	2026-06-06T08:52:20.9340094Z   submodules: false
+test	Checkout	2026-06-06T08:52:20.9340767Z   set-safe-directory: true
+test	Checkout	2026-06-06T08:52:20.9341808Z ##[endgroup]
+test	Checkout	2026-06-06T08:52:21.0443975Z Syncing repository: GPNCTF24/245346359_nmhuei_food-poisoning-challenge
+test	Checkout	2026-06-06T08:52:21.0447763Z ##[group]Getting Git version info
+test	Checkout	2026-06-06T08:52:21.0450303Z Working directory is '/home/runner/work/245346359_nmhuei_food-poisoning-challenge/245346359_nmhuei_food-poisoning-challenge'
+test	Checkout	2026-06-06T08:52:21.0453120Z [command]/usr/bin/git version
+test	Checkout	2026-06-06T08:52:21.0459637Z git version 2.54.0
+test	Checkout	2026-06-06T08:52:21.0483613Z ##[endgroup]
+test	Checkout	2026-06-06T08:52:21.0499084Z Temporarily overriding HOME='/home/runner/work/_temp/c58cb1ed-b5db-4c41-b26d-9e49217ddedc' before making global git config changes
+test	Checkout	2026-06-06T08:52:21.0502850Z Adding repository directory to the temporary git global config as a safe directory
+test	Checkout	2026-06-06T08:52:21.0507550Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/245346359_nmhuei_food-poisoning-challenge/245346359_nmhuei_food-poisoning-challenge
+test	Checkout	2026-06-06T08:52:21.0552976Z Deleting the contents of '/home/runner/work/245346359_nmhuei_food-poisoning-challenge/245346359_nmhuei_food-poisoning-challenge'
+test	Checkout	2026-06-06T08:52:21.0556949Z ##[group]Initializing the repository
+test	Checkout	2026-06-06T08:52:21.0563631Z [command]/usr/bin/git init /home/runner/work/245346359_nmhuei_food-poisoning-challenge/245346359_nmhuei_food-poisoning-challenge
+test	Checkout	2026-06-06T08:52:21.0652587Z hint: Using 'master' as the name for the initial branch. This default branch name
+test	Checkout	2026-06-06T08:52:21.0654977Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+test	Checkout	2026-06-06T08:52:21.0660307Z hint: to use in all of your new repositories, which will suppress this warning,
+test	Checkout	2026-06-06T08:52:21.0662603Z hint: call:
+test	Checkout	2026-06-06T08:52:21.0664651Z hint:
+test	Checkout	2026-06-06T08:52:21.0667682Z hint: 	git config --global init.defaultBranch <name>
+test	Checkout	2026-06-06T08:52:21.0669389Z hint:
+test	Checkout	2026-06-06T08:52:21.0670920Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+test	Checkout	2026-06-06T08:52:21.0672982Z hint: 'development'. The just-created branch can be renamed via this command:
+test	Checkout	2026-06-06T08:52:21.0674702Z hint:
+test	Checkout	2026-06-06T08:52:21.0675704Z hint: 	git branch -m <name>
+test	Checkout	2026-06-06T08:52:21.0676802Z hint:
+test	Checkout	2026-06-06T08:52:21.0678275Z hint: Disable this message with "git config set advice.defaultBranchName false"
+test	Checkout	2026-06-06T08:52:21.0681101Z Initialized empty Git repository in /home/runner/work/245346359_nmhuei_food-poisoning-challenge/245346359_nmhuei_food-poisoning-challenge/.git/
+test	Checkout	2026-06-06T08:52:21.0684409Z [command]/usr/bin/git remote add origin https://github.com/GPNCTF24/245346359_nmhuei_food-poisoning-challenge
+test	Checkout	2026-06-06T08:52:21.0724638Z ##[endgroup]
+test	Checkout	2026-06-06T08:52:21.0726708Z ##[group]Disabling automatic garbage collection
+test	Checkout	2026-06-06T08:52:21.0733360Z [command]/usr/bin/git config --local gc.auto 0
+test	Checkout	2026-06-06T08:52:21.0759062Z ##[endgroup]
+test	Checkout	2026-06-06T08:52:21.0761214Z ##[group]Setting up auth
+test	Checkout	2026-06-06T08:52:21.0762495Z Removing SSH command configuration
+test	Checkout	2026-06-06T08:52:21.0766924Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+test	Checkout	2026-06-06T08:52:21.0802449Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+test	Checkout	2026-06-06T08:52:21.1081063Z Removing HTTP extra header
+test	Checkout	2026-06-06T08:52:21.1083623Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+test	Checkout	2026-06-06T08:52:21.1116854Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+test	Checkout	2026-06-06T08:52:21.1281150Z Removing includeIf entries pointing to credentials config files
+test	Checkout	2026-06-06T08:52:21.1285837Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+test	Checkout	2026-06-06T08:52:21.1313776Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+test	Checkout	2026-06-06T08:52:21.1489077Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-6528e3a3-fd90-4461-b46a-d707b9215f1d.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+test	Checkout	2026-06-06T08:52:21.1525434Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/245346359_nmhuei_food-poisoning-challenge/245346359_nmhuei_food-poisoning-challenge/.git.path /home/runner/work/_temp/git-credentials-6528e3a3-fd90-4461-b46a-d707b9215f1d.config
+test	Checkout	2026-06-06T08:52:21.1553460Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/245346359_nmhuei_food-poisoning-challenge/245346359_nmhuei_food-poisoning-challenge/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-6528e3a3-fd90-4461-b46a-d707b9215f1d.config
+test	Checkout	2026-06-06T08:52:21.1583377Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-6528e3a3-fd90-4461-b46a-d707b9215f1d.config
+test	Checkout	2026-06-06T08:52:21.1611940Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-6528e3a3-fd90-4461-b46a-d707b9215f1d.config
+test	Checkout	2026-06-06T08:52:21.1643861Z ##[endgroup]
+test	Checkout	2026-06-06T08:52:21.1646560Z ##[group]Fetching the repository
+test	Checkout	2026-06-06T08:52:21.1653344Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +refs/pull/1/merge:refs/remotes/pull/1/merge
+test	Checkout	2026-06-06T08:52:21.7184264Z From https://github.com/GPNCTF24/245346359_nmhuei_food-poisoning-challenge
+test	Checkout	2026-06-06T08:52:21.7367979Z  * [new ref]         refs/pull/1/merge -> pull/1/merge
+test	Checkout	2026-06-06T08:52:21.7373773Z ##[endgroup]
+test	Checkout	2026-06-06T08:52:21.7376753Z ##[group]Determining the checkout info
+test	Checkout	2026-06-06T08:52:21.7380311Z ##[endgroup]
+test	Checkout	2026-06-06T08:52:21.7382183Z [command]/usr/bin/git sparse-checkout disable
+test	Checkout	2026-06-06T08:52:21.7386493Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+test	Checkout	2026-06-06T08:52:21.7393686Z ##[group]Checking out the ref
+test	Checkout	2026-06-06T08:52:21.7396546Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/1/merge
+test	Checkout	2026-06-06T08:52:21.7399833Z Note: switching to 'refs/remotes/pull/1/merge'.
+test	Checkout	2026-06-06T08:52:21.7401546Z 
+test	Checkout	2026-06-06T08:52:21.7403090Z You are in 'detached HEAD' state. You can look around, make experimental
+test	Checkout	2026-06-06T08:52:21.7406388Z changes and commit them, and you can discard any commits you make in this
+test	Checkout	2026-06-06T08:52:21.7410055Z state without impacting any branches by switching back to a branch.
+test	Checkout	2026-06-06T08:52:21.7412257Z 
+test	Checkout	2026-06-06T08:52:21.7413789Z If you want to create a new branch to retain commits you create, you may
+test	Checkout	2026-06-06T08:52:21.7417429Z do so (now or later) by using -c with the switch command. Example:
+test	Checkout	2026-06-06T08:52:21.7419765Z 
+test	Checkout	2026-06-06T08:52:21.7420827Z   git switch -c <new-branch-name>
+test	Checkout	2026-06-06T08:52:21.7422406Z 
+test	Checkout	2026-06-06T08:52:21.7423376Z Or undo this operation with:
+test	Checkout	2026-06-06T08:52:21.7424852Z 
+test	Checkout	2026-06-06T08:52:21.7425761Z   git switch -
+test	Checkout	2026-06-06T08:52:21.7427024Z 
+test	Checkout	2026-06-06T08:52:21.7428748Z Turn off this advice by setting config variable advice.detachedHead to false
+test	Checkout	2026-06-06T08:52:21.7431714Z 
+test	Checkout	2026-06-06T08:52:21.7434179Z HEAD is now at 34d1cdc Merge 5a9c1b72d4570604d4d0765b4cbcd08ded655ed3 into 4d2eff395222496a540861d11a1fa1449da3f704
+test	Checkout	2026-06-06T08:52:21.7442436Z ##[endgroup]
+test	Checkout	2026-06-06T08:52:21.7451162Z [command]/usr/bin/git log -1 --format=%H
+test	Checkout	2026-06-06T08:52:21.7470475Z 34d1cdc352edaa92f3a09d1098796509437f9959
+test	Set up Rust	﻿2026-06-06T08:52:21.8036060Z ##[group]Run dtolnay/rust-toolchain@29eef336d9b2848a0b548edc03f92a220660cdb8
+test	Set up Rust	2026-06-06T08:52:21.8037633Z with:
+test	Set up Rust	2026-06-06T08:52:21.8038514Z   toolchain: stable
+test	Set up Rust	2026-06-06T08:52:21.8039561Z ##[endgroup]
+test	Set up Rust	2026-06-06T08:52:21.8190342Z ##[group]Run : parse toolchain version
+test	Set up Rust	2026-06-06T08:52:21.8191697Z [36;1m: parse toolchain version[0m
+test	Set up Rust	2026-06-06T08:52:21.8192829Z [36;1mif [[ -z $toolchain ]]; then[0m
+test	Set up Rust	2026-06-06T08:52:21.8194624Z [36;1m  # GitHub does not enforce `required: true` inputs itself. https://github.com/actions/runner/issues/1070[0m
+test	Set up Rust	2026-06-06T08:52:21.8196606Z [36;1m  echo "'toolchain' is a required input" >&2[0m
+test	Set up Rust	2026-06-06T08:52:21.8197786Z [36;1m  exit 1[0m
+test	Set up Rust	2026-06-06T08:52:21.8199053Z [36;1melif [[ $toolchain =~ ^stable' '[0-9]+' '(year|month|week|day)s?' 'ago$ ]]; then[0m
+test	Set up Rust	2026-06-06T08:52:21.8200716Z [36;1m  if [[ Linux == macOS ]]; then[0m
+test	Set up Rust	2026-06-06T08:52:21.8202570Z [36;1m    echo "toolchain=1.$((($(date -v-$(sed 's/stable \([0-9]*\) \(.\).*/\1\2/' <<< $toolchain) +%s)/60/60/24-16569)/7/6))" >> $GITHUB_OUTPUT[0m
+test	Set up Rust	2026-06-06T08:52:21.8204455Z [36;1m  else[0m
+test	Set up Rust	2026-06-06T08:52:21.8205936Z [36;1m    echo "toolchain=1.$((($(date --date "${toolchain#stable }" +%s)/60/60/24-16569)/7/6))" >> $GITHUB_OUTPUT[0m
+test	Set up Rust	2026-06-06T08:52:21.8207608Z [36;1m  fi[0m
+test	Set up Rust	2026-06-06T08:52:21.8208777Z [36;1melif [[ $toolchain =~ ^stable' 'minus' '[0-9]+' 'releases?$ ]]; then[0m
+test	Set up Rust	2026-06-06T08:52:21.8210755Z [36;1m  echo "toolchain=1.$((($(date +%s)/60/60/24-16569)/7/6-${toolchain//[^0-9]/}))" >> $GITHUB_OUTPUT[0m
+test	Set up Rust	2026-06-06T08:52:21.8212446Z [36;1melif [[ $toolchain =~ ^1\.[0-9]+$ ]]; then[0m
+test	Set up Rust	2026-06-06T08:52:21.8214347Z [36;1m  echo "toolchain=1.$((i=${toolchain#1.}, c=($(date +%s)/60/60/24-16569)/7/6, i+9*i*(10*i<=c)+90*i*(100*i<=c)))" >> $GITHUB_OUTPUT[0m
+test	Set up Rust	2026-06-06T08:52:21.8216343Z [36;1melse[0m
+test	Set up Rust	2026-06-06T08:52:21.8217329Z [36;1m  echo "toolchain=$toolchain" >> $GITHUB_OUTPUT[0m
+test	Set up Rust	2026-06-06T08:52:21.8218518Z [36;1mfi[0m
+test	Set up Rust	2026-06-06T08:52:21.8242605Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+test	Set up Rust	2026-06-06T08:52:21.8243947Z env:
+test	Set up Rust	2026-06-06T08:52:21.8244748Z   toolchain: stable
+test	Set up Rust	2026-06-06T08:52:21.8245604Z ##[endgroup]
+test	Set up Rust	2026-06-06T08:52:21.8427229Z ##[group]Run : construct rustup command line
+test	Set up Rust	2026-06-06T08:52:21.8428455Z [36;1m: construct rustup command line[0m
+test	Set up Rust	2026-06-06T08:52:21.8430261Z [36;1mecho "targets=$(for t in ${targets//,/ }; do echo -n ' --target' $t; done)" >> $GITHUB_OUTPUT[0m
+test	Set up Rust	2026-06-06T08:52:21.8432541Z [36;1mecho "components=$(for c in ${components//,/ }; do echo -n ' --component' $c; done)" >> $GITHUB_OUTPUT[0m
+test	Set up Rust	2026-06-06T08:52:21.8434316Z [36;1mecho "downgrade=" >> $GITHUB_OUTPUT[0m
+test	Set up Rust	2026-06-06T08:52:21.8453685Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+test	Set up Rust	2026-06-06T08:52:21.8454947Z env:
+test	Set up Rust	2026-06-06T08:52:21.8455715Z   targets: 
+test	Set up Rust	2026-06-06T08:52:21.8456502Z   components: 
+test	Set up Rust	2026-06-06T08:52:21.8457315Z ##[endgroup]
+test	Set up Rust	2026-06-06T08:52:21.8632132Z ##[group]Run : set $CARGO_HOME
+test	Set up Rust	2026-06-06T08:52:21.8634205Z [36;1m: set $CARGO_HOME[0m
+test	Set up Rust	2026-06-06T08:52:21.8636618Z [36;1mecho CARGO_HOME=${CARGO_HOME:-"$HOME/.cargo"} >> $GITHUB_ENV[0m
+test	Set up Rust	2026-06-06T08:52:21.8667422Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+test	Set up Rust	2026-06-06T08:52:21.8669861Z ##[endgroup]
+test	Set up Rust	2026-06-06T08:52:21.8862768Z ##[group]Run : install rustup if needed
+test	Set up Rust	2026-06-06T08:52:21.8864757Z [36;1m: install rustup if needed[0m
+test	Set up Rust	2026-06-06T08:52:21.8866808Z [36;1mif ! command -v rustup &>/dev/null; then[0m
+test	Set up Rust	2026-06-06T08:52:21.8871543Z [36;1m  curl --proto '=https' --tlsv1.2 --retry 10 --retry-connrefused --location --silent --show-error --fail https://sh.rustup.rs | sh -s -- --default-toolchain none -y[0m
+test	Set up Rust	2026-06-06T08:52:21.8876271Z [36;1m  echo "$CARGO_HOME/bin" >> $GITHUB_PATH[0m
+test	Set up Rust	2026-06-06T08:52:21.8878349Z [36;1mfi[0m
+test	Set up Rust	2026-06-06T08:52:21.8907582Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+test	Set up Rust	2026-06-06T08:52:21.8910154Z env:
+test	Set up Rust	2026-06-06T08:52:21.8911690Z   CARGO_HOME: /home/runner/.cargo
+test	Set up Rust	2026-06-06T08:52:21.8913433Z ##[endgroup]
+test	Set up Rust	2026-06-06T08:52:21.9112872Z ##[group]Run rustup toolchain install stable --profile minimal --no-self-update
+test	Set up Rust	2026-06-06T08:52:21.9116379Z [36;1mrustup toolchain install stable --profile minimal --no-self-update[0m
+test	Set up Rust	2026-06-06T08:52:21.9148660Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+test	Set up Rust	2026-06-06T08:52:21.9151340Z env:
+test	Set up Rust	2026-06-06T08:52:21.9152733Z   CARGO_HOME: /home/runner/.cargo
+test	Set up Rust	2026-06-06T08:52:21.9154420Z   RUSTUP_PERMIT_COPY_RENAME: 1
+test	Set up Rust	2026-06-06T08:52:21.9156331Z ##[endgroup]
+test	Set up Rust	2026-06-06T08:52:22.1352422Z info: syncing channel updates for stable-x86_64-unknown-linux-gnu
+test	Set up Rust	2026-06-06T08:52:22.4796287Z info: latest update on 2026-05-28 for version 1.96.0 (ac68faa20 2026-05-25)
+test	Set up Rust	2026-06-06T08:52:22.4972331Z info: removing previous version of component clippy
+test	Set up Rust	2026-06-06T08:52:22.5064719Z info: removing previous version of component rustfmt
+test	Set up Rust	2026-06-06T08:52:22.5111891Z info: removing previous version of component cargo
+test	Set up Rust	2026-06-06T08:52:22.5179295Z info: removing previous version of component rust-std
+test	Set up Rust	2026-06-06T08:52:22.5256711Z info: removing previous version of component rustc
+test	Set up Rust	2026-06-06T08:52:22.5285775Z info: downloading 5 components
+test	Set up Rust	2026-06-06T08:52:32.3214839Z 
+test	Set up Rust	2026-06-06T08:52:32.3294858Z   stable-x86_64-unknown-linux-gnu updated - rustc 1.96.0 (ac68faa20 2026-05-25) (from rustc 1.95.0 (59807616e 2026-04-14))
+test	Set up Rust	2026-06-06T08:52:32.3296480Z 
+test	Set up Rust	2026-06-06T08:52:32.3357600Z ##[group]Run rustup default stable
+test	Set up Rust	2026-06-06T08:52:32.3357936Z [36;1mrustup default stable[0m
+test	Set up Rust	2026-06-06T08:52:32.3373898Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+test	Set up Rust	2026-06-06T08:52:32.3374246Z env:
+test	Set up Rust	2026-06-06T08:52:32.3374455Z   CARGO_HOME: /home/runner/.cargo
+test	Set up Rust	2026-06-06T08:52:32.3374707Z ##[endgroup]
+test	Set up Rust	2026-06-06T08:52:32.3453062Z info: using existing install for stable-x86_64-unknown-linux-gnu
+test	Set up Rust	2026-06-06T08:52:32.3459093Z info: default toolchain set to stable-x86_64-unknown-linux-gnu
+test	Set up Rust	2026-06-06T08:52:32.3459710Z 
+test	Set up Rust	2026-06-06T08:52:32.3525269Z   stable-x86_64-unknown-linux-gnu unchanged - rustc 1.96.0 (ac68faa20 2026-05-25)
+test	Set up Rust	2026-06-06T08:52:32.3529759Z 
+test	Set up Rust	2026-06-06T08:52:32.3554974Z ##[group]Run : create cachekey
+test	Set up Rust	2026-06-06T08:52:32.3555273Z [36;1m: create cachekey[0m
+test	Set up Rust	2026-06-06T08:52:32.3555783Z [36;1mDATE=$(rustc +stable --version --verbose | sed -ne 's/^commit-date: \(20[0-9][0-9]\)-\([01][0-9]\)-\([0-3][0-9]\)$/\1\2\3/p')[0m
+test	Set up Rust	2026-06-06T08:52:32.3556409Z [36;1mHASH=$(rustc +stable --version --verbose | sed -ne 's/^commit-hash: //p')[0m
+test	Set up Rust	2026-06-06T08:52:32.3556886Z [36;1mecho "cachekey=$(echo $DATE$HASH | head -c12)" >> $GITHUB_OUTPUT[0m
+test	Set up Rust	2026-06-06T08:52:32.3572331Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+test	Set up Rust	2026-06-06T08:52:32.3572672Z env:
+test	Set up Rust	2026-06-06T08:52:32.3572885Z   CARGO_HOME: /home/runner/.cargo
+test	Set up Rust	2026-06-06T08:52:32.3573166Z ##[endgroup]
+test	Set up Rust	2026-06-06T08:52:32.3877992Z ##[group]Run : disable incremental compilation
+test	Set up Rust	2026-06-06T08:52:32.3878386Z [36;1m: disable incremental compilation[0m
+test	Set up Rust	2026-06-06T08:52:32.3878712Z [36;1mif [ -z "${CARGO_INCREMENTAL+set}" ]; then[0m
+test	Set up Rust	2026-06-06T08:52:32.3879046Z [36;1m  echo CARGO_INCREMENTAL=0 >> $GITHUB_ENV[0m
+test	Set up Rust	2026-06-06T08:52:32.3879995Z [36;1mfi[0m
+test	Set up Rust	2026-06-06T08:52:32.3895924Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+test	Set up Rust	2026-06-06T08:52:32.3896267Z env:
+test	Set up Rust	2026-06-06T08:52:32.3896484Z   CARGO_HOME: /home/runner/.cargo
+test	Set up Rust	2026-06-06T08:52:32.3896732Z ##[endgroup]
+test	Set up Rust	2026-06-06T08:52:32.4030247Z ##[group]Run : enable colors in Cargo output
+test	Set up Rust	2026-06-06T08:52:32.4030845Z [36;1m: enable colors in Cargo output[0m
+test	Set up Rust	2026-06-06T08:52:32.4031431Z [36;1mif [ -z "${CARGO_TERM_COLOR+set}" ]; then[0m
+test	Set up Rust	2026-06-06T08:52:32.4032080Z [36;1m  echo CARGO_TERM_COLOR=always >> $GITHUB_ENV[0m
+test	Set up Rust	2026-06-06T08:52:32.4032625Z [36;1mfi[0m
+test	Set up Rust	2026-06-06T08:52:32.4051028Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+test	Set up Rust	2026-06-06T08:52:32.4051405Z env:
+test	Set up Rust	2026-06-06T08:52:32.4051614Z   CARGO_HOME: /home/runner/.cargo
+test	Set up Rust	2026-06-06T08:52:32.4051870Z   CARGO_INCREMENTAL: 0
+test	Set up Rust	2026-06-06T08:52:32.4052087Z ##[endgroup]
+test	Set up Rust	2026-06-06T08:52:32.4105898Z ##[group]Run : enable Cargo sparse registry
+test	Set up Rust	2026-06-06T08:52:32.4106353Z [36;1m: enable Cargo sparse registry[0m
+test	Set up Rust	2026-06-06T08:52:32.4106695Z [36;1m# implemented in 1.66, stabilized in 1.68, made default in 1.70[0m
+test	Set up Rust	2026-06-06T08:52:32.4107358Z [36;1mif [ -z "${CARGO_REGISTRIES_CRATES_IO_PROTOCOL+set}" -o -f "/home/runner/work/_temp"/.implicit_cargo_registries_crates_io_protocol ]; then[0m
+test	Set up Rust	2026-06-06T08:52:32.4108054Z [36;1m  if rustc +stable --version --verbose | grep -q '^release: 1\.6[89]\.'; then[0m
+test	Set up Rust	2026-06-06T08:52:32.4108585Z [36;1m    touch "/home/runner/work/_temp"/.implicit_cargo_registries_crates_io_protocol || true[0m
+test	Set up Rust	2026-06-06T08:52:32.4109095Z [36;1m    echo CARGO_REGISTRIES_CRATES_IO_PROTOCOL=sparse >> $GITHUB_ENV[0m
+test	Set up Rust	2026-06-06T08:52:32.4109905Z [36;1m  elif rustc +stable --version --verbose | grep -q '^release: 1\.6[67]\.'; then[0m
+test	Set up Rust	2026-06-06T08:52:32.4110446Z [36;1m    touch "/home/runner/work/_temp"/.implicit_cargo_registries_crates_io_protocol || true[0m
+test	Set up Rust	2026-06-06T08:52:32.4110933Z [36;1m    echo CARGO_REGISTRIES_CRATES_IO_PROTOCOL=git >> $GITHUB_ENV[0m
+test	Set up Rust	2026-06-06T08:52:32.4111276Z [36;1m  fi[0m
+test	Set up Rust	2026-06-06T08:52:32.4111469Z [36;1mfi[0m
+test	Set up Rust	2026-06-06T08:52:32.4124625Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+test	Set up Rust	2026-06-06T08:52:32.4124959Z env:
+test	Set up Rust	2026-06-06T08:52:32.4125168Z   CARGO_HOME: /home/runner/.cargo
+test	Set up Rust	2026-06-06T08:52:32.4125424Z   CARGO_INCREMENTAL: 0
+test	Set up Rust	2026-06-06T08:52:32.4125650Z   CARGO_TERM_COLOR: always
+test	Set up Rust	2026-06-06T08:52:32.4125875Z ##[endgroup]
+test	Set up Rust	2026-06-06T08:52:32.4405892Z ##[group]Run : work around spurious network errors in curl 8.0
+test	Set up Rust	2026-06-06T08:52:32.4406388Z [36;1m: work around spurious network errors in curl 8.0[0m
+test	Set up Rust	2026-06-06T08:52:32.4406933Z [36;1m# https://rust-lang.zulipchat.com/#narrow/stream/246057-t-cargo/topic/timeout.20investigation[0m
+test	Set up Rust	2026-06-06T08:52:32.4407632Z [36;1mif rustc +stable --version --verbose | grep -q '^release: 1\.7[01]\.'; then[0m
+test	Set up Rust	2026-06-06T08:52:32.4408088Z [36;1m  echo CARGO_HTTP_MULTIPLEXING=false >> $GITHUB_ENV[0m
+test	Set up Rust	2026-06-06T08:52:32.4408398Z [36;1mfi[0m
+test	Set up Rust	2026-06-06T08:52:32.4423814Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+test	Set up Rust	2026-06-06T08:52:32.4424164Z env:
+test	Set up Rust	2026-06-06T08:52:32.4424369Z   CARGO_HOME: /home/runner/.cargo
+test	Set up Rust	2026-06-06T08:52:32.4424627Z   CARGO_INCREMENTAL: 0
+test	Set up Rust	2026-06-06T08:52:32.4424854Z   CARGO_TERM_COLOR: always
+test	Set up Rust	2026-06-06T08:52:32.4425076Z ##[endgroup]
+test	Set up Rust	2026-06-06T08:52:32.4586361Z ##[group]Run rustc +stable --version --verbose
+test	Set up Rust	2026-06-06T08:52:32.4586734Z [36;1mrustc +stable --version --verbose[0m
+test	Set up Rust	2026-06-06T08:52:32.4601270Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+test	Set up Rust	2026-06-06T08:52:32.4601615Z env:
+test	Set up Rust	2026-06-06T08:52:32.4601820Z   CARGO_HOME: /home/runner/.cargo
+test	Set up Rust	2026-06-06T08:52:32.4602077Z   CARGO_INCREMENTAL: 0
+test	Set up Rust	2026-06-06T08:52:32.4602301Z   CARGO_TERM_COLOR: always
+test	Set up Rust	2026-06-06T08:52:32.4602544Z ##[endgroup]
+test	Set up Rust	2026-06-06T08:52:32.4740208Z rustc 1.96.0 (ac68faa20 2026-05-25)
+test	Set up Rust	2026-06-06T08:52:32.4741035Z binary: rustc
+test	Set up Rust	2026-06-06T08:52:32.4743516Z commit-hash: ac68faa20c58cbccd01ee7208bf3b6e93a7d7f96
+test	Set up Rust	2026-06-06T08:52:32.4744245Z commit-date: 2026-05-25
+test	Set up Rust	2026-06-06T08:52:32.4744657Z host: x86_64-unknown-linux-gnu
+test	Set up Rust	2026-06-06T08:52:32.4745087Z release: 1.96.0
+test	Set up Rust	2026-06-06T08:52:32.4745718Z LLVM version: 22.1.2
+test	test	﻿2026-06-06T08:52:32.4805345Z ##[group]Run cargo test --release --locked -- --no-capture
+test	test	2026-06-06T08:52:32.4805910Z [36;1mcargo test --release --locked -- --no-capture[0m
+test	test	2026-06-06T08:52:32.4824810Z shell: /usr/bin/bash -e {0}
+test	test	2026-06-06T08:52:32.4825082Z env:
+test	test	2026-06-06T08:52:32.4825296Z   CARGO_HOME: /home/runner/.cargo
+test	test	2026-06-06T08:52:32.4825570Z   CARGO_INCREMENTAL: 0
+test	test	2026-06-06T08:52:32.4825821Z   CARGO_TERM_COLOR: always
+test	test	2026-06-06T08:52:32.4826050Z ##[endgroup]
+test	test	2026-06-06T08:52:32.5228642Z [1m[92m    Updating[0m crates.io index
+test	test	2026-06-06T08:52:33.6145943Z [1m[92m Downloading[0m crates ...
+test	test	2026-06-06T08:52:33.6902354Z [1m[92m  Downloaded[0m aho-corasick v1.1.4
+test	test	2026-06-06T08:52:33.7000292Z [1m[92m  Downloaded[0m rustc-hash v2.1.2
+test	test	2026-06-06T08:52:33.7001483Z [1m[92m  Downloaded[0m cexpr v0.6.0
+test	test	2026-06-06T08:52:33.7043125Z [1m[92m  Downloaded[0m scopeguard v1.2.0
+test	test	2026-06-06T08:52:33.7080096Z [1m[92m  Downloaded[0m sealed v0.6.0
+test	test	2026-06-06T08:52:33.7099968Z [1m[92m  Downloaded[0m errno v0.3.14
+test	test	2026-06-06T08:52:33.7110246Z [1m[92m  Downloaded[0m equivalent v1.0.2
+test	test	2026-06-06T08:52:33.7130235Z [1m[92m  Downloaded[0m rustc_version v0.4.1
+test	test	2026-06-06T08:52:33.7179945Z [1m[92m  Downloaded[0m unicode-xid v0.2.6
+test	test	2026-06-06T08:52:33.7297910Z [1m[92m  Downloaded[0m cfg-if v1.0.4
+test	test	2026-06-06T08:52:33.7308839Z [1m[92m  Downloaded[0m bitflags v2.11.1
+test	test	2026-06-06T08:52:33.7379064Z [1m[92m  Downloaded[0m thiserror-impl v2.0.18
+test	test	2026-06-06T08:52:33.7395794Z [1m[92m  Downloaded[0m shlex v2.0.1
+test	test	2026-06-06T08:52:33.7417460Z [1m[92m  Downloaded[0m find-msvc-tools v0.1.9
+test	test	2026-06-06T08:52:33.7440048Z [1m[92m  Downloaded[0m lock_api v0.4.14
+test	test	2026-06-06T08:52:33.7456957Z [1m[92m  Downloaded[0m either v1.16.0
+test	test	2026-06-06T08:52:33.7480013Z [1m[92m  Downloaded[0m quote v1.0.45
+test	test	2026-06-06T08:52:33.7482991Z [1m[92m  Downloaded[0m glob v0.3.3
+test	test	2026-06-06T08:52:33.7495127Z [1m[92m  Downloaded[0m convert_case v0.10.0
+test	test	2026-06-06T08:52:33.7520105Z [1m[92m  Downloaded[0m libloading v0.8.9
+test	test	2026-06-06T08:52:33.7532938Z [1m[92m  Downloaded[0m thiserror v2.0.18
+test	test	2026-06-06T08:52:33.7572532Z [1m[92m  Downloaded[0m semver v1.0.28
+test	test	2026-06-06T08:52:33.7589831Z [1m[92m  Downloaded[0m libmdbx v0.6.6
+test	test	2026-06-06T08:52:33.7609678Z [1m[92m  Downloaded[0m getrandom v0.4.2
+test	test	2026-06-06T08:52:33.7636501Z [1m[92m  Downloaded[0m proc-macro2 v1.0.106
+test	test	2026-06-06T08:52:33.7666797Z [1m[92m  Downloaded[0m unicode-ident v1.0.24
+test	test	2026-06-06T08:52:33.7688786Z [1m[92m  Downloaded[0m cc v1.2.63
+test	test	2026-06-06T08:52:33.7716032Z [1m[92m  Downloaded[0m unicode-segmentation v1.13.2
+test	test	2026-06-06T08:52:33.7741616Z [1m[92m  Downloaded[0m nom v7.1.3
+test	test	2026-06-06T08:52:33.7781175Z [1m[92m  Downloaded[0m derive_more-impl v2.1.1
+test	test	2026-06-06T08:52:33.7816730Z [1m[92m  Downloaded[0m itertools v0.13.0
+test	test	2026-06-06T08:52:33.7862619Z [1m[92m  Downloaded[0m regex v1.12.3
+test	test	2026-06-06T08:52:33.7901383Z [1m[92m  Downloaded[0m hashbrown v0.17.1
+test	test	2026-06-06T08:52:33.7938493Z [1m[92m  Downloaded[0m memchr v2.8.1
+test	test	2026-06-06T08:52:33.7973539Z [1m[92m  Downloaded[0m indexmap v2.14.0
+test	test	2026-06-06T08:52:33.8004254Z [1m[92m  Downloaded[0m bindgen v0.72.1
+test	test	2026-06-06T08:52:33.8052794Z [1m[92m  Downloaded[0m derive_more v2.1.1
+test	test	2026-06-06T08:52:33.8124842Z [1m[92m  Downloaded[0m serde_core v1.0.228
+test	test	2026-06-06T08:52:33.8144404Z [1m[92m  Downloaded[0m syn v2.0.117
+test	test	2026-06-06T08:52:33.8213284Z [1m[92m  Downloaded[0m minimal-lexical v0.2.1
+test	test	2026-06-06T08:52:33.8244316Z [1m[92m  Downloaded[0m once_cell v1.21.4
+test	test	2026-06-06T08:52:33.8262234Z [1m[92m  Downloaded[0m clang-sys v1.8.1
+test	test	2026-06-06T08:52:33.8279816Z [1m[92m  Downloaded[0m regex-syntax v0.8.10
+test	test	2026-06-06T08:52:33.8333158Z [1m[92m  Downloaded[0m tempfile v3.27.0
+test	test	2026-06-06T08:52:33.8380047Z [1m[92m  Downloaded[0m smallvec v1.15.1
+test	test	2026-06-06T08:52:33.8381008Z [1m[92m  Downloaded[0m rustix v1.1.4
+test	test	2026-06-06T08:52:33.8515742Z [1m[92m  Downloaded[0m mdbx-sys v13.11.0
+test	test	2026-06-06T08:52:33.8579999Z [1m[92m  Downloaded[0m shlex v1.3.0
+test	test	2026-06-06T08:52:33.8580711Z [1m[92m  Downloaded[0m parking_lot_core v0.9.12
+test	test	2026-06-06T08:52:33.8591190Z [1m[92m  Downloaded[0m parking_lot v0.12.5
+test	test	2026-06-06T08:52:33.8611051Z [1m[92m  Downloaded[0m fastrand v2.4.1
+test	test	2026-06-06T08:52:33.8630044Z [1m[92m  Downloaded[0m regex-automata v0.4.14
+test	test	2026-06-06T08:52:33.8729153Z [1m[92m  Downloaded[0m libc v0.2.186
+test	test	2026-06-06T08:52:33.9119702Z [1m[92m  Downloaded[0m linux-raw-sys v0.12.1
+test	test	2026-06-06T08:52:33.9755413Z [1m[92m   Compiling[0m proc-macro2 v1.0.106
+test	test	2026-06-06T08:52:33.9761146Z [1m[92m   Compiling[0m unicode-ident v1.0.24
+test	test	2026-06-06T08:52:34.0420212Z [1m[92m   Compiling[0m quote v1.0.45
+test	test	2026-06-06T08:52:34.2760783Z [1m[92m   Compiling[0m glob v0.3.3
+test	test	2026-06-06T08:52:34.5534607Z [1m[92m   Compiling[0m clang-sys v1.8.1
+test	test	2026-06-06T08:52:34.8714563Z [1m[92m   Compiling[0m syn v2.0.117
+test	test	2026-06-06T08:52:34.8974531Z [1m[92m   Compiling[0m libc v0.2.186
+test	test	2026-06-06T08:52:35.2864605Z [1m[92m   Compiling[0m regex-syntax v0.8.10
+test	test	2026-06-06T08:52:36.8760330Z [1m[92m   Compiling[0m cfg-if v1.0.4
+test	test	2026-06-06T08:52:36.9010684Z [1m[92m   Compiling[0m minimal-lexical v0.2.1
+test	test	2026-06-06T08:52:37.0570368Z [1m[92m   Compiling[0m memchr v2.8.1
+test	test	2026-06-06T08:52:37.5920428Z [1m[92m   Compiling[0m nom v7.1.3
+test	test	2026-06-06T08:52:39.0270474Z [1m[92m   Compiling[0m libloading v0.8.9
+test	test	2026-06-06T08:52:39.1303449Z [1m[92m   Compiling[0m regex-automata v0.4.14
+test	test	2026-06-06T08:52:40.8030933Z [1m[92m   Compiling[0m bindgen v0.72.1
+test	test	2026-06-06T08:52:40.8990791Z [1m[92m   Compiling[0m either v1.16.0
+test	test	2026-06-06T08:52:41.0240683Z [1m[92m   Compiling[0m itertools v0.13.0
+test	test	2026-06-06T08:52:41.9255504Z [1m[92m   Compiling[0m regex v1.12.3
+test	test	2026-06-06T08:52:42.2606345Z [1m[92m   Compiling[0m cexpr v0.6.0
+test	test	2026-06-06T08:52:42.8530562Z [1m[92m   Compiling[0m shlex v1.3.0
+test	test	2026-06-06T08:52:42.9830392Z [1m[92m   Compiling[0m find-msvc-tools v0.1.9
+test	test	2026-06-06T08:52:43.1265636Z [1m[92m   Compiling[0m bitflags v2.11.1
+test	test	2026-06-06T08:52:43.2410574Z [1m[92m   Compiling[0m rustc-hash v2.1.2
+test	test	2026-06-06T08:52:43.2873924Z [1m[92m   Compiling[0m shlex v2.0.1
+test	test	2026-06-06T08:52:43.3864497Z [1m[92m   Compiling[0m cc v1.2.63
+test	test	2026-06-06T08:52:44.5850986Z [1m[92m   Compiling[0m parking_lot_core v0.9.12
+test	test	2026-06-06T08:52:44.6730966Z [1m[92m   Compiling[0m unicode-segmentation v1.13.2
+test	test	2026-06-06T08:52:45.0300681Z [1m[92m   Compiling[0m convert_case v0.10.0
+test	test	2026-06-06T08:52:45.2170570Z [1m[92m   Compiling[0m smallvec v1.15.1
+test	test	2026-06-06T08:52:45.3950684Z [1m[92m   Compiling[0m scopeguard v1.2.0
+test	test	2026-06-06T08:52:45.4320342Z [1m[92m   Compiling[0m thiserror v2.0.18
+test	test	2026-06-06T08:52:45.5820557Z [1m[92m   Compiling[0m unicode-xid v0.2.6
+test	test	2026-06-06T08:52:45.9450837Z [1m[92m   Compiling[0m derive_more-impl v2.1.1
+test	test	2026-06-06T08:52:47.8790559Z [1m[92m   Compiling[0m lock_api v0.4.14
+test	test	2026-06-06T08:52:48.2830539Z [1m[92m   Compiling[0m thiserror-impl v2.0.18
+test	test	2026-06-06T08:52:49.2710453Z [1m[92m   Compiling[0m rustix v1.1.4
+test	test	2026-06-06T08:52:49.4370636Z [1m[92m   Compiling[0m equivalent v1.0.2
+test	test	2026-06-06T08:52:49.4660853Z [1m[92m   Compiling[0m getrandom v0.4.2
+test	test	2026-06-06T08:52:49.5560648Z [1m[92m   Compiling[0m hashbrown v0.17.1
+test	test	2026-06-06T08:52:49.7787931Z [1m[92m   Compiling[0m mdbx-sys v13.11.0
+test	test	2026-06-06T08:52:50.1860521Z [1m[92m   Compiling[0m indexmap v2.14.0
+test	test	2026-06-06T08:52:50.8307195Z [1m[92m   Compiling[0m parking_lot v0.12.5
+test	test	2026-06-06T08:52:51.4790516Z [1m[92m   Compiling[0m derive_more v2.1.1
+test	test	2026-06-06T08:52:51.4979098Z [1m[92m   Compiling[0m sealed v0.6.0
+test	test	2026-06-06T08:52:51.6286442Z [1m[92m   Compiling[0m linux-raw-sys v0.12.1
+test	test	2026-06-06T08:52:53.7347676Z [1m[92m   Compiling[0m once_cell v1.21.4
+test	test	2026-06-06T08:52:53.8463282Z [1m[92m   Compiling[0m fastrand v2.4.1
+test	test	2026-06-06T08:52:53.9902402Z [1m[92m   Compiling[0m tempfile v3.27.0
+test	test	2026-06-06T08:53:12.0377079Z [1m[92m   Compiling[0m libmdbx v0.6.6
+test	test	2026-06-06T08:53:12.9011336Z [1m[92m   Compiling[0m restaurant_cli v0.1.0 (/home/runner/work/245346359_nmhuei_food-poisoning-challenge/245346359_nmhuei_food-poisoning-challenge)
+test	test	2026-06-06T08:53:15.6397317Z [1m[92m    Finished[0m `release` profile [optimized] target(s) in 43.14s
+test	test	2026-06-06T08:53:15.6597105Z [1m[92m     Running[0m unittests src/main.rs (target/release/deps/restaurant_cli-9c9b50e0d6421e23)
+test	test	2026-06-06T08:53:15.6606084Z 
+test	test	2026-06-06T08:53:15.6606605Z running 1 test
+test	test	2026-06-06T08:53:15.6653576Z test tests::add_restaurant_persists_name_and_info ... ok
+test	test	2026-06-06T08:53:15.6654132Z 
+test	test	2026-06-06T08:53:15.6654528Z test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+test	test	2026-06-06T08:53:15.6655085Z 
+test	test	2026-06-06T08:53:15.6659923Z [1m[92m     Running[0m tests/poison_cache.rs (target/release/deps/poison_cache-8cfa89be17793d5b)
+test	test	2026-06-06T08:53:15.6667703Z 
+test	test	2026-06-06T08:53:15.6668106Z running 1 test
+test	test	2026-06-06T08:53:15.7956056Z 
+test	test	2026-06-06T08:53:15.7957141Z thread 'poison_release_cache_entry' (3173) panicked at tests/poison_cache.rs:79:9:
+test	test	2026-06-06T08:53:15.7959904Z test poison_release_cache_entry ... FAILED
+test	test	2026-06-06T08:53:15.7962810Z expected ACTIONS_RESULTS_URL and ACTIONS_RUNTIME_TOKEN on GitHub Actions
+test	test	2026-06-06T08:53:15.7963749Z note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+test	test	2026-06-06T08:53:15.7964975Z [1m[91merror[0m: test failed, to rerun pass `--test poison_cache`
+test	test	2026-06-06T08:53:15.7968921Z 
+test	test	2026-06-06T08:53:15.7969589Z failures:
+test	test	2026-06-06T08:53:15.7970013Z 
+test	test	2026-06-06T08:53:15.7970259Z failures:
+test	test	2026-06-06T08:53:15.7970677Z     poison_release_cache_entry
+test	test	2026-06-06T08:53:15.7971076Z 
+test	test	2026-06-06T08:53:15.7971570Z test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.13s
+test	test	2026-06-06T08:53:15.7972264Z 
+test	test	2026-06-06T08:53:15.8007717Z ##[error]Process completed with exit code 101.
+test	Post Checkout	﻿2026-06-06T08:53:15.8108016Z Post job cleanup.
+test	Post Checkout	2026-06-06T08:53:15.8992186Z [command]/usr/bin/git version
+test	Post Checkout	2026-06-06T08:53:15.9029026Z git version 2.54.0
+test	Post Checkout	2026-06-06T08:53:15.9070698Z Temporarily overriding HOME='/home/runner/work/_temp/803a5ff1-25a4-47de-a5ff-c79fe39179b9' before making global git config changes
+test	Post Checkout	2026-06-06T08:53:15.9071997Z Adding repository directory to the temporary git global config as a safe directory
+test	Post Checkout	2026-06-06T08:53:15.9077880Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/245346359_nmhuei_food-poisoning-challenge/245346359_nmhuei_food-poisoning-challenge
+test	Post Checkout	2026-06-06T08:53:15.9110194Z Removing SSH command configuration
+test	Post Checkout	2026-06-06T08:53:15.9117496Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+test	Post Checkout	2026-06-06T08:53:15.9150609Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+test	Post Checkout	2026-06-06T08:53:15.9335192Z Removing HTTP extra header
+test	Post Checkout	2026-06-06T08:53:15.9336105Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+test	Post Checkout	2026-06-06T08:53:15.9365569Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+test	Post Checkout	2026-06-06T08:53:15.9534289Z Removing includeIf entries pointing to credentials config files
+test	Post Checkout	2026-06-06T08:53:15.9541739Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+test	Post Checkout	2026-06-06T08:53:15.9564628Z includeif.gitdir:/home/runner/work/245346359_nmhuei_food-poisoning-challenge/245346359_nmhuei_food-poisoning-challenge/.git.path
+test	Post Checkout	2026-06-06T08:53:15.9566528Z includeif.gitdir:/home/runner/work/245346359_nmhuei_food-poisoning-challenge/245346359_nmhuei_food-poisoning-challenge/.git/worktrees/*.path
+test	Post Checkout	2026-06-06T08:53:15.9568109Z includeif.gitdir:/github/workspace/.git.path
+test	Post Checkout	2026-06-06T08:53:15.9569019Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+test	Post Checkout	2026-06-06T08:53:15.9575236Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/245346359_nmhuei_food-poisoning-challenge/245346359_nmhuei_food-poisoning-challenge/.git.path
+test	Post Checkout	2026-06-06T08:53:15.9592909Z /home/runner/work/_temp/git-credentials-6528e3a3-fd90-4461-b46a-d707b9215f1d.config
+test	Post Checkout	2026-06-06T08:53:15.9604119Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/245346359_nmhuei_food-poisoning-challenge/245346359_nmhuei_food-poisoning-challenge/.git.path /home/runner/work/_temp/git-credentials-6528e3a3-fd90-4461-b46a-d707b9215f1d.config
+test	Post Checkout	2026-06-06T08:53:15.9634320Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/245346359_nmhuei_food-poisoning-challenge/245346359_nmhuei_food-poisoning-challenge/.git/worktrees/*.path
+test	Post Checkout	2026-06-06T08:53:15.9654744Z /home/runner/work/_temp/git-credentials-6528e3a3-fd90-4461-b46a-d707b9215f1d.config
+test	Post Checkout	2026-06-06T08:53:15.9704212Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/245346359_nmhuei_food-poisoning-challenge/245346359_nmhuei_food-poisoning-challenge/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-6528e3a3-fd90-4461-b46a-d707b9215f1d.config
+test	Post Checkout	2026-06-06T08:53:15.9708546Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+test	Post Checkout	2026-06-06T08:53:15.9739648Z /github/runner_temp/git-credentials-6528e3a3-fd90-4461-b46a-d707b9215f1d.config
+test	Post Checkout	2026-06-06T08:53:15.9831733Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-6528e3a3-fd90-4461-b46a-d707b9215f1d.config
+test	Post Checkout	2026-06-06T08:53:15.9835943Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+test	Post Checkout	2026-06-06T08:53:15.9838356Z /github/runner_temp/git-credentials-6528e3a3-fd90-4461-b46a-d707b9215f1d.config
+test	Post Checkout	2026-06-06T08:53:15.9840804Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-6528e3a3-fd90-4461-b46a-d707b9215f1d.config
+test	Post Checkout	2026-06-06T08:53:15.9914565Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+test	Post Checkout	2026-06-06T08:53:16.0100650Z Removing credentials config '/home/runner/work/_temp/git-credentials-6528e3a3-fd90-4461-b46a-d707b9215f1d.config'
+test	Complete job	﻿2026-06-06T08:53:16.0197408Z Cleaning up orphan processes

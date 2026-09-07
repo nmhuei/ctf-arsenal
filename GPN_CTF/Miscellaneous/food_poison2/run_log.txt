@@ -1,0 +1,625 @@
+release	Set up job	﻿2026-06-06T08:46:25.0161113Z Current runner version: '2.334.0'
+release	Set up job	2026-06-06T08:46:25.0199989Z ##[group]Runner Image Provisioner
+release	Set up job	2026-06-06T08:46:25.0201374Z Hosted Compute Agent
+release	Set up job	2026-06-06T08:46:25.0202678Z Version: 20260520.533
+release	Set up job	2026-06-06T08:46:25.0203998Z Commit: 189110e25284a9812c124fd27b339e2fb4f2f9db
+release	Set up job	2026-06-06T08:46:25.0205321Z Build Date: 2026-05-20T17:44:04Z
+release	Set up job	2026-06-06T08:46:25.0206796Z Worker ID: {7b22a8eb-3ae9-419e-8c54-d20c3c9f1be4}
+release	Set up job	2026-06-06T08:46:25.0208150Z Azure Region: westus
+release	Set up job	2026-06-06T08:46:25.0209165Z ##[endgroup]
+release	Set up job	2026-06-06T08:46:25.0211684Z ##[group]Operating System
+release	Set up job	2026-06-06T08:46:25.0224984Z Ubuntu
+release	Set up job	2026-06-06T08:46:25.0226177Z 24.04.4
+release	Set up job	2026-06-06T08:46:25.0227268Z LTS
+release	Set up job	2026-06-06T08:46:25.0228210Z ##[endgroup]
+release	Set up job	2026-06-06T08:46:25.0229482Z ##[group]Runner Image
+release	Set up job	2026-06-06T08:46:25.0230584Z Image: ubuntu-24.04
+release	Set up job	2026-06-06T08:46:25.0231648Z Version: 20260525.161.1
+release	Set up job	2026-06-06T08:46:25.0234943Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260525.161/images/ubuntu/Ubuntu2404-Readme.md
+release	Set up job	2026-06-06T08:46:25.0238953Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260525.161
+release	Set up job	2026-06-06T08:46:25.0240744Z ##[endgroup]
+release	Set up job	2026-06-06T08:46:25.0243256Z ##[group]GITHUB_TOKEN Permissions
+release	Set up job	2026-06-06T08:46:25.0247052Z Contents: write
+release	Set up job	2026-06-06T08:46:25.0248368Z Metadata: read
+release	Set up job	2026-06-06T08:46:25.0249396Z ##[endgroup]
+release	Set up job	2026-06-06T08:46:25.0253017Z Secret source: Actions
+release	Set up job	2026-06-06T08:46:25.0254582Z Prepare workflow directory
+release	Set up job	2026-06-06T08:46:25.0899219Z Prepare all required actions
+release	Set up job	2026-06-06T08:46:25.0958817Z Getting action download info
+release	Set up job	2026-06-06T08:46:25.5649524Z Download action repository 'mozilla-actions/sccache-action@9e7fa8a12102821edf02ca5dbea1acd0f89a2696' (SHA:9e7fa8a12102821edf02ca5dbea1acd0f89a2696)
+release	Set up job	2026-06-06T08:46:25.9748235Z Download action repository 'actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd' (SHA:de0fac2e4500dabe0009e67214ff5f5447ce83dd)
+release	Set up job	2026-06-06T08:46:26.0173397Z Download action repository 'dtolnay/rust-toolchain@29eef336d9b2848a0b548edc03f92a220660cdb8' (SHA:29eef336d9b2848a0b548edc03f92a220660cdb8)
+release	Set up job	2026-06-06T08:46:26.3684380Z Complete job name: release
+release	Run sccache-cache	﻿2026-06-06T08:46:26.4437408Z ##[group]Run mozilla-actions/sccache-action@9e7fa8a12102821edf02ca5dbea1acd0f89a2696
+release	Run sccache-cache	2026-06-06T08:46:26.4439079Z with:
+release	Run sccache-cache	2026-06-06T08:46:26.4439586Z   version: v0.14.0
+release	Run sccache-cache	2026-06-06T08:46:26.4449291Z   token: ***
+release	Run sccache-cache	2026-06-06T08:46:26.4449880Z   disable_annotations: false
+release	Run sccache-cache	2026-06-06T08:46:26.4450833Z env:
+release	Run sccache-cache	2026-06-06T08:46:26.4451351Z   SCCACHE_GHA_ENABLED: true
+release	Run sccache-cache	2026-06-06T08:46:26.4452007Z   RUSTC_WRAPPER: sccache
+release	Run sccache-cache	2026-06-06T08:46:26.4452834Z ##[endgroup]
+release	Run sccache-cache	2026-06-06T08:46:26.5433522Z try to setup sccache version: v0.14.0
+release	Run sccache-cache	2026-06-06T08:46:26.5472958Z sccache download from url: https://github.com/mozilla/sccache/releases/download/v0.14.0/sccache-v0.14.0-x86_64-unknown-linux-musl.tar.gz
+release	Run sccache-cache	2026-06-06T08:46:26.8303639Z Correct checksum: 8424b38cda4ecce616a1557d81328f3d7c96503a171eab79942fad618b42af44
+release	Run sccache-cache	2026-06-06T08:46:26.8418387Z [command]/usr/bin/tar xz --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/10d6e477-1a3e-4632-b719-4422afa032b6 -f /home/runner/work/_temp/aa533452-9470-4b0d-8ce9-9352e72d8788
+release	Run sccache-cache	2026-06-06T08:46:27.0355204Z sccache extracted to: /home/runner/work/_temp/10d6e477-1a3e-4632-b719-4422afa032b6
+release	Run sccache-cache	2026-06-06T08:46:27.0503439Z sccache cached to: /opt/hostedtoolcache/sccache/0.14.0/x64
+release	Checkout	﻿2026-06-06T08:46:27.1075662Z ##[group]Run actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+release	Checkout	2026-06-06T08:46:27.1078314Z with:
+release	Checkout	2026-06-06T08:46:27.1080367Z   repository: GPNCTF24/245346359_nmhuei_food-poisoning-challenge
+release	Checkout	2026-06-06T08:46:27.1110020Z   token: ***
+release	Checkout	2026-06-06T08:46:27.1111658Z   ssh-strict: true
+release	Checkout	2026-06-06T08:46:27.1113768Z   ssh-user: git
+release	Checkout	2026-06-06T08:46:27.1115458Z   persist-credentials: true
+release	Checkout	2026-06-06T08:46:27.1117252Z   clean: true
+release	Checkout	2026-06-06T08:46:27.1118893Z   sparse-checkout-cone-mode: true
+release	Checkout	2026-06-06T08:46:27.1120824Z   fetch-depth: 1
+release	Checkout	2026-06-06T08:46:27.1122677Z   fetch-tags: false
+release	Checkout	2026-06-06T08:46:27.1124495Z   show-progress: true
+release	Checkout	2026-06-06T08:46:27.1126527Z   lfs: false
+release	Checkout	2026-06-06T08:46:27.1128105Z   submodules: false
+release	Checkout	2026-06-06T08:46:27.1129822Z   set-safe-directory: true
+release	Checkout	2026-06-06T08:46:27.1131555Z env:
+release	Checkout	2026-06-06T08:46:27.1133517Z   SCCACHE_GHA_ENABLED: true
+release	Checkout	2026-06-06T08:46:27.1135317Z   RUSTC_WRAPPER: sccache
+release	Checkout	2026-06-06T08:46:27.1137506Z   SCCACHE_PATH: /opt/hostedtoolcache/sccache/0.14.0/x64/sccache
+release	Checkout	2026-06-06T08:46:27.1140074Z   ACTIONS_CACHE_SERVICE_V2: on
+release	Checkout	2026-06-06T08:46:27.1143373Z   ACTIONS_RESULTS_URL: https://results-receiver.actions.githubusercontent.com/
+release	Checkout	2026-06-06T08:46:27.1395041Z   ACTIONS_RUNTIME_TOKEN: ***
+release	Checkout	2026-06-06T08:46:27.1396189Z ##[endgroup]
+release	Checkout	2026-06-06T08:46:27.2443306Z Syncing repository: GPNCTF24/245346359_nmhuei_food-poisoning-challenge
+release	Checkout	2026-06-06T08:46:27.2448675Z ##[group]Getting Git version info
+release	Checkout	2026-06-06T08:46:27.2452817Z Working directory is '/home/runner/work/245346359_nmhuei_food-poisoning-challenge/245346359_nmhuei_food-poisoning-challenge'
+release	Checkout	2026-06-06T08:46:27.2458003Z [command]/usr/bin/git version
+release	Checkout	2026-06-06T08:46:27.2587590Z git version 2.54.0
+release	Checkout	2026-06-06T08:46:27.2647652Z ##[endgroup]
+release	Checkout	2026-06-06T08:46:27.2665393Z Temporarily overriding HOME='/home/runner/work/_temp/0d9114c3-e7cd-4820-be23-b91542ada10f' before making global git config changes
+release	Checkout	2026-06-06T08:46:27.2672740Z Adding repository directory to the temporary git global config as a safe directory
+release	Checkout	2026-06-06T08:46:27.2678910Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/245346359_nmhuei_food-poisoning-challenge/245346359_nmhuei_food-poisoning-challenge
+release	Checkout	2026-06-06T08:46:27.2739280Z Deleting the contents of '/home/runner/work/245346359_nmhuei_food-poisoning-challenge/245346359_nmhuei_food-poisoning-challenge'
+release	Checkout	2026-06-06T08:46:27.2746131Z ##[group]Initializing the repository
+release	Checkout	2026-06-06T08:46:27.2750205Z [command]/usr/bin/git init /home/runner/work/245346359_nmhuei_food-poisoning-challenge/245346359_nmhuei_food-poisoning-challenge
+release	Checkout	2026-06-06T08:46:27.2918119Z hint: Using 'master' as the name for the initial branch. This default branch name
+release	Checkout	2026-06-06T08:46:27.2921045Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+release	Checkout	2026-06-06T08:46:27.2924006Z hint: to use in all of your new repositories, which will suppress this warning,
+release	Checkout	2026-06-06T08:46:27.2926678Z hint: call:
+release	Checkout	2026-06-06T08:46:27.2928087Z hint:
+release	Checkout	2026-06-06T08:46:27.2929892Z hint: 	git config --global init.defaultBranch <name>
+release	Checkout	2026-06-06T08:46:27.2935045Z hint:
+release	Checkout	2026-06-06T08:46:27.2937174Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+release	Checkout	2026-06-06T08:46:27.2942500Z hint: 'development'. The just-created branch can be renamed via this command:
+release	Checkout	2026-06-06T08:46:27.2945161Z hint:
+release	Checkout	2026-06-06T08:46:27.2946548Z hint: 	git branch -m <name>
+release	Checkout	2026-06-06T08:46:27.2948269Z hint:
+release	Checkout	2026-06-06T08:46:27.2950556Z hint: Disable this message with "git config set advice.defaultBranchName false"
+release	Checkout	2026-06-06T08:46:27.2955890Z Initialized empty Git repository in /home/runner/work/245346359_nmhuei_food-poisoning-challenge/245346359_nmhuei_food-poisoning-challenge/.git/
+release	Checkout	2026-06-06T08:46:27.2963807Z [command]/usr/bin/git remote add origin https://github.com/GPNCTF24/245346359_nmhuei_food-poisoning-challenge
+release	Checkout	2026-06-06T08:46:27.3015860Z ##[endgroup]
+release	Checkout	2026-06-06T08:46:27.3018736Z ##[group]Disabling automatic garbage collection
+release	Checkout	2026-06-06T08:46:27.3025169Z [command]/usr/bin/git config --local gc.auto 0
+release	Checkout	2026-06-06T08:46:27.3051231Z ##[endgroup]
+release	Checkout	2026-06-06T08:46:27.3054752Z ##[group]Setting up auth
+release	Checkout	2026-06-06T08:46:27.3056274Z Removing SSH command configuration
+release	Checkout	2026-06-06T08:46:27.3061912Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+release	Checkout	2026-06-06T08:46:27.3105648Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+release	Checkout	2026-06-06T08:46:27.3608289Z Removing HTTP extra header
+release	Checkout	2026-06-06T08:46:27.3613099Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+release	Checkout	2026-06-06T08:46:27.3624676Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+release	Checkout	2026-06-06T08:46:27.3809451Z Removing includeIf entries pointing to credentials config files
+release	Checkout	2026-06-06T08:46:27.3816215Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+release	Checkout	2026-06-06T08:46:27.3853967Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+release	Checkout	2026-06-06T08:46:27.4215661Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-0f59c1cb-4d29-4f0f-85ce-34a45780e4f4.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+release	Checkout	2026-06-06T08:46:27.4230325Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/245346359_nmhuei_food-poisoning-challenge/245346359_nmhuei_food-poisoning-challenge/.git.path /home/runner/work/_temp/git-credentials-0f59c1cb-4d29-4f0f-85ce-34a45780e4f4.config
+release	Checkout	2026-06-06T08:46:27.4245234Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/245346359_nmhuei_food-poisoning-challenge/245346359_nmhuei_food-poisoning-challenge/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-0f59c1cb-4d29-4f0f-85ce-34a45780e4f4.config
+release	Checkout	2026-06-06T08:46:27.4259291Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-0f59c1cb-4d29-4f0f-85ce-34a45780e4f4.config
+release	Checkout	2026-06-06T08:46:27.4294808Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-0f59c1cb-4d29-4f0f-85ce-34a45780e4f4.config
+release	Checkout	2026-06-06T08:46:27.4324648Z ##[endgroup]
+release	Checkout	2026-06-06T08:46:27.4327919Z ##[group]Fetching the repository
+release	Checkout	2026-06-06T08:46:27.4336010Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +4d2eff395222496a540861d11a1fa1449da3f704:refs/remotes/origin/main
+release	Checkout	2026-06-06T08:46:27.8720003Z From https://github.com/GPNCTF24/245346359_nmhuei_food-poisoning-challenge
+release	Checkout	2026-06-06T08:46:27.8723829Z  * [new ref]         4d2eff395222496a540861d11a1fa1449da3f704 -> origin/main
+release	Checkout	2026-06-06T08:46:27.8731072Z [command]/usr/bin/git branch --list --remote origin/main
+release	Checkout	2026-06-06T08:46:27.8733408Z   origin/main
+release	Checkout	2026-06-06T08:46:27.8736999Z [command]/usr/bin/git rev-parse refs/remotes/origin/main
+release	Checkout	2026-06-06T08:46:27.8775240Z 4d2eff395222496a540861d11a1fa1449da3f704
+release	Checkout	2026-06-06T08:46:27.8805148Z ##[endgroup]
+release	Checkout	2026-06-06T08:46:27.8808361Z ##[group]Determining the checkout info
+release	Checkout	2026-06-06T08:46:27.8812067Z ##[endgroup]
+release	Checkout	2026-06-06T08:46:27.8814735Z [command]/usr/bin/git sparse-checkout disable
+release	Checkout	2026-06-06T08:46:27.8844925Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+release	Checkout	2026-06-06T08:46:27.8898045Z ##[group]Checking out the ref
+release	Checkout	2026-06-06T08:46:27.8900860Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+release	Checkout	2026-06-06T08:46:27.8959391Z Switched to a new branch 'main'
+release	Checkout	2026-06-06T08:46:27.8967616Z branch 'main' set up to track 'origin/main'.
+release	Checkout	2026-06-06T08:46:27.8983089Z ##[endgroup]
+release	Checkout	2026-06-06T08:46:27.9028096Z [command]/usr/bin/git log -1 --format=%H
+release	Checkout	2026-06-06T08:46:27.9063952Z 4d2eff395222496a540861d11a1fa1449da3f704
+release	Set up Rust	﻿2026-06-06T08:46:27.9757463Z ##[group]Run dtolnay/rust-toolchain@29eef336d9b2848a0b548edc03f92a220660cdb8
+release	Set up Rust	2026-06-06T08:46:27.9759632Z with:
+release	Set up Rust	2026-06-06T08:46:27.9760980Z   toolchain: stable
+release	Set up Rust	2026-06-06T08:46:27.9762666Z env:
+release	Set up Rust	2026-06-06T08:46:27.9764027Z   SCCACHE_GHA_ENABLED: true
+release	Set up Rust	2026-06-06T08:46:27.9765307Z   RUSTC_WRAPPER: sccache
+release	Set up Rust	2026-06-06T08:46:27.9767478Z   SCCACHE_PATH: /opt/hostedtoolcache/sccache/0.14.0/x64/sccache
+release	Set up Rust	2026-06-06T08:46:27.9769687Z   ACTIONS_CACHE_SERVICE_V2: on
+release	Set up Rust	2026-06-06T08:46:27.9771324Z   ACTIONS_RESULTS_URL: https://results-receiver.actions.githubusercontent.com/
+release	Set up Rust	2026-06-06T08:46:28.0001413Z   ACTIONS_RUNTIME_TOKEN: ***
+release	Set up Rust	2026-06-06T08:46:28.0003346Z ##[endgroup]
+release	Set up Rust	2026-06-06T08:46:28.0187408Z ##[group]Run : parse toolchain version
+release	Set up Rust	2026-06-06T08:46:28.0188583Z [36;1m: parse toolchain version[0m
+release	Set up Rust	2026-06-06T08:46:28.0189595Z [36;1mif [[ -z $toolchain ]]; then[0m
+release	Set up Rust	2026-06-06T08:46:28.0191252Z [36;1m  # GitHub does not enforce `required: true` inputs itself. https://github.com/actions/runner/issues/1070[0m
+release	Set up Rust	2026-06-06T08:46:28.0193550Z [36;1m  echo "'toolchain' is a required input" >&2[0m
+release	Set up Rust	2026-06-06T08:46:28.0194643Z [36;1m  exit 1[0m
+release	Set up Rust	2026-06-06T08:46:28.0195799Z [36;1melif [[ $toolchain =~ ^stable' '[0-9]+' '(year|month|week|day)s?' 'ago$ ]]; then[0m
+release	Set up Rust	2026-06-06T08:46:28.0197182Z [36;1m  if [[ Linux == macOS ]]; then[0m
+release	Set up Rust	2026-06-06T08:46:28.0198862Z [36;1m    echo "toolchain=1.$((($(date -v-$(sed 's/stable \([0-9]*\) \(.\).*/\1\2/' <<< $toolchain) +%s)/60/60/24-16569)/7/6))" >> $GITHUB_OUTPUT[0m
+release	Set up Rust	2026-06-06T08:46:28.0200558Z [36;1m  else[0m
+release	Set up Rust	2026-06-06T08:46:28.0201923Z [36;1m    echo "toolchain=1.$((($(date --date "${toolchain#stable }" +%s)/60/60/24-16569)/7/6))" >> $GITHUB_OUTPUT[0m
+release	Set up Rust	2026-06-06T08:46:28.0203870Z [36;1m  fi[0m
+release	Set up Rust	2026-06-06T08:46:28.0204945Z [36;1melif [[ $toolchain =~ ^stable' 'minus' '[0-9]+' 'releases?$ ]]; then[0m
+release	Set up Rust	2026-06-06T08:46:28.0206678Z [36;1m  echo "toolchain=1.$((($(date +%s)/60/60/24-16569)/7/6-${toolchain//[^0-9]/}))" >> $GITHUB_OUTPUT[0m
+release	Set up Rust	2026-06-06T08:46:28.0208701Z [36;1melif [[ $toolchain =~ ^1\.[0-9]+$ ]]; then[0m
+release	Set up Rust	2026-06-06T08:46:28.0210873Z [36;1m  echo "toolchain=1.$((i=${toolchain#1.}, c=($(date +%s)/60/60/24-16569)/7/6, i+9*i*(10*i<=c)+90*i*(100*i<=c)))" >> $GITHUB_OUTPUT[0m
+release	Set up Rust	2026-06-06T08:46:28.0213129Z [36;1melse[0m
+release	Set up Rust	2026-06-06T08:46:28.0214573Z [36;1m  echo "toolchain=$toolchain" >> $GITHUB_OUTPUT[0m
+release	Set up Rust	2026-06-06T08:46:28.0215700Z [36;1mfi[0m
+release	Set up Rust	2026-06-06T08:46:28.0252717Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+release	Set up Rust	2026-06-06T08:46:28.0253964Z env:
+release	Set up Rust	2026-06-06T08:46:28.0254740Z   SCCACHE_GHA_ENABLED: true
+release	Set up Rust	2026-06-06T08:46:28.0255660Z   RUSTC_WRAPPER: sccache
+release	Set up Rust	2026-06-06T08:46:28.0256777Z   SCCACHE_PATH: /opt/hostedtoolcache/sccache/0.14.0/x64/sccache
+release	Set up Rust	2026-06-06T08:46:28.0257999Z   ACTIONS_CACHE_SERVICE_V2: on
+release	Set up Rust	2026-06-06T08:46:28.0259357Z   ACTIONS_RESULTS_URL: https://results-receiver.actions.githubusercontent.com/
+release	Set up Rust	2026-06-06T08:46:28.0395183Z   ACTIONS_RUNTIME_TOKEN: ***
+release	Set up Rust	2026-06-06T08:46:28.0396148Z   toolchain: stable
+release	Set up Rust	2026-06-06T08:46:28.0396962Z ##[endgroup]
+release	Set up Rust	2026-06-06T08:46:28.0594222Z ##[group]Run : construct rustup command line
+release	Set up Rust	2026-06-06T08:46:28.0595387Z [36;1m: construct rustup command line[0m
+release	Set up Rust	2026-06-06T08:46:28.0596857Z [36;1mecho "targets=$(for t in ${targets//,/ }; do echo -n ' --target' $t; done)" >> $GITHUB_OUTPUT[0m
+release	Set up Rust	2026-06-06T08:46:28.0598849Z [36;1mecho "components=$(for c in ${components//,/ }; do echo -n ' --component' $c; done)" >> $GITHUB_OUTPUT[0m
+release	Set up Rust	2026-06-06T08:46:28.0600488Z [36;1mecho "downgrade=" >> $GITHUB_OUTPUT[0m
+release	Set up Rust	2026-06-06T08:46:28.0629653Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+release	Set up Rust	2026-06-06T08:46:28.0630813Z env:
+release	Set up Rust	2026-06-06T08:46:28.0631675Z   SCCACHE_GHA_ENABLED: true
+release	Set up Rust	2026-06-06T08:46:28.0632755Z   RUSTC_WRAPPER: sccache
+release	Set up Rust	2026-06-06T08:46:28.0633896Z   SCCACHE_PATH: /opt/hostedtoolcache/sccache/0.14.0/x64/sccache
+release	Set up Rust	2026-06-06T08:46:28.0635100Z   ACTIONS_CACHE_SERVICE_V2: on
+release	Set up Rust	2026-06-06T08:46:28.0636448Z   ACTIONS_RESULTS_URL: https://results-receiver.actions.githubusercontent.com/
+release	Set up Rust	2026-06-06T08:46:28.0772778Z   ACTIONS_RUNTIME_TOKEN: ***
+release	Set up Rust	2026-06-06T08:46:28.0773771Z   targets: 
+release	Set up Rust	2026-06-06T08:46:28.0774570Z   components: 
+release	Set up Rust	2026-06-06T08:46:28.0775349Z ##[endgroup]
+release	Set up Rust	2026-06-06T08:46:28.0905440Z ##[group]Run : set $CARGO_HOME
+release	Set up Rust	2026-06-06T08:46:28.0906436Z [36;1m: set $CARGO_HOME[0m
+release	Set up Rust	2026-06-06T08:46:28.0907591Z [36;1mecho CARGO_HOME=${CARGO_HOME:-"$HOME/.cargo"} >> $GITHUB_ENV[0m
+release	Set up Rust	2026-06-06T08:46:28.0937170Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+release	Set up Rust	2026-06-06T08:46:28.0938325Z env:
+release	Set up Rust	2026-06-06T08:46:28.0939089Z   SCCACHE_GHA_ENABLED: true
+release	Set up Rust	2026-06-06T08:46:28.0939986Z   RUSTC_WRAPPER: sccache
+release	Set up Rust	2026-06-06T08:46:28.0941088Z   SCCACHE_PATH: /opt/hostedtoolcache/sccache/0.14.0/x64/sccache
+release	Set up Rust	2026-06-06T08:46:28.0942838Z   ACTIONS_CACHE_SERVICE_V2: on
+release	Set up Rust	2026-06-06T08:46:28.0944252Z   ACTIONS_RESULTS_URL: https://results-receiver.actions.githubusercontent.com/
+release	Set up Rust	2026-06-06T08:46:28.1088916Z   ACTIONS_RUNTIME_TOKEN: ***
+release	Set up Rust	2026-06-06T08:46:28.1089894Z ##[endgroup]
+release	Set up Rust	2026-06-06T08:46:28.1214397Z ##[group]Run : install rustup if needed
+release	Set up Rust	2026-06-06T08:46:28.1215516Z [36;1m: install rustup if needed[0m
+release	Set up Rust	2026-06-06T08:46:28.1216595Z [36;1mif ! command -v rustup &>/dev/null; then[0m
+release	Set up Rust	2026-06-06T08:46:28.1218860Z [36;1m  curl --proto '=https' --tlsv1.2 --retry 10 --retry-connrefused --location --silent --show-error --fail https://sh.rustup.rs | sh -s -- --default-toolchain none -y[0m
+release	Set up Rust	2026-06-06T08:46:28.1221127Z [36;1m  echo "$CARGO_HOME/bin" >> $GITHUB_PATH[0m
+release	Set up Rust	2026-06-06T08:46:28.1222168Z [36;1mfi[0m
+release	Set up Rust	2026-06-06T08:46:28.1250435Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+release	Set up Rust	2026-06-06T08:46:28.1251599Z env:
+release	Set up Rust	2026-06-06T08:46:28.1252546Z   SCCACHE_GHA_ENABLED: true
+release	Set up Rust	2026-06-06T08:46:28.1253486Z   RUSTC_WRAPPER: sccache
+release	Set up Rust	2026-06-06T08:46:28.1254585Z   SCCACHE_PATH: /opt/hostedtoolcache/sccache/0.14.0/x64/sccache
+release	Set up Rust	2026-06-06T08:46:28.1255784Z   ACTIONS_CACHE_SERVICE_V2: on
+release	Set up Rust	2026-06-06T08:46:28.1257143Z   ACTIONS_RESULTS_URL: https://results-receiver.actions.githubusercontent.com/
+release	Set up Rust	2026-06-06T08:46:28.1399385Z   ACTIONS_RUNTIME_TOKEN: ***
+release	Set up Rust	2026-06-06T08:46:28.1400493Z   CARGO_HOME: /home/runner/.cargo
+release	Set up Rust	2026-06-06T08:46:28.1401433Z ##[endgroup]
+release	Set up Rust	2026-06-06T08:46:28.1531949Z ##[group]Run rustup toolchain install stable --profile minimal --no-self-update
+release	Set up Rust	2026-06-06T08:46:28.1534060Z [36;1mrustup toolchain install stable --profile minimal --no-self-update[0m
+release	Set up Rust	2026-06-06T08:46:28.1563873Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+release	Set up Rust	2026-06-06T08:46:28.1565031Z env:
+release	Set up Rust	2026-06-06T08:46:28.1565815Z   SCCACHE_GHA_ENABLED: true
+release	Set up Rust	2026-06-06T08:46:28.1566728Z   RUSTC_WRAPPER: sccache
+release	Set up Rust	2026-06-06T08:46:28.1567817Z   SCCACHE_PATH: /opt/hostedtoolcache/sccache/0.14.0/x64/sccache
+release	Set up Rust	2026-06-06T08:46:28.1569050Z   ACTIONS_CACHE_SERVICE_V2: on
+release	Set up Rust	2026-06-06T08:46:28.1570406Z   ACTIONS_RESULTS_URL: https://results-receiver.actions.githubusercontent.com/
+release	Set up Rust	2026-06-06T08:46:28.1706835Z   ACTIONS_RUNTIME_TOKEN: ***
+release	Set up Rust	2026-06-06T08:46:28.1707852Z   CARGO_HOME: /home/runner/.cargo
+release	Set up Rust	2026-06-06T08:46:28.1708841Z   RUSTUP_PERMIT_COPY_RENAME: 1
+release	Set up Rust	2026-06-06T08:46:28.1709781Z ##[endgroup]
+release	Set up Rust	2026-06-06T08:46:28.5021976Z info: syncing channel updates for stable-x86_64-unknown-linux-gnu
+release	Set up Rust	2026-06-06T08:46:28.8550390Z info: latest update on 2026-05-28 for version 1.96.0 (ac68faa20 2026-05-25)
+release	Set up Rust	2026-06-06T08:46:28.8943559Z info: removing previous version of component clippy
+release	Set up Rust	2026-06-06T08:46:28.9049021Z info: removing previous version of component rustfmt
+release	Set up Rust	2026-06-06T08:46:28.9063941Z info: removing previous version of component cargo
+release	Set up Rust	2026-06-06T08:46:28.9139980Z info: removing previous version of component rust-std
+release	Set up Rust	2026-06-06T08:46:28.9283377Z info: removing previous version of component rustc
+release	Set up Rust	2026-06-06T08:46:28.9356196Z info: downloading 5 components
+release	Set up Rust	2026-06-06T08:46:37.8216839Z 
+release	Set up Rust	2026-06-06T08:46:37.8313239Z   stable-x86_64-unknown-linux-gnu updated - rustc 1.96.0 (ac68faa20 2026-05-25) (from rustc 1.95.0 (59807616e 2026-04-14))
+release	Set up Rust	2026-06-06T08:46:37.8322860Z 
+release	Set up Rust	2026-06-06T08:46:37.8418816Z ##[group]Run rustup default stable
+release	Set up Rust	2026-06-06T08:46:37.8419174Z [36;1mrustup default stable[0m
+release	Set up Rust	2026-06-06T08:46:37.8447171Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+release	Set up Rust	2026-06-06T08:46:37.8447628Z env:
+release	Set up Rust	2026-06-06T08:46:37.8447834Z   SCCACHE_GHA_ENABLED: true
+release	Set up Rust	2026-06-06T08:46:37.8448105Z   RUSTC_WRAPPER: sccache
+release	Set up Rust	2026-06-06T08:46:37.8448560Z   SCCACHE_PATH: /opt/hostedtoolcache/sccache/0.14.0/x64/sccache
+release	Set up Rust	2026-06-06T08:46:37.8449091Z   ACTIONS_CACHE_SERVICE_V2: on
+release	Set up Rust	2026-06-06T08:46:37.8477147Z   ACTIONS_RESULTS_URL: https://results-receiver.actions.githubusercontent.com/
+release	Set up Rust	2026-06-06T08:46:37.8527585Z   ACTIONS_RUNTIME_TOKEN: ***
+release	Set up Rust	2026-06-06T08:46:37.8527945Z   CARGO_HOME: /home/runner/.cargo
+release	Set up Rust	2026-06-06T08:46:37.8528496Z ##[endgroup]
+release	Set up Rust	2026-06-06T08:46:37.8637605Z info: using existing install for stable-x86_64-unknown-linux-gnu
+release	Set up Rust	2026-06-06T08:46:37.8645801Z info: default toolchain set to stable-x86_64-unknown-linux-gnu
+release	Set up Rust	2026-06-06T08:46:37.8646340Z 
+release	Set up Rust	2026-06-06T08:46:37.8720484Z   stable-x86_64-unknown-linux-gnu unchanged - rustc 1.96.0 (ac68faa20 2026-05-25)
+release	Set up Rust	2026-06-06T08:46:37.8721529Z 
+release	Set up Rust	2026-06-06T08:46:37.8757845Z ##[group]Run : create cachekey
+release	Set up Rust	2026-06-06T08:46:37.8758168Z [36;1m: create cachekey[0m
+release	Set up Rust	2026-06-06T08:46:37.8758717Z [36;1mDATE=$(rustc +stable --version --verbose | sed -ne 's/^commit-date: \(20[0-9][0-9]\)-\([01][0-9]\)-\([0-3][0-9]\)$/\1\2\3/p')[0m
+release	Set up Rust	2026-06-06T08:46:37.8759380Z [36;1mHASH=$(rustc +stable --version --verbose | sed -ne 's/^commit-hash: //p')[0m
+release	Set up Rust	2026-06-06T08:46:37.8759888Z [36;1mecho "cachekey=$(echo $DATE$HASH | head -c12)" >> $GITHUB_OUTPUT[0m
+release	Set up Rust	2026-06-06T08:46:37.8786727Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+release	Set up Rust	2026-06-06T08:46:37.8787101Z env:
+release	Set up Rust	2026-06-06T08:46:37.8787366Z   SCCACHE_GHA_ENABLED: true
+release	Set up Rust	2026-06-06T08:46:37.8787617Z   RUSTC_WRAPPER: sccache
+release	Set up Rust	2026-06-06T08:46:37.8787941Z   SCCACHE_PATH: /opt/hostedtoolcache/sccache/0.14.0/x64/sccache
+release	Set up Rust	2026-06-06T08:46:37.8788293Z   ACTIONS_CACHE_SERVICE_V2: on
+release	Set up Rust	2026-06-06T08:46:37.8788702Z   ACTIONS_RESULTS_URL: https://results-receiver.actions.githubusercontent.com/
+release	Set up Rust	2026-06-06T08:46:37.8831430Z   ACTIONS_RUNTIME_TOKEN: ***
+release	Set up Rust	2026-06-06T08:46:37.8831734Z   CARGO_HOME: /home/runner/.cargo
+release	Set up Rust	2026-06-06T08:46:37.8831996Z ##[endgroup]
+release	Set up Rust	2026-06-06T08:46:37.9205160Z ##[group]Run : disable incremental compilation
+release	Set up Rust	2026-06-06T08:46:37.9205581Z [36;1m: disable incremental compilation[0m
+release	Set up Rust	2026-06-06T08:46:37.9205916Z [36;1mif [ -z "${CARGO_INCREMENTAL+set}" ]; then[0m
+release	Set up Rust	2026-06-06T08:46:37.9206265Z [36;1m  echo CARGO_INCREMENTAL=0 >> $GITHUB_ENV[0m
+release	Set up Rust	2026-06-06T08:46:37.9206553Z [36;1mfi[0m
+release	Set up Rust	2026-06-06T08:46:37.9232833Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+release	Set up Rust	2026-06-06T08:46:37.9233206Z env:
+release	Set up Rust	2026-06-06T08:46:37.9233431Z   SCCACHE_GHA_ENABLED: true
+release	Set up Rust	2026-06-06T08:46:37.9233687Z   RUSTC_WRAPPER: sccache
+release	Set up Rust	2026-06-06T08:46:37.9233997Z   SCCACHE_PATH: /opt/hostedtoolcache/sccache/0.14.0/x64/sccache
+release	Set up Rust	2026-06-06T08:46:37.9234346Z   ACTIONS_CACHE_SERVICE_V2: on
+release	Set up Rust	2026-06-06T08:46:37.9234755Z   ACTIONS_RESULTS_URL: https://results-receiver.actions.githubusercontent.com/
+release	Set up Rust	2026-06-06T08:46:37.9277401Z   ACTIONS_RUNTIME_TOKEN: ***
+release	Set up Rust	2026-06-06T08:46:37.9277699Z   CARGO_HOME: /home/runner/.cargo
+release	Set up Rust	2026-06-06T08:46:37.9277955Z ##[endgroup]
+release	Set up Rust	2026-06-06T08:46:37.9348349Z ##[group]Run : enable colors in Cargo output
+release	Set up Rust	2026-06-06T08:46:37.9348718Z [36;1m: enable colors in Cargo output[0m
+release	Set up Rust	2026-06-06T08:46:37.9349048Z [36;1mif [ -z "${CARGO_TERM_COLOR+set}" ]; then[0m
+release	Set up Rust	2026-06-06T08:46:37.9349399Z [36;1m  echo CARGO_TERM_COLOR=always >> $GITHUB_ENV[0m
+release	Set up Rust	2026-06-06T08:46:37.9349702Z [36;1mfi[0m
+release	Set up Rust	2026-06-06T08:46:37.9373772Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+release	Set up Rust	2026-06-06T08:46:37.9374139Z env:
+release	Set up Rust	2026-06-06T08:46:37.9374347Z   SCCACHE_GHA_ENABLED: true
+release	Set up Rust	2026-06-06T08:46:37.9374626Z   RUSTC_WRAPPER: sccache
+release	Set up Rust	2026-06-06T08:46:37.9374947Z   SCCACHE_PATH: /opt/hostedtoolcache/sccache/0.14.0/x64/sccache
+release	Set up Rust	2026-06-06T08:46:37.9375314Z   ACTIONS_CACHE_SERVICE_V2: on
+release	Set up Rust	2026-06-06T08:46:37.9375734Z   ACTIONS_RESULTS_URL: https://results-receiver.actions.githubusercontent.com/
+release	Set up Rust	2026-06-06T08:46:37.9418895Z   ACTIONS_RUNTIME_TOKEN: ***
+release	Set up Rust	2026-06-06T08:46:37.9419412Z   CARGO_HOME: /home/runner/.cargo
+release	Set up Rust	2026-06-06T08:46:37.9419683Z   CARGO_INCREMENTAL: 0
+release	Set up Rust	2026-06-06T08:46:37.9419911Z ##[endgroup]
+release	Set up Rust	2026-06-06T08:46:37.9491119Z ##[group]Run : enable Cargo sparse registry
+release	Set up Rust	2026-06-06T08:46:37.9491504Z [36;1m: enable Cargo sparse registry[0m
+release	Set up Rust	2026-06-06T08:46:37.9492156Z [36;1m# implemented in 1.66, stabilized in 1.68, made default in 1.70[0m
+release	Set up Rust	2026-06-06T08:46:37.9493277Z [36;1mif [ -z "${CARGO_REGISTRIES_CRATES_IO_PROTOCOL+set}" -o -f "/home/runner/work/_temp"/.implicit_cargo_registries_crates_io_protocol ]; then[0m
+release	Set up Rust	2026-06-06T08:46:37.9494019Z [36;1m  if rustc +stable --version --verbose | grep -q '^release: 1\.6[89]\.'; then[0m
+release	Set up Rust	2026-06-06T08:46:37.9494788Z [36;1m    touch "/home/runner/work/_temp"/.implicit_cargo_registries_crates_io_protocol || true[0m
+release	Set up Rust	2026-06-06T08:46:37.9495331Z [36;1m    echo CARGO_REGISTRIES_CRATES_IO_PROTOCOL=sparse >> $GITHUB_ENV[0m
+release	Set up Rust	2026-06-06T08:46:37.9495833Z [36;1m  elif rustc +stable --version --verbose | grep -q '^release: 1\.6[67]\.'; then[0m
+release	Set up Rust	2026-06-06T08:46:37.9496407Z [36;1m    touch "/home/runner/work/_temp"/.implicit_cargo_registries_crates_io_protocol || true[0m
+release	Set up Rust	2026-06-06T08:46:37.9496924Z [36;1m    echo CARGO_REGISTRIES_CRATES_IO_PROTOCOL=git >> $GITHUB_ENV[0m
+release	Set up Rust	2026-06-06T08:46:37.9497268Z [36;1m  fi[0m
+release	Set up Rust	2026-06-06T08:46:37.9497464Z [36;1mfi[0m
+release	Set up Rust	2026-06-06T08:46:37.9527764Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+release	Set up Rust	2026-06-06T08:46:37.9528131Z env:
+release	Set up Rust	2026-06-06T08:46:37.9528334Z   SCCACHE_GHA_ENABLED: true
+release	Set up Rust	2026-06-06T08:46:37.9528575Z   RUSTC_WRAPPER: sccache
+release	Set up Rust	2026-06-06T08:46:37.9528884Z   SCCACHE_PATH: /opt/hostedtoolcache/sccache/0.14.0/x64/sccache
+release	Set up Rust	2026-06-06T08:46:37.9529244Z   ACTIONS_CACHE_SERVICE_V2: on
+release	Set up Rust	2026-06-06T08:46:37.9529655Z   ACTIONS_RESULTS_URL: https://results-receiver.actions.githubusercontent.com/
+release	Set up Rust	2026-06-06T08:46:37.9573219Z   ACTIONS_RUNTIME_TOKEN: ***
+release	Set up Rust	2026-06-06T08:46:37.9573534Z   CARGO_HOME: /home/runner/.cargo
+release	Set up Rust	2026-06-06T08:46:37.9573816Z   CARGO_INCREMENTAL: 0
+release	Set up Rust	2026-06-06T08:46:37.9574043Z   CARGO_TERM_COLOR: always
+release	Set up Rust	2026-06-06T08:46:37.9574267Z ##[endgroup]
+release	Set up Rust	2026-06-06T08:46:37.9916262Z ##[group]Run : work around spurious network errors in curl 8.0
+release	Set up Rust	2026-06-06T08:46:37.9916760Z [36;1m: work around spurious network errors in curl 8.0[0m
+release	Set up Rust	2026-06-06T08:46:37.9917318Z [36;1m# https://rust-lang.zulipchat.com/#narrow/stream/246057-t-cargo/topic/timeout.20investigation[0m
+release	Set up Rust	2026-06-06T08:46:37.9917932Z [36;1mif rustc +stable --version --verbose | grep -q '^release: 1\.7[01]\.'; then[0m
+release	Set up Rust	2026-06-06T08:46:37.9918392Z [36;1m  echo CARGO_HTTP_MULTIPLEXING=false >> $GITHUB_ENV[0m
+release	Set up Rust	2026-06-06T08:46:37.9918726Z [36;1mfi[0m
+release	Set up Rust	2026-06-06T08:46:37.9945806Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+release	Set up Rust	2026-06-06T08:46:37.9946175Z env:
+release	Set up Rust	2026-06-06T08:46:37.9946376Z   SCCACHE_GHA_ENABLED: true
+release	Set up Rust	2026-06-06T08:46:37.9946624Z   RUSTC_WRAPPER: sccache
+release	Set up Rust	2026-06-06T08:46:37.9946938Z   SCCACHE_PATH: /opt/hostedtoolcache/sccache/0.14.0/x64/sccache
+release	Set up Rust	2026-06-06T08:46:37.9947305Z   ACTIONS_CACHE_SERVICE_V2: on
+release	Set up Rust	2026-06-06T08:46:37.9947709Z   ACTIONS_RESULTS_URL: https://results-receiver.actions.githubusercontent.com/
+release	Set up Rust	2026-06-06T08:46:37.9990296Z   ACTIONS_RUNTIME_TOKEN: ***
+release	Set up Rust	2026-06-06T08:46:37.9990612Z   CARGO_HOME: /home/runner/.cargo
+release	Set up Rust	2026-06-06T08:46:37.9990876Z   CARGO_INCREMENTAL: 0
+release	Set up Rust	2026-06-06T08:46:37.9991103Z   CARGO_TERM_COLOR: always
+release	Set up Rust	2026-06-06T08:46:37.9991341Z ##[endgroup]
+release	Set up Rust	2026-06-06T08:46:38.0199723Z ##[group]Run rustc +stable --version --verbose
+release	Set up Rust	2026-06-06T08:46:38.0200125Z [36;1mrustc +stable --version --verbose[0m
+release	Set up Rust	2026-06-06T08:46:38.0225912Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+release	Set up Rust	2026-06-06T08:46:38.0226297Z env:
+release	Set up Rust	2026-06-06T08:46:38.0226500Z   SCCACHE_GHA_ENABLED: true
+release	Set up Rust	2026-06-06T08:46:38.0226740Z   RUSTC_WRAPPER: sccache
+release	Set up Rust	2026-06-06T08:46:38.0227054Z   SCCACHE_PATH: /opt/hostedtoolcache/sccache/0.14.0/x64/sccache
+release	Set up Rust	2026-06-06T08:46:38.0227409Z   ACTIONS_CACHE_SERVICE_V2: on
+release	Set up Rust	2026-06-06T08:46:38.0227819Z   ACTIONS_RESULTS_URL: https://results-receiver.actions.githubusercontent.com/
+release	Set up Rust	2026-06-06T08:46:38.0271711Z   ACTIONS_RUNTIME_TOKEN: ***
+release	Set up Rust	2026-06-06T08:46:38.0272028Z   CARGO_HOME: /home/runner/.cargo
+release	Set up Rust	2026-06-06T08:46:38.0272421Z   CARGO_INCREMENTAL: 0
+release	Set up Rust	2026-06-06T08:46:38.0272660Z   CARGO_TERM_COLOR: always
+release	Set up Rust	2026-06-06T08:46:38.0272898Z ##[endgroup]
+release	Set up Rust	2026-06-06T08:46:38.0465221Z rustc 1.96.0 (ac68faa20 2026-05-25)
+release	Set up Rust	2026-06-06T08:46:38.0469019Z binary: rustc
+release	Set up Rust	2026-06-06T08:46:38.0469506Z commit-hash: ac68faa20c58cbccd01ee7208bf3b6e93a7d7f96
+release	Set up Rust	2026-06-06T08:46:38.0470070Z commit-date: 2026-05-25
+release	Set up Rust	2026-06-06T08:46:38.0470467Z host: x86_64-unknown-linux-gnu
+release	Set up Rust	2026-06-06T08:46:38.0471276Z release: 1.96.0
+release	Set up Rust	2026-06-06T08:46:38.0471614Z LLVM version: 22.1.2
+release	Build release binary	﻿2026-06-06T08:46:38.0543220Z ##[group]Run cargo build --release --locked
+release	Build release binary	2026-06-06T08:46:38.0543632Z [36;1mcargo build --release --locked[0m
+release	Build release binary	2026-06-06T08:46:38.0570621Z shell: /usr/bin/bash -e {0}
+release	Build release binary	2026-06-06T08:46:38.0570902Z env:
+release	Build release binary	2026-06-06T08:46:38.0571115Z   SCCACHE_GHA_ENABLED: true
+release	Build release binary	2026-06-06T08:46:38.0571356Z   RUSTC_WRAPPER: sccache
+release	Build release binary	2026-06-06T08:46:38.0571673Z   SCCACHE_PATH: /opt/hostedtoolcache/sccache/0.14.0/x64/sccache
+release	Build release binary	2026-06-06T08:46:38.0572028Z   ACTIONS_CACHE_SERVICE_V2: on
+release	Build release binary	2026-06-06T08:46:38.0572780Z   ACTIONS_RESULTS_URL: https://results-receiver.actions.githubusercontent.com/
+release	Build release binary	2026-06-06T08:46:38.0615521Z   ACTIONS_RUNTIME_TOKEN: ***
+release	Build release binary	2026-06-06T08:46:38.0615823Z   CARGO_HOME: /home/runner/.cargo
+release	Build release binary	2026-06-06T08:46:38.0616086Z   CARGO_INCREMENTAL: 0
+release	Build release binary	2026-06-06T08:46:38.0616319Z   CARGO_TERM_COLOR: always
+release	Build release binary	2026-06-06T08:46:38.0616562Z ##[endgroup]
+release	Build release binary	2026-06-06T08:46:38.8574883Z [1m[92m    Updating[0m crates.io index
+release	Build release binary	2026-06-06T08:46:39.0575687Z [1m[92m Downloading[0m crates ...
+release	Build release binary	2026-06-06T08:46:39.0823619Z [1m[92m  Downloaded[0m shlex v1.3.0
+release	Build release binary	2026-06-06T08:46:39.0844141Z [1m[92m  Downloaded[0m rustc-hash v2.1.2
+release	Build release binary	2026-06-06T08:46:39.0861407Z [1m[92m  Downloaded[0m either v1.16.0
+release	Build release binary	2026-06-06T08:46:39.0883527Z [1m[92m  Downloaded[0m cfg-if v1.0.4
+release	Build release binary	2026-06-06T08:46:39.0923339Z [1m[92m  Downloaded[0m aho-corasick v1.1.4
+release	Build release binary	2026-06-06T08:46:39.0997169Z [1m[92m  Downloaded[0m bitflags v2.11.1
+release	Build release binary	2026-06-06T08:46:39.1071787Z [1m[92m  Downloaded[0m cexpr v0.6.0
+release	Build release binary	2026-06-06T08:46:39.1113403Z [1m[92m  Downloaded[0m sealed v0.6.0
+release	Build release binary	2026-06-06T08:46:39.1154001Z [1m[92m  Downloaded[0m unicode-xid v0.2.6
+release	Build release binary	2026-06-06T08:46:39.1174274Z [1m[92m  Downloaded[0m shlex v2.0.1
+release	Build release binary	2026-06-06T08:46:39.1199262Z [1m[92m  Downloaded[0m thiserror-impl v2.0.18
+release	Build release binary	2026-06-06T08:46:39.1224532Z [1m[92m  Downloaded[0m smallvec v1.15.1
+release	Build release binary	2026-06-06T08:46:39.1265669Z [1m[92m  Downloaded[0m glob v0.3.3
+release	Build release binary	2026-06-06T08:46:39.1289672Z [1m[92m  Downloaded[0m unicode-ident v1.0.24
+release	Build release binary	2026-06-06T08:46:39.1325426Z [1m[92m  Downloaded[0m unicode-segmentation v1.13.2
+release	Build release binary	2026-06-06T08:46:39.1359984Z [1m[92m  Downloaded[0m memchr v2.8.1
+release	Build release binary	2026-06-06T08:46:39.1423140Z [1m[92m  Downloaded[0m nom v7.1.3
+release	Build release binary	2026-06-06T08:46:39.1485268Z [1m[92m  Downloaded[0m derive_more-impl v2.1.1
+release	Build release binary	2026-06-06T08:46:39.1545589Z [1m[92m  Downloaded[0m hashbrown v0.17.1
+release	Build release binary	2026-06-06T08:46:39.1602044Z [1m[92m  Downloaded[0m bindgen v0.72.1
+release	Build release binary	2026-06-06T08:46:39.1673286Z [1m[92m  Downloaded[0m regex v1.12.3
+release	Build release binary	2026-06-06T08:46:39.1729155Z [1m[92m  Downloaded[0m cc v1.2.63
+release	Build release binary	2026-06-06T08:46:39.1761940Z [1m[92m  Downloaded[0m mdbx-sys v13.11.0
+release	Build release binary	2026-06-06T08:46:39.1826579Z [1m[92m  Downloaded[0m minimal-lexical v0.2.1
+release	Build release binary	2026-06-06T08:46:39.1875482Z [1m[92m  Downloaded[0m itertools v0.13.0
+release	Build release binary	2026-06-06T08:46:39.1948589Z [1m[92m  Downloaded[0m derive_more v2.1.1
+release	Build release binary	2026-06-06T08:46:39.2108781Z [1m[92m  Downloaded[0m syn v2.0.117
+release	Build release binary	2026-06-06T08:46:39.2216136Z [1m[92m  Downloaded[0m proc-macro2 v1.0.106
+release	Build release binary	2026-06-06T08:46:39.2247346Z [1m[92m  Downloaded[0m libmdbx v0.6.6
+release	Build release binary	2026-06-06T08:46:39.2277543Z [1m[92m  Downloaded[0m semver v1.0.28
+release	Build release binary	2026-06-06T08:46:39.2302556Z [1m[92m  Downloaded[0m regex-syntax v0.8.10
+release	Build release binary	2026-06-06T08:46:39.2372544Z [1m[92m  Downloaded[0m parking_lot_core v0.9.12
+release	Build release binary	2026-06-06T08:46:39.2396893Z [1m[92m  Downloaded[0m parking_lot v0.12.5
+release	Build release binary	2026-06-06T08:46:39.2424931Z [1m[92m  Downloaded[0m find-msvc-tools v0.1.9
+release	Build release binary	2026-06-06T08:46:39.2442312Z [1m[92m  Downloaded[0m clang-sys v1.8.1
+release	Build release binary	2026-06-06T08:46:39.2466705Z [1m[92m  Downloaded[0m thiserror v2.0.18
+release	Build release binary	2026-06-06T08:46:39.2534494Z [1m[92m  Downloaded[0m serde_core v1.0.228
+release	Build release binary	2026-06-06T08:46:39.2564415Z [1m[92m  Downloaded[0m quote v1.0.45
+release	Build release binary	2026-06-06T08:46:39.2595776Z [1m[92m  Downloaded[0m libloading v0.8.9
+release	Build release binary	2026-06-06T08:46:39.2620171Z [1m[92m  Downloaded[0m indexmap v2.14.0
+release	Build release binary	2026-06-06T08:46:39.2665010Z [1m[92m  Downloaded[0m convert_case v0.10.0
+release	Build release binary	2026-06-06T08:46:39.2683394Z [1m[92m  Downloaded[0m regex-automata v0.4.14
+release	Build release binary	2026-06-06T08:46:39.2823667Z [1m[92m  Downloaded[0m scopeguard v1.2.0
+release	Build release binary	2026-06-06T08:46:39.2837955Z [1m[92m  Downloaded[0m rustc_version v0.4.1
+release	Build release binary	2026-06-06T08:46:39.2851802Z [1m[92m  Downloaded[0m lock_api v0.4.14
+release	Build release binary	2026-06-06T08:46:39.2867236Z [1m[92m  Downloaded[0m equivalent v1.0.2
+release	Build release binary	2026-06-06T08:46:39.2880594Z [1m[92m  Downloaded[0m libc v0.2.186
+release	Build release binary	2026-06-06T08:46:39.3533794Z [1m[92m   Compiling[0m proc-macro2 v1.0.106
+release	Build release binary	2026-06-06T08:46:39.3534743Z [1m[92m   Compiling[0m quote v1.0.45
+release	Build release binary	2026-06-06T08:46:39.6519862Z [1m[92m   Compiling[0m unicode-ident v1.0.24
+release	Build release binary	2026-06-06T08:46:40.1519056Z [1m[92m   Compiling[0m glob v0.3.3
+release	Build release binary	2026-06-06T08:46:40.7705729Z [1m[92m   Compiling[0m clang-sys v1.8.1
+release	Build release binary	2026-06-06T08:46:40.9024768Z [1m[92m   Compiling[0m libc v0.2.186
+release	Build release binary	2026-06-06T08:46:41.0499008Z [1m[92m   Compiling[0m minimal-lexical v0.2.1
+release	Build release binary	2026-06-06T08:46:41.7621987Z [1m[92m   Compiling[0m regex-syntax v0.8.10
+release	Build release binary	2026-06-06T08:46:41.8481223Z [1m[92m   Compiling[0m syn v2.0.117
+release	Build release binary	2026-06-06T08:46:42.6393381Z [1m[92m   Compiling[0m cfg-if v1.0.4
+release	Build release binary	2026-06-06T08:46:42.8293627Z [1m[92m   Compiling[0m memchr v2.8.1
+release	Build release binary	2026-06-06T08:46:43.2713652Z [1m[92m   Compiling[0m nom v7.1.3
+release	Build release binary	2026-06-06T08:46:43.7115914Z [1m[92m   Compiling[0m libloading v0.8.9
+release	Build release binary	2026-06-06T08:46:43.9593212Z [1m[92m   Compiling[0m regex-automata v0.4.14
+release	Build release binary	2026-06-06T08:46:45.6590009Z [1m[92m   Compiling[0m either v1.16.0
+release	Build release binary	2026-06-06T08:46:45.9219622Z [1m[92m   Compiling[0m bindgen v0.72.1
+release	Build release binary	2026-06-06T08:46:46.2381726Z [1m[92m   Compiling[0m itertools v0.13.0
+release	Build release binary	2026-06-06T08:46:46.5234030Z [1m[92m   Compiling[0m regex v1.12.3
+release	Build release binary	2026-06-06T08:46:47.3657616Z [1m[92m   Compiling[0m cexpr v0.6.0
+release	Build release binary	2026-06-06T08:46:47.4098518Z [1m[92m   Compiling[0m bitflags v2.11.1
+release	Build release binary	2026-06-06T08:46:47.6694948Z [1m[92m   Compiling[0m shlex v1.3.0
+release	Build release binary	2026-06-06T08:46:47.9280276Z [1m[92m   Compiling[0m find-msvc-tools v0.1.9
+release	Build release binary	2026-06-06T08:46:48.2120941Z [1m[92m   Compiling[0m rustc-hash v2.1.2
+release	Build release binary	2026-06-06T08:46:48.2184921Z [1m[92m   Compiling[0m shlex v2.0.1
+release	Build release binary	2026-06-06T08:46:48.4338453Z [1m[92m   Compiling[0m cc v1.2.63
+release	Build release binary	2026-06-06T08:46:49.2537137Z [1m[92m   Compiling[0m parking_lot_core v0.9.12
+release	Build release binary	2026-06-06T08:46:49.3232669Z [1m[92m   Compiling[0m unicode-segmentation v1.13.2
+release	Build release binary	2026-06-06T08:46:49.6408050Z [1m[92m   Compiling[0m convert_case v0.10.0
+release	Build release binary	2026-06-06T08:46:49.9724217Z [1m[92m   Compiling[0m scopeguard v1.2.0
+release	Build release binary	2026-06-06T08:46:50.4425114Z [1m[92m   Compiling[0m thiserror v2.0.18
+release	Build release binary	2026-06-06T08:46:50.7387396Z [1m[92m   Compiling[0m unicode-xid v0.2.6
+release	Build release binary	2026-06-06T08:46:50.8554144Z [1m[92m   Compiling[0m mdbx-sys v13.11.0
+release	Build release binary	2026-06-06T08:46:50.9316926Z [1m[92m   Compiling[0m smallvec v1.15.1
+release	Build release binary	2026-06-06T08:46:51.9132089Z [1m[92m   Compiling[0m derive_more-impl v2.1.1
+release	Build release binary	2026-06-06T08:46:53.3559374Z [1m[92m   Compiling[0m lock_api v0.4.14
+release	Build release binary	2026-06-06T08:46:53.7284153Z [1m[92m   Compiling[0m thiserror-impl v2.0.18
+release	Build release binary	2026-06-06T08:46:54.3863246Z [1m[92m   Compiling[0m equivalent v1.0.2
+release	Build release binary	2026-06-06T08:46:54.5902807Z [1m[92m   Compiling[0m hashbrown v0.17.1
+release	Build release binary	2026-06-06T08:46:55.8142920Z [1m[92m   Compiling[0m indexmap v2.14.0
+release	Build release binary	2026-06-06T08:46:56.3163334Z [1m[92m   Compiling[0m parking_lot v0.12.5
+release	Build release binary	2026-06-06T08:46:56.9357208Z [1m[92m   Compiling[0m derive_more v2.1.1
+release	Build release binary	2026-06-06T08:46:57.1327948Z [1m[92m   Compiling[0m sealed v0.6.0
+release	Build release binary	2026-06-06T08:47:26.6402724Z [1m[92m   Compiling[0m libmdbx v0.6.6
+release	Build release binary	2026-06-06T08:47:27.0866800Z [1m[92m   Compiling[0m restaurant_cli v0.1.0 (/home/runner/work/245346359_nmhuei_food-poisoning-challenge/245346359_nmhuei_food-poisoning-challenge)
+release	Build release binary	2026-06-06T08:47:28.4035307Z [1m[92m    Finished[0m `release` profile [optimized] target(s) in 50.32s
+release	Smoke test binary command	﻿2026-06-06T08:47:28.4309308Z ##[group]Run ./target/release/restaurant_cli add "The best food place" "***"
+release	Smoke test binary command	2026-06-06T08:47:28.4310145Z [36;1m./target/release/restaurant_cli add "The best food place" "***"[0m
+release	Smoke test binary command	2026-06-06T08:47:28.4336329Z shell: /usr/bin/bash -e {0}
+release	Smoke test binary command	2026-06-06T08:47:28.4336772Z env:
+release	Smoke test binary command	2026-06-06T08:47:28.4336969Z   SCCACHE_GHA_ENABLED: true
+release	Smoke test binary command	2026-06-06T08:47:28.4337207Z   RUSTC_WRAPPER: sccache
+release	Smoke test binary command	2026-06-06T08:47:28.4337518Z   SCCACHE_PATH: /opt/hostedtoolcache/sccache/0.14.0/x64/sccache
+release	Smoke test binary command	2026-06-06T08:47:28.4337873Z   ACTIONS_CACHE_SERVICE_V2: on
+release	Smoke test binary command	2026-06-06T08:47:28.4338283Z   ACTIONS_RESULTS_URL: https://results-receiver.actions.githubusercontent.com/
+release	Smoke test binary command	2026-06-06T08:47:28.4380902Z   ACTIONS_RUNTIME_TOKEN: ***
+release	Smoke test binary command	2026-06-06T08:47:28.4381188Z   CARGO_HOME: /home/runner/.cargo
+release	Smoke test binary command	2026-06-06T08:47:28.4381439Z   CARGO_INCREMENTAL: 0
+release	Smoke test binary command	2026-06-06T08:47:28.4381658Z   CARGO_TERM_COLOR: always
+release	Smoke test binary command	2026-06-06T08:47:28.4381879Z ##[endgroup]
+release	Smoke test binary command	2026-06-06T08:47:28.4485591Z Saved restaurant "The best food place"
+release	Create GitHub Release	﻿2026-06-06T08:47:28.4515238Z ##[group]Run RELEASE_TAG="lol-$GITHUB_RUN_NUMBER"
+release	Create GitHub Release	2026-06-06T08:47:28.4515644Z [36;1mRELEASE_TAG="lol-$GITHUB_RUN_NUMBER"[0m
+release	Create GitHub Release	2026-06-06T08:47:28.4516194Z [36;1mgh release create "$RELEASE_TAG" --title "$RELEASE_TAG" --notes "Release $RELEASE_TAG" --repo "$GITHUB_REPOSITORY"[0m
+release	Create GitHub Release	2026-06-06T08:47:28.4541265Z shell: /usr/bin/bash -e {0}
+release	Create GitHub Release	2026-06-06T08:47:28.4541511Z env:
+release	Create GitHub Release	2026-06-06T08:47:28.4541706Z   SCCACHE_GHA_ENABLED: true
+release	Create GitHub Release	2026-06-06T08:47:28.4541941Z   RUSTC_WRAPPER: sccache
+release	Create GitHub Release	2026-06-06T08:47:28.4542540Z   SCCACHE_PATH: /opt/hostedtoolcache/sccache/0.14.0/x64/sccache
+release	Create GitHub Release	2026-06-06T08:47:28.4542899Z   ACTIONS_CACHE_SERVICE_V2: on
+release	Create GitHub Release	2026-06-06T08:47:28.4543294Z   ACTIONS_RESULTS_URL: https://results-receiver.actions.githubusercontent.com/
+release	Create GitHub Release	2026-06-06T08:47:28.4586015Z   ACTIONS_RUNTIME_TOKEN: ***
+release	Create GitHub Release	2026-06-06T08:47:28.4586303Z   CARGO_HOME: /home/runner/.cargo
+release	Create GitHub Release	2026-06-06T08:47:28.4586588Z   CARGO_INCREMENTAL: 0
+release	Create GitHub Release	2026-06-06T08:47:28.4586814Z   CARGO_TERM_COLOR: always
+release	Create GitHub Release	2026-06-06T08:47:28.4589660Z   GITHUB_TOKEN: ***
+release	Create GitHub Release	2026-06-06T08:47:28.4589914Z ##[endgroup]
+release	Create GitHub Release	2026-06-06T08:47:29.4353699Z https://github.com/GPNCTF24/245346359_nmhuei_food-poisoning-challenge/releases/tag/lol-5
+release	Post Checkout	﻿2026-06-06T08:47:29.4460576Z Post job cleanup.
+release	Post Checkout	2026-06-06T08:47:29.5377192Z [command]/usr/bin/git version
+release	Post Checkout	2026-06-06T08:47:29.5424137Z git version 2.54.0
+release	Post Checkout	2026-06-06T08:47:29.5506324Z Temporarily overriding HOME='/home/runner/work/_temp/35a00d34-42cf-40d8-8f52-8edfb707f3ea' before making global git config changes
+release	Post Checkout	2026-06-06T08:47:29.5507909Z Adding repository directory to the temporary git global config as a safe directory
+release	Post Checkout	2026-06-06T08:47:29.5511571Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/245346359_nmhuei_food-poisoning-challenge/245346359_nmhuei_food-poisoning-challenge
+release	Post Checkout	2026-06-06T08:47:29.5553640Z Removing SSH command configuration
+release	Post Checkout	2026-06-06T08:47:29.5562039Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+release	Post Checkout	2026-06-06T08:47:29.5614396Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+release	Post Checkout	2026-06-06T08:47:29.5876007Z Removing HTTP extra header
+release	Post Checkout	2026-06-06T08:47:29.5884548Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+release	Post Checkout	2026-06-06T08:47:29.5929412Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+release	Post Checkout	2026-06-06T08:47:29.6168321Z Removing includeIf entries pointing to credentials config files
+release	Post Checkout	2026-06-06T08:47:29.6176846Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+release	Post Checkout	2026-06-06T08:47:29.6215732Z includeif.gitdir:/home/runner/work/245346359_nmhuei_food-poisoning-challenge/245346359_nmhuei_food-poisoning-challenge/.git.path
+release	Post Checkout	2026-06-06T08:47:29.6217785Z includeif.gitdir:/home/runner/work/245346359_nmhuei_food-poisoning-challenge/245346359_nmhuei_food-poisoning-challenge/.git/worktrees/*.path
+release	Post Checkout	2026-06-06T08:47:29.6219032Z includeif.gitdir:/github/workspace/.git.path
+release	Post Checkout	2026-06-06T08:47:29.6219451Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+release	Post Checkout	2026-06-06T08:47:29.6230203Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/245346359_nmhuei_food-poisoning-challenge/245346359_nmhuei_food-poisoning-challenge/.git.path
+release	Post Checkout	2026-06-06T08:47:29.6247859Z /home/runner/work/_temp/git-credentials-0f59c1cb-4d29-4f0f-85ce-34a45780e4f4.config
+release	Post Checkout	2026-06-06T08:47:29.6264142Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/245346359_nmhuei_food-poisoning-challenge/245346359_nmhuei_food-poisoning-challenge/.git.path /home/runner/work/_temp/git-credentials-0f59c1cb-4d29-4f0f-85ce-34a45780e4f4.config
+release	Post Checkout	2026-06-06T08:47:29.6308560Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/245346359_nmhuei_food-poisoning-challenge/245346359_nmhuei_food-poisoning-challenge/.git/worktrees/*.path
+release	Post Checkout	2026-06-06T08:47:29.6340460Z /home/runner/work/_temp/git-credentials-0f59c1cb-4d29-4f0f-85ce-34a45780e4f4.config
+release	Post Checkout	2026-06-06T08:47:29.6346534Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/245346359_nmhuei_food-poisoning-challenge/245346359_nmhuei_food-poisoning-challenge/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-0f59c1cb-4d29-4f0f-85ce-34a45780e4f4.config
+release	Post Checkout	2026-06-06T08:47:29.6381110Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+release	Post Checkout	2026-06-06T08:47:29.6407705Z /github/runner_temp/git-credentials-0f59c1cb-4d29-4f0f-85ce-34a45780e4f4.config
+release	Post Checkout	2026-06-06T08:47:29.6419626Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-0f59c1cb-4d29-4f0f-85ce-34a45780e4f4.config
+release	Post Checkout	2026-06-06T08:47:29.6454032Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+release	Post Checkout	2026-06-06T08:47:29.6478036Z /github/runner_temp/git-credentials-0f59c1cb-4d29-4f0f-85ce-34a45780e4f4.config
+release	Post Checkout	2026-06-06T08:47:29.6487556Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-0f59c1cb-4d29-4f0f-85ce-34a45780e4f4.config
+release	Post Checkout	2026-06-06T08:47:29.6522559Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+release	Post Checkout	2026-06-06T08:47:29.6758682Z Removing credentials config '/home/runner/work/_temp/git-credentials-0f59c1cb-4d29-4f0f-85ce-34a45780e4f4.config'
+release	Post Run sccache-cache	﻿2026-06-06T08:47:29.6891718Z Post job cleanup.
+release	Post Run sccache-cache	2026-06-06T08:47:29.7921121Z ##[group]Get human-readable stats
+release	Post Run sccache-cache	2026-06-06T08:47:29.7977196Z [command]/opt/hostedtoolcache/sccache/0.14.0/x64/sccache --show-stats
+release	Post Run sccache-cache	2026-06-06T08:47:29.8052830Z Compile requests                     69
+release	Post Run sccache-cache	2026-06-06T08:47:29.8072820Z Compile requests executed            48
+release	Post Run sccache-cache	2026-06-06T08:47:29.8082925Z Cache hits                           44
+release	Post Run sccache-cache	2026-06-06T08:47:29.8092849Z Cache hits (Rust)                    44
+release	Post Run sccache-cache	2026-06-06T08:47:29.8112849Z Cache misses                          2
+release	Post Run sccache-cache	2026-06-06T08:47:29.8132962Z Cache misses (C/C++)                  1
+release	Post Run sccache-cache	2026-06-06T08:47:29.8152911Z Cache misses (Rust)                   1
+release	Post Run sccache-cache	2026-06-06T08:47:29.8153722Z Cache hits rate                   95.65 %
+release	Post Run sccache-cache	2026-06-06T08:47:29.8155211Z Cache hits rate (C/C++)            0.00 %
+release	Post Run sccache-cache	2026-06-06T08:47:29.8163372Z Cache hits rate (Rust)            97.78 %
+release	Post Run sccache-cache	2026-06-06T08:47:29.8175346Z Cache timeouts                        0
+release	Post Run sccache-cache	2026-06-06T08:47:29.8192855Z Cache read errors                     0
+release	Post Run sccache-cache	2026-06-06T08:47:29.8213047Z Forced recaches                       0
+release	Post Run sccache-cache	2026-06-06T08:47:29.8213815Z Cache write errors                    0
+release	Post Run sccache-cache	2026-06-06T08:47:29.8233450Z Cache errors                          0
+release	Post Run sccache-cache	2026-06-06T08:47:29.8242422Z Compilations                          2
+release	Post Run sccache-cache	2026-06-06T08:47:29.8262797Z Compilation failures                  2
+release	Post Run sccache-cache	2026-06-06T08:47:29.8263916Z Non-cacheable compilations            0
+release	Post Run sccache-cache	2026-06-06T08:47:29.8273405Z Non-cacheable calls                  18
+release	Post Run sccache-cache	2026-06-06T08:47:29.8275378Z Non-compilation calls                 3
+release	Post Run sccache-cache	2026-06-06T08:47:29.8276109Z Unsupported compiler calls            0
+release	Post Run sccache-cache	2026-06-06T08:47:29.8276824Z Average cache write               0.808 s
+release	Post Run sccache-cache	2026-06-06T08:47:29.8277822Z Average compiler                  5.924 s
+release	Post Run sccache-cache	2026-06-06T08:47:29.8278527Z Average cache read hit            0.522 s
+release	Post Run sccache-cache	2026-06-06T08:47:29.8279241Z Failed distributed compilations       0
+release	Post Run sccache-cache	2026-06-06T08:47:29.8279790Z 
+release	Post Run sccache-cache	2026-06-06T08:47:29.8280143Z Non-cacheable reasons:
+release	Post Run sccache-cache	2026-06-06T08:47:29.8280769Z crate-type                           13
+release	Post Run sccache-cache	2026-06-06T08:47:29.8281465Z missing input                         4
+release	Post Run sccache-cache	2026-06-06T08:47:29.8282096Z -                                     1
+release	Post Run sccache-cache	2026-06-06T08:47:29.8283331Z 
+release	Post Run sccache-cache	2026-06-06T08:47:29.8284132Z Cache location                  ghac, name: 9e87cfdb827b1bc02e68f55ea16833d43238701541bae33f7c7d5b4c1d04d9cb, prefix: /sccache/
+release	Post Run sccache-cache	2026-06-06T08:47:29.8285197Z Base directories                (none)
+release	Post Run sccache-cache	2026-06-06T08:47:29.8285823Z Version (client)                0.14.0
+release	Post Run sccache-cache	2026-06-06T08:47:29.8286799Z ##[endgroup]
+release	Post Run sccache-cache	2026-06-06T08:47:29.8287536Z ##[group]Get JSON stats
+release	Post Run sccache-cache	2026-06-06T08:47:29.8288815Z [command]/opt/hostedtoolcache/sccache/0.14.0/x64/sccache --show-stats --stats-format=json
+release	Post Run sccache-cache	2026-06-06T08:47:29.8295410Z {"stats":{"compile_requests":69,"requests_unsupported_compiler":0,"requests_not_compile":3,"requests_not_cacheable":18,"requests_executed":48,"cache_errors":{"counts":{},"adv_counts":{}},"cache_hits":{"counts":{"Rust":44},"adv_counts":{"rust":44}},"cache_misses":{"counts":{"C/C++":1,"Rust":1},"adv_counts":{"rust":1,"c [gcc]":1}},"cache_timeouts":0,"cache_read_errors":0,"non_cacheable_compilations":0,"forced_recaches":0,"cache_write_errors":0,"cache_writes":2,"cache_write_duration":{"secs":1,"nanos":616205474},"cache_read_hit_duration":{"secs":23,"nanos":7763540},"compilations":2,"compiler_write_duration":{"secs":11,"nanos":848174634},"compile_fails":2,"not_cached":{"missing input":4,"crate-type":13,"-":1},"dist_compiles":{},"dist_errors":0},"cache_location":"ghac, name: 9e87cfdb827b1bc02e68f55ea16833d43238701541bae33f7c7d5b4c1d04d9cb, prefix: /sccache/","cache_size":null,"max_cache_size":null,"use_preprocessor_cache_mode":false,"version":"0.14.0","basedirs":[]}
+release	Post Run sccache-cache	2026-06-06T08:47:29.8301761Z ##[endgroup]
+release	Post Run sccache-cache	2026-06-06T08:47:29.8325784Z ##[notice]96% - 44 hits, 2 misses, 0 errors
+release	Post Run sccache-cache	2026-06-06T08:47:29.8335250Z 
+release	Post Run sccache-cache	2026-06-06T08:47:29.8335727Z Full human-readable stats:
+release	Post Run sccache-cache	2026-06-06T08:47:29.8336495Z Compile requests                     69
+release	Post Run sccache-cache	2026-06-06T08:47:29.8337234Z Compile requests executed            48
+release	Post Run sccache-cache	2026-06-06T08:47:29.8338300Z Cache hits                           44
+release	Post Run sccache-cache	2026-06-06T08:47:29.8338990Z Cache hits (Rust)                    44
+release	Post Run sccache-cache	2026-06-06T08:47:29.8339686Z Cache misses                          2
+release	Post Run sccache-cache	2026-06-06T08:47:29.8340377Z Cache misses (C/C++)                  1
+release	Post Run sccache-cache	2026-06-06T08:47:29.8341058Z Cache misses (Rust)                   1
+release	Post Run sccache-cache	2026-06-06T08:47:29.8341771Z Cache hits rate                   95.65 %
+release	Post Run sccache-cache	2026-06-06T08:47:29.8342997Z Cache hits rate (C/C++)            0.00 %
+release	Post Run sccache-cache	2026-06-06T08:47:29.8343765Z Cache hits rate (Rust)            97.78 %
+release	Post Run sccache-cache	2026-06-06T08:47:29.8344502Z Cache timeouts                        0
+release	Post Run sccache-cache	2026-06-06T08:47:29.8345253Z Cache read errors                     0
+release	Post Run sccache-cache	2026-06-06T08:47:29.8345981Z Forced recaches                       0
+release	Post Run sccache-cache	2026-06-06T08:47:29.8346682Z Cache write errors                    0
+release	Post Run sccache-cache	2026-06-06T08:47:29.8347385Z Cache errors                          0
+release	Post Run sccache-cache	2026-06-06T08:47:29.8348096Z Compilations                          2
+release	Post Run sccache-cache	2026-06-06T08:47:29.8348823Z Compilation failures                  2
+release	Post Run sccache-cache	2026-06-06T08:47:29.8349644Z Non-cacheable compilations            0
+release	Post Run sccache-cache	2026-06-06T08:47:29.8350368Z Non-cacheable calls                  18
+release	Post Run sccache-cache	2026-06-06T08:47:29.8351089Z Non-compilation calls                 3
+release	Post Run sccache-cache	2026-06-06T08:47:29.8351800Z Unsupported compiler calls            0
+release	Post Run sccache-cache	2026-06-06T08:47:29.8352827Z Average cache write               0.808 s
+release	Post Run sccache-cache	2026-06-06T08:47:29.8353547Z Average compiler                  5.924 s
+release	Post Run sccache-cache	2026-06-06T08:47:29.8354247Z Average cache read hit            0.522 s
+release	Post Run sccache-cache	2026-06-06T08:47:29.8354966Z Failed distributed compilations       0
+release	Post Run sccache-cache	2026-06-06T08:47:29.8355506Z 
+release	Post Run sccache-cache	2026-06-06T08:47:29.8355871Z Non-cacheable reasons:
+release	Post Run sccache-cache	2026-06-06T08:47:29.8356769Z crate-type                           13
+release	Post Run sccache-cache	2026-06-06T08:47:29.8357413Z missing input                         4
+release	Post Run sccache-cache	2026-06-06T08:47:29.8358032Z -                                     1
+release	Post Run sccache-cache	2026-06-06T08:47:29.8358530Z 
+release	Post Run sccache-cache	2026-06-06T08:47:29.8359373Z Cache location                  ghac, name: 9e87cfdb827b1bc02e68f55ea16833d43238701541bae33f7c7d5b4c1d04d9cb, prefix: /sccache/
+release	Post Run sccache-cache	2026-06-06T08:47:29.8360556Z Base directories                (none)
+release	Post Run sccache-cache	2026-06-06T08:47:29.8361319Z Version (client)                0.14.0
+release	Post Run sccache-cache	2026-06-06T08:47:29.8361781Z 
+release	Complete job	﻿2026-06-06T08:47:29.8436625Z Cleaning up orphan processes
+release	Complete job	2026-06-06T08:47:29.8768852Z Terminate orphan process: pid (2172) (sccache)

@@ -1,0 +1,69 @@
+{
+  "id": "pwn_1up-clank-bro",
+  "name": "1up-clank-bro",
+  "category": "pwn",
+  "points": 328,
+  "author": "Qyn",
+  "tags": [],
+  "hints": [],
+  "connection_info": null,
+  "solved_by_me": false,
+  "solves_count": 9,
+  "submit_endpoint": null,
+  "instance_info": {
+    "is_container": true,
+    "status": "running",
+    "last_updated": "2026-09-05 17:53:22"
+  },
+  "downloaded_files": [
+    {
+      "url": "https://attachments.nnsc.tf/uploads/9d0be356c65d323a5af12bab8ea9e6dca07a9cc5c5cc20a0c0d977537399ba85/pwn_1up-clank-bro.tar.gz",
+      "name": "pwn_1up-clank-bro.tar.gz",
+      "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/pwn/1up-clank-bro/challenge/pwn_1up-clank-bro.tar.gz",
+      "success": true,
+      "source": "platform_attachment",
+      "message": "Đã tải trực tiếp thành công",
+      "verification": {
+        "etag": "\"7e208bc3fef81a6ea6fceb20a7042c3f\"",
+        "final_url": "https://attachments.nnsc.tf/uploads/9d0be356c65d323a5af12bab8ea9e6dca07a9cc5c5cc20a0c0d977537399ba85/pwn_1up-clank-bro.tar.gz",
+        "last_modified": "Fri, 04 Sep 2026 00:53:39 GMT",
+        "schema_version": 1,
+        "sha256": null,
+        "size": 27853487,
+        "url": "https://attachments.nnsc.tf/uploads/9d0be356c65d323a5af12bab8ea9e6dca07a9cc5c5cc20a0c0d977537399ba85/pwn_1up-clank-bro.tar.gz",
+        "verified_at": "2026-09-04T16:05:48Z"
+      }
+    }
+  ],
+  "raw": {
+    "id": "pwn_1up-clank-bro",
+    "name": "1up-clank-bro",
+    "description": "ladybird was deemed safe! See https://x.com/bl4sty/status/2080279041093804403 can you prove this wrong?\n\n> [!NOTE]\n> This is a 0day challenge and we are hoping you keep th{is|ese} 0day{|s} to yourself until the vulnerabilit{y|ies} {is|are} patched.\n\n",
+    "category": "pwn",
+    "author": "Qyn",
+    "files": [
+      {
+        "name": "pwn_1up-clank-bro.tar.gz",
+        "url": "https://attachments.nnsc.tf/uploads/9d0be356c65d323a5af12bab8ea9e6dca07a9cc5c5cc20a0c0d977537399ba85/pwn_1up-clank-bro.tar.gz"
+      }
+    ],
+    "points": 500,
+    "solves": 0,
+    "sortWeight": 0
+  },
+  "status": {
+    "schema_version": 2,
+    "solve": "unsolved",
+    "flag": {
+      "value": null,
+      "state": "none"
+    },
+    "writeup": "none",
+    "writeup_auto": true,
+    "notes": "",
+    "labels": [],
+    "container": "running",
+    "synced_at": "2026-09-05T07:11:32Z",
+    "updated_at": "2026-09-05T07:11:32Z"
+  }
+}

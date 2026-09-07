@@ -1,0 +1,69 @@
+{
+  "id": "web_AgilePaste 3",
+  "name": "AgilePaste 3",
+  "category": "web",
+  "points": 274,
+  "author": "0xle",
+  "tags": [],
+  "hints": [],
+  "connection_info": null,
+  "solved_by_me": false,
+  "solves_count": 13,
+  "submit_endpoint": null,
+  "instance_info": {
+    "is_container": true,
+    "status": "running",
+    "last_updated": "2026-09-04 23:42:15"
+  },
+  "downloaded_files": [
+    {
+      "url": "https://attachments.nnsc.tf/uploads/0b4fc3f329995817ec8dd50c750af962634958f83dc2405a1dc72ae9fc6ea5e1/web_agilepaste-3.tar.gz",
+      "name": "web_agilepaste-3.tar.gz",
+      "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/web/AgilePaste_3/challenge/web_agilepaste-3.tar.gz",
+      "success": true,
+      "source": "platform_attachment",
+      "message": "Đã tải trực tiếp thành công",
+      "verification": {
+        "etag": "\"236208a90f28586b128d864f72b5f96a\"",
+        "final_url": "https://attachments.nnsc.tf/uploads/0b4fc3f329995817ec8dd50c750af962634958f83dc2405a1dc72ae9fc6ea5e1/web_agilepaste-3.tar.gz",
+        "last_modified": "Thu, 03 Sep 2026 13:26:12 GMT",
+        "schema_version": 1,
+        "sha256": null,
+        "size": 30103,
+        "url": "https://attachments.nnsc.tf/uploads/0b4fc3f329995817ec8dd50c750af962634958f83dc2405a1dc72ae9fc6ea5e1/web_agilepaste-3.tar.gz",
+        "verified_at": "2026-09-04T16:05:45Z"
+      }
+    }
+  ],
+  "raw": {
+    "id": "web_AgilePaste 3",
+    "name": "AgilePaste 3",
+    "description": "I heard that AgilePaste 1 & 2 were big hits! People kept asking for v3,\nbut it never appeared. I became impatient and made my own.\n\n",
+    "category": "web",
+    "author": "0xle",
+    "files": [
+      {
+        "name": "web_agilepaste-3.tar.gz",
+        "url": "https://attachments.nnsc.tf/uploads/0b4fc3f329995817ec8dd50c750af962634958f83dc2405a1dc72ae9fc6ea5e1/web_agilepaste-3.tar.gz"
+      }
+    ],
+    "points": 500,
+    "solves": 0,
+    "sortWeight": 0
+  },
+  "status": {
+    "schema_version": 2,
+    "solve": "unsolved",
+    "flag": {
+      "value": null,
+      "state": "none"
+    },
+    "writeup": "none",
+    "writeup_auto": true,
+    "notes": "",
+    "labels": [],
+    "container": "running",
+    "synced_at": "2026-09-05T07:11:32Z",
+    "updated_at": "2026-09-05T07:11:32Z"
+  }
+}

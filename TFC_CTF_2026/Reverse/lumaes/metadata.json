@@ -1,0 +1,80 @@
+{
+  "id": "4269e582-4842-4953-8ab0-513c40dc183e",
+  "name": "lumaes",
+  "category": "Reverse",
+  "points": 105,
+  "author": "Livian",
+  "tags": [
+    "GRANDPA"
+  ],
+  "hints": [],
+  "connection_info": null,
+  "solved_by_me": true,
+  "solves_count": 132,
+  "submit_endpoint": null,
+  "instance_info": {},
+  "downloaded_files": [
+    {
+      "url": "https://api.ctf.thefewchosen.com/challenge-files/challenge_b3e8e9af7611e524",
+      "name": "challenge",
+      "saved_path": "/home/light/Workspace/CTF/TFC_CTF_2026/Reverse/lumaes/challenge/challenge",
+      "success": true,
+      "source": "platform_attachment",
+      "message": "Đã tải trực tiếp thành công",
+      "verification": {
+        "etag": null,
+        "final_url": "https://api.ctf.thefewchosen.com/challenge-files/challenge_b3e8e9af7611e524",
+        "last_modified": null,
+        "schema_version": 1,
+        "sha256": null,
+        "size": 8481440,
+        "url": "https://api.ctf.thefewchosen.com/challenge-files/challenge_b3e8e9af7611e524",
+        "verified_at": "2026-09-05T14:42:22Z"
+      }
+    }
+  ],
+  "raw": {
+    "category_id": "f027d346-1ee7-48b9-8720-15a158caf09d",
+    "difficulty_id": "d693c1dd-450f-42aa-be57-353b6b45552c",
+    "challenge_name": "lumaes",
+    "challenge_author": "Livian",
+    "challenge_id": "4269e582-4842-4953-8ab0-513c40dc183e",
+    "flags": [
+      {
+        "flag_id": "3f8b9d52-1eb4-4786-874f-ce0e1dc3dbd6",
+        "flag_points": 175,
+        "flag_question": "",
+        "flag_order": 27,
+        "is_solved": false
+      }
+    ],
+    "description": "I heard CTF players love obfuscation!",
+    "files": [
+      {
+        "file_name": "challenge",
+        "file_url": "https://api.ctf.thefewchosen.com/challenge-files/challenge_b3e8e9af7611e524"
+      }
+    ],
+    "is_dynamic": false,
+    "amount_solves": 87,
+    "connection_type": null,
+    "image_name": null,
+    "http_only": null,
+    "allow_host_header_override": null
+  },
+  "status": {
+    "schema_version": 2,
+    "solve": "solved_by_me",
+    "flag": {
+      "value": null,
+      "state": "none"
+    },
+    "writeup": "none",
+    "writeup_auto": true,
+    "notes": "",
+    "labels": [],
+    "container": "none",
+    "synced_at": "2026-09-06T05:34:41Z",
+    "updated_at": "2026-09-06T05:34:41Z"
+  }
+}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="36" android:compileSdkVersionCodename="" package="me.ship" platformBuildVersionCode="36" platformBuildVersionName="16">
+    <uses-permission android:name=""/>
+    <application android:allowBackup="false" android:dataExtractionRules="@2131230720" android:extractNativeLibs="false" android:icon="@2130903043" android:label="@2131099648" android:name="" android:roundIcon="@2130903043" android:supportsRtl="true" android:theme="@2131165184" android:usesCleartextTraffic="false">
+        <activity android:exported="true" android:name="">
+            <intent-filter>
+                <action android:name=""/>
+                <category android:name=""/>
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

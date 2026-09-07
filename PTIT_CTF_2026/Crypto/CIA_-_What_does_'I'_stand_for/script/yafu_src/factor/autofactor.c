@@ -1,0 +1,3460 @@
+/*----------------------------------------------------------------------
+This source distribution is placed in the public domain by its author,
+Ben Buhrow. You may use it for any purpose, free of charge,
+without having to notify anyone. I disclaim any responsibility for any
+errors.
+
+Optionally, please be nice and tell me if you find this source to be
+useful. Again optionally, if you add to the functionality present here
+please consider making those additions public too, so that others may 
+benefit from your work.	
+
+Some parts of the code (and also this header), included in this 
+distribution have been reused from other sources. In particular I 
+have benefitted greatly from the work of Jason Papadopoulos's msieve @ 
+www.boo.net/~jasonp, Scott Contini's mpqs implementation, and Tom St. 
+Denis Tom's Fast Math library.  Many thanks to their kind donation of 
+code to the public domain.
+       				   --bbuhrow@gmail.com 3/26/10
+----------------------------------------------------------------------*/
+
+#include <inttypes.h>
+#include <stdio.h>
+#include "yafu.h"
+#include "soe.h"
+#include "factor.h"
+#include "qs.h"
+#include "nfs.h"
+#include "nfs_impl.h"
+#include "yafu_ecm.h"
+#include "ytools.h"
+#include "mpz_aprcl.h"
+#include "cmdOptions.h"
+#include <stdint.h>
+#include "autofactor.h"
+#include "gmp.h"
+#include "ecm.h"
+#include "microecm.h"
+
+#ifdef __MINGW32__
+#include <sys/time.h>
+#endif
+
+#include <math.h>
+
+enum job_type_e {
+	job_snfs,
+	job_gnfs,
+	job_siqs,
+	job_ecm,
+	job_unknown
+};
+
+typedef struct
+{	
+	// total effort so far
+	double total_time;
+	double qs_time;
+	double nfs_time;
+	double trialdiv_time;
+	double fermat_time;
+	double rho_time;
+	double pp1_time;
+	double pm1_time;
+	double ecm_time;
+	double pp1_lvl1_time_per_curve;
+	double pp1_lvl2_time_per_curve;
+	double pp1_lvl3_time_per_curve;
+	double pm1_lvl1_time_per_curve;
+	double pm1_lvl2_time_per_curve;
+	double pm1_lvl3_time_per_curve;
+	double ecm_15digit_time_per_curve;
+	double ecm_20digit_time_per_curve;
+	double ecm_25digit_time_per_curve;
+	double ecm_30digit_time_per_curve;
+	double ecm_35digit_time_per_curve;
+	double ecm_40digit_time_per_curve;
+	double ecm_45digit_time_per_curve;
+	double ecm_50digit_time_per_curve;
+	double ecm_55digit_time_per_curve;
+	double ecm_60digit_time_per_curve;
+	double ecm_65digit_time_per_curve;
+    double initial_work;
+
+	// amount of work we've done in various areas
+	uint32_t  tdiv_limit;
+	uint32_t  fermat_iterations;
+	uint32_t  rho_iterations;
+	uint32_t  rho_bases;
+	uint32_t  pp1_lvl1_curves;
+	uint32_t  pm1_lvl1_curves;
+	uint32_t  pp1_lvl2_curves;
+	uint32_t  pm1_lvl2_curves;
+	uint32_t  pp1_lvl3_curves;
+	uint32_t  pm1_lvl3_curves;
+	uint32_t  ecm_15digit_curves;
+	uint32_t  ecm_20digit_curves;
+	uint32_t  ecm_25digit_curves;
+	uint32_t  ecm_30digit_curves;
+	uint32_t  ecm_35digit_curves;
+	uint32_t  ecm_40digit_curves;
+	uint32_t  ecm_45digit_curves;
+	uint32_t  ecm_50digit_curves;
+	uint32_t  ecm_55digit_curves;
+	uint32_t  ecm_60digit_curves;
+	uint32_t  ecm_65digit_curves;
+	int min_pretest_done;
+
+	// max amount of work we'll allow in various areas.
+	// to be filled in during init, or overriden by user
+	uint32_t  tdiv_max_limit;
+	uint32_t  fermat_max_iterations;
+	uint32_t  rho_max_iterations;
+	uint32_t  rho_max_bases;
+	uint32_t  pp1_max_lvl1_curves;
+	uint32_t  pm1_max_lvl1_curves;
+	uint32_t  pp1_max_lvl2_curves;
+	uint32_t  pm1_max_lvl2_curves;
+	uint32_t  pp1_max_lvl3_curves;
+	uint32_t  pm1_max_lvl3_curves;
+	uint32_t  ecm_max_15digit_curves;
+	uint32_t  ecm_max_20digit_curves;
+	uint32_t  ecm_max_25digit_curves;
+	uint32_t  ecm_max_30digit_curves;
+	uint32_t  ecm_max_35digit_curves;
+	uint32_t  ecm_max_40digit_curves;
+	uint32_t  ecm_max_45digit_curves;
+	uint32_t  ecm_max_50digit_curves;	
+	uint32_t  ecm_max_55digit_curves;	
+	uint32_t  ecm_max_60digit_curves;	
+	uint32_t  ecm_max_65digit_curves;	
+
+	// current parameters
+	uint32_t  B1;
+	uint64_t  B2;
+	uint32_t  curves;
+
+	// target job type
+	enum job_type_e target_job_type;
+
+} factor_work_t;
+
+enum factorization_state {
+	state_idle,
+	state_trialdiv,
+	state_fermat,
+	state_rho,
+	state_pp1_lvl1,
+	state_pm1_lvl1,
+	state_pp1_lvl2,
+	state_pm1_lvl2,
+	state_pp1_lvl3,
+	state_pm1_lvl3,
+	state_ecm_15digit,
+	state_ecm_20digit,
+	state_ecm_25digit,
+	state_ecm_30digit,
+	state_ecm_35digit,
+	state_ecm_40digit,
+	state_ecm_45digit,
+	state_ecm_50digit,
+	state_ecm_55digit,
+	state_ecm_60digit,
+	state_ecm_65digit,
+	state_qs,
+	state_nfs,
+	state_done
+};
+
+// local functions to do state based factorization
+double get_qs_time_estimate(fact_obj_t *fobj, mpz_t b);
+double get_gnfs_time_estimate(fact_obj_t *fobj, mpz_t b);
+void do_work(enum factorization_state method, factor_work_t *fwork, mpz_t b, fact_obj_t *fobj);
+enum factorization_state schedule_work(factor_work_t *fwork, mpz_t b, fact_obj_t *fobj);
+int check_if_done(fact_obj_t *fobj, factor_work_t* fwork, mpz_t N);
+uint32_t  get_ecm_curves_done(factor_work_t *fwork, enum factorization_state state);
+uint32_t  set_ecm_curves_done(factor_work_t *fwork, enum factorization_state state, uint32_t  curves_done);
+//uint32_t  get_max_ecm_curves(factor_work_t *fwork, enum factorization_state state);
+void set_work_params(factor_work_t *fwork, enum factorization_state state);
+int check_tune_params(fact_obj_t *fobj);
+enum factorization_state get_next_state(factor_work_t *fwork, fact_obj_t *fobj);
+//double compute_ecm_work_done(factor_work_t *fwork, int disp, FILE *log, int VFLAG, int LOGFLAG);
+void init_factor_work(factor_work_t *fwork, fact_obj_t *fobj);
+void interp_and_set_curves(factor_work_t *fwork, fact_obj_t *fobj, 
+	enum factorization_state state, double work_done,
+	double target_digits, int log_results);
+void write_factor_json(fact_obj_t* fobj, factor_work_t* fwork,
+	struct timeval* start, struct timeval* stop);
+
+double get_qs_time_estimate(fact_obj_t *fobj, mpz_t b)
+{
+	//using rough empirical scaling equations, number size, information
+	//on cpu type, architecture, speed, and compilation options, 
+	//compute how long we think siqs would take to finish a factorization
+	enum cpu_type cpu;
+	double estimate;
+	double freq = fobj->MEAS_CPU_FREQUENCY;
+	int digits = gmp_base10(b);
+
+	cpu = ytools_get_cpu_type();
+	estimate = fobj->qs_obj.qs_multiplier * exp(fobj->qs_obj.qs_exponent * digits);
+
+	//adjust for multi-threaded qs
+	//if we assume threading is perfect, we'll get a smaller estimate for
+	//qs than we can really achieve, resulting in less ECM, so fudge it a bit
+	if (fobj->THREADS > 1)
+	{
+		switch (cpu)
+		{
+		case 0:
+		case 1:
+		case 2:	
+		case 3:
+		case 4:
+		case 5:			
+		case 6:
+		case 7:
+		case 8:
+			estimate = estimate / ((double)fobj->THREADS * 0.75);
+			break;
+		case 9:
+		case 10:
+			estimate = estimate / ((double)fobj->THREADS * 0.90);
+			break;
+
+		default:
+			estimate = estimate / ((double)fobj->THREADS * 0.75);
+			break;
+		}
+	}
+
+	if (fobj->VFLAG >= 2)
+		printf("fac: QS time estimation from tune data = %1.2f sec\n", estimate);
+
+	return estimate;
+}
+
+double get_gnfs_time_estimate(fact_obj_t *fobj, mpz_t b)
+{
+	//using rough empirical scaling equations, number size, information
+	//on cpu type, architecture, speed, and compilation options, 
+	//compute how long we think gnfs would take to finish a factorization
+	enum cpu_type cpu;
+	double estimate;
+	double freq = fobj->MEAS_CPU_FREQUENCY;
+	int digits = gmp_base10(b);
+
+	cpu = ytools_get_cpu_type();
+	estimate = fobj->nfs_obj.gnfs_multiplier * exp(fobj->nfs_obj.gnfs_exponent * digits);
+
+	//adjust for multi-threaded nfs
+	//if we assume threading is perfect, we'll get a smaller estimate for
+	//nfs than we can really achieve, resulting in less ECM, so fudge it a bit
+	if (fobj->THREADS > 1)
+	{
+		switch (cpu)
+		{
+		case 0:
+		case 1:
+		case 2:	
+		case 3:
+		case 4:
+		case 5:			
+		case 6:
+		case 7:
+		case 8:
+			estimate = estimate / ((double)fobj->THREADS * 0.75);
+			break;
+		case 9:
+		case 10:
+			estimate = estimate / ((double)fobj->THREADS * 0.90);
+			break;
+
+		default:
+			estimate = estimate / ((double)fobj->THREADS * 0.75);
+			break;
+		}
+	}
+
+	if (fobj->VFLAG >= 2)
+		printf("fac: GNFS time estimation from tune data = %1.2f sec\n", estimate);
+
+	return estimate;
+}
+
+enum job_type_e determine_job_type(fact_obj_t* fobj)
+{
+	// intended to be called during autofactorization jobs.
+	// for the given input and user options, determine the appropriate
+	// end goal: snfs, gnfs, siqs, or none of these.
+	enum job_type_e target_job_type = job_unknown;
+	int numdigits = gmp_base10(fobj->N);
+
+	snfs_t* poly;
+
+#ifdef USE_NFS
+
+	if ((fobj->nfs_obj.skip_snfs_check) || (numdigits < 60))
+	{
+		poly = NULL;
+	}
+	else
+	{
+		// this is a factor() run: restore the original input.  More
+		// forms are likely to be detected if small factors haven't been removed.
+		// snfs_find_form is an nfs function, so we first need to put the current input
+		// into nfs_obj's copy of the current input.
+		mpz_set(fobj->nfs_obj.gmp_n, fobj->N);
+
+		// now find the form
+		poly = snfs_find_form(fobj, fobj->input_N);
+
+		// snfs_find_form can discover factors!  if it did, it will reduce nfs's copy of 
+		// the current input, so copy that back to autofactor's current input.
+		mpz_set(fobj->N, fobj->nfs_obj.gmp_n);
+	}
+
+	if (poly == NULL)
+	{
+		// change this to reflect the fact that we tried and failed to find
+		// a SNFS polynomial for this input. (or the user wants to skip
+		// the poly check and ignore any snfs-able inputs).
+		fobj->autofact_obj.has_snfs_form = 0;
+
+		if (fobj->autofact_obj.only_pretest > 1)
+		{
+			target_job_type = job_ecm;	// ecm only
+		}
+		else if (fobj->nfs_obj.gnfs == 1)
+		{
+			// user specifically requested gnfs
+			target_job_type = job_gnfs;
+		}
+		else if (fobj->nfs_obj.snfs == 1)
+		{
+			// user specifically requested snfs... but we found no snfs form.
+			// the .snfs flag is only set if the snfs() function is used,
+			// so we should never get here.  print a warning if we do.
+			printf("fac: should not see .snfs flag in autofactor\n");
+			target_job_type = job_snfs;
+		}
+		else
+		{
+			if (numdigits < fobj->autofact_obj.qs_gnfs_xover)
+			{
+				target_job_type = job_siqs;
+			}
+			else
+			{
+				target_job_type = job_gnfs;
+			}
+		}
+	}
+	else
+	{
+		nfs_job_t job;
+		int snfs_status = 0;
+		int gnfs_size;
+		int i;
+
+		// we found a SNFS form, which is now stored in poly->n.  Remember this
+		// so we don't have to keep finding it.
+		fobj->autofact_obj.has_snfs_form = (int)poly->form_type;
+
+		// the fact that it has a SNFS form doesn't mean we will do snfs on it though.
+		// that depends on the quality of the snfs polynomial, the size of the
+		// input itself, and several user options.  To begin sorting it out, we
+		// first need to generate an actual polynomial for the form.  
+		mpz_set(fobj->nfs_obj.gmp_n, fobj->N);
+
+		snfs_status = snfs_choose_poly(fobj, &job, poly, 0);
+
+		// snfs_choose_poly can discover factors!  if it did, it will reduce nfs's copy of 
+		// the current input, so copy that back to autofactor's current input.
+		mpz_set(fobj->N, fobj->nfs_obj.gmp_n);
+
+		// the gnfs size of the current input
+		gnfs_size = mpz_sizeinbase(fobj->N, 10);
+
+		// the equivalent gnfs size of the current best snfs poly found for this input
+		int equiv_gnfs_size = 999999;
+
+		if (snfs_status > 0)
+		{
+			// figure out the best method to use based on input size,
+			// poly quality, user options, and tune parameters
+			equiv_gnfs_size = est_gnfs_size_via_poly(job.snfs);
+
+			printf("fac: gnfs size is %d, equivalent gnfs size of snfs poly is %d\n",
+				gnfs_size, equiv_gnfs_size);
+
+			int have_tune = check_tune_params(fobj);
+
+			double qs_time_est = 9999999.0;
+			double gnfs_time_est = 9999999.0;
+			double snfs_time_est = 9999999.0;
+			if (have_tune)
+			{
+				qs_time_est = get_qs_time_estimate(fobj, fobj->N);
+				gnfs_time_est = get_gnfs_time_estimate(fobj, fobj->N);
+				mpz_t b;
+				mpz_init(b);
+				mpz_set_ui(b, 10);
+				mpz_pow_ui(b, b, equiv_gnfs_size);
+				snfs_time_est = get_gnfs_time_estimate(fobj, b);
+				mpz_clear(b);
+
+				printf("fac: tune estimates: siqs = %1.2f, gnfs = %1.2f, snfs = %1.2f\n",
+					qs_time_est, gnfs_time_est, snfs_time_est);
+			}
+
+			// choose between snfs, gnfs, and siqs based on their sizes and user options
+			if (fobj->autofact_obj.only_pretest > 1)
+			{
+				target_job_type = job_ecm;	// ecm only
+				printf("chosing ecm based on pretest option\n");
+				logprint_oc(fobj->flogname, "a", "gnfs size: %d, equivalent gnfs size of snfs poly: %d, "
+					"chosing ecm based on pretest option\n", gnfs_size, equiv_gnfs_size);
+			}
+			else if (fobj->nfs_obj.gnfs == 1)
+			{
+				// user specifically requested gnfs
+				target_job_type = job_gnfs;
+				printf("chosing gnfs based on user selection\n");
+				logprint_oc(fobj->flogname, "a",  "gnfs size: %d, equivalent gnfs size of snfs poly: %d, "
+					"chosing gnfs based on user selection\n", gnfs_size, equiv_gnfs_size);
+			}
+			else if (fobj->nfs_obj.snfs == 1)
+			{
+				// user specifically requested snfs
+				//printf("fac: should not see .snfs flag in autofactor\n");
+				target_job_type = job_snfs;
+				printf("chosing snfs based on user selection\n");
+				logprint_oc(fobj->flogname, "a",  "gnfs size: %d, equivalent gnfs size of snfs poly: %d, "
+					"chosing snfs based on user selection\n", gnfs_size, equiv_gnfs_size);
+			}
+			else if (have_tune)
+			{
+				// if we have tune data, use it to determine best method
+				if (qs_time_est < gnfs_time_est)
+				{
+					if (qs_time_est < snfs_time_est)
+					{
+						target_job_type = job_siqs;
+					}
+					else if (gnfs_time_est < snfs_time_est)
+					{
+						target_job_type = job_gnfs;
+					}
+					else
+					{
+						target_job_type = job_snfs;
+					}
+				}
+				else if (qs_time_est < snfs_time_est)
+				{
+					if (qs_time_est < gnfs_time_est)
+					{
+						target_job_type = job_siqs;
+					}
+					else if (gnfs_time_est < snfs_time_est)
+					{
+						target_job_type = job_gnfs;
+					}
+					else
+					{
+						target_job_type = job_snfs;
+					}
+				}
+				else if (gnfs_time_est < snfs_time_est)
+				{
+					target_job_type = job_gnfs;
+				}
+				else
+				{
+					target_job_type = job_snfs;
+				}
+
+				char jobtype[32];
+				switch (target_job_type)
+				{
+				case 0: strcpy(jobtype, "snfs"); break;
+				case 1: strcpy(jobtype, "gnfs"); break;
+				case 2: strcpy(jobtype, "siqs"); break;
+				case 3: strcpy(jobtype, "ecm"); break;
+				case 4: strcpy(jobtype, "unknown"); break;
+				}
+
+				printf("fac: chosing %s based on tune estimates\n", jobtype);
+				logprint_oc(fobj->flogname, "a", "gnfs size: %d, equivalent gnfs size of snfs poly: %d\n",
+					gnfs_size, equiv_gnfs_size);
+				logprint_oc(fobj->flogname, "a", "chosing %s based on tune estimates: "
+					"siqs = %1.2f, gnfs = %1.2f, snfs = %1.2f\n",
+					jobtype, qs_time_est, gnfs_time_est, snfs_time_est);
+			}
+			// otherwise look at crossovers
+			else if ((equiv_gnfs_size <= (gnfs_size + 3)) &&
+				(gnfs_size < fobj->autofact_obj.qs_snfs_xover))
+			{
+				// snfs easier than gnfs but siqs size below siqs xover
+				target_job_type = job_siqs;
+				printf("chosing siqs based on qs/snfs crossover %1.2f\n",
+					fobj->autofact_obj.qs_snfs_xover);
+				logprint_oc(fobj->flogname, "a", "gnfs size: %d, equivalent gnfs size of snfs poly: %d, "
+					"chosing siqs based on qs/snfs crossover %1.2f\n",
+					gnfs_size, equiv_gnfs_size, fobj->autofact_obj.qs_snfs_xover);
+			}
+			else if ((equiv_gnfs_size <= (gnfs_size + 3)) &&
+				(gnfs_size >= fobj->autofact_obj.qs_snfs_xover))
+			{
+				// snfs easier than gnfs and siqs
+				target_job_type = job_snfs;
+				printf("chosing snfs based on qs/snfs crossover %1.2f\n",
+					fobj->autofact_obj.qs_snfs_xover);
+				logprint_oc(fobj->flogname, "a", "gnfs size: %d, equivalent gnfs size of snfs poly: %d, "
+					"chosing snfs based on qs/snfs crossover %1.2f\n",
+					gnfs_size, equiv_gnfs_size, fobj->autofact_obj.qs_snfs_xover);
+			}
+			else
+			{
+				if (gnfs_size < fobj->autofact_obj.qs_gnfs_xover)
+				{
+					// gnfs but below this crossover
+					target_job_type = job_siqs;
+					printf("chosing siqs based on qs/gnfs crossover %1.2f\n",
+						fobj->autofact_obj.qs_gnfs_xover);
+					logprint_oc(fobj->flogname, "a",  "gnfs size: %d, equivalent gnfs size of snfs poly: %d, "
+						"chosing siqs based on qs/gnfs crossover %1.2f\n",
+						gnfs_size, equiv_gnfs_size, fobj->autofact_obj.qs_gnfs_xover);
+				}
+				else
+				{
+					// if none of the above, target gnfs on this input.
+					target_job_type = job_gnfs;
+					printf("chosing gnfs based on qs/gnfs crossover %1.2f\n",
+						fobj->autofact_obj.qs_gnfs_xover);
+					logprint_oc(fobj->flogname, "a",  "gnfs size: %d, equivalent gnfs size of snfs poly: %d, "
+						"chosing gnfs based on qs/gnfs crossover %1.2f\n",
+						gnfs_size, equiv_gnfs_size, fobj->autofact_obj.qs_gnfs_xover);
+				}
+			}
+		}
+		else if (snfs_status < 0)
+		{
+			// choose poly made our decision
+			if (gnfs_size < fobj->autofact_obj.qs_gnfs_xover)
+			{
+				// gnfs but below this crossover
+				target_job_type = job_siqs;
+				printf("gnfs size: %d, snfs job flagged as better by gnfs, "
+					"chosing siqs based on qs/gnfs crossover %1.2f\n",
+					gnfs_size, fobj->autofact_obj.qs_gnfs_xover);
+				logprint_oc(fobj->flogname, "a",  "gnfs size: %d, snfs job flagged as better by gnfs, "
+					"chosing siqs based on qs/gnfs crossover %1.2f\n",
+					gnfs_size, fobj->autofact_obj.qs_gnfs_xover);
+			}
+			else
+			{
+				// if none of the above, target gnfs on this input.
+				target_job_type = job_gnfs;
+				printf("gnfs size: %d, snfs job flagged as better by gnfs, "
+					"chosing gnfs\n", gnfs_size);
+				logprint_oc(fobj->flogname, "a",  "gnfs size: %d, snfs job flagged as better by gnfs, "
+					"chosing gnfs\n", gnfs_size);
+			}
+		}
+		else if (snfs_status == 0)
+		{
+			printf("fac: unexpectedly found no SNFS polynomials\n");
+			// choose between snfs, gnfs, and siqs based on their sizes and user options
+			if (fobj->autofact_obj.only_pretest > 1)
+			{
+				target_job_type = job_ecm;	// ecm only
+				logprint_oc(fobj->flogname, "a",  "gnfs size: %d, unexpectedly found no SNFS polynomials, "
+					"chosing ecm based on pretest option\n", gnfs_size);
+			}
+			else if (fobj->nfs_obj.gnfs == 1)
+			{
+				// user specifically requested gnfs
+				target_job_type = job_gnfs;
+				logprint_oc(fobj->flogname, "a",  "gnfs size: %d, unexpectedly found no SNFS polynomials, "
+					"chosing gnfs based on user selection\n", gnfs_size);
+			}
+			else if (fobj->nfs_obj.snfs == 1)
+			{
+				// user specifically requested snfs... but we found no snfs form.
+				printf("fac: should not see .snfs flag in autofactor\n");
+				target_job_type = job_snfs;
+				logprint_oc(fobj->flogname, "a",  "gnfs size: %d, unexpectedly found no SNFS polynomials, "
+					"chosing snfs based on user selection\n", gnfs_size);
+			}
+			else
+			{
+				if (gnfs_size < fobj->autofact_obj.qs_gnfs_xover)
+				{
+					// gnfs but below this crossover
+					target_job_type = job_siqs;
+					logprint_oc(fobj->flogname, "a",  "gnfs size: %d, unexpectedly found no SNFS polynomials, "
+						"chosing siqs based on qs/gnfs crossover %1.2f\n",
+						gnfs_size, equiv_gnfs_size, fobj->autofact_obj.qs_gnfs_xover);
+				}
+				else
+				{
+					// if none of the above, target gnfs on this input.
+					target_job_type = job_gnfs;
+					logprint_oc(fobj->flogname, "a",  "gnfs size: %d, unexpectedly found no SNFS polynomials, "
+						"chosing gnfs based on qs/gnfs crossover %1.2f\n",
+						gnfs_size, equiv_gnfs_size, fobj->autofact_obj.qs_gnfs_xover);
+				}
+			}
+		}
+
+		// don't need the poly anymore.  If this ends up actually going
+		// to snfs, we redo all of the poly formation there.
+		snfs_clear(poly);
+		free(poly);
+	}
+
+#else
+	fobj->autofact_obj.has_snfs_form = 0;
+	if (fobj->autofact_obj.only_pretest > 1)
+	{
+		target_job_type = job_ecm;	// ecm only
+	}
+	else
+	{
+		target_job_type = job_siqs;		// only choice if we have no NFS
+	}
+#endif
+
+	return target_job_type;
+}
+
+void do_work(enum factorization_state method, factor_work_t *fwork, 
+	mpz_t b, fact_obj_t *fobj)
+{
+	uint32_t  tmp1;
+	uint64_t  tmp2;	
+	struct timeval tstart, tstop;
+	double t_time;
+	uint32_t  curves_done;
+	
+	mpz_set(fobj->N, b);
+
+	if (0) //mpz_cmp_ui(b, 1) <= 0)
+	{
+		gmp_printf("asked to do work on input = %Zd\n", b);
+		printf("here are the factors I know about:\n");
+		print_factors(fobj);
+		gmp_printf("here was the original input: %Zd\n", fobj->N);
+		printf("please report this bug\n");
+		exit(1);
+	}
+
+	gettimeofday(&tstart, NULL);
+
+	switch (method)
+	{
+	case state_trialdiv:
+
+        // if larger than a small bound, do a perfect power check
+        fobj->prime_threshold = fwork->tdiv_max_limit * fwork->tdiv_max_limit;
+        
+        if ((mpz_cmp_ui(b, fobj->prime_threshold) > 1) && 
+            mpz_perfect_power_p(b))
+        {
+            if (fobj->VFLAG > 0)
+            {
+                printf("fac: input is a perfect power\n");
+            }
+
+            logprint_oc(fobj->flogname, "a", "input is a perfect power\n");
+            factor_perfect_power(fobj, b);
+            break;
+        }
+
+        // then do all of the tdiv work requested
+        if (fobj->VFLAG >= 0)
+            printf("div: primes less than %d\n", fwork->tdiv_max_limit);
+        
+        mpz_set(fobj->div_obj.gmp_n, b);
+        fobj->div_obj.print = 1;
+        fobj->div_obj.limit = fwork->tdiv_max_limit;
+        zTrial(fobj);
+        mpz_set(b, fobj->div_obj.gmp_n);
+
+        // record the work done
+        fwork->tdiv_limit = fwork->tdiv_max_limit;
+
+        // measure time for this completed work
+        gettimeofday(&tstop, NULL);
+        t_time = ytools_difftime(&tstart, &tstop);
+
+        fwork->trialdiv_time = t_time;
+        fwork->total_time += t_time;
+
+		break;
+
+	case state_rho:
+
+		if (mpz_perfect_square_p(b))
+		{
+			if (fobj->VFLAG > 0)
+				printf("fac: input is a perfect square\n");
+
+			mpz_sqrt(b, b);
+
+			add_to_factor_list(fobj->factors, b,
+				fobj->VFLAG, fobj->NUM_WITNESSES, 0);
+
+			mpz_set_ui(b, 1);
+
+			// measure time for this completed work
+			gettimeofday(&tstop, NULL);
+			t_time = ytools_difftime(&tstart, &tstop);
+
+			fwork->rho_bases = fwork->rho_max_bases;
+			fwork->rho_iterations = fwork->rho_max_iterations;
+			fwork->rho_time = t_time;
+			fwork->total_time += t_time;
+			break;
+		}
+
+		if (mpz_perfect_power_p(b))
+		{
+			if (fobj->VFLAG > 0)
+				printf("fac: input is a perfect power\n");
+
+			factor_perfect_power(fobj, b);
+
+			// measure time for this completed work
+			gettimeofday(&tstop, NULL);
+			t_time = ytools_difftime(&tstart, &tstop);
+
+			fwork->rho_bases = fwork->rho_max_bases;
+			fwork->rho_iterations = fwork->rho_max_iterations;
+			fwork->rho_time = t_time;
+			fwork->total_time += t_time;
+			break;
+		}
+
+		// do all of the rho work requested
+		mpz_set(fobj->rho_obj.gmp_n,b);
+		brent_loop(fobj);
+		mpz_set(b,fobj->rho_obj.gmp_n);
+
+		// record the work done
+		fwork->rho_bases = fwork->rho_max_bases;
+		fwork->rho_iterations = fwork->rho_max_iterations;
+
+		// measure time for this completed work
+		gettimeofday (&tstop, NULL);
+        t_time = ytools_difftime(&tstart, &tstop);
+
+		fwork->rho_time = t_time;
+		fwork->total_time += t_time;
+		break;
+
+	case state_fermat:
+		// do all of the fermat work requested
+		if (fobj->VFLAG >= 0)
+			printf("fmt: %d iterations\n", fwork->fermat_max_iterations);
+		mpz_set(fobj->div_obj.gmp_n,b);
+		zFermat(fwork->fermat_max_iterations, 1, fobj);
+		mpz_set(b,fobj->div_obj.gmp_n);
+
+		// record the work done
+		fwork->fermat_iterations = fwork->fermat_max_iterations;
+
+		// measure time for this completed work
+		gettimeofday (&tstop, NULL);
+        t_time = ytools_difftime(&tstart, &tstop);
+
+		fwork->fermat_time = t_time;
+		fwork->total_time += t_time;
+
+		break;
+
+	case state_ecm_15digit:
+	case state_ecm_20digit:
+	case state_ecm_25digit:
+	case state_ecm_30digit:
+	case state_ecm_35digit:
+	case state_ecm_40digit:
+	case state_ecm_45digit:
+	case state_ecm_50digit:
+	case state_ecm_55digit:
+	case state_ecm_60digit:
+	case state_ecm_65digit:
+		tmp1 = fobj->ecm_obj.B1;
+		tmp2 = fobj->ecm_obj.B2;
+		fobj->ecm_obj.B1 = fwork->B1;
+		fobj->ecm_obj.B2 = fwork->B2;
+		fobj->ecm_obj.num_curves = fwork->curves;
+		mpz_set(fobj->ecm_obj.gmp_n, b);
+		curves_done = ecm_loop(fobj);
+		mpz_set(b, fobj->ecm_obj.gmp_n);
+		fobj->ecm_obj.B1 = tmp1;
+		fobj->ecm_obj.B2 = tmp2;
+
+		// record the work done
+		set_ecm_curves_done(fwork, method, 
+			get_ecm_curves_done(fwork, method) + curves_done);
+		
+		// measure time for this completed work
+		gettimeofday (&tstop, NULL);
+        t_time = ytools_difftime(&tstart, &tstop);
+
+		fwork->ecm_time += t_time;
+		fwork->total_time += t_time;
+		break;
+
+	case state_pp1_lvl1:
+	case state_pp1_lvl2:
+	case state_pp1_lvl3:
+		tmp1 = fobj->pp1_obj.B1;
+		tmp2 = fobj->pp1_obj.B2;
+		fobj->pp1_obj.B1 = fwork->B1;
+		fobj->pp1_obj.B2 = fwork->B2;
+		mpz_set(fobj->pp1_obj.gmp_n,b);
+		fobj->pp1_obj.numbases = fwork->curves;
+		williams_loop(fobj);
+		mpz_set(b,fobj->pp1_obj.gmp_n);
+		fobj->pp1_obj.B1 = tmp1;
+		fobj->pp1_obj.B2 = tmp2;
+
+		// record the work done
+		if (method == state_pp1_lvl1)
+			fwork->pp1_lvl1_curves = fwork->curves;
+		else if (method == state_pp1_lvl2)
+			fwork->pp1_lvl2_curves = fwork->curves;
+		else if (method == state_pp1_lvl3)
+			fwork->pp1_lvl3_curves = fwork->curves;
+
+		// measure time for this completed work
+		gettimeofday (&tstop, NULL);
+        t_time = ytools_difftime(&tstart, &tstop);
+
+		fwork->pp1_time += t_time;
+		fwork->total_time += t_time;
+		break;
+
+	case state_pm1_lvl1:
+	case state_pm1_lvl2:
+	case state_pm1_lvl3:
+		tmp1 = fobj->pm1_obj.B1;
+		tmp2 = fobj->pm1_obj.B2;
+		fobj->pm1_obj.B1 = fwork->B1;
+		fobj->pm1_obj.B2 = fwork->B2;
+		mpz_set(fobj->pm1_obj.gmp_n,b);
+		pollard_loop(fobj);
+		mpz_set(b,fobj->pm1_obj.gmp_n);
+		fobj->pm1_obj.B1 = tmp1;
+		fobj->pm1_obj.B2 = tmp2;
+
+		// record the work done
+		if (method == state_pm1_lvl1)
+			fwork->pm1_lvl1_curves = fwork->curves;
+		else if (method == state_pm1_lvl2)
+			fwork->pm1_lvl2_curves = fwork->curves;
+		else if (method == state_pm1_lvl3)
+			fwork->pm1_lvl3_curves = fwork->curves;
+		
+		// measure time for this completed work
+		gettimeofday (&tstop, NULL);
+        t_time = ytools_difftime(&tstart, &tstop);
+
+		fwork->pm1_time += t_time;
+		fwork->total_time += t_time;
+		break;
+
+	case state_qs:
+		mpz_set(fobj->qs_obj.gmp_n,b);
+		SIQS(fobj);
+		mpz_set(b,fobj->qs_obj.gmp_n);
+
+		// measure time for this completed work
+		gettimeofday (&tstop, NULL);
+        t_time = ytools_difftime(&tstart, &tstop);
+
+		fwork->qs_time = t_time;
+		if (fobj->VFLAG > 0)
+			printf("fac: pretesting / qs ratio was %1.2f\n", 
+				fwork->total_time / t_time); 
+		break;
+
+	case state_nfs:
+		
+		mpz_set(fobj->nfs_obj.gmp_n, b);
+		nfs(fobj);
+		mpz_set(b, fobj->nfs_obj.gmp_n);
+
+		// measure time for this completed work
+		gettimeofday (&tstop, NULL);
+        t_time = ytools_difftime(&tstart, &tstop);
+
+		fwork->nfs_time = t_time;
+		if (fobj->VFLAG > 0)
+			printf("fac: pretesting / nfs ratio was %1.2f\n", 
+				fwork->total_time / t_time); 
+
+		break;
+
+	default:
+		printf("fac: nothing to do for work method %d\n", method);
+		break;
+	}
+
+	if (mpz_cmp(b, fobj->N) != 0)
+	{
+		// number has changed as a result of work done.
+		// The balance between ecm/nfs/siqs/snfs could therefore
+		// have change and we need to reevaluate the terminating job type
+		fwork->target_job_type = job_unknown;
+	}
+
+	mpz_set(fobj->N, b);
+
+
+	return;
+}
+
+int check_if_done(fact_obj_t *fobj, factor_work_t* fwork, mpz_t N)
+{
+	int i, done = 0;
+	mpz_t tmp;
+
+	mpz_init(tmp);
+	mpz_set_ui(tmp, 1);
+
+	/* if the user only wants to find one factor, check for that here... */
+	if (fobj->autofact_obj.want_only_1_factor && (fobj->factors->num_factors >= 1))
+	{
+		done = 1;
+		mpz_clear(tmp);
+		return done;
+	}
+
+	// more generally, stop after finding k factors
+	if ((fobj->autofact_obj.stopk > 0) &&
+		(fobj->factors->total_factors >= fobj->autofact_obj.stopk))
+	{
+		done = 1;
+		mpz_clear(tmp);
+		return done;
+	}
+
+	// check if the number is completely factorized and if all factors are PRP or PRIME
+	get_prod_of_factors(fobj->factors, tmp);
+#if 0
+	
+#else
+	// start on an alternate to recursive calls to factor...
+	done = 1;
+	for (i = 0; i < fobj->factors->num_factors; i++)
+	{
+		if (fobj->factors->factors[i].type == UNKNOWN)
+		{
+			int status = is_mpz_prp(fobj->factors->factors[i].factor, fobj->NUM_WITNESSES);
+			if (status)
+			{
+				fobj->factors->factors[i].type = PRP;
+			}
+			else
+			{
+				fobj->factors->factors[i].type = COMPOSITE;
+				done = 0;
+			}
+		}
+		else if (fobj->factors->factors[i].type == COMPOSITE)
+		{
+			done = 0;
+		}
+	}
+
+	if (done == 0)
+	{
+		// composite factor found.
+		if (fobj->autofact_obj.only_pretest > 1)
+		{
+			if (fobj->autofact_obj.ecm_total_work_performed >= fobj->autofact_obj.only_pretest)
+			{
+				printf("fac: completed work %1.2f > %d, composite refactorization skipped\n",
+					fobj->autofact_obj.ecm_total_work_performed, fobj->autofact_obj.only_pretest);
+				// if we are pretesting and have already done all of
+				// the ecm work specified then we are done.
+				done = 1;
+				mpz_clear(tmp);
+				return done;
+			}
+		}
+	}
+
+	if (done)
+	{
+		//printf("everything is prime or prp\n");
+		// everything is prime or PRP.
+		if (mpz_cmp_ui(N, 1) > 0)
+		{
+			// input still has work to be done
+			//gmp_printf("still have work to do on input %Zd\n", N);
+			done = 0;
+		}
+	}
+
+	//printf("check if done returning %d\n", done);
+	mpz_clear(tmp);
+	return done;
+#endif
+
+	if (mpz_cmp(N,tmp) == 0)
+	{		
+		// yes, they are equal.  make sure everything is prp or prime.
+		done = 0;
+		while (!done)
+		{
+			done = 1;
+			for (i=0; i<fobj->factors->num_factors; i++)
+			{
+				if (is_mpz_prp(fobj->factors->factors[i].factor, fobj->NUM_WITNESSES) == 0)
+				{	
+					// can still do pretesting on composite factors, for instance
+					// if primitive factor detection found a large composite factor.
+					// 
+					if (fobj->autofact_obj.only_pretest > 1)
+					{
+						if (fobj->autofact_obj.ecm_total_work_performed >= fobj->autofact_obj.only_pretest)
+						{
+							printf("fac: completed work %1.2f > %d, composite refactorization skipped\n",
+								fobj->autofact_obj.ecm_total_work_performed, fobj->autofact_obj.only_pretest);
+							// if we are pretesting and have already done all of
+							// the ecm work specified then we are done.
+							done = 1;
+							break;
+						}
+						else
+						{
+							printf("fac: completed work %1.2f of %d, attempting composite refactorization\n",
+								fobj->autofact_obj.ecm_total_work_performed, fobj->autofact_obj.only_pretest);
+						}
+					}
+					
+					if (fobj->refactor_depth > 3)
+					{
+						printf("too many refactorization attempts, aborting\n");
+						done = 1;
+						break;
+					}
+					else
+					{
+						fact_obj_t *fobj_refactor;
+						int j;
+
+						if (fobj->VFLAG > 0)
+							printf("\nComposite result found, starting re-factorization\n");
+
+						// load the new fobj with this number
+						fobj_refactor = (fact_obj_t *)malloc(sizeof(fact_obj_t));
+						init_factobj(fobj_refactor);
+                        copy_factobj(fobj_refactor, fobj, 0);
+
+						mpz_set(fobj_refactor->N, fobj->factors->factors[i].factor);
+                        fobj_refactor->refactor_depth = fobj->refactor_depth + 1;
+						fobj_refactor->autofact_obj.initial_work = 
+							fobj->autofact_obj.ecm_total_work_performed;
+						
+						// these will get recombined in the original fobj; 
+						// no need to output them twice.
+						fobj_refactor->autofact_obj.want_output_factors = 0;
+						fobj_refactor->autofact_obj.want_output_primes = 0;
+						fobj_refactor->autofact_obj.want_output_unfactored = 0;
+						factor(fobj_refactor);
+
+						// remember the ecm work we performed
+						fobj->autofact_obj.ecm_total_work_performed =
+							fobj->autofact_obj.initial_work =
+							fobj_refactor->autofact_obj.ecm_total_work_performed;
+
+						// original count: if > 1, need to add multiples of
+						// each factor found.
+						int ocount = fobj->factors->factors[i].count;
+
+						// remove the factor from the original list
+						delete_from_factor_list(fobj->factors, fobj->factors->factors[i].factor);
+
+						// add all factors found during the refactorization
+						for (j=0; j< fobj_refactor->factors->num_factors; j++)
+						{
+							int k;
+							for (k=0; k < fobj_refactor->factors->factors[j].count * ocount; k++)
+								add_to_factor_list(fobj->factors, 
+                                    fobj_refactor->factors->factors[j].factor,
+                                    fobj->VFLAG, fobj->NUM_WITNESSES, 0);
+						}
+
+						// free temps
+						free_factobj(fobj_refactor);
+						free(fobj_refactor);
+
+						// check again, since this factorization could have added new
+						// composite factors
+						done = 0;
+					}
+				}
+			}
+		}
+	}
+
+	mpz_clear(tmp);
+	return done;
+}
+
+enum factorization_state get_next_state(factor_work_t *fwork, fact_obj_t *fobj)
+{
+	enum factorization_state next_state;
+
+	// check each state's completed work against the maximum.
+	// return the first one not complete.
+	if (fwork->tdiv_limit < fwork->tdiv_max_limit)
+		return state_trialdiv;	// always do this state if not done
+	else if (fwork->fermat_iterations < fwork->fermat_max_iterations)
+		return state_fermat;	// always do this state if not done
+	else if (fwork->rho_bases < fwork->rho_max_bases)
+		return state_rho;		// always do this state if not done
+	else if (fwork->pp1_lvl1_curves < fwork->pp1_max_lvl1_curves)
+		next_state = state_pp1_lvl1;
+	else if (fwork->pm1_lvl1_curves < fwork->pm1_max_lvl1_curves)
+		next_state = state_pm1_lvl1;
+	else if (fwork->ecm_15digit_curves < fwork->ecm_max_15digit_curves)
+		next_state = state_ecm_15digit;
+	else if (fwork->ecm_20digit_curves < fwork->ecm_max_20digit_curves)
+		next_state = state_ecm_20digit;
+	else if (fwork->ecm_25digit_curves < fwork->ecm_max_25digit_curves)
+		next_state = state_ecm_25digit;
+	else if (fwork->pp1_lvl2_curves < fwork->pp1_max_lvl2_curves)
+		next_state = state_pp1_lvl2;
+	else if (fwork->pm1_lvl2_curves < fwork->pm1_max_lvl2_curves)
+		next_state = state_pm1_lvl2;
+	else if (fwork->ecm_30digit_curves < fwork->ecm_max_30digit_curves)
+		next_state = state_ecm_30digit;
+	else if (fwork->pp1_lvl3_curves < fwork->pp1_max_lvl3_curves)
+		next_state = state_pp1_lvl3;
+	else if (fwork->pm1_lvl3_curves < fwork->pm1_max_lvl3_curves)
+		next_state = state_pm1_lvl3;
+	else if (fwork->ecm_35digit_curves < fwork->ecm_max_35digit_curves)
+		next_state = state_ecm_35digit;
+	else if (fwork->ecm_40digit_curves < fwork->ecm_max_40digit_curves)
+		next_state = state_ecm_40digit;
+	else if (fwork->ecm_45digit_curves < fwork->ecm_max_45digit_curves)
+		next_state = state_ecm_45digit;
+	else if (fwork->ecm_50digit_curves < fwork->ecm_max_50digit_curves)
+		next_state = state_ecm_50digit;
+    else if (fwork->ecm_55digit_curves < fwork->ecm_max_55digit_curves)
+        next_state = state_ecm_55digit;
+    else if (fwork->ecm_60digit_curves < fwork->ecm_max_60digit_curves)
+        next_state = state_ecm_60digit;
+    else if (fwork->ecm_65digit_curves < fwork->ecm_max_65digit_curves)
+        next_state = state_ecm_65digit;
+	else
+		next_state = state_nfs;
+
+	// modify according to user preferences if necessary
+	switch (next_state)
+	{
+		case state_ecm_15digit:
+		case state_ecm_20digit:
+		case state_ecm_25digit:
+		case state_ecm_30digit:
+		case state_ecm_35digit:
+		case state_ecm_40digit:
+		case state_ecm_45digit:
+		case state_ecm_50digit:
+		case state_ecm_55digit:
+		case state_ecm_60digit:
+		case state_ecm_65digit:
+			if (fobj->autofact_obj.yafu_pretest_plan == PRETEST_NOECM)
+				next_state = state_nfs;
+			break;
+			
+		default:
+
+			break;
+	}
+
+	if (fobj->autofact_obj.yafu_pretest_plan == PRETEST_NONE)
+		next_state = state_nfs;
+
+	return next_state;
+}
+
+int check_tune_params(fact_obj_t *fobj)
+{
+	if (fobj->qs_obj.qs_multiplier == 0 || 
+		fobj->qs_obj.qs_exponent == 0 || 
+		fobj->qs_obj.qs_tune_freq == 0 ||
+		fobj->nfs_obj.gnfs_multiplier == 0 || 
+		fobj->nfs_obj.gnfs_exponent == 0 || 
+		fobj->nfs_obj.gnfs_tune_freq == 0)
+	{
+        if (fobj->VFLAG > 0)
+        {
+            printf("fac: check tune params contained invalid parameter(s), ignoring tune info.\n");
+        }
+
+        if (fobj->VFLAG > 2)
+        {
+            printf("\tqs_mult = %e\n", fobj->qs_obj.qs_multiplier);
+            printf("\tqs_exp = %e\n", fobj->qs_obj.qs_exponent);
+            printf("\tqs_freq = %e\n", fobj->qs_obj.qs_tune_freq);
+            printf("\tnfs_mult = %e\n", fobj->nfs_obj.gnfs_multiplier);
+            printf("\tnfs_exp = %e\n", fobj->nfs_obj.gnfs_exponent);
+            printf("\tnfs_freq = %e\n", fobj->nfs_obj.gnfs_tune_freq);
+        }
+		return 0;
+	}
+
+	return 1;
+}
+
+void set_work_params(factor_work_t *fwork, enum factorization_state state)
+{
+    switch (state)
+	{
+	case state_pp1_lvl1:
+        fwork->B1 = 25000;
+		fwork->B2 = 0;	//gmp-ecm default
+		fwork->curves = 0;
+		break;
+
+	case state_pp1_lvl2:
+        fwork->B1 = 750000;
+		fwork->B2 = 0;	//gmp-ecm default
+		fwork->curves = 0;
+		break;
+
+	case state_pp1_lvl3:
+        fwork->B1 = 2500000;
+		fwork->B2 = 0;	//gmp-ecm default
+		fwork->curves = 0;
+		break;
+
+	case state_pm1_lvl1:
+		fwork->B1 = 150000;
+		fwork->B2 = 0;	//gmp-ecm default
+		fwork->curves = 1;
+		break;
+
+	case state_pm1_lvl2:
+		fwork->B1 = 3750000;
+		fwork->B2 = 0;	//gmp-ecm default
+		fwork->curves = 1;
+		break;
+
+	case state_pm1_lvl3:
+		fwork->B1 = 15000000;
+		fwork->B2 = 0;	//gmp-ecm default
+		fwork->curves = 1;
+		break;
+
+	case state_ecm_15digit:
+		fwork->B1 = 2000;
+		fwork->B2 = 0;	//gmp-ecm default
+		fwork->curves = fwork->ecm_max_15digit_curves;
+		break;
+
+	case state_ecm_20digit:
+		fwork->B1 = 11000;
+		fwork->B2 = 0;	//gmp-ecm default
+		fwork->curves = fwork->ecm_max_20digit_curves;
+		break;
+
+	case state_ecm_25digit:
+		fwork->B1 = 50000;
+		fwork->B2 = 0;	//gmp-ecm default
+		fwork->curves = fwork->ecm_max_25digit_curves;
+		break;
+
+	case state_ecm_30digit:
+		fwork->B1 = 250000;
+		fwork->B2 = 0;	//gmp-ecm default
+		fwork->curves = fwork->ecm_max_30digit_curves;
+		break;
+
+	case state_ecm_35digit:
+		fwork->B1 = 1000000;
+		fwork->B2 = 0;	//gmp-ecm default
+		fwork->curves = fwork->ecm_max_35digit_curves;
+		break;
+
+	case state_ecm_40digit:
+		fwork->B1 = 3000000;
+		fwork->B2 = 0;	//gmp-ecm default
+		fwork->curves = fwork->ecm_max_40digit_curves;
+		break;
+
+	case state_ecm_45digit:
+		fwork->B1 = 11000000;
+		fwork->B2 = 0;	//gmp-ecm default
+		fwork->curves = fwork->ecm_max_45digit_curves;
+		break;
+
+	case state_ecm_50digit:
+		fwork->B1 = 43000000;
+		fwork->B2 = 0;	//gmp-ecm default
+		fwork->curves = fwork->ecm_max_50digit_curves;
+		break;
+
+	case state_ecm_55digit:
+		fwork->B1 = 110000000;
+		fwork->B2 = 0;	//gmp-ecm default
+		fwork->curves = fwork->ecm_max_55digit_curves;
+		break;
+
+	case state_ecm_60digit:
+		fwork->B1 = 260000000;
+		fwork->B2 = 0;	//gmp-ecm default
+		fwork->curves = fwork->ecm_max_60digit_curves;
+		break;
+
+	case state_ecm_65digit:
+		fwork->B1 = 850000000;
+		fwork->B2 = 0;	//gmp-ecm default
+		fwork->curves = fwork->ecm_max_65digit_curves;
+		break;
+
+	default:
+		fwork->B1 = 0;	//error condition
+		fwork->B2 = 0;
+		fwork->curves = 0;
+		break;
+
+	}
+
+	return;
+}
+
+uint32_t  get_ecm_curves_done(factor_work_t *fwork, enum factorization_state state)
+{
+	uint32_t  curves_done;
+
+	switch (state)
+	{
+	case state_ecm_15digit:
+		curves_done = fwork->ecm_15digit_curves;
+		break;
+	case state_ecm_20digit:
+		curves_done = fwork->ecm_20digit_curves;
+		break;
+	case state_ecm_25digit:
+		curves_done = fwork->ecm_25digit_curves;
+		break;
+	case state_ecm_30digit:
+		curves_done = fwork->ecm_30digit_curves;
+		break;
+	case state_ecm_35digit:
+		curves_done = fwork->ecm_35digit_curves;
+		break;
+	case state_ecm_40digit:
+		curves_done = fwork->ecm_40digit_curves;
+		break;
+	case state_ecm_45digit:
+		curves_done = fwork->ecm_45digit_curves;
+		break;
+	case state_ecm_50digit:
+		curves_done = fwork->ecm_50digit_curves;
+		break;
+	case state_ecm_55digit:
+		curves_done = fwork->ecm_55digit_curves;
+		break;
+	case state_ecm_60digit:
+		curves_done = fwork->ecm_60digit_curves;
+		break;
+	case state_ecm_65digit:
+		curves_done = fwork->ecm_65digit_curves;
+		break;
+	default:
+		curves_done = 0;
+		break;
+	}
+
+	return curves_done;
+}
+
+uint32_t  set_ecm_curves_done(factor_work_t *fwork, enum factorization_state state, uint32_t  curves_done)
+{
+	switch (state)
+	{
+	case state_ecm_15digit:
+		fwork->ecm_15digit_curves = curves_done;
+		break;
+	case state_ecm_20digit:
+		fwork->ecm_20digit_curves = curves_done;
+		break;
+	case state_ecm_25digit:
+		fwork->ecm_25digit_curves = curves_done;
+		break;
+	case state_ecm_30digit:
+		fwork->ecm_30digit_curves = curves_done;
+		break;
+	case state_ecm_35digit:
+		fwork->ecm_35digit_curves = curves_done;
+		break;
+	case state_ecm_40digit:
+		fwork->ecm_40digit_curves = curves_done;
+		break;
+	case state_ecm_45digit:
+		fwork->ecm_45digit_curves = curves_done;
+		break;
+	case state_ecm_50digit:
+		fwork->ecm_50digit_curves = curves_done;
+		break;
+	case state_ecm_55digit:
+		fwork->ecm_55digit_curves = curves_done;
+		break;
+	case state_ecm_60digit:
+		fwork->ecm_60digit_curves = curves_done;
+		break;
+	case state_ecm_65digit:
+		fwork->ecm_65digit_curves = curves_done;
+		break;
+	default:
+		printf("don't know how to set curves for state %d\n", state);
+		exit(1);
+		break;
+	}
+
+	return curves_done;
+}
+
+#if 0
+uint32_t  get_max_ecm_curves(factor_work_t *fwork, enum factorization_state state)
+{
+	uint32_t  max_curves;
+
+	switch (state)
+	{
+	case state_ecm_15digit:
+		max_curves = fwork->ecm_max_15digit_curves;
+		break;
+	case state_ecm_20digit:
+		max_curves = fwork->ecm_max_20digit_curves;
+		break;
+	case state_ecm_25digit:
+		max_curves = fwork->ecm_max_25digit_curves;
+		break;
+	case state_ecm_30digit:
+		max_curves = fwork->ecm_max_30digit_curves;
+		break;
+	case state_ecm_35digit:
+		max_curves = fwork->ecm_max_35digit_curves;
+		break;
+	case state_ecm_40digit:
+		max_curves = fwork->ecm_max_40digit_curves;
+		break;
+	case state_ecm_45digit:
+		max_curves = fwork->ecm_max_45digit_curves;
+		break;
+	case state_ecm_50digit:
+		max_curves = fwork->ecm_max_50digit_curves;
+		break;
+	case state_ecm_55digit:
+		max_curves = fwork->ecm_max_55digit_curves;
+		break;
+	case state_ecm_60digit:
+		max_curves = fwork->ecm_max_60digit_curves;
+		break;
+	case state_ecm_65digit:
+		max_curves = fwork->ecm_max_65digit_curves;
+		break;
+	default:
+		max_curves = 0;
+		break;
+	}
+
+	return max_curves;
+}
+#endif
+
+enum factorization_state schedule_work(factor_work_t *fwork, mpz_t b, fact_obj_t *fobj)
+{
+	int have_tune;
+    int i;
+	enum factorization_state next_state;
+	int numdigits = gmp_base10(b);
+	double target_digits;
+	double work_done;
+	FILE *flog;
+	snfs_t *poly;
+
+	// get the next factorization state that hasn't been completed
+	next_state = get_next_state(fwork, fobj);
+
+	// make sure a minimum amount of work is done
+	if (next_state == state_trialdiv ||
+		next_state == state_fermat ||
+		next_state == state_rho)
+	{
+		return next_state;
+	}
+
+	// check to see if 'tune' has been run or not
+	have_tune = check_tune_params(fobj);		
+
+	// determine the terminating job type
+	if (fwork->target_job_type == job_unknown)
+	{
+		mpz_set(fobj->N, b);
+		fwork->target_job_type = determine_job_type(fobj);
+		mpz_set(b, fobj->N);
+
+		if (fobj->VFLAG >= 0)
+		{
+			char jobtype[32];
+			switch (fwork->target_job_type)
+			{
+			case 0: strcpy(jobtype, "snfs"); break;
+			case 1: strcpy(jobtype, "gnfs"); break;
+			case 2: strcpy(jobtype, "siqs"); break;
+			case 3: strcpy(jobtype, "ecm"); break;
+			case 4: strcpy(jobtype, "unknown"); break;
+			}
+			printf("fac: job type determined to be %s\n", jobtype);
+		}
+	}
+	numdigits = gmp_base10(b);
+
+	// set an initial ECM target depth based on any user-supplied plan
+    if (fobj->autofact_obj.only_pretest > 1)
+    {
+        target_digits = fobj->autofact_obj.only_pretest;
+    }
+    else if (fobj->autofact_obj.yafu_pretest_plan == PRETEST_DEEP)
+    {
+        target_digits = 1. * (double)numdigits / 3.;
+    }
+    else if (fobj->autofact_obj.yafu_pretest_plan == PRETEST_LIGHT)
+    {
+        target_digits = 2. * (double)numdigits / 9.;
+    }
+    else if (fobj->autofact_obj.yafu_pretest_plan == PRETEST_CUSTOM)
+    {
+        target_digits = (double)numdigits * fobj->autofact_obj.target_pretest_ratio;
+    }
+    else
+    {
+        target_digits = 4. * (double)numdigits / 13.;
+    }
+
+	// if the input has an snfs form and the stars align such that
+	// this will be an eventual SNFS factorization, then 
+	// scale back ECM effort as a result.
+	if (fwork->target_job_type == job_snfs)
+	{
+		if (fobj->VFLAG >= 0)
+		{
+			if (fobj->autofact_obj.only_pretest > 1)
+			{
+				printf("fac: input has usable snfs form\n");
+				printf("fac: ecm effort maintained at %1.2f due to pretest condition\n",
+					target_digits);
+			}
+			else
+			{
+				printf("fac: ecm effort reduced from %1.2f to %1.2f: input has usable snfs form\n",
+					target_digits, target_digits / 1.2857);
+			}
+		}
+
+		if (fobj->autofact_obj.only_pretest > 1)
+		{
+
+		}
+		else
+		{
+			target_digits /= 1.2857;
+		}
+	}
+
+	// get the current amount of work done - only print status prior to 
+	// ecm steps
+	uint32_t curves;
+	int b1_method, b2_method;
+
+	switch (next_state)
+	{
+		case state_ecm_15digit:
+		case state_ecm_20digit:
+		case state_ecm_25digit:
+		case state_ecm_30digit:
+		case state_ecm_35digit:
+		case state_ecm_40digit:
+		case state_ecm_45digit:
+		case state_ecm_50digit:
+		case state_ecm_55digit:
+		case state_ecm_60digit:
+		case state_ecm_65digit:
+			if (fobj->VFLAG >= 1)
+				printf("fac: setting target pretesting digits to %1.6f\n", target_digits);
+			
+			print_std_ecm_work_done(&fobj->ecm_obj, 1, NULL, fobj->VFLAG, fobj->LOGFLAG);
+			fobj->autofact_obj.ecm_total_work_performed = fobj->ecm_obj.total_work;
+			
+			if (fobj->VFLAG >= 1)
+				printf("fac: estimated sum of completed work is t%1.6f\n", fobj->ecm_obj.total_work);
+
+			get_ecm_method(fobj, ecm_std_b1[next_state - state_ecm_15digit], &b1_method, &b2_method);
+			curves = get_curves_required(&fobj->ecm_obj, target_digits,
+				ecm_std_b1[next_state - state_ecm_15digit], b1_method, b2_method);
+
+			if ((fobj->ecm_obj.total_work > target_digits) ||
+				(curves == 0))
+			{
+				next_state = state_nfs;
+			}
+
+			break;
+
+		default:
+			print_std_ecm_work_done(&fobj->ecm_obj, 0, NULL, fobj->VFLAG, fobj->LOGFLAG);
+			fobj->autofact_obj.ecm_total_work_performed = fobj->ecm_obj.total_work;
+			break;
+	}
+
+	
+
+	if (mpz_cmp_ui(b, 1) == 0)
+	{
+		if (fobj->VFLAG > 0)
+			printf("fac: factorization completed while analyzing input\n");
+		return state_idle;
+	}
+
+	// if there is a trivial amount of ecm to do, skip directly to a sieve method
+	int is_trivial = 0;
+	if ((target_digits < 15) && (numdigits <= 45))
+	{
+		if (fobj->VFLAG > 0)
+			printf("fac: trivial ECM work to do... skipping to sieve method\n");
+		next_state = state_nfs;
+		is_trivial = 1;
+	}
+
+	// handle the case where the next state is a sieve method
+	if ((next_state == state_nfs) || (fobj->ecm_obj.total_work > target_digits) ||
+		((fobj->ecm_obj.total_work > fobj->autofact_obj.only_pretest) &&
+		(fobj->autofact_obj.only_pretest > 1)) ||
+		is_trivial)
+	{
+		logprint_oc(fobj->flogname, "a", "final ECM pretested depth: %1.6f\n", fobj->ecm_obj.total_work);
+
+		// if the user specified -pretest, with or without arguments,
+		// we should stop factoring now that ecm is done.  this covers the
+		// case where the user specified a pretest work amount that was
+		// too large as determined by factor
+		if ((fobj->autofact_obj.only_pretest) && !is_trivial)
+		{
+			logprint_oc(fobj->flogname, "a", "scheduler: pretesting active, now finishing\n");
+			return state_done;
+		}
+
+		logprint_oc(fobj->flogname, "a", "scheduler: switching to sieve method\n");
+
+		if (!have_tune || fobj->autofact_obj.prefer_xover)
+		{
+			// use a hard cutoff - within reason
+            if ((((numdigits > fobj->autofact_obj.qs_snfs_xover) && 
+                (fobj->autofact_obj.has_snfs_form)) ||
+                (numdigits > fobj->autofact_obj.qs_gnfs_xover)) &&
+				(numdigits >= 75))
+				next_state = state_nfs;
+			else
+				next_state = state_qs;
+		}
+		else
+		{
+
+			if (0)
+			{
+				double qs_time_est, gnfs_time_est;
+
+				// compute the time to factor using estimates derived during 'tune'.
+				// if we know of a preferable SNFS poly, use its equivalent gnfs
+				// size to predict the job duration.
+
+				qs_time_est = get_qs_time_estimate(fobj, b);
+				gnfs_time_est = get_gnfs_time_estimate(fobj, b);
+
+				if (fobj->VFLAG > 0)
+				{
+					printf("fac: tune params predict %1.2f sec for SIQS and %1.2f sec for NFS\n",
+						qs_time_est, gnfs_time_est);
+				}
+
+				if (qs_time_est < gnfs_time_est)
+				{
+					if (fobj->VFLAG > 0)
+					{
+						printf("fac: tune params scheduling SIQS work\n");
+					}
+					next_state = state_qs;
+				}
+				else
+				{
+					if (fobj->VFLAG > 0)
+					{
+						printf("fac: tune params scheduling NFS work\n");
+					}
+					next_state = state_nfs;
+				}
+			}
+			else
+			{
+				// the determine job type function does all of the analysis
+				// on which method is best, use its output.
+				switch (fwork->target_job_type)
+				{
+				case 0: next_state = state_nfs; break;
+				case 1: next_state = state_nfs; break;
+				case 2: next_state = state_qs; break;
+				case 3: next_state = state_nfs; break; // ecm?, default to nfs
+				case 4: next_state = state_nfs; break; // unknown? default to nfs
+				}
+
+			}
+
+
+
+		}
+	}
+
+	if (next_state == state_nfs) 
+	{
+		if ((fobj->autofact_obj.max_nfs > 0) && (gmp_base10(b) > fobj->autofact_obj.max_nfs))
+		{
+			if (fobj->VFLAG > 0)
+			{
+				printf("fac: NFS job size larger than specified maximum, finishing\n");
+			}
+			return state_done;
+		}
+		else
+		{
+			return next_state;
+		}
+	}
+
+	if (next_state == state_qs)
+	{
+		if ((fobj->autofact_obj.max_siqs > 0) && (gmp_base10(b) > fobj->autofact_obj.max_siqs))
+		{
+			if (fobj->VFLAG > 0)
+			{
+				printf("fac: SIQS job size larger than specified maximum, finishing\n");
+			}
+			return state_done;
+		}
+		else
+		{
+			return next_state;
+		}
+	}
+
+	// set the work parameters for the current state
+	set_work_params(fwork, next_state);
+
+	switch (next_state)
+	{
+		case state_ecm_15digit:
+		case state_ecm_20digit:
+		case state_ecm_25digit:
+		case state_ecm_30digit:
+		case state_ecm_35digit:
+		case state_ecm_40digit:
+		case state_ecm_45digit:
+		case state_ecm_50digit:
+		case state_ecm_55digit:
+		case state_ecm_60digit:
+		case state_ecm_65digit:
+			// figure out how many curves at this level need to be done 
+			// to get to the target level
+			interp_and_set_curves(fwork, fobj, next_state, fobj->ecm_obj.total_work,
+				target_digits, fobj->LOGFLAG);
+
+			break;
+
+		default:
+			// non-ecm curves are set with set_work_params above
+			break;
+	}
+
+	return next_state;
+}
+
+void interp_and_set_curves(factor_work_t *fwork, fact_obj_t *fobj, 
+	enum factorization_state state, double work_done,
+	double target_digits, int log_results)
+{
+	// do a binary search on the target state's amount of work.
+	// probably there is a more elegant way to compute this, but this seems
+	// to work.
+	uint32_t work_low, work_high, work;
+	int b1_method, b2_method;
+	uint64_t b1 = ecm_std_b1[state - state_ecm_15digit];
+
+	// if there is a user specified pretest value, use it, regardless if it
+    // means over or under ecm'ing something.
+    if (fobj->autofact_obj.only_pretest > 1)
+    {
+        target_digits = fobj->autofact_obj.only_pretest;
+    }
+
+	work_low = get_ecm_curves_done(fwork, state);
+	get_ecm_method(fobj, b1, &b1_method, &b2_method);
+	work_high = get_curves_for_tlevel(state - state_ecm_15digit, b1_method, b2_method);
+
+    if (fobj->VFLAG >= 1)
+    {
+        printf("fac: work done at B1=%u: %u curves, max work = %u curves\n",
+            fwork->B1, work_low, work_high);
+    }
+
+	work = get_curves_required(&fobj->ecm_obj, target_digits, b1, b1_method, b2_method);
+
+	set_ecm_curves_done(fwork, state, work_low);
+	fwork->curves = (uint32_t)ceil(work);
+
+	if ((work_low + fwork->curves) > work_high)
+	{
+		fwork->curves = work_high - work_low;
+	}
+
+    if ((fobj->VFLAG >= 1) && fobj->LOGFLAG)
+    {
+        printf("fac: %u more curves at B1=%u needed to get to t%1.6f\n",
+            fwork->curves, fwork->B1, target_digits);
+    }
+
+    if (fobj->LOGFLAG)
+	{
+		FILE *flog;
+		flog = fopen(fobj->flogname,"a");
+		if (flog != NULL)
+		{
+			logprint(flog, "current ECM pretesting depth: %1.6f\n", work_done);
+			logprint(flog, "scheduled %u curves at B1=%u toward target "
+				"pretesting depth of %1.6f\n", fwork->curves, fwork->B1, target_digits);
+			fclose(flog);
+		}
+	}
+
+	return;
+}
+
+void init_factor_work(factor_work_t *fwork, fact_obj_t *fobj)
+{
+	enum factorization_state interp_state = state_idle;
+	int b1_method, b2_method, tlevel;
+
+	fwork->target_job_type = job_unknown;
+
+	// initialize max allowed work fields 
+	get_ecm_method(fobj, ecm_std_b1[0], &b1_method, &b2_method);
+	fwork->ecm_max_15digit_curves = get_curves_for_tlevel(0, b1_method, b2_method);
+
+	get_ecm_method(fobj, ecm_std_b1[1], &b1_method, &b2_method);
+	fwork->ecm_max_20digit_curves = get_curves_for_tlevel(1, b1_method, b2_method);
+
+	get_ecm_method(fobj, ecm_std_b1[2], &b1_method, &b2_method);
+	fwork->ecm_max_25digit_curves = get_curves_for_tlevel(2, b1_method, b2_method);
+
+	get_ecm_method(fobj, ecm_std_b1[3], &b1_method, &b2_method);
+	fwork->ecm_max_30digit_curves = get_curves_for_tlevel(3, b1_method, b2_method);
+
+	get_ecm_method(fobj, ecm_std_b1[4], &b1_method, &b2_method);
+	fwork->ecm_max_35digit_curves = get_curves_for_tlevel(4, b1_method, b2_method);
+
+	get_ecm_method(fobj, ecm_std_b1[5], &b1_method, &b2_method);
+	fwork->ecm_max_40digit_curves = get_curves_for_tlevel(5, b1_method, b2_method);
+
+	get_ecm_method(fobj, ecm_std_b1[6], &b1_method, &b2_method);
+	fwork->ecm_max_45digit_curves = get_curves_for_tlevel(6, b1_method, b2_method);
+
+	get_ecm_method(fobj, ecm_std_b1[7], &b1_method, &b2_method);
+	fwork->ecm_max_50digit_curves = get_curves_for_tlevel(7, b1_method, b2_method);
+
+	get_ecm_method(fobj, ecm_std_b1[8], &b1_method, &b2_method);
+	fwork->ecm_max_55digit_curves = get_curves_for_tlevel(8, b1_method, b2_method);
+
+	get_ecm_method(fobj, ecm_std_b1[9], &b1_method, &b2_method);
+	fwork->ecm_max_60digit_curves = get_curves_for_tlevel(9, b1_method, b2_method);
+
+	get_ecm_method(fobj, ecm_std_b1[10], &b1_method, &b2_method);
+	fwork->ecm_max_65digit_curves = get_curves_for_tlevel(10, b1_method, b2_method);
+
+	fwork->tdiv_limit = 0;
+	fwork->tdiv_max_limit = fobj->div_obj.limit;
+    fwork->fermat_iterations = 0;
+	fwork->fermat_max_iterations = fobj->div_obj.fmtlimit;
+	fwork->rho_max_bases = 3;
+	fwork->rho_bases = 0;
+	fwork->rho_max_iterations = fobj->rho_obj.iterations;
+	fwork->pp1_max_lvl1_curves = 0;
+	fwork->pp1_max_lvl2_curves = 0;
+	fwork->pp1_max_lvl3_curves = 0;
+	fwork->pm1_max_lvl1_curves = 1;
+	fwork->pm1_max_lvl2_curves = 1;
+	fwork->pm1_max_lvl3_curves = 1;	
+	fwork->total_time = 0;	
+	fwork->trialdiv_time = 0;
+	fwork->rho_time = 0;
+	fwork->pp1_time = 0;
+	fwork->pm1_time = 0;
+	fwork->ecm_time = 0;
+	fwork->qs_time = 0;
+	fwork->nfs_time = 0;
+
+	fwork->rho_bases = 0;
+
+	fwork->pp1_lvl1_curves = 0;
+	fwork->pp1_lvl2_curves = 0;
+	fwork->pp1_lvl3_curves = 0;
+
+	fwork->pm1_lvl1_curves = 0;
+	fwork->pm1_lvl2_curves = 0;
+	fwork->pm1_lvl3_curves = 0;
+
+	fwork->ecm_15digit_curves = 0;
+	fwork->ecm_20digit_curves = 0;
+	fwork->ecm_25digit_curves = 0;
+	fwork->ecm_30digit_curves = 0;
+	fwork->ecm_35digit_curves = 0;
+	fwork->ecm_40digit_curves = 0;
+	fwork->ecm_45digit_curves = 0;
+	fwork->ecm_50digit_curves = 0;
+	fwork->ecm_55digit_curves = 0;
+	fwork->ecm_60digit_curves = 0;
+	fwork->ecm_65digit_curves = 0;
+
+	// preload work structure with curves appropriate to the amount
+	// of specified initial work
+	if (fwork->initial_work > 0.0)
+	{
+		tlevel = 0;
+		while ((fobj->ecm_obj.total_work < fwork->initial_work) && (tlevel < (NUM_ECM_LEVELS - 1)))
+		{
+			uint64_t b1 = ecm_std_b1[tlevel];
+			get_ecm_method(fobj, b1, &b1_method, &b2_method);
+			uint32_t curves = get_curves_required(&fobj->ecm_obj, fwork->initial_work, b1, b1_method, b2_method) + 1;
+			//printf("%u curves required at tlevel %d for method %d,%d\n", curves, tlevel, b1_method, b2_method);
+			curves = MIN(curves, get_curves_for_tlevel(tlevel, b1_method, b2_method));
+			//printf("recording %u of max %u curves for tlevel %d\n", 
+			//	curves, get_curves_for_tlevel(tlevel, b1_method, b2_method), tlevel);
+			record_curves_completed(&fobj->ecm_obj, curves, b1, b1_method, b2_method);
+			//printf("total work is now %1.4lf\n", fobj->ecm_obj.total_work);
+
+			switch (tlevel)
+			{
+			case 0: fwork->ecm_15digit_curves = curves; fwork->pm1_lvl1_curves = 1; break;
+			case 1: fwork->ecm_20digit_curves = curves; break;
+			case 2: fwork->ecm_25digit_curves = curves; break;
+			case 3: fwork->ecm_30digit_curves = curves; fwork->pm1_lvl2_curves = 1; break;
+			case 4: fwork->ecm_35digit_curves = curves; fwork->pm1_lvl3_curves = 1; break;
+			case 5: fwork->ecm_40digit_curves = curves; break;
+			case 6: fwork->ecm_45digit_curves = curves; break;
+			case 7: fwork->ecm_50digit_curves = curves; break;
+			case 8: fwork->ecm_55digit_curves = curves; break;
+			case 9: fwork->ecm_60digit_curves = curves; break;
+			case 10: fwork->ecm_65digit_curves = curves; break;
+			}
+
+			tlevel++;
+		}
+
+		print_std_ecm_work_done(&fobj->ecm_obj, 1, NULL, fobj->VFLAG, 0);
+	}
+	
+	return;
+}
+
+int check_for_exit_on_factor(fact_obj_t* fobj)
+{
+	// request: https://www.mersenneforum.org/showpost.php?p=624156&postcount=262
+	// -stoplt n : Stop after finding a factor with Less than n digits
+	// -stople n : Stop after finding a factor with Less than or Equal to n digits
+	// -stopeq n : Stop after finding a factor with n digits
+	// -stopge n : Stop after finding a factor with Greater than or Equal to n digits
+	// -stopgt n : Stop after finding a factor with Greater than n digits
+	// -stopbase b : Base to use for stopXY options(default 10, range: 2 <= b <= 62)
+	// -stopprime  : add constraint that number is also prime
+	// ie : the bases supported by "mpz_get_str"
+
+	yfactor_list_t* factors = fobj->factors;
+	int base = fobj->autofact_obj.stopbase;
+	int i;
+
+	if (fobj->autofact_obj.check_stop_conditions == 0)
+		return 0;
+
+	for (i = 0; i < factors->num_factors; i++)
+	{
+		int sz = mpz_sizeinbase(factors->factors[i].factor, base);
+
+		if (fobj->autofact_obj.stopprime && (factors->factors[i].type != (PRP | PRIME)))
+		{
+			// We require the factor to be prime and it's not, so don't need
+			// to check the other conditions.
+			continue;
+		}
+
+		if ((sz == fobj->autofact_obj.stopeq) && (fobj->autofact_obj.stopeq > 0))
+		{
+			if (fobj->VFLAG > 0)
+			{
+				printf("fac: found factor == %d digits in base %d, stopping.\n", 
+					fobj->autofact_obj.stopeq, base);
+			}
+			logprint_oc(fobj->flogname, "a", "found factor == %d digits in base %d, stopping.",
+				sz, base);
+			return 1;
+		}
+		
+		if ((sz <= fobj->autofact_obj.stople) && (fobj->autofact_obj.stople > 0))
+		{
+			if (fobj->VFLAG > 0)
+			{
+				printf("fac: found factor <= %d digits in base %d, stopping.\n", 
+					fobj->autofact_obj.stople, base);
+			}
+			logprint_oc(fobj->flogname, "a", "found factor <= %d digits in base %d, stopping.",
+				sz, base);
+			return 1;
+		}
+
+		if ((sz >= fobj->autofact_obj.stopge) && (fobj->autofact_obj.stopge > 0))
+		{
+			if (fobj->VFLAG > 0)
+			{
+				printf("fac: found factor >= %d digits in base %d, stopping.\n", 
+					fobj->autofact_obj.stopge, base);
+			}
+			logprint_oc(fobj->flogname, "a", "found factor >= %d digits in base %d, stopping.",
+				sz, base);
+			return 1;
+		}
+
+		if ((sz < fobj->autofact_obj.stoplt) && (fobj->autofact_obj.stoplt > 0))
+		{
+			if (fobj->VFLAG > 0)
+			{
+				printf("fac: found factor < %d digits in base %d, stopping.\n", 
+					fobj->autofact_obj.stoplt, base);
+			}
+			logprint_oc(fobj->flogname, "a", "found factor < %d digits in base %d, stopping.",
+				sz, base);
+			return 1;
+		}
+
+		if ((sz > fobj->autofact_obj.stopgt) && (fobj->autofact_obj.stopgt > 0))
+		{
+			if (fobj->VFLAG > 0)
+			{
+				printf("fac: found factor > %d digits in base %d, stopping.\n", 
+					fobj->autofact_obj.stopgt, base);
+			}
+			logprint_oc(fobj->flogname, "a", "found factor > %d digits in base %d, stopping.",
+				sz, base);
+			return 1;
+		}
+	}
+	
+	return 0;
+}
+
+void factor(fact_obj_t *fobj)
+{
+	//run a varity of factoring algorithms on b.
+	//return any composite number left over.
+	//the factoring routines will build up a list of factors.
+
+	mpz_t b, origN, copyN;
+	enum factorization_state fact_state;
+	factor_work_t fwork;
+	FILE *flog;
+	struct timeval start, stop;
+	double t_time;
+	int user_defined_ecm_b2 = fobj->ecm_obj.stg2_is_default;
+	int user_defined_pp1_b2 = fobj->pp1_obj.stg2_is_default;
+	int user_defined_pm1_b2 = fobj->pm1_obj.stg2_is_default;
+	FILE *data;
+	char tmpstr[GSTR_MAXSIZE];
+	int quit_after_sieve_method = 0;
+    double initial_work = fobj->autofact_obj.initial_work;
+	int override_fact_state = 0;
+
+	//factor() always ignores user specified B2 values
+	fobj->ecm_obj.stg2_is_default = 1;
+	fobj->pp1_obj.stg2_is_default = 1;
+	fobj->pm1_obj.stg2_is_default = 1;
+
+	mpz_init(origN);
+	mpz_init(copyN);
+	mpz_init(b);
+
+	mpz_set(origN, fobj->N);
+	mpz_set(copyN, origN);
+	mpz_set(b, origN);
+
+	if (mpz_cmp_ui(b,1) <= 0)
+	{
+		mpz_clear(copyN);
+		mpz_clear(origN);
+		mpz_clear(b);
+		return;
+	}	
+	
+	gettimeofday(&start, NULL);
+
+    if (fobj->LOGFLAG)
+    {
+        flog = fopen(fobj->flogname, "a");
+        if (flog == NULL)
+        {
+            printf("could not open %s to append\n", fobj->flogname);
+            flog = NULL;
+        }
+        else
+        {
+            logprint(flog, "\n");
+            logprint(flog, "****************************\n");
+        }
+
+		char *s;
+		s = mpz_get_str(NULL, 10, b);
+		// use ... when we have very big numbers?
+		logprint(flog,"Starting factorization of %s\n", s);
+		free(s);
+	}
+    else
+    {
+        // calls to logprint won't use this because they
+        // are also protected by LOGFLAG
+        flog = NULL;
+    }
+
+	logprint(flog,"using pretesting plan: %s\n",fobj->autofact_obj.plan_str);
+    if (fobj->autofact_obj.yafu_pretest_plan == PRETEST_CUSTOM)
+    {
+        logprint(flog, "custom pretest ratio is: %1.4f\n",
+            fobj->autofact_obj.target_pretest_ratio);
+    }
+    if (fobj->autofact_obj.only_pretest > 1)
+    {
+        logprint(flog, "custom pretesting limit is: %d\n",
+            fobj->autofact_obj.only_pretest);
+    }
+
+	if (check_tune_params(fobj))
+	{
+        if (fobj->autofact_obj.prefer_xover)
+        {
+            logprint(flog, "using specified qs/gnfs crossover of %1.0f digits\n",
+                fobj->autofact_obj.qs_gnfs_xover);
+            logprint(flog, "using specified qs/snfs crossover of %1.0f digits\n",
+                fobj->autofact_obj.qs_snfs_xover);
+        }
+        else
+        {
+            logprint(flog, "using tune info for qs/gnfs crossover\n");
+        }
+	}
+    else
+    {
+        logprint(flog, "no tune info: using qs/gnfs crossover of %1.0f digits\n",
+            fobj->autofact_obj.qs_gnfs_xover);
+        logprint(flog, "no tune info: using qs/snfs crossover of %1.0f digits\n",
+            fobj->autofact_obj.qs_snfs_xover);
+    }
+
+    // if the user input a scaling factor rather than a digit level
+    // then compute the effective digit number for this input.
+    if (fobj->autofact_obj.initial_work < 1.0)
+    {
+        initial_work = fobj->autofact_obj.initial_work * mpz_sizeinbase(fobj->N, 10);
+    }
+
+    // put the initial work done into the work structure.  It's important
+    // to not modify the autofact_obj.initial_work element because if it was
+    // input as a scaling factor then modifying it would destroy the scaling
+    // factor for other inputs on this run (potentially a batch job).
+    fwork.initial_work = initial_work;
+
+    if (initial_work > 0.0)
+    {       
+        logprint(flog, "input indicated to have been pretested to t%1.2f\n",
+            initial_work);
+    }
+
+	logprint(flog,"****************************\n");
+	if (flog != NULL) fclose(flog);
+
+	fobj->autofact_obj.autofact_active = 1;
+
+	if (fobj->VFLAG >= 0)
+	{
+		gmp_printf("fac: factoring %Zd\n",b);
+		printf("fac: using pretesting plan: %s\n",fobj->autofact_obj.plan_str);
+		if (fobj->autofact_obj.yafu_pretest_plan == PRETEST_CUSTOM)
+			printf("fac: custom pretest ratio is: %1.4f\n",fobj->autofact_obj.target_pretest_ratio);
+		if (fobj->autofact_obj.only_pretest > 1)
+			printf("fac: custom pretesting limit is: %d\n",fobj->autofact_obj.only_pretest);
+		if (check_tune_params(fobj))
+		{
+            if (fobj->autofact_obj.prefer_xover)
+            {
+                printf("fac: using specified qs/gnfs crossover of %1.0f digits\n",
+                    fobj->autofact_obj.qs_gnfs_xover);
+                printf("fac: using specified qs/snfs crossover of %1.0f digits\n",
+                    fobj->autofact_obj.qs_snfs_xover);
+            }
+            else
+            {
+                printf("fac: using tune info for qs/gnfs crossover\n");
+            }
+		}
+        else
+        {
+            printf("fac: no tune info: using qs/gnfs crossover of %1.0f digits\n",
+                fobj->autofact_obj.qs_gnfs_xover);
+            printf("fac: no tune info: using qs/snfs crossover of %1.0f digits\n",
+                fobj->autofact_obj.qs_snfs_xover);
+        }
+
+        if (initial_work > 0.0)
+        {
+            printf("fac: input indicated to have been pretested to t%1.2f\n",
+                initial_work);
+        }
+
+	}	
+
+	init_factor_work(&fwork, fobj);
+
+	// starting point of factorization effort
+	fact_state = state_idle;
+
+	// check to see if a siqs savefile exists for this input	
+	data = fopen(fobj->qs_obj.siqs_savefile,"r");
+
+	if (data != NULL)
+	{	
+		char *substr;
+		mpz_t tmpz;
+		mpz_t g;
+
+		//read in the number from the savefile
+		mpz_init(tmpz);
+		mpz_init(g);
+
+		fgets(tmpstr,1024,data);
+		substr = tmpstr + 2;
+		mpz_set_str(tmpz, substr, 0);	//auto detect the base
+
+		if (resume_check_input_match(tmpz, b, g, fobj->VFLAG))
+		{
+			if (fobj->VFLAG > 0)
+				printf("fac: found siqs savefile, resuming siqs\n");
+
+            // if the inputs don't match exactly, resume siqs on the exact
+            // number in the savefile and put the cofactor (prime or composite)
+            // into the factor list.  If composite it will get refactored.
+            add_to_factor_list(fobj->factors, g, fobj->VFLAG, fobj->NUM_WITNESSES, 0);
+
+            mpz_set(b, tmpz);
+
+			// override starting point
+			fact_state = state_qs;
+			override_fact_state = 1;
+
+			// if for some reason qs doesn't find factors (such as
+			// a user specified time out), don't continue ecm-ing, etc.
+			quit_after_sieve_method = 1;
+		}
+		mpz_clear(tmpz);
+		mpz_clear(g);
+		fclose(data);
+	}
+
+	// check to see if a nfs job file exists for this input	
+	data = fopen(fobj->nfs_obj.job_infile,"r");
+
+	if (data != NULL)
+	{	
+		char *substr;
+		mpz_t tmpz;
+		mpz_t g;
+
+		//read in the number from the job file
+		mpz_init(tmpz);
+		mpz_init(g);
+
+		// may not be sufficient, in extreme cases...
+		fgets(tmpstr,1024,data);
+		substr = tmpstr + 2;
+		mpz_set_str(tmpz, substr, 0);	//auto detect the base
+
+		if (resume_check_input_match(tmpz, b, g, fobj->VFLAG))
+		{
+            if (fobj->VFLAG > 0)
+                printf("fac: found nfs job file, resuming nfs\n");
+
+			// remove any common factor so the input exactly matches
+			// the file
+			mpz_tdiv_q(b, b, g);
+			mpz_set(fobj->N, b);
+			mpz_set(origN, b);
+			mpz_set(copyN, b);
+
+			// override starting point
+			fact_state = state_nfs;
+			override_fact_state = 1;
+
+			// if for some reason nfs doesn't find factors (such as
+			// a user specified time out or -ns, -nc, etc.), 
+			// don't continue ecm-ing, etc.
+			quit_after_sieve_method = 1;
+		}
+		mpz_clear(tmpz);
+		mpz_clear(g);
+		fclose(data);
+	}
+
+	// state machine to factor the number using a variety of methods
+	while (fact_state != state_done)
+	{	
+		if (!override_fact_state)
+		{
+			// schedule work to be done on this input
+			fact_state = schedule_work(&fwork, b, fobj);
+		}
+
+		//gmp_printf("fac: commencing state %d on current work item %Zd\n", fact_state, b);
+
+        // do the scheduled work
+		do_work(fact_state, &fwork, b, fobj);
+
+		// get the next item of work
+		int more_work = get_composite(fobj->factors, b);
+
+		if (more_work)
+		{
+			//mpz_set(fobj->input_N, b);
+			mpz_set(fobj->N, b);
+			//gmp_printf("fac: next item of work is %Zd\n", b);
+		}
+
+        // check if we are done:
+        // * number is completely factored
+        // * sieve method was performed and either finished or was interrupted.
+		// * one of the exit-on-factor-found conditions is met
+        if (check_if_done(fobj, &fwork, b) || check_for_exit_on_factor(fobj) ||
+            (quit_after_sieve_method &&
+            ((fact_state == state_qs) ||
+            (fact_state == state_nfs))) ||
+            ((fact_state == state_nfs) &&
+            (fobj->flags == FACTOR_INTERRUPT)))
+        {
+            fact_state = state_done;
+        }
+        else if ((fact_state >= state_ecm_15digit) && (fact_state <= state_ecm_65digit))
+        {
+            // if we ran ecm, check the ecm exit code and
+            // handle appropriately.
+            if (fobj->ecm_obj.exit_cond == ECM_EXIT_ABORT)
+            {
+                FILE *flog;
+
+                if (fobj->LOGFLAG)
+                {
+                    flog = fopen(fobj->flogname, "a");
+                }
+				print_std_ecm_work_done(&fobj->ecm_obj, 1, flog, fobj->VFLAG, fobj->LOGFLAG);
+				fobj->autofact_obj.ecm_total_work_performed = fobj->ecm_obj.total_work;
+                if (fobj->LOGFLAG)
+                {
+                    logprint(flog, "\testimated sum of completed work is t%1.2f\n", fobj->ecm_obj.total_work);
+                    if (flog != NULL) fclose(flog);
+                }
+                fact_state = state_done;
+            }
+        }
+	}
+
+	// optionally record output in one or more file formats
+	if (fobj->factors->num_factors >= 1)
+	{
+		// If the only factor in our array == N, then N is prime or prp...
+		if (fobj->autofact_obj.want_output_primes && 
+            (mpz_cmp(fobj->factors->factors[0].factor,origN) == 0))
+		{
+			if ((fobj->autofact_obj.op_file = fopen(fobj->autofact_obj.op_str, "a")) == NULL)
+				printf(" ***Error: unable to open %s\n", fobj->autofact_obj.op_str);
+			else
+			{
+				if (fobj->autofact_obj.want_output_expressions)
+					gmp_fprintf(fobj->autofact_obj.op_file, "%Zd\n", fobj->N);
+				else
+					gmp_fprintf(fobj->autofact_obj.op_file, "%Zd\n", origN);
+				if (fclose(fobj->autofact_obj.op_file) != 0)
+					printf(" ***Error: problem closing file %s\n", fobj->autofact_obj.op_str);
+			}
+		}
+
+		// If the first factor in the array != N, then is composite and we have factors...
+		if (fobj->autofact_obj.want_output_factors &&
+            (mpz_cmp(fobj->factors->factors[0].factor,origN) != 0))
+		{
+			if ((fobj->autofact_obj.of_file = fopen(fobj->autofact_obj.of_str, "a")) == NULL)
+				printf(" ***Error: unable to open %s\n", fobj->autofact_obj.of_str);
+			else
+			{
+				int i;
+				//fprintf(fobj->autofact_obj.of_file, "%s\n", z2decstr(&origN,&gstr1));
+				if (fobj->autofact_obj.want_output_expressions)
+					gmp_fprintf(fobj->autofact_obj.of_file, "(%Zd)", fobj->N);
+				else
+					gmp_fprintf(fobj->autofact_obj.of_file, "%Zd", origN);
+				for (i=0; i<fobj->factors->num_factors; i++)
+				{
+					gmp_fprintf(fobj->autofact_obj.of_file, "/%Zd", 
+                        fobj->factors->factors[i].factor);
+					if (fobj->factors->factors[i].count > 1)
+						fprintf(fobj->autofact_obj.of_file, "^%d", 
+                            fobj->factors->factors[i].count);
+					//fprintf(fobj->autofact_obj.of_file, "\n");
+				}
+				fprintf(fobj->autofact_obj.of_file,"\n");
+				if (fclose(fobj->autofact_obj.of_file) != 0)
+					printf(" ***Error: problem closing file %s\n", fobj->autofact_obj.of_str);
+			}
+		}
+	}
+	else //assume: composite with no known factors... (need to clarify)
+	{
+		if (fobj->autofact_obj.want_output_unfactored)
+		{
+			if ((fobj->autofact_obj.ou_file = fopen(fobj->autofact_obj.ou_str, "a")) == NULL)
+				printf(" ***Error: unable to open %s\n", fobj->autofact_obj.ou_str);
+			else
+			{
+				if (fobj->autofact_obj.want_output_expressions)
+					gmp_fprintf(fobj->autofact_obj.ou_file, "%Zd\n", fobj->N);
+				else
+					gmp_fprintf(fobj->autofact_obj.ou_file, "%s\n", origN);
+				if (fclose(fobj->autofact_obj.ou_file) != 0)
+					printf(" ***Error: problem closing file %s\n", fobj->autofact_obj.ou_str);
+			}
+		}
+	}
+
+	if (mpz_cmp_ui(b, 1) != 0)
+	{
+		add_to_factor_list(fobj->factors, b, fobj->VFLAG, fobj->NUM_WITNESSES, 0);
+
+		int fid = find_in_factor_list(fobj->factors, b);
+
+		if (fid >= 0)
+		{
+			char* s = mpz_get_str(NULL, 10, b);
+			char prefix[10];
+
+			switch (fobj->factors->factors[fid].type)
+			{
+			case PRIME:
+				sprintf(prefix, "P");
+				break;
+			case PRP:
+				sprintf(prefix, "prp");
+				break;
+			case COMPOSITE:
+				sprintf(prefix, "c");
+				break;
+			case UNKNOWN:
+				sprintf(prefix, "U");
+				break;
+			default:
+				sprintf(prefix, "U");
+				break;
+			}
+
+			logprint_oc(fobj->flogname, "a", "%s%d cofactor = %s\n", prefix, gmp_base10(b), s);
+			free(s);
+		}
+		else
+		{
+			printf("failed to find cofactor in factor list!\n");
+		}
+	}
+    
+	mpz_set(fobj->N, b);
+
+	gettimeofday (&stop, NULL);
+    t_time = ytools_difftime(&start, &stop);
+	fobj->autofact_obj.ttime = t_time;
+
+	if (fobj->VFLAG >= 0)
+		printf("Total factoring time = %6.4f seconds\n",t_time);
+
+	logprint_oc(fobj->flogname, "a", "Total factoring time = %6.4f seconds\n",t_time);
+
+	fobj->autofact_obj.autofact_active=0;
+
+	if (fobj->refactor_depth == 0)
+	{
+		write_factor_json(fobj, &fwork, &start, &stop);
+	}
+
+	//restore flags
+	fobj->ecm_obj.stg2_is_default = user_defined_ecm_b2;
+	fobj->pp1_obj.stg2_is_default = user_defined_pp1_b2;
+	fobj->pm1_obj.stg2_is_default = user_defined_pm1_b2;    
+
+	mpz_clear(origN);
+	mpz_clear(copyN);
+	mpz_clear(b);
+	return;
+}
+
+#if 1
+int factor_tiny(mpz_t in, mpz_t* out,
+	uint64_t* primes, uint64_t nump, uint64_t* prng)
+{
+	// factor input 'in', which is assumed to be <= 128 bits in size.
+	// avoid the overhead associated with the main factor() routine.
+	// utilize an input list of primes for trial division.
+	// also accept a 64-bit PRNG seed for LCG-RNG
+	mpz_t gmpf;
+	mpz_init(gmpf);
+
+	// first a bit of trial division.
+	int k = 0;
+	int numout = 0;
+	while ((mpz_cmp_ui(in, 1) > 0) && (primes[k] < 10000) && (k < nump))
+	{
+		uint64_t q = primes[k];
+		uint64_t r = mpz_tdiv_ui(in, q);
+
+		if (r != 0)
+		{
+			k++;
+		}
+		else
+		{
+			mpz_tdiv_q_ui(in, in, q);
+			mpz_init(out[numout]);
+			mpz_set_64(out[numout], q);
+			numout++;
+		}
+	}
+
+	// survived TD, proceed to ECM
+	// this is the lasieve5 cofactorization strategy, modified
+	// to handle an arbitrary number of small factors.
+	while (mpz_cmp_ui(in, 1) > 0)
+	{
+		if (mpz_probab_prime_p(in, 1) > 0)
+		{
+			// prime residue
+			mpz_init(out[numout]);
+			mpz_set(out[numout], in);
+			numout++;
+			break;
+		}
+
+		if (mpz_sizeinbase(in, 2) <= 64) {
+			uint64_t n64 = mpz_get_ui(in);
+			uint64_t f = getfactor_uecm(n64, 1, prng);
+			if (f > 1)
+			{
+				if (prp_uecm(f) == 0)
+				{
+					// found a composite factor.  try P-1 and rho on the factor.
+					uint64_t f1 = getfactor_upm1(f, 33);
+					if (f1 > 1) {
+						if (prp_uecm(f1) == 1)
+						{
+							mpz_init(out[numout]);
+							mpz_set_ui(out[numout], f1);
+							numout++;
+							mpz_tdiv_q_ui(in, in, f1);
+							if (prp_uecm(f / f1) == 1)
+							{
+								mpz_init(out[numout]);
+								mpz_set_ui(out[numout], f / f1);
+								numout++;
+								mpz_tdiv_q_ui(in, in, f / f1);
+							}
+							continue;
+						}
+					}
+					f1 = getfactor_upm1(f, 100);
+					if (f1 > 1) {
+						if (prp_uecm(f1) == 1)
+						{
+							mpz_init(out[numout]);
+							mpz_set_ui(out[numout], f1);
+							numout++;
+							mpz_tdiv_q_ui(in, in, f1);
+							if (prp_uecm(f / f1) == 1)
+							{
+								mpz_init(out[numout]);
+								mpz_set_ui(out[numout], f / f1);
+								numout++;
+								mpz_tdiv_q_ui(in, in, f / f1);
+							}
+							continue;
+						}
+					}
+					f1 = getfactor_upm1(f, 333);
+					if (f1 > 1) {
+						if (prp_uecm(f1) == 1)
+						{
+							mpz_init(out[numout]);
+							mpz_set_ui(out[numout], f1);
+							numout++;
+							mpz_tdiv_q_ui(in, in, f1);
+							if (prp_uecm(f / f1) == 1)
+							{
+								mpz_init(out[numout]);
+								mpz_set_ui(out[numout], f / f1);
+								numout++;
+								mpz_tdiv_q_ui(in, in, f / f1);
+							}
+							continue;
+						}
+					}
+					int imax = 64;
+					int found = 0;
+					for (; imax < 8192; imax *= 2)
+					{
+						f1 = spbrent64(f, imax);
+						if (f1 > 1) {
+							if (prp_uecm(f1) == 1)
+							{
+								found = 1;
+								mpz_init(out[numout]);
+								mpz_set_ui(out[numout], f1);
+								numout++;
+								mpz_tdiv_q_ui(in, in, f1);
+								if (prp_uecm(f / f1) == 1)
+								{
+									mpz_init(out[numout]);
+									mpz_set_ui(out[numout], f / f1);
+									numout++;
+									mpz_tdiv_q_ui(in, in, f / f1);
+								}
+								break;
+							}
+						}
+					}
+					if (!found)
+					{
+						printf("failed to split composite factor %"PRIu64" of input %"PRIu64"\n", f, n64);
+						break;
+					}
+				}
+				else
+				{
+					mpz_init(out[numout]);
+					mpz_set_ui(out[numout], f);
+					numout++;
+					mpz_tdiv_q_ui(in, in, f);
+				}
+			}
+			else
+			{
+				// uecm failed. try PM1, rho, then MPQS.
+				f = getfactor_upm1(n64, 33);
+				if (f > 1) {
+					if (prp_uecm(f) == 1)
+					{
+						mpz_init(out[numout]);
+						mpz_set_ui(out[numout], f);
+						numout++;
+						mpz_tdiv_q_ui(in, in, f);
+						continue;
+					}
+				}
+				f = getfactor_upm1(n64, 100);
+				if (f > 1) {
+					if (prp_uecm(f) == 1)
+					{
+						mpz_init(out[numout]);
+						mpz_set_ui(out[numout], f);
+						numout++;
+						mpz_tdiv_q_ui(in, in, f);
+						continue;
+					}
+				}
+				f = getfactor_upm1(n64, 333);
+				if (f > 1) {
+					if (prp_uecm(f) == 1)
+					{
+						mpz_init(out[numout]);
+						mpz_set_ui(out[numout], f);
+						numout++;
+						mpz_tdiv_q_ui(in, in, f);
+						continue;
+					}
+				}
+				int imax = 64;
+				for (; imax < 8192; imax *= 2)
+				{
+					f = spbrent64(n64, imax);
+					if (f > 1) {
+						if (prp_uecm(f) == 1)
+						{
+							mpz_init(out[numout]);
+							mpz_set_ui(out[numout], f);
+							numout++;
+							mpz_tdiv_q_ui(in, in, f);
+							break;
+						}
+					}
+				}
+				printf("failed to find factor of %"PRIu64"\n", n64);
+				break;
+			}
+		}
+		else
+		{
+#if 0
+			if (getfactor_tecm(in, gmpf,
+				mpz_sizeinbase(in, 2) / 3 - 2, &prng) > 0)
+			{
+				if (mpz_sizeinbase(gmpf, 2) <= max_primebits[s])
+				{
+					mpz_tdiv_q(fac[1], large_factors[s], fac[0]);
+
+					// if the remaining residue is obviously too big, we're done.
+					if (mpz_sizeinbase(fac[1], 2) > ((max_primebits[s] * 2)))
+					{
+						nf = 0;
+						goto done;
+					}
+
+					// check if the residue is prime.  could again use
+					// a cheaper method.
+					if (mpz_probab_prime_p(fac[1], 1) > 0)
+					{
+						if (mpz_sizeinbase(fac[1], 2) <= max_primebits[s])
+						{
+							// we just completed a DLP factorization involving
+							// 2 primes whos product was > 64 bits.
+							nf = 2;
+							goto done;
+						}
+						nf = 0;
+						goto done;
+					}
+
+					// ok, so we have extracted one suitable factor, and the 
+					// cofactor is not prime and a suitable size.  Do more work to 
+					// split the cofactor.
+					// todo: target this better based on expected factor size.
+					uint64_t q64;
+					uint64_t f64;
+					if (mpz_sizeinbase(fac[1], 2) <= 64)
+					{
+						q64 = mpz_get_ui(fac[1]);
+						f64 = getfactor_uecm(q64, 0, &pran);
+						mpz_set_ui(fac[2], f64);
+					}
+					else
+					{
+						// we have a composite residue > 64 bits.  
+						// use ecm first with high effort.
+						getfactor_tecm(fac[1], fac[2], 32, &pran);
+					}
+					f64 = mpz_get_ui(fac[2]);
+
+					if (f64 > 1)
+					{
+						mpz_tdiv_q_ui(fac[1], fac[1], f64);
+						nf = 3;
+
+						if (mpz_sizeinbase(fac[1], 2) > max_primebits[s]) {
+							nf = 0;
+						}
+						if (mpz_sizeinbase(fac[2], 2) > max_primebits[s]) {
+							nf = 0;
+						}
+						if (mpz_probab_prime_p(fac[0], 1) == 0)
+						{
+							nf = 0;
+						}
+						if (mpz_probab_prime_p(fac[1], 1) == 0)
+						{
+							nf = 0;
+						}
+						if (mpz_probab_prime_p(fac[2], 1) == 0)
+						{
+							nf = 0;
+						}
+					}
+					else
+					{
+						// uecm/tecm failed, which does sometimes happen
+						nf = mpqs_factor(fac[1], max_primebits[s], &fac);
+						if (nf == 2)
+						{
+							// fac is now set to mpqs's statically allocated
+							// set of mpz_t's.  copy in the one we found by ecm.
+							nf = 3;
+							mpz_set(fac[2], uecm_factors[0]);
+						}
+						else
+						{
+							nf = 0;
+						}
+					}
+				}
+				else
+				{
+					// check if the factor is prime.  could again use
+					// a cheaper method.
+					if (mpz_probab_prime_p(fac[0], 1) > 0)
+					{
+						// if the factor is obviously too big, give up.  This isn't a
+						// failure since we haven't expended much effort yet.
+						nf = 0;
+					}
+					else
+					{
+						// tecm found a composite first factor.
+						// if it is obviously too big, we're done.
+						if (mpz_sizeinbase(fac[0], 2) > ((max_primebits[s] * 2)))
+						{
+							nf = 0;
+							goto done;
+						}
+
+						// isolate the 2nd smaller factor, and check its size.
+						mpz_tdiv_q(fac[1], large_factors[s], fac[0]);
+
+						if (mpz_sizeinbase(fac[1], 2) > (max_primebits[s]))
+						{
+							nf = 0;
+							goto done;
+						}
+
+						// todo: target this better based on expected factor size.
+						uint64_t q64;
+						uint64_t f64;
+						if (mpz_sizeinbase(fac[0], 2) <= 64)
+						{
+							q64 = mpz_get_ui(fac[0]);
+							f64 = getfactor_uecm(q64, 0, &pran);
+							mpz_set_ui(fac[2], f64);
+						}
+						else
+						{
+							// we have a composite residue > 64 bits.  
+							// use ecm with high effort first
+							getfactor_tecm(fac[0], fac[2], 32, &pran);
+						}
+						f64 = mpz_get_ui(fac[2]);
+
+						if (f64 > 1)
+						{
+							mpz_tdiv_q_ui(fac[0], fac[0], f64);
+							nf = 3;
+
+							if (mpz_sizeinbase(fac[0], 2) > max_primebits[s]) {
+								nf = 0;
+							}
+							if (mpz_sizeinbase(fac[2], 2) > max_primebits[s]) {
+								nf = 0;
+							}
+							if (mpz_probab_prime_p(fac[0], 1) == 0)
+							{
+								nf = 0;
+							}
+							if (mpz_probab_prime_p(fac[1], 1) == 0)
+							{
+								nf = 0;
+							}
+							if (mpz_probab_prime_p(fac[2], 1) == 0)
+							{
+								nf = 0;
+							}
+
+						}
+						else
+						{
+							// uecm/tecm failed, which does sometimes happen
+							nf = mpqs_factor(fac[0], max_primebits[s], &fac);
+							if (nf == 2)
+							{
+								// fac is now set to mpqs's statically allocated
+								// set of mpz_t's.  copy in the one we found by ecm.
+								nf = 3;
+								mpz_set(fac[2], uecm_factors[1]);
+							}
+							else
+							{
+								nf = 0;
+							}
+						}
+					}
+				}
+			}
+			else
+			{
+				// if ecm can't find a factor, give up.  
+				// unless this is a DLP with lpbr/a > 32... i.e., if the
+				// large factor size is greater than 64 bits but less than
+				// lpbr/a * 2.  In that case run mpqs... or tecm with
+				// greater effort.
+
+
+#if 0
+				if (mpz_sizeinbase(large_factors[s1], 2) <= (max_primebits[s1] * 2))
+				{
+					if (getfactor_tecm(large_factors[s1], factor1, 33, &pran) > 0)
+					{
+						if (mpz_sizeinbase(factor1, 2) <= max_primebits[s1])
+						{
+							mpz_tdiv_q(factor2, large_factors[s1], factor1);
+
+							// check if the residue is prime.  could again use
+							// a cheaper method.
+							if (mpz_probab_prime_p(factor2, 1) > 0)
+							{
+								if (mpz_sizeinbase(factor2, 2) <= max_primebits[s1])
+								{
+									// we just completed a DLP factorization involving
+									// 2 primes whos product was > 64 bits.
+									mpz_set(large_primes[s1][0], factor1);
+									mpz_set(large_primes[s1][1], factor2);
+									nlp[s1] = 2;
+								}
+								else
+									break;
+							}
+							else
+								break;
+						}
+						else
+							break;
+					}
+					else
+						break;
+				}
+				else
+					break;
+#else
+
+				if (mpz_sizeinbase(large_factors[s], 2) <= (max_primebits[s] * 2))
+				{
+					nf = mpqs_factor(large_factors[s], max_primebits[s], &fac);
+				}
+				else
+				{
+#if 0
+					// try for a lucky p-1 hit on the 3LP before we go?
+					// testing on an input with LPB=33 and 3LP enabled
+					// saw that p-1 finds lots of factors but the residues
+					// are all (99.9%) large primes.  I.e., exactly the
+					// kind of inputs we want to not waste time on.
+					if (getfactor_tpm1(large_factors[s], fac[0], 333))
+					{
+						mpz_tdiv_q(fac[1], large_factors[s], fac[0]);
+						if (mpz_sizeinbase(fac[1], 2) <= max_primebits[s])
+						{
+							gmp_printf("P-1 Success! %Zd = %Zd * %Zd\n",
+								large_factors[s], fac[0], fac[1]);
+						}
+						else if (mpz_probab_prime_p(fac[1], 1) == 0)
+						{
+							gmp_printf("Residue %Zd with %d bits is composite\n",
+								fac[1], mpz_sizeinbase(fac[1], 2));
+							gmp_printf("3LP = ");
+
+							mpz_set(fac[2], fac[0]);
+							nf = 1 + mpqs_factor(fac[2], max_primebits[s], &fac);
+
+							for (i = 0; i < nf; i++)
+								gmp_printf("%Zd ", fac[i]);
+							printf("\n");
+						}
+					}
+#else
+					nf = 0;
+#endif
+				}
+#endif
+			}
+#endif
+		}
+	}
+
+
+	mpz_clear(gmpf);
+	return numout;
+}
+
+int factor64(uint64_t in, uint64_t* out,
+	uint64_t* primes, uint64_t nump, uint64_t* prng)
+{
+	// factor input 'in', which is assumed to be <= 64 bits in size.
+	// avoid the overhead associated with the main factor() routine.
+	// utilize an input list of primes for trial division.
+	// also accept a 64-bit PRNG seed for LCG-RNG
+	// first a bit of trial division.
+	int k = 0;
+	int numout = 0;
+	while ((in > 1) && (primes[k] < 10000) && (k < nump))
+	{
+		uint64_t q = primes[k];
+		uint64_t r = in %q;
+
+		if (r != 0)
+		{
+			k++;
+		}
+		else
+		{
+			in /= q;
+			out[numout++] = q;
+		}
+	}
+
+	while (in > 1)
+	{
+		if (prp_uecm(in))
+		{
+			// prime residue
+			out[numout++] = in;
+			break;
+		}
+
+		uint64_t f = getfactor_uecm(in, 1, prng);
+		if (f > 1)
+		{
+			if (prp_uecm(f) == 0)
+			{
+				// found a composite factor.  try P-1 and rho on the factor.
+				uint64_t f1 = getfactor_upm1(f, 33);
+				if (f1 > 1) {
+					if (prp_uecm(f1) == 1)
+					{
+						out[numout++] = f1;
+						in /= f1;
+						if (prp_uecm(f / f1) == 1)
+						{
+							out[numout++] = f / f1;
+							in /= (f / f1);
+						}
+						continue;
+					}
+				}
+				f1 = getfactor_upm1(f, 100);
+				if (f1 > 1) {
+					if (prp_uecm(f1) == 1)
+					{
+						out[numout++] = f1;
+						in /= f1;
+						if (prp_uecm(f / f1) == 1)
+						{
+							out[numout++] = f / f1;
+							in /= (f / f1);
+						}
+						continue;
+					}
+				}
+				f1 = getfactor_upm1(f, 333);
+				if (f1 > 1) {
+					if (prp_uecm(f1) == 1)
+					{
+						out[numout++] = f1;
+						in /= f1;
+						if (prp_uecm(f / f1) == 1)
+						{
+							out[numout++] = f / f1;
+							in /= (f / f1);
+						}
+						continue;
+					}
+				}
+				int imax = 64;
+				int found = 0;
+				for (; imax < 8192; imax *= 2)
+				{
+					f1 = spbrent64(f, imax);
+					if (f1 > 1) {
+						if (prp_uecm(f1) == 1)
+						{
+							out[numout++] = f1;
+							in /= f1;
+							if (prp_uecm(f / f1) == 1)
+							{
+								out[numout++] = f / f1;
+								in /= (f / f1);
+							}
+							break;
+						}
+					}
+				}
+			}
+			else
+			{
+				out[numout++] = f;
+				in /= f;
+			}
+		}
+		else
+		{
+			// uecm failed. try PM1, rho, then MPQS.
+			f = getfactor_upm1(in, 33);
+			if (f > 1) {
+				if (prp_uecm(f) == 1)
+				{
+					out[numout++] = f;
+					in /= f;
+					continue;
+				}
+			}
+			f = getfactor_upm1(in, 100);
+			if (f > 1) {
+				if (prp_uecm(f) == 1)
+				{
+					out[numout++] = f;
+					in /= f;
+					continue;
+				}
+			}
+			f = getfactor_upm1(in, 333);
+			if (f > 1) {
+				if (prp_uecm(f) == 1)
+				{
+					out[numout++] = f;
+					in /= f;
+					continue;
+				}
+			}
+			int imax = 64;
+			for (; imax < 8192; imax *= 2)
+			{
+				f = spbrent64(in, imax);
+				if (f > 1) {
+					if (prp_uecm(f) == 1)
+					{
+						out[numout++] = f;
+						in /= f;
+						break;
+					}
+				}
+			}
+
+			break;
+		}
+	}
+
+	return numout;
+}
+#endif
+
+void write_factor_json(fact_obj_t* fobj, factor_work_t *fwork,
+	struct timeval *start, struct timeval *stop)
+{
+	FILE* fid = fopen(fobj->factor_json_name, "a");
+	yfactor_list_t* flist = fobj->factors;
+	int i;
+	int j;
+	int nump = 0;
+	int numprp = 0;
+	int numc = 0;
+	int printedp = 0;
+	int printedprp = 0;
+	int printedc = 0;
+	char lf = '\n';
+
+	if (fobj->autofact_obj.json_pretty)
+		lf = '\n';
+	else
+		lf = ' ';
+
+	if (fid != NULL)
+	{
+		fprintf(fid, "{%c", lf);
+		fprintf(fid, "\t\"input-expression\":\"%s\",%c", fobj->input_str, lf);
+		gmp_fprintf(fid, "\t\"input-decimal\":\"%Zd\",%c", fobj->input_N, lf);
+
+		if (fobj->argc > 1)
+		{
+			fprintf(fid, "\t\"input-argument-string\":\"");
+			for (i = 1; i < fobj->argc; i++)
+			{
+				if (i == (fobj->argc - 1))
+					fprintf(fid, "%s", fobj->argv[i]);
+				else
+					fprintf(fid, "%s ", fobj->argv[i]);
+			}
+			fprintf(fid, "\",%c", lf);
+		}
+
+		for (i = 0; i < flist->num_factors; i++)
+		{
+			if (flist->factors[i].type == PRIME)
+				nump++;
+		}
+		for (i = 0; i < flist->num_factors; i++)
+		{
+			if (flist->factors[i].type == PRP)
+				numprp++;
+		}
+		for (i = 0; i < flist->num_factors; i++)
+		{
+			if (flist->factors[i].type == COMPOSITE)
+				numc++;
+		}
+
+		if (nump > 0)
+		{
+			int* printed = (int*)xmalloc(flist->num_factors * sizeof(int));
+			for (i = 0; i < flist->num_factors; i++)
+			{
+				printed[i] = 0;
+			}
+
+			fprintf(fid, "\t\"factors-prime\":[");
+			for (i = 0; i < flist->num_factors; i++)
+			{
+				// if already printed, move on
+				if (printed[i])
+					continue;
+
+				int k;
+				if (flist->factors[i].type == PRIME)
+				{
+					// if there is a smaller number than this one, print it first (sorts prime factors)
+					k = i;
+					for (j = i+1; j < flist->num_factors; j++)
+					{
+						if ((mpz_cmp(flist->factors[j].factor, flist->factors[i].factor) < 0) &&
+							(printed[j] == 0))
+						{
+							k = j;		// set next index to print
+							i = i - 1;	// consider this number again on the next iteration
+							break;
+						}
+					}
+
+					// don't redo APR-CL calculations already performed by add_to_factor_list
+					for (j = 0; j < flist->factors[k].count - 1; j++)
+					{
+						gmp_fprintf(fid, "\"%Zd\",", flist->factors[k].factor);
+					}
+
+					if (printedp == (nump - 1))
+					{
+						gmp_fprintf(fid, "\"%Zd\"],%c", flist->factors[k].factor, lf);
+					}
+					else
+					{
+						gmp_fprintf(fid, "\"%Zd\",", flist->factors[k].factor);
+					}
+					printedp++;
+					printed[k] = 1;
+				}
+			}
+			free(printed);
+		}
+
+		if (numprp > 0)
+		{
+			fprintf(fid, "\t\"factors-prp\":[");
+			for (i = 0; i < flist->num_factors; i++)
+			{
+				if (flist->factors[i].type == PRP)
+				{
+					for (j = 0; j < flist->factors[i].count - 1; j++)
+					{
+						gmp_fprintf(fid, "\"%Zd\",", flist->factors[i].factor);
+					}
+					if (printedprp == (numprp - 1))
+					{
+						gmp_fprintf(fid, "\"%Zd\"],%c", flist->factors[i].factor, lf);
+					}
+					else
+					{
+						gmp_fprintf(fid, "\"%Zd\",", flist->factors[i].factor);
+					}
+					printedprp++;
+				}
+			}
+		}
+
+		if (numc > 0)
+		{
+			fprintf(fid, "\t\"factors-composite\":[");
+			for (i = 0; i < flist->num_factors; i++)
+			{
+				if (flist->factors[i].type == COMPOSITE)
+				{
+					for (j = 0; j < flist->factors[i].count - 1; j++)
+					{
+						gmp_fprintf(fid, "\"%Zd\",", flist->factors[i].factor);
+					}
+					if (printedc == (numc - 1))
+					{
+						gmp_fprintf(fid, "\"%Zd\"],%c", flist->factors[i].factor, lf);
+					}
+					else
+					{
+						gmp_fprintf(fid, "\"%Zd\",", flist->factors[i].factor);
+					}
+					printedc++;
+				}
+			}
+		}
+
+		if (fwork->pm1_lvl1_curves > 0)
+		{
+			fprintf(fid, "\t\"pm1-curves\" : {\"150000\":%d", fwork->pm1_lvl1_curves);
+		}
+		if (fwork->pm1_lvl2_curves > 0)
+		{
+			fprintf(fid, ",\"3750000\":%d", fwork->pm1_lvl2_curves);
+		}
+		if (fwork->pm1_lvl3_curves > 0)
+		{
+			fprintf(fid, ",\"15000000\":%d", fwork->pm1_lvl3_curves);
+		}
+		if (fwork->pm1_lvl1_curves > 0) fprintf(fid, "},%c", lf);
+
+		if (fwork->pp1_lvl1_curves > 0)
+		{
+			fprintf(fid, "\t\"pp1-curves\" : {\"25000\":%d", fwork->pp1_lvl1_curves);
+		}
+		if (fwork->pp1_lvl2_curves > 0)
+		{
+			fprintf(fid, ",\"750000\":%d", fwork->pp1_lvl2_curves);
+		}
+		if (fwork->pp1_lvl3_curves > 0)
+		{
+			fprintf(fid, ",\"2500000\":%d", fwork->pp1_lvl3_curves);
+		}
+		if (fwork->pp1_lvl1_curves > 0) fprintf(fid, "},%c", lf);
+
+
+		if (fobj->ecm_obj.tlevels[0] > 0.01)
+		{
+			fprintf(fid, "\t\"ecm-curves\" : {");
+
+			for (i = 0; i < fobj->ecm_obj.num_records-1; i++)
+			{
+				fprintf(fid, "\"%"PRIu64"\":%d,", 
+					fobj->ecm_obj.curve_b1_rec[i], fobj->ecm_obj.num_rec[i]);
+			}
+			if (fobj->ecm_obj.num_records > 0)
+			{
+				fprintf(fid, "\"%"PRIu64"\":%d",
+					fobj->ecm_obj.curve_b1_rec[i], fobj->ecm_obj.num_rec[i]);
+			}
+
+			fprintf(fid, "},%c", lf);
+
+			fprintf(fid, "\t\"ecm-levels\" : {");
+
+			int level = 15;
+			for (i = 0; i < NUM_ECM_LEVELS - 1; i++)
+			{
+				if ((fobj->ecm_obj.tlevels[i] > 0.01) && (fobj->ecm_obj.tlevels[i + 1] > 0.01))
+				{
+					fprintf(fid, "\"t%d\":%1.2f,", level, fobj->ecm_obj.tlevels[i]);
+				}
+				else if (fobj->ecm_obj.tlevels[i] > 0.01)
+				{
+					fprintf(fid, "\"t%d\":%1.2f},%c", level, fobj->ecm_obj.tlevels[i], lf);
+					break;
+				}
+				level += 5;
+			}
+
+			if (fobj->ecm_obj.total_work > 0.0)
+			{
+				fprintf(fid, "\t\"ecm-sum\":%1.2f,%c", fobj->ecm_obj.total_work, lf);
+			}
+		}
+
+		fprintf(fid, "\t\"runtime\" : {\"total\":%1.4f", fobj->autofact_obj.ttime);
+		if (fobj->ecm_obj.ttime > 0.00001) fprintf(fid, ", \"ecm\":%1.4f", fobj->ecm_obj.ttime);
+		if (fobj->pm1_obj.ttime > 0.00001) fprintf(fid, ", \"pm1\":%1.4f", fobj->pm1_obj.ttime);
+		if (fobj->pp1_obj.ttime > 0.00001) fprintf(fid, ", \"pp1\":%1.4f", fobj->pp1_obj.ttime);
+		if (fobj->qs_obj.total_time > 0.00001) fprintf(fid, ", \"siqs\":%1.4f", fobj->qs_obj.total_time);
+		if (fobj->nfs_obj.ttime > 0.00001) fprintf(fid, ", \"nfs-total\":%1.4f", fobj->nfs_obj.ttime);
+		if (fobj->nfs_obj.poly_time > 0.00001) fprintf(fid, ", \"nfs-poly\":%1.4f", fobj->nfs_obj.poly_time);
+		if (fobj->nfs_obj.sieve_time > 0.00001) fprintf(fid, ", \"nfs-sieve\":%1.4f", fobj->nfs_obj.sieve_time);
+		if (fobj->nfs_obj.filter_time > 0.00001) fprintf(fid, ", \"nfs-filter\":%1.4f", fobj->nfs_obj.filter_time);
+		if (fobj->nfs_obj.la_time > 0.00001) fprintf(fid, ", \"nfs-la\":%1.4f", fobj->nfs_obj.la_time);
+		if (fobj->nfs_obj.sqrt_time > 0.00001) fprintf(fid, ", \"nfs-sqrt\":%1.4f", fobj->nfs_obj.sqrt_time);
+		//if (fobj->nfs_obj.poly_time > 0.0) fprintf(fid, ", \"nfs-poly-score\":%1.4f", fobj->nfs_obj.sqrt_time);
+		fprintf(fid, "},%c", lf);
+
+		char buffer[30];
+		time_t curtime;
+
+		curtime = start->tv_sec;
+		strftime(buffer, 30, "%Y-%m-%d  %T", localtime(&curtime));
+		fprintf(fid, "\t\"time-start\" : \"%s\",%c", buffer, lf);
+		curtime = stop->tv_sec;
+		strftime(buffer, 30, "%Y-%m-%d  %T", localtime(&curtime));
+		fprintf(fid, "\t\"time-end\" : \"%s\",%c", buffer, lf);
+
+
+		fprintf(fid, "\t\"info\":{");
+
+#if defined(_MSC_VER) && defined(__clang_version__)
+		fprintf(fid, "\"compiler\":\"MSVC %d, %s\",", _MSC_VER, __clang_version__);
+#elif defined(_MSC_VER)
+		fprintf(fid, "\"compiler\":\"MSVC %d\",", _MSC_VER);
+#elif defined (__INTEL_COMPILER)
+		fprintf(fid, "\"compiler\":\"INTEL %d\",", __INTEL_COMPILER);
+#elif defined(__clang_version__)
+		fprintf(fid, "\"compiler\":\"%s\",", __clang_version__);
+#elif defined (__GNUC__)
+		fprintf(fid, "\"compiler\":\"GNUC %d\",", __GNUC__);
+#endif
+
+#ifdef _MSC_MPIR_VERSION
+#ifdef ECM_VERSION
+		fprintf(fid, "\"ECM-version\":\"%s\",\"MPIR-version\":\"%s\",", ECM_VERSION,
+			_MSC_MPIR_VERSION);
+#elif defined(VERSION)
+
+		fprintf(fid, "\"ECM-version\":\"%s\",\"MPIR-version\":\"%s\",", VERSION,
+			_MSC_MPIR_VERSION);
+#endif
+#else
+#ifdef ECM_VERSION
+		fprintf(fid, "\"ECM-version\":\"%s\",\"GMP-version\":\"%d.%d.%d\",", ECM_VERSION,
+			__GNU_MP_VERSION, __GNU_MP_VERSION_MINOR, __GNU_MP_VERSION_PATCHLEVEL);
+#endif
+
+#endif
+		fprintf(fid, "\"yafu-version\":\"%s\"}%c}\n", YAFU_VERSION_STRING, lf);
+
+		fclose(fid);
+	}
+	else
+	{
+		printf("could not open %s to append\n", fobj->factor_json_name);
+		exit(1);
+	}
+
+	return;
+}
+
+
+

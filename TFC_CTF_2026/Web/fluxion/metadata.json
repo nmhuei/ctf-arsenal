@@ -1,0 +1,82 @@
+{
+  "id": "9bf6d9e7-415f-4342-8632-1f1b700d1bde",
+  "name": "fluxion",
+  "category": "Web",
+  "points": 128,
+  "author": "skyv3il",
+  "tags": [
+    "BABY",
+    "container",
+    "http"
+  ],
+  "hints": [],
+  "connection_info": "http://fluxion-1849252b564cd819.challs.ctf.thefewchosen.com",
+  "solved_by_me": false,
+  "solves_count": 116,
+  "submit_endpoint": null,
+  "instance_info": {},
+  "downloaded_files": [
+    {
+      "url": "https://api.ctf.thefewchosen.com/challenge-files/fluxion-source_856e9e4f4a3b28ad.zip",
+      "name": "fluxion-source.zip",
+      "saved_path": "/home/light/Workspace/CTF/TFC_CTF_2026/Web/fluxion/challenge/fluxion-source.zip",
+      "success": true,
+      "source": "platform_attachment",
+      "message": "\u0110\u00e3 t\u1ea3i tr\u1ef1c ti\u1ebfp th\u00e0nh c\u00f4ng",
+      "verification": {
+        "etag": null,
+        "final_url": "https://api.ctf.thefewchosen.com/challenge-files/fluxion-source_856e9e4f4a3b28ad.zip",
+        "last_modified": null,
+        "schema_version": 1,
+        "sha256": null,
+        "size": 80714,
+        "url": "https://api.ctf.thefewchosen.com/challenge-files/fluxion-source_856e9e4f4a3b28ad.zip",
+        "verified_at": "2026-09-05T14:42:25Z"
+      }
+    }
+  ],
+  "raw": {
+    "category_id": "b76b709a-99ec-4c01-bfb6-65967e03be59",
+    "difficulty_id": "20fe6dbc-f147-4a9e-8282-f11ffbb8e723",
+    "challenge_name": "fluxion",
+    "challenge_author": "skyv3il",
+    "challenge_id": "9bf6d9e7-415f-4342-8632-1f1b700d1bde",
+    "flags": [
+      {
+        "flag_id": "47be83eb-26f3-4009-aed0-8727ee8c9607",
+        "flag_points": 269,
+        "flag_question": "",
+        "flag_order": 24,
+        "is_solved": false
+      }
+    ],
+    "description": "Durable workflow engine with a live observability console: workflows that pause on webhooks/hooks and resume where they left off, streamed to a dashboard.",
+    "files": [
+      {
+        "file_name": "fluxion-source.zip",
+        "file_url": "https://api.ctf.thefewchosen.com/challenge-files/fluxion-source_856e9e4f4a3b28ad.zip"
+      }
+    ],
+    "is_dynamic": true,
+    "amount_solves": 47,
+    "connection_type": "http",
+    "image_name": "fluxion",
+    "http_only": true,
+    "allow_host_header_override": false
+  },
+  "status": {
+    "schema_version": 2,
+    "solve": "unsolved",
+    "flag": {
+      "value": null,
+      "state": "none"
+    },
+    "writeup": "none",
+    "writeup_auto": true,
+    "notes": "",
+    "labels": [],
+    "container": "none",
+    "synced_at": "2026-09-06T05:10:58Z",
+    "updated_at": "2026-09-06T05:10:58Z"
+  }
+}

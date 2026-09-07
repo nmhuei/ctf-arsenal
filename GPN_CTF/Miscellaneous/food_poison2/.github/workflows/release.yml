@@ -1,0 +1,50 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+  issues:
+    types: opened
+  issue_comment:
+    types: created
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    if: >-
+      (github.event_name == 'issue_comment' && github.event.comment.body == '/release') ||
+      (github.event_name == 'issues' && contains(github.event.issue.body, '/release')) ||
+      github.event_name == 'workflow_dispatch' ||
+      github.event_name == 'push'
+    timeout-minutes: 3
+    env:
+      SCCACHE_GHA_ENABLED: "true"
+      RUSTC_WRAPPER: "sccache"
+    steps:
+      - name: Run sccache-cache
+        uses: mozilla-actions/sccache-action@9e7fa8a12102821edf02ca5dbea1acd0f89a2696 # v0.0.10
+        with:
+          version: "v0.14.0"
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+
+      - name: Set up Rust
+        uses: dtolnay/rust-toolchain@29eef336d9b2848a0b548edc03f92a220660cdb8 # current stable
+
+      - name: Build release binary
+        run: cargo build --release --locked
+
+      - name: Smoke test binary command
+        run: ./target/release/restaurant_cli add "The best food place" "${{ secrets.FLAG }}"
+
+      - name: Create GitHub Release
+        run: |
+          RELEASE_TAG="lol-$GITHUB_RUN_NUMBER"
+          gh release create "$RELEASE_TAG" --title "$RELEASE_TAG" --notes "Release $RELEASE_TAG" --repo "$GITHUB_REPOSITORY"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

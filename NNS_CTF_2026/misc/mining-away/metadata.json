@@ -1,0 +1,45 @@
+{
+  "id": "misc_mining-away",
+  "name": "mining-away",
+  "category": "misc",
+  "points": 299,
+  "author": "0xle",
+  "tags": [],
+  "hints": [],
+  "connection_info": null,
+  "solved_by_me": false,
+  "solves_count": 11,
+  "submit_endpoint": null,
+  "instance_info": {
+    "is_container": true,
+    "status": "stopped",
+    "last_updated": "2026-09-05 20:54:21"
+  },
+  "downloaded_files": [],
+  "raw": {
+    "id": "misc_mining-away",
+    "name": "mining-away",
+    "description": "Minin' away\nI don't know what to mine\nI'll mine this anyway\n\nConnect using:\n```\nsocat TCP-LISTEN:25565,reuseaddr,fork OPENSSL:<instance>:1337\n```\n\n",
+    "category": "misc",
+    "author": "0xle",
+    "files": [],
+    "points": 500,
+    "solves": 0,
+    "sortWeight": 0
+  },
+  "status": {
+    "schema_version": 2,
+    "solve": "unsolved",
+    "flag": {
+      "value": null,
+      "state": "none"
+    },
+    "writeup": "none",
+    "writeup_auto": true,
+    "notes": "",
+    "labels": [],
+    "container": "stopped",
+    "synced_at": "2026-09-05T07:11:32Z",
+    "updated_at": "2026-09-05T07:11:32Z"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "id": "devsecoops_Hiding in your WiFi",
+  "name": "Hiding in your WiFi",
+  "category": "devsecoops",
+  "points": 65,
+  "author": "0xle",
+  "tags": [],
+  "hints": [],
+  "connection_info": null,
+  "solved_by_me": false,
+  "solves_count": 193,
+  "submit_endpoint": null,
+  "instance_info": {
+    "is_container": true,
+    "status": "running",
+    "last_updated": "2026-09-04 23:53:27"
+  },
+  "downloaded_files": [],
+  "raw": {
+    "id": "devsecoops_Hiding in your WiFi",
+    "name": "Hiding in your WiFi",
+    "description": "I'm on your network. There is a client at `10.10.10.20` that keeps\nfetching something from the web server at `10.10.10.10`, and the server\nonly talks to the client.\n\nYou are `10.10.10.66`. You have `arpspoof` and `tcpdump`.\n\n",
+    "category": "devsecoops",
+    "author": "0xle",
+    "files": [],
+    "points": 500,
+    "solves": 0,
+    "sortWeight": 100
+  },
+  "status": {
+    "schema_version": 2,
+    "solve": "unsolved",
+    "flag": {
+      "value": null,
+      "state": "none"
+    },
+    "writeup": "none",
+    "writeup_auto": true,
+    "notes": "",
+    "labels": [],
+    "container": "running",
+    "synced_at": "2026-09-05T07:11:32Z",
+    "updated_at": "2026-09-05T07:11:32Z"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "fluxion",
+  "version": "1.4.0",
+  "private": true,
+  "description": "Fluxion — durable workflow engine + observability",
+  "main": "src/server.js",
+  "scripts": { "start": "node src/server.js" },
+  "dependencies": {
+    "express": "4.19.2",
+    "seedrandom": "3.0.5",
+    "nanoid": "3.3.7"
+  }
+}

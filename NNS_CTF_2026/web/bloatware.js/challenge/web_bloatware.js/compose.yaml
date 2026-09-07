@@ -1,0 +1,7 @@
+services:
+  chal:
+    build: .
+    ports:
+      - 3001:3000
+    environment:
+      FLAG: "NNS{fake_flag_🥀}"

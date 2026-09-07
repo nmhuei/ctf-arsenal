@@ -1,0 +1,65 @@
+{
+  "id": "web_perchance",
+  "name": "perchance",
+  "category": "web",
+  "points": 109,
+  "author": "piprett",
+  "tags": [],
+  "hints": [],
+  "connection_info": null,
+  "solved_by_me": false,
+  "solves_count": 58,
+  "submit_endpoint": null,
+  "instance_info": {},
+  "downloaded_files": [
+    {
+      "url": "https://attachments.nnsc.tf/uploads/f9811ae6ad2785a7eb52387b3f87b7e0151bf28e3450e9de1d6f9cf84a989271/web_perchance.tar.gz",
+      "name": "web_perchance.tar.gz",
+      "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/web/perchance/challenge/web_perchance.tar.gz",
+      "success": true,
+      "source": "platform_attachment",
+      "message": "Đã tải trực tiếp thành công",
+      "verification": {
+        "etag": "\"571f2cd3b067dcf8b875e27437c1ff8f\"",
+        "final_url": "https://attachments.nnsc.tf/uploads/f9811ae6ad2785a7eb52387b3f87b7e0151bf28e3450e9de1d6f9cf84a989271/web_perchance.tar.gz",
+        "last_modified": "Thu, 03 Sep 2026 13:23:15 GMT",
+        "schema_version": 1,
+        "sha256": null,
+        "size": 57719,
+        "url": "https://attachments.nnsc.tf/uploads/f9811ae6ad2785a7eb52387b3f87b7e0151bf28e3450e9de1d6f9cf84a989271/web_perchance.tar.gz",
+        "verified_at": "2026-09-04T16:05:45Z"
+      }
+    }
+  ],
+  "raw": {
+    "id": "web_perchance",
+    "name": "perchance",
+    "description": "perchance\n\n> [!TIP]\n> `doc.rust-lang.org` itself is out of scope!\n\n",
+    "category": "web",
+    "author": "piprett",
+    "files": [
+      {
+        "name": "web_perchance.tar.gz",
+        "url": "https://attachments.nnsc.tf/uploads/f9811ae6ad2785a7eb52387b3f87b7e0151bf28e3450e9de1d6f9cf84a989271/web_perchance.tar.gz"
+      }
+    ],
+    "points": 500,
+    "solves": 0,
+    "sortWeight": 0
+  },
+  "status": {
+    "schema_version": 2,
+    "solve": "unsolved",
+    "flag": {
+      "value": null,
+      "state": "none"
+    },
+    "writeup": "none",
+    "writeup_auto": true,
+    "notes": "",
+    "labels": [],
+    "container": "none",
+    "synced_at": "2026-09-05T07:11:32Z",
+    "updated_at": "2026-09-05T07:11:32Z"
+  }
+}

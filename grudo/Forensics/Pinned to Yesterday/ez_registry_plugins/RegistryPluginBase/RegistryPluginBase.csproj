@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>Eric Zimmerman</Authors>
+    <Company>Eric Zimmerman</Company>
+    <Product>RegistryPluginBase</Product>
+    <Description>RegistryPluginBase. Use this to create your own Registry Explorer plugins!</Description>
+    <Copyright>Eric Zimmerman</Copyright>
+    <PackageProjectUrl>https://github.com/EricZimmerman/RegistryPlugins</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/EricZimmerman/RegistryPlugins</RepositoryUrl>
+    <Version>2026.5.0</Version>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETCore.Platforms" Version="7.0.4" />
+    <PackageReference Include="System.Text.Encoding.CodePages" Version="10.0.7" />
+    <PackageReference Include="ExtensionBlocks" Version="2026.5.0" />
+    <PackageReference Include="GuidMapping" Version="2026.5.0" />
+    <PackageReference Include="Registry" Version="2026.5.0" />
+  </ItemGroup>
+</Project>

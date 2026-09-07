@@ -1,0 +1,48 @@
+{
+  "id": "devsecoops_Self-service",
+  "name": "Self-service",
+  "category": "devsecoops",
+  "points": 85,
+  "author": "0xle",
+  "tags": [],
+  "hints": [],
+  "connection_info": null,
+  "solved_by_me": false,
+  "solves_count": 94,
+  "submit_endpoint": null,
+  "instance_info": {
+    "is_container": true,
+    "status": "running",
+    "last_updated": "2026-09-05 00:20:15",
+    "active_instance": "self-service-e41ccc3d86ea.chall.nnsc.tf:1337",
+    "last_entry": "self-service-e41ccc3d86ea.chall.nnsc.tf:1337",
+    "remaining_time": 2718
+  },
+  "downloaded_files": [],
+  "raw": {
+    "id": "devsecoops_Self-service",
+    "name": "Self-service",
+    "description": "You are our brand new contractor at NNS corp! You have been given a user \naccount: `ereid:Summer2026`. Welcome on board!\n\nSSH is exposed over TLS:\n\n```\nssh -o ProxyCommand='openssl s_client -quiet -connect %h:%p' ereid@HOST -p 1337\n```\n\n",
+    "category": "devsecoops",
+    "author": "0xle",
+    "files": [],
+    "points": 500,
+    "solves": 0,
+    "sortWeight": 0
+  },
+  "status": {
+    "schema_version": 2,
+    "solve": "unsolved",
+    "flag": {
+      "value": null,
+      "state": "none"
+    },
+    "writeup": "none",
+    "writeup_auto": true,
+    "notes": "",
+    "labels": [],
+    "container": "running",
+    "synced_at": "2026-09-05T07:11:32Z",
+    "updated_at": "2026-09-05T07:11:32Z"
+  }
+}

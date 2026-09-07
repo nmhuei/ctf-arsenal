@@ -1,0 +1,80 @@
+{
+  "id": "364bd809-0d39-4596-9661-cabd249e82dc",
+  "name": "math or meth?",
+  "category": "Crypto",
+  "points": 50,
+  "author": "minipif",
+  "tags": [
+    "GRANDPA"
+  ],
+  "hints": [],
+  "connection_info": null,
+  "solved_by_me": true,
+  "solves_count": 202,
+  "submit_endpoint": null,
+  "instance_info": {},
+  "downloaded_files": [
+    {
+      "url": "https://api.ctf.thefewchosen.com/challenge-files/chall_832664c16adb5ace.zip",
+      "name": "chall.zip",
+      "saved_path": "/home/light/Workspace/CTF/TFC_CTF_2026/Crypto/math_or_meth/challenge/chall.zip",
+      "success": true,
+      "source": "platform_attachment",
+      "message": "Đã tải trực tiếp thành công",
+      "verification": {
+        "etag": null,
+        "final_url": "https://api.ctf.thefewchosen.com/challenge-files/chall_832664c16adb5ace.zip",
+        "last_modified": null,
+        "schema_version": 1,
+        "sha256": null,
+        "size": 15382,
+        "url": "https://api.ctf.thefewchosen.com/challenge-files/chall_832664c16adb5ace.zip",
+        "verified_at": "2026-09-05T14:42:24Z"
+      }
+    }
+  ],
+  "raw": {
+    "category_id": "8c1da7f6-10f6-41da-a7f7-e3f546771ae6",
+    "difficulty_id": "d693c1dd-450f-42aa-be57-353b6b45552c",
+    "challenge_name": "math or meth?",
+    "challenge_author": "minipif",
+    "challenge_id": "364bd809-0d39-4596-9661-cabd249e82dc",
+    "flags": [
+      {
+        "flag_id": "874b3d6c-b606-4470-8d0a-b2e228307127",
+        "flag_points": 95,
+        "flag_question": "",
+        "flag_order": 7,
+        "is_solved": false
+      }
+    ],
+    "description": "Br Ba",
+    "files": [
+      {
+        "file_name": "chall.zip",
+        "file_url": "https://api.ctf.thefewchosen.com/challenge-files/chall_832664c16adb5ace.zip"
+      }
+    ],
+    "is_dynamic": false,
+    "amount_solves": 140,
+    "connection_type": null,
+    "image_name": null,
+    "http_only": null,
+    "allow_host_header_override": null
+  },
+  "status": {
+    "schema_version": 2,
+    "solve": "solved_by_me",
+    "flag": {
+      "value": "TFCCTF{this_is_a_very_very_long_flag_for_a_short_ctf_chall_ggs}",
+      "state": "submitted_correct"
+    },
+    "writeup": "none",
+    "writeup_auto": true,
+    "notes": "",
+    "labels": [],
+    "container": "none",
+    "synced_at": "2026-09-06T05:34:41Z",
+    "updated_at": "2026-09-06T05:34:41Z"
+  }
+}

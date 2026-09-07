@@ -1,0 +1,19 @@
+{
+  "builtin-baseline": "48cfe1e0e928341709d97fc3d2eff10ad6262c96",
+  "dependencies": [
+    "fast-float",
+    "fmt",
+    "icu",
+    "libtommath",
+    "mimalloc",
+    "openssl",
+    "simdjson",
+    "simdutf"
+  ],
+  "overrides": [
+    {
+      "name": "mimalloc",
+      "version": "2.2.7#0"
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "id": "89fdbeb2-5f0d-49f8-b4f4-be407f8a14bc",
+  "name": "unbrevable",
+  "category": "Pwn",
+  "points": 135,
+  "author": "minipif",
+  "tags": [
+    "BABY",
+    "container",
+    "netcat"
+  ],
+  "hints": [],
+  "connection_info": null,
+  "solved_by_me": true,
+  "solves_count": 111,
+  "submit_endpoint": null,
+  "instance_info": {},
+  "downloaded_files": [
+    {
+      "url": "https://api.ctf.thefewchosen.com/challenge-files/unbrevable_a1986f1376fb9e38.zip",
+      "name": "unbrevable.zip",
+      "saved_path": "/home/light/Workspace/CTF/TFC_CTF_2026/Pwn/unbrevable/challenge/unbrevable.zip",
+      "success": true,
+      "source": "platform_attachment",
+      "message": "Đã tải trực tiếp thành công",
+      "verification": {
+        "etag": null,
+        "final_url": "https://api.ctf.thefewchosen.com/challenge-files/unbrevable_a1986f1376fb9e38.zip",
+        "last_modified": null,
+        "schema_version": 1,
+        "sha256": null,
+        "size": 10170596,
+        "url": "https://api.ctf.thefewchosen.com/challenge-files/unbrevable_a1986f1376fb9e38.zip",
+        "verified_at": "2026-09-05T14:42:24Z"
+      }
+    }
+  ],
+  "raw": {
+    "category_id": "6a405a86-85f7-4e26-a282-0bb8be973e32",
+    "difficulty_id": "20fe6dbc-f147-4a9e-8282-f11ffbb8e723",
+    "challenge_name": "unbrevable",
+    "challenge_author": "minipif",
+    "challenge_id": "89fdbeb2-5f0d-49f8-b4f4-be407f8a14bc",
+    "flags": [
+      {
+        "flag_id": "2b5f836a-103a-4224-9d1f-4ad9f4dd6515",
+        "flag_points": 212,
+        "flag_question": "",
+        "flag_order": 19,
+        "is_solved": false
+      }
+    ],
+    "description": "should be easy? now in pwn",
+    "files": [
+      {
+        "file_name": "unbrevable.zip",
+        "file_url": "https://api.ctf.thefewchosen.com/challenge-files/unbrevable_a1986f1376fb9e38.zip"
+      }
+    ],
+    "is_dynamic": true,
+    "amount_solves": 69,
+    "connection_type": "netcat",
+    "image_name": "unbrevable-unbrevable",
+    "http_only": false,
+    "allow_host_header_override": false
+  },
+  "status": {
+    "schema_version": 2,
+    "solve": "solved_by_me",
+    "flag": {
+      "value": null,
+      "state": "none"
+    },
+    "writeup": "none",
+    "writeup_auto": true,
+    "notes": "",
+    "labels": [],
+    "container": "none",
+    "synced_at": "2026-09-06T05:34:41Z",
+    "updated_at": "2026-09-06T05:34:41Z"
+  }
+}

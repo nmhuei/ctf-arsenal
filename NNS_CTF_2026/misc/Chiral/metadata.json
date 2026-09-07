@@ -1,0 +1,65 @@
+{
+  "id": "misc_Chiral",
+  "name": "Chiral",
+  "category": "misc",
+  "points": 72,
+  "author": "hoover",
+  "tags": [],
+  "hints": [],
+  "connection_info": null,
+  "solved_by_me": false,
+  "solves_count": 140,
+  "submit_endpoint": null,
+  "instance_info": {},
+  "downloaded_files": [
+    {
+      "url": "https://attachments.nnsc.tf/uploads/84d5bc44b07a8e90e8596d9531e422367b3409d29544f4447ed7979aa0084f8a/misc_chiral.tar.gz",
+      "name": "misc_chiral.tar.gz",
+      "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/misc/Chiral/challenge/misc_chiral.tar.gz",
+      "success": true,
+      "source": "platform_attachment",
+      "message": "Đã tải trực tiếp thành công",
+      "verification": {
+        "etag": "\"0e3660048e2d2aafc529750af5281964\"",
+        "final_url": "https://attachments.nnsc.tf/uploads/84d5bc44b07a8e90e8596d9531e422367b3409d29544f4447ed7979aa0084f8a/misc_chiral.tar.gz",
+        "last_modified": "Thu, 03 Sep 2026 00:03:58 GMT",
+        "schema_version": 1,
+        "sha256": null,
+        "size": 3389,
+        "url": "https://attachments.nnsc.tf/uploads/84d5bc44b07a8e90e8596d9531e422367b3409d29544f4447ed7979aa0084f8a/misc_chiral.tar.gz",
+        "verified_at": "2026-09-04T16:05:46Z"
+      }
+    }
+  ],
+  "raw": {
+    "id": "misc_Chiral",
+    "name": "Chiral",
+    "description": "A strange chiral molecule hides a message in its backbone.\nDecode it from fluorine to bromine.\n\n",
+    "category": "misc",
+    "author": "hoover",
+    "files": [
+      {
+        "name": "misc_chiral.tar.gz",
+        "url": "https://attachments.nnsc.tf/uploads/84d5bc44b07a8e90e8596d9531e422367b3409d29544f4447ed7979aa0084f8a/misc_chiral.tar.gz"
+      }
+    ],
+    "points": 500,
+    "solves": 0,
+    "sortWeight": 0
+  },
+  "status": {
+    "schema_version": 2,
+    "solve": "unsolved",
+    "flag": {
+      "value": null,
+      "state": "none"
+    },
+    "writeup": "none",
+    "writeup_auto": true,
+    "notes": "",
+    "labels": [],
+    "container": "none",
+    "synced_at": "2026-09-05T07:11:32Z",
+    "updated_at": "2026-09-05T07:11:32Z"
+  }
+}

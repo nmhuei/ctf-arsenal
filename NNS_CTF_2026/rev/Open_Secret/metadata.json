@@ -1,0 +1,65 @@
+{
+  "id": "rev_Open Secret",
+  "name": "Open Secret",
+  "category": "rev",
+  "points": 58,
+  "author": "hoover",
+  "tags": [],
+  "hints": [],
+  "connection_info": null,
+  "solved_by_me": false,
+  "solves_count": 334,
+  "submit_endpoint": null,
+  "instance_info": {},
+  "downloaded_files": [
+    {
+      "url": "https://attachments.nnsc.tf/uploads/9196b458040e20f5a1cff9663cb2155d790848311b10b00e4b0abada50f7ff72/rev_open-secret.tar.gz",
+      "name": "rev_open-secret.tar.gz",
+      "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/rev/Open_Secret/challenge/rev_open-secret.tar.gz",
+      "success": true,
+      "source": "platform_attachment",
+      "message": "Đã tải trực tiếp thành công",
+      "verification": {
+        "etag": "\"4b15d38b785c34d59f37331cb8bad3c9\"",
+        "final_url": "https://attachments.nnsc.tf/uploads/9196b458040e20f5a1cff9663cb2155d790848311b10b00e4b0abada50f7ff72/rev_open-secret.tar.gz",
+        "last_modified": "Thu, 03 Sep 2026 00:04:00 GMT",
+        "schema_version": 1,
+        "sha256": null,
+        "size": 1387,
+        "url": "https://attachments.nnsc.tf/uploads/9196b458040e20f5a1cff9663cb2155d790848311b10b00e4b0abada50f7ff72/rev_open-secret.tar.gz",
+        "verified_at": "2026-09-04T16:05:44Z"
+      }
+    }
+  ],
+  "raw": {
+    "id": "rev_Open Secret",
+    "name": "Open Secret",
+    "description": "New to reverse engineering? This beginner challenge is an introduction to\ntracing the system calls a Linux program makes.\n\nThe provided `x86-64` ELF wants a license file before it will do anything,\nbut it will not tell you which one. The path is not written down in the\nbinary either and running `strings` on it only gets you `no license`. The\nprogram builds the path in memory first, and only then asks the kernel to\nopen it.\n\nThis one talks to the kernel directly, so a library call tracer has\nnothing to show you. Run the program under a system call tracer such as\n`strace` instead, watch the call that opens the file, and read the path\nout of its arguments. Your goal is to create the file it is looking for\nand run the program again.\n\n",
+    "category": "rev",
+    "author": "hoover",
+    "files": [
+      {
+        "name": "rev_open-secret.tar.gz",
+        "url": "https://attachments.nnsc.tf/uploads/9196b458040e20f5a1cff9663cb2155d790848311b10b00e4b0abada50f7ff72/rev_open-secret.tar.gz"
+      }
+    ],
+    "points": 299,
+    "solves": 11,
+    "sortWeight": 100
+  },
+  "status": {
+    "schema_version": 2,
+    "solve": "unsolved",
+    "flag": {
+      "value": null,
+      "state": "none"
+    },
+    "writeup": "none",
+    "writeup_auto": true,
+    "notes": "",
+    "labels": [],
+    "container": "none",
+    "synced_at": "2026-09-05T07:11:32Z",
+    "updated_at": "2026-09-05T07:11:32Z"
+  }
+}

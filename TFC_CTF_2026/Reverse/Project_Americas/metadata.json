@@ -1,0 +1,80 @@
+{
+  "id": "47eef538-f63f-4080-b227-660bfff9fb78",
+  "name": "Project Americas",
+  "category": "Reverse",
+  "points": 109,
+  "author": "thek0der",
+  "tags": [
+    "GRANDPA"
+  ],
+  "hints": [],
+  "connection_info": null,
+  "solved_by_me": true,
+  "solves_count": 129,
+  "submit_endpoint": null,
+  "instance_info": {},
+  "downloaded_files": [
+    {
+      "url": "https://api.ctf.thefewchosen.com/challenge-files/challenge_2b32c7401938b95f.zip",
+      "name": "challenge.zip",
+      "saved_path": "/home/light/Workspace/CTF/TFC_CTF_2026/Reverse/Project_Americas/challenge/challenge.zip",
+      "success": true,
+      "source": "platform_attachment",
+      "message": "Đã tải trực tiếp thành công",
+      "verification": {
+        "etag": null,
+        "final_url": "https://api.ctf.thefewchosen.com/challenge-files/challenge_2b32c7401938b95f.zip",
+        "last_modified": null,
+        "schema_version": 1,
+        "sha256": null,
+        "size": 2555866,
+        "url": "https://api.ctf.thefewchosen.com/challenge-files/challenge_2b32c7401938b95f.zip",
+        "verified_at": "2026-09-05T14:42:26Z"
+      }
+    }
+  ],
+  "raw": {
+    "category_id": "f027d346-1ee7-48b9-8720-15a158caf09d",
+    "difficulty_id": "d693c1dd-450f-42aa-be57-353b6b45552c",
+    "challenge_name": "Project Americas",
+    "challenge_author": "thek0der",
+    "challenge_id": "47eef538-f63f-4080-b227-660bfff9fb78",
+    "flags": [
+      {
+        "flag_id": "ca37b686-55bc-477f-9613-462bd966bb4d",
+        "flag_points": 177,
+        "flag_question": "Gib flag...",
+        "flag_order": 13,
+        "is_solved": false
+      }
+    ],
+    "description": "GTA VI L33k!!!",
+    "files": [
+      {
+        "file_name": "challenge.zip",
+        "file_url": "https://api.ctf.thefewchosen.com/challenge-files/challenge_2b32c7401938b95f.zip"
+      }
+    ],
+    "is_dynamic": false,
+    "amount_solves": 86,
+    "connection_type": null,
+    "image_name": null,
+    "http_only": null,
+    "allow_host_header_override": null
+  },
+  "status": {
+    "schema_version": 2,
+    "solve": "solved_by_me",
+    "flag": {
+      "value": null,
+      "state": "none"
+    },
+    "writeup": "none",
+    "writeup_auto": true,
+    "notes": "",
+    "labels": [],
+    "container": "none",
+    "synced_at": "2026-09-06T05:34:41Z",
+    "updated_at": "2026-09-06T05:34:41Z"
+  }
+}

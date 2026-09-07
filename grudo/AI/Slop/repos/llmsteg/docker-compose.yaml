@@ -1,0 +1,26 @@
+version: "3.8"
+
+services:
+  backend:
+    build: ./backend
+    container_name: backend
+    networks:
+      - app-network
+    ports:
+      - "8000:8000"
+    tty: true
+    stdin_open: true
+
+  frontend:
+    build: ./frontend
+    container_name: frontend
+    networks:
+      - app-network
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+
+networks:
+  app-network:
+    driver: bridge

@@ -1,0 +1,26 @@
+name: Lint Code
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+
+jobs:
+  lint:
+    runs-on: blacksmith-2vcpu-ubuntu-2404
+    if: github.repository == 'LadybirdBrowser/ladybird'
+    container:
+      image: ghcr.io/ladybirdbrowser/ladybird-ci:2026.06.14
+
+    steps:
+      - uses: actions/checkout@v7.0.0
+
+      - name: Set Up Environment
+        uses: ./.github/actions/setup
+        with:
+          os: 'Linux'
+          arch: 'x86_64'
+          type: 'lint'
+
+      - name: Lint
+        run: "${GITHUB_WORKSPACE}/Meta/lint-ci.sh"

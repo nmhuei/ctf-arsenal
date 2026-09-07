@@ -1,0 +1,13 @@
+{
+  "name": "fresh-bite",
+  "version": "0.1.0",
+  "description": "Recipe recommendation engine based on available ingredients",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "jest"
+  },
+  "keywords": ["recipes", "ingredients", "food", "recommendations"],
+  "author": "Max Mustermann",
+  "license": "MIT"
+}

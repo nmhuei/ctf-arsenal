@@ -1,0 +1,990 @@
+{
+  "ctf_info": {
+    "title": "TFC_CTF_2026",
+    "url": "https://ctf.thefewchosen.com",
+    "platform": "tfcctf",
+    "user": "USTH_Ex0dia",
+    "team": "USTH_Ex0dia",
+    "game_id": null,
+    "ctftime_id": 3344,
+    "event_window": {
+      "start": "2026-09-05T10:00:00+00:00",
+      "end": "2026-09-06T10:00:00+00:00",
+      "source": "tfcctf:eventStartUnix",
+      "confidence": "high"
+    }
+  },
+  "total_challenges": 29,
+  "total_points": 5142,
+  "categories": {
+    "Pwn": 3,
+    "Misc": 8,
+    "Web": 9,
+    "Crypto": 3,
+    "Reverse": 6
+  },
+  "challenges": [
+    {
+      "id": "e3596b9b-617e-4ac0-9e94-97ffe1dda47d",
+      "name": "V8 motor",
+      "category": "Pwn",
+      "points": 187,
+      "author": "minipif",
+      "tags": [
+        "GRANDPA",
+        "container",
+        "netcat"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": true,
+      "solves_count": 81,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://api.ctf.thefewchosen.com/challenge-files/motor_v8_5761a02bd6ec3629.zip",
+          "name": "motor_v8.zip",
+          "saved_path": "/home/light/Workspace/CTF/TFC_CTF_2026/Pwn/V8_motor/challenge/motor_v8.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": null,
+            "final_url": "https://api.ctf.thefewchosen.com/challenge-files/motor_v8_5761a02bd6ec3629.zip",
+            "last_modified": null,
+            "schema_version": 1,
+            "sha256": null,
+            "size": 13134843,
+            "url": "https://api.ctf.thefewchosen.com/challenge-files/motor_v8_5761a02bd6ec3629.zip",
+            "verified_at": "2026-09-05T14:42:25Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "03db043b-94b1-4018-849d-007ea64d0692",
+      "name": "Ship Me",
+      "category": "Misc",
+      "points": 229,
+      "author": "Hiumee",
+      "tags": [
+        "GRANDPA"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 62,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://api.ctf.thefewchosen.com/challenge-files/shipme-release_4626b2084c58128c.apk",
+          "name": "shipme-release.apk",
+          "saved_path": "/home/light/Workspace/CTF/TFC_CTF_2026/Misc/Ship_Me/challenge/shipme-release.apk",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": null,
+            "final_url": "https://api.ctf.thefewchosen.com/challenge-files/shipme-release_4626b2084c58128c.apk",
+            "last_modified": null,
+            "schema_version": 1,
+            "sha256": null,
+            "size": 2152073,
+            "url": "https://api.ctf.thefewchosen.com/challenge-files/shipme-release_4626b2084c58128c.apk",
+            "verified_at": "2026-09-05T14:42:16Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "7f330921-0e25-4653-ae2e-87e0bee5c94d",
+      "name": "Mid",
+      "category": "Misc",
+      "points": 88,
+      "author": "Walker",
+      "tags": [
+        "BABY",
+        "container",
+        "netcat"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 146,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://api.ctf.thefewchosen.com/challenge-files/chall_7d5a5719a653a9a0.py",
+          "name": "chall.py",
+          "saved_path": "/home/light/Workspace/CTF/TFC_CTF_2026/Misc/Mid/challenge/chall.py",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": null,
+            "final_url": "https://api.ctf.thefewchosen.com/challenge-files/chall_7d5a5719a653a9a0.py",
+            "last_modified": null,
+            "schema_version": 1,
+            "sha256": null,
+            "size": 1729,
+            "url": "https://api.ctf.thefewchosen.com/challenge-files/chall_7d5a5719a653a9a0.py",
+            "verified_at": "2026-09-05T14:42:11Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "5a585e4b-4694-4aca-a7ed-abf63b4f1c93",
+      "name": "Ariadne's Tab",
+      "category": "Web",
+      "points": 372,
+      "author": "Mtib",
+      "tags": [
+        "GRANDPA"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 20,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://api.ctf.thefewchosen.com/challenge-files/ariadnetab_a9ca502e9faf1282.zip",
+          "name": "ariadnetab.zip",
+          "saved_path": "/home/light/Workspace/CTF/TFC_CTF_2026/Web/Ariadne's_Tab/challenge/ariadnetab.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": null,
+            "final_url": "https://api.ctf.thefewchosen.com/challenge-files/ariadnetab_a9ca502e9faf1282.zip",
+            "last_modified": null,
+            "schema_version": 1,
+            "sha256": null,
+            "size": 108759,
+            "url": "https://api.ctf.thefewchosen.com/challenge-files/ariadnetab_a9ca502e9faf1282.zip",
+            "verified_at": "2026-09-05T14:42:13Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "75c53fad-bcb2-4fa2-ae25-9f43bcd7487d",
+      "name": "cer frumos",
+      "category": "Crypto",
+      "points": 50,
+      "author": "minipif",
+      "tags": [
+        "GRANDPA"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": true,
+      "solves_count": 284,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://api.ctf.thefewchosen.com/challenge-files/challenge_dc9bad02a4e5c2cf.zip",
+          "name": "challenge.zip",
+          "saved_path": "/home/light/Workspace/CTF/TFC_CTF_2026/Crypto/cer_frumos/challenge/challenge.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": null,
+            "final_url": "https://api.ctf.thefewchosen.com/challenge-files/challenge_dc9bad02a4e5c2cf.zip",
+            "last_modified": null,
+            "schema_version": 1,
+            "sha256": null,
+            "size": 5713,
+            "url": "https://api.ctf.thefewchosen.com/challenge-files/challenge_dc9bad02a4e5c2cf.zip",
+            "verified_at": "2026-09-05T14:42:12Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "4269e582-4842-4953-8ab0-513c40dc183e",
+      "name": "lumaes",
+      "category": "Reverse",
+      "points": 105,
+      "author": "Livian",
+      "tags": [
+        "GRANDPA"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": true,
+      "solves_count": 132,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://api.ctf.thefewchosen.com/challenge-files/challenge_b3e8e9af7611e524",
+          "name": "challenge",
+          "saved_path": "/home/light/Workspace/CTF/TFC_CTF_2026/Reverse/lumaes/challenge/challenge",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": null,
+            "final_url": "https://api.ctf.thefewchosen.com/challenge-files/challenge_b3e8e9af7611e524",
+            "last_modified": null,
+            "schema_version": 1,
+            "sha256": null,
+            "size": 8481440,
+            "url": "https://api.ctf.thefewchosen.com/challenge-files/challenge_b3e8e9af7611e524",
+            "verified_at": "2026-09-05T14:42:22Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "5847c6f9-093d-4aed-91e9-b25271731941",
+      "name": "Fishing not Phishing",
+      "category": "Misc",
+      "points": 158,
+      "author": "Walker",
+      "tags": [
+        "BABY"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 97,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://api.ctf.thefewchosen.com/challenge-files/Fishing_ee23b340ded735c3.jpeg",
+          "name": "Fishing.jpeg",
+          "saved_path": "/home/light/Workspace/CTF/TFC_CTF_2026/Misc/Fishing_not_Phishing/challenge/Fishing.jpeg",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": null,
+            "final_url": "https://api.ctf.thefewchosen.com/challenge-files/Fishing_ee23b340ded735c3.jpeg",
+            "last_modified": null,
+            "schema_version": 1,
+            "sha256": null,
+            "size": 12513,
+            "url": "https://api.ctf.thefewchosen.com/challenge-files/Fishing_ee23b340ded735c3.jpeg",
+            "verified_at": "2026-09-05T14:42:13Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ccac51b4-8594-4842-aa04-4ca7f1f3b5d1",
+      "name": "mccrab3",
+      "category": "Web",
+      "points": 466,
+      "author": "mcsky23",
+      "tags": [
+        "GRANDPA",
+        "container",
+        "nodeport"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 5,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://api.ctf.thefewchosen.com/challenge-files/mccrab3_0d6352ad82fa224a.zip",
+          "name": "mccrab3.zip",
+          "saved_path": "/home/light/Workspace/CTF/TFC_CTF_2026/Web/mccrab3/challenge/mccrab3.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": null,
+            "final_url": "https://api.ctf.thefewchosen.com/challenge-files/mccrab3_0d6352ad82fa224a.zip",
+            "last_modified": null,
+            "schema_version": 1,
+            "sha256": null,
+            "size": 1390882,
+            "url": "https://api.ctf.thefewchosen.com/challenge-files/mccrab3_0d6352ad82fa224a.zip",
+            "verified_at": "2026-09-05T14:42:15Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "4b6fe26a-f5d0-4086-b426-cd2b3616eabb",
+      "name": "Cadence",
+      "category": "Reverse",
+      "points": 135,
+      "author": "thek0der",
+      "tags": [
+        "BABY",
+        "container",
+        "netcat"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": true,
+      "solves_count": 111,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://api.ctf.thefewchosen.com/challenge-files/cadence_2fb892dc7c804ae9",
+          "name": "cadence",
+          "saved_path": "/home/light/Workspace/CTF/TFC_CTF_2026/Reverse/Cadence/challenge/cadence",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": null,
+            "final_url": "https://api.ctf.thefewchosen.com/challenge-files/cadence_2fb892dc7c804ae9",
+            "last_modified": null,
+            "schema_version": 1,
+            "sha256": null,
+            "size": 6593696,
+            "url": "https://api.ctf.thefewchosen.com/challenge-files/cadence_2fb892dc7c804ae9",
+            "verified_at": "2026-09-05T14:42:18Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "89fdbeb2-5f0d-49f8-b4f4-be407f8a14bc",
+      "name": "unbrevable",
+      "category": "Pwn",
+      "points": 135,
+      "author": "minipif",
+      "tags": [
+        "BABY",
+        "container",
+        "netcat"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": true,
+      "solves_count": 111,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://api.ctf.thefewchosen.com/challenge-files/unbrevable_a1986f1376fb9e38.zip",
+          "name": "unbrevable.zip",
+          "saved_path": "/home/light/Workspace/CTF/TFC_CTF_2026/Pwn/unbrevable/challenge/unbrevable.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": null,
+            "final_url": "https://api.ctf.thefewchosen.com/challenge-files/unbrevable_a1986f1376fb9e38.zip",
+            "last_modified": null,
+            "schema_version": 1,
+            "sha256": null,
+            "size": 10170596,
+            "url": "https://api.ctf.thefewchosen.com/challenge-files/unbrevable_a1986f1376fb9e38.zip",
+            "verified_at": "2026-09-05T14:42:24Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "0ccaa358-54b0-4872-a4fd-083db11f9937",
+      "name": "Vaultkeeper",
+      "category": "Web",
+      "points": 185,
+      "author": "skyv3il",
+      "tags": [
+        "BABY",
+        "container",
+        "http"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 82,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://api.ctf.thefewchosen.com/challenge-files/vaultkeeper-source_3edaca8d7beb1e55.zip",
+          "name": "vaultkeeper-source.zip",
+          "saved_path": "/home/light/Workspace/CTF/TFC_CTF_2026/Web/Vaultkeeper/challenge/vaultkeeper-source.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": null,
+            "final_url": "https://api.ctf.thefewchosen.com/challenge-files/vaultkeeper-source_3edaca8d7beb1e55.zip",
+            "last_modified": null,
+            "schema_version": 1,
+            "sha256": null,
+            "size": 101623,
+            "url": "https://api.ctf.thefewchosen.com/challenge-files/vaultkeeper-source_3edaca8d7beb1e55.zip",
+            "verified_at": "2026-09-05T14:42:19Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ebae1fe7-191f-4886-8c86-a657ce23af17",
+      "name": "meshgate",
+      "category": "Web",
+      "points": 500,
+      "author": "skyv3il",
+      "tags": [
+        "GRANDPA",
+        "container",
+        "http"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 0,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": []
+    },
+    {
+      "id": "f0fbe464-59b4-4696-99a1-fd5e5f6b73a3",
+      "name": "bitdebit³",
+      "category": "Pwn",
+      "points": 159,
+      "author": "minipif",
+      "tags": [
+        "GRANDPA",
+        "container",
+        "netcat"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": true,
+      "solves_count": 96,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://api.ctf.thefewchosen.com/challenge-files/bitdebit3_49e68929e8cf5355.zip",
+          "name": "bitdebit3.zip",
+          "saved_path": "/home/light/Workspace/CTF/TFC_CTF_2026/Pwn/bitdebit³/challenge/bitdebit3.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": null,
+            "final_url": "https://api.ctf.thefewchosen.com/challenge-files/bitdebit3_49e68929e8cf5355.zip",
+            "last_modified": null,
+            "schema_version": 1,
+            "sha256": null,
+            "size": 5155042,
+            "url": "https://api.ctf.thefewchosen.com/challenge-files/bitdebit3_49e68929e8cf5355.zip",
+            "verified_at": "2026-09-05T14:42:22Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "225277b6-5f36-4299-a83a-f0218d0b9276",
+      "name": "minigame",
+      "category": "Reverse",
+      "points": 57,
+      "author": "minipif",
+      "tags": [
+        "GRANDPA"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": true,
+      "solves_count": 174,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://api.ctf.thefewchosen.com/challenge-files/minigame_4aaf356ca3c9ba57",
+          "name": "minigame",
+          "saved_path": "/home/light/Workspace/CTF/TFC_CTF_2026/Reverse/minigame/challenge/minigame",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": null,
+            "final_url": "https://api.ctf.thefewchosen.com/challenge-files/minigame_4aaf356ca3c9ba57",
+            "last_modified": null,
+            "schema_version": 1,
+            "sha256": null,
+            "size": 2074248,
+            "url": "https://api.ctf.thefewchosen.com/challenge-files/minigame_4aaf356ca3c9ba57",
+            "verified_at": "2026-09-05T14:42:24Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "67506128-6ff0-407a-ba95-7338f55bcc5c",
+      "name": "1+1",
+      "category": "Crypto",
+      "points": 50,
+      "author": "minipif",
+      "tags": [
+        "BABY"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": true,
+      "solves_count": 351,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://api.ctf.thefewchosen.com/challenge-files/challenge_c45aec71c2899aee.zip",
+          "name": "challenge.zip",
+          "saved_path": "/home/light/Workspace/CTF/TFC_CTF_2026/Crypto/1+1/challenge/challenge.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": null,
+            "final_url": "https://api.ctf.thefewchosen.com/challenge-files/challenge_c45aec71c2899aee.zip",
+            "last_modified": null,
+            "schema_version": 1,
+            "sha256": null,
+            "size": 2094,
+            "url": "https://api.ctf.thefewchosen.com/challenge-files/challenge_c45aec71c2899aee.zip",
+            "verified_at": "2026-09-05T14:42:23Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "93a751cd-5169-42dc-8e00-ac733a3d9f0c",
+      "name": "turip",
+      "category": "Misc",
+      "points": 187,
+      "author": "mcsky23",
+      "tags": [
+        "GRANDPA"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 81,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://api.ctf.thefewchosen.com/challenge-files/turip_80a4d5fdc9812c0f.zip",
+          "name": "turip.zip",
+          "saved_path": "/home/light/Workspace/CTF/TFC_CTF_2026/Misc/turip/challenge/turip.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": null,
+            "final_url": "https://api.ctf.thefewchosen.com/challenge-files/turip_80a4d5fdc9812c0f.zip",
+            "last_modified": null,
+            "schema_version": 1,
+            "sha256": null,
+            "size": 9940,
+            "url": "https://api.ctf.thefewchosen.com/challenge-files/turip_80a4d5fdc9812c0f.zip",
+            "verified_at": "2026-09-05T14:42:23Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "e5813711-226c-4419-9650-d1fbe8779ba6",
+      "name": "The pyjail",
+      "category": "Misc",
+      "points": 226,
+      "author": "Hiumee",
+      "tags": [
+        "GRANDPA",
+        "container",
+        "nodeport"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 63,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://api.ctf.thefewchosen.com/challenge-files/jail_a50fb446c82467f3.zip",
+          "name": "jail.zip",
+          "saved_path": "/home/light/Workspace/CTF/TFC_CTF_2026/Misc/The_pyjail/challenge/jail.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": null,
+            "final_url": "https://api.ctf.thefewchosen.com/challenge-files/jail_a50fb446c82467f3.zip",
+            "last_modified": null,
+            "schema_version": 1,
+            "sha256": null,
+            "size": 1371,
+            "url": "https://api.ctf.thefewchosen.com/challenge-files/jail_a50fb446c82467f3.zip",
+            "verified_at": "2026-09-05T14:42:23Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "600836c9-9738-422b-8a61-34a382fc6605",
+      "name": "J*B Online Assessment",
+      "category": "Misc",
+      "points": 109,
+      "author": "cr0",
+      "tags": [
+        "BABY",
+        "container",
+        "http"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 129,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": []
+    },
+    {
+      "id": "ac5e882c-6902-4f05-bac4-db52a6ae286c",
+      "name": "No Hot Water Club",
+      "category": "Web",
+      "points": 239,
+      "author": "cr0",
+      "tags": [
+        "GRANDPA",
+        "container",
+        "http"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 58,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://api.ctf.thefewchosen.com/challenge-files/attachment_76ed5d9de4092b0e.zip",
+          "name": "attachment.zip",
+          "saved_path": "/home/light/Workspace/CTF/TFC_CTF_2026/Web/No_Hot_Water_Club/challenge/attachment.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": null,
+            "final_url": "https://api.ctf.thefewchosen.com/challenge-files/attachment_76ed5d9de4092b0e.zip",
+            "last_modified": null,
+            "schema_version": 1,
+            "sha256": null,
+            "size": 5001623,
+            "url": "https://api.ctf.thefewchosen.com/challenge-files/attachment_76ed5d9de4092b0e.zip",
+            "verified_at": "2026-09-05T14:42:27Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "364bd809-0d39-4596-9661-cabd249e82dc",
+      "name": "math or meth?",
+      "category": "Crypto",
+      "points": 50,
+      "author": "minipif",
+      "tags": [
+        "GRANDPA"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": true,
+      "solves_count": 202,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://api.ctf.thefewchosen.com/challenge-files/chall_832664c16adb5ace.zip",
+          "name": "chall.zip",
+          "saved_path": "/home/light/Workspace/CTF/TFC_CTF_2026/Crypto/math_or_meth/challenge/chall.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": null,
+            "final_url": "https://api.ctf.thefewchosen.com/challenge-files/chall_832664c16adb5ace.zip",
+            "last_modified": null,
+            "schema_version": 1,
+            "sha256": null,
+            "size": 15382,
+            "url": "https://api.ctf.thefewchosen.com/challenge-files/chall_832664c16adb5ace.zip",
+            "verified_at": "2026-09-05T14:42:24Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "5d07b524-6ee6-43c9-9419-fa02315c9bf4",
+      "name": "LarpIn",
+      "category": "Web",
+      "points": 252,
+      "author": "mcsky23",
+      "tags": [
+        "GRANDPA",
+        "container",
+        "http"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 53,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": []
+    },
+    {
+      "id": "ce526feb-0558-45d3-b753-e5ba83a989d9",
+      "name": "rivers",
+      "category": "Reverse",
+      "points": 158,
+      "author": "mcsky23",
+      "tags": [
+        "GRANDPA",
+        "container",
+        "netcat"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": true,
+      "solves_count": 97,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://api.ctf.thefewchosen.com/challenge-files/rivers_40be37c5dc0e3304",
+          "name": "rivers",
+          "saved_path": "/home/light/Workspace/CTF/TFC_CTF_2026/Reverse/rivers/challenge/rivers",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": null,
+            "final_url": "https://api.ctf.thefewchosen.com/challenge-files/rivers_40be37c5dc0e3304",
+            "last_modified": null,
+            "schema_version": 1,
+            "sha256": null,
+            "size": 907968,
+            "url": "https://api.ctf.thefewchosen.com/challenge-files/rivers_40be37c5dc0e3304",
+            "verified_at": "2026-09-05T14:42:25Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "aa78d8ef-15d7-4d4d-bc44-e6e828fd9c01",
+      "name": "Tagger",
+      "category": "Web",
+      "points": 149,
+      "author": "Sagi",
+      "tags": [
+        "GRANDPA",
+        "container",
+        "http"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 102,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://api.ctf.thefewchosen.com/challenge-files/challenge_9a9c044df595d53f.zip",
+          "name": "challenge.zip",
+          "saved_path": "/home/light/Workspace/CTF/TFC_CTF_2026/Web/Tagger/challenge/challenge.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": null,
+            "final_url": "https://api.ctf.thefewchosen.com/challenge-files/challenge_9a9c044df595d53f.zip",
+            "last_modified": null,
+            "schema_version": 1,
+            "sha256": null,
+            "size": 31517,
+            "url": "https://api.ctf.thefewchosen.com/challenge-files/challenge_9a9c044df595d53f.zip",
+            "verified_at": "2026-09-05T14:42:24Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "4738529f-5339-4351-ae0d-983215d89f53",
+      "name": "larpin2",
+      "category": "Web",
+      "points": 491,
+      "author": "mcsky23",
+      "tags": [
+        "GRANDPA",
+        "container",
+        "http"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 2,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": []
+    },
+    {
+      "id": "9bf6d9e7-415f-4342-8632-1f1b700d1bde",
+      "name": "fluxion",
+      "category": "Web",
+      "points": 128,
+      "author": "skyv3il",
+      "tags": [
+        "BABY",
+        "container",
+        "http"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 116,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://api.ctf.thefewchosen.com/challenge-files/fluxion-source_856e9e4f4a3b28ad.zip",
+          "name": "fluxion-source.zip",
+          "saved_path": "/home/light/Workspace/CTF/TFC_CTF_2026/Web/fluxion/challenge/fluxion-source.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": null,
+            "final_url": "https://api.ctf.thefewchosen.com/challenge-files/fluxion-source_856e9e4f4a3b28ad.zip",
+            "last_modified": null,
+            "schema_version": 1,
+            "sha256": null,
+            "size": 80714,
+            "url": "https://api.ctf.thefewchosen.com/challenge-files/fluxion-source_856e9e4f4a3b28ad.zip",
+            "verified_at": "2026-09-05T14:42:25Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "47eef538-f63f-4080-b227-660bfff9fb78",
+      "name": "Project Americas",
+      "category": "Reverse",
+      "points": 109,
+      "author": "thek0der",
+      "tags": [
+        "GRANDPA"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": true,
+      "solves_count": 129,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://api.ctf.thefewchosen.com/challenge-files/challenge_2b32c7401938b95f.zip",
+          "name": "challenge.zip",
+          "saved_path": "/home/light/Workspace/CTF/TFC_CTF_2026/Reverse/Project_Americas/challenge/challenge.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": null,
+            "final_url": "https://api.ctf.thefewchosen.com/challenge-files/challenge_2b32c7401938b95f.zip",
+            "last_modified": null,
+            "schema_version": 1,
+            "sha256": null,
+            "size": 2555866,
+            "url": "https://api.ctf.thefewchosen.com/challenge-files/challenge_2b32c7401938b95f.zip",
+            "verified_at": "2026-09-05T14:42:26Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "369d21b5-5285-41b3-9c3a-f533442546f3",
+      "name": "Discord Shenanigans v6",
+      "category": "Misc",
+      "points": 50,
+      "author": "hofill",
+      "tags": [
+        "BABY"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": true,
+      "solves_count": 253,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": []
+    },
+    {
+      "id": "5f7acdc2-daaa-4ce4-8e08-d719f0da83b6",
+      "name": "minigame2",
+      "category": "Reverse",
+      "points": 68,
+      "author": "minipif",
+      "tags": [
+        "GRANDPA"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": true,
+      "solves_count": 163,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://api.ctf.thefewchosen.com/challenge-files/minigame2_834b97482a6c136d",
+          "name": "minigame2",
+          "saved_path": "/home/light/Workspace/CTF/TFC_CTF_2026/Reverse/minigame2/challenge/minigame2",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": null,
+            "final_url": "https://api.ctf.thefewchosen.com/challenge-files/minigame2_834b97482a6c136d",
+            "last_modified": null,
+            "schema_version": 1,
+            "sha256": null,
+            "size": 2079768,
+            "url": "https://api.ctf.thefewchosen.com/challenge-files/minigame2_834b97482a6c136d",
+            "verified_at": "2026-09-05T14:42:26Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "f38e3057-61bf-4bee-8487-226161b36f57",
+      "name": "rules",
+      "category": "Misc",
+      "points": 50,
+      "author": "hofill",
+      "tags": [
+        "BABY"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": true,
+      "solves_count": 386,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": []
+    }
+  ]
+}

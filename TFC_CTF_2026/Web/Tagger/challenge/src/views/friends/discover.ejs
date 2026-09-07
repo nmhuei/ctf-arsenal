@@ -1,0 +1,59 @@
+<%- include('../partials/header') %>
+
+<section class="page-heading">
+  <div>
+    <p class="eyebrow">USER DIRECTORY</p>
+    <h1>Discover</h1>
+    <p>Find visible people on the network and send a signal.</p>
+  </div>
+  <span class="counter"><%= users.length %> FOUND</span>
+</section>
+
+<section class="window content-window">
+  <div class="window-bar">
+    <span>FIND_USER.EXE</span>
+    <div class="window-controls"><i></i><i></i><i></i></div>
+  </div>
+  <form class="search-form" action="/discover" method="get">
+    <label class="sr-only" for="search">Search by username</label>
+    <span aria-hidden="true">⌕</span>
+    <input id="search" type="search" name="q" value="<%= q %>" placeholder="Search a username..." />
+    <button class="button button-primary" type="submit">SEARCH</button>
+  </form>
+
+  <% if (users.length) { %>
+    <div class="user-grid">
+      <% users.forEach((user) => { %>
+        <% const request = requestByUserId.get(user.id); %>
+        <article class="user-card">
+          <div class="pixel-avatar"><%= user.username.charAt(0).toUpperCase() %></div>
+          <div class="user-card-copy">
+            <h2><%= user.username %></h2>
+            <p><span class="online-dot"></span> Visible on network</p>
+          </div>
+          <% if (friendIds.has(user.id)) { %>
+            <a class="button button-cyan" href="/chat/<%= user.id %>">MESSAGE</a>
+          <% } else if (request) { %>
+            <% if (request.toUserId === currentUser.id) { %>
+              <a class="button button-pink" href="/requests">RESPOND</a>
+            <% } else { %>
+              <span class="pending-label">REQUEST SENT</span>
+            <% } %>
+          <% } else { %>
+            <form action="/friends/request/<%= user.id %>" method="post">
+              <button class="button button-ghost" type="submit">+ ADD FRIEND</button>
+            </form>
+          <% } %>
+        </article>
+      <% }) %>
+    </div>
+  <% } else { %>
+    <div class="empty-state">
+      <div class="empty-icon">?</div>
+      <h2>No users found</h2>
+      <p>Try another handle or check back when more people are online.</p>
+    </div>
+  <% } %>
+</section>
+
+<%- include('../partials/footer') %>

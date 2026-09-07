@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="36" android:compileSdkVersionCodename="" package="com.tfcctf.ariadnetab" platformBuildVersionCode="36" platformBuildVersionName="16">
+    <uses-permission android:name=""/>
+    <queries>
+        <package android:name=""/>
+    </queries>
+    <permission android:name="" android:protectionLevel="0x00000002"/>
+    <uses-permission android:name=""/>
+    <application android:allowBackup="false" android:appComponentFactory="" android:dataExtractionRules="@2131427328" android:extractNativeLibs="false" android:fullBackupContent="false" android:icon="@2130968582" android:label="@2131230721" android:networkSecurityConfig="@2131427330" android:supportsRtl="true" android:theme="@2131296256">
+        <activity android:exported="true" android:launchMode="2" android:name="">
+            <intent-filter>
+                <action android:name=""/>
+                <category android:name=""/>
+            </intent-filter>
+        </activity>
+        <activity android:excludeFromRecents="true" android:exported="true" android:name="">
+            <intent-filter>
+                <action android:name=""/>
+                <category android:name=""/>
+            </intent-filter>
+        </activity>
+        <service android:exported="true" android:name=""/>
+        <provider android:authorities="" android:exported="false" android:name="">
+            <meta-data android:name="" android:value=""/>
+        </provider>
+        <receiver android:directBootAware="false" android:enabled="true" android:exported="true" android:name="" android:permission="">
+            <intent-filter>
+                <action android:name=""/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name=""/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name=""/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name=""/>
+            </intent-filter>
+        </receiver>
+    </application>
+</manifest>

@@ -1,0 +1,758 @@
+test	Set up job	﻿2026-06-06T09:00:10.4475203Z Current runner version: '2.334.0'
+test	Set up job	2026-06-06T09:00:10.4504179Z ##[group]Runner Image Provisioner
+test	Set up job	2026-06-06T09:00:10.4505274Z Hosted Compute Agent
+test	Set up job	2026-06-06T09:00:10.4505879Z Version: 20260520.533
+test	Set up job	2026-06-06T09:00:10.4506619Z Commit: 189110e25284a9812c124fd27b339e2fb4f2f9db
+test	Set up job	2026-06-06T09:00:10.4507403Z Build Date: 2026-05-20T17:44:04Z
+test	Set up job	2026-06-06T09:00:10.4508151Z Worker ID: {9cf13b4b-c39c-4eec-a669-73eabe252aba}
+test	Set up job	2026-06-06T09:00:10.4508905Z Azure Region: westus
+test	Set up job	2026-06-06T09:00:10.4509498Z ##[endgroup]
+test	Set up job	2026-06-06T09:00:10.4511086Z ##[group]Operating System
+test	Set up job	2026-06-06T09:00:10.4511781Z Ubuntu
+test	Set up job	2026-06-06T09:00:10.4512338Z 24.04.4
+test	Set up job	2026-06-06T09:00:10.4513165Z LTS
+test	Set up job	2026-06-06T09:00:10.4513731Z ##[endgroup]
+test	Set up job	2026-06-06T09:00:10.4514401Z ##[group]Runner Image
+test	Set up job	2026-06-06T09:00:10.4515088Z Image: ubuntu-24.04
+test	Set up job	2026-06-06T09:00:10.4515657Z Version: 20260525.161.1
+test	Set up job	2026-06-06T09:00:10.4516798Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260525.161/images/ubuntu/Ubuntu2404-Readme.md
+test	Set up job	2026-06-06T09:00:10.4518569Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260525.161
+test	Set up job	2026-06-06T09:00:10.4519654Z ##[endgroup]
+test	Set up job	2026-06-06T09:00:10.4520793Z ##[group]GITHUB_TOKEN Permissions
+test	Set up job	2026-06-06T09:00:10.4523239Z Contents: read
+test	Set up job	2026-06-06T09:00:10.4523899Z Metadata: read
+test	Set up job	2026-06-06T09:00:10.4524591Z ##[endgroup]
+test	Set up job	2026-06-06T09:00:10.4526847Z Secret source: Actions
+test	Set up job	2026-06-06T09:00:10.4527738Z Prepare workflow directory
+test	Set up job	2026-06-06T09:00:10.4873474Z Prepare all required actions
+test	Set up job	2026-06-06T09:00:10.4911805Z Getting action download info
+test	Set up job	2026-06-06T09:00:11.0331230Z Download action repository 'actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd' (SHA:de0fac2e4500dabe0009e67214ff5f5447ce83dd)
+test	Set up job	2026-06-06T09:00:11.2090744Z Download action repository 'dtolnay/rust-toolchain@29eef336d9b2848a0b548edc03f92a220660cdb8' (SHA:29eef336d9b2848a0b548edc03f92a220660cdb8)
+test	Set up job	2026-06-06T09:00:11.5486818Z Complete job name: test
+test	Checkout	﻿2026-06-06T09:00:11.6390565Z ##[group]Run actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+test	Checkout	2026-06-06T09:00:11.6391911Z with:
+test	Checkout	2026-06-06T09:00:11.6392444Z   ref: refs/pull/1/merge
+test	Checkout	2026-06-06T09:00:11.6393415Z   repository: GPNCTF24/245346359_nmhuei_food-poisoning-challenge
+test	Checkout	2026-06-06T09:00:11.6398187Z   token: ***
+test	Checkout	2026-06-06T09:00:11.6398697Z   ssh-strict: true
+test	Checkout	2026-06-06T09:00:11.6399202Z   ssh-user: git
+test	Checkout	2026-06-06T09:00:11.6399721Z   persist-credentials: true
+test	Checkout	2026-06-06T09:00:11.6400287Z   clean: true
+test	Checkout	2026-06-06T09:00:11.6400814Z   sparse-checkout-cone-mode: true
+test	Checkout	2026-06-06T09:00:11.6401405Z   fetch-depth: 1
+test	Checkout	2026-06-06T09:00:11.6401909Z   fetch-tags: false
+test	Checkout	2026-06-06T09:00:11.6402414Z   show-progress: true
+test	Checkout	2026-06-06T09:00:11.6403225Z   lfs: false
+test	Checkout	2026-06-06T09:00:11.6403878Z   submodules: false
+test	Checkout	2026-06-06T09:00:11.6404422Z   set-safe-directory: true
+test	Checkout	2026-06-06T09:00:11.6405641Z ##[endgroup]
+test	Checkout	2026-06-06T09:00:11.7593370Z Syncing repository: GPNCTF24/245346359_nmhuei_food-poisoning-challenge
+test	Checkout	2026-06-06T09:00:11.7596231Z ##[group]Getting Git version info
+test	Checkout	2026-06-06T09:00:11.7597617Z Working directory is '/home/runner/work/245346359_nmhuei_food-poisoning-challenge/245346359_nmhuei_food-poisoning-challenge'
+test	Checkout	2026-06-06T09:00:11.7600162Z [command]/usr/bin/git version
+test	Checkout	2026-06-06T09:00:11.7630738Z git version 2.54.0
+test	Checkout	2026-06-06T09:00:11.7692139Z ##[endgroup]
+test	Checkout	2026-06-06T09:00:11.7711971Z Temporarily overriding HOME='/home/runner/work/_temp/3cb2728a-69ec-4f01-941d-d81b42eda939' before making global git config changes
+test	Checkout	2026-06-06T09:00:11.7718787Z Adding repository directory to the temporary git global config as a safe directory
+test	Checkout	2026-06-06T09:00:11.7724834Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/245346359_nmhuei_food-poisoning-challenge/245346359_nmhuei_food-poisoning-challenge
+test	Checkout	2026-06-06T09:00:11.7785576Z Deleting the contents of '/home/runner/work/245346359_nmhuei_food-poisoning-challenge/245346359_nmhuei_food-poisoning-challenge'
+test	Checkout	2026-06-06T09:00:11.7795447Z ##[group]Initializing the repository
+test	Checkout	2026-06-06T09:00:11.7798787Z [command]/usr/bin/git init /home/runner/work/245346359_nmhuei_food-poisoning-challenge/245346359_nmhuei_food-poisoning-challenge
+test	Checkout	2026-06-06T09:00:11.7913811Z hint: Using 'master' as the name for the initial branch. This default branch name
+test	Checkout	2026-06-06T09:00:11.7916516Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+test	Checkout	2026-06-06T09:00:11.7919136Z hint: to use in all of your new repositories, which will suppress this warning,
+test	Checkout	2026-06-06T09:00:11.7921739Z hint: call:
+test	Checkout	2026-06-06T09:00:11.7923890Z hint:
+test	Checkout	2026-06-06T09:00:11.7925930Z hint: 	git config --global init.defaultBranch <name>
+test	Checkout	2026-06-06T09:00:11.7927607Z hint:
+test	Checkout	2026-06-06T09:00:11.7929778Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+test	Checkout	2026-06-06T09:00:11.7931988Z hint: 'development'. The just-created branch can be renamed via this command:
+test	Checkout	2026-06-06T09:00:11.7934495Z hint:
+test	Checkout	2026-06-06T09:00:11.7936193Z hint: 	git branch -m <name>
+test	Checkout	2026-06-06T09:00:11.7937444Z hint:
+test	Checkout	2026-06-06T09:00:11.7938987Z hint: Disable this message with "git config set advice.defaultBranchName false"
+test	Checkout	2026-06-06T09:00:11.7942259Z Initialized empty Git repository in /home/runner/work/245346359_nmhuei_food-poisoning-challenge/245346359_nmhuei_food-poisoning-challenge/.git/
+test	Checkout	2026-06-06T09:00:11.7947639Z [command]/usr/bin/git remote add origin https://github.com/GPNCTF24/245346359_nmhuei_food-poisoning-challenge
+test	Checkout	2026-06-06T09:00:11.7997767Z ##[endgroup]
+test	Checkout	2026-06-06T09:00:11.8000053Z ##[group]Disabling automatic garbage collection
+test	Checkout	2026-06-06T09:00:11.8002148Z [command]/usr/bin/git config --local gc.auto 0
+test	Checkout	2026-06-06T09:00:11.8040345Z ##[endgroup]
+test	Checkout	2026-06-06T09:00:11.8042254Z ##[group]Setting up auth
+test	Checkout	2026-06-06T09:00:11.8044946Z Removing SSH command configuration
+test	Checkout	2026-06-06T09:00:11.8048062Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+test	Checkout	2026-06-06T09:00:11.8090577Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+test	Checkout	2026-06-06T09:00:11.8462470Z Removing HTTP extra header
+test	Checkout	2026-06-06T09:00:11.8464704Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+test	Checkout	2026-06-06T09:00:11.8487131Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+test	Checkout	2026-06-06T09:00:11.8723905Z Removing includeIf entries pointing to credentials config files
+test	Checkout	2026-06-06T09:00:11.8729062Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+test	Checkout	2026-06-06T09:00:11.8764113Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+test	Checkout	2026-06-06T09:00:11.9010684Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-db3d341a-85f3-4ada-b679-215c0bffd51c.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+test	Checkout	2026-06-06T09:00:11.9053789Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/245346359_nmhuei_food-poisoning-challenge/245346359_nmhuei_food-poisoning-challenge/.git.path /home/runner/work/_temp/git-credentials-db3d341a-85f3-4ada-b679-215c0bffd51c.config
+test	Checkout	2026-06-06T09:00:11.9087241Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/245346359_nmhuei_food-poisoning-challenge/245346359_nmhuei_food-poisoning-challenge/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-db3d341a-85f3-4ada-b679-215c0bffd51c.config
+test	Checkout	2026-06-06T09:00:11.9122272Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-db3d341a-85f3-4ada-b679-215c0bffd51c.config
+test	Checkout	2026-06-06T09:00:11.9164338Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-db3d341a-85f3-4ada-b679-215c0bffd51c.config
+test	Checkout	2026-06-06T09:00:11.9200195Z ##[endgroup]
+test	Checkout	2026-06-06T09:00:11.9202497Z ##[group]Fetching the repository
+test	Checkout	2026-06-06T09:00:11.9210729Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +refs/pull/1/merge:refs/remotes/pull/1/merge
+test	Checkout	2026-06-06T09:00:12.5171251Z From https://github.com/GPNCTF24/245346359_nmhuei_food-poisoning-challenge
+test	Checkout	2026-06-06T09:00:12.5173888Z  * [new ref]         refs/pull/1/merge -> pull/1/merge
+test	Checkout	2026-06-06T09:00:12.5686930Z ##[endgroup]
+test	Checkout	2026-06-06T09:00:12.5705199Z ##[group]Determining the checkout info
+test	Checkout	2026-06-06T09:00:12.5707219Z ##[endgroup]
+test	Checkout	2026-06-06T09:00:12.5708565Z [command]/usr/bin/git sparse-checkout disable
+test	Checkout	2026-06-06T09:00:12.5712324Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+test	Checkout	2026-06-06T09:00:12.5716981Z ##[group]Checking out the ref
+test	Checkout	2026-06-06T09:00:12.5718779Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/1/merge
+test	Checkout	2026-06-06T09:00:12.5720746Z Note: switching to 'refs/remotes/pull/1/merge'.
+test	Checkout	2026-06-06T09:00:12.5721820Z 
+test	Checkout	2026-06-06T09:00:12.5722882Z You are in 'detached HEAD' state. You can look around, make experimental
+test	Checkout	2026-06-06T09:00:12.5726244Z changes and commit them, and you can discard any commits you make in this
+test	Checkout	2026-06-06T09:00:12.5728398Z state without impacting any branches by switching back to a branch.
+test	Checkout	2026-06-06T09:00:12.5729732Z 
+test	Checkout	2026-06-06T09:00:12.5730613Z If you want to create a new branch to retain commits you create, you may
+test	Checkout	2026-06-06T09:00:12.5732489Z do so (now or later) by using -c with the switch command. Example:
+test	Checkout	2026-06-06T09:00:12.5734105Z 
+test	Checkout	2026-06-06T09:00:12.5734754Z   git switch -c <new-branch-name>
+test	Checkout	2026-06-06T09:00:12.5735779Z 
+test	Checkout	2026-06-06T09:00:12.5736396Z Or undo this operation with:
+test	Checkout	2026-06-06T09:00:12.5737348Z 
+test	Checkout	2026-06-06T09:00:12.5737970Z   git switch -
+test	Checkout	2026-06-06T09:00:12.5738999Z 
+test	Checkout	2026-06-06T09:00:12.5740038Z Turn off this advice by setting config variable advice.detachedHead to false
+test	Checkout	2026-06-06T09:00:12.5741446Z 
+test	Checkout	2026-06-06T09:00:12.5743173Z HEAD is now at 0d0fccc Merge 8b760ae161606efd8edf91595e4a79166813fbcd into 4d2eff395222496a540861d11a1fa1449da3f704
+test	Checkout	2026-06-06T09:00:12.5748211Z ##[endgroup]
+test	Checkout	2026-06-06T09:00:12.5751781Z [command]/usr/bin/git log -1 --format=%H
+test	Checkout	2026-06-06T09:00:12.5753814Z 0d0fcccf88eefa151c34a92ec21516f6b8bbd525
+test	Set up Rust	﻿2026-06-06T09:00:12.6202752Z ##[group]Run dtolnay/rust-toolchain@29eef336d9b2848a0b548edc03f92a220660cdb8
+test	Set up Rust	2026-06-06T09:00:12.6204002Z with:
+test	Set up Rust	2026-06-06T09:00:12.6204533Z   toolchain: stable
+test	Set up Rust	2026-06-06T09:00:12.6205045Z ##[endgroup]
+test	Set up Rust	2026-06-06T09:00:12.6413115Z ##[group]Run : parse toolchain version
+test	Set up Rust	2026-06-06T09:00:12.6413945Z [36;1m: parse toolchain version[0m
+test	Set up Rust	2026-06-06T09:00:12.6414585Z [36;1mif [[ -z $toolchain ]]; then[0m
+test	Set up Rust	2026-06-06T09:00:12.6415617Z [36;1m  # GitHub does not enforce `required: true` inputs itself. https://github.com/actions/runner/issues/1070[0m
+test	Set up Rust	2026-06-06T09:00:12.6416702Z [36;1m  echo "'toolchain' is a required input" >&2[0m
+test	Set up Rust	2026-06-06T09:00:12.6417368Z [36;1m  exit 1[0m
+test	Set up Rust	2026-06-06T09:00:12.6418089Z [36;1melif [[ $toolchain =~ ^stable' '[0-9]+' '(year|month|week|day)s?' 'ago$ ]]; then[0m
+test	Set up Rust	2026-06-06T09:00:12.6418991Z [36;1m  if [[ Linux == macOS ]]; then[0m
+test	Set up Rust	2026-06-06T09:00:12.6420015Z [36;1m    echo "toolchain=1.$((($(date -v-$(sed 's/stable \([0-9]*\) \(.\).*/\1\2/' <<< $toolchain) +%s)/60/60/24-16569)/7/6))" >> $GITHUB_OUTPUT[0m
+test	Set up Rust	2026-06-06T09:00:12.6421119Z [36;1m  else[0m
+test	Set up Rust	2026-06-06T09:00:12.6421960Z [36;1m    echo "toolchain=1.$((($(date --date "${toolchain#stable }" +%s)/60/60/24-16569)/7/6))" >> $GITHUB_OUTPUT[0m
+test	Set up Rust	2026-06-06T09:00:12.6423015Z [36;1m  fi[0m
+test	Set up Rust	2026-06-06T09:00:12.6423695Z [36;1melif [[ $toolchain =~ ^stable' 'minus' '[0-9]+' 'releases?$ ]]; then[0m
+test	Set up Rust	2026-06-06T09:00:12.6424746Z [36;1m  echo "toolchain=1.$((($(date +%s)/60/60/24-16569)/7/6-${toolchain//[^0-9]/}))" >> $GITHUB_OUTPUT[0m
+test	Set up Rust	2026-06-06T09:00:12.6425668Z [36;1melif [[ $toolchain =~ ^1\.[0-9]+$ ]]; then[0m
+test	Set up Rust	2026-06-06T09:00:12.6426705Z [36;1m  echo "toolchain=1.$((i=${toolchain#1.}, c=($(date +%s)/60/60/24-16569)/7/6, i+9*i*(10*i<=c)+90*i*(100*i<=c)))" >> $GITHUB_OUTPUT[0m
+test	Set up Rust	2026-06-06T09:00:12.6427907Z [36;1melse[0m
+test	Set up Rust	2026-06-06T09:00:12.6428478Z [36;1m  echo "toolchain=$toolchain" >> $GITHUB_OUTPUT[0m
+test	Set up Rust	2026-06-06T09:00:12.6429143Z [36;1mfi[0m
+test	Set up Rust	2026-06-06T09:00:12.6461534Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+test	Set up Rust	2026-06-06T09:00:12.6462332Z env:
+test	Set up Rust	2026-06-06T09:00:12.6462810Z   toolchain: stable
+test	Set up Rust	2026-06-06T09:00:12.6463536Z ##[endgroup]
+test	Set up Rust	2026-06-06T09:00:12.6638797Z ##[group]Run : construct rustup command line
+test	Set up Rust	2026-06-06T09:00:12.6639556Z [36;1m: construct rustup command line[0m
+test	Set up Rust	2026-06-06T09:00:12.6640486Z [36;1mecho "targets=$(for t in ${targets//,/ }; do echo -n ' --target' $t; done)" >> $GITHUB_OUTPUT[0m
+test	Set up Rust	2026-06-06T09:00:12.6641714Z [36;1mecho "components=$(for c in ${components//,/ }; do echo -n ' --component' $c; done)" >> $GITHUB_OUTPUT[0m
+test	Set up Rust	2026-06-06T09:00:12.6642707Z [36;1mecho "downgrade=" >> $GITHUB_OUTPUT[0m
+test	Set up Rust	2026-06-06T09:00:12.6670401Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+test	Set up Rust	2026-06-06T09:00:12.6671164Z env:
+test	Set up Rust	2026-06-06T09:00:12.6671621Z   targets: 
+test	Set up Rust	2026-06-06T09:00:12.6672100Z   components: 
+test	Set up Rust	2026-06-06T09:00:12.6672580Z ##[endgroup]
+test	Set up Rust	2026-06-06T09:00:12.6781280Z ##[group]Run : set $CARGO_HOME
+test	Set up Rust	2026-06-06T09:00:12.6781901Z [36;1m: set $CARGO_HOME[0m
+test	Set up Rust	2026-06-06T09:00:12.6782639Z [36;1mecho CARGO_HOME=${CARGO_HOME:-"$HOME/.cargo"} >> $GITHUB_ENV[0m
+test	Set up Rust	2026-06-06T09:00:12.6808735Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+test	Set up Rust	2026-06-06T09:00:12.6809486Z ##[endgroup]
+test	Set up Rust	2026-06-06T09:00:12.6912688Z ##[group]Run : install rustup if needed
+test	Set up Rust	2026-06-06T09:00:12.6913661Z [36;1m: install rustup if needed[0m
+test	Set up Rust	2026-06-06T09:00:12.6914334Z [36;1mif ! command -v rustup &>/dev/null; then[0m
+test	Set up Rust	2026-06-06T09:00:12.6915746Z [36;1m  curl --proto '=https' --tlsv1.2 --retry 10 --retry-connrefused --location --silent --show-error --fail https://sh.rustup.rs | sh -s -- --default-toolchain none -y[0m
+test	Set up Rust	2026-06-06T09:00:12.6917152Z [36;1m  echo "$CARGO_HOME/bin" >> $GITHUB_PATH[0m
+test	Set up Rust	2026-06-06T09:00:12.6917837Z [36;1mfi[0m
+test	Set up Rust	2026-06-06T09:00:12.6945762Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+test	Set up Rust	2026-06-06T09:00:12.6946507Z env:
+test	Set up Rust	2026-06-06T09:00:12.6946995Z   CARGO_HOME: /home/runner/.cargo
+test	Set up Rust	2026-06-06T09:00:12.6947574Z ##[endgroup]
+test	Set up Rust	2026-06-06T09:00:12.7058975Z ##[group]Run rustup toolchain install stable --profile minimal --no-self-update
+test	Set up Rust	2026-06-06T09:00:12.7060325Z [36;1mrustup toolchain install stable --profile minimal --no-self-update[0m
+test	Set up Rust	2026-06-06T09:00:12.7087698Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+test	Set up Rust	2026-06-06T09:00:12.7088496Z env:
+test	Set up Rust	2026-06-06T09:00:12.7089032Z   CARGO_HOME: /home/runner/.cargo
+test	Set up Rust	2026-06-06T09:00:12.7089695Z   RUSTUP_PERMIT_COPY_RENAME: 1
+test	Set up Rust	2026-06-06T09:00:12.7090309Z ##[endgroup]
+test	Set up Rust	2026-06-06T09:00:14.8403710Z info: syncing channel updates for stable-x86_64-unknown-linux-gnu
+test	Set up Rust	2026-06-06T09:00:15.1325890Z info: latest update on 2026-05-28 for version 1.96.0 (ac68faa20 2026-05-25)
+test	Set up Rust	2026-06-06T09:00:15.1558788Z info: removing previous version of component clippy
+test	Set up Rust	2026-06-06T09:00:15.1716180Z info: removing previous version of component rustfmt
+test	Set up Rust	2026-06-06T09:00:15.1840397Z info: removing previous version of component cargo
+test	Set up Rust	2026-06-06T09:00:15.1936664Z info: removing previous version of component rust-std
+test	Set up Rust	2026-06-06T09:00:15.2039426Z info: removing previous version of component rustc
+test	Set up Rust	2026-06-06T09:00:15.2088326Z info: downloading 5 components
+test	Set up Rust	2026-06-06T09:00:23.6196152Z 
+test	Set up Rust	2026-06-06T09:00:23.6295151Z   stable-x86_64-unknown-linux-gnu updated - rustc 1.96.0 (ac68faa20 2026-05-25) (from rustc 1.95.0 (59807616e 2026-04-14))
+test	Set up Rust	2026-06-06T09:00:23.6296184Z 
+test	Set up Rust	2026-06-06T09:00:23.6436866Z ##[group]Run rustup default stable
+test	Set up Rust	2026-06-06T09:00:23.6437223Z [36;1mrustup default stable[0m
+test	Set up Rust	2026-06-06T09:00:23.6464773Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+test	Set up Rust	2026-06-06T09:00:23.6465154Z env:
+test	Set up Rust	2026-06-06T09:00:23.6465397Z   CARGO_HOME: /home/runner/.cargo
+test	Set up Rust	2026-06-06T09:00:23.6465670Z ##[endgroup]
+test	Set up Rust	2026-06-06T09:00:23.6564876Z info: using existing install for stable-x86_64-unknown-linux-gnu
+test	Set up Rust	2026-06-06T09:00:23.6572122Z info: default toolchain set to stable-x86_64-unknown-linux-gnu
+test	Set up Rust	2026-06-06T09:00:23.6574307Z 
+test	Set up Rust	2026-06-06T09:00:23.6645126Z   stable-x86_64-unknown-linux-gnu unchanged - rustc 1.96.0 (ac68faa20 2026-05-25)
+test	Set up Rust	2026-06-06T09:00:23.6653785Z 
+test	Set up Rust	2026-06-06T09:00:23.6687976Z ##[group]Run : create cachekey
+test	Set up Rust	2026-06-06T09:00:23.6688302Z [36;1m: create cachekey[0m
+test	Set up Rust	2026-06-06T09:00:23.6688860Z [36;1mDATE=$(rustc +stable --version --verbose | sed -ne 's/^commit-date: \(20[0-9][0-9]\)-\([01][0-9]\)-\([0-3][0-9]\)$/\1\2\3/p')[0m
+test	Set up Rust	2026-06-06T09:00:23.6689561Z [36;1mHASH=$(rustc +stable --version --verbose | sed -ne 's/^commit-hash: //p')[0m
+test	Set up Rust	2026-06-06T09:00:23.6690107Z [36;1mecho "cachekey=$(echo $DATE$HASH | head -c12)" >> $GITHUB_OUTPUT[0m
+test	Set up Rust	2026-06-06T09:00:23.6717029Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+test	Set up Rust	2026-06-06T09:00:23.6717401Z env:
+test	Set up Rust	2026-06-06T09:00:23.6717664Z   CARGO_HOME: /home/runner/.cargo
+test	Set up Rust	2026-06-06T09:00:23.6717951Z ##[endgroup]
+test	Set up Rust	2026-06-06T09:00:23.7092303Z ##[group]Run : disable incremental compilation
+test	Set up Rust	2026-06-06T09:00:23.7092750Z [36;1m: disable incremental compilation[0m
+test	Set up Rust	2026-06-06T09:00:23.7093517Z [36;1mif [ -z "${CARGO_INCREMENTAL+set}" ]; then[0m
+test	Set up Rust	2026-06-06T09:00:23.7093953Z [36;1m  echo CARGO_INCREMENTAL=0 >> $GITHUB_ENV[0m
+test	Set up Rust	2026-06-06T09:00:23.7094282Z [36;1mfi[0m
+test	Set up Rust	2026-06-06T09:00:23.7121547Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+test	Set up Rust	2026-06-06T09:00:23.7121925Z env:
+test	Set up Rust	2026-06-06T09:00:23.7122146Z   CARGO_HOME: /home/runner/.cargo
+test	Set up Rust	2026-06-06T09:00:23.7122411Z ##[endgroup]
+test	Set up Rust	2026-06-06T09:00:23.7231143Z ##[group]Run : enable colors in Cargo output
+test	Set up Rust	2026-06-06T09:00:23.7231518Z [36;1m: enable colors in Cargo output[0m
+test	Set up Rust	2026-06-06T09:00:23.7231850Z [36;1mif [ -z "${CARGO_TERM_COLOR+set}" ]; then[0m
+test	Set up Rust	2026-06-06T09:00:23.7232208Z [36;1m  echo CARGO_TERM_COLOR=always >> $GITHUB_ENV[0m
+test	Set up Rust	2026-06-06T09:00:23.7232519Z [36;1mfi[0m
+test	Set up Rust	2026-06-06T09:00:23.7258814Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+test	Set up Rust	2026-06-06T09:00:23.7259194Z env:
+test	Set up Rust	2026-06-06T09:00:23.7259410Z   CARGO_HOME: /home/runner/.cargo
+test	Set up Rust	2026-06-06T09:00:23.7259685Z   CARGO_INCREMENTAL: 0
+test	Set up Rust	2026-06-06T09:00:23.7259914Z ##[endgroup]
+test	Set up Rust	2026-06-06T09:00:23.7336242Z ##[group]Run : enable Cargo sparse registry
+test	Set up Rust	2026-06-06T09:00:23.7336794Z [36;1m: enable Cargo sparse registry[0m
+test	Set up Rust	2026-06-06T09:00:23.7337185Z [36;1m# implemented in 1.66, stabilized in 1.68, made default in 1.70[0m
+test	Set up Rust	2026-06-06T09:00:23.7337920Z [36;1mif [ -z "${CARGO_REGISTRIES_CRATES_IO_PROTOCOL+set}" -o -f "/home/runner/work/_temp"/.implicit_cargo_registries_crates_io_protocol ]; then[0m
+test	Set up Rust	2026-06-06T09:00:23.7338668Z [36;1m  if rustc +stable --version --verbose | grep -q '^release: 1\.6[89]\.'; then[0m
+test	Set up Rust	2026-06-06T09:00:23.7339265Z [36;1m    touch "/home/runner/work/_temp"/.implicit_cargo_registries_crates_io_protocol || true[0m
+test	Set up Rust	2026-06-06T09:00:23.7339829Z [36;1m    echo CARGO_REGISTRIES_CRATES_IO_PROTOCOL=sparse >> $GITHUB_ENV[0m
+test	Set up Rust	2026-06-06T09:00:23.7340350Z [36;1m  elif rustc +stable --version --verbose | grep -q '^release: 1\.6[67]\.'; then[0m
+test	Set up Rust	2026-06-06T09:00:23.7340953Z [36;1m    touch "/home/runner/work/_temp"/.implicit_cargo_registries_crates_io_protocol || true[0m
+test	Set up Rust	2026-06-06T09:00:23.7341506Z [36;1m    echo CARGO_REGISTRIES_CRATES_IO_PROTOCOL=git >> $GITHUB_ENV[0m
+test	Set up Rust	2026-06-06T09:00:23.7341886Z [36;1m  fi[0m
+test	Set up Rust	2026-06-06T09:00:23.7342094Z [36;1mfi[0m
+test	Set up Rust	2026-06-06T09:00:23.7368332Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+test	Set up Rust	2026-06-06T09:00:23.7368695Z env:
+test	Set up Rust	2026-06-06T09:00:23.7368917Z   CARGO_HOME: /home/runner/.cargo
+test	Set up Rust	2026-06-06T09:00:23.7369187Z   CARGO_INCREMENTAL: 0
+test	Set up Rust	2026-06-06T09:00:23.7369426Z   CARGO_TERM_COLOR: always
+test	Set up Rust	2026-06-06T09:00:23.7369662Z ##[endgroup]
+test	Set up Rust	2026-06-06T09:00:23.7705156Z ##[group]Run : work around spurious network errors in curl 8.0
+test	Set up Rust	2026-06-06T09:00:23.7705652Z [36;1m: work around spurious network errors in curl 8.0[0m
+test	Set up Rust	2026-06-06T09:00:23.7706257Z [36;1m# https://rust-lang.zulipchat.com/#narrow/stream/246057-t-cargo/topic/timeout.20investigation[0m
+test	Set up Rust	2026-06-06T09:00:23.7707128Z [36;1mif rustc +stable --version --verbose | grep -q '^release: 1\.7[01]\.'; then[0m
+test	Set up Rust	2026-06-06T09:00:23.7707618Z [36;1m  echo CARGO_HTTP_MULTIPLEXING=false >> $GITHUB_ENV[0m
+test	Set up Rust	2026-06-06T09:00:23.7707952Z [36;1mfi[0m
+test	Set up Rust	2026-06-06T09:00:23.7735780Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+test	Set up Rust	2026-06-06T09:00:23.7736150Z env:
+test	Set up Rust	2026-06-06T09:00:23.7736388Z   CARGO_HOME: /home/runner/.cargo
+test	Set up Rust	2026-06-06T09:00:23.7736657Z   CARGO_INCREMENTAL: 0
+test	Set up Rust	2026-06-06T09:00:23.7736896Z   CARGO_TERM_COLOR: always
+test	Set up Rust	2026-06-06T09:00:23.7737140Z ##[endgroup]
+test	Set up Rust	2026-06-06T09:00:23.7941418Z ##[group]Run rustc +stable --version --verbose
+test	Set up Rust	2026-06-06T09:00:23.7941838Z [36;1mrustc +stable --version --verbose[0m
+test	Set up Rust	2026-06-06T09:00:23.7969552Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+test	Set up Rust	2026-06-06T09:00:23.7969926Z env:
+test	Set up Rust	2026-06-06T09:00:23.7970143Z   CARGO_HOME: /home/runner/.cargo
+test	Set up Rust	2026-06-06T09:00:23.7970428Z   CARGO_INCREMENTAL: 0
+test	Set up Rust	2026-06-06T09:00:23.7970672Z   CARGO_TERM_COLOR: always
+test	Set up Rust	2026-06-06T09:00:23.7970928Z ##[endgroup]
+test	Set up Rust	2026-06-06T09:00:23.8131720Z rustc 1.96.0 (ac68faa20 2026-05-25)
+test	Set up Rust	2026-06-06T09:00:23.8133169Z binary: rustc
+test	Set up Rust	2026-06-06T09:00:23.8134072Z commit-hash: ac68faa20c58cbccd01ee7208bf3b6e93a7d7f96
+test	Set up Rust	2026-06-06T09:00:23.8134964Z commit-date: 2026-05-25
+test	Set up Rust	2026-06-06T09:00:23.8135587Z host: x86_64-unknown-linux-gnu
+test	Set up Rust	2026-06-06T09:00:23.8136267Z release: 1.96.0
+test	Set up Rust	2026-06-06T09:00:23.8136889Z LLVM version: 22.1.2
+test	test	﻿2026-06-06T09:00:23.8210731Z ##[group]Run cargo test --release --locked -- --no-capture
+test	test	2026-06-06T09:00:23.8211301Z [36;1mcargo test --release --locked -- --no-capture[0m
+test	test	2026-06-06T09:00:23.8240360Z shell: /usr/bin/bash -e {0}
+test	test	2026-06-06T09:00:23.8240636Z env:
+test	test	2026-06-06T09:00:23.8240853Z   CARGO_HOME: /home/runner/.cargo
+test	test	2026-06-06T09:00:23.8241130Z   CARGO_INCREMENTAL: 0
+test	test	2026-06-06T09:00:23.8241379Z   CARGO_TERM_COLOR: always
+test	test	2026-06-06T09:00:23.8241617Z ##[endgroup]
+test	test	2026-06-06T09:00:23.8804706Z [1m[92m    Updating[0m crates.io index
+test	test	2026-06-06T09:00:24.8088059Z [1m[92m Downloading[0m crates ...
+test	test	2026-06-06T09:00:24.8414639Z [1m[92m  Downloaded[0m cfg-if v1.0.4
+test	test	2026-06-06T09:00:24.8484881Z [1m[92m  Downloaded[0m aho-corasick v1.1.4
+test	test	2026-06-06T09:00:24.8542813Z [1m[92m  Downloaded[0m equivalent v1.0.2
+test	test	2026-06-06T09:00:24.8557405Z [1m[92m  Downloaded[0m smallvec v1.15.1
+test	test	2026-06-06T09:00:24.8587994Z [1m[92m  Downloaded[0m itertools v0.13.0
+test	test	2026-06-06T09:00:24.8661679Z [1m[92m  Downloaded[0m errno v0.3.14
+test	test	2026-06-06T09:00:24.8684467Z [1m[92m  Downloaded[0m thiserror v2.0.18
+test	test	2026-06-06T09:00:24.8759523Z [1m[92m  Downloaded[0m unicode-xid v0.2.6
+test	test	2026-06-06T09:00:24.8777166Z [1m[92m  Downloaded[0m rustc_version v0.4.1
+test	test	2026-06-06T09:00:24.8797448Z [1m[92m  Downloaded[0m thiserror-impl v2.0.18
+test	test	2026-06-06T09:00:24.8817431Z [1m[92m  Downloaded[0m rustc-hash v2.1.2
+test	test	2026-06-06T09:00:24.8835572Z [1m[92m  Downloaded[0m libmdbx v0.6.6
+test	test	2026-06-06T09:00:24.8866560Z [1m[92m  Downloaded[0m shlex v1.3.0
+test	test	2026-06-06T09:00:24.8885509Z [1m[92m  Downloaded[0m shlex v2.0.1
+test	test	2026-06-06T09:00:24.8903047Z [1m[92m  Downloaded[0m serde_core v1.0.228
+test	test	2026-06-06T09:00:24.8951589Z [1m[92m  Downloaded[0m unicode-ident v1.0.24
+test	test	2026-06-06T09:00:24.9013906Z [1m[92m  Downloaded[0m proc-macro2 v1.0.106
+test	test	2026-06-06T09:00:24.9053944Z [1m[92m  Downloaded[0m unicode-segmentation v1.13.2
+test	test	2026-06-06T09:00:24.9113762Z [1m[92m  Downloaded[0m tempfile v3.27.0
+test	test	2026-06-06T09:00:24.9153740Z [1m[92m  Downloaded[0m memchr v2.8.1
+test	test	2026-06-06T09:00:24.9249845Z [1m[92m  Downloaded[0m indexmap v2.14.0
+test	test	2026-06-06T09:00:24.9327670Z [1m[92m  Downloaded[0m nom v7.1.3
+test	test	2026-06-06T09:00:24.9374027Z [1m[92m  Downloaded[0m regex v1.12.3
+test	test	2026-06-06T09:00:24.9450306Z [1m[92m  Downloaded[0m hashbrown v0.17.1
+test	test	2026-06-06T09:00:24.9492075Z [1m[92m  Downloaded[0m minimal-lexical v0.2.1
+test	test	2026-06-06T09:00:24.9540716Z [1m[92m  Downloaded[0m derive_more v2.1.1
+test	test	2026-06-06T09:00:24.9672183Z [1m[92m  Downloaded[0m getrandom v0.4.2
+test	test	2026-06-06T09:00:24.9713835Z [1m[92m  Downloaded[0m convert_case v0.10.0
+test	test	2026-06-06T09:00:24.9736156Z [1m[92m  Downloaded[0m cc v1.2.63
+test	test	2026-06-06T09:00:24.9770050Z [1m[92m  Downloaded[0m bindgen v0.72.1
+test	test	2026-06-06T09:00:24.9840031Z [1m[92m  Downloaded[0m clang-sys v1.8.1
+test	test	2026-06-06T09:00:24.9864952Z [1m[92m  Downloaded[0m syn v2.0.117
+test	test	2026-06-06T09:00:24.9971512Z [1m[92m  Downloaded[0m semver v1.0.28
+test	test	2026-06-06T09:00:24.9997507Z [1m[92m  Downloaded[0m mdbx-sys v13.11.0
+test	test	2026-06-06T09:00:25.0056991Z [1m[92m  Downloaded[0m parking_lot v0.12.5
+test	test	2026-06-06T09:00:25.0084229Z [1m[92m  Downloaded[0m regex-syntax v0.8.10
+test	test	2026-06-06T09:00:25.0153326Z [1m[92m  Downloaded[0m find-msvc-tools v0.1.9
+test	test	2026-06-06T09:00:25.0170580Z [1m[92m  Downloaded[0m quote v1.0.45
+test	test	2026-06-06T09:00:25.0199110Z [1m[92m  Downloaded[0m rustix v1.1.4
+test	test	2026-06-06T09:00:25.0573806Z [1m[92m  Downloaded[0m lock_api v0.4.14
+test	test	2026-06-06T09:00:25.0583710Z [1m[92m  Downloaded[0m cexpr v0.6.0
+test	test	2026-06-06T09:00:25.0623654Z [1m[92m  Downloaded[0m bitflags v2.11.1
+test	test	2026-06-06T09:00:25.0694242Z [1m[92m  Downloaded[0m parking_lot_core v0.9.12
+test	test	2026-06-06T09:00:25.0720782Z [1m[92m  Downloaded[0m sealed v0.6.0
+test	test	2026-06-06T09:00:25.0779081Z [1m[92m  Downloaded[0m scopeguard v1.2.0
+test	test	2026-06-06T09:00:25.0803515Z [1m[92m  Downloaded[0m once_cell v1.21.4
+test	test	2026-06-06T09:00:25.0843608Z [1m[92m  Downloaded[0m libloading v0.8.9
+test	test	2026-06-06T09:00:25.0883943Z [1m[92m  Downloaded[0m fastrand v2.4.1
+test	test	2026-06-06T09:00:25.0903734Z [1m[92m  Downloaded[0m regex-automata v0.4.14
+test	test	2026-06-06T09:00:25.1098621Z [1m[92m  Downloaded[0m glob v0.3.3
+test	test	2026-06-06T09:00:25.1114147Z [1m[92m  Downloaded[0m either v1.16.0
+test	test	2026-06-06T09:00:25.1130093Z [1m[92m  Downloaded[0m derive_more-impl v2.1.1
+test	test	2026-06-06T09:00:25.1204084Z [1m[92m  Downloaded[0m libc v0.2.186
+test	test	2026-06-06T09:00:25.1776947Z [1m[92m  Downloaded[0m linux-raw-sys v0.12.1
+test	test	2026-06-06T09:00:25.2660375Z [1m[92m   Compiling[0m proc-macro2 v1.0.106
+test	test	2026-06-06T09:00:25.2660853Z [1m[92m   Compiling[0m quote v1.0.45
+test	test	2026-06-06T09:00:25.5644751Z [1m[92m   Compiling[0m unicode-ident v1.0.24
+test	test	2026-06-06T09:00:25.6364314Z [1m[92m   Compiling[0m glob v0.3.3
+test	test	2026-06-06T09:00:25.9401467Z [1m[92m   Compiling[0m clang-sys v1.8.1
+test	test	2026-06-06T09:00:26.2254750Z [1m[92m   Compiling[0m libc v0.2.186
+test	test	2026-06-06T09:00:26.3294299Z [1m[92m   Compiling[0m syn v2.0.117
+test	test	2026-06-06T09:00:26.6594295Z [1m[92m   Compiling[0m minimal-lexical v0.2.1
+test	test	2026-06-06T09:00:26.8194071Z [1m[92m   Compiling[0m memchr v2.8.1
+test	test	2026-06-06T09:00:27.3904537Z [1m[92m   Compiling[0m cfg-if v1.0.4
+test	test	2026-06-06T09:00:27.4134595Z [1m[92m   Compiling[0m regex-syntax v0.8.10
+test	test	2026-06-06T09:00:29.2014248Z [1m[92m   Compiling[0m regex-automata v0.4.14
+test	test	2026-06-06T09:00:30.9859034Z [1m[92m   Compiling[0m libloading v0.8.9
+test	test	2026-06-06T09:00:31.0994421Z [1m[92m   Compiling[0m nom v7.1.3
+test	test	2026-06-06T09:00:32.8204144Z [1m[92m   Compiling[0m bindgen v0.72.1
+test	test	2026-06-06T09:00:32.9316554Z [1m[92m   Compiling[0m either v1.16.0
+test	test	2026-06-06T09:00:33.0584668Z [1m[92m   Compiling[0m itertools v0.13.0
+test	test	2026-06-06T09:00:34.0664216Z [1m[92m   Compiling[0m cexpr v0.6.0
+test	test	2026-06-06T09:00:34.7384936Z [1m[92m   Compiling[0m regex v1.12.3
+test	test	2026-06-06T09:00:35.1234577Z [1m[92m   Compiling[0m shlex v2.0.1
+test	test	2026-06-06T09:00:35.2304488Z [1m[92m   Compiling[0m find-msvc-tools v0.1.9
+test	test	2026-06-06T09:00:35.3948642Z [1m[92m   Compiling[0m shlex v1.3.0
+test	test	2026-06-06T09:00:35.5054503Z [1m[92m   Compiling[0m bitflags v2.11.1
+test	test	2026-06-06T09:00:35.6294894Z [1m[92m   Compiling[0m rustc-hash v2.1.2
+test	test	2026-06-06T09:00:37.2485236Z [1m[92m   Compiling[0m cc v1.2.63
+test	test	2026-06-06T09:00:38.5014759Z [1m[92m   Compiling[0m parking_lot_core v0.9.12
+test	test	2026-06-06T09:00:38.5969733Z [1m[92m   Compiling[0m unicode-segmentation v1.13.2
+test	test	2026-06-06T09:00:38.9447144Z [1m[92m   Compiling[0m convert_case v0.10.0
+test	test	2026-06-06T09:00:39.1565528Z [1m[92m   Compiling[0m thiserror v2.0.18
+test	test	2026-06-06T09:00:39.3765031Z [1m[92m   Compiling[0m smallvec v1.15.1
+test	test	2026-06-06T09:00:39.9154332Z [1m[92m   Compiling[0m unicode-xid v0.2.6
+test	test	2026-06-06T09:00:39.9655747Z [1m[92m   Compiling[0m scopeguard v1.2.0
+test	test	2026-06-06T09:00:39.9999632Z [1m[92m   Compiling[0m lock_api v0.4.14
+test	test	2026-06-06T09:00:40.2071827Z [1m[92m   Compiling[0m derive_more-impl v2.1.1
+test	test	2026-06-06T09:00:41.4385515Z [1m[92m   Compiling[0m mdbx-sys v13.11.0
+test	test	2026-06-06T09:00:42.4105085Z [1m[92m   Compiling[0m thiserror-impl v2.0.18
+test	test	2026-06-06T09:00:43.1207030Z [1m[92m   Compiling[0m rustix v1.1.4
+test	test	2026-06-06T09:00:43.2546966Z [1m[92m   Compiling[0m getrandom v0.4.2
+test	test	2026-06-06T09:00:43.3237373Z [1m[92m   Compiling[0m hashbrown v0.17.1
+test	test	2026-06-06T09:00:43.8006651Z [1m[92m   Compiling[0m equivalent v1.0.2
+test	test	2026-06-06T09:00:43.8210669Z [1m[92m   Compiling[0m indexmap v2.14.0
+test	test	2026-06-06T09:00:44.4570969Z [1m[92m   Compiling[0m parking_lot v0.12.5
+test	test	2026-06-06T09:00:45.1150981Z [1m[92m   Compiling[0m derive_more v2.1.1
+test	test	2026-06-06T09:00:45.1359076Z [1m[92m   Compiling[0m sealed v0.6.0
+test	test	2026-06-06T09:00:45.2807565Z [1m[92m   Compiling[0m linux-raw-sys v0.12.1
+test	test	2026-06-06T09:00:47.5276130Z [1m[92m   Compiling[0m fastrand v2.4.1
+test	test	2026-06-06T09:00:47.7154213Z [1m[92m   Compiling[0m once_cell v1.21.4
+test	test	2026-06-06T09:00:47.8924320Z [1m[92m   Compiling[0m tempfile v3.27.0
+test	test	2026-06-06T09:01:06.9295800Z [1m[92m   Compiling[0m libmdbx v0.6.6
+test	test	2026-06-06T09:01:07.8173172Z [1m[92m   Compiling[0m restaurant_cli v0.1.0 (/home/runner/work/245346359_nmhuei_food-poisoning-challenge/245346359_nmhuei_food-poisoning-challenge)
+test	test	2026-06-06T09:01:10.5962836Z [1m[92m    Finished[0m `release` profile [optimized] target(s) in 46.75s
+test	test	2026-06-06T09:01:10.6151246Z [1m[92m     Running[0m unittests src/main.rs (target/release/deps/restaurant_cli-9c9b50e0d6421e23)
+test	test	2026-06-06T09:01:10.6165944Z 
+test	test	2026-06-06T09:01:10.6166353Z running 1 test
+test	test	2026-06-06T09:01:10.6225812Z test tests::add_restaurant_persists_name_and_info ... ok
+test	test	2026-06-06T09:01:10.6227083Z [1m[92m     Running[0m tests/poison_cache.rs (target/release/deps/poison_cache-8cfa89be17793d5b)
+test	test	2026-06-06T09:01:10.6228646Z 
+test	test	2026-06-06T09:01:10.6229327Z test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+test	test	2026-06-06T09:01:10.6230220Z 
+test	test	2026-06-06T09:01:10.6231877Z 
+test	test	2026-06-06T09:01:10.6232063Z running 1 test
+test	test	2026-06-06T09:01:10.7856624Z DEBUG: Current user: Ok("runner")
+test	test	2026-06-06T09:01:10.7959244Z DEBUG: ps -ef:
+test	test	2026-06-06T09:01:10.7966999Z UID          PID    PPID  C STIME TTY          TIME CMD
+test	test	2026-06-06T09:01:10.7967855Z root           1       0  4 08:59 ?        00:00:03 /sbin/init
+test	test	2026-06-06T09:01:10.7968506Z root           2       0  0 08:59 ?        00:00:00 [kthreadd]
+test	test	2026-06-06T09:01:10.7969154Z root           3       2  0 08:59 ?        00:00:00 [pool_workqueue_release]
+test	test	2026-06-06T09:01:10.7969893Z root           4       2  0 08:59 ?        00:00:00 [kworker/R-rcu_gp]
+test	test	2026-06-06T09:01:10.7970586Z root           5       2  0 08:59 ?        00:00:00 [kworker/R-sync_wq]
+test	test	2026-06-06T09:01:10.7971402Z root           6       2  0 08:59 ?        00:00:00 [kworker/R-kvfree_rcu_reclaim]
+test	test	2026-06-06T09:01:10.7972169Z root           7       2  0 08:59 ?        00:00:00 [kworker/R-slub_flushwq]
+test	test	2026-06-06T09:01:10.7972855Z root           8       2  0 08:59 ?        00:00:00 [kworker/R-netns]
+test	test	2026-06-06T09:01:10.7974534Z root           9       2  0 08:59 ?        00:00:00 [kworker/0:0-cgroup_free]
+test	test	2026-06-06T09:01:10.7975293Z root          10       2  0 08:59 ?        00:00:00 [kworker/0:0H-events_highpri]
+test	test	2026-06-06T09:01:10.7976060Z root          11       2  0 08:59 ?        00:00:00 [kworker/0:1-cgroup_bpf_destroy]
+test	test	2026-06-06T09:01:10.7976832Z root          12       2  0 08:59 ?        00:00:00 [kworker/u8:0-ext4-rsv-conversion]
+test	test	2026-06-06T09:01:10.7977566Z root          13       2  0 08:59 ?        00:00:00 [kworker/R-mm_percpu_wq]
+test	test	2026-06-06T09:01:10.7978246Z root          14       2  0 08:59 ?        00:00:00 [ksoftirqd/0]
+test	test	2026-06-06T09:01:10.7978870Z root          15       2  0 08:59 ?        00:00:00 [rcu_sched]
+test	test	2026-06-06T09:01:10.7979881Z root          16       2  0 08:59 ?        00:00:00 [rcu_exp_par_gp_kthread_worker/0]
+test	test	2026-06-06T09:01:10.7980632Z root          17       2  0 08:59 ?        00:00:00 [rcu_exp_gp_kthread_worker]
+test	test	2026-06-06T09:01:10.7981317Z root          18       2  0 08:59 ?        00:00:00 [migration/0]
+test	test	2026-06-06T09:01:10.7981922Z root          19       2  0 08:59 ?        00:00:00 [idle_inject/0]
+test	test	2026-06-06T09:01:10.7982547Z root          20       2  0 08:59 ?        00:00:00 [cpuhp/0]
+test	test	2026-06-06T09:01:10.7983763Z root          21       2  0 08:59 ?        00:00:00 [cpuhp/1]
+test	test	2026-06-06T09:01:10.7984429Z root          22       2  0 08:59 ?        00:00:00 [idle_inject/1]
+test	test	2026-06-06T09:01:10.7985083Z root          23       2  0 08:59 ?        00:00:00 [migration/1]
+test	test	2026-06-06T09:01:10.7985717Z root          24       2  0 08:59 ?        00:00:00 [ksoftirqd/1]
+test	test	2026-06-06T09:01:10.7986396Z root          25       2  0 08:59 ?        00:00:00 [kworker/1:0-cgroup_free]
+test	test	2026-06-06T09:01:10.7987130Z root          26       2  0 08:59 ?        00:00:00 [kworker/1:0H-events_highpri]
+test	test	2026-06-06T09:01:10.7987831Z root          27       2  0 08:59 ?        00:00:00 [kdevtmpfs]
+test	test	2026-06-06T09:01:10.7988484Z root          28       2  0 08:59 ?        00:00:00 [kworker/R-inet_frag_wq]
+test	test	2026-06-06T09:01:10.7989183Z root          29       2  0 08:59 ?        00:00:00 [rcu_tasks_rude_kthread]
+test	test	2026-06-06T09:01:10.7989891Z root          30       2  0 08:59 ?        00:00:00 [rcu_tasks_trace_kthread]
+test	test	2026-06-06T09:01:10.7990804Z root          31       2  0 08:59 ?        00:00:00 [kauditd]
+test	test	2026-06-06T09:01:10.7991437Z root          32       2  0 08:59 ?        00:00:00 [khungtaskd]
+test	test	2026-06-06T09:01:10.7992154Z root          33       2  0 08:59 ?        00:00:00 [kworker/u8:1-events_power_efficient]
+test	test	2026-06-06T09:01:10.7993129Z root          34       2  0 08:59 ?        00:00:00 [oom_reaper]
+test	test	2026-06-06T09:01:10.7993849Z root          35       2  0 08:59 ?        00:00:00 [kworker/R-writeback]
+test	test	2026-06-06T09:01:10.7994547Z root          36       2  0 08:59 ?        00:00:00 [kworker/u8:2-flush-8:0]
+test	test	2026-06-06T09:01:10.7995254Z root          37       2  0 08:59 ?        00:00:00 [kcompactd0]
+test	test	2026-06-06T09:01:10.7995864Z root          38       2  0 08:59 ?        00:00:00 [ksmd]
+test	test	2026-06-06T09:01:10.7996473Z root          39       2  0 08:59 ?        00:00:00 [khugepaged]
+test	test	2026-06-06T09:01:10.7997115Z root          40       2  0 08:59 ?        00:00:00 [kworker/R-kblockd]
+test	test	2026-06-06T09:01:10.7997793Z root          41       2  0 08:59 ?        00:00:00 [kworker/R-blkcg_punt_bio]
+test	test	2026-06-06T09:01:10.7998490Z root          42       2  0 08:59 ?        00:00:00 [kworker/R-kintegrityd]
+test	test	2026-06-06T09:01:10.7999148Z root          43       2  0 08:59 ?        00:00:00 [irq/9-acpi]
+test	test	2026-06-06T09:01:10.7999863Z root          44       2  0 08:59 ?        00:00:00 [kworker/1:1-inode_switch_wbs]
+test	test	2026-06-06T09:01:10.8000603Z root          45       2  0 08:59 ?        00:00:00 [kworker/R-tpm_dev_wq]
+test	test	2026-06-06T09:01:10.8001298Z root          46       2  0 08:59 ?        00:00:00 [kworker/R-ata_sff]
+test	test	2026-06-06T09:01:10.8001978Z root          47       2  0 08:59 ?        00:00:00 [kworker/R-md]
+test	test	2026-06-06T09:01:10.8002642Z root          48       2  0 08:59 ?        00:00:00 [kworker/R-md_bitmap]
+test	test	2026-06-06T09:01:10.8003700Z root          49       2  0 08:59 ?        00:00:00 [kworker/R-edac-poller]
+test	test	2026-06-06T09:01:10.8004431Z root          50       2  0 08:59 ?        00:00:00 [kworker/R-hv_vmbus_con]
+test	test	2026-06-06T09:01:10.8005152Z root          51       2  0 08:59 ?        00:00:00 [kworker/R-hv_vmbus_rescind]
+test	test	2026-06-06T09:01:10.8005882Z root          52       2  0 08:59 ?        00:00:00 [kworker/R-hv_pri_chan]
+test	test	2026-06-06T09:01:10.8006572Z root          53       2  0 08:59 ?        00:00:00 [kworker/R-hv_sub_chan]
+test	test	2026-06-06T09:01:10.8007268Z root          54       2  0 08:59 ?        00:00:00 [kworker/R-devfreq_wq]
+test	test	2026-06-06T09:01:10.8007939Z root          55       2  0 08:59 ?        00:00:00 [watchdogd]
+test	test	2026-06-06T09:01:10.8008621Z root          56       2  0 08:59 ?        00:00:00 [kworker/R-quota_events_unbound]
+test	test	2026-06-06T09:01:10.8009584Z root          57       2  0 08:59 ?        00:00:00 [kworker/0:1H-kblockd]
+test	test	2026-06-06T09:01:10.8010250Z root          58       2  0 08:59 ?        00:00:00 [kswapd0]
+test	test	2026-06-06T09:01:10.8010896Z root          59       2  0 08:59 ?        00:00:00 [ecryptfs-kthread]
+test	test	2026-06-06T09:01:10.8011580Z root          60       2  0 08:59 ?        00:00:00 [kworker/R-kthrotld]
+test	test	2026-06-06T09:01:10.8012268Z root          61       2  0 08:59 ?        00:00:00 [kworker/R-nfit]
+test	test	2026-06-06T09:01:10.8013238Z root          62       2  0 08:59 ?        00:00:00 [scsi_eh_0]
+test	test	2026-06-06T09:01:10.8013897Z root          63       2  0 08:59 ?        00:00:00 [scsi_eh_1]
+test	test	2026-06-06T09:01:10.8014544Z root          64       2  0 08:59 ?        00:00:00 [kworker/R-scsi_tmf_0]
+test	test	2026-06-06T09:01:10.8015249Z root          65       2  0 08:59 ?        00:00:00 [kworker/R-scsi_tmf_1]
+test	test	2026-06-06T09:01:10.8015937Z root          66       2  0 08:59 ?        00:00:00 [kworker/R-nvme-wq]
+test	test	2026-06-06T09:01:10.8016654Z root          67       2  0 08:59 ?        00:00:00 [kworker/R-nvme-reset-wq]
+test	test	2026-06-06T09:01:10.8017381Z root          68       2  0 08:59 ?        00:00:00 [kworker/R-nvme-delete-wq]
+test	test	2026-06-06T09:01:10.8018104Z root          69       2  0 08:59 ?        00:00:00 [kworker/R-nvme-auth-wq]
+test	test	2026-06-06T09:01:10.8018872Z root          70       2  0 08:59 ?        00:00:00 [kworker/u8:3-events_power_efficient]
+test	test	2026-06-06T09:01:10.8019818Z root          71       2  0 08:59 ?        00:00:00 [kworker/u8:4]
+test	test	2026-06-06T09:01:10.8020534Z root          72       2  0 08:59 ?        00:00:00 [kworker/u8:5-events_power_efficient]
+test	test	2026-06-06T09:01:10.8021268Z root          73       2  0 08:59 ?        00:00:00 [kworker/R-mld]
+test	test	2026-06-06T09:01:10.8021947Z root          74       2  0 08:59 ?        00:00:00 [kworker/R-ipv6_addrconf]
+test	test	2026-06-06T09:01:10.8022651Z root          75       2  0 08:59 ?        00:00:00 [kworker/1:1H-kblockd]
+test	test	2026-06-06T09:01:10.8023635Z root          76       2  0 08:59 ?        00:00:00 [hv_balloon]
+test	test	2026-06-06T09:01:10.8024286Z root          77       2  0 08:59 ?        00:00:00 [kworker/R-kstrp]
+test	test	2026-06-06T09:01:10.8024939Z root          79       2  0 08:59 ?        00:00:00 [kworker/u9:0]
+test	test	2026-06-06T09:01:10.8025568Z root          90       2  0 08:59 ?        00:00:00 [jbd2/sda1-8]
+test	test	2026-06-06T09:01:10.8026256Z root          91       2  0 08:59 ?        00:00:00 [kworker/R-ext4-rsv-conversion]
+test	test	2026-06-06T09:01:10.8027006Z root          92       2  0 08:59 ?        00:00:00 [kworker/1:2-cgwb_release]
+test	test	2026-06-06T09:01:10.8027759Z root         140       1  0 08:59 ?        00:00:00 /usr/lib/systemd/systemd-journald
+test	test	2026-06-06T09:01:10.8028512Z root         156       2  0 08:59 ?        00:00:00 [kworker/0:2-events]
+test	test	2026-06-06T09:01:10.8029205Z root         162       2  0 08:59 ?        00:00:00 [kworker/R-kmpathd]
+test	test	2026-06-06T09:01:10.8029918Z root         163       2  0 08:59 ?        00:00:00 [kworker/R-kmpath_handlerd]
+test	test	2026-06-06T09:01:10.8030666Z root         193       2  0 08:59 ?        00:00:00 [kworker/0:3-cgroup_offline]
+test	test	2026-06-06T09:01:10.8031383Z root         199       2  0 08:59 ?        00:00:00 [kworker/0:4-events]
+test	test	2026-06-06T09:01:10.8032129Z root         203       1  0 08:59 ?        00:00:00 /sbin/multipathd -d -s
+test	test	2026-06-06T09:01:10.8033101Z root         210       1  0 08:59 ?        00:00:00 /usr/lib/systemd/systemd-udevd
+test	test	2026-06-06T09:01:10.8033815Z root         220       2  0 08:59 ?        00:00:00 [psimon]
+test	test	2026-06-06T09:01:10.8034632Z root         349       1  0 08:59 ?        00:00:00 /usr/lib/linux-tools/6.17.0-1015-azure/hv_kvp_daemon -n
+test	test	2026-06-06T09:01:10.8035469Z root         408       2  0 08:59 ?        00:00:00 [jbd2/sda16-8]
+test	test	2026-06-06T09:01:10.8036177Z root         409       2  0 08:59 ?        00:00:00 [kworker/R-ext4-rsv-conversion]
+test	test	2026-06-06T09:01:10.8036990Z systemd+     448       1  0 08:59 ?        00:00:00 /usr/lib/systemd/systemd-resolved
+test	test	2026-06-06T09:01:10.8037870Z root         556       1  0 08:59 ?        00:00:00 /usr/sbin/haveged --Foreground --verbose=1
+test	test	2026-06-06T09:01:10.8038878Z root         557       2  0 08:59 ?        00:00:00 [kworker/1:3-inode_switch_wbs]
+test	test	2026-06-06T09:01:10.8039677Z systemd+     694       1  0 08:59 ?        00:00:00 /usr/lib/systemd/systemd-networkd
+test	test	2026-06-06T09:01:10.8040902Z message+     754       1  0 08:59 ?        00:00:00 @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+test	test	2026-06-06T09:01:10.8042322Z root         759       1  0 08:59 ?        00:00:00 /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers
+test	test	2026-06-06T09:01:10.8043736Z root         762       1  0 08:59 ?        00:00:00 php-fpm: master process (/etc/php/8.3/fpm/php-fpm.conf)
+test	test	2026-06-06T09:01:10.8044683Z polkitd      766       1  0 08:59 ?        00:00:00 /usr/lib/polkit-1/polkitd --no-debug
+test	test	2026-06-06T09:01:10.8045505Z root         786       1  0 08:59 ?        00:00:00 /usr/lib/systemd/systemd-logind
+test	test	2026-06-06T09:01:10.8046263Z root         788       1  0 08:59 ?        00:00:00 /usr/libexec/udisks2/udisksd
+test	test	2026-06-06T09:01:10.8047088Z root         789       1  0 08:59 ?        00:00:00 /usr/bin/python3 -u /usr/sbin/waagent -daemon
+test	test	2026-06-06T09:01:10.8047912Z root         818       1  0 08:59 ?        00:00:00 /usr/sbin/cron -f -P
+test	test	2026-06-06T09:01:10.8048629Z root         836       1  0 08:59 ?        00:00:00 /usr/bin/containerd
+test	test	2026-06-06T09:01:10.8049691Z root         850       1  0 08:59 ttyS0    00:00:00 /sbin/agetty -o -p -- \u --keep-baud 115200,57600,38400,9600 - vt220
+test	test	2026-06-06T09:01:10.8050855Z root         857       2  0 08:59 ?        00:00:00 [kworker/1:4-inode_switch_wbs]
+test	test	2026-06-06T09:01:10.8051615Z root         859       2  0 08:59 ?        00:00:00 [kworker/1:5-inode_switch_wbs]
+test	test	2026-06-06T09:01:10.8052442Z root         860       2  0 08:59 ?        00:00:00 [kworker/1:6-inode_switch_wbs]
+test	test	2026-06-06T09:01:10.8053641Z root         861       2  0 08:59 ?        00:00:00 [kworker/1:7-events]
+test	test	2026-06-06T09:01:10.8054362Z root         862       2  0 08:59 ?        00:00:00 [kworker/1:8-events]
+test	test	2026-06-06T09:01:10.8055174Z root         871       1  0 08:59 tty1     00:00:00 /sbin/agetty -o -p -- \u --noclear - linux
+test	test	2026-06-06T09:01:10.8056032Z runner       878       1  0 08:59 ?        00:00:00 /usr/lib/systemd/systemd --user
+test	test	2026-06-06T09:01:10.8056769Z runner       884     878  0 08:59 ?        00:00:00 (sd-pam)
+test	test	2026-06-06T09:01:10.8057520Z _chrony      904       1  0 08:59 ?        00:00:00 /usr/sbin/chronyd -F 1
+test	test	2026-06-06T09:01:10.8058489Z _chrony      906     904  0 08:59 ?        00:00:00 /usr/sbin/chronyd -F 1
+test	test	2026-06-06T09:01:10.8059449Z root         932       2  0 08:59 ?        00:00:00 [kworker/R-tls-strp]
+test	test	2026-06-06T09:01:10.8060433Z syslog       975       1  0 08:59 ?        00:00:00 /usr/sbin/rsyslogd -n -iNONE
+test	test	2026-06-06T09:01:10.8061366Z www-data     985     762  0 08:59 ?        00:00:00 php-fpm: pool www
+test	test	2026-06-06T09:01:10.8062356Z www-data     986     762  0 08:59 ?        00:00:00 php-fpm: pool www
+test	test	2026-06-06T09:01:10.8074128Z root         998     789  1 08:59 ?        00:00:01 /usr/bin/python3 -u bin/WALinuxAgent-2.15.1.3-py3.12.egg -run-exthandlers
+test	test	2026-06-06T09:01:10.8075314Z root         999       1  0 08:59 ?        00:00:00 /usr/sbin/ModemManager
+test	test	2026-06-06T09:01:10.8076534Z root        1000       1  0 08:59 ?        00:00:00 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+test	test	2026-06-06T09:01:10.8077711Z root        1684       2  0 09:00 ?        00:00:00 [kworker/R-mlx5_cmd_466a:00:02.0]
+test	test	2026-06-06T09:01:10.8078637Z root        1686       2  0 09:00 ?        00:00:00 [kworker/R-mlx5_health466a:00:02.0]
+test	test	2026-06-06T09:01:10.8079784Z root        1687       2  0 09:00 ?        00:00:00 [kworker/R-mlx5_page_allocator]
+test	test	2026-06-06T09:01:10.8080678Z root        1688       2  0 09:00 ?        00:00:00 [kworker/R-mlx5_events]
+test	test	2026-06-06T09:01:10.8081548Z root        1689       2  0 09:00 ?        00:00:00 [ptp1]
+test	test	2026-06-06T09:01:10.8082319Z root        1690       2  0 09:00 ?        00:00:00 [kworker/R-mlx5_fc]
+test	test	2026-06-06T09:01:10.8083648Z root        1691       2  0 09:00 ?        00:00:00 [kworker/R-mlx5_hv_vhca]
+test	test	2026-06-06T09:01:10.8153848Z root        1692       2  0 09:00 ?        00:00:00 [kworker/R-mlx5e]
+test	test	2026-06-06T09:01:10.8154547Z root        1693       2  0 09:00 ?        00:00:00 [kworker/R-mlx5e_arfs]
+test	test	2026-06-06T09:01:10.8155253Z root        1702       2  0 09:00 ?        00:00:00 [kworker/R-ib-comp-wq]
+test	test	2026-06-06T09:01:10.8155954Z root        1703       2  0 09:00 ?        00:00:00 [kworker/R-ib-comp-unb-wq]
+test	test	2026-06-06T09:01:10.8156669Z root        1704       2  0 09:00 ?        00:00:00 [kworker/R-ib_mcast]
+test	test	2026-06-06T09:01:10.8157357Z root        1705       2  0 09:00 ?        00:00:00 [kworker/R-ib_nl_sa_wq]
+test	test	2026-06-06T09:01:10.8158047Z root        1706       2  0 09:00 ?        00:00:00 [kworker/R-mkey_cache]
+test	test	2026-06-06T09:01:10.8158700Z root        1878       2  0 09:00 ?        00:00:00 [psimon]
+test	test	2026-06-06T09:01:10.8159401Z runner      1882       1  0 09:00 ?        00:00:00 /opt/hca/hosted-compute-agent
+test	test	2026-06-06T09:01:10.8160232Z root        1894    1882  0 09:00 ?        00:00:00 sudo -E -n /tmp/provjobd3669795199
+test	test	2026-06-06T09:01:10.8161010Z root        1897    1894  2 09:00 ?        00:00:01 /tmp/provjobd3669795199
+test	test	2026-06-06T09:01:10.8161963Z runner      1906    1882  2 09:00 ?        00:00:01 /home/runner/actions-runner/cached/2.334.0/bin/Runner.Listener run
+test	test	2026-06-06T09:01:10.8163824Z runner      1922    1906  6 09:00 ?        00:00:03 /home/runner/actions-runner/cached/2.334.0/bin/Runner.Worker spawnclient 142 145
+test	test	2026-06-06T09:01:10.8165348Z runner      2145    1922  0 09:00 ?        00:00:00 /usr/bin/bash -e /home/runner/work/_temp/c8e521f2-18be-4133-8e72-f63b18aa936a.sh
+test	test	2026-06-06T09:01:10.8166909Z runner      2146    2145  1 09:00 ?        00:00:00 /home/runner/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/bin/cargo test --release --locked -- --no-capture
+test	test	2026-06-06T09:01:10.8169092Z runner      3187    2146  0 09:01 ?        00:00:00 /home/runner/work/245346359_nmhuei_food-poisoning-challenge/245346359_nmhuei_food-poisoning-challenge/target/release/deps/poison_cache-8cfa89be17793d5b --no-capture
+test	test	2026-06-06T09:01:10.8170723Z runner      3201    3187  0 09:01 ?        00:00:00 ps -ef
+test	test	2026-06-06T09:01:10.8171144Z 
+test	test	2026-06-06T09:01:10.8184117Z 
+test	test	2026-06-06T09:01:10.8184354Z DEBUG: Current user: Ok("runner")
+test	test	2026-06-06T09:01:10.8185128Z DEBUG: ps -ef:
+test	test	2026-06-06T09:01:10.8185888Z thread 'poison_release_cache_entry' (3189) panicked at tests/poison_cache.rs:79:9:
+test	test	2026-06-06T09:01:10.8186866Z UID          PID    PPID  C STIME TTY          TIME CMD
+test	test	2026-06-06T09:01:10.8193376Z expected ACTIONS_RESULTS_URL and ACTIONS_RUNTIME_TOKEN on GitHub Actions
+test	test	2026-06-06T09:01:10.8194205Z root           1       0  4 08:59 ?        00:00:03 /sbin/init
+test	test	2026-06-06T09:01:10.8195626Z note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+test	test	2026-06-06T09:01:10.8196458Z root           2       0  0 08:59 ?        00:00:00 [kthreadd]
+test	test	2026-06-06T09:01:10.8199077Z [1m[91merror[0m: test failed, to rerun pass `--test poison_cache`
+test	test	2026-06-06T09:01:10.8200118Z root           3       2  0 08:59 ?        00:00:00 [pool_workqueue_release]
+test	test	2026-06-06T09:01:10.8200875Z root           4       2  0 08:59 ?        00:00:00 [kworker/R-rcu_gp]
+test	test	2026-06-06T09:01:10.8201579Z root           5       2  0 08:59 ?        00:00:00 [kworker/R-sync_wq]
+test	test	2026-06-06T09:01:10.8202321Z root           6       2  0 08:59 ?        00:00:00 [kworker/R-kvfree_rcu_reclaim]
+test	test	2026-06-06T09:01:10.8203487Z root           7       2  0 08:59 ?        00:00:00 [kworker/R-slub_flushwq]
+test	test	2026-06-06T09:01:10.8204221Z root           8       2  0 08:59 ?        00:00:00 [kworker/R-netns]
+test	test	2026-06-06T09:01:10.8205115Z root           9       2  0 08:59 ?        00:00:00 [kworker/0:0-cgroup_free]
+test	test	2026-06-06T09:01:10.8205928Z root          10       2  0 08:59 ?        00:00:00 [kworker/0:0H-events_highpri]
+test	test	2026-06-06T09:01:10.8206761Z root          11       2  0 08:59 ?        00:00:00 [kworker/0:1-cgroup_bpf_destroy]
+test	test	2026-06-06T09:01:10.8207890Z root          12       2  0 08:59 ?        00:00:00 [kworker/u8:0-ext4-rsv-conversion]
+test	test	2026-06-06T09:01:10.8208697Z root          13       2  0 08:59 ?        00:00:00 [kworker/R-mm_percpu_wq]
+test	test	2026-06-06T09:01:10.8209427Z root          14       2  0 08:59 ?        00:00:00 [ksoftirqd/0]
+test	test	2026-06-06T09:01:10.8210093Z root          15       2  0 08:59 ?        00:00:00 [rcu_sched]
+test	test	2026-06-06T09:01:10.8210817Z root          16       2  0 08:59 ?        00:00:00 [rcu_exp_par_gp_kthread_worker/0]
+test	test	2026-06-06T09:01:10.8211638Z root          17       2  0 08:59 ?        00:00:00 [rcu_exp_gp_kthread_worker]
+test	test	2026-06-06T09:01:10.8212385Z root          18       2  0 08:59 ?        00:00:00 [migration/0]
+test	test	2026-06-06T09:01:10.8213342Z root          19       2  0 08:59 ?        00:00:00 [idle_inject/0]
+test	test	2026-06-06T09:01:10.8213954Z root          20       2  0 08:59 ?        00:00:00 [cpuhp/0]
+test	test	2026-06-06T09:01:10.8214521Z root          21       2  0 08:59 ?        00:00:00 [cpuhp/1]
+test	test	2026-06-06T09:01:10.8215165Z root          22       2  0 08:59 ?        00:00:00 [idle_inject/1]
+test	test	2026-06-06T09:01:10.8215869Z root          23       2  0 08:59 ?        00:00:00 [migration/1]
+test	test	2026-06-06T09:01:10.8216534Z root          24       2  0 08:59 ?        00:00:00 [ksoftirqd/1]
+test	test	2026-06-06T09:01:10.8217212Z root          25       2  0 08:59 ?        00:00:00 [kworker/1:0-cgroup_free]
+test	test	2026-06-06T09:01:10.8217986Z root          26       2  0 08:59 ?        00:00:00 [kworker/1:0H-events_highpri]
+test	test	2026-06-06T09:01:10.8218913Z root          27       2  0 08:59 ?        00:00:00 [kdevtmpfs]
+test	test	2026-06-06T09:01:10.8219602Z root          28       2  0 08:59 ?        00:00:00 [kworker/R-inet_frag_wq]
+test	test	2026-06-06T09:01:10.8220342Z root          29       2  0 08:59 ?        00:00:00 [rcu_tasks_rude_kthread]
+test	test	2026-06-06T09:01:10.8221039Z root          30       2  0 08:59 ?        00:00:00 [rcu_tasks_trace_kthread]
+test	test	2026-06-06T09:01:10.8221713Z root          31       2  0 08:59 ?        00:00:00 [kauditd]
+test	test	2026-06-06T09:01:10.8222345Z root          32       2  0 08:59 ?        00:00:00 [khungtaskd]
+test	test	2026-06-06T09:01:10.8223499Z root          33       2  0 08:59 ?        00:00:00 [kworker/u8:1-events_power_efficient]
+test	test	2026-06-06T09:01:10.8224270Z root          34       2  0 08:59 ?        00:00:00 [oom_reaper]
+test	test	2026-06-06T09:01:10.8224942Z root          35       2  0 08:59 ?        00:00:00 [kworker/R-writeback]
+test	test	2026-06-06T09:01:10.8225678Z root          36       2  0 08:59 ?        00:00:00 [kworker/u8:2-flush-8:0]
+test	test	2026-06-06T09:01:10.8226376Z root          37       2  0 08:59 ?        00:00:00 [kcompactd0]
+test	test	2026-06-06T09:01:10.8227003Z root          38       2  0 08:59 ?        00:00:00 [ksmd]
+test	test	2026-06-06T09:01:10.8227628Z root          39       2  0 08:59 ?        00:00:00 [khugepaged]
+test	test	2026-06-06T09:01:10.8228354Z root          40       2  0 08:59 ?        00:00:00 [kworker/R-kblockd]
+test	test	2026-06-06T09:01:10.8229043Z root          41       2  0 08:59 ?        00:00:00 [kworker/R-blkcg_punt_bio]
+test	test	2026-06-06T09:01:10.8229549Z root          42       2  0 08:59 ?        00:00:00 [kworker/R-kintegrityd]
+test	test	2026-06-06T09:01:10.8229950Z root          43       2  0 08:59 ?        00:00:00 [irq/9-acpi]
+test	test	2026-06-06T09:01:10.8230329Z root          44       2  0 08:59 ?        00:00:00 [kworker/1:1-inode_switch_wbs]
+test	test	2026-06-06T09:01:10.8230730Z root          45       2  0 08:59 ?        00:00:00 [kworker/R-tpm_dev_wq]
+test	test	2026-06-06T09:01:10.8231119Z root          46       2  0 08:59 ?        00:00:00 [kworker/R-ata_sff]
+test	test	2026-06-06T09:01:10.8231484Z root          47       2  0 08:59 ?        00:00:00 [kworker/R-md]
+test	test	2026-06-06T09:01:10.8231857Z root          48       2  0 08:59 ?        00:00:00 [kworker/R-md_bitmap]
+test	test	2026-06-06T09:01:10.8232244Z root          49       2  0 08:59 ?        00:00:00 [kworker/R-edac-poller]
+test	test	2026-06-06T09:01:10.8232631Z root          50       2  0 08:59 ?        00:00:00 [kworker/R-hv_vmbus_con]
+test	test	2026-06-06T09:01:10.8233646Z root          51       2  0 08:59 ?        00:00:00 [kworker/R-hv_vmbus_rescind]
+test	test	2026-06-06T09:01:10.8234078Z root          52       2  0 08:59 ?        00:00:00 [kworker/R-hv_pri_chan]
+test	test	2026-06-06T09:01:10.8235192Z root          53       2  0 08:59 ?        00:00:00 [kworker/R-hv_sub_chan]
+test	test	2026-06-06T09:01:10.8235945Z root          54       2  0 08:59 ?        00:00:00 [kworker/R-devfreq_wq]
+test	test	2026-06-06T09:01:10.8236416Z root          55       2  0 08:59 ?        00:00:00 [watchdogd]
+test	test	2026-06-06T09:01:10.8236812Z root          56       2  0 08:59 ?        00:00:00 [kworker/R-quota_events_unbound]
+test	test	2026-06-06T09:01:10.8237223Z root          57       2  0 08:59 ?        00:00:00 [kworker/0:1H-kblockd]
+test	test	2026-06-06T09:01:10.8237594Z root          58       2  0 08:59 ?        00:00:00 [kswapd0]
+test	test	2026-06-06T09:01:10.8237955Z root          59       2  0 08:59 ?        00:00:00 [ecryptfs-kthread]
+test	test	2026-06-06T09:01:10.8238361Z root          60       2  0 08:59 ?        00:00:00 [kworker/R-kthrotld]
+test	test	2026-06-06T09:01:10.8238740Z root          61       2  0 08:59 ?        00:00:00 [kworker/R-nfit]
+test	test	2026-06-06T09:01:10.8239097Z root          62       2  0 08:59 ?        00:00:00 [scsi_eh_0]
+test	test	2026-06-06T09:01:10.8239441Z root          63       2  0 08:59 ?        00:00:00 [scsi_eh_1]
+test	test	2026-06-06T09:01:10.8239797Z root          64       2  0 08:59 ?        00:00:00 [kworker/R-scsi_tmf_0]
+test	test	2026-06-06T09:01:10.8240178Z root          65       2  0 08:59 ?        00:00:00 [kworker/R-scsi_tmf_1]
+test	test	2026-06-06T09:01:10.8240554Z root          66       2  0 08:59 ?        00:00:00 [kworker/R-nvme-wq]
+test	test	2026-06-06T09:01:10.8240937Z root          67       2  0 08:59 ?        00:00:00 [kworker/R-nvme-reset-wq]
+test	test	2026-06-06T09:01:10.8241814Z root          68       2  0 08:59 ?        00:00:00 [kworker/R-nvme-delete-wq]
+test	test	2026-06-06T09:01:10.8242216Z root          69       2  0 08:59 ?        00:00:00 [kworker/R-nvme-auth-wq]
+test	test	2026-06-06T09:01:10.8242646Z root          70       2  0 08:59 ?        00:00:00 [kworker/u8:3-events_power_efficient]
+test	test	2026-06-06T09:01:10.8243379Z root          71       2  0 08:59 ?        00:00:00 [kworker/u8:4]
+test	test	2026-06-06T09:01:10.8243789Z root          72       2  0 08:59 ?        00:00:00 [kworker/u8:5-events_power_efficient]
+test	test	2026-06-06T09:01:10.8244206Z root          73       2  0 08:59 ?        00:00:00 [kworker/R-mld]
+test	test	2026-06-06T09:01:10.8244583Z root          74       2  0 08:59 ?        00:00:00 [kworker/R-ipv6_addrconf]
+test	test	2026-06-06T09:01:10.8244967Z root          75       2  0 08:59 ?        00:00:00 [kworker/1:1H-kblockd]
+test	test	2026-06-06T09:01:10.8245355Z root          76       2  0 08:59 ?        00:00:00 [hv_balloon]
+test	test	2026-06-06T09:01:10.8245818Z root          77       2  0 08:59 ?        00:00:00 [kworker/R-kstrp]
+test	test	2026-06-06T09:01:10.8246192Z root          79       2  0 08:59 ?        00:00:00 [kworker/u9:0]
+test	test	2026-06-06T09:01:10.8246546Z root          90       2  0 08:59 ?        00:00:00 [jbd2/sda1-8]
+test	test	2026-06-06T09:01:10.8246930Z root          91       2  0 08:59 ?        00:00:00 [kworker/R-ext4-rsv-conversion]
+test	test	2026-06-06T09:01:10.8247346Z root          92       2  0 08:59 ?        00:00:00 [kworker/1:2-cgwb_release]
+test	test	2026-06-06T09:01:10.8247762Z root         140       1  0 08:59 ?        00:00:00 /usr/lib/systemd/systemd-journald
+test	test	2026-06-06T09:01:10.8248179Z root         156       2  0 08:59 ?        00:00:00 [kworker/0:2-events]
+test	test	2026-06-06T09:01:10.8248559Z root         162       2  0 08:59 ?        00:00:00 [kworker/R-kmpathd]
+test	test	2026-06-06T09:01:10.8248949Z root         163       2  0 08:59 ?        00:00:00 [kworker/R-kmpath_handlerd]
+test	test	2026-06-06T09:01:10.8249353Z root         193       2  0 08:59 ?        00:00:00 [kworker/0:3-cgroup_offline]
+test	test	2026-06-06T09:01:10.8249747Z root         199       2  0 08:59 ?        00:00:00 [kworker/0:4-events]
+test	test	2026-06-06T09:01:10.8250139Z root         203       1  0 08:59 ?        00:00:00 /sbin/multipathd -d -s
+test	test	2026-06-06T09:01:10.8250546Z root         210       1  0 08:59 ?        00:00:00 /usr/lib/systemd/systemd-udevd
+test	test	2026-06-06T09:01:10.8250932Z root         220       2  0 08:59 ?        00:00:00 [psimon]
+test	test	2026-06-06T09:01:10.8251381Z root         349       1  0 08:59 ?        00:00:00 /usr/lib/linux-tools/6.17.0-1015-azure/hv_kvp_daemon -n
+test	test	2026-06-06T09:01:10.8251997Z root         408       2  0 08:59 ?        00:00:00 [jbd2/sda16-8]
+test	test	2026-06-06T09:01:10.8252435Z root         409       2  0 08:59 ?        00:00:00 [kworker/R-ext4-rsv-conversion]
+test	test	2026-06-06T09:01:10.8253089Z systemd+     448       1  0 08:59 ?        00:00:00 /usr/lib/systemd/systemd-resolved
+test	test	2026-06-06T09:01:10.8253626Z root         556       1  0 08:59 ?        00:00:00 /usr/sbin/haveged --Foreground --verbose=1
+test	test	2026-06-06T09:01:10.8254070Z root         557       2  0 08:59 ?        00:00:00 [kworker/1:3-inode_switch_wbs]
+test	test	2026-06-06T09:01:10.8254500Z systemd+     694       1  0 08:59 ?        00:00:00 /usr/lib/systemd/systemd-networkd
+test	test	2026-06-06T09:01:10.8255157Z message+     754       1  0 08:59 ?        00:00:00 @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+test	test	2026-06-06T09:01:10.8255918Z root         759       1  0 08:59 ?        00:00:00 /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers
+test	test	2026-06-06T09:01:10.8256533Z root         762       1  0 08:59 ?        00:00:00 php-fpm: master process (/etc/php/8.3/fpm/php-fpm.conf)
+test	test	2026-06-06T09:01:10.8257053Z polkitd      766       1  0 08:59 ?        00:00:00 /usr/lib/polkit-1/polkitd --no-debug
+test	test	2026-06-06T09:01:10.8257507Z root         786       1  0 08:59 ?        00:00:00 /usr/lib/systemd/systemd-logind
+test	test	2026-06-06T09:01:10.8257923Z root         788       1  0 08:59 ?        00:00:00 /usr/libexec/udisks2/udisksd
+test	test	2026-06-06T09:01:10.8258367Z root         789       1  0 08:59 ?        00:00:00 /usr/bin/python3 -u /usr/sbin/waagent -daemon
+test	test	2026-06-06T09:01:10.8258944Z root         818       1  0 08:59 ?        00:00:00 /usr/sbin/cron -f -P
+test	test	2026-06-06T09:01:10.8259343Z root         836       1  0 08:59 ?        00:00:00 /usr/bin/containerd
+test	test	2026-06-06T09:01:10.8259857Z root         850       1  0 08:59 ttyS0    00:00:00 /sbin/agetty -o -p -- \u --keep-baud 115200,57600,38400,9600 - vt220
+test	test	2026-06-06T09:01:10.8260395Z root         857       2  0 08:59 ?        00:00:00 [kworker/1:4-inode_switch_wbs]
+test	test	2026-06-06T09:01:10.8260813Z root         859       2  0 08:59 ?        00:00:00 [kworker/1:5-inode_switch_wbs]
+test	test	2026-06-06T09:01:10.8261221Z root         860       2  0 08:59 ?        00:00:00 [kworker/1:6-inode_switch_wbs]
+test	test	2026-06-06T09:01:10.8261616Z root         861       2  0 08:59 ?        00:00:00 [kworker/1:7-events]
+test	test	2026-06-06T09:01:10.8261991Z root         862       2  0 08:59 ?        00:00:00 [kworker/1:8-events]
+test	test	2026-06-06T09:01:10.8262429Z root         871       1  0 08:59 tty1     00:00:00 /sbin/agetty -o -p -- \u --noclear - linux
+test	test	2026-06-06T09:01:10.8263201Z runner       878       1  0 08:59 ?        00:00:00 /usr/lib/systemd/systemd --user
+test	test	2026-06-06T09:01:10.8263686Z runner       884     878  0 08:59 ?        00:00:00 (sd-pam)
+test	test	2026-06-06T09:01:10.8264071Z _chrony      904       1  0 08:59 ?        00:00:00 /usr/sbin/chronyd -F 1
+test	test	2026-06-06T09:01:10.8264481Z _chrony      906     904  0 08:59 ?        00:00:00 /usr/sbin/chronyd -F 1
+test	test	2026-06-06T09:01:10.8264886Z root         932       2  0 08:59 ?        00:00:00 [kworker/R-tls-strp]
+test	test	2026-06-06T09:01:10.8265299Z syslog       975       1  0 08:59 ?        00:00:00 /usr/sbin/rsyslogd -n -iNONE
+test	test	2026-06-06T09:01:10.8265719Z www-data     985     762  0 08:59 ?        00:00:00 php-fpm: pool www
+test	test	2026-06-06T09:01:10.8266123Z www-data     986     762  0 08:59 ?        00:00:00 php-fpm: pool www
+test	test	2026-06-06T09:01:10.8266672Z root         998     789  1 08:59 ?        00:00:01 /usr/bin/python3 -u bin/WALinuxAgent-2.15.1.3-py3.12.egg -run-exthandlers
+test	test	2026-06-06T09:01:10.8267220Z root         999       1  0 08:59 ?        00:00:00 /usr/sbin/ModemManager
+test	test	2026-06-06T09:01:10.8267743Z root        1000       1  0 08:59 ?        00:00:00 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+test	test	2026-06-06T09:01:10.8268292Z root        1684       2  0 09:00 ?        00:00:00 [kworker/R-mlx5_cmd_466a:00:02.0]
+test	test	2026-06-06T09:01:10.8268732Z root        1686       2  0 09:00 ?        00:00:00 [kworker/R-mlx5_health466a:00:02.0]
+test	test	2026-06-06T09:01:10.8269318Z root        1687       2  0 09:00 ?        00:00:00 [kworker/R-mlx5_page_allocator]
+test	test	2026-06-06T09:01:10.8269740Z root        1688       2  0 09:00 ?        00:00:00 [kworker/R-mlx5_events]
+test	test	2026-06-06T09:01:10.8270112Z root        1689       2  0 09:00 ?        00:00:00 [ptp1]
+test	test	2026-06-06T09:01:10.8270473Z root        1690       2  0 09:00 ?        00:00:00 [kworker/R-mlx5_fc]
+test	test	2026-06-06T09:01:10.8270866Z root        1691       2  0 09:00 ?        00:00:00 [kworker/R-mlx5_hv_vhca]
+test	test	2026-06-06T09:01:10.8271262Z root        1692       2  0 09:00 ?        00:00:00 [kworker/R-mlx5e]
+test	test	2026-06-06T09:01:10.8271648Z root        1693       2  0 09:00 ?        00:00:00 [kworker/R-mlx5e_arfs]
+test	test	2026-06-06T09:01:10.8272037Z root        1702       2  0 09:00 ?        00:00:00 [kworker/R-ib-comp-wq]
+test	test	2026-06-06T09:01:10.8272438Z root        1703       2  0 09:00 ?        00:00:00 [kworker/R-ib-comp-unb-wq]
+test	test	2026-06-06T09:01:10.8272839Z root        1704       2  0 09:00 ?        00:00:00 [kworker/R-ib_mcast]
+test	test	2026-06-06T09:01:10.8273544Z root        1705       2  0 09:00 ?        00:00:00 [kworker/R-ib_nl_sa_wq]
+test	test	2026-06-06T09:01:10.8273938Z root        1706       2  0 09:00 ?        00:00:00 [kworker/R-mkey_cache]
+test	test	2026-06-06T09:01:10.8274316Z root        1878       2  0 09:00 ?        00:00:00 [psimon]
+test	test	2026-06-06T09:01:10.8274704Z runner      1882       1  0 09:00 ?        00:00:00 /opt/hca/hosted-compute-agent
+test	test	2026-06-06T09:01:10.8275155Z root        1894    1882  0 09:00 ?        00:00:00 sudo -E -n /tmp/provjobd3669795199
+test	test	2026-06-06T09:01:10.8275733Z root        1897    1894  2 09:00 ?        00:00:01 /tmp/provjobd3669795199
+test	test	2026-06-06T09:01:10.8276263Z runner      1906    1882  2 09:00 ?        00:00:01 /home/runner/actions-runner/cached/2.334.0/bin/Runner.Listener run
+test	test	2026-06-06T09:01:10.8276971Z runner      1922    1906  6 09:00 ?        00:00:03 /home/runner/actions-runner/cached/2.334.0/bin/Runner.Worker spawnclient 142 145
+test	test	2026-06-06T09:01:10.8277715Z runner      2145    1922  0 09:00 ?        00:00:00 /usr/bin/bash -e /home/runner/work/_temp/c8e521f2-18be-4133-8e72-f63b18aa936a.sh
+test	test	2026-06-06T09:01:10.8278579Z runner      2146    2145  1 09:00 ?        00:00:00 /home/runner/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/bin/cargo test --release --locked -- --no-capture
+test	test	2026-06-06T09:01:10.8279769Z runner      3187    2146  0 09:01 ?        00:00:00 /home/runner/work/245346359_nmhuei_food-poisoning-challenge/245346359_nmhuei_food-poisoning-challenge/target/release/deps/poison_cache-8cfa89be17793d5b --no-capture
+test	test	2026-06-06T09:01:10.8280637Z runner      3203    3187  0 09:01 ?        00:00:00 ps -ef
+test	test	2026-06-06T09:01:10.8280858Z 
+test	test	2026-06-06T09:01:10.8280977Z test poison_release_cache_entry ... FAILED
+test	test	2026-06-06T09:01:10.8281171Z 
+test	test	2026-06-06T09:01:10.8281258Z failures:
+test	test	2026-06-06T09:01:10.8281366Z 
+test	test	2026-06-06T09:01:10.8281452Z failures:
+test	test	2026-06-06T09:01:10.8281658Z     poison_release_cache_entry
+test	test	2026-06-06T09:01:10.8281824Z 
+test	test	2026-06-06T09:01:10.8282083Z test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.19s
+test	test	2026-06-06T09:01:10.8282448Z 
+test	test	2026-06-06T09:01:10.8291397Z ##[error]Process completed with exit code 101.
+test	Post Checkout	﻿2026-06-06T09:01:10.8401264Z Post job cleanup.
+test	Post Checkout	2026-06-06T09:01:10.9299449Z [command]/usr/bin/git version
+test	Post Checkout	2026-06-06T09:01:10.9342884Z git version 2.54.0
+test	Post Checkout	2026-06-06T09:01:10.9390530Z Temporarily overriding HOME='/home/runner/work/_temp/02aadf55-1d65-4363-901c-638a27ece219' before making global git config changes
+test	Post Checkout	2026-06-06T09:01:10.9392259Z Adding repository directory to the temporary git global config as a safe directory
+test	Post Checkout	2026-06-06T09:01:10.9398113Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/245346359_nmhuei_food-poisoning-challenge/245346359_nmhuei_food-poisoning-challenge
+test	Post Checkout	2026-06-06T09:01:10.9439026Z Removing SSH command configuration
+test	Post Checkout	2026-06-06T09:01:10.9447511Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+test	Post Checkout	2026-06-06T09:01:10.9489016Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+test	Post Checkout	2026-06-06T09:01:10.9736514Z Removing HTTP extra header
+test	Post Checkout	2026-06-06T09:01:10.9742474Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+test	Post Checkout	2026-06-06T09:01:10.9781970Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+test	Post Checkout	2026-06-06T09:01:11.0020644Z Removing includeIf entries pointing to credentials config files
+test	Post Checkout	2026-06-06T09:01:11.0029881Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+test	Post Checkout	2026-06-06T09:01:11.0068441Z includeif.gitdir:/home/runner/work/245346359_nmhuei_food-poisoning-challenge/245346359_nmhuei_food-poisoning-challenge/.git.path
+test	Post Checkout	2026-06-06T09:01:11.0070530Z includeif.gitdir:/home/runner/work/245346359_nmhuei_food-poisoning-challenge/245346359_nmhuei_food-poisoning-challenge/.git/worktrees/*.path
+test	Post Checkout	2026-06-06T09:01:11.0071504Z includeif.gitdir:/github/workspace/.git.path
+test	Post Checkout	2026-06-06T09:01:11.0072343Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+test	Post Checkout	2026-06-06T09:01:11.0075569Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/245346359_nmhuei_food-poisoning-challenge/245346359_nmhuei_food-poisoning-challenge/.git.path
+test	Post Checkout	2026-06-06T09:01:11.0122806Z /home/runner/work/_temp/git-credentials-db3d341a-85f3-4ada-b679-215c0bffd51c.config
+test	Post Checkout	2026-06-06T09:01:11.0136547Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/245346359_nmhuei_food-poisoning-challenge/245346359_nmhuei_food-poisoning-challenge/.git.path /home/runner/work/_temp/git-credentials-db3d341a-85f3-4ada-b679-215c0bffd51c.config
+test	Post Checkout	2026-06-06T09:01:11.0178997Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/245346359_nmhuei_food-poisoning-challenge/245346359_nmhuei_food-poisoning-challenge/.git/worktrees/*.path
+test	Post Checkout	2026-06-06T09:01:11.0204767Z /home/runner/work/_temp/git-credentials-db3d341a-85f3-4ada-b679-215c0bffd51c.config
+test	Post Checkout	2026-06-06T09:01:11.0216749Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/245346359_nmhuei_food-poisoning-challenge/245346359_nmhuei_food-poisoning-challenge/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-db3d341a-85f3-4ada-b679-215c0bffd51c.config
+test	Post Checkout	2026-06-06T09:01:11.0479755Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+test	Post Checkout	2026-06-06T09:01:11.0481332Z /github/runner_temp/git-credentials-db3d341a-85f3-4ada-b679-215c0bffd51c.config
+test	Post Checkout	2026-06-06T09:01:11.0485816Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-db3d341a-85f3-4ada-b679-215c0bffd51c.config
+test	Post Checkout	2026-06-06T09:01:11.0489636Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+test	Post Checkout	2026-06-06T09:01:11.0491693Z /github/runner_temp/git-credentials-db3d341a-85f3-4ada-b679-215c0bffd51c.config
+test	Post Checkout	2026-06-06T09:01:11.0495758Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-db3d341a-85f3-4ada-b679-215c0bffd51c.config
+test	Post Checkout	2026-06-06T09:01:11.0500418Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+test	Post Checkout	2026-06-06T09:01:11.0840758Z Removing credentials config '/home/runner/work/_temp/git-credentials-db3d341a-85f3-4ada-b679-215c0bffd51c.config'
+test	Complete job	﻿2026-06-06T09:01:11.1039944Z Cleaning up orphan processes

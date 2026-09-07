@@ -1,0 +1,41 @@
+{
+  "id": "blockchain_fork",
+  "name": "fork",
+  "category": "blockchain",
+  "points": 207,
+  "author": "hoover",
+  "tags": [],
+  "hints": [],
+  "connection_info": null,
+  "solved_by_me": false,
+  "solves_count": 21,
+  "submit_endpoint": null,
+  "instance_info": {},
+  "downloaded_files": [],
+  "raw": {
+    "id": "blockchain_fork",
+    "name": "fork",
+    "description": "A small Starcoin network is running: one block producer and two validators, peered together\nand agreeing with each other. The producer runs sequential execution, while the validators\nrun Block-STM configured with a concurrency level of 8.\nFor ordinary traffic nobody can tell the difference, right?\n\nYour goal is to break consensus in the latest Starcoin nodes. From your one funded account, \nsend a transaction that make the validators\npermanently disagree with the producer and halt. The moment the network is forked, you will get the flag.\n\n> [!NOTE]\n> This is a 0day challenge and we are hoping you keep th{is|ese} 0day{|s} to yourself until the vulnerabilit{y|ies} {is|are} patched.\n\n> [!WARNING]\n> Do NOT attack any Starcoin mainnet node that may be running this configuration. NNS CTF and its organizers accept no liability or legal consequences\n\n> [!IMPORTANT]\n> The service may take some time to start. Please be patient.\n\n",
+    "category": "blockchain",
+    "author": "hoover",
+    "files": [],
+    "points": 500,
+    "solves": 0,
+    "sortWeight": 0
+  },
+  "status": {
+    "schema_version": 2,
+    "solve": "unsolved",
+    "flag": {
+      "value": null,
+      "state": "none"
+    },
+    "writeup": "none",
+    "writeup_auto": true,
+    "notes": "",
+    "labels": [],
+    "container": "none",
+    "synced_at": "2026-09-05T07:11:32Z",
+    "updated_at": "2026-09-05T07:11:33Z"
+  }
+}

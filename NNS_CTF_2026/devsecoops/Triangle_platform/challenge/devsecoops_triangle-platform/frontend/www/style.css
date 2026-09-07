@@ -1,0 +1,270 @@
+:root {
+    --bg: #17171a;
+    --panel: #1e1e22;
+    --ink: #e8e6e1;
+    --muted: #9a968f;
+    --line: #2e2e34;
+    --accent: #6fc0ac;
+    --bad: #e08a8a;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    padding: 3rem 1.5rem 5rem;
+    max-width: 46rem;
+    background: var(--bg);
+    color: var(--ink);
+    font: 15px/1.55 system-ui, sans-serif;
+}
+
+code, input, select, textarea {
+    font-size: 0.88rem;
+}
+
+code, textarea {
+    font-family: ui-monospace, monospace;
+}
+
+header {
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 1.1rem;
+}
+
+.brand {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+header p, .hint, .domain, .message, .plan {
+    color: var(--muted);
+    font-size: 0.85rem;
+}
+
+header p {
+    margin: 0.15rem 0 0;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 2.75rem;
+    margin-top: 2.5rem;
+}
+
+.head {
+    display: flex;
+    justify-content: space-between;
+}
+
+h2 {
+    margin: 0 0 0.9rem;
+    font-size: 0.72rem;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--muted);
+}
+
+/* sites */
+
+.sites {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.empty {
+    margin: 0;
+    color: var(--muted);
+}
+
+.site {
+    padding: 0.95rem 1.1rem;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+}
+
+.site-head {
+    display: flex;
+    gap: 0.7rem;
+    align-items: baseline;
+}
+
+.site-name {
+    font-weight: 600;
+}
+
+.phase {
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+}
+
+.phase[data-phase="Error"] {
+    color: var(--bad);
+}
+
+.domain, .message {
+    margin: 0.15rem 0 0;
+}
+
+.message:empty {
+    display: none;
+}
+
+.vars {
+    display: flex;
+    gap: 0.6rem;
+    margin: 0.75rem 0 0;
+    font-size: 0.8rem;
+}
+
+.vars dt {
+    color: var(--muted);
+}
+
+.vars dd {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.9rem;
+    margin: 0;
+}
+
+.vars dd[data-kind="error"] {
+    color: var(--muted);
+}
+
+.var {
+    font-family: ui-monospace, monospace;
+}
+
+.var em {
+    margin-left: 0.4rem;
+    color: var(--muted);
+    font-style: normal;
+}
+
+.site-actions {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.9rem;
+}
+
+/* form */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+}
+
+.row {
+    display: flex;
+    gap: 1.1rem;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    flex: 1;
+    min-width: 0;
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+label, legend {
+    padding: 0;
+    font-size: 0.72rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--muted);
+}
+
+.hint {
+    margin: 0.1rem 0 0;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 0.5rem 0.65rem;
+    color: var(--ink);
+    background: var(--bg);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+}
+
+:focus {
+    outline: 2px solid var(--accent);
+    outline-offset: -1px;
+}
+
+textarea {
+    line-height: 1.5;
+    white-space: pre;
+    resize: vertical;
+}
+
+.check {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    font-size: 0.88rem;
+    letter-spacing: 0;
+    text-transform: none;
+    color: var(--ink);
+}
+
+.check input {
+    width: auto;
+}
+
+.check.off {
+    color: var(--muted);
+}
+
+button, a.button {
+    align-self: flex-start;
+    padding: 0.45rem 1.1rem;
+    border: 1px solid var(--accent);
+    border-radius: 6px;
+    background: var(--accent);
+    color: var(--bg);
+    font: inherit;
+    font-size: 0.85rem;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.ghost {
+    background: none;
+    color: var(--muted);
+    border-color: var(--line);
+}
+
+.site-actions .button, .site-actions .ghost {
+    padding: 0.3rem 0.8rem;
+    font-size: 0.8rem;
+}
+
+output {
+    display: block;
+    margin-top: 1rem;
+    padding: 0.65rem 0.85rem;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    background: var(--panel);
+    font-family: ui-monospace, monospace;
+    font-size: 0.8rem;
+    white-space: pre-wrap;
+}
+
+output[data-kind="error"] {
+    color: var(--bad);
+}

@@ -1,0 +1,46 @@
+{
+  "id": "boot2root_Omniscient",
+  "name": "Omniscient",
+  "category": "boot2root",
+  "points": 195,
+  "author": "hoover",
+  "tags": [],
+  "hints": [],
+  "connection_info": null,
+  "solved_by_me": false,
+  "solves_count": 23,
+  "submit_endpoint": null,
+  "instance_info": {
+    "is_container": true,
+    "status": "stopped",
+    "last_updated": "2026-09-05 06:27:20",
+    "last_entry": "omniscient-d246a368af6d.chall.nnsc.tf:443"
+  },
+  "downloaded_files": [],
+  "raw": {
+    "id": "boot2root_Omniscient",
+    "name": "Omniscient",
+    "description": "I got this ECOVACS DEEBOT X5 PRO OMNI vacuum for Christmas in 2024!\nIt's running 24/7 in the NNS house, with the latest available firmware.\nThat means it shouldn't have any vulnerabilities, right?\n\n> [!NOTE]\n> The flag is located at `/root/flag.txt`\n\n> [!NOTE]\n> This is a 0day challenge and we are hoping you keep th{is|ese} 0day{|s} to yourself until the vulnerabilit{y|ies} {is|are} patched.\n\n",
+    "category": "boot2root",
+    "author": "hoover",
+    "files": [],
+    "points": 500,
+    "solves": 0,
+    "sortWeight": 0
+  },
+  "status": {
+    "schema_version": 2,
+    "solve": "unsolved",
+    "flag": {
+      "value": null,
+      "state": "none"
+    },
+    "writeup": "none",
+    "writeup_auto": true,
+    "notes": "",
+    "labels": [],
+    "container": "stopped",
+    "synced_at": "2026-09-05T07:11:32Z",
+    "updated_at": "2026-09-05T07:11:33Z"
+  }
+}

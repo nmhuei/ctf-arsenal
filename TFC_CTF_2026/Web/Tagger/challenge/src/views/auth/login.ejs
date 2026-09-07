@@ -1,0 +1,46 @@
+<%- include('../partials/header') %>
+
+<section class="auth-layout">
+  <div class="auth-intro">
+    <p class="eyebrow">WELCOME BACK, OPERATOR</p>
+    <h1>Your people are<br /><span>one ping away.</span></h1>
+    <p>Sign in to reopen your conversations on the Tagger network.</p>
+    <div class="terminal-art" aria-hidden="true">
+      <div>CONNECTING<span class="dots">...</span></div>
+      <div class="terminal-line">████████████ 100%</div>
+      <div class="terminal-ok">CHANNEL SECURED ✓</div>
+    </div>
+  </div>
+  <div class="window auth-window">
+    <div class="window-bar">
+      <span>LOGIN.EXE</span>
+      <div class="window-controls"><i></i><i></i><i></i></div>
+    </div>
+    <form class="stack-form" action="/login" method="post">
+      <div>
+        <span class="status-chip">● ONLINE ACCESS</span>
+        <h2>Log in</h2>
+        <p class="muted">Enter your network credentials.</p>
+      </div>
+      <label>
+        Username
+        <input
+          type="text"
+          name="username"
+          value="<%= form.username || '' %>"
+          autocomplete="username"
+          required
+          autofocus
+        />
+      </label>
+      <label>
+        Password
+        <input type="password" name="password" autocomplete="current-password" required />
+      </label>
+      <button class="button button-primary button-wide" type="submit">ENTER NETWORK →</button>
+      <p class="form-switch">New here? <a href="/register">Create a handle</a></p>
+    </form>
+  </div>
+</section>
+
+<%- include('../partials/footer') %>

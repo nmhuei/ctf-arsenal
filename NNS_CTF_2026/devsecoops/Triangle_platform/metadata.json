@@ -1,0 +1,79 @@
+{
+  "id": "devsecoops_Triangle platform",
+  "name": "Triangle platform",
+  "category": "devsecoops",
+  "points": 135,
+  "author": "0xle",
+  "tags": [],
+  "hints": [],
+  "connection_info": null,
+  "solved_by_me": false,
+  "solves_count": 41,
+  "submit_endpoint": null,
+  "instance_info": {
+    "is_container": true,
+    "status": "running",
+    "last_updated": "2026-09-05 01:05:21",
+    "active_instance": "triangle-platform-437da8efcee8.chall.nnsc.tf:443",
+    "last_entry": "triangle-platform-437da8efcee8.chall.nnsc.tf:443",
+    "endpoints": [
+      {
+        "kind": "https",
+        "host": "triangle-platform-437da8efcee8.chall.nnsc.tf",
+        "port": 443
+      }
+    ],
+    "remaining_time": 1506
+  },
+  "downloaded_files": [
+    {
+      "url": "https://attachments.nnsc.tf/uploads/0f5215b370683f4d77249596ebc0fa22d18f5680cae3b8754bf646f281f47e2b/devsecoops_triangle-platform.tar.gz",
+      "name": "devsecoops_triangle-platform.tar.gz",
+      "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/devsecoops/Triangle_platform/challenge/devsecoops_triangle-platform.tar.gz",
+      "success": true,
+      "source": "platform_attachment",
+      "message": "Đã tải trực tiếp thành công",
+      "verification": {
+        "etag": "\"5ab71fb6c0a9a90b59c6694268c30316\"",
+        "final_url": "https://attachments.nnsc.tf/uploads/0f5215b370683f4d77249596ebc0fa22d18f5680cae3b8754bf646f281f47e2b/devsecoops_triangle-platform.tar.gz",
+        "last_modified": "Thu, 03 Sep 2026 13:26:16 GMT",
+        "schema_version": 1,
+        "sha256": null,
+        "size": 24210,
+        "url": "https://attachments.nnsc.tf/uploads/0f5215b370683f4d77249596ebc0fa22d18f5680cae3b8754bf646f281f47e2b/devsecoops_triangle-platform.tar.gz",
+        "verified_at": "2026-09-04T16:05:46Z"
+      }
+    }
+  ],
+  "raw": {
+    "id": "devsecoops_Triangle platform",
+    "name": "Triangle platform",
+    "description": "Triangle is the new cloud-native static site platform.\n\n",
+    "category": "devsecoops",
+    "author": "0xle",
+    "files": [
+      {
+        "name": "devsecoops_triangle-platform.tar.gz",
+        "url": "https://attachments.nnsc.tf/uploads/0f5215b370683f4d77249596ebc0fa22d18f5680cae3b8754bf646f281f47e2b/devsecoops_triangle-platform.tar.gz"
+      }
+    ],
+    "points": 500,
+    "solves": 0,
+    "sortWeight": 0
+  },
+  "status": {
+    "schema_version": 2,
+    "solve": "unsolved",
+    "flag": {
+      "value": null,
+      "state": "none"
+    },
+    "writeup": "none",
+    "writeup_auto": true,
+    "notes": "",
+    "labels": [],
+    "container": "running",
+    "synced_at": "2026-09-05T07:11:32Z",
+    "updated_at": "2026-09-05T07:11:32Z"
+  }
+}

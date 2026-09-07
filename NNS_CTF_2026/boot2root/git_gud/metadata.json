@@ -1,0 +1,72 @@
+{
+  "id": "boot2root_git gud",
+  "name": "git gud",
+  "category": "boot2root",
+  "points": 253,
+  "author": "0xle",
+  "tags": [],
+  "hints": [],
+  "connection_info": null,
+  "solved_by_me": false,
+  "solves_count": 15,
+  "submit_endpoint": null,
+  "instance_info": {
+    "is_container": true,
+    "status": "running",
+    "last_updated": "2026-09-05 08:06:18",
+    "last_entry": "git-gud-a7294a1a23fb.chall.nnsc.tf:443",
+    "active_instance": "git-gud-a7294a1a23fb.chall.nnsc.tf:443",
+    "remaining_time": 1797
+  },
+  "downloaded_files": [
+    {
+      "url": "https://attachments.nnsc.tf/uploads/90d34e4ed57b34fcf4ad60adc8d81677cdff7cb5b6683a0635c9852a770cac45/boot2root_git-gud.tar.gz",
+      "name": "boot2root_git-gud.tar.gz",
+      "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/boot2root/git_gud/challenge/boot2root_git-gud.tar.gz",
+      "success": true,
+      "source": "platform_attachment",
+      "message": "Đã tải trực tiếp thành công",
+      "verification": {
+        "etag": "\"1c99e871670e6074c89d83922106e9a8\"",
+        "final_url": "https://attachments.nnsc.tf/uploads/90d34e4ed57b34fcf4ad60adc8d81677cdff7cb5b6683a0635c9852a770cac45/boot2root_git-gud.tar.gz",
+        "last_modified": "Thu, 03 Sep 2026 13:25:38 GMT",
+        "schema_version": 1,
+        "sha256": null,
+        "size": 675,
+        "url": "https://attachments.nnsc.tf/uploads/90d34e4ed57b34fcf4ad60adc8d81677cdff7cb5b6683a0635c9852a770cac45/boot2root_git-gud.tar.gz",
+        "verified_at": "2026-09-04T16:05:46Z"
+      }
+    }
+  ],
+  "raw": {
+    "id": "boot2root_git gud",
+    "name": "git gud",
+    "description": "GitHub just lost another 9 from their uptime, I think it's time to move\nto another platform. So, I decided to host my own Git instance.\n\n> [!NOTE]\n> The flag is located at `/flag.txt`.\n\n> [!NOTE]\n> This is a 0day challenge and we are hoping you keep th{is|ese} 0day{|s} to yourself until the vulnerabilit{y|ies} {is|are} patched.\n\n",
+    "category": "boot2root",
+    "author": "0xle",
+    "files": [
+      {
+        "name": "boot2root_git-gud.tar.gz",
+        "url": "https://attachments.nnsc.tf/uploads/90d34e4ed57b34fcf4ad60adc8d81677cdff7cb5b6683a0635c9852a770cac45/boot2root_git-gud.tar.gz"
+      }
+    ],
+    "points": 500,
+    "solves": 0,
+    "sortWeight": 0
+  },
+  "status": {
+    "schema_version": 2,
+    "solve": "unsolved",
+    "flag": {
+      "value": null,
+      "state": "none"
+    },
+    "writeup": "none",
+    "writeup_auto": true,
+    "notes": "",
+    "labels": [],
+    "container": "running",
+    "synced_at": "2026-09-05T07:11:32Z",
+    "updated_at": "2026-09-05T07:11:33Z"
+  }
+}

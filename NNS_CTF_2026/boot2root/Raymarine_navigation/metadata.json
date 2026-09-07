@@ -1,0 +1,46 @@
+{
+  "id": "boot2root_Raymarine navigation",
+  "name": "Raymarine navigation",
+  "category": "boot2root",
+  "points": 181,
+  "author": "hoover",
+  "tags": [],
+  "hints": [],
+  "connection_info": null,
+  "solved_by_me": true,
+  "solves_count": 26,
+  "submit_endpoint": null,
+  "instance_info": {
+    "is_container": true,
+    "status": "stopped",
+    "last_updated": "2026-09-05 07:03:36",
+    "last_entry": "raymarine-db564c599f07.chall.nnsc.tf:443"
+  },
+  "downloaded_files": [],
+  "raw": {
+    "id": "boot2root_Raymarine navigation",
+    "name": "Raymarine navigation",
+    "description": "A marine navigation display from Raymarine should only navigate\n\nEven with the latest July 2026 version, can you navigate your way to root?\n\n> [!NOTE]\n> The flag is located at `/root/flag.txt`\n\n> [!NOTE]\n> This is a 0day challenge and we are hoping you keep th{is|ese} 0day{|s} to yourself until the vulnerabilit{y|ies} {is|are} patched.\n\n",
+    "category": "boot2root",
+    "author": "hoover",
+    "files": [],
+    "points": 500,
+    "solves": 0,
+    "sortWeight": 0
+  },
+  "status": {
+    "schema_version": 2,
+    "solve": "solved_by_me",
+    "flag": {
+      "value": "NNS{oNCe_i_se3_cgi_bin5_1_53e_3a5Y_rc3_Wi7H_c0MM4ND_1nj3C71ons}",
+      "state": "none"
+    },
+    "writeup": "none",
+    "writeup_auto": true,
+    "notes": "",
+    "labels": [],
+    "container": "stopped",
+    "synced_at": "2026-09-05T07:11:32Z",
+    "updated_at": "2026-09-05T07:11:33Z"
+  }
+}

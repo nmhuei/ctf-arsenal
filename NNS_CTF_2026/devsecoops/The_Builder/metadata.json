@@ -1,0 +1,62 @@
+{
+  "id": "devsecoops_The Builder",
+  "name": "The Builder",
+  "category": "devsecoops",
+  "points": 102,
+  "author": "0xle",
+  "tags": [],
+  "hints": [],
+  "connection_info": null,
+  "solved_by_me": false,
+  "solves_count": 66,
+  "submit_endpoint": null,
+  "instance_info": {
+    "is_container": true,
+    "status": "running",
+    "last_updated": "2026-09-05 01:05:20",
+    "active_instance": "the-builder-92f555388d83.chall.nnsc.tf:443",
+    "last_entry": "the-builder-92f555388d83.chall.nnsc.tf:443",
+    "endpoints": [
+      {
+        "kind": "https",
+        "host": "the-builder-92f555388d83.chall.nnsc.tf",
+        "port": 443,
+        "title": "Web Interface"
+      },
+      {
+        "kind": "https",
+        "host": "the-builder-registry-92f555388d83.chall.nnsc.tf",
+        "port": 443,
+        "title": "Image Registry"
+      }
+    ],
+    "remaining_time": 2509
+  },
+  "downloaded_files": [],
+  "raw": {
+    "id": "devsecoops_The Builder",
+    "name": "The Builder",
+    "description": "People have been complaining about how hard it is to create container \nimages. We took this opportunity to build a SaaS to build \nready-to-deploy sites!\n\n",
+    "category": "devsecoops",
+    "author": "0xle",
+    "files": [],
+    "points": 500,
+    "solves": 0,
+    "sortWeight": 0
+  },
+  "status": {
+    "schema_version": 2,
+    "solve": "unsolved",
+    "flag": {
+      "value": null,
+      "state": "none"
+    },
+    "writeup": "none",
+    "writeup_auto": true,
+    "notes": "",
+    "labels": [],
+    "container": "running",
+    "synced_at": "2026-09-05T07:11:32Z",
+    "updated_at": "2026-09-05T07:11:32Z"
+  }
+}

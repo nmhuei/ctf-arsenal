@@ -1,0 +1,65 @@
+{
+  "id": "rev_Scratch Space",
+  "name": "Scratch Space",
+  "category": "rev",
+  "points": 61,
+  "author": "hoover",
+  "tags": [],
+  "hints": [],
+  "connection_info": null,
+  "solved_by_me": false,
+  "solves_count": 258,
+  "submit_endpoint": null,
+  "instance_info": {},
+  "downloaded_files": [
+    {
+      "url": "https://attachments.nnsc.tf/uploads/c2c77ce0db3d1ff8c17d4f33739021b0cc9db4ea1cd80a17ef755fe8d97f4e00/rev_scratch-space.tar.gz",
+      "name": "rev_scratch-space.tar.gz",
+      "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/rev/Scratch_Space/challenge/rev_scratch-space.tar.gz",
+      "success": true,
+      "source": "platform_attachment",
+      "message": "Đã tải trực tiếp thành công",
+      "verification": {
+        "etag": "\"6965e6e40d298612c6a74cfd59e3bee3\"",
+        "final_url": "https://attachments.nnsc.tf/uploads/c2c77ce0db3d1ff8c17d4f33739021b0cc9db4ea1cd80a17ef755fe8d97f4e00/rev_scratch-space.tar.gz",
+        "last_modified": "Thu, 03 Sep 2026 00:03:53 GMT",
+        "schema_version": 1,
+        "sha256": null,
+        "size": 2928,
+        "url": "https://attachments.nnsc.tf/uploads/c2c77ce0db3d1ff8c17d4f33739021b0cc9db4ea1cd80a17ef755fe8d97f4e00/rev_scratch-space.tar.gz",
+        "verified_at": "2026-09-04T16:05:44Z"
+      }
+    }
+  ],
+  "raw": {
+    "id": "rev_Scratch Space",
+    "name": "Scratch Space",
+    "description": "New to reverse engineering? This beginner challenge is an introduction to\ninspecting the memory of a running Linux program with a debugger.\n\nThe provided `x86-64` ELF asks you to guess a passphrase. The passphrase\nis the flag, and this time it is never stored on disk and never passed to\na library function. The program maps a scratch page, builds the real\npassphrase there, compares it against your guess with a loop of its own,\nthen zeroes the page and unmaps it before printing anything. `strings`,\n`ltrace` and `strace` all come back empty.\n\nWe recommend using `pwndbg`, a GDB extension commonly used for pwn\nchallenges. Its `telescope` command can help you inspect the pointer and\nthe memory it points to before the program wipes it.\n\n",
+    "category": "rev",
+    "author": "hoover",
+    "files": [
+      {
+        "name": "rev_scratch-space.tar.gz",
+        "url": "https://attachments.nnsc.tf/uploads/c2c77ce0db3d1ff8c17d4f33739021b0cc9db4ea1cd80a17ef755fe8d97f4e00/rev_scratch-space.tar.gz"
+      }
+    ],
+    "points": 383,
+    "solves": 6,
+    "sortWeight": 100
+  },
+  "status": {
+    "schema_version": 2,
+    "solve": "unsolved",
+    "flag": {
+      "value": null,
+      "state": "none"
+    },
+    "writeup": "none",
+    "writeup_auto": true,
+    "notes": "",
+    "labels": [],
+    "container": "none",
+    "synced_at": "2026-09-05T07:11:32Z",
+    "updated_at": "2026-09-05T07:11:32Z"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "id": "pwn_BYOC",
+  "name": "BYOC",
+  "category": "pwn",
+  "points": 59,
+  "author": "hoover",
+  "tags": [],
+  "hints": [],
+  "connection_info": null,
+  "solved_by_me": false,
+  "solves_count": 303,
+  "submit_endpoint": null,
+  "instance_info": {},
+  "downloaded_files": [
+    {
+      "url": "https://attachments.nnsc.tf/uploads/f5aa6d9a2584b88673073270f43270528c2abfcab320c83bd316e93bd48fb09b/pwn_byoc.tar.gz",
+      "name": "pwn_byoc.tar.gz",
+      "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/pwn/BYOC/challenge/pwn_byoc.tar.gz",
+      "success": true,
+      "source": "platform_attachment",
+      "message": "Đã tải trực tiếp thành công",
+      "verification": {
+        "etag": "\"87f80bea4a4b295fdd13f58aecf0b383\"",
+        "final_url": "https://attachments.nnsc.tf/uploads/f5aa6d9a2584b88673073270f43270528c2abfcab320c83bd316e93bd48fb09b/pwn_byoc.tar.gz",
+        "last_modified": "Fri, 04 Sep 2026 00:42:23 GMT",
+        "schema_version": 1,
+        "sha256": null,
+        "size": 2249,
+        "url": "https://attachments.nnsc.tf/uploads/f5aa6d9a2584b88673073270f43270528c2abfcab320c83bd316e93bd48fb09b/pwn_byoc.tar.gz",
+        "verified_at": "2026-09-04T16:05:44Z"
+      }
+    }
+  ],
+  "raw": {
+    "id": "pwn_BYOC",
+    "name": "BYOC",
+    "description": "I got tired of hiding bugs for you to find, so I cut out the middleman\n\nYou have 200 bytes of memory that is readable, writable and executable at your disposal\n\nBring your own code.\n\n> [!NOTE]\n> The flag is located at `/flag.txt`\n\n",
+    "category": "pwn",
+    "author": "hoover",
+    "files": [
+      {
+        "name": "pwn_byoc.tar.gz",
+        "url": "https://attachments.nnsc.tf/uploads/f5aa6d9a2584b88673073270f43270528c2abfcab320c83bd316e93bd48fb09b/pwn_byoc.tar.gz"
+      }
+    ],
+    "points": 274,
+    "solves": 13,
+    "sortWeight": 100
+  },
+  "status": {
+    "schema_version": 2,
+    "solve": "unsolved",
+    "flag": {
+      "value": null,
+      "state": "none"
+    },
+    "writeup": "none",
+    "writeup_auto": true,
+    "notes": "",
+    "labels": [],
+    "container": "none",
+    "synced_at": "2026-09-05T07:11:32Z",
+    "updated_at": "2026-09-05T07:11:32Z"
+  }
+}

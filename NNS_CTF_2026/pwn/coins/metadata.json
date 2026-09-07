@@ -1,0 +1,65 @@
+{
+  "id": "pwn_coins",
+  "name": "coins",
+  "category": "pwn",
+  "points": 75,
+  "author": "fslaktern",
+  "tags": [],
+  "hints": [],
+  "connection_info": null,
+  "solved_by_me": false,
+  "solves_count": 127,
+  "submit_endpoint": null,
+  "instance_info": {},
+  "downloaded_files": [
+    {
+      "url": "https://attachments.nnsc.tf/uploads/1a7176c5a2f38ceb85c13b5c7fdcec377817f9bc0dd2b5c63a9918c962fcf54f/pwn_coins.tar.gz",
+      "name": "pwn_coins.tar.gz",
+      "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/pwn/coins/challenge/pwn_coins.tar.gz",
+      "success": true,
+      "source": "platform_attachment",
+      "message": "Đã tải trực tiếp thành công",
+      "verification": {
+        "etag": "\"409c90a84b33658713a10873af5284fa\"",
+        "final_url": "https://attachments.nnsc.tf/uploads/1a7176c5a2f38ceb85c13b5c7fdcec377817f9bc0dd2b5c63a9918c962fcf54f/pwn_coins.tar.gz",
+        "last_modified": "Fri, 04 Sep 2026 14:39:19 GMT",
+        "schema_version": 1,
+        "sha256": null,
+        "size": 2401,
+        "url": "https://attachments.nnsc.tf/uploads/1a7176c5a2f38ceb85c13b5c7fdcec377817f9bc0dd2b5c63a9918c962fcf54f/pwn_coins.tar.gz",
+        "verified_at": "2026-09-04T16:05:45Z"
+      }
+    }
+  ],
+  "raw": {
+    "id": "pwn_coins",
+    "name": "coins",
+    "description": "Wanna see my coin collection? You see, I'm somewhat of a numismatist myself.\n\nI'll give you a flag if you can pay for it in my kind of money.\n\n",
+    "category": "pwn",
+    "author": "fslaktern",
+    "files": [
+      {
+        "name": "pwn_coins.tar.gz",
+        "url": "https://attachments.nnsc.tf/uploads/1a7176c5a2f38ceb85c13b5c7fdcec377817f9bc0dd2b5c63a9918c962fcf54f/pwn_coins.tar.gz"
+      }
+    ],
+    "points": 500,
+    "solves": 0,
+    "sortWeight": 0
+  },
+  "status": {
+    "schema_version": 2,
+    "solve": "unsolved",
+    "flag": {
+      "value": null,
+      "state": "none"
+    },
+    "writeup": "none",
+    "writeup_auto": true,
+    "notes": "",
+    "labels": [],
+    "container": "none",
+    "synced_at": "2026-09-05T07:11:32Z",
+    "updated_at": "2026-09-05T07:11:32Z"
+  }
+}

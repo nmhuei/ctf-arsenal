@@ -1,0 +1,80 @@
+{
+  "id": "75c53fad-bcb2-4fa2-ae25-9f43bcd7487d",
+  "name": "cer frumos",
+  "category": "Crypto",
+  "points": 50,
+  "author": "minipif",
+  "tags": [
+    "GRANDPA"
+  ],
+  "hints": [],
+  "connection_info": null,
+  "solved_by_me": true,
+  "solves_count": 284,
+  "submit_endpoint": null,
+  "instance_info": {},
+  "downloaded_files": [
+    {
+      "url": "https://api.ctf.thefewchosen.com/challenge-files/challenge_dc9bad02a4e5c2cf.zip",
+      "name": "challenge.zip",
+      "saved_path": "/home/light/Workspace/CTF/TFC_CTF_2026/Crypto/cer_frumos/challenge/challenge.zip",
+      "success": true,
+      "source": "platform_attachment",
+      "message": "Đã tải trực tiếp thành công",
+      "verification": {
+        "etag": null,
+        "final_url": "https://api.ctf.thefewchosen.com/challenge-files/challenge_dc9bad02a4e5c2cf.zip",
+        "last_modified": null,
+        "schema_version": 1,
+        "sha256": null,
+        "size": 5713,
+        "url": "https://api.ctf.thefewchosen.com/challenge-files/challenge_dc9bad02a4e5c2cf.zip",
+        "verified_at": "2026-09-05T14:42:12Z"
+      }
+    }
+  ],
+  "raw": {
+    "category_id": "8c1da7f6-10f6-41da-a7f7-e3f546771ae6",
+    "difficulty_id": "d693c1dd-450f-42aa-be57-353b6b45552c",
+    "challenge_name": "cer frumos",
+    "challenge_author": "minipif",
+    "challenge_id": "75c53fad-bcb2-4fa2-ae25-9f43bcd7487d",
+    "flags": [
+      {
+        "flag_id": "b098ce8c-b639-4a4c-b412-3630b66401c8",
+        "flag_points": 50,
+        "flag_question": "",
+        "flag_order": 4,
+        "is_solved": false
+      }
+    ],
+    "description": "A description indeed.",
+    "files": [
+      {
+        "file_name": "challenge.zip",
+        "file_url": "https://api.ctf.thefewchosen.com/challenge-files/challenge_dc9bad02a4e5c2cf.zip"
+      }
+    ],
+    "is_dynamic": false,
+    "amount_solves": 197,
+    "connection_type": null,
+    "image_name": null,
+    "http_only": null,
+    "allow_host_header_override": null
+  },
+  "status": {
+    "schema_version": 2,
+    "solve": "solved_by_me",
+    "flag": {
+      "value": "TFCCTF{ursu_ursa_bea_ursus_intrun_urus_verzuliu}",
+      "state": "submitted_correct"
+    },
+    "writeup": "none",
+    "writeup_auto": true,
+    "notes": "",
+    "labels": [],
+    "container": "none",
+    "synced_at": "2026-09-06T05:34:41Z",
+    "updated_at": "2026-09-06T05:34:41Z"
+  }
+}

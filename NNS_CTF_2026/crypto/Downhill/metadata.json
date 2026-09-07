@@ -1,0 +1,77 @@
+{
+  "id": "crypto_Downhill",
+  "name": "Downhill",
+  "category": "crypto",
+  "points": 190,
+  "author": "Zukane",
+  "tags": [],
+  "hints": [],
+  "connection_info": null,
+  "solved_by_me": false,
+  "solves_count": 24,
+  "submit_endpoint": null,
+  "instance_info": {
+    "is_container": true,
+    "status": "stopped",
+    "last_updated": "2026-09-05 01:15:32",
+    "last_entry": "downhill-44905d985cc1.chall.nnsc.tf:1337",
+    "endpoints": [
+      {
+        "kind": "tcp-ssl",
+        "host": "downhill-44905d985cc1.chall.nnsc.tf",
+        "port": 1337
+      }
+    ]
+  },
+  "downloaded_files": [
+    {
+      "url": "https://attachments.nnsc.tf/uploads/9fb61e37fa730d9fd0cffaf3c8a05eb4c348482eb4eec9e49f6585cea45a3542/crypto_downhill.tar.gz",
+      "name": "crypto_downhill.tar.gz",
+      "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/crypto/Downhill/challenge/crypto_downhill.tar.gz",
+      "success": true,
+      "source": "platform_attachment",
+      "message": "Đã tải trực tiếp thành công",
+      "verification": {
+        "etag": "\"08520c83ed8ec7bf57339b212708b1fb\"",
+        "final_url": "https://attachments.nnsc.tf/uploads/9fb61e37fa730d9fd0cffaf3c8a05eb4c348482eb4eec9e49f6585cea45a3542/crypto_downhill.tar.gz",
+        "last_modified": "Thu, 03 Sep 2026 13:25:18 GMT",
+        "schema_version": 1,
+        "sha256": null,
+        "size": 1117,
+        "url": "https://attachments.nnsc.tf/uploads/9fb61e37fa730d9fd0cffaf3c8a05eb4c348482eb4eec9e49f6585cea45a3542/crypto_downhill.tar.gz",
+        "verified_at": "2026-09-04T16:05:46Z"
+      }
+    }
+  ],
+  "raw": {
+    "id": "crypto_Downhill",
+    "name": "Downhill",
+    "description": "all it takes is finding the right way down\n\n",
+    "category": "crypto",
+    "author": "Zukane",
+    "files": [
+      {
+        "name": "crypto_downhill.tar.gz",
+        "url": "https://attachments.nnsc.tf/uploads/9fb61e37fa730d9fd0cffaf3c8a05eb4c348482eb4eec9e49f6585cea45a3542/crypto_downhill.tar.gz"
+      }
+    ],
+    "points": 500,
+    "solves": 0,
+    "sortWeight": 0
+  },
+  "status": {
+    "schema_version": 2,
+    "solve": "unsolved",
+    "flag": {
+      "value": null,
+      "state": "none"
+    },
+    "writeup": "none",
+    "writeup_auto": true,
+    "notes": "",
+    "labels": [],
+    "container": "stopped",
+    "synced_at": "2026-09-05T07:11:32Z",
+    "updated_at": "2026-09-05T07:11:32Z"
+  }
+}

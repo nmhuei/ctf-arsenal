@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Triangle Platform</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header>
+  <div class="brand">Triangle Platform</div>
+  <p>Cloud-native static site hosting</p>
+</header>
+
+<main>
+  <section>
+    <div class="head">
+      <h2>Sites</h2>
+      <span class="plan">Starter plan</span>
+    </div>
+    <div id="sites" class="sites"><p class="empty">Loading&hellip;</p></div>
+  </section>
+
+  <section>
+    <h2>New site</h2>
+    <form id="editor" autocomplete="off">
+      <div class="field">
+        <label for="name">Name</label>
+        <input id="name" name="name" value="myshop" spellcheck="false" required
+               pattern="[a-z0-9]([-a-z0-9]*[a-z0-9])?">
+        <p class="hint">Your site is served at <code><span
+          id="domain">myshop</span>.sites.triangle.tld</code></p>
+      </div>
+
+      <div class="field">
+        <label for="plane">Delivery</label>
+        <select id="plane" name="plane">
+          <option value="edge">Edge network</option>
+          <option value="origin">Origin only</option>
+        </select>
+      </div>
+
+      <fieldset class="field">
+        <legend>Integrations</legend>
+        <label class="check"><input type="checkbox" name="integration"
+                                    value="forms" checked> Forms</label>
+        <label class="check"><input type="checkbox" name="integration"
+                                    value="analytics"> Analytics</label>
+        <label class="check off"><input type="checkbox" disabled> Images
+          (Pro)</label>
+        <label class="check off"><input type="checkbox" disabled> Edge functions
+          (Pro)</label>
+      </fieldset>
+
+      <div class="field">
+        <label for="content">Page</label>
+        <textarea id="content" name="content" rows="10"
+                  spellcheck="false"></textarea>
+        <p class="hint">Published as <code>index.html</code>.</p>
+      </div>
+
+      <div class="row">
+        <div class="field">
+          <label for="root">Publish directory</label>
+          <input id="root" name="root" value="/srv/site" spellcheck="false">
+        </div>
+        <div class="field">
+          <label for="index">Index document</label>
+          <input id="index" name="index" value="index.html" spellcheck="false">
+        </div>
+      </div>
+
+      <button type="submit">Deploy site</button>
+    </form>
+    <output id="log" hidden></output>
+  </section>
+</main>
+
+<script src="/app.js"></script>
+</body>
+</html>

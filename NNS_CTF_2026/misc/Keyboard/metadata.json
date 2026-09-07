@@ -1,0 +1,65 @@
+{
+  "id": "misc_Keyboard",
+  "name": "Keyboard",
+  "category": "misc",
+  "points": 141,
+  "author": "simen",
+  "tags": [],
+  "hints": [],
+  "connection_info": null,
+  "solved_by_me": false,
+  "solves_count": 38,
+  "submit_endpoint": null,
+  "instance_info": {},
+  "downloaded_files": [
+    {
+      "url": "https://attachments.nnsc.tf/uploads/e3373902269095d213ddffc460f7c9475a79532e4e1f5aa25bc6dd573353ccb3/misc_keyboard.tar.gz",
+      "name": "misc_keyboard.tar.gz",
+      "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/misc/Keyboard/challenge/misc_keyboard.tar.gz",
+      "success": true,
+      "source": "platform_attachment",
+      "message": "Đã tải trực tiếp thành công",
+      "verification": {
+        "etag": "\"9867010758a311df3e56eee01ba4bd9f\"",
+        "final_url": "https://attachments.nnsc.tf/uploads/e3373902269095d213ddffc460f7c9475a79532e4e1f5aa25bc6dd573353ccb3/misc_keyboard.tar.gz",
+        "last_modified": "Thu, 03 Sep 2026 00:04:04 GMT",
+        "schema_version": 1,
+        "sha256": null,
+        "size": 4183282,
+        "url": "https://attachments.nnsc.tf/uploads/e3373902269095d213ddffc460f7c9475a79532e4e1f5aa25bc6dd573353ccb3/misc_keyboard.tar.gz",
+        "verified_at": "2026-09-04T16:05:46Z"
+      }
+    }
+  ],
+  "raw": {
+    "id": "misc_Keyboard",
+    "name": "Keyboard",
+    "description": "I thought I was writing confidentially on my USB keyboard, but it seems like someone has been analysing my bus.\n\n",
+    "category": "misc",
+    "author": "simen",
+    "files": [
+      {
+        "name": "misc_keyboard.tar.gz",
+        "url": "https://attachments.nnsc.tf/uploads/e3373902269095d213ddffc460f7c9475a79532e4e1f5aa25bc6dd573353ccb3/misc_keyboard.tar.gz"
+      }
+    ],
+    "points": 500,
+    "solves": 0,
+    "sortWeight": 0
+  },
+  "status": {
+    "schema_version": 2,
+    "solve": "unsolved",
+    "flag": {
+      "value": null,
+      "state": "none"
+    },
+    "writeup": "none",
+    "writeup_auto": true,
+    "notes": "",
+    "labels": [],
+    "container": "none",
+    "synced_at": "2026-09-05T07:11:32Z",
+    "updated_at": "2026-09-05T07:11:32Z"
+  }
+}

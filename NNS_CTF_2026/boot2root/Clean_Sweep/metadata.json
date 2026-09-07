@@ -1,0 +1,48 @@
+{
+  "id": "boot2root_Clean Sweep",
+  "name": "Clean Sweep",
+  "category": "boot2root",
+  "points": 94,
+  "author": "hoover",
+  "tags": [],
+  "hints": [],
+  "connection_info": null,
+  "solved_by_me": false,
+  "solves_count": 76,
+  "submit_endpoint": null,
+  "instance_info": {
+    "is_container": true,
+    "status": "running",
+    "last_updated": "2026-09-05 01:34:50",
+    "active_instance": "clean-sweep-a80a282bd7c4.chall.nnsc.tf:443",
+    "last_entry": "clean-sweep-a80a282bd7c4.chall.nnsc.tf:443",
+    "remaining_time": 2991
+  },
+  "downloaded_files": [],
+  "raw": {
+    "id": "boot2root_Clean Sweep",
+    "name": "Clean Sweep",
+    "description": "The NNS house has never been cleaner, but our old ECOVACS DEEBOT T9 AIVI\nis still running firmware 1.4.9 from 2021. We extracted the web CGI from\nthat firmware and are hosting it here for you. The floors may be spotless.\nThe firmware is another story. Can you sweep through it and get root?\n\n> [!NOTE]\n> The flag is located at `/root/flag.txt`\n\n",
+    "category": "boot2root",
+    "author": "hoover",
+    "files": [],
+    "points": 500,
+    "solves": 0,
+    "sortWeight": 0
+  },
+  "status": {
+    "schema_version": 2,
+    "solve": "unsolved",
+    "flag": {
+      "value": null,
+      "state": "none"
+    },
+    "writeup": "none",
+    "writeup_auto": true,
+    "notes": "",
+    "labels": [],
+    "container": "running",
+    "synced_at": "2026-09-05T07:11:32Z",
+    "updated_at": "2026-09-05T07:11:33Z"
+  }
+}

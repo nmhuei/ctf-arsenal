@@ -1,0 +1,65 @@
+{
+  "id": "blockchain_void",
+  "name": "void",
+  "category": "blockchain",
+  "points": 274,
+  "author": "hoover",
+  "tags": [],
+  "hints": [],
+  "connection_info": null,
+  "solved_by_me": false,
+  "solves_count": 13,
+  "submit_endpoint": null,
+  "instance_info": {},
+  "downloaded_files": [
+    {
+      "url": "https://attachments.nnsc.tf/uploads/74296f0c08a81e79ae53cd5fac6d1dc19ba4f293eab2a92505a68618e53658bd/blockchain_void.tar.gz",
+      "name": "blockchain_void.tar.gz",
+      "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/blockchain/void/challenge/blockchain_void.tar.gz",
+      "success": true,
+      "source": "platform_attachment",
+      "message": "Đã tải trực tiếp thành công",
+      "verification": {
+        "etag": "\"cf92ad830b5a1b21dfde34426e5c1dd3\"",
+        "final_url": "https://attachments.nnsc.tf/uploads/74296f0c08a81e79ae53cd5fac6d1dc19ba4f293eab2a92505a68618e53658bd/blockchain_void.tar.gz",
+        "last_modified": "Thu, 03 Sep 2026 13:50:37 GMT",
+        "schema_version": 1,
+        "sha256": null,
+        "size": 7999,
+        "url": "https://attachments.nnsc.tf/uploads/74296f0c08a81e79ae53cd5fac6d1dc19ba4f293eab2a92505a68618e53658bd/blockchain_void.tar.gz",
+        "verified_at": "2026-09-04T16:05:47Z"
+      }
+    }
+  ],
+  "raw": {
+    "id": "blockchain_void",
+    "name": "void",
+    "description": "Welcome to the void. Here we can do the impossible\n\n> [!NOTE]\n> This is a 0day challenge and we are hoping you keep th{is|ese} 0day{|s} to yourself until the vulnerabilit{y|ies} {is|are} patched.\n\n",
+    "category": "blockchain",
+    "author": "hoover",
+    "files": [
+      {
+        "name": "blockchain_void.tar.gz",
+        "url": "https://attachments.nnsc.tf/uploads/74296f0c08a81e79ae53cd5fac6d1dc19ba4f293eab2a92505a68618e53658bd/blockchain_void.tar.gz"
+      }
+    ],
+    "points": 500,
+    "solves": 0,
+    "sortWeight": 0
+  },
+  "status": {
+    "schema_version": 2,
+    "solve": "unsolved",
+    "flag": {
+      "value": null,
+      "state": "none"
+    },
+    "writeup": "none",
+    "writeup_auto": true,
+    "notes": "",
+    "labels": [],
+    "container": "none",
+    "synced_at": "2026-09-05T07:11:32Z",
+    "updated_at": "2026-09-05T07:11:33Z"
+  }
+}

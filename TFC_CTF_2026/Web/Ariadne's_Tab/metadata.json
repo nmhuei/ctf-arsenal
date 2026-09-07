@@ -1,0 +1,80 @@
+{
+  "id": "5a585e4b-4694-4aca-a7ed-abf63b4f1c93",
+  "name": "Ariadne's Tab",
+  "category": "Web",
+  "points": 372,
+  "author": "Mtib",
+  "tags": [
+    "GRANDPA"
+  ],
+  "hints": [],
+  "connection_info": null,
+  "solved_by_me": false,
+  "solves_count": 20,
+  "submit_endpoint": null,
+  "instance_info": {},
+  "downloaded_files": [
+    {
+      "url": "https://api.ctf.thefewchosen.com/challenge-files/ariadnetab_a9ca502e9faf1282.zip",
+      "name": "ariadnetab.zip",
+      "saved_path": "/home/light/Workspace/CTF/TFC_CTF_2026/Web/Ariadne's_Tab/challenge/ariadnetab.zip",
+      "success": true,
+      "source": "platform_attachment",
+      "message": "Đã tải trực tiếp thành công",
+      "verification": {
+        "etag": null,
+        "final_url": "https://api.ctf.thefewchosen.com/challenge-files/ariadnetab_a9ca502e9faf1282.zip",
+        "last_modified": null,
+        "schema_version": 1,
+        "sha256": null,
+        "size": 108759,
+        "url": "https://api.ctf.thefewchosen.com/challenge-files/ariadnetab_a9ca502e9faf1282.zip",
+        "verified_at": "2026-09-05T14:42:13Z"
+      }
+    }
+  ],
+  "raw": {
+    "category_id": "b76b709a-99ec-4c01-bfb6-65967e03be59",
+    "difficulty_id": "d693c1dd-450f-42aa-be57-353b6b45552c",
+    "challenge_name": "Ariadne's Tab",
+    "challenge_author": "Mtib",
+    "challenge_id": "5a585e4b-4694-4aca-a7ed-abf63b4f1c93",
+    "flags": [
+      {
+        "flag_id": "abfab595-175e-4fbe-9929-27b2f2dee1a4",
+        "flag_points": 491,
+        "flag_question": "",
+        "flag_order": 22,
+        "is_solved": false
+      }
+    ],
+    "description": "This is a mixed Web and Android Challenge, running on an API 37 (Google APIs) phone.<br>\nThe flag is present in the bot's account. The bot is logged-in on the phone.<br>\nThe solve APK must be submitted on <a href=\"https://android.koth.pro/\" target=\"_blank\" style=\"color:#40e0d0\">https://android.koth.pro/</a>.<br>\nYou do not need bruteforce or any other compute-intensive operations to solve this challenge.<br><br>\n\nNote: To see the logs of your PoC, you can use logging with the \"TFCCTF\" tag.",
+    "files": [
+      {
+        "file_name": "ariadnetab.zip",
+        "file_url": "https://api.ctf.thefewchosen.com/challenge-files/ariadnetab_a9ca502e9faf1282.zip"
+      }
+    ],
+    "is_dynamic": false,
+    "amount_solves": 2,
+    "connection_type": null,
+    "image_name": null,
+    "http_only": null,
+    "allow_host_header_override": null
+  },
+  "status": {
+    "schema_version": 2,
+    "solve": "unsolved",
+    "flag": {
+      "value": null,
+      "state": "none"
+    },
+    "writeup": "none",
+    "writeup_auto": true,
+    "notes": "",
+    "labels": [],
+    "container": "none",
+    "synced_at": "2026-09-06T05:10:58Z",
+    "updated_at": "2026-09-06T05:10:58Z"
+  }
+}

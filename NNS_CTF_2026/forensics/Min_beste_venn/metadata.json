@@ -1,0 +1,65 @@
+{
+  "id": "forensics_Min beste venn",
+  "name": "Min beste venn",
+  "category": "forensics",
+  "points": 62,
+  "author": "0xle",
+  "tags": [],
+  "hints": [],
+  "connection_info": null,
+  "solved_by_me": true,
+  "solves_count": 241,
+  "submit_endpoint": null,
+  "instance_info": {},
+  "downloaded_files": [
+    {
+      "url": "https://attachments.nnsc.tf/uploads/92f9f3c156a11156d1a9e67d8844adc8635f000cb6a90a5d82adbc70a21dbff8/forensics_min-beste-venn.tar.gz",
+      "name": "forensics_min-beste-venn.tar.gz",
+      "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/forensics/Min_beste_venn/challenge/forensics_min-beste-venn.tar.gz",
+      "success": true,
+      "source": "platform_attachment",
+      "message": "Đã tải trực tiếp thành công",
+      "verification": {
+        "etag": "\"165e4843226aba9a61935a5c2ea639a3\"",
+        "final_url": "https://attachments.nnsc.tf/uploads/92f9f3c156a11156d1a9e67d8844adc8635f000cb6a90a5d82adbc70a21dbff8/forensics_min-beste-venn.tar.gz",
+        "last_modified": "Thu, 03 Sep 2026 00:03:58 GMT",
+        "schema_version": 1,
+        "sha256": null,
+        "size": 209799,
+        "url": "https://attachments.nnsc.tf/uploads/92f9f3c156a11156d1a9e67d8844adc8635f000cb6a90a5d82adbc70a21dbff8/forensics_min-beste-venn.tar.gz",
+        "verified_at": "2026-09-04T16:05:46Z"
+      }
+    }
+  ],
+  "raw": {
+    "id": "forensics_Min beste venn",
+    "name": "Min beste venn",
+    "description": "Signal wasn't secure enough so we moved to something else. I heard about \nsomething called chatflare, and it seemed interesting.\n\n",
+    "category": "forensics",
+    "author": "0xle",
+    "files": [
+      {
+        "name": "forensics_min-beste-venn.tar.gz",
+        "url": "https://attachments.nnsc.tf/uploads/92f9f3c156a11156d1a9e67d8844adc8635f000cb6a90a5d82adbc70a21dbff8/forensics_min-beste-venn.tar.gz"
+      }
+    ],
+    "points": 478,
+    "solves": 2,
+    "sortWeight": 0
+  },
+  "status": {
+    "schema_version": 2,
+    "solve": "solved_by_me",
+    "flag": {
+      "value": "NNS{1_l0v3_ch4tt1ng_w1th_m1n_b3st3_v3nn_1n_th3_cl0ud5}",
+      "state": "found_unverified"
+    },
+    "writeup": "none",
+    "writeup_auto": true,
+    "notes": "",
+    "labels": [],
+    "container": "none",
+    "synced_at": "2026-09-05T07:11:32Z",
+    "updated_at": "2026-09-05T07:11:32Z"
+  }
+}

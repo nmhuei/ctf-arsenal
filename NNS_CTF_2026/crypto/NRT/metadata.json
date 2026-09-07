@@ -1,0 +1,65 @@
+{
+  "id": "crypto_NRT",
+  "name": "NRT",
+  "category": "crypto",
+  "points": 60,
+  "author": "Thorbeam",
+  "tags": [],
+  "hints": [],
+  "connection_info": null,
+  "solved_by_me": false,
+  "solves_count": 267,
+  "submit_endpoint": null,
+  "instance_info": {},
+  "downloaded_files": [
+    {
+      "url": "https://attachments.nnsc.tf/uploads/ef0361f122da41b1bc4388da6167ecdeb68a2eac1e37805b465e20162cf9f30f/crypto_nrt.tar.gz",
+      "name": "crypto_nrt.tar.gz",
+      "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/crypto/NRT/challenge/crypto_nrt.tar.gz",
+      "success": true,
+      "source": "platform_attachment",
+      "message": "Đã tải trực tiếp thành công",
+      "verification": {
+        "etag": "\"15692e9622be2e886509e605c881daeb\"",
+        "final_url": "https://attachments.nnsc.tf/uploads/ef0361f122da41b1bc4388da6167ecdeb68a2eac1e37805b465e20162cf9f30f/crypto_nrt.tar.gz",
+        "last_modified": "Thu, 03 Sep 2026 00:03:53 GMT",
+        "schema_version": 1,
+        "sha256": null,
+        "size": 1798,
+        "url": "https://attachments.nnsc.tf/uploads/ef0361f122da41b1bc4388da6167ecdeb68a2eac1e37805b465e20162cf9f30f/crypto_nrt.tar.gz",
+        "verified_at": "2026-09-04T16:05:46Z"
+      }
+    }
+  ],
+  "raw": {
+    "id": "crypto_NRT",
+    "name": "NRT",
+    "description": "did you know that getPrime runs in cubic time? Therefore i created a new way of generating N in rsa where you both get faster by using small primes and get the security from large ones!\n\n",
+    "category": "crypto",
+    "author": "Thorbeam",
+    "files": [
+      {
+        "name": "crypto_nrt.tar.gz",
+        "url": "https://attachments.nnsc.tf/uploads/ef0361f122da41b1bc4388da6167ecdeb68a2eac1e37805b465e20162cf9f30f/crypto_nrt.tar.gz"
+      }
+    ],
+    "points": 500,
+    "solves": 1,
+    "sortWeight": 0
+  },
+  "status": {
+    "schema_version": 2,
+    "solve": "unsolved",
+    "flag": {
+      "value": null,
+      "state": "none"
+    },
+    "writeup": "none",
+    "writeup_auto": true,
+    "notes": "",
+    "labels": [],
+    "container": "none",
+    "synced_at": "2026-09-05T07:11:32Z",
+    "updated_at": "2026-09-05T07:11:32Z"
+  }
+}

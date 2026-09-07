@@ -1,0 +1,65 @@
+{
+  "id": "web_bloatware.js",
+  "name": "bloatware.js",
+  "category": "web",
+  "points": 220,
+  "author": "xtea418",
+  "tags": [],
+  "hints": [],
+  "connection_info": null,
+  "solved_by_me": false,
+  "solves_count": 19,
+  "submit_endpoint": null,
+  "instance_info": {},
+  "downloaded_files": [
+    {
+      "url": "https://attachments.nnsc.tf/uploads/e406b383eca0a5953be490f68b73f9dd1d7f24e885095922dd9becbeb210cce9/web_bloatware.js.tar.gz",
+      "name": "web_bloatware.js.tar.gz",
+      "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/web/bloatware.js/challenge/web_bloatware.js.tar.gz",
+      "success": true,
+      "source": "platform_attachment",
+      "message": "Đã tải trực tiếp thành công",
+      "verification": {
+        "etag": "\"07da9000c687942c9d167e0f02833d29\"",
+        "final_url": "https://attachments.nnsc.tf/uploads/e406b383eca0a5953be490f68b73f9dd1d7f24e885095922dd9becbeb210cce9/web_bloatware.js.tar.gz",
+        "last_modified": "Fri, 04 Sep 2026 13:04:45 GMT",
+        "schema_version": 1,
+        "sha256": null,
+        "size": 25276,
+        "url": "https://attachments.nnsc.tf/uploads/e406b383eca0a5953be490f68b73f9dd1d7f24e885095922dd9becbeb210cce9/web_bloatware.js.tar.gz",
+        "verified_at": "2026-09-04T16:05:45Z"
+      }
+    }
+  ],
+  "raw": {
+    "id": "web_bloatware.js",
+    "name": "bloatware.js",
+    "description": "Even in [minimal mode](https://github.com/vercel/next.js/discussions/29801), next.js is still bloated 🥀🥀🥀\n\n",
+    "category": "web",
+    "author": "xtea418",
+    "files": [
+      {
+        "name": "web_bloatware.js.tar.gz",
+        "url": "https://attachments.nnsc.tf/uploads/e406b383eca0a5953be490f68b73f9dd1d7f24e885095922dd9becbeb210cce9/web_bloatware.js.tar.gz"
+      }
+    ],
+    "points": 500,
+    "solves": 0,
+    "sortWeight": 0
+  },
+  "status": {
+    "schema_version": 2,
+    "solve": "unsolved",
+    "flag": {
+      "value": null,
+      "state": "none"
+    },
+    "writeup": "none",
+    "writeup_auto": true,
+    "notes": "",
+    "labels": [],
+    "container": "none",
+    "synced_at": "2026-09-05T07:11:32Z",
+    "updated_at": "2026-09-05T07:11:32Z"
+  }
+}

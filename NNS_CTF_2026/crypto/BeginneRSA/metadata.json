@@ -1,0 +1,66 @@
+{
+  "id": "crypto_BeginneRSA",
+  "name": "BeginneRSA",
+  "category": "crypto",
+  "points": 56,
+  "author": "Zukane",
+  "tags": [],
+  "hints": [],
+  "connection_info": null,
+  "solved_by_me": true,
+  "solves_count": 409,
+  "submit_endpoint": null,
+  "instance_info": {},
+  "downloaded_files": [
+    {
+      "url": "https://attachments.nnsc.tf/uploads/2cb8948e8a43a550bb14a3947792f34c6bf5ae9d58a1475347bf67fd8d62906f/crypto_beginnersa.tar.gz",
+      "name": "crypto_beginnersa.tar.gz",
+      "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/crypto/BeginneRSA/challenge/crypto_beginnersa.tar.gz",
+      "success": true,
+      "source": "platform_attachment",
+      "message": "Đã tải trực tiếp thành công",
+      "verification": {
+        "etag": "\"2314a987c959d1f63e9a28ee7ae20f58\"",
+        "final_url": "https://attachments.nnsc.tf/uploads/2cb8948e8a43a550bb14a3947792f34c6bf5ae9d58a1475347bf67fd8d62906f/crypto_beginnersa.tar.gz",
+        "last_modified": "Thu, 03 Sep 2026 00:05:02 GMT",
+        "schema_version": 1,
+        "sha256": null,
+        "size": 1052,
+        "url": "https://attachments.nnsc.tf/uploads/2cb8948e8a43a550bb14a3947792f34c6bf5ae9d58a1475347bf67fd8d62906f/crypto_beginnersa.tar.gz",
+        "verified_at": "2026-09-04T16:05:44Z"
+      }
+    }
+  ],
+  "raw": {
+    "id": "crypto_BeginneRSA",
+    "name": "BeginneRSA",
+    "description": "come-on, you can do it!\n\n",
+    "category": "crypto",
+    "author": "Zukane",
+    "files": [
+      {
+        "name": "crypto_beginnersa.tar.gz",
+        "url": "https://attachments.nnsc.tf/uploads/2cb8948e8a43a550bb14a3947792f34c6bf5ae9d58a1475347bf67fd8d62906f/crypto_beginnersa.tar.gz"
+      }
+    ],
+    "points": 139,
+    "solves": 39,
+    "sortWeight": 100
+  },
+  "status": {
+    "schema_version": 2,
+    "solve": "solved_by_me",
+    "flag": {
+      "value": "NSS{n3v3r_3v3r_r3u53_4_pr1m3!}",
+      "state": "submitted_correct"
+    },
+    "writeup": "none",
+    "writeup_auto": true,
+    "notes": "",
+    "labels": [],
+    "container": "none",
+    "synced_at": "2026-09-05T07:11:32Z",
+    "updated_at": "2026-09-05T07:11:32Z"
+  },
+  "submitted_flag": "NSS{n3v3r_3v3r_r3u53_4_pr1m3!}"
+}

@@ -1,0 +1,73 @@
+Adrian, Belen, Gosia 2.10 Report
+We were trying to run the GPT2 in Google Colab using special tutioral.
+Changing options with additng special fragments of code.
+We opened with this program the text editor but it was an error, even a few (we think conncted with the security of computer) so i twas impossible to add a message.
+We agreed that we have to try on our own computers for he next week.
+
+Gerard, Roger
+We have been learning a little bit more about Python using CodeAcademy and SoloLearn which are two good websites to improve programming skills.
+After that we have been searching information about PyTorch and how to use it.
+
+Taule
+I have been learning about arithmetic coding and how it works. Next day I'll do a presantation to my teammates about what I learnt.
+
+
+Adrian, Belen, Gosia 9.10 Report
+We made the gpt-2 model work and tried some samples-
+We installed markovify packages and we made it work correctly. 
+We tried some samples to see with what kind of samples it works better 
+Given a long enough samples (article, songs etc.) to finally make the program work corectly with no errors, no repeats etc.
+
+Roger, Gerard
+We have downloaded Markovify too. 
+We have started reading only one simple text using the command state_size=2, what means that we only look at the last word to write the next one.
+That have given us mostly non correct sentences. 
+After that, we have been trying to use state_size=3, what means that we look at the last two words.
+That would have to give us more correct sentences, but the problem we have had here is that our text was so simple to make any new sentence. 
+Finally, we are trying to download some corpus, principally the wikipedia one from Textacy but some errors have appeared to us.
+So now we are trying to solve that errors to run the code and see what happens to the sentences we are creating.
+
+Everybody
+Create a large corpus.
+
+
+Everybody
+Prepare the presentation
+
+06/11/2019:
+RogerS & Gerard:
+We've been looking at the Markovify implementation and how it generates and choose the next possible words. 
+We have been wondering about how to implement arithmetic coding in Markovify and how the program will encrypt and decrypt the text we want.
+
+Adrián, Gosia and Belén: 
+We have prepared our own text processor in order to make a corpus.
+
+13/11/2019:
+Adrián, Gosia and Belén: 
+We have downloeaded more than 80 books, then we transformed the pdfs to .txt and we have cleaned all the.txt so they only contain normal sentences.
+Then we have merged all the books into one .txt with more than 500.000 lines (that is going to be our corpus).
+
+RogerS and Gerard:
+We have been working on how to programm our own aritmetic coding.
+
+20/11/2019
+
+Adrián, Gosia and Belén:
+We talked with Gerard and Casals to try to help them with the implementation of markovify.
+We have done a programm to process the corpus and make it easier to work with it.
+
+Taulé:
+Working in arithmetic coding.
+
+Casals and Gerard:
+Work with markovify.
+
+27/11/2019
+Adrián and Belén
+Start to work on the final presentation. We prepared the diferent parts and divied it for the people in our group.
+
+Taulé
+Working in arithmetic coding.
+
+Casals:
+Work with markovify.

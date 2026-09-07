@@ -1,0 +1,65 @@
+{
+  "id": "rev_Flag Pointer Register",
+  "name": "Flag Pointer Register",
+  "category": "rev",
+  "points": 60,
+  "author": "hoover",
+  "tags": [],
+  "hints": [],
+  "connection_info": null,
+  "solved_by_me": false,
+  "solves_count": 275,
+  "submit_endpoint": null,
+  "instance_info": {},
+  "downloaded_files": [
+    {
+      "url": "https://attachments.nnsc.tf/uploads/acdd93223adc6d21ebbd487e1b8f7d68a151c845d3cd9f5e1a12c3e16c7f2ee0/rev_flag-pointer-register.tar.gz",
+      "name": "rev_flag-pointer-register.tar.gz",
+      "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/rev/Flag_Pointer_Register/challenge/rev_flag-pointer-register.tar.gz",
+      "success": true,
+      "source": "platform_attachment",
+      "message": "Đã tải trực tiếp thành công",
+      "verification": {
+        "etag": "\"b32b6be19c4f7887bebfda9b0ea8c74b\"",
+        "final_url": "https://attachments.nnsc.tf/uploads/acdd93223adc6d21ebbd487e1b8f7d68a151c845d3cd9f5e1a12c3e16c7f2ee0/rev_flag-pointer-register.tar.gz",
+        "last_modified": "Thu, 03 Sep 2026 13:24:21 GMT",
+        "schema_version": 1,
+        "sha256": null,
+        "size": 732,
+        "url": "https://attachments.nnsc.tf/uploads/acdd93223adc6d21ebbd487e1b8f7d68a151c845d3cd9f5e1a12c3e16c7f2ee0/rev_flag-pointer-register.tar.gz",
+        "verified_at": "2026-09-04T16:05:44Z"
+      }
+    }
+  ],
+  "raw": {
+    "id": "rev_Flag Pointer Register",
+    "name": "Flag Pointer Register",
+    "description": "New to reverse engineering? This beginner challenge is an introduction to\nthe Windows x64 calling convention and how arguments are passed in\nregisters.\n\nThe provided `x86-64` `.exe` decodes the flag successfully, yet it still\nprints the wrong message. Somewhere between the decoder and `WriteFile`,\na perfectly good pointer ends up in the wrong place.\n\nOpen it in a debugger such as x64dbg or IDA Free and follow the final\nfunction calls. Watch the value returned in `RAX`, then inspect how `RCX`,\n`RDX`, `R8`, and `R9` are prepared before the output call.\n\nPut the correct pointer into the register where `WriteFile` expects its\nbuffer. Repair it live in the debugger and step through the program again.\n\n",
+    "category": "rev",
+    "author": "hoover",
+    "files": [
+      {
+        "name": "rev_flag-pointer-register.tar.gz",
+        "url": "https://attachments.nnsc.tf/uploads/acdd93223adc6d21ebbd487e1b8f7d68a151c845d3cd9f5e1a12c3e16c7f2ee0/rev_flag-pointer-register.tar.gz"
+      }
+    ],
+    "points": 220,
+    "solves": 19,
+    "sortWeight": 100
+  },
+  "status": {
+    "schema_version": 2,
+    "solve": "unsolved",
+    "flag": {
+      "value": null,
+      "state": "none"
+    },
+    "writeup": "none",
+    "writeup_auto": true,
+    "notes": "",
+    "labels": [],
+    "container": "none",
+    "synced_at": "2026-09-05T07:11:32Z",
+    "updated_at": "2026-09-05T07:11:32Z"
+  }
+}

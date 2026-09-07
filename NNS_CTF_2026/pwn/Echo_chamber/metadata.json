@@ -1,0 +1,65 @@
+{
+  "id": "pwn_Echo chamber",
+  "name": "Echo chamber",
+  "category": "pwn",
+  "points": 61,
+  "author": "hoover",
+  "tags": [],
+  "hints": [],
+  "connection_info": null,
+  "solved_by_me": false,
+  "solves_count": 259,
+  "submit_endpoint": null,
+  "instance_info": {},
+  "downloaded_files": [
+    {
+      "url": "https://attachments.nnsc.tf/uploads/5420b056a7ffdb90167c60cab62aaba78dcf69d6c4abb91de4a72da8618ccd39/pwn_echo-chamber.tar.gz",
+      "name": "pwn_echo-chamber.tar.gz",
+      "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/pwn/Echo_chamber/challenge/pwn_echo-chamber.tar.gz",
+      "success": true,
+      "source": "platform_attachment",
+      "message": "Đã tải trực tiếp thành công",
+      "verification": {
+        "etag": "\"33d0d2382a6b0d4135a00a9881a77d49\"",
+        "final_url": "https://attachments.nnsc.tf/uploads/5420b056a7ffdb90167c60cab62aaba78dcf69d6c4abb91de4a72da8618ccd39/pwn_echo-chamber.tar.gz",
+        "last_modified": "Fri, 04 Sep 2026 00:42:23 GMT",
+        "schema_version": 1,
+        "sha256": null,
+        "size": 2849,
+        "url": "https://attachments.nnsc.tf/uploads/5420b056a7ffdb90167c60cab62aaba78dcf69d6c4abb91de4a72da8618ccd39/pwn_echo-chamber.tar.gz",
+        "verified_at": "2026-09-04T16:05:44Z"
+      }
+    }
+  ],
+  "raw": {
+    "id": "pwn_Echo chamber",
+    "name": "Echo chamber",
+    "description": "Welcome to the echo chamber. Say something, it says it back, sixteen times\n\n",
+    "category": "pwn",
+    "author": "hoover",
+    "files": [
+      {
+        "name": "pwn_echo-chamber.tar.gz",
+        "url": "https://attachments.nnsc.tf/uploads/5420b056a7ffdb90167c60cab62aaba78dcf69d6c4abb91de4a72da8618ccd39/pwn_echo-chamber.tar.gz"
+      }
+    ],
+    "points": 453,
+    "solves": 3,
+    "sortWeight": 100
+  },
+  "status": {
+    "schema_version": 2,
+    "solve": "unsolved",
+    "flag": {
+      "value": null,
+      "state": "none"
+    },
+    "writeup": "none",
+    "writeup_auto": true,
+    "notes": "",
+    "labels": [],
+    "container": "none",
+    "synced_at": "2026-09-05T07:11:32Z",
+    "updated_at": "2026-09-05T07:11:32Z"
+  }
+}

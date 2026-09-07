@@ -1,0 +1,65 @@
+{
+  "id": "misc_Hardware accelerated flag checker 1",
+  "name": "Hardware accelerated flag checker 1",
+  "category": "misc",
+  "points": 69,
+  "author": "simen",
+  "tags": [],
+  "hints": [],
+  "connection_info": null,
+  "solved_by_me": true,
+  "solves_count": 160,
+  "submit_endpoint": null,
+  "instance_info": {},
+  "downloaded_files": [
+    {
+      "url": "https://attachments.nnsc.tf/uploads/74ef10936aad037970b8e847b01fa28b7898eaa6af71e4d89c05d3a1b14eadba/misc_hardware-accelerated-flag-checker-1.tar.gz",
+      "name": "misc_hardware-accelerated-flag-checker-1.tar.gz",
+      "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/misc/Hardware_accelerated_flag_checker_1/challenge/misc_hardware-accelerated-flag-checker-1.tar.gz",
+      "success": true,
+      "source": "platform_attachment",
+      "message": "Đã tải trực tiếp thành công",
+      "verification": {
+        "etag": "\"be8a777610aa40cee4904d0d2e76e4e9\"",
+        "final_url": "https://attachments.nnsc.tf/uploads/74ef10936aad037970b8e847b01fa28b7898eaa6af71e4d89c05d3a1b14eadba/misc_hardware-accelerated-flag-checker-1.tar.gz",
+        "last_modified": "Thu, 03 Sep 2026 00:03:59 GMT",
+        "schema_version": 1,
+        "sha256": null,
+        "size": 3205,
+        "url": "https://attachments.nnsc.tf/uploads/74ef10936aad037970b8e847b01fa28b7898eaa6af71e4d89c05d3a1b14eadba/misc_hardware-accelerated-flag-checker-1.tar.gz",
+        "verified_at": "2026-09-04T16:05:46Z"
+      }
+    }
+  ],
+  "raw": {
+    "id": "misc_Hardware accelerated flag checker 1",
+    "name": "Hardware accelerated flag checker 1",
+    "description": "I am tired of classic CTF flag checkers running in software. These are so slow with all the overhead due to non-specialised hardware and software. I made a hardware accelerated version in Verilog.\n\n",
+    "category": "misc",
+    "author": "simen",
+    "files": [
+      {
+        "name": "misc_hardware-accelerated-flag-checker-1.tar.gz",
+        "url": "https://attachments.nnsc.tf/uploads/74ef10936aad037970b8e847b01fa28b7898eaa6af71e4d89c05d3a1b14eadba/misc_hardware-accelerated-flag-checker-1.tar.gz"
+      }
+    ],
+    "points": 500,
+    "solves": 0,
+    "sortWeight": 0
+  },
+  "status": {
+    "schema_version": 2,
+    "solve": "solved_by_me",
+    "flag": {
+      "value": "NNS{qu1ck_and_3ff1ci3n7_check5}",
+      "state": "hoarded"
+    },
+    "writeup": "none",
+    "writeup_auto": true,
+    "notes": "",
+    "labels": [],
+    "container": "none",
+    "synced_at": "2026-09-05T07:11:32Z",
+    "updated_at": "2026-09-05T13:50:30Z"
+  }
+}

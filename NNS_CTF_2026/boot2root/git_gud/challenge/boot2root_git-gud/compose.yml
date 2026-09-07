@@ -1,0 +1,15 @@
+name: "git-gud-dev"
+
+configs:
+  flag:
+    content: "NNS{test_flag}"
+
+services:
+  forgejo:
+    build: "."
+    configs:
+      - source: "flag"
+        target: "/flag.txt"
+        mode: 0444
+    ports:
+      - "127.0.0.1:3000:3000"

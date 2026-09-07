@@ -1,0 +1,65 @@
+{
+  "id": "pwn_File parser",
+  "name": "File parser",
+  "category": "pwn",
+  "points": 76,
+  "author": "Kriz",
+  "tags": [],
+  "hints": [],
+  "connection_info": null,
+  "solved_by_me": false,
+  "solves_count": 121,
+  "submit_endpoint": null,
+  "instance_info": {},
+  "downloaded_files": [
+    {
+      "url": "https://attachments.nnsc.tf/uploads/ab8a8a7242b9a9baeefc39674ee0d10fdfbd0cad8d370ff4d7faa2c960d56112/pwn_file-parser.tar.gz",
+      "name": "pwn_file-parser.tar.gz",
+      "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/pwn/File_parser/challenge/pwn_file-parser.tar.gz",
+      "success": true,
+      "source": "platform_attachment",
+      "message": "Đã tải trực tiếp thành công",
+      "verification": {
+        "etag": "\"098e23484fcc4ef0d8bc4532cb76dea9\"",
+        "final_url": "https://attachments.nnsc.tf/uploads/ab8a8a7242b9a9baeefc39674ee0d10fdfbd0cad8d370ff4d7faa2c960d56112/pwn_file-parser.tar.gz",
+        "last_modified": "Fri, 04 Sep 2026 14:38:59 GMT",
+        "schema_version": 1,
+        "sha256": null,
+        "size": 336618,
+        "url": "https://attachments.nnsc.tf/uploads/ab8a8a7242b9a9baeefc39674ee0d10fdfbd0cad8d370ff4d7faa2c960d56112/pwn_file-parser.tar.gz",
+        "verified_at": "2026-09-04T16:05:45Z"
+      }
+    }
+  ],
+  "raw": {
+    "id": "pwn_File parser",
+    "name": "File parser",
+    "description": "I wrote this custom file format parser in C! a friend of mine said something about a \"boffer underflow\" or something, but thankfully i implemented security measures to ensure that no one can submit illegitimate files anyway\n\n> [!NOTE]\n> The flag is located at `/flag.txt`\n\n",
+    "category": "pwn",
+    "author": "Kriz",
+    "files": [
+      {
+        "name": "pwn_file-parser.tar.gz",
+        "url": "https://attachments.nnsc.tf/uploads/ab8a8a7242b9a9baeefc39674ee0d10fdfbd0cad8d370ff4d7faa2c960d56112/pwn_file-parser.tar.gz"
+      }
+    ],
+    "points": 500,
+    "solves": 0,
+    "sortWeight": 0
+  },
+  "status": {
+    "schema_version": 2,
+    "solve": "unsolved",
+    "flag": {
+      "value": null,
+      "state": "none"
+    },
+    "writeup": "none",
+    "writeup_auto": true,
+    "notes": "",
+    "labels": [],
+    "container": "none",
+    "synced_at": "2026-09-05T07:11:32Z",
+    "updated_at": "2026-09-05T07:11:32Z"
+  }
+}

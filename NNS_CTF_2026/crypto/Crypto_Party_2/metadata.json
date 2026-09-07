@@ -1,0 +1,77 @@
+{
+  "id": "crypto_Crypto Party 2",
+  "name": "Crypto Party 2",
+  "category": "crypto",
+  "points": 94,
+  "author": "Zukane",
+  "tags": [],
+  "hints": [],
+  "connection_info": null,
+  "solved_by_me": false,
+  "solves_count": 77,
+  "submit_endpoint": null,
+  "instance_info": {
+    "is_container": true,
+    "status": "stopped",
+    "last_updated": "2026-09-05 20:37:37",
+    "last_entry": "crypto-party-2-236264a8fb08.chall.nnsc.tf:1337",
+    "endpoints": [
+      {
+        "kind": "tcp-ssl",
+        "host": "crypto-party-2-236264a8fb08.chall.nnsc.tf",
+        "port": 1337
+      }
+    ]
+  },
+  "downloaded_files": [
+    {
+      "url": "https://attachments.nnsc.tf/uploads/6da1db0ab4cd7b34898deef97794fdb1332abb4be1ec5c148d6da5cb6667bf89/crypto_crypto-party-2.tar.gz",
+      "name": "crypto_crypto-party-2.tar.gz",
+      "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/crypto/Crypto_Party_2/challenge/crypto_crypto-party-2.tar.gz",
+      "success": true,
+      "source": "platform_attachment",
+      "message": "Đã tải trực tiếp thành công",
+      "verification": {
+        "etag": "\"ec6913ce62b18184265574be0ed896e5\"",
+        "final_url": "https://attachments.nnsc.tf/uploads/6da1db0ab4cd7b34898deef97794fdb1332abb4be1ec5c148d6da5cb6667bf89/crypto_crypto-party-2.tar.gz",
+        "last_modified": "Thu, 03 Sep 2026 13:22:30 GMT",
+        "schema_version": 1,
+        "sha256": null,
+        "size": 4294,
+        "url": "https://attachments.nnsc.tf/uploads/6da1db0ab4cd7b34898deef97794fdb1332abb4be1ec5c148d6da5cb6667bf89/crypto_crypto-party-2.tar.gz",
+        "verified_at": "2026-09-04T16:05:46Z"
+      }
+    }
+  ],
+  "raw": {
+    "id": "crypto_Crypto Party 2",
+    "name": "Crypto Party 2",
+    "description": "Thanks to whoever forged invites last year, now this year's budget is ruined. We have patched the invitation system. You can still bring some friends this year, but don't push it!\n\n",
+    "category": "crypto",
+    "author": "Zukane",
+    "files": [
+      {
+        "name": "crypto_crypto-party-2.tar.gz",
+        "url": "https://attachments.nnsc.tf/uploads/6da1db0ab4cd7b34898deef97794fdb1332abb4be1ec5c148d6da5cb6667bf89/crypto_crypto-party-2.tar.gz"
+      }
+    ],
+    "points": 500,
+    "solves": 1,
+    "sortWeight": 0
+  },
+  "status": {
+    "schema_version": 2,
+    "solve": "unsolved",
+    "flag": {
+      "value": null,
+      "state": "none"
+    },
+    "writeup": "none",
+    "writeup_auto": true,
+    "notes": "",
+    "labels": [],
+    "container": "stopped",
+    "synced_at": "2026-09-05T07:11:32Z",
+    "updated_at": "2026-09-05T07:11:32Z"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "No Hot Water Club: Municipal Relay",
+  "source_model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "source_revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+  "target_model": "Qwen/Qwen2.5-0.5B",
+  "target_revision": "060db6499f32faf8b98477b0a26969ef7d8b998",
+  "transformers": "4.48.3",
+  "handoff_terminator": "\n[END HANDOFF]",
+  "batch_limit": 96,
+  "message_limit": 1600,
+  "handoff_token_window": [100, 150],
+  "reference_corpus_records": 4097,
+  "transfer_format": "Base64 safetensors. Use every source-model past_key_values tensor with names layers.<layer>.key and layers.<layer>.value, then request a continuity audit."
+}

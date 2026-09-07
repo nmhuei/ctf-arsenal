@@ -1,0 +1,65 @@
+{
+  "id": "blockchain_Bank of NNS",
+  "name": "Bank of NNS",
+  "category": "blockchain",
+  "points": 146,
+  "author": "hoover",
+  "tags": [],
+  "hints": [],
+  "connection_info": null,
+  "solved_by_me": false,
+  "solves_count": 36,
+  "submit_endpoint": null,
+  "instance_info": {},
+  "downloaded_files": [
+    {
+      "url": "https://attachments.nnsc.tf/uploads/7813fb417d3ae6bbc7a66d2a9591790241a1eb83b24a1b0ecdf7dd73d4bd806f/blockchain_bank-of-nns.tar.gz",
+      "name": "blockchain_bank-of-nns.tar.gz",
+      "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/blockchain/Bank_of_NNS/challenge/blockchain_bank-of-nns.tar.gz",
+      "success": true,
+      "source": "platform_attachment",
+      "message": "Đã tải trực tiếp thành công",
+      "verification": {
+        "etag": "\"27a3ebd983d3c817e4430145fa7d0a5a\"",
+        "final_url": "https://attachments.nnsc.tf/uploads/7813fb417d3ae6bbc7a66d2a9591790241a1eb83b24a1b0ecdf7dd73d4bd806f/blockchain_bank-of-nns.tar.gz",
+        "last_modified": "Thu, 03 Sep 2026 13:25:33 GMT",
+        "schema_version": 1,
+        "sha256": null,
+        "size": 11701,
+        "url": "https://attachments.nnsc.tf/uploads/7813fb417d3ae6bbc7a66d2a9591790241a1eb83b24a1b0ecdf7dd73d4bd806f/blockchain_bank-of-nns.tar.gz",
+        "verified_at": "2026-09-04T16:05:47Z"
+      }
+    }
+  ],
+  "raw": {
+    "id": "blockchain_Bank of NNS",
+    "name": "Bank of NNS",
+    "description": "Every withdrawal is settled against a zero-knowledge proof of funds that\nyou produce yourself, the bank never sees your witness. Daily limits apply.\n\nEmpty the vault.\n\n> [!NOTE]\n> This is a 0day challenge and we are hoping you keep th{is|ese} 0day{|s} to yourself until the vulnerabilit{y|ies} {is|are} patched.\n\n",
+    "category": "blockchain",
+    "author": "hoover",
+    "files": [
+      {
+        "name": "blockchain_bank-of-nns.tar.gz",
+        "url": "https://attachments.nnsc.tf/uploads/7813fb417d3ae6bbc7a66d2a9591790241a1eb83b24a1b0ecdf7dd73d4bd806f/blockchain_bank-of-nns.tar.gz"
+      }
+    ],
+    "points": 500,
+    "solves": 0,
+    "sortWeight": 0
+  },
+  "status": {
+    "schema_version": 2,
+    "solve": "unsolved",
+    "flag": {
+      "value": null,
+      "state": "none"
+    },
+    "writeup": "none",
+    "writeup_auto": true,
+    "notes": "",
+    "labels": [],
+    "container": "none",
+    "synced_at": "2026-09-05T07:11:32Z",
+    "updated_at": "2026-09-05T07:11:33Z"
+  }
+}

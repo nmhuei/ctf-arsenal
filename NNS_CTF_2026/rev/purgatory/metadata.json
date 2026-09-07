@@ -1,0 +1,72 @@
+{
+  "id": "rev_purgatory",
+  "name": "purgatory",
+  "category": "rev",
+  "points": 77,
+  "author": "hoover",
+  "tags": [],
+  "hints": [],
+  "connection_info": null,
+  "solved_by_me": false,
+  "solves_count": 116,
+  "submit_endpoint": null,
+  "instance_info": {
+    "is_container": true,
+    "status": "running",
+    "last_updated": "2026-09-04 23:42:26",
+    "active_instance": "purgatory-66b577a4b015.chall.nnsc.tf:1337",
+    "last_entry": "purgatory-66b577a4b015.chall.nnsc.tf:1337",
+    "remaining_time": 1781
+  },
+  "downloaded_files": [
+    {
+      "url": "https://attachments.nnsc.tf/uploads/cfd33aa853f15887eee7dac738fbd0bfd303c526ab84000ee42b825d78dab8b4/rev_purgatory.tar.gz",
+      "name": "rev_purgatory.tar.gz",
+      "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/rev/purgatory/challenge/rev_purgatory.tar.gz",
+      "success": true,
+      "source": "platform_attachment",
+      "message": "Đã tải trực tiếp thành công",
+      "verification": {
+        "etag": "\"0fad743e77ffe8b8f437fec8da2866de\"",
+        "final_url": "https://attachments.nnsc.tf/uploads/cfd33aa853f15887eee7dac738fbd0bfd303c526ab84000ee42b825d78dab8b4/rev_purgatory.tar.gz",
+        "last_modified": "Thu, 03 Sep 2026 13:23:15 GMT",
+        "schema_version": 1,
+        "sha256": null,
+        "size": 2802,
+        "url": "https://attachments.nnsc.tf/uploads/cfd33aa853f15887eee7dac738fbd0bfd303c526ab84000ee42b825d78dab8b4/rev_purgatory.tar.gz",
+        "verified_at": "2026-09-04T16:05:45Z"
+      }
+    }
+  ],
+  "raw": {
+    "id": "rev_purgatory",
+    "name": "purgatory",
+    "description": "We hot patched the validator during business hours. Nothing\ncrashed, which is a good sign.\n\n",
+    "category": "rev",
+    "author": "hoover",
+    "files": [
+      {
+        "name": "rev_purgatory.tar.gz",
+        "url": "https://attachments.nnsc.tf/uploads/cfd33aa853f15887eee7dac738fbd0bfd303c526ab84000ee42b825d78dab8b4/rev_purgatory.tar.gz"
+      }
+    ],
+    "points": 500,
+    "solves": 0,
+    "sortWeight": 0
+  },
+  "status": {
+    "schema_version": 2,
+    "solve": "unsolved",
+    "flag": {
+      "value": null,
+      "state": "none"
+    },
+    "writeup": "none",
+    "writeup_auto": true,
+    "notes": "",
+    "labels": [],
+    "container": "running",
+    "synced_at": "2026-09-05T07:11:32Z",
+    "updated_at": "2026-09-05T07:11:32Z"
+  }
+}

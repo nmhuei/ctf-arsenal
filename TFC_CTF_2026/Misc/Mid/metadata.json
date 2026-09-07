@@ -1,0 +1,82 @@
+{
+  "id": "7f330921-0e25-4653-ae2e-87e0bee5c94d",
+  "name": "Mid",
+  "category": "Misc",
+  "points": 88,
+  "author": "Walker",
+  "tags": [
+    "BABY",
+    "container",
+    "netcat"
+  ],
+  "hints": [],
+  "connection_info": null,
+  "solved_by_me": true,
+  "solves_count": 146,
+  "submit_endpoint": null,
+  "instance_info": {},
+  "downloaded_files": [
+    {
+      "url": "https://api.ctf.thefewchosen.com/challenge-files/chall_7d5a5719a653a9a0.py",
+      "name": "chall.py",
+      "saved_path": "/home/light/Workspace/CTF/TFC_CTF_2026/Misc/Mid/challenge/chall.py",
+      "success": true,
+      "source": "platform_attachment",
+      "message": "Đã tải trực tiếp thành công",
+      "verification": {
+        "etag": null,
+        "final_url": "https://api.ctf.thefewchosen.com/challenge-files/chall_7d5a5719a653a9a0.py",
+        "last_modified": null,
+        "schema_version": 1,
+        "sha256": null,
+        "size": 1729,
+        "url": "https://api.ctf.thefewchosen.com/challenge-files/chall_7d5a5719a653a9a0.py",
+        "verified_at": "2026-09-05T14:42:11Z"
+      }
+    }
+  ],
+  "raw": {
+    "category_id": "c76d2ce0-8d43-4304-8da0-65d861b7afcf",
+    "difficulty_id": "20fe6dbc-f147-4a9e-8282-f11ffbb8e723",
+    "challenge_name": "Mid",
+    "challenge_author": "Walker",
+    "challenge_id": "7f330921-0e25-4653-ae2e-87e0bee5c94d",
+    "flags": [
+      {
+        "flag_id": "07aee090-806f-4c0f-89bb-de10b62711e0",
+        "flag_points": 181,
+        "flag_question": "",
+        "flag_order": 11,
+        "is_solved": true
+      }
+    ],
+    "description": "Mid means middle, right?",
+    "files": [
+      {
+        "file_name": "chall.py",
+        "file_url": "https://api.ctf.thefewchosen.com/challenge-files/chall_7d5a5719a653a9a0.py"
+      }
+    ],
+    "is_dynamic": true,
+    "amount_solves": 84,
+    "connection_type": "netcat",
+    "image_name": "mid2",
+    "http_only": false,
+    "allow_host_header_override": false
+  },
+  "status": {
+    "schema_version": 2,
+    "solve": "solved_by_me",
+    "flag": {
+      "value": "TFCCTF{no1_s0_3asy}",
+      "state": "found_unverified"
+    },
+    "writeup": "none",
+    "writeup_auto": true,
+    "notes": "",
+    "labels": [],
+    "container": "none",
+    "synced_at": "2026-09-06T05:10:58Z",
+    "updated_at": "2026-09-06T05:10:58Z"
+  }
+}

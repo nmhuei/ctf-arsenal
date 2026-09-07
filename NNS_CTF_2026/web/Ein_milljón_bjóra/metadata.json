@@ -1,0 +1,72 @@
+{
+  "id": "web_Ein milljón bjóra",
+  "name": "Ein milljón bjóra",
+  "category": "web",
+  "points": 144,
+  "author": "0xle",
+  "tags": [],
+  "hints": [],
+  "connection_info": "ein-milljon-bjora-f3c81a23beca.chall.nnsc.tf:443",
+  "solved_by_me": false,
+  "solves_count": 37,
+  "submit_endpoint": null,
+  "instance_info": {
+    "is_container": true,
+    "status": "running",
+    "last_updated": "2026-09-05 14:45:23",
+    "active_instance": "ein-milljon-bjora-f3c81a23beca.chall.nnsc.tf:443",
+    "last_entry": "ein-milljon-bjora-f3c81a23beca.chall.nnsc.tf:443",
+    "remaining_time": 1295
+  },
+  "downloaded_files": [
+    {
+      "url": "https://attachments.nnsc.tf/uploads/9fb95d3f359f16270df3de198afadfc90432146de09d79ab6b844065a246e03b/web_ein-millj%C3%B3n-bj%C3%B3ra.tar.gz",
+      "name": "web_ein-milljón-bjóra.tar.gz",
+      "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/web/Ein_milljón_bjóra/challenge/web_ein-milljón-bjóra.tar.gz",
+      "success": true,
+      "source": "platform_attachment",
+      "message": "Đã tải trực tiếp thành công",
+      "verification": {
+        "etag": "\"7fdd5e80afd1ec87fff079d74854faad\"",
+        "final_url": "https://attachments.nnsc.tf/uploads/9fb95d3f359f16270df3de198afadfc90432146de09d79ab6b844065a246e03b/web_ein-millj%C3%B3n-bj%C3%B3ra.tar.gz",
+        "last_modified": "Thu, 03 Sep 2026 15:21:18 GMT",
+        "schema_version": 1,
+        "sha256": null,
+        "size": 40531,
+        "url": "https://attachments.nnsc.tf/uploads/9fb95d3f359f16270df3de198afadfc90432146de09d79ab6b844065a246e03b/web_ein-millj%C3%B3n-bj%C3%B3ra.tar.gz",
+        "verified_at": "2026-09-04T16:05:45Z"
+      }
+    }
+  ],
+  "raw": {
+    "id": "web_Ein milljón bjóra",
+    "name": "Ein milljón bjóra",
+    "description": "Don't be a beer terrorist\n\n> [!IMPORTANT]\n> The instance may take some time to start. Please be patient.\n\n",
+    "category": "web",
+    "author": "0xle",
+    "files": [
+      {
+        "name": "web_ein-milljón-bjóra.tar.gz",
+        "url": "https://attachments.nnsc.tf/uploads/9fb95d3f359f16270df3de198afadfc90432146de09d79ab6b844065a246e03b/web_ein-millj%C3%B3n-bj%C3%B3ra.tar.gz"
+      }
+    ],
+    "points": 500,
+    "solves": 0,
+    "sortWeight": 0
+  },
+  "status": {
+    "schema_version": 2,
+    "solve": "unsolved",
+    "flag": {
+      "value": null,
+      "state": "none"
+    },
+    "writeup": "none",
+    "writeup_auto": true,
+    "notes": "",
+    "labels": [],
+    "container": "running",
+    "synced_at": "2026-09-05T07:11:32Z",
+    "updated_at": "2026-09-05T07:11:32Z"
+  }
+}

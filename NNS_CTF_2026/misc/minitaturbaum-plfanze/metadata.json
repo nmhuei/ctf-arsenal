@@ -1,0 +1,66 @@
+{
+  "id": "misc_minitaturbaum-plfanze",
+  "name": "minitaturbaum-plfanze",
+  "category": "misc",
+  "points": 0,
+  "author": "xtea418",
+  "tags": [],
+  "hints": [],
+  "connection_info": null,
+  "solved_by_me": false,
+  "solves_count": 12,
+  "submit_endpoint": null,
+  "instance_info": {},
+  "downloaded_files": [
+    {
+      "url": "https://attachments.nnsc.tf/uploads/72a645e40fef643336e02f15ca022e9814841166ad813307e6214f1ef9f9d9b7/misc_minitaturbaum-plfanze.tar.gz",
+      "name": "misc_minitaturbaum-plfanze.tar.gz",
+      "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/misc/minitaturbaum-plfanze/challenge/misc_minitaturbaum-plfanze.tar.gz",
+      "success": true,
+      "source": "platform_attachment",
+      "message": "Đã tải trực tiếp thành công",
+      "verification": {
+        "etag": "\"cbaf52d24d3d86d4e807e388220dcb29\"",
+        "final_url": "https://attachments.nnsc.tf/uploads/72a645e40fef643336e02f15ca022e9814841166ad813307e6214f1ef9f9d9b7/misc_minitaturbaum-plfanze.tar.gz",
+        "last_modified": "Thu, 03 Sep 2026 13:25:06 GMT",
+        "schema_version": 1,
+        "sha256": null,
+        "size": 694,
+        "url": "https://attachments.nnsc.tf/uploads/72a645e40fef643336e02f15ca022e9814841166ad813307e6214f1ef9f9d9b7/misc_minitaturbaum-plfanze.tar.gz",
+        "verified_at": "2026-09-04T16:05:45Z"
+      }
+    }
+  ],
+  "raw": {
+    "id": "misc_minitaturbaum-plfanze",
+    "name": "minitaturbaum-plfanze",
+    "description": "A ~~safe~~ expression language for rules, filters, templates, and\nuser-authored logic. Runs in any JavaScript runtime.\n\n> [!NOTE]\n> This is a 0day challenge and we are hoping you keep th{is|ese} 0day{|s} to yourself until the vulnerabilit{y|ies} {is|are} patched.\n\n",
+    "category": "misc",
+    "author": "xtea418",
+    "files": [
+      {
+        "name": "misc_minitaturbaum-plfanze.tar.gz",
+        "url": "https://attachments.nnsc.tf/uploads/72a645e40fef643336e02f15ca022e9814841166ad813307e6214f1ef9f9d9b7/misc_minitaturbaum-plfanze.tar.gz"
+      }
+    ],
+    "points": 0,
+    "solves": 0,
+    "sortWeight": 0
+  },
+  "status": {
+    "schema_version": 2,
+    "solve": "unsolved",
+    "flag": {
+      "value": null,
+      "state": "none"
+    },
+    "writeup": "none",
+    "writeup_auto": true,
+    "notes": "",
+    "labels": [],
+    "container": "none",
+    "synced_at": "2026-09-05T07:11:32Z",
+    "updated_at": "2026-09-05T07:11:32Z"
+  }
+}
+ncat --ssl minitaturbaum-plfanze-cb420339775f.chall.nnsc.tf 1337

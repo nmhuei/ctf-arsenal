@@ -1,0 +1,200 @@
+# .github/workflows/build-linux.yml
+#
+# GitHub Actions CI/CD for YAFU — Linux (Ubuntu)
+# Uses Makefile.new (unified Linux/MSYS2 makefile)
+#
+# GMP:     Installed via apt (libgmp-dev). gmp.h lands in /usr/include and
+#          libgmp.a/.so in /usr/lib/x86_64-linux-gnu, both of which are in
+#          Makefile.new's default SYS_INC_PATHS / SYS_LIB_PATHS for Linux.
+#          GMP_PREFIX is passed explicitly to remove any ambiguity.
+#
+# GMP-ECM: Built from source and cached, same approach as build-windows.yml.
+#          libecm-dev on Ubuntu is often an older version, so building from
+#          source ensures consistency between Linux and Windows builds.
+#
+# Artifacts are dynamically linked ELF binaries — normal for Linux.
+# They are uploaded alongside the Windows .exe files on each release.
+
+name: Build YAFU Linux (Ubuntu)
+
+on:
+  push:
+    branches: [ master ]
+    tags:     [ 'v*' ]
+  pull_request:
+    branches: [ master ]
+  workflow_dispatch:
+
+env:
+  # GMP-ECM — GitHub mirror of https://gitlab.inria.fr/zimmerma/ecm
+  # Keep in sync with build-windows.yml.
+  ECM_REPO:   https://github.com/sethtroisi/gmp-ecm.git
+  ECM_COMMIT: 0ab79ad
+
+jobs:
+  # ─────────────────────────────────────────────────────────────────────────────
+  # BUILD — one parallel runner per CPU target
+  # ─────────────────────────────────────────────────────────────────────────────
+  build:
+    runs-on: ubuntu-22.04
+    name: ${{ matrix.artifact_name }}
+
+    strategy:
+      fail-fast: false    # finish all targets even if one fails
+
+      matrix:
+        include:
+
+          # Any x86-64 CPU — widest compatibility
+          - target:        generic
+            make_flags:    "ECM=1"
+            artifact_name: yafu-linux-generic
+
+          # SSE 4.1 — Intel Core 2 / Penryn (2008) and newer
+          - target:        sse41
+            make_flags:    "ECM=1 USE_SSE41=1"
+            artifact_name: yafu-linux-sse41
+
+          # AVX2 + BMI2 — Haswell (2013) and newer, recommended for most users
+          - target:        avx2
+            make_flags:    "ECM=1 USE_AVX2=1 USE_BMI2=1"
+            artifact_name: yafu-linux-avx2
+
+          # AVX-512 F/BW — Skylake-X, Cascade Lake, Zen 4
+          - target:        avx512
+            make_flags:    "ECM=1 USE_AVX512=1"
+            artifact_name: yafu-linux-avx512
+
+          # AVX-512 + IFMA — Ice Lake and later, best ECM performance
+          - target:        avx512ifma
+            make_flags:    "ECM=1 USE_AVX512IFMA=1"
+            artifact_name: yafu-linux-avx512ifma
+
+    steps:
+      # ── 1. Checkout ──────────────────────────────────────────────────────────
+      - name: Checkout source
+        uses: actions/checkout@v6
+
+      # ── 2. Install GMP and build tools via apt ────────────────────────────────
+      - name: Install dependencies
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y \
+            gcc \
+            make \
+            libgmp-dev \
+            autoconf \
+            automake \
+            libtool
+          echo "=== GMP install verification ==="
+          find /usr -name "gmp.h" 2>/dev/null
+          find /usr -name "libgmp.*" 2>/dev/null
+          # Resolve the multiarch GMP prefix for passing to make
+          # On Ubuntu 24.04 gmp.h is at /usr/include/x86_64-linux-gnu/gmp.h
+          GMP_INC=$(dirname $(find /usr/include -name "gmp.h" | head -1))
+          GMP_LIB=$(dirname $(find /usr/lib -name "libgmp.a" | head -1))
+          echo "GMP_INC=$GMP_INC" >> $GITHUB_ENV
+          echo "GMP_LIB=$GMP_LIB" >> $GITHUB_ENV
+          echo "Resolved GMP_INC=$GMP_INC GMP_LIB=$GMP_LIB" 
+
+      # ── 3. Build GMP-ECM from source (cached) ────────────────────────────────
+      # Cache key is the commit SHA — update ECM_COMMIT above to force a rebuild.
+      - name: Cache GMP-ECM
+        id: cache-ecm
+        uses: actions/cache@v5
+        with:
+          path: ~/ecm-install
+          key: gmp-ecm-${{ env.ECM_COMMIT }}-linux-nolto
+
+      - name: Build GMP-ECM from source
+        if: steps.cache-ecm.outputs.cache-hit != 'true'
+        run: |
+          cd ~
+          git clone ${{ env.ECM_REPO }} ecm-src
+          cd ecm-src
+          git checkout ${{ env.ECM_COMMIT }}
+          autoreconf -i
+          ./configure \
+            --prefix="$HOME/ecm-install" \
+            --disable-shared \
+            --enable-static \
+            CFLAGS="-fno-lto" 
+          make -j$(nproc)
+          make install
+
+      # ── 4. Show resolved build configuration (useful for debugging failures) ──
+      - name: Show build config (${{ matrix.target }})
+        run: |
+          make info \
+            ${{ matrix.make_flags }} \
+            GMP_INCDIR="$GMP_INC" \
+            GMP_LIBDIR="$GMP_LIB" \
+            ECM_PREFIX="$HOME/ecm-install" \
+            USER_LDFLAGS="-static"
+
+      # ── 5. Build ──────────────────────────────────────────────────────────────
+      - name: Build (${{ matrix.target }})
+        run: |
+          make yafu \
+            ${{ matrix.make_flags }} \
+            GMP_INCDIR="$GMP_INC" \
+            GMP_LIBDIR="$GMP_LIB" \
+            ECM_PREFIX="$HOME/ecm-install" \
+            USER_LDFLAGS="-static"
+
+      # ── 6. Rename to target-specific name ────────────────────────────────────
+      - name: Stage artifact
+        run: cp yafu ${{ matrix.artifact_name }}
+
+      # ── 7. Verify static linkage ─────────────────────────────────────────────
+      # Builds are fully static (-static) so ldd should show only the vdso
+      # and the dynamic linker itself. libecm, libgmp, libc etc. must not appear.
+      # This step prints deps to the log for visibility but does not fail.
+      - name: Show shared library dependencies (${{ matrix.target }})
+        run: |
+          echo "=== Shared library dependencies ==="
+          ldd ${{ matrix.artifact_name }} || true
+
+      # ── 8. Upload (retained 30 days on every push/PR) ────────────────────────
+      - name: Upload artifact
+        uses: actions/upload-artifact@v6
+        with:
+          name: ${{ matrix.artifact_name }}
+          path: ${{ matrix.artifact_name }}
+          retention-days: 30
+
+      # ── 9. Smoke test ─────────────────────────────────────────────────────────
+      # AVX-512 targets are skipped: GitHub's Azure VMs don't support AVX-512
+      # at runtime so the binary would fault on the first AVX-512 instruction.
+      # generic, sse41, and avx2 all run fine on the ubuntu-latest runner.
+      - name: Smoke test (${{ matrix.target }})
+        if: ${{ !contains(matrix.target, 'avx512') }}
+        run: |
+          echo "Binary size: $(ls -lh ${{ matrix.artifact_name }} | awk '{print $5}')"
+          ./${{ matrix.artifact_name }} "factor(12345678901234567)" \
+            && echo "SMOKE TEST PASSED" \
+            || echo "::warning::Smoke test failed for ${{ matrix.target }}"
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # RELEASE — only on version tags (e.g. git tag v2.1.0 && git push --tags)
+  # Uploads Linux binaries to the same GitHub Release created by build-windows.yml.
+  # Both workflows target the same tag so GitHub merges uploads into one release.
+  # ─────────────────────────────────────────────────────────────────────────────
+  release:
+    needs: build
+    runs-on: ubuntu-22.04  # release job just uploads — no container needed
+    if: startsWith(github.ref, 'refs/tags/v')
+    permissions:
+      contents: write
+
+    steps:
+      - name: Download all build artifacts
+        uses: actions/download-artifact@v7
+        with:
+          path: artifacts/
+          merge-multiple: true
+
+      - name: Upload Linux binaries to GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: artifacts/yafu-linux-*

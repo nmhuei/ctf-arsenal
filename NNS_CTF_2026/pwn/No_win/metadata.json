@@ -1,0 +1,83 @@
+{
+  "id": "pwn_No win",
+  "name": "No win",
+  "category": "pwn",
+  "points": 67,
+  "author": "hoover",
+  "tags": [],
+  "hints": [],
+  "connection_info": null,
+  "solved_by_me": false,
+  "solves_count": 173,
+  "submit_endpoint": null,
+  "instance_info": {},
+  "downloaded_files": [
+    {
+      "url": "https://attachments.nnsc.tf/uploads/bdffa8c5a3c4c80a5f80eeaec7c5e17b162ec023bea5d230290bc704d0b31ed9/pwn_no-win.tar.gz",
+      "name": "pwn_no-win.tar.gz",
+      "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/pwn/No_win/challenge/pwn_no-win.tar.gz",
+      "success": true,
+      "source": "platform_attachment",
+      "message": "Đã tải trực tiếp thành công",
+      "verification": {
+        "etag": "\"2bacfba98f83e00344d149e8cbde273f\"",
+        "final_url": "https://attachments.nnsc.tf/uploads/bdffa8c5a3c4c80a5f80eeaec7c5e17b162ec023bea5d230290bc704d0b31ed9/pwn_no-win.tar.gz",
+        "last_modified": "Fri, 04 Sep 2026 00:42:35 GMT",
+        "schema_version": 1,
+        "sha256": null,
+        "size": 339152,
+        "url": "https://attachments.nnsc.tf/uploads/bdffa8c5a3c4c80a5f80eeaec7c5e17b162ec023bea5d230290bc704d0b31ed9/pwn_no-win.tar.gz",
+        "verified_at": "2026-09-04T16:05:44Z"
+      }
+    },
+    {
+      "url": "https://i.imgflip.com/azn66t.jpg",
+      "name": "azn66t.jpg",
+      "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/pwn/No_win/challenge/azn66t.jpg",
+      "success": true,
+      "source": "description_direct_file",
+      "message": "Đã tải trực tiếp thành công",
+      "verification": {
+        "etag": "\"e0ceb7832389b628fee661ec954c1677\"",
+        "final_url": "https://i.imgflip.com/azn66t.jpg",
+        "last_modified": "Tue, 25 Aug 2026 20:01:18 GMT",
+        "schema_version": 1,
+        "sha256": null,
+        "size": 32074,
+        "url": "https://i.imgflip.com/azn66t.jpg",
+        "verified_at": "2026-09-04T16:05:45Z"
+      }
+    }
+  ],
+  "raw": {
+    "id": "pwn_No win",
+    "name": "No win",
+    "description": "![](https://i.imgflip.com/azn66t.jpg)\n\n> [!NOTE]\n> The flag is located at `/flag.txt`\n\n",
+    "category": "pwn",
+    "author": "hoover",
+    "files": [
+      {
+        "name": "pwn_no-win.tar.gz",
+        "url": "https://attachments.nnsc.tf/uploads/bdffa8c5a3c4c80a5f80eeaec7c5e17b162ec023bea5d230290bc704d0b31ed9/pwn_no-win.tar.gz"
+      }
+    ],
+    "points": 500,
+    "solves": 0,
+    "sortWeight": 100
+  },
+  "status": {
+    "schema_version": 2,
+    "solve": "unsolved",
+    "flag": {
+      "value": null,
+      "state": "none"
+    },
+    "writeup": "none",
+    "writeup_auto": true,
+    "notes": "",
+    "labels": [],
+    "container": "none",
+    "synced_at": "2026-09-05T07:11:32Z",
+    "updated_at": "2026-09-05T07:11:32Z"
+  }
+}

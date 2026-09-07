@@ -1,0 +1,47 @@
+# Writeup: littlefs
+
+| Property | Value |
+| :--- | :--- |
+| **Category** | `misc` |
+| **Points** | `500` |
+| **Author** | `simen` |
+| **Solves** | `0` |
+
+---
+
+## 📝 Challenge Overview
+
+I found this device with a NOR flash to that just prints out the flag.
+Unfortunately, I could not read the terminal output.
+
+However, I was able to connect my logic analyser. That is a tool that can record the communication between different components in the device.
+You can open the `.logicdata` file using Saleae Logic.
+To make the recording, channel 0 was connected to MOSI, channel 1 to CS, channel 2 to SCK and channel 3 to MISO.
+
+
+
+---
+
+## 🔍 Reconnaissance & Vulnerability Analysis
+
+- Target Connection: `-`
+- Category: `misc`
+- Key observations & vulnerability hypothesis:
+  *(Document reverse engineering, source code review, or protocol analysis here)*
+
+---
+
+## 💻 Exploitation Strategy & PoC
+
+Exploit script is located at [`../solver/solve.py`](../solver/solve.py).
+
+```bash
+python3 ../solver/solve.py
+```
+
+---
+
+## 🚩 Flag
+
+- Status: `- [ ] Solved`
+- Flag: `FLAG{...}`

@@ -1,0 +1,115 @@
+<%- include('../partials/header') %>
+
+<section class="chat-window window">
+  <div class="window-bar">
+    <span>TAGGER_MESSENGER.EXE</span>
+    <div class="window-controls"><i></i><i></i><i></i></div>
+  </div>
+  <div class="chat-layout">
+    <aside class="conversation-sidebar">
+      <div class="sidebar-heading">
+        <div>
+          <span class="eyebrow">YOUR NETWORK</span>
+          <h1>Conversations</h1>
+        </div>
+        <a class="square-button" href="/discover" aria-label="Find friends">+</a>
+      </div>
+      <div class="conversation-list">
+        <% if (conversations.length) { %>
+          <% conversations.forEach((conversation) => { %>
+            <a
+              class="conversation <%= friend && friend.id === conversation.friend.id ? 'selected' : '' %>"
+              href="/chat/<%= conversation.friend.id %>"
+            >
+              <div class="pixel-avatar small"><%= conversation.friend.username.charAt(0).toUpperCase() %></div>
+              <div class="conversation-copy">
+                <strong><%= conversation.friend.username %></strong>
+                <% if (conversation.latestMessage) { %>
+                  <span>
+                    <%= conversation.latestMessage.type === 'image' ? '▧ Image' : conversation.latestMessage.content %>
+                  </span>
+                <% } else { %>
+                  <span>No messages yet</span>
+                <% } %>
+              </div>
+              <% if (conversation.latestMessage) { %>
+                <time><%= formatTime(conversation.latestMessage.sentAt) %></time>
+              <% } %>
+            </a>
+          <% }) %>
+        <% } else { %>
+          <div class="sidebar-empty">
+            <p>NO CONTACTS</p>
+            <a href="/discover">Find people →</a>
+          </div>
+        <% } %>
+      </div>
+    </aside>
+
+    <section class="message-panel">
+      <% if (friend) { %>
+        <header class="chat-header">
+          <div class="pixel-avatar"><%= friend.username.charAt(0).toUpperCase() %></div>
+          <div>
+            <h2><%= friend.username %></h2>
+            <p><span class="online-dot"></span> FRIEND CHANNEL</p>
+          </div>
+        </header>
+        <div class="messages" id="messages">
+          <% if (messages.length) { %>
+            <% messages.forEach((message) => { %>
+              <% const sent = message.fromUserId === currentUser.id; %>
+              <article class="message-row <%= sent ? 'sent' : 'received' %>">
+                <div class="message-bubble">
+                  <%- messageMarkup(message) %>
+                  <time><%= formatTime(message.sentAt) %></time>
+                </div>
+              </article>
+            <% }) %>
+          <% } else { %>
+            <div class="empty-state chat-empty">
+              <div class="empty-icon">✦</div>
+              <h2>Channel opened</h2>
+              <p>Send the first message to <%= friend.username %>.</p>
+            </div>
+          <% } %>
+        </div>
+        <form
+          class="composer"
+          action="/chat/<%= friend.id %>/message"
+          method="post"
+          enctype="multipart/form-data"
+        >
+          <label class="image-picker" title="Attach image">
+            <span aria-hidden="true">▧</span>
+            <span class="sr-only">Choose an image</span>
+            <input id="image-input" type="file" name="image" accept="image/png,image/jpeg,image/gif,image/webp" />
+          </label>
+          <label class="sr-only" for="message-input">Message</label>
+          <input
+            id="message-input"
+            type="text"
+            name="message"
+            maxlength="4000"
+            placeholder="Type a message..."
+            autocomplete="off"
+          />
+          <span class="file-name" id="file-name"></span>
+          <button class="button button-primary" type="submit">SEND <span>↗</span></button>
+        </form>
+      <% } else { %>
+        <div class="empty-state select-chat">
+          <div class="large-pixel-icon" aria-hidden="true">T</div>
+          <p class="eyebrow">TAGGER MESSENGER</p>
+          <h1>Select a conversation</h1>
+          <p>Choose a friend from the sidebar to open a secure channel.</p>
+          <% if (!conversations.length) { %>
+            <a class="button button-primary" href="/discover">DISCOVER PEOPLE</a>
+          <% } %>
+        </div>
+      <% } %>
+    </section>
+  </div>
+</section>
+
+<%- include('../partials/footer') %>

@@ -1,0 +1,89 @@
+{
+  "id": "aa78d8ef-15d7-4d4d-bc44-e6e828fd9c01",
+  "name": "Tagger",
+  "category": "Web",
+  "points": 149,
+  "author": "Sagi",
+  "tags": [
+    "GRANDPA",
+    "container",
+    "http"
+  ],
+  "hints": [],
+  "connection_info": null,
+  "solved_by_me": false,
+  "solves_count": 102,
+  "submit_endpoint": null,
+  "instance_info": {
+    "is_container": true,
+    "status": "running",
+    "last_updated": "2026-09-06 12:13:23",
+    "active_instance": "tagger-11e2cf9048f280ec.challs.ctf.thefewchosen.com",
+    "last_entry": "tagger-11e2cf9048f280ec.challs.ctf.thefewchosen.com",
+    "remaining_time": null
+  },
+  "downloaded_files": [
+    {
+      "url": "https://api.ctf.thefewchosen.com/challenge-files/challenge_9a9c044df595d53f.zip",
+      "name": "challenge.zip",
+      "saved_path": "/home/light/Workspace/CTF/TFC_CTF_2026/Web/Tagger/challenge/challenge.zip",
+      "success": true,
+      "source": "platform_attachment",
+      "message": "Đã tải trực tiếp thành công",
+      "verification": {
+        "etag": null,
+        "final_url": "https://api.ctf.thefewchosen.com/challenge-files/challenge_9a9c044df595d53f.zip",
+        "last_modified": null,
+        "schema_version": 1,
+        "sha256": null,
+        "size": 31517,
+        "url": "https://api.ctf.thefewchosen.com/challenge-files/challenge_9a9c044df595d53f.zip",
+        "verified_at": "2026-09-05T14:42:24Z"
+      }
+    }
+  ],
+  "raw": {
+    "category_id": "b76b709a-99ec-4c01-bfb6-65967e03be59",
+    "difficulty_id": "d693c1dd-450f-42aa-be57-353b6b45552c",
+    "challenge_name": "Tagger",
+    "challenge_author": "Sagi",
+    "challenge_id": "aa78d8ef-15d7-4d4d-bc44-e6e828fd9c01",
+    "flags": [
+      {
+        "flag_id": "4e3c4e36-d175-420b-9cf7-94b265320ac6",
+        "flag_points": 249,
+        "flag_question": "",
+        "flag_order": 3,
+        "is_solved": false
+      }
+    ],
+    "description": "Look at my new chat app, Tagger!!!",
+    "files": [
+      {
+        "file_name": "challenge.zip",
+        "file_url": "https://api.ctf.thefewchosen.com/challenge-files/challenge_9a9c044df595d53f.zip"
+      }
+    ],
+    "is_dynamic": true,
+    "amount_solves": 54,
+    "connection_type": "http",
+    "image_name": "tagger",
+    "http_only": false,
+    "allow_host_header_override": false
+  },
+  "status": {
+    "schema_version": 2,
+    "solve": "unsolved",
+    "flag": {
+      "value": null,
+      "state": "none"
+    },
+    "writeup": "none",
+    "writeup_auto": true,
+    "notes": "",
+    "labels": [],
+    "container": "running",
+    "synced_at": "2026-09-06T05:34:05Z",
+    "updated_at": "2026-09-06T05:34:05Z"
+  }
+}

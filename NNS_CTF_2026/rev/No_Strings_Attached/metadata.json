@@ -1,0 +1,65 @@
+{
+  "id": "rev_No Strings Attached",
+  "name": "No Strings Attached",
+  "category": "rev",
+  "points": 57,
+  "author": "hoover",
+  "tags": [],
+  "hints": [],
+  "connection_info": null,
+  "solved_by_me": false,
+  "solves_count": 364,
+  "submit_endpoint": null,
+  "instance_info": {},
+  "downloaded_files": [
+    {
+      "url": "https://attachments.nnsc.tf/uploads/58145bd43e4a63c056bbb5297b18c6bf879b3f819a732fb4184d2e6fb51dd366/rev_no-strings-attached.tar.gz",
+      "name": "rev_no-strings-attached.tar.gz",
+      "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/rev/No_Strings_Attached/challenge/rev_no-strings-attached.tar.gz",
+      "success": true,
+      "source": "platform_attachment",
+      "message": "Đã tải trực tiếp thành công",
+      "verification": {
+        "etag": "\"867610f38f5b2fa24b9e3147f58f12e2\"",
+        "final_url": "https://attachments.nnsc.tf/uploads/58145bd43e4a63c056bbb5297b18c6bf879b3f819a732fb4184d2e6fb51dd366/rev_no-strings-attached.tar.gz",
+        "last_modified": "Thu, 03 Sep 2026 13:24:33 GMT",
+        "schema_version": 1,
+        "sha256": null,
+        "size": 2799,
+        "url": "https://attachments.nnsc.tf/uploads/58145bd43e4a63c056bbb5297b18c6bf879b3f819a732fb4184d2e6fb51dd366/rev_no-strings-attached.tar.gz",
+        "verified_at": "2026-09-04T16:05:44Z"
+      }
+    }
+  ],
+  "raw": {
+    "id": "rev_No Strings Attached",
+    "name": "No Strings Attached",
+    "description": "New to reverse engineering? This beginner challenge is an introduction to\ntracing the library calls a Linux program makes.\n\nThe provided `x86-64` ELF asks you to guess a passphrase. The passphrase\nis the flag, but it is not written down anywhere in the file. Running\n`strings` on the binary only gets you `guess:`, `correct` and `rejected`.\nThe program builds the real passphrase in memory first, and only then\nhands it to a function in the C standard library to compare against yours.\n\nRun the program under a library call tracer such as `ltrace` and watch the\ncomparison. Your goal is to read the passphrase out of the arguments the\nprogram passes to it.\n\n",
+    "category": "rev",
+    "author": "hoover",
+    "files": [
+      {
+        "name": "rev_no-strings-attached.tar.gz",
+        "url": "https://attachments.nnsc.tf/uploads/58145bd43e4a63c056bbb5297b18c6bf879b3f819a732fb4184d2e6fb51dd366/rev_no-strings-attached.tar.gz"
+      }
+    ],
+    "points": 286,
+    "solves": 12,
+    "sortWeight": 100
+  },
+  "status": {
+    "schema_version": 2,
+    "solve": "unsolved",
+    "flag": {
+      "value": null,
+      "state": "none"
+    },
+    "writeup": "none",
+    "writeup_auto": true,
+    "notes": "",
+    "labels": [],
+    "container": "none",
+    "synced_at": "2026-09-05T07:11:32Z",
+    "updated_at": "2026-09-05T07:11:32Z"
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "id": "5f7acdc2-daaa-4ce4-8e08-d719f0da83b6",
+  "name": "minigame2",
+  "category": "Reverse",
+  "points": 68,
+  "author": "minipif",
+  "tags": [
+    "GRANDPA"
+  ],
+  "hints": [],
+  "connection_info": null,
+  "solved_by_me": true,
+  "solves_count": 163,
+  "submit_endpoint": null,
+  "instance_info": {},
+  "downloaded_files": [
+    {
+      "url": "https://api.ctf.thefewchosen.com/challenge-files/minigame2_834b97482a6c136d",
+      "name": "minigame2",
+      "saved_path": "/home/light/Workspace/CTF/TFC_CTF_2026/Reverse/minigame2/challenge/minigame2",
+      "success": true,
+      "source": "platform_attachment",
+      "message": "Đã tải trực tiếp thành công",
+      "verification": {
+        "etag": null,
+        "final_url": "https://api.ctf.thefewchosen.com/challenge-files/minigame2_834b97482a6c136d",
+        "last_modified": null,
+        "schema_version": 1,
+        "sha256": null,
+        "size": 2079768,
+        "url": "https://api.ctf.thefewchosen.com/challenge-files/minigame2_834b97482a6c136d",
+        "verified_at": "2026-09-05T14:42:26Z"
+      }
+    }
+  ],
+  "raw": {
+    "category_id": "f027d346-1ee7-48b9-8720-15a158caf09d",
+    "difficulty_id": "d693c1dd-450f-42aa-be57-353b6b45552c",
+    "challenge_name": "minigame2",
+    "challenge_author": "minipif",
+    "challenge_id": "5f7acdc2-daaa-4ce4-8e08-d719f0da83b6",
+    "flags": [
+      {
+        "flag_id": "e04fb15b-c46a-4428-acb1-3dc91f869c6f",
+        "flag_points": 138,
+        "flag_question": "",
+        "flag_order": 20,
+        "is_solved": false
+      }
+    ],
+    "description": "now more annoying",
+    "files": [
+      {
+        "file_name": "minigame2",
+        "file_url": "https://api.ctf.thefewchosen.com/challenge-files/minigame2_834b97482a6c136d"
+      }
+    ],
+    "is_dynamic": false,
+    "amount_solves": 109,
+    "connection_type": null,
+    "image_name": null,
+    "http_only": null,
+    "allow_host_header_override": null
+  },
+  "status": {
+    "schema_version": 2,
+    "solve": "solved_by_me",
+    "flag": {
+      "value": null,
+      "state": "none"
+    },
+    "writeup": "none",
+    "writeup_auto": true,
+    "notes": "",
+    "labels": [],
+    "container": "none",
+    "synced_at": "2026-09-06T05:34:41Z",
+    "updated_at": "2026-09-06T05:34:41Z"
+  }
+}

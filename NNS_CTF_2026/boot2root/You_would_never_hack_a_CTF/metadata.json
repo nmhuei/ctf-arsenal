@@ -1,0 +1,55 @@
+{
+  "id": "boot2root_You would never hack a CTF",
+  "name": "You would never hack a CTF",
+  "category": "boot2root",
+  "points": 328,
+  "author": "0xle",
+  "tags": [],
+  "hints": [],
+  "connection_info": null,
+  "solved_by_me": false,
+  "solves_count": 9,
+  "submit_endpoint": null,
+  "instance_info": {
+    "is_container": true,
+    "status": "stopped",
+    "last_updated": "2026-09-05 20:37:40"
+  },
+  "downloaded_files": [
+    {
+      "url": "https://media1.tenor.com/m/ZYE3KzTM4acAAAAd/piracy-its-a-crime-you-wouldnt-steal-a-car.gif",
+      "name": null,
+      "saved_path": null,
+      "success": false,
+      "source": "description_direct_file",
+      "message": "Nhận được HTML thay vì file (có thể là trang interstitial/quota hết hạn)",
+      "verification": {}
+    }
+  ],
+  "raw": {
+    "id": "boot2root_You would never hack a CTF",
+    "name": "You would never hack a CTF",
+    "description": "You would never hack a CTF platform. You would never hack an organiser's\naccount. Hacking a CTF is stealing. Stealing is against the law.\n\n![](https://media1.tenor.com/m/ZYE3KzTM4acAAAAd/piracy-its-a-crime-you-wouldnt-steal-a-car.gif)\n\n> [!NOTE]\n> The flag is located at `/flag.txt`.\n\n> [!NOTE]\n> This is a 0day challenge and we are hoping you keep th{is|ese} 0day{|s} to yourself until the vulnerabilit{y|ies} {is|are} patched.\n\n",
+    "category": "boot2root",
+    "author": "0xle",
+    "files": [],
+    "points": 500,
+    "solves": 0,
+    "sortWeight": 0
+  },
+  "status": {
+    "schema_version": 2,
+    "solve": "unsolved",
+    "flag": {
+      "value": null,
+      "state": "none"
+    },
+    "writeup": "none",
+    "writeup_auto": true,
+    "notes": "",
+    "labels": [],
+    "container": "stopped",
+    "synced_at": "2026-09-05T07:11:32Z",
+    "updated_at": "2026-09-05T13:37:40Z"
+  }
+}

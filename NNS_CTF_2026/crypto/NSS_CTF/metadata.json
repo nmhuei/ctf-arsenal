@@ -1,0 +1,65 @@
+{
+  "id": "crypto_NSS CTF",
+  "name": "NSS CTF",
+  "category": "crypto",
+  "points": 313,
+  "author": "Zukane",
+  "tags": [],
+  "hints": [],
+  "connection_info": null,
+  "solved_by_me": true,
+  "solves_count": 10,
+  "submit_endpoint": null,
+  "instance_info": {},
+  "downloaded_files": [
+    {
+      "url": "https://attachments.nnsc.tf/uploads/8cfd5e15b267ebb7c9cbe15cd0ce46a7134557107d992541e76e758260ca62aa/crypto_nss-ctf.tar.gz",
+      "name": "crypto_nss-ctf.tar.gz",
+      "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/crypto/NSS_CTF/challenge/crypto_nss-ctf.tar.gz",
+      "success": true,
+      "source": "platform_attachment",
+      "message": "Đã tải trực tiếp thành công",
+      "verification": {
+        "etag": "\"a316a8cfe4700db05c349389f1f49bb2\"",
+        "final_url": "https://attachments.nnsc.tf/uploads/8cfd5e15b267ebb7c9cbe15cd0ce46a7134557107d992541e76e758260ca62aa/crypto_nss-ctf.tar.gz",
+        "last_modified": "Thu, 03 Sep 2026 00:04:56 GMT",
+        "schema_version": 1,
+        "sha256": null,
+        "size": 7041,
+        "url": "https://attachments.nnsc.tf/uploads/8cfd5e15b267ebb7c9cbe15cd0ce46a7134557107d992541e76e758260ca62aa/crypto_nss-ctf.tar.gz",
+        "verified_at": "2026-09-04T16:05:46Z"
+      }
+    }
+  ],
+  "raw": {
+    "id": "crypto_NSS CTF",
+    "name": "NSS CTF",
+    "description": "welcome to NSS CTF 2026 the revised version of NNS CTF 2025\n\n",
+    "category": "crypto",
+    "author": "Zukane",
+    "files": [
+      {
+        "name": "crypto_nss-ctf.tar.gz",
+        "url": "https://attachments.nnsc.tf/uploads/8cfd5e15b267ebb7c9cbe15cd0ce46a7134557107d992541e76e758260ca62aa/crypto_nss-ctf.tar.gz"
+      }
+    ],
+    "points": 500,
+    "solves": 0,
+    "sortWeight": 0
+  },
+  "status": {
+    "schema_version": 2,
+    "solve": "solved",
+    "flag": {
+      "value": "NNS{m4k3_5ur3_th3_fl4g_f0rm4t_15_NNS_n0t_NSS}",
+      "state": "correct"
+    },
+    "writeup": "complete",
+    "writeup_auto": false,
+    "notes": "",
+    "labels": [],
+    "container": "none",
+    "synced_at": "2026-09-05T12:17:00Z",
+    "updated_at": "2026-09-05T12:17:00Z"
+  }
+}

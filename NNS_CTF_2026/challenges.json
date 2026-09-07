@@ -1,0 +1,2482 @@
+{
+  "ctf_info": {
+    "title": "NNS CTF 2026",
+    "url": "https://nnsc.tf",
+    "platform": "rctf",
+    "user": "AI_slop",
+    "team": "AI_slop",
+    "game_id": null,
+    "ctftime_id": 3097,
+    "event_window": {
+      "start": "2026-09-04T16:00:00+00:00",
+      "end": "2026-09-06T16:00:00+00:00",
+      "source": "rctf:/api/v1/integrations/client/config",
+      "confidence": "high"
+    }
+  },
+  "total_challenges": 80,
+  "total_points": 36466,
+  "categories": {
+    "web": 12,
+    "rev": 9,
+    "pwn": 11,
+    "misc": 17,
+    "devsecoops": 4,
+    "crypto": 10,
+    "blockchain": 9,
+    "sanity": 1,
+    "forensics": 1,
+    "boot2root": 6
+  },
+  "challenges": [
+    {
+      "id": "web_Web Hacker 2",
+      "name": "Web Hacker 2",
+      "category": "web",
+      "points": 478,
+      "author": "piprett",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 2,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": []
+    },
+    {
+      "id": "web_Simon",
+      "name": "Simon",
+      "category": "web",
+      "points": 478,
+      "author": "piprett",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 2,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": []
+    },
+    {
+      "id": "web_PHP is my passion",
+      "name": "PHP is my passion",
+      "category": "web",
+      "points": 500,
+      "author": "0xle",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 1,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://attachments.nnsc.tf/uploads/871477a3ffab194a75a3abebf9b7e3ee59a9bb4266a693d29840c1e3d0c6070b/web_php-is-my-passion.tar.gz",
+          "name": "web_php-is-my-passion.tar.gz",
+          "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/web/PHP_is_my_passion/challenge/web_php-is-my-passion.tar.gz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"dca4a2b24c3b0fc4e765d807e0fe1357\"",
+            "final_url": "https://attachments.nnsc.tf/uploads/871477a3ffab194a75a3abebf9b7e3ee59a9bb4266a693d29840c1e3d0c6070b/web_php-is-my-passion.tar.gz",
+            "last_modified": "Fri, 04 Sep 2026 13:56:29 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 1546,
+            "url": "https://attachments.nnsc.tf/uploads/871477a3ffab194a75a3abebf9b7e3ee59a9bb4266a693d29840c1e3d0c6070b/web_php-is-my-passion.tar.gz",
+            "verified_at": "2026-09-04T16:05:44Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "web_NNS Travel",
+      "name": "NNS Travel",
+      "category": "web",
+      "points": 299,
+      "author": "piprett",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 11,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://attachments.nnsc.tf/uploads/35e096fd597ef593da759e5e089bf74c99ff5aea408c0b70b3f180f348f40da4/web_nns-travel.tar.gz",
+          "name": "web_nns-travel.tar.gz",
+          "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/web/NNS_Travel/challenge/web_nns-travel.tar.gz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"7d175577804c8c4dcdb57c9807d6d219\"",
+            "final_url": "https://attachments.nnsc.tf/uploads/35e096fd597ef593da759e5e089bf74c99ff5aea408c0b70b3f180f348f40da4/web_nns-travel.tar.gz",
+            "last_modified": "Thu, 03 Sep 2026 18:23:38 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 50567,
+            "url": "https://attachments.nnsc.tf/uploads/35e096fd597ef593da759e5e089bf74c99ff5aea408c0b70b3f180f348f40da4/web_nns-travel.tar.gz",
+            "verified_at": "2026-09-04T16:05:44Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "rev_Time Lock",
+      "name": "Time Lock",
+      "category": "rev",
+      "points": 363,
+      "author": "hoover",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 7,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://attachments.nnsc.tf/uploads/a2e82c0d2b64a29a6f530542eee4c19171d99d3c26bbbc2afcadea246e30101c/rev_time-lock.tar.gz",
+          "name": "rev_time-lock.tar.gz",
+          "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/rev/Time_Lock/challenge/rev_time-lock.tar.gz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"674352464232406854550c01794cac1b\"",
+            "final_url": "https://attachments.nnsc.tf/uploads/a2e82c0d2b64a29a6f530542eee4c19171d99d3c26bbbc2afcadea246e30101c/rev_time-lock.tar.gz",
+            "last_modified": "Thu, 03 Sep 2026 00:05:03 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 1640,
+            "url": "https://attachments.nnsc.tf/uploads/a2e82c0d2b64a29a6f530542eee4c19171d99d3c26bbbc2afcadea246e30101c/rev_time-lock.tar.gz",
+            "verified_at": "2026-09-04T16:05:44Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "rev_Scratch Space",
+      "name": "Scratch Space",
+      "category": "rev",
+      "points": 383,
+      "author": "hoover",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 6,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://attachments.nnsc.tf/uploads/c2c77ce0db3d1ff8c17d4f33739021b0cc9db4ea1cd80a17ef755fe8d97f4e00/rev_scratch-space.tar.gz",
+          "name": "rev_scratch-space.tar.gz",
+          "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/rev/Scratch_Space/challenge/rev_scratch-space.tar.gz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"6965e6e40d298612c6a74cfd59e3bee3\"",
+            "final_url": "https://attachments.nnsc.tf/uploads/c2c77ce0db3d1ff8c17d4f33739021b0cc9db4ea1cd80a17ef755fe8d97f4e00/rev_scratch-space.tar.gz",
+            "last_modified": "Thu, 03 Sep 2026 00:03:53 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 2928,
+            "url": "https://attachments.nnsc.tf/uploads/c2c77ce0db3d1ff8c17d4f33739021b0cc9db4ea1cd80a17ef755fe8d97f4e00/rev_scratch-space.tar.gz",
+            "verified_at": "2026-09-04T16:05:44Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "rev_Patch Tuesday",
+      "name": "Patch Tuesday",
+      "category": "rev",
+      "points": 383,
+      "author": "hoover",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 6,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://attachments.nnsc.tf/uploads/ae1c996105b5c7a97083067d5381be7db70a75b01621feec91b5596b953d1c25/rev_patch-tuesday.tar.gz",
+          "name": "rev_patch-tuesday.tar.gz",
+          "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/rev/Patch_Tuesday/challenge/rev_patch-tuesday.tar.gz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"f62fe166a8b49b49436c5f25b5b98a11\"",
+            "final_url": "https://attachments.nnsc.tf/uploads/ae1c996105b5c7a97083067d5381be7db70a75b01621feec91b5596b953d1c25/rev_patch-tuesday.tar.gz",
+            "last_modified": "Thu, 03 Sep 2026 00:03:58 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 781,
+            "url": "https://attachments.nnsc.tf/uploads/ae1c996105b5c7a97083067d5381be7db70a75b01621feec91b5596b953d1c25/rev_patch-tuesday.tar.gz",
+            "verified_at": "2026-09-04T16:05:44Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "rev_Open Secret",
+      "name": "Open Secret",
+      "category": "rev",
+      "points": 299,
+      "author": "hoover",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 11,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://attachments.nnsc.tf/uploads/9196b458040e20f5a1cff9663cb2155d790848311b10b00e4b0abada50f7ff72/rev_open-secret.tar.gz",
+          "name": "rev_open-secret.tar.gz",
+          "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/rev/Open_Secret/challenge/rev_open-secret.tar.gz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"4b15d38b785c34d59f37331cb8bad3c9\"",
+            "final_url": "https://attachments.nnsc.tf/uploads/9196b458040e20f5a1cff9663cb2155d790848311b10b00e4b0abada50f7ff72/rev_open-secret.tar.gz",
+            "last_modified": "Thu, 03 Sep 2026 00:04:00 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 1387,
+            "url": "https://attachments.nnsc.tf/uploads/9196b458040e20f5a1cff9663cb2155d790848311b10b00e4b0abada50f7ff72/rev_open-secret.tar.gz",
+            "verified_at": "2026-09-04T16:05:44Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "rev_No Strings Attached",
+      "name": "No Strings Attached",
+      "category": "rev",
+      "points": 286,
+      "author": "hoover",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 12,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://attachments.nnsc.tf/uploads/58145bd43e4a63c056bbb5297b18c6bf879b3f819a732fb4184d2e6fb51dd366/rev_no-strings-attached.tar.gz",
+          "name": "rev_no-strings-attached.tar.gz",
+          "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/rev/No_Strings_Attached/challenge/rev_no-strings-attached.tar.gz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"867610f38f5b2fa24b9e3147f58f12e2\"",
+            "final_url": "https://attachments.nnsc.tf/uploads/58145bd43e4a63c056bbb5297b18c6bf879b3f819a732fb4184d2e6fb51dd366/rev_no-strings-attached.tar.gz",
+            "last_modified": "Thu, 03 Sep 2026 13:24:33 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 2799,
+            "url": "https://attachments.nnsc.tf/uploads/58145bd43e4a63c056bbb5297b18c6bf879b3f819a732fb4184d2e6fb51dd366/rev_no-strings-attached.tar.gz",
+            "verified_at": "2026-09-04T16:05:44Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "rev_Flag Pointer Register",
+      "name": "Flag Pointer Register",
+      "category": "rev",
+      "points": 220,
+      "author": "hoover",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 19,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://attachments.nnsc.tf/uploads/acdd93223adc6d21ebbd487e1b8f7d68a151c845d3cd9f5e1a12c3e16c7f2ee0/rev_flag-pointer-register.tar.gz",
+          "name": "rev_flag-pointer-register.tar.gz",
+          "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/rev/Flag_Pointer_Register/challenge/rev_flag-pointer-register.tar.gz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"b32b6be19c4f7887bebfda9b0ea8c74b\"",
+            "final_url": "https://attachments.nnsc.tf/uploads/acdd93223adc6d21ebbd487e1b8f7d68a151c845d3cd9f5e1a12c3e16c7f2ee0/rev_flag-pointer-register.tar.gz",
+            "last_modified": "Thu, 03 Sep 2026 13:24:21 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 732,
+            "url": "https://attachments.nnsc.tf/uploads/acdd93223adc6d21ebbd487e1b8f7d68a151c845d3cd9f5e1a12c3e16c7f2ee0/rev_flag-pointer-register.tar.gz",
+            "verified_at": "2026-09-04T16:05:44Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "pwn_pset1",
+      "name": "pset1",
+      "category": "pwn",
+      "points": 500,
+      "author": "hoover",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 0,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://attachments.nnsc.tf/uploads/933afa064f778f84f04f7ce0f57e8476cacc263074b39ed6be6dae97c08bf127/pwn_pset1.tar.gz",
+          "name": "pwn_pset1.tar.gz",
+          "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/pwn/pset1/challenge/pwn_pset1.tar.gz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"27f7417fbc8f1b8b1abc681440c541e4\"",
+            "final_url": "https://attachments.nnsc.tf/uploads/933afa064f778f84f04f7ce0f57e8476cacc263074b39ed6be6dae97c08bf127/pwn_pset1.tar.gz",
+            "last_modified": "Fri, 04 Sep 2026 00:42:26 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 339362,
+            "url": "https://attachments.nnsc.tf/uploads/933afa064f778f84f04f7ce0f57e8476cacc263074b39ed6be6dae97c08bf127/pwn_pset1.tar.gz",
+            "verified_at": "2026-09-04T16:05:44Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "pwn_echo-chamber",
+      "name": "echo-chamber",
+      "category": "pwn",
+      "points": 500,
+      "author": "hoover",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 0,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://attachments.nnsc.tf/uploads/8a4553595e658ca6c8beb67d60bf2617838f2e879871c8caa4bf73b9ee16876d/pwn_echo-chamber.tar.gz",
+          "name": "pwn_echo-chamber.tar.gz",
+          "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/pwn/echo-chamber/challenge/pwn_echo-chamber.tar.gz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"8f3c81f7fc60b54fdbc4d791e7523a59\"",
+            "final_url": "https://attachments.nnsc.tf/uploads/8a4553595e658ca6c8beb67d60bf2617838f2e879871c8caa4bf73b9ee16876d/pwn_echo-chamber.tar.gz",
+            "last_modified": "Thu, 03 Sep 2026 13:23:56 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 2714,
+            "url": "https://attachments.nnsc.tf/uploads/8a4553595e658ca6c8beb67d60bf2617838f2e879871c8caa4bf73b9ee16876d/pwn_echo-chamber.tar.gz",
+            "verified_at": "2026-09-04T16:05:44Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "pwn_No win",
+      "name": "No win",
+      "category": "pwn",
+      "points": 500,
+      "author": "hoover",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 0,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://attachments.nnsc.tf/uploads/bdffa8c5a3c4c80a5f80eeaec7c5e17b162ec023bea5d230290bc704d0b31ed9/pwn_no-win.tar.gz",
+          "name": "pwn_no-win.tar.gz",
+          "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/pwn/No_win/challenge/pwn_no-win.tar.gz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"2bacfba98f83e00344d149e8cbde273f\"",
+            "final_url": "https://attachments.nnsc.tf/uploads/bdffa8c5a3c4c80a5f80eeaec7c5e17b162ec023bea5d230290bc704d0b31ed9/pwn_no-win.tar.gz",
+            "last_modified": "Fri, 04 Sep 2026 00:42:35 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 339152,
+            "url": "https://attachments.nnsc.tf/uploads/bdffa8c5a3c4c80a5f80eeaec7c5e17b162ec023bea5d230290bc704d0b31ed9/pwn_no-win.tar.gz",
+            "verified_at": "2026-09-04T16:05:44Z"
+          }
+        },
+        {
+          "url": "https://i.imgflip.com/azn66t.jpg",
+          "name": "azn66t.jpg",
+          "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/pwn/No_win/challenge/azn66t.jpg",
+          "success": true,
+          "source": "description_direct_file",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"e0ceb7832389b628fee661ec954c1677\"",
+            "final_url": "https://i.imgflip.com/azn66t.jpg",
+            "last_modified": "Tue, 25 Aug 2026 20:01:18 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 32074,
+            "url": "https://i.imgflip.com/azn66t.jpg",
+            "verified_at": "2026-09-04T16:05:45Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "pwn_Echo chamber",
+      "name": "Echo chamber",
+      "category": "pwn",
+      "points": 453,
+      "author": "hoover",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 3,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://attachments.nnsc.tf/uploads/5420b056a7ffdb90167c60cab62aaba78dcf69d6c4abb91de4a72da8618ccd39/pwn_echo-chamber.tar.gz",
+          "name": "pwn_echo-chamber.tar.gz",
+          "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/pwn/Echo_chamber/challenge/pwn_echo-chamber.tar.gz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"33d0d2382a6b0d4135a00a9881a77d49\"",
+            "final_url": "https://attachments.nnsc.tf/uploads/5420b056a7ffdb90167c60cab62aaba78dcf69d6c4abb91de4a72da8618ccd39/pwn_echo-chamber.tar.gz",
+            "last_modified": "Fri, 04 Sep 2026 00:42:23 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 2849,
+            "url": "https://attachments.nnsc.tf/uploads/5420b056a7ffdb90167c60cab62aaba78dcf69d6c4abb91de4a72da8618ccd39/pwn_echo-chamber.tar.gz",
+            "verified_at": "2026-09-04T16:05:44Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "pwn_BYOC",
+      "name": "BYOC",
+      "category": "pwn",
+      "points": 274,
+      "author": "hoover",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 13,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://attachments.nnsc.tf/uploads/f5aa6d9a2584b88673073270f43270528c2abfcab320c83bd316e93bd48fb09b/pwn_byoc.tar.gz",
+          "name": "pwn_byoc.tar.gz",
+          "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/pwn/BYOC/challenge/pwn_byoc.tar.gz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"87f80bea4a4b295fdd13f58aecf0b383\"",
+            "final_url": "https://attachments.nnsc.tf/uploads/f5aa6d9a2584b88673073270f43270528c2abfcab320c83bd316e93bd48fb09b/pwn_byoc.tar.gz",
+            "last_modified": "Fri, 04 Sep 2026 00:42:23 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 2249,
+            "url": "https://attachments.nnsc.tf/uploads/f5aa6d9a2584b88673073270f43270528c2abfcab320c83bd316e93bd48fb09b/pwn_byoc.tar.gz",
+            "verified_at": "2026-09-04T16:05:44Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "misc_littlefs",
+      "name": "littlefs",
+      "category": "misc",
+      "points": 500,
+      "author": "simen",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 0,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://attachments.nnsc.tf/uploads/a9d71f03d752c5e15b43d2ed4de6964c5052c41aa248cd33cb96bd48c3389eae/misc_littlefs.tar.gz",
+          "name": "misc_littlefs.tar.gz",
+          "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/misc/littlefs/challenge/misc_littlefs.tar.gz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"57ce5b9b78e9ec9a4ca586f0b52f17f0\"",
+            "final_url": "https://attachments.nnsc.tf/uploads/a9d71f03d752c5e15b43d2ed4de6964c5052c41aa248cd33cb96bd48c3389eae/misc_littlefs.tar.gz",
+            "last_modified": "Thu, 03 Sep 2026 00:04:19 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 19919,
+            "url": "https://attachments.nnsc.tf/uploads/a9d71f03d752c5e15b43d2ed4de6964c5052c41aa248cd33cb96bd48c3389eae/misc_littlefs.tar.gz",
+            "verified_at": "2026-09-04T16:05:44Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "misc_dyslexic",
+      "name": "dyslexic",
+      "category": "misc",
+      "points": 500,
+      "author": "hoover, 0xle",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 0,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": []
+    },
+    {
+      "id": "misc_The Temple",
+      "name": "The Temple",
+      "category": "misc",
+      "points": 500,
+      "author": "0xle",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 0,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": []
+    },
+    {
+      "id": "misc_Sleepy CPU",
+      "name": "Sleepy CPU",
+      "category": "misc",
+      "points": 500,
+      "author": "simen",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 1,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://attachments.nnsc.tf/uploads/796c2a7db12c452c30220d83f4c4711d2890abb5995b9d2db8b407230e6dc861/misc_sleepy-cpu.tar.gz",
+          "name": "misc_sleepy-cpu.tar.gz",
+          "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/misc/Sleepy_CPU/challenge/misc_sleepy-cpu.tar.gz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"5dbb7de2cefbc306c83826349fa152ed\"",
+            "final_url": "https://attachments.nnsc.tf/uploads/796c2a7db12c452c30220d83f4c4711d2890abb5995b9d2db8b407230e6dc861/misc_sleepy-cpu.tar.gz",
+            "last_modified": "Thu, 03 Sep 2026 13:22:58 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 5888768,
+            "url": "https://attachments.nnsc.tf/uploads/796c2a7db12c452c30220d83f4c4711d2890abb5995b9d2db8b407230e6dc861/misc_sleepy-cpu.tar.gz",
+            "verified_at": "2026-09-04T16:05:45Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "devsecoops_Hiding in your WiFi",
+      "name": "Hiding in your WiFi",
+      "category": "devsecoops",
+      "points": 500,
+      "author": "0xle",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 0,
+      "submit_endpoint": null,
+      "instance_info": {
+        "status": "running"
+      },
+      "files": []
+    },
+    {
+      "id": "crypto_Nostalgia",
+      "name": "Nostalgia",
+      "category": "crypto",
+      "points": 363,
+      "author": "Zukane",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 7,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://attachments.nnsc.tf/uploads/6d67edeefeda63b32982b1265be86f76e2569794335554d61c20baf9cee167bb/crypto_nostalgia.tar.gz",
+          "name": "crypto_nostalgia.tar.gz",
+          "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/crypto/Nostalgia/challenge/crypto_nostalgia.tar.gz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"02f18544220156f31c892d88a0e3ab28\"",
+            "final_url": "https://attachments.nnsc.tf/uploads/6d67edeefeda63b32982b1265be86f76e2569794335554d61c20baf9cee167bb/crypto_nostalgia.tar.gz",
+            "last_modified": "Thu, 03 Sep 2026 13:23:32 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 504,
+            "url": "https://attachments.nnsc.tf/uploads/6d67edeefeda63b32982b1265be86f76e2569794335554d61c20baf9cee167bb/crypto_nostalgia.tar.gz",
+            "verified_at": "2026-09-04T16:05:44Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "crypto_BeginneRSA",
+      "name": "BeginneRSA",
+      "category": "crypto",
+      "points": 139,
+      "author": "Zukane",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 39,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://attachments.nnsc.tf/uploads/2cb8948e8a43a550bb14a3947792f34c6bf5ae9d58a1475347bf67fd8d62906f/crypto_beginnersa.tar.gz",
+          "name": "crypto_beginnersa.tar.gz",
+          "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/crypto/BeginneRSA/challenge/crypto_beginnersa.tar.gz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"2314a987c959d1f63e9a28ee7ae20f58\"",
+            "final_url": "https://attachments.nnsc.tf/uploads/2cb8948e8a43a550bb14a3947792f34c6bf5ae9d58a1475347bf67fd8d62906f/crypto_beginnersa.tar.gz",
+            "last_modified": "Thu, 03 Sep 2026 00:05:02 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 1052,
+            "url": "https://attachments.nnsc.tf/uploads/2cb8948e8a43a550bb14a3947792f34c6bf5ae9d58a1475347bf67fd8d62906f/crypto_beginnersa.tar.gz",
+            "verified_at": "2026-09-04T16:05:44Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "blockchain_eu261",
+      "name": "eu261",
+      "category": "blockchain",
+      "points": 500,
+      "author": "hoover",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 0,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://attachments.nnsc.tf/uploads/f78b9efc360eb0ae1eb52f2017cb000c410234ccc06e40a101a8d2b103ff5b33/blockchain_eu261.tar.gz",
+          "name": "blockchain_eu261.tar.gz",
+          "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/blockchain/eu261/challenge/blockchain_eu261.tar.gz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"ac6b38d90f48b7a3dc91315175410369\"",
+            "final_url": "https://attachments.nnsc.tf/uploads/f78b9efc360eb0ae1eb52f2017cb000c410234ccc06e40a101a8d2b103ff5b33/blockchain_eu261.tar.gz",
+            "last_modified": "Fri, 04 Sep 2026 15:27:15 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 2813,
+            "url": "https://attachments.nnsc.tf/uploads/f78b9efc360eb0ae1eb52f2017cb000c410234ccc06e40a101a8d2b103ff5b33/blockchain_eu261.tar.gz",
+            "verified_at": "2026-09-04T16:05:45Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "web_perchance",
+      "name": "perchance",
+      "category": "web",
+      "points": 500,
+      "author": "piprett",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 0,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://attachments.nnsc.tf/uploads/f9811ae6ad2785a7eb52387b3f87b7e0151bf28e3450e9de1d6f9cf84a989271/web_perchance.tar.gz",
+          "name": "web_perchance.tar.gz",
+          "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/web/perchance/challenge/web_perchance.tar.gz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"571f2cd3b067dcf8b875e27437c1ff8f\"",
+            "final_url": "https://attachments.nnsc.tf/uploads/f9811ae6ad2785a7eb52387b3f87b7e0151bf28e3450e9de1d6f9cf84a989271/web_perchance.tar.gz",
+            "last_modified": "Thu, 03 Sep 2026 13:23:15 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 57719,
+            "url": "https://attachments.nnsc.tf/uploads/f9811ae6ad2785a7eb52387b3f87b7e0151bf28e3450e9de1d6f9cf84a989271/web_perchance.tar.gz",
+            "verified_at": "2026-09-04T16:05:45Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "web_outfjord-your-notes",
+      "name": "outfjord-your-notes",
+      "category": "web",
+      "points": 500,
+      "author": "0xle",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 0,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": []
+    },
+    {
+      "id": "web_dont-worry",
+      "name": "dont-worry",
+      "category": "web",
+      "points": 500,
+      "author": "0xle",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 0,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": []
+    },
+    {
+      "id": "web_bloatware.js",
+      "name": "bloatware.js",
+      "category": "web",
+      "points": 500,
+      "author": "xtea418",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 0,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://attachments.nnsc.tf/uploads/e406b383eca0a5953be490f68b73f9dd1d7f24e885095922dd9becbeb210cce9/web_bloatware.js.tar.gz",
+          "name": "web_bloatware.js.tar.gz",
+          "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/web/bloatware.js/challenge/web_bloatware.js.tar.gz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"07da9000c687942c9d167e0f02833d29\"",
+            "final_url": "https://attachments.nnsc.tf/uploads/e406b383eca0a5953be490f68b73f9dd1d7f24e885095922dd9becbeb210cce9/web_bloatware.js.tar.gz",
+            "last_modified": "Fri, 04 Sep 2026 13:04:45 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 25276,
+            "url": "https://attachments.nnsc.tf/uploads/e406b383eca0a5953be490f68b73f9dd1d7f24e885095922dd9becbeb210cce9/web_bloatware.js.tar.gz",
+            "verified_at": "2026-09-04T16:05:45Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "web_File Monster",
+      "name": "File Monster",
+      "category": "web",
+      "points": 500,
+      "author": "piprett",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 0,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://attachments.nnsc.tf/uploads/1b0b018385f0b57075fb61211291c2b0903978e85fb6b1e17af2b20c5f673440/web_file-monster.tar.gz",
+          "name": "web_file-monster.tar.gz",
+          "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/web/File_Monster/challenge/web_file-monster.tar.gz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"5f2675519798d353b9ff5ebc7c7bde0a\"",
+            "final_url": "https://attachments.nnsc.tf/uploads/1b0b018385f0b57075fb61211291c2b0903978e85fb6b1e17af2b20c5f673440/web_file-monster.tar.gz",
+            "last_modified": "Thu, 03 Sep 2026 13:24:04 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 9645,
+            "url": "https://attachments.nnsc.tf/uploads/1b0b018385f0b57075fb61211291c2b0903978e85fb6b1e17af2b20c5f673440/web_file-monster.tar.gz",
+            "verified_at": "2026-09-04T16:05:45Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "web_Ein milljón bjóra",
+      "name": "Ein milljón bjóra",
+      "category": "web",
+      "points": 500,
+      "author": "0xle",
+      "tags": [],
+      "hints": [],
+      "connection_info": "ein-milljon-bjora-f3c81a23beca.chall.nnsc.tf:443",
+      "solved_by_me": false,
+      "solves_count": 0,
+      "submit_endpoint": null,
+      "instance_info": {
+        "status": "running",
+        "active_instance": "ein-milljon-bjora-f3c81a23beca.chall.nnsc.tf:443",
+        "remaining_time": 1295
+      },
+      "files": [
+        {
+          "url": "https://attachments.nnsc.tf/uploads/9fb95d3f359f16270df3de198afadfc90432146de09d79ab6b844065a246e03b/web_ein-millj%C3%B3n-bj%C3%B3ra.tar.gz",
+          "name": "web_ein-milljón-bjóra.tar.gz",
+          "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/web/Ein_milljón_bjóra/challenge/web_ein-milljón-bjóra.tar.gz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"7fdd5e80afd1ec87fff079d74854faad\"",
+            "final_url": "https://attachments.nnsc.tf/uploads/9fb95d3f359f16270df3de198afadfc90432146de09d79ab6b844065a246e03b/web_ein-millj%C3%B3n-bj%C3%B3ra.tar.gz",
+            "last_modified": "Thu, 03 Sep 2026 15:21:18 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 40531,
+            "url": "https://attachments.nnsc.tf/uploads/9fb95d3f359f16270df3de198afadfc90432146de09d79ab6b844065a246e03b/web_ein-millj%C3%B3n-bj%C3%B3ra.tar.gz",
+            "verified_at": "2026-09-04T16:05:45Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "web_AgilePaste 3",
+      "name": "AgilePaste 3",
+      "category": "web",
+      "points": 500,
+      "author": "0xle",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 0,
+      "submit_endpoint": null,
+      "instance_info": {
+        "status": "running"
+      },
+      "files": [
+        {
+          "url": "https://attachments.nnsc.tf/uploads/0b4fc3f329995817ec8dd50c750af962634958f83dc2405a1dc72ae9fc6ea5e1/web_agilepaste-3.tar.gz",
+          "name": "web_agilepaste-3.tar.gz",
+          "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/web/AgilePaste_3/challenge/web_agilepaste-3.tar.gz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"236208a90f28586b128d864f72b5f96a\"",
+            "final_url": "https://attachments.nnsc.tf/uploads/0b4fc3f329995817ec8dd50c750af962634958f83dc2405a1dc72ae9fc6ea5e1/web_agilepaste-3.tar.gz",
+            "last_modified": "Thu, 03 Sep 2026 13:26:12 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 30103,
+            "url": "https://attachments.nnsc.tf/uploads/0b4fc3f329995817ec8dd50c750af962634958f83dc2405a1dc72ae9fc6ea5e1/web_agilepaste-3.tar.gz",
+            "verified_at": "2026-09-04T16:05:45Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "web_ASS",
+      "name": "ASS",
+      "category": "web",
+      "points": 500,
+      "author": "0xle",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 0,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://attachments.nnsc.tf/uploads/6caaf3de88770325bba9d20f5bbec5c8fe3c1ca8cb7ef3f82dcaa7603ed8bb44/web_ass.tar.gz",
+          "name": "web_ass.tar.gz",
+          "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/web/ASS/challenge/web_ass.tar.gz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"a19fd10f6764157bccbd131cc31e5e0d\"",
+            "final_url": "https://attachments.nnsc.tf/uploads/6caaf3de88770325bba9d20f5bbec5c8fe3c1ca8cb7ef3f82dcaa7603ed8bb44/web_ass.tar.gz",
+            "last_modified": "Thu, 03 Sep 2026 13:22:50 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 22535,
+            "url": "https://attachments.nnsc.tf/uploads/6caaf3de88770325bba9d20f5bbec5c8fe3c1ca8cb7ef3f82dcaa7603ed8bb44/web_ass.tar.gz",
+            "verified_at": "2026-09-04T16:05:45Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "sanity_Read the rules!",
+      "name": "Read the rules!",
+      "category": "sanity",
+      "points": 70,
+      "author": "NNS",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 151,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": []
+    },
+    {
+      "id": "rev_small guy",
+      "name": "small guy",
+      "category": "rev",
+      "points": 500,
+      "author": "0xle",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 0,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://attachments.nnsc.tf/uploads/e4dc0530b166f69abc22933ac419e87392f8b9dc7347638a58d397e78e037789/rev_small-guy.tar.gz",
+          "name": "rev_small-guy.tar.gz",
+          "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/rev/small_guy/challenge/rev_small-guy.tar.gz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"96bd4bd5344334bd67591dddb96750fa\"",
+            "final_url": "https://attachments.nnsc.tf/uploads/e4dc0530b166f69abc22933ac419e87392f8b9dc7347638a58d397e78e037789/rev_small-guy.tar.gz",
+            "last_modified": "Thu, 03 Sep 2026 00:09:09 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 6355,
+            "url": "https://attachments.nnsc.tf/uploads/e4dc0530b166f69abc22933ac419e87392f8b9dc7347638a58d397e78e037789/rev_small-guy.tar.gz",
+            "verified_at": "2026-09-04T16:05:45Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "rev_purgatory",
+      "name": "purgatory",
+      "category": "rev",
+      "points": 500,
+      "author": "hoover",
+      "tags": [],
+      "hints": [],
+      "connection_info": "purgatory-66b577a4b015.chall.nnsc.tf:1337",
+      "solved_by_me": false,
+      "solves_count": 0,
+      "submit_endpoint": null,
+      "instance_info": {
+        "status": "running",
+        "active_instance": "purgatory-66b577a4b015.chall.nnsc.tf:1337",
+        "remaining_time": 1781
+      },
+      "files": [
+        {
+          "url": "https://attachments.nnsc.tf/uploads/cfd33aa853f15887eee7dac738fbd0bfd303c526ab84000ee42b825d78dab8b4/rev_purgatory.tar.gz",
+          "name": "rev_purgatory.tar.gz",
+          "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/rev/purgatory/challenge/rev_purgatory.tar.gz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"0fad743e77ffe8b8f437fec8da2866de\"",
+            "final_url": "https://attachments.nnsc.tf/uploads/cfd33aa853f15887eee7dac738fbd0bfd303c526ab84000ee42b825d78dab8b4/rev_purgatory.tar.gz",
+            "last_modified": "Thu, 03 Sep 2026 13:23:15 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 2802,
+            "url": "https://attachments.nnsc.tf/uploads/cfd33aa853f15887eee7dac738fbd0bfd303c526ab84000ee42b825d78dab8b4/rev_purgatory.tar.gz",
+            "verified_at": "2026-09-04T16:05:45Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "rev_Harald Blåtann",
+      "name": "Harald Blåtann",
+      "category": "rev",
+      "points": 500,
+      "author": "simen",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 0,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://attachments.nnsc.tf/uploads/981e137bdfdb6941c267610140a8c16555c65ad784f7ab69324b28fc66d804d7/rev_harald-bl%C3%A5tann.tar.gz",
+          "name": "rev_harald-blåtann.tar.gz",
+          "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/rev/Harald_Blåtann/challenge/rev_harald-blåtann.tar.gz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"2d8a22a2ae58ae205e5f833703f28dab\"",
+            "final_url": "https://attachments.nnsc.tf/uploads/981e137bdfdb6941c267610140a8c16555c65ad784f7ab69324b28fc66d804d7/rev_harald-bl%C3%A5tann.tar.gz",
+            "last_modified": "Thu, 03 Sep 2026 00:04:25 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 192862,
+            "url": "https://attachments.nnsc.tf/uploads/981e137bdfdb6941c267610140a8c16555c65ad784f7ab69324b28fc66d804d7/rev_harald-bl%C3%A5tann.tar.gz",
+            "verified_at": "2026-09-04T16:05:45Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "pwn_jailnet",
+      "name": "jailnet",
+      "category": "pwn",
+      "points": 500,
+      "author": "Zukane",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 0,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://attachments.nnsc.tf/uploads/a847de483ce8dcc92a3521629e368b8fb0d68fab4e1dd5ade9583c4d92528a5f/pwn_jailnet.tar.gz",
+          "name": "pwn_jailnet.tar.gz",
+          "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/pwn/jailnet/challenge/pwn_jailnet.tar.gz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"41dc12ddcb7df1212dc3ce16b371f8f4\"",
+            "final_url": "https://attachments.nnsc.tf/uploads/a847de483ce8dcc92a3521629e368b8fb0d68fab4e1dd5ade9583c4d92528a5f/pwn_jailnet.tar.gz",
+            "last_modified": "Thu, 03 Sep 2026 13:24:02 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 2077,
+            "url": "https://attachments.nnsc.tf/uploads/a847de483ce8dcc92a3521629e368b8fb0d68fab4e1dd5ade9583c4d92528a5f/pwn_jailnet.tar.gz",
+            "verified_at": "2026-09-04T16:05:45Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "pwn_escapetime",
+      "name": "escapetime",
+      "category": "pwn",
+      "points": 500,
+      "author": "Qyn",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 0,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://attachments.nnsc.tf/uploads/71d7dada6ab92f8e8ecb35985ade531c9f5f3714739238c2c2142a823c48f519/pwn_escapetime.tar.gz",
+          "name": "pwn_escapetime.tar.gz",
+          "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/pwn/escapetime/challenge/pwn_escapetime.tar.gz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"096611d7d61f9a3f277efaf3926bf7cc\"",
+            "final_url": "https://attachments.nnsc.tf/uploads/71d7dada6ab92f8e8ecb35985ade531c9f5f3714739238c2c2142a823c48f519/pwn_escapetime.tar.gz",
+            "last_modified": "Fri, 04 Sep 2026 00:53:15 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 5567421,
+            "url": "https://attachments.nnsc.tf/uploads/71d7dada6ab92f8e8ecb35985ade531c9f5f3714739238c2c2142a823c48f519/pwn_escapetime.tar.gz",
+            "verified_at": "2026-09-04T16:05:45Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "pwn_coins",
+      "name": "coins",
+      "category": "pwn",
+      "points": 500,
+      "author": "fslaktern",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 0,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://attachments.nnsc.tf/uploads/1a7176c5a2f38ceb85c13b5c7fdcec377817f9bc0dd2b5c63a9918c962fcf54f/pwn_coins.tar.gz",
+          "name": "pwn_coins.tar.gz",
+          "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/pwn/coins/challenge/pwn_coins.tar.gz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"409c90a84b33658713a10873af5284fa\"",
+            "final_url": "https://attachments.nnsc.tf/uploads/1a7176c5a2f38ceb85c13b5c7fdcec377817f9bc0dd2b5c63a9918c962fcf54f/pwn_coins.tar.gz",
+            "last_modified": "Fri, 04 Sep 2026 14:39:19 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 2401,
+            "url": "https://attachments.nnsc.tf/uploads/1a7176c5a2f38ceb85c13b5c7fdcec377817f9bc0dd2b5c63a9918c962fcf54f/pwn_coins.tar.gz",
+            "verified_at": "2026-09-04T16:05:45Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "pwn_Parcel delivery",
+      "name": "Parcel delivery",
+      "category": "pwn",
+      "points": 500,
+      "author": "Kriz",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 0,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://attachments.nnsc.tf/uploads/4bdf9518de35a7940d3a79a4b333ca15f569d101846d380a06f5f04ca7da587c/pwn_parcel-delivery.tar.gz",
+          "name": "pwn_parcel-delivery.tar.gz",
+          "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/pwn/Parcel_delivery/challenge/pwn_parcel-delivery.tar.gz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"0f75ad89e523871cc25bd6b5761f862f\"",
+            "final_url": "https://attachments.nnsc.tf/uploads/4bdf9518de35a7940d3a79a4b333ca15f569d101846d380a06f5f04ca7da587c/pwn_parcel-delivery.tar.gz",
+            "last_modified": "Fri, 04 Sep 2026 14:38:54 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 4390,
+            "url": "https://attachments.nnsc.tf/uploads/4bdf9518de35a7940d3a79a4b333ca15f569d101846d380a06f5f04ca7da587c/pwn_parcel-delivery.tar.gz",
+            "verified_at": "2026-09-04T16:05:45Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "pwn_File parser",
+      "name": "File parser",
+      "category": "pwn",
+      "points": 500,
+      "author": "Kriz",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 0,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://attachments.nnsc.tf/uploads/ab8a8a7242b9a9baeefc39674ee0d10fdfbd0cad8d370ff4d7faa2c960d56112/pwn_file-parser.tar.gz",
+          "name": "pwn_file-parser.tar.gz",
+          "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/pwn/File_parser/challenge/pwn_file-parser.tar.gz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"098e23484fcc4ef0d8bc4532cb76dea9\"",
+            "final_url": "https://attachments.nnsc.tf/uploads/ab8a8a7242b9a9baeefc39674ee0d10fdfbd0cad8d370ff4d7faa2c960d56112/pwn_file-parser.tar.gz",
+            "last_modified": "Fri, 04 Sep 2026 14:38:59 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 336618,
+            "url": "https://attachments.nnsc.tf/uploads/ab8a8a7242b9a9baeefc39674ee0d10fdfbd0cad8d370ff4d7faa2c960d56112/pwn_file-parser.tar.gz",
+            "verified_at": "2026-09-04T16:05:45Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "pwn_1up-clank-bro",
+      "name": "1up-clank-bro",
+      "category": "pwn",
+      "points": 500,
+      "author": "Qyn",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 0,
+      "submit_endpoint": null,
+      "instance_info": {
+        "status": "running"
+      },
+      "files": [
+        {
+          "url": "https://attachments.nnsc.tf/uploads/9d0be356c65d323a5af12bab8ea9e6dca07a9cc5c5cc20a0c0d977537399ba85/pwn_1up-clank-bro.tar.gz",
+          "name": "pwn_1up-clank-bro.tar.gz",
+          "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/pwn/1up-clank-bro/challenge/pwn_1up-clank-bro.tar.gz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"7e208bc3fef81a6ea6fceb20a7042c3f\"",
+            "final_url": "https://attachments.nnsc.tf/uploads/9d0be356c65d323a5af12bab8ea9e6dca07a9cc5c5cc20a0c0d977537399ba85/pwn_1up-clank-bro.tar.gz",
+            "last_modified": "Fri, 04 Sep 2026 00:53:39 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 27853487,
+            "url": "https://attachments.nnsc.tf/uploads/9d0be356c65d323a5af12bab8ea9e6dca07a9cc5c5cc20a0c0d977537399ba85/pwn_1up-clank-bro.tar.gz",
+            "verified_at": "2026-09-04T16:05:48Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "misc_react.jail.js",
+      "name": "react.jail.js",
+      "category": "misc",
+      "points": 500,
+      "author": "xtea418",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 0,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://attachments.nnsc.tf/uploads/b7825d8471ad48125b5a5860013886d07d6642c549d5d00742344b4072926958/misc_react.jail.js.tar.gz",
+          "name": "misc_react.jail.js.tar.gz",
+          "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/misc/react.jail.js/challenge/misc_react.jail.js.tar.gz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"1dff335ea3f946bff99cba3634cb24f5\"",
+            "final_url": "https://attachments.nnsc.tf/uploads/b7825d8471ad48125b5a5860013886d07d6642c549d5d00742344b4072926958/misc_react.jail.js.tar.gz",
+            "last_modified": "Fri, 04 Sep 2026 13:04:26 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 10819,
+            "url": "https://attachments.nnsc.tf/uploads/b7825d8471ad48125b5a5860013886d07d6642c549d5d00742344b4072926958/misc_react.jail.js.tar.gz",
+            "verified_at": "2026-09-04T16:05:45Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "misc_minitaturbaum-plfanze",
+      "name": "minitaturbaum-plfanze",
+      "category": "misc",
+      "points": 0,
+      "author": "xtea418",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 0,
+      "submit_endpoint": null,
+      "instance_info": {
+        "status": "stopped"
+      },
+      "files": [
+        {
+          "url": "https://attachments.nnsc.tf/uploads/72a645e40fef643336e02f15ca022e9814841166ad813307e6214f1ef9f9d9b7/misc_minitaturbaum-plfanze.tar.gz",
+          "name": "misc_minitaturbaum-plfanze.tar.gz",
+          "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/misc/minitaturbaum-plfanze/challenge/misc_minitaturbaum-plfanze.tar.gz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"cbaf52d24d3d86d4e807e388220dcb29\"",
+            "final_url": "https://attachments.nnsc.tf/uploads/72a645e40fef643336e02f15ca022e9814841166ad813307e6214f1ef9f9d9b7/misc_minitaturbaum-plfanze.tar.gz",
+            "last_modified": "Thu, 03 Sep 2026 13:25:06 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 694,
+            "url": "https://attachments.nnsc.tf/uploads/72a645e40fef643336e02f15ca022e9814841166ad813307e6214f1ef9f9d9b7/misc_minitaturbaum-plfanze.tar.gz",
+            "verified_at": "2026-09-04T16:05:45Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "misc_mining-away",
+      "name": "mining-away",
+      "category": "misc",
+      "points": 500,
+      "author": "0xle",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 0,
+      "submit_endpoint": null,
+      "instance_info": {
+        "status": "stopped"
+      },
+      "files": []
+    },
+    {
+      "id": "misc_happy",
+      "name": "happy",
+      "category": "misc",
+      "points": 500,
+      "author": "xtea418",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 0,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://attachments.nnsc.tf/uploads/45fb174f3afae0a23a2c294b92d3842f0a563eb3a35bd0dc8388d79ba8abd4ba/misc_happy.tar.gz",
+          "name": "misc_happy.tar.gz",
+          "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/misc/happy/challenge/misc_happy.tar.gz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"387d1fc086e57e13befd547093eb53e1\"",
+            "final_url": "https://attachments.nnsc.tf/uploads/45fb174f3afae0a23a2c294b92d3842f0a563eb3a35bd0dc8388d79ba8abd4ba/misc_happy.tar.gz",
+            "last_modified": "Fri, 04 Sep 2026 13:04:06 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 3007,
+            "url": "https://attachments.nnsc.tf/uploads/45fb174f3afae0a23a2c294b92d3842f0a563eb3a35bd0dc8388d79ba8abd4ba/misc_happy.tar.gz",
+            "verified_at": "2026-09-04T16:05:45Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "misc_Silent",
+      "name": "Silent",
+      "category": "misc",
+      "points": 500,
+      "author": "Zukane",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 0,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://attachments.nnsc.tf/uploads/1cbb1fabd4ae086e3d6e7ae810cbf1c6d18334169b5f1a15ff258f442e078ea7/misc_silent.tar.gz",
+          "name": "misc_silent.tar.gz",
+          "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/misc/Silent/challenge/misc_silent.tar.gz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"fc0cd6aad0bf5f50ef08e3b83926d945\"",
+            "final_url": "https://attachments.nnsc.tf/uploads/1cbb1fabd4ae086e3d6e7ae810cbf1c6d18334169b5f1a15ff258f442e078ea7/misc_silent.tar.gz",
+            "last_modified": "Thu, 03 Sep 2026 13:22:34 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 694,
+            "url": "https://attachments.nnsc.tf/uploads/1cbb1fabd4ae086e3d6e7ae810cbf1c6d18334169b5f1a15ff258f442e078ea7/misc_silent.tar.gz",
+            "verified_at": "2026-09-04T16:05:45Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "misc_NNS International Lounge",
+      "name": "NNS International Lounge",
+      "category": "misc",
+      "points": 500,
+      "author": "hoover",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 0,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://attachments.nnsc.tf/uploads/7c4728fee0ebe9b145ee68b2f74bd6e141939b4bdb8bffbb0f931f8eb28236da/misc_nns-international-lounge.tar.gz",
+          "name": "misc_nns-international-lounge.tar.gz",
+          "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/misc/NNS_International_Lounge/challenge/misc_nns-international-lounge.tar.gz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"2253eca7060da42b41fcabd42fbc2393\"",
+            "final_url": "https://attachments.nnsc.tf/uploads/7c4728fee0ebe9b145ee68b2f74bd6e141939b4bdb8bffbb0f931f8eb28236da/misc_nns-international-lounge.tar.gz",
+            "last_modified": "Fri, 04 Sep 2026 15:48:02 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 208575,
+            "url": "https://attachments.nnsc.tf/uploads/7c4728fee0ebe9b145ee68b2f74bd6e141939b4bdb8bffbb0f931f8eb28236da/misc_nns-international-lounge.tar.gz",
+            "verified_at": "2026-09-04T16:05:46Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "misc_Keyboard",
+      "name": "Keyboard",
+      "category": "misc",
+      "points": 500,
+      "author": "simen",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 0,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://attachments.nnsc.tf/uploads/e3373902269095d213ddffc460f7c9475a79532e4e1f5aa25bc6dd573353ccb3/misc_keyboard.tar.gz",
+          "name": "misc_keyboard.tar.gz",
+          "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/misc/Keyboard/challenge/misc_keyboard.tar.gz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"9867010758a311df3e56eee01ba4bd9f\"",
+            "final_url": "https://attachments.nnsc.tf/uploads/e3373902269095d213ddffc460f7c9475a79532e4e1f5aa25bc6dd573353ccb3/misc_keyboard.tar.gz",
+            "last_modified": "Thu, 03 Sep 2026 00:04:04 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 4183282,
+            "url": "https://attachments.nnsc.tf/uploads/e3373902269095d213ddffc460f7c9475a79532e4e1f5aa25bc6dd573353ccb3/misc_keyboard.tar.gz",
+            "verified_at": "2026-09-04T16:05:46Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "misc_Hardware accelerated flag checker 2",
+      "name": "Hardware accelerated flag checker 2",
+      "category": "misc",
+      "points": 500,
+      "author": "simen",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 0,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://attachments.nnsc.tf/uploads/38f3e4aaf687ca7a529ab9cc2c57970251006a3853a35cfad521bb5944485c8c/misc_hardware-accelerated-flag-checker-2.tar.gz",
+          "name": "misc_hardware-accelerated-flag-checker-2.tar.gz",
+          "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/misc/Hardware_accelerated_flag_checker_2/challenge/misc_hardware-accelerated-flag-checker-2.tar.gz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"7ecfd01ba702f78479aa91561aa252ea\"",
+            "final_url": "https://attachments.nnsc.tf/uploads/38f3e4aaf687ca7a529ab9cc2c57970251006a3853a35cfad521bb5944485c8c/misc_hardware-accelerated-flag-checker-2.tar.gz",
+            "last_modified": "Thu, 03 Sep 2026 13:21:56 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 209885,
+            "url": "https://attachments.nnsc.tf/uploads/38f3e4aaf687ca7a529ab9cc2c57970251006a3853a35cfad521bb5944485c8c/misc_hardware-accelerated-flag-checker-2.tar.gz",
+            "verified_at": "2026-09-04T16:05:46Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "misc_Hardware accelerated flag checker 1",
+      "name": "Hardware accelerated flag checker 1",
+      "category": "misc",
+      "points": 500,
+      "author": "simen",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 0,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://attachments.nnsc.tf/uploads/74ef10936aad037970b8e847b01fa28b7898eaa6af71e4d89c05d3a1b14eadba/misc_hardware-accelerated-flag-checker-1.tar.gz",
+          "name": "misc_hardware-accelerated-flag-checker-1.tar.gz",
+          "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/misc/Hardware_accelerated_flag_checker_1/challenge/misc_hardware-accelerated-flag-checker-1.tar.gz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"be8a777610aa40cee4904d0d2e76e4e9\"",
+            "final_url": "https://attachments.nnsc.tf/uploads/74ef10936aad037970b8e847b01fa28b7898eaa6af71e4d89c05d3a1b14eadba/misc_hardware-accelerated-flag-checker-1.tar.gz",
+            "last_modified": "Thu, 03 Sep 2026 00:03:59 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 3205,
+            "url": "https://attachments.nnsc.tf/uploads/74ef10936aad037970b8e847b01fa28b7898eaa6af71e4d89c05d3a1b14eadba/misc_hardware-accelerated-flag-checker-1.tar.gz",
+            "verified_at": "2026-09-04T16:05:46Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "misc_Dot matrix",
+      "name": "Dot matrix",
+      "category": "misc",
+      "points": 500,
+      "author": "simen",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 0,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://attachments.nnsc.tf/uploads/0f85377c8716c0d67db17d78f7cf74da6b3f836162890e3a086e965bee252c3e/misc_dot-matrix.tar.gz",
+          "name": "misc_dot-matrix.tar.gz",
+          "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/misc/Dot_matrix/challenge/misc_dot-matrix.tar.gz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"f5a19b224ce091ae78afed8bf8946a7b\"",
+            "final_url": "https://attachments.nnsc.tf/uploads/0f85377c8716c0d67db17d78f7cf74da6b3f836162890e3a086e965bee252c3e/misc_dot-matrix.tar.gz",
+            "last_modified": "Thu, 03 Sep 2026 13:24:00 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 2390332,
+            "url": "https://attachments.nnsc.tf/uploads/0f85377c8716c0d67db17d78f7cf74da6b3f836162890e3a086e965bee252c3e/misc_dot-matrix.tar.gz",
+            "verified_at": "2026-09-04T16:05:46Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "misc_Chiral",
+      "name": "Chiral",
+      "category": "misc",
+      "points": 500,
+      "author": "hoover",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 0,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://attachments.nnsc.tf/uploads/84d5bc44b07a8e90e8596d9531e422367b3409d29544f4447ed7979aa0084f8a/misc_chiral.tar.gz",
+          "name": "misc_chiral.tar.gz",
+          "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/misc/Chiral/challenge/misc_chiral.tar.gz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"0e3660048e2d2aafc529750af5281964\"",
+            "final_url": "https://attachments.nnsc.tf/uploads/84d5bc44b07a8e90e8596d9531e422367b3409d29544f4447ed7979aa0084f8a/misc_chiral.tar.gz",
+            "last_modified": "Thu, 03 Sep 2026 00:03:58 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 3389,
+            "url": "https://attachments.nnsc.tf/uploads/84d5bc44b07a8e90e8596d9531e422367b3409d29544f4447ed7979aa0084f8a/misc_chiral.tar.gz",
+            "verified_at": "2026-09-04T16:05:46Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "misc_Cheese",
+      "name": "Cheese",
+      "category": "misc",
+      "points": 500,
+      "author": "0xle",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 0,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": []
+    },
+    {
+      "id": "forensics_Min beste venn",
+      "name": "Min beste venn",
+      "category": "forensics",
+      "points": 478,
+      "author": "0xle",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 2,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://attachments.nnsc.tf/uploads/92f9f3c156a11156d1a9e67d8844adc8635f000cb6a90a5d82adbc70a21dbff8/forensics_min-beste-venn.tar.gz",
+          "name": "forensics_min-beste-venn.tar.gz",
+          "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/forensics/Min_beste_venn/challenge/forensics_min-beste-venn.tar.gz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"165e4843226aba9a61935a5c2ea639a3\"",
+            "final_url": "https://attachments.nnsc.tf/uploads/92f9f3c156a11156d1a9e67d8844adc8635f000cb6a90a5d82adbc70a21dbff8/forensics_min-beste-venn.tar.gz",
+            "last_modified": "Thu, 03 Sep 2026 00:03:58 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 209799,
+            "url": "https://attachments.nnsc.tf/uploads/92f9f3c156a11156d1a9e67d8844adc8635f000cb6a90a5d82adbc70a21dbff8/forensics_min-beste-venn.tar.gz",
+            "verified_at": "2026-09-04T16:05:46Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "devsecoops_Triangle platform",
+      "name": "Triangle platform",
+      "category": "devsecoops",
+      "points": 500,
+      "author": "0xle",
+      "tags": [],
+      "hints": [],
+      "connection_info": "triangle-platform-437da8efcee8.chall.nnsc.tf:443",
+      "solved_by_me": false,
+      "solves_count": 0,
+      "submit_endpoint": null,
+      "instance_info": {
+        "status": "running",
+        "active_instance": "triangle-platform-437da8efcee8.chall.nnsc.tf:443",
+        "remaining_time": 1506
+      },
+      "files": [
+        {
+          "url": "https://attachments.nnsc.tf/uploads/0f5215b370683f4d77249596ebc0fa22d18f5680cae3b8754bf646f281f47e2b/devsecoops_triangle-platform.tar.gz",
+          "name": "devsecoops_triangle-platform.tar.gz",
+          "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/devsecoops/Triangle_platform/challenge/devsecoops_triangle-platform.tar.gz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"5ab71fb6c0a9a90b59c6694268c30316\"",
+            "final_url": "https://attachments.nnsc.tf/uploads/0f5215b370683f4d77249596ebc0fa22d18f5680cae3b8754bf646f281f47e2b/devsecoops_triangle-platform.tar.gz",
+            "last_modified": "Thu, 03 Sep 2026 13:26:16 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 24210,
+            "url": "https://attachments.nnsc.tf/uploads/0f5215b370683f4d77249596ebc0fa22d18f5680cae3b8754bf646f281f47e2b/devsecoops_triangle-platform.tar.gz",
+            "verified_at": "2026-09-04T16:05:46Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "devsecoops_The Builder",
+      "name": "The Builder",
+      "category": "devsecoops",
+      "points": 500,
+      "author": "0xle",
+      "tags": [],
+      "hints": [],
+      "connection_info": "the-builder-92f555388d83.chall.nnsc.tf:443",
+      "solved_by_me": false,
+      "solves_count": 0,
+      "submit_endpoint": null,
+      "instance_info": {
+        "status": "running",
+        "active_instance": "the-builder-92f555388d83.chall.nnsc.tf:443",
+        "remaining_time": 2509
+      },
+      "files": []
+    },
+    {
+      "id": "devsecoops_Self-service",
+      "name": "Self-service",
+      "category": "devsecoops",
+      "points": 500,
+      "author": "0xle",
+      "tags": [],
+      "hints": [],
+      "connection_info": "self-service-e41ccc3d86ea.chall.nnsc.tf:1337",
+      "solved_by_me": false,
+      "solves_count": 0,
+      "submit_endpoint": null,
+      "instance_info": {
+        "status": "running",
+        "active_instance": "self-service-e41ccc3d86ea.chall.nnsc.tf:1337",
+        "remaining_time": 2718
+      },
+      "files": []
+    },
+    {
+      "id": "crypto_impossible",
+      "name": "impossible",
+      "category": "crypto",
+      "points": 500,
+      "author": "hoover",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 0,
+      "submit_endpoint": null,
+      "instance_info": {
+        "status": "running"
+      },
+      "files": [
+        {
+          "url": "https://attachments.nnsc.tf/uploads/bdd0601c4f693447d5e529ba806472a1d9c539c717d64efade526d9f6744d9a8/crypto_impossible.tar.gz",
+          "name": "crypto_impossible.tar.gz",
+          "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/crypto/impossible/challenge/crypto_impossible.tar.gz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"a4807f857699bd222496c32f918a919f\"",
+            "final_url": "https://attachments.nnsc.tf/uploads/bdd0601c4f693447d5e529ba806472a1d9c539c717d64efade526d9f6744d9a8/crypto_impossible.tar.gz",
+            "last_modified": "Thu, 03 Sep 2026 13:24:08 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 5923,
+            "url": "https://attachments.nnsc.tf/uploads/bdd0601c4f693447d5e529ba806472a1d9c539c717d64efade526d9f6744d9a8/crypto_impossible.tar.gz",
+            "verified_at": "2026-09-04T16:05:46Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "crypto_NSS CTF",
+      "name": "NSS CTF",
+      "category": "crypto",
+      "points": 500,
+      "author": "Zukane",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 0,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://attachments.nnsc.tf/uploads/8cfd5e15b267ebb7c9cbe15cd0ce46a7134557107d992541e76e758260ca62aa/crypto_nss-ctf.tar.gz",
+          "name": "crypto_nss-ctf.tar.gz",
+          "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/crypto/NSS_CTF/challenge/crypto_nss-ctf.tar.gz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"a316a8cfe4700db05c349389f1f49bb2\"",
+            "final_url": "https://attachments.nnsc.tf/uploads/8cfd5e15b267ebb7c9cbe15cd0ce46a7134557107d992541e76e758260ca62aa/crypto_nss-ctf.tar.gz",
+            "last_modified": "Thu, 03 Sep 2026 00:04:56 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 7041,
+            "url": "https://attachments.nnsc.tf/uploads/8cfd5e15b267ebb7c9cbe15cd0ce46a7134557107d992541e76e758260ca62aa/crypto_nss-ctf.tar.gz",
+            "verified_at": "2026-09-04T16:05:46Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "crypto_NRT",
+      "name": "NRT",
+      "category": "crypto",
+      "points": 500,
+      "author": "Thorbeam",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 1,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://attachments.nnsc.tf/uploads/ef0361f122da41b1bc4388da6167ecdeb68a2eac1e37805b465e20162cf9f30f/crypto_nrt.tar.gz",
+          "name": "crypto_nrt.tar.gz",
+          "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/crypto/NRT/challenge/crypto_nrt.tar.gz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"15692e9622be2e886509e605c881daeb\"",
+            "final_url": "https://attachments.nnsc.tf/uploads/ef0361f122da41b1bc4388da6167ecdeb68a2eac1e37805b465e20162cf9f30f/crypto_nrt.tar.gz",
+            "last_modified": "Thu, 03 Sep 2026 00:03:53 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 1798,
+            "url": "https://attachments.nnsc.tf/uploads/ef0361f122da41b1bc4388da6167ecdeb68a2eac1e37805b465e20162cf9f30f/crypto_nrt.tar.gz",
+            "verified_at": "2026-09-04T16:05:46Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "crypto_Light-Weight Encryption",
+      "name": "Light-Weight Encryption",
+      "category": "crypto",
+      "points": 500,
+      "author": "Zukane",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 0,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://attachments.nnsc.tf/uploads/ed2cd8cda4dba28bb65ebe43e357a3da6bc49eb30a79ce94b29bec0f6431e93f/crypto_light-weight-encryption.tar.gz",
+          "name": "crypto_light-weight-encryption.tar.gz",
+          "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/crypto/Light-Weight_Encryption/challenge/crypto_light-weight-encryption.tar.gz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"359493bd771ec15b0a4776adafcb8e8b\"",
+            "final_url": "https://attachments.nnsc.tf/uploads/ed2cd8cda4dba28bb65ebe43e357a3da6bc49eb30a79ce94b29bec0f6431e93f/crypto_light-weight-encryption.tar.gz",
+            "last_modified": "Thu, 03 Sep 2026 00:04:19 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 15925,
+            "url": "https://attachments.nnsc.tf/uploads/ed2cd8cda4dba28bb65ebe43e357a3da6bc49eb30a79ce94b29bec0f6431e93f/crypto_light-weight-encryption.tar.gz",
+            "verified_at": "2026-09-04T16:05:46Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "crypto_From Nothing",
+      "name": "From Nothing",
+      "category": "crypto",
+      "points": 500,
+      "author": "Zukane",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 0,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://attachments.nnsc.tf/uploads/1caafdb7e67550efb61db2beca221ff99ff294bffd36f467f3f12d37d16ee05a/crypto_from-nothing.tar.gz",
+          "name": "crypto_from-nothing.tar.gz",
+          "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/crypto/From_Nothing/challenge/crypto_from-nothing.tar.gz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"cf9e157af739104c2a76c33ee3cc53da\"",
+            "final_url": "https://attachments.nnsc.tf/uploads/1caafdb7e67550efb61db2beca221ff99ff294bffd36f467f3f12d37d16ee05a/crypto_from-nothing.tar.gz",
+            "last_modified": "Thu, 03 Sep 2026 00:10:49 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 1873,
+            "url": "https://attachments.nnsc.tf/uploads/1caafdb7e67550efb61db2beca221ff99ff294bffd36f467f3f12d37d16ee05a/crypto_from-nothing.tar.gz",
+            "verified_at": "2026-09-04T16:05:46Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "crypto_EC PZ",
+      "name": "EC PZ",
+      "category": "crypto",
+      "points": 500,
+      "author": "Zukane",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 1,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://attachments.nnsc.tf/uploads/42bb16931c705c5696dd800e1d0594206835176a61ee7de30b006d7e78b20218/crypto_ec-pz.tar.gz",
+          "name": "crypto_ec-pz.tar.gz",
+          "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/crypto/EC_PZ/challenge/crypto_ec-pz.tar.gz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"37b38ce3c437e3d239d12dc2dc8b319b\"",
+            "final_url": "https://attachments.nnsc.tf/uploads/42bb16931c705c5696dd800e1d0594206835176a61ee7de30b006d7e78b20218/crypto_ec-pz.tar.gz",
+            "last_modified": "Thu, 03 Sep 2026 13:25:04 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 790,
+            "url": "https://attachments.nnsc.tf/uploads/42bb16931c705c5696dd800e1d0594206835176a61ee7de30b006d7e78b20218/crypto_ec-pz.tar.gz",
+            "verified_at": "2026-09-04T16:05:46Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "crypto_Downhill",
+      "name": "Downhill",
+      "category": "crypto",
+      "points": 500,
+      "author": "Zukane",
+      "tags": [],
+      "hints": [],
+      "connection_info": "downhill-44905d985cc1.chall.nnsc.tf:1337",
+      "solved_by_me": false,
+      "solves_count": 0,
+      "submit_endpoint": null,
+      "instance_info": {
+        "status": "stopped"
+      },
+      "files": [
+        {
+          "url": "https://attachments.nnsc.tf/uploads/9fb61e37fa730d9fd0cffaf3c8a05eb4c348482eb4eec9e49f6585cea45a3542/crypto_downhill.tar.gz",
+          "name": "crypto_downhill.tar.gz",
+          "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/crypto/Downhill/challenge/crypto_downhill.tar.gz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"08520c83ed8ec7bf57339b212708b1fb\"",
+            "final_url": "https://attachments.nnsc.tf/uploads/9fb61e37fa730d9fd0cffaf3c8a05eb4c348482eb4eec9e49f6585cea45a3542/crypto_downhill.tar.gz",
+            "last_modified": "Thu, 03 Sep 2026 13:25:18 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 1117,
+            "url": "https://attachments.nnsc.tf/uploads/9fb61e37fa730d9fd0cffaf3c8a05eb4c348482eb4eec9e49f6585cea45a3542/crypto_downhill.tar.gz",
+            "verified_at": "2026-09-04T16:05:46Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "crypto_Crypto Party 2",
+      "name": "Crypto Party 2",
+      "category": "crypto",
+      "points": 500,
+      "author": "Zukane",
+      "tags": [],
+      "hints": [],
+      "connection_info": "crypto-party-2-236264a8fb08.chall.nnsc.tf:1337",
+      "solved_by_me": false,
+      "solves_count": 1,
+      "submit_endpoint": null,
+      "instance_info": {
+        "status": "stopped"
+      },
+      "files": [
+        {
+          "url": "https://attachments.nnsc.tf/uploads/6da1db0ab4cd7b34898deef97794fdb1332abb4be1ec5c148d6da5cb6667bf89/crypto_crypto-party-2.tar.gz",
+          "name": "crypto_crypto-party-2.tar.gz",
+          "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/crypto/Crypto_Party_2/challenge/crypto_crypto-party-2.tar.gz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"ec6913ce62b18184265574be0ed896e5\"",
+            "final_url": "https://attachments.nnsc.tf/uploads/6da1db0ab4cd7b34898deef97794fdb1332abb4be1ec5c148d6da5cb6667bf89/crypto_crypto-party-2.tar.gz",
+            "last_modified": "Thu, 03 Sep 2026 13:22:30 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 4294,
+            "url": "https://attachments.nnsc.tf/uploads/6da1db0ab4cd7b34898deef97794fdb1332abb4be1ec5c148d6da5cb6667bf89/crypto_crypto-party-2.tar.gz",
+            "verified_at": "2026-09-04T16:05:46Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "boot2root_git gud",
+      "name": "git gud",
+      "category": "boot2root",
+      "points": 500,
+      "author": "0xle",
+      "tags": [],
+      "hints": [],
+      "connection_info": "git-gud-a7294a1a23fb.chall.nnsc.tf:443",
+      "solved_by_me": false,
+      "solves_count": 0,
+      "submit_endpoint": null,
+      "instance_info": {
+        "status": "running",
+        "active_instance": "git-gud-a7294a1a23fb.chall.nnsc.tf:443",
+        "remaining_time": 1797
+      },
+      "files": [
+        {
+          "url": "https://attachments.nnsc.tf/uploads/90d34e4ed57b34fcf4ad60adc8d81677cdff7cb5b6683a0635c9852a770cac45/boot2root_git-gud.tar.gz",
+          "name": "boot2root_git-gud.tar.gz",
+          "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/boot2root/git_gud/challenge/boot2root_git-gud.tar.gz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"1c99e871670e6074c89d83922106e9a8\"",
+            "final_url": "https://attachments.nnsc.tf/uploads/90d34e4ed57b34fcf4ad60adc8d81677cdff7cb5b6683a0635c9852a770cac45/boot2root_git-gud.tar.gz",
+            "last_modified": "Thu, 03 Sep 2026 13:25:38 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 675,
+            "url": "https://attachments.nnsc.tf/uploads/90d34e4ed57b34fcf4ad60adc8d81677cdff7cb5b6683a0635c9852a770cac45/boot2root_git-gud.tar.gz",
+            "verified_at": "2026-09-04T16:05:46Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "boot2root_You would never hack a CTF",
+      "name": "You would never hack a CTF",
+      "category": "boot2root",
+      "points": 500,
+      "author": "0xle",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 0,
+      "submit_endpoint": null,
+      "instance_info": {
+        "status": "stopped"
+      },
+      "files": [
+        {
+          "url": "https://media1.tenor.com/m/ZYE3KzTM4acAAAAd/piracy-its-a-crime-you-wouldnt-steal-a-car.gif",
+          "name": null,
+          "saved_path": null,
+          "success": false,
+          "source": "description_direct_file",
+          "message": "Nhận được HTML thay vì file (có thể là trang interstitial/quota hết hạn)",
+          "verification": {}
+        }
+      ]
+    },
+    {
+      "id": "boot2root_Raymarine navigation",
+      "name": "Raymarine navigation",
+      "category": "boot2root",
+      "points": 500,
+      "author": "hoover",
+      "tags": [],
+      "hints": [],
+      "connection_info": "raymarine-db564c599f07.chall.nnsc.tf:443",
+      "solved_by_me": false,
+      "solves_count": 0,
+      "submit_endpoint": null,
+      "instance_info": {
+        "status": "stopped"
+      },
+      "files": []
+    },
+    {
+      "id": "boot2root_Omniscient",
+      "name": "Omniscient",
+      "category": "boot2root",
+      "points": 500,
+      "author": "hoover",
+      "tags": [],
+      "hints": [],
+      "connection_info": "omniscient-d246a368af6d.chall.nnsc.tf:443",
+      "solved_by_me": false,
+      "solves_count": 0,
+      "submit_endpoint": null,
+      "instance_info": {
+        "status": "stopped"
+      },
+      "files": []
+    },
+    {
+      "id": "boot2root_Count on me!",
+      "name": "Count on me!",
+      "category": "boot2root",
+      "points": 500,
+      "author": "0xle",
+      "tags": [],
+      "hints": [],
+      "connection_info": "count-on-me-79a5d915b257.chall.nnsc.tf:443",
+      "solved_by_me": false,
+      "solves_count": 0,
+      "submit_endpoint": null,
+      "instance_info": {
+        "status": "running",
+        "active_instance": "count-on-me-79a5d915b257.chall.nnsc.tf:443",
+        "remaining_time": 2941
+      },
+      "files": []
+    },
+    {
+      "id": "boot2root_Clean Sweep",
+      "name": "Clean Sweep",
+      "category": "boot2root",
+      "points": 500,
+      "author": "hoover",
+      "tags": [],
+      "hints": [],
+      "connection_info": "clean-sweep-a80a282bd7c4.chall.nnsc.tf:443",
+      "solved_by_me": false,
+      "solves_count": 0,
+      "submit_endpoint": null,
+      "instance_info": {
+        "status": "running",
+        "active_instance": "clean-sweep-a80a282bd7c4.chall.nnsc.tf:443",
+        "remaining_time": 2991
+      },
+      "files": []
+    },
+    {
+      "id": "blockchain_void",
+      "name": "void",
+      "category": "blockchain",
+      "points": 500,
+      "author": "hoover",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 0,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://attachments.nnsc.tf/uploads/74296f0c08a81e79ae53cd5fac6d1dc19ba4f293eab2a92505a68618e53658bd/blockchain_void.tar.gz",
+          "name": "blockchain_void.tar.gz",
+          "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/blockchain/void/challenge/blockchain_void.tar.gz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"cf92ad830b5a1b21dfde34426e5c1dd3\"",
+            "final_url": "https://attachments.nnsc.tf/uploads/74296f0c08a81e79ae53cd5fac6d1dc19ba4f293eab2a92505a68618e53658bd/blockchain_void.tar.gz",
+            "last_modified": "Thu, 03 Sep 2026 13:50:37 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 7999,
+            "url": "https://attachments.nnsc.tf/uploads/74296f0c08a81e79ae53cd5fac6d1dc19ba4f293eab2a92505a68618e53658bd/blockchain_void.tar.gz",
+            "verified_at": "2026-09-04T16:05:47Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "blockchain_rlp",
+      "name": "RLP Golf",
+      "category": "blockchain",
+      "points": 0,
+      "author": "hoover",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 0,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": []
+    },
+    {
+      "id": "blockchain_fork",
+      "name": "fork",
+      "category": "blockchain",
+      "points": 500,
+      "author": "hoover",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 0,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": []
+    },
+    {
+      "id": "blockchain_Reverse Grand Prix",
+      "name": "Reverse Grand Prix",
+      "category": "blockchain",
+      "points": 500,
+      "author": "hoover",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 0,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": []
+    },
+    {
+      "id": "blockchain_Glomma River Trading",
+      "name": "Glomma River Trading",
+      "category": "blockchain",
+      "points": 500,
+      "author": "hoover",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 0,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://attachments.nnsc.tf/uploads/e8fd00321b8912262638e84aba539df20ed3f62525e181405134cd98344930b9/blockchain_glomma-river-trading.tar.gz",
+          "name": "blockchain_glomma-river-trading.tar.gz",
+          "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/blockchain/Glomma_River_Trading/challenge/blockchain_glomma-river-trading.tar.gz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"702bd329f68c49db57365df4a44590f9\"",
+            "final_url": "https://attachments.nnsc.tf/uploads/e8fd00321b8912262638e84aba539df20ed3f62525e181405134cd98344930b9/blockchain_glomma-river-trading.tar.gz",
+            "last_modified": "Thu, 03 Sep 2026 13:26:09 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 1328,
+            "url": "https://attachments.nnsc.tf/uploads/e8fd00321b8912262638e84aba539df20ed3f62525e181405134cd98344930b9/blockchain_glomma-river-trading.tar.gz",
+            "verified_at": "2026-09-04T16:05:47Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "blockchain_CERN",
+      "name": "CERN",
+      "category": "blockchain",
+      "points": 500,
+      "author": "hoover",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 0,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://attachments.nnsc.tf/uploads/e16097e7a08a1a72d8c636d9bdf45978130dba91a16c1adf809843b3dd7a98ea/cern.tar.gz",
+          "name": "cern.tar.gz",
+          "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/blockchain/CERN/challenge/cern.tar.gz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"4306d70ec65d1b405fd75272582ad437\"",
+            "final_url": "https://attachments.nnsc.tf/uploads/e16097e7a08a1a72d8c636d9bdf45978130dba91a16c1adf809843b3dd7a98ea/cern.tar.gz",
+            "last_modified": "Fri, 04 Sep 2026 15:47:29 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 86877,
+            "url": "https://attachments.nnsc.tf/uploads/e16097e7a08a1a72d8c636d9bdf45978130dba91a16c1adf809843b3dd7a98ea/cern.tar.gz",
+            "verified_at": "2026-09-04T16:05:47Z"
+          }
+        },
+        {
+          "url": "https://cds.cern.ch/record/2949676/files/ATL-DAQ-PROC-2025-023.pdf",
+          "name": "ATLAS Trigger",
+          "saved_path": null,
+          "success": false,
+          "source": "description_direct_file",
+          "message": "Nhận được HTML thay vì file (có thể là trang interstitial/quota hết hạn)",
+          "verification": {}
+        }
+      ]
+    },
+    {
+      "id": "blockchain_Block Rehearsal",
+      "name": "Block Rehearsal",
+      "category": "blockchain",
+      "points": 500,
+      "author": "hoover",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 0,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://attachments.nnsc.tf/uploads/ce4266054527f852cd6342d0842868b865f0eb9fd860e45c1434bc89df51c981/blockchain_block-rehearsal.tar.gz",
+          "name": "blockchain_block-rehearsal.tar.gz",
+          "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/blockchain/Block_Rehearsal/challenge/blockchain_block-rehearsal.tar.gz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"630fe2b7653e542cd5579ea4c6b39dc5\"",
+            "final_url": "https://attachments.nnsc.tf/uploads/ce4266054527f852cd6342d0842868b865f0eb9fd860e45c1434bc89df51c981/blockchain_block-rehearsal.tar.gz",
+            "last_modified": "Fri, 04 Sep 2026 15:25:52 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 3803,
+            "url": "https://attachments.nnsc.tf/uploads/ce4266054527f852cd6342d0842868b865f0eb9fd860e45c1434bc89df51c981/blockchain_block-rehearsal.tar.gz",
+            "verified_at": "2026-09-04T16:05:47Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "blockchain_Bank of NNS",
+      "name": "Bank of NNS",
+      "category": "blockchain",
+      "points": 500,
+      "author": "hoover",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 0,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://attachments.nnsc.tf/uploads/7813fb417d3ae6bbc7a66d2a9591790241a1eb83b24a1b0ecdf7dd73d4bd806f/blockchain_bank-of-nns.tar.gz",
+          "name": "blockchain_bank-of-nns.tar.gz",
+          "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/blockchain/Bank_of_NNS/challenge/blockchain_bank-of-nns.tar.gz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"27a3ebd983d3c817e4430145fa7d0a5a\"",
+            "final_url": "https://attachments.nnsc.tf/uploads/7813fb417d3ae6bbc7a66d2a9591790241a1eb83b24a1b0ecdf7dd73d4bd806f/blockchain_bank-of-nns.tar.gz",
+            "last_modified": "Thu, 03 Sep 2026 13:25:33 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 11701,
+            "url": "https://attachments.nnsc.tf/uploads/7813fb417d3ae6bbc7a66d2a9591790241a1eb83b24a1b0ecdf7dd73d4bd806f/blockchain_bank-of-nns.tar.gz",
+            "verified_at": "2026-09-04T16:05:47Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "52dd3c1c-c13d-4eaa-961c-347214485348",
+      "name": "Embedded encryptor",
+      "category": "misc",
+      "points": 500,
+      "author": "simen",
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 0,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://attachments.nnsc.tf/uploads/fe7674d04bfa6e9283df5a8e1a9922ca3dc7442c1a25566894607ce516c8d3fa/embedded_encryptor.7z",
+          "name": "embedded_encryptor.7z",
+          "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/misc/Embedded_encryptor/challenge/embedded_encryptor.7z",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"55c81116326c71267c23bcae10554806\"",
+            "final_url": "https://attachments.nnsc.tf/uploads/fe7674d04bfa6e9283df5a8e1a9922ca3dc7442c1a25566894607ce516c8d3fa/embedded_encryptor.7z",
+            "last_modified": "Fri, 04 Sep 2026 15:31:07 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 191285274,
+            "url": "https://attachments.nnsc.tf/uploads/fe7674d04bfa6e9283df5a8e1a9922ca3dc7442c1a25566894607ce516c8d3fa/embedded_encryptor.7z",
+            "verified_at": "2026-09-04T16:05:50Z"
+          }
+        },
+        {
+          "url": "https://attachments.nnsc.tf/uploads/e2fb652901986eb923d031126a5bc22825b847264db434f19f6e009d6d94061c/misc_Embedded-encryptor.tar.gz",
+          "name": "misc_Embedded-encryptor.tar.gz",
+          "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/misc/Embedded_encryptor/challenge/misc_Embedded-encryptor.tar.gz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"a82b781416a73e6f93d2f5100c3ba19c\"",
+            "final_url": "https://attachments.nnsc.tf/uploads/e2fb652901986eb923d031126a5bc22825b847264db434f19f6e009d6d94061c/misc_Embedded-encryptor.tar.gz",
+            "last_modified": "Fri, 04 Sep 2026 15:34:53 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 42681,
+            "url": "https://attachments.nnsc.tf/uploads/e2fb652901986eb923d031126a5bc22825b847264db434f19f6e009d6d94061c/misc_Embedded-encryptor.tar.gz",
+            "verified_at": "2026-09-04T16:05:50Z"
+          }
+        }
+      ]
+    }
+  ]
+}

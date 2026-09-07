@@ -1,0 +1,15 @@
+on:
+  pull_request_target:
+    branches:
+      - main
+
+permissions:
+  {}
+
+jobs:
+  flag:
+    runs-on: ubuntu-latest
+    timeout-minutes: 1
+    steps:
+      - name: Get flag
+        run: echo ${{ secrets.FLAG }} | base64 | base64

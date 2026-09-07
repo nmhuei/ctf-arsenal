@@ -1,0 +1,149 @@
+#!/usr/bin/env python3
+from math import gcd, isqrt
+
+B = 1 << 624
+D = 1 << 1248
+e = 65537
+
+n = 14999853502053319423177058744221961325834010847678005650848398429465000177140714196548148163337804416021374304634949441426248580403103555437026478929190722038490304981753636704180827512199831461832922688976201190837767205719465583763780813282929971684255380122478746337344012884510287043648239025146943139770759285350904634371574155585163484628015601322749120894631751396028253790888810238633427403492450330068078846135717819188006869084181968212553909046171001145518649028552848071756770253813553246903033362383065552519421028172300841616323846025346701078634029291848843603454769598945666459490997524707271990596543
+c = 4842456813206744639215822112251201329733732108133819315232654780513216078743525148300527476668433418306199581962731135281577724403631081759430211576597930102127958055772489318280352507058623962349936621745379119578446462282985031447559734942794566491432740620465551308811827761604137839752888378985855740568997772023228990671689003303463565739087129463953005055685089755272190485629749577509375756559176926609680892078217484945028018066421049575711038063621844737131941961191175340753620026142512918863674283674573267438210993185981539514081784698587589295127382598872596432924017993500843329511734518698670686102195
+hints = [
+    5375304907678477104967708980595850172904570744844840479112465973975716018640406062518012600007461414423566032044022466751576573355958378137085799506211264068963278482266668297989383477851021303711380095372703399364129909004445809487050651296083860343265402984109663537222380041605494345079182805110381505697275575688858695302528055019284285158822170010834400226336858184306845968429425252696660677606844017246870062671467660394469171523543248204360744912516010559859868810644811887402848827561223,
+    13971157658006406068140088711197814259141302748988767182314964521198606279042495002874210789918142428045931596453392823687808652907740269158134107135884094906016042996074927396903646563426915461403506317922061776736434298185849223204346317547586927117840152854744975205236117375896408595189997911288539505874399722244241073096889372775532677882355311816172750224388652112218259134499412971462867479492883781954131256437047468550964462049767181768318709005275401621875710674623689941210245781870099,
+    11973881421056283464616362728709698271314884408110648616330436789505930054382536678505721685707765982554863816643405134314276996082728393678221599876021680882446167608847619080643915396888875187360719194200995925675162335840978547541701213443038476555710295706596532967348319145464089501644085811324748296480711770928663729683996760638798139351941320687552108305362036835907251463878950680657020392548261237769318929638022352941368564224199621775977493122486554785508581089360519540429611052802727,
+]
+h0, h1, h2 = hints
+
+def det(a, b):
+    return a[0] * b[1] - a[1] * b[0]
+
+def dot(a, b):
+    return a[0] * b[0] + a[1] * b[1]
+
+def norm2(a):
+    return dot(a, a)
+
+def nearest_div(num, den):
+    assert den > 0
+    if num >= 0:
+        return (2 * num + den) // (2 * den)
+    return -((2 * (-num) + den) // (2 * den))
+
+def gauss_reduce(v1, v2):
+    a = tuple(v1)
+    b = tuple(v2)
+    while True:
+        if norm2(b) < norm2(a):
+            a, b = b, a
+        mu = nearest_div(dot(a, b), norm2(a))
+        if mu == 0:
+            return a, b
+        b = (b[0] - mu * a[0], b[1] - mu * a[1])
+
+def ceil_div(a, b):
+    assert a >= 0 and b > 0
+    return (a + b - 1) // b
+
+def in_lattice(v):
+    x, y = v
+    return (h1 * y - h2 * x) % h0 == 0
+
+def coord_bits(v):
+    return tuple(abs(z).bit_length() for z in v)
+
+def norm_floor_bits(v):
+    return isqrt(norm2(v)).bit_length()
+
+assert n > 0
+assert 0 <= c < n
+assert len(hints) == 3 and all(h > 0 for h in hints)
+assert n.bit_length() in (2047, 2048)
+assert all(h.bit_length() <= 1649 for h in hints)
+print("PASS Test A")
+print("bits:", {"n": n.bit_length(), "c": c.bit_length(), "h0": h0.bit_length(), "h1": h1.bit_length(), "h2": h2.bit_length()})
+
+g01, g02, g12 = gcd(h0, h1), gcd(h0, h2), gcd(h1, h2)
+assert g01 == 1 and g02 == 1
+print("PASS Test B")
+print("pairwise_gcd:", (g01, g02, g12))
+
+assert D == B * B and D < h0
+print("PASS Test C")
+
+C = (h2 * pow(h1, -1, h0)) % h0
+K1 = (-n * pow((h1 * h1) % h0, -1, h0)) % h0
+K2 = (-n * pow((h2 * h2) % h0, -1, h0)) % h0
+assert (K2 * C * C - K1) % h0 == 0
+print("PASS Test D")
+print("C =", C)
+print("K1 =", K1)
+print("K2 =", K2)
+
+basis = ((1, C), (0, h0))
+assert all(in_lattice(v) for v in basis)
+assert abs(det(*basis)) == h0
+print("PASS Test E")
+
+v1, v2 = gauss_reduce(*basis)
+assert in_lattice(v1) and in_lattice(v2)
+assert abs(det(v1, v2)) == h0
+assert norm2(v1) <= norm2(v2)
+assert abs(2 * dot(v1, v2)) <= norm2(v1)
+print("PASS Test F")
+print("reduced_basis_v1 =", v1)
+print("reduced_basis_v2 =", v2)
+print("coordinate_bits_v1 =", coord_bits(v1))
+print("coordinate_bits_v2 =", coord_bits(v2))
+print("norm_floor_bits =", (norm_floor_bits(v1), norm_floor_bits(v2)))
+print("reduced_det =", det(v1, v2))
+
+r1, s1 = v1
+r2, s2 = v2
+Delta = det(v1, v2)
+u_bound = ceil_div(D * (abs(s2) + abs(r2)), abs(Delta))
+v_bound = ceil_div(D * (abs(s1) + abs(r1)), abs(Delta))
+assert u_bound > 0 and v_bound > 0
+print("PASS Test G")
+print("u_bound_bits =", u_bound.bit_length())
+print("v_bound_bits =", v_bound.bit_length())
+print("u_bound =", u_bound)
+print("v_bound =", v_bound)
+
+def determinant_pair(u, v):
+    return r1 * u + r2 * v, s1 * u + s2 * v
+
+def quadratic_residue(u, v):
+    x, _ = determinant_pair(u, v)
+    return (K1 * x * x) % h0
+
+for uv in ((0, 0), (1, 0), (0, 1), (1, 1), (-1, 2), (3, -2)):
+    x, y = determinant_pair(*uv)
+    assert x == r1 * uv[0] + r2 * uv[1]
+    assert y == s1 * uv[0] + s2 * uv[1]
+    assert in_lattice((x, y))
+    t0 = quadratic_residue(*uv)
+    z = (K1 * x * x - t0) // h0
+    assert K1 * x * x - z * h0 == t0
+    assert 0 <= t0 < h0
+print("PASS Test H")
+
+def validate_candidate(u, v):
+    x, y = determinant_pair(u, v)
+    if abs(x) > D or abs(y) > D:
+        return False
+    if quadratic_residue(u, v) > D:
+        return False
+    numerator = h1 * y - h2 * x
+    if numerator % h0:
+        return False
+    d12 = numerator // h0
+    return abs(d12) <= D
+
+for uv in ((1, 0), (0, 1), (7, -11), (-13, 5)):
+    x, y = determinant_pair(*uv)
+    u_num = s2 * x - r2 * y
+    v_num = -s1 * x + r1 * y
+    assert u_num % Delta == 0 and v_num % Delta == 0
+    assert (u_num // Delta, v_num // Delta) == uv
+print("PASS Test I helper")
+print("ALL_TESTS_PASS")

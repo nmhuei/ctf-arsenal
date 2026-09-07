@@ -1,0 +1,54 @@
+# Writeup: Scratch Space
+
+| Property | Value |
+| :--- | :--- |
+| **Category** | `rev` |
+| **Points** | `383` |
+| **Author** | `hoover` |
+| **Solves** | `6` |
+
+---
+
+## 📝 Challenge Overview
+
+New to reverse engineering? This beginner challenge is an introduction to
+inspecting the memory of a running Linux program with a debugger.
+
+The provided `x86-64` ELF asks you to guess a passphrase. The passphrase
+is the flag, and this time it is never stored on disk and never passed to
+a library function. The program maps a scratch page, builds the real
+passphrase there, compares it against your guess with a loop of its own,
+then zeroes the page and unmaps it before printing anything. `strings`,
+`ltrace` and `strace` all come back empty.
+
+We recommend using `pwndbg`, a GDB extension commonly used for pwn
+challenges. Its `telescope` command can help you inspect the pointer and
+the memory it points to before the program wipes it.
+
+
+
+---
+
+## 🔍 Reconnaissance & Vulnerability Analysis
+
+- Target Connection: `-`
+- Category: `rev`
+- Key observations & vulnerability hypothesis:
+  *(Document reverse engineering, source code review, or protocol analysis here)*
+
+---
+
+## 💻 Exploitation Strategy & PoC
+
+Exploit script is located at [`../solver/solve.py`](../solver/solve.py).
+
+```bash
+python3 ../solver/solve.py
+```
+
+---
+
+## 🚩 Flag
+
+- Status: `- [ ] Solved`
+- Flag: `FLAG{...}`

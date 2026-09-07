@@ -1,0 +1,54 @@
+<%- include('../partials/header') %>
+
+<section class="auth-layout">
+  <div class="auth-intro">
+    <p class="eyebrow">NEW CONNECTION</p>
+    <h1>Pick a handle.<br /><span>Find your crew.</span></h1>
+    <p>Create your private corner of the Tagger network.</p>
+    <ul class="feature-list">
+      <li><span>01</span> Find visible users</li>
+      <li><span>02</span> Connect by request</li>
+      <li><span>03</span> Send text and images</li>
+    </ul>
+  </div>
+  <div class="window auth-window">
+    <div class="window-bar">
+      <span>REGISTER.EXE</span>
+      <div class="window-controls"><i></i><i></i><i></i></div>
+    </div>
+    <form class="stack-form" action="/register" method="post">
+      <div>
+        <span class="status-chip status-pink">✦ NEW USER</span>
+        <h2>Register</h2>
+        <p class="muted">Your handle is how friends find you.</p>
+      </div>
+      <label>
+        Username
+        <input
+          type="text"
+          name="username"
+          value="<%= form.username || '' %>"
+          minlength="3"
+          maxlength="32"
+          pattern="[A-Za-z0-9_]+"
+          autocomplete="username"
+          required
+          autofocus
+        />
+        <small>3–32 letters, numbers, or underscores</small>
+      </label>
+      <label>
+        Password
+        <input type="password" name="password" minlength="8" autocomplete="new-password" required />
+      </label>
+      <label>
+        Confirm password
+        <input type="password" name="confirmPassword" minlength="8" autocomplete="new-password" required />
+      </label>
+      <button class="button button-primary button-wide" type="submit">CREATE ACCOUNT →</button>
+      <p class="form-switch">Already connected? <a href="/login">Log in</a></p>
+    </form>
+  </div>
+</section>
+
+<%- include('../partials/footer') %>

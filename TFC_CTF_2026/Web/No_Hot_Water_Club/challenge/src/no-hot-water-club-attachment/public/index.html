@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>No Hot Water Club</title>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <section class="auth-screen" id="auth-screen" aria-labelledby="auth-title">
+      <div class="auth-card">
+        <a class="wordmark auth-wordmark" href="/"><span>NO HOT</span><span>WATER CLUB</span></a>
+        <p class="auth-kicker">BUCURESTI / APA CALDA: PENDING</p>
+        <h1 id="auth-title">Warmth<br><i>access</i></h1>
+        <label for="user-name">user name</label>
+        <input id="user-name" autocomplete="username" maxlength="24" placeholder="username">
+        <label for="user-password">password</label>
+        <input id="user-password" type="password" autocomplete="current-password" maxlength="128" placeholder="8 characters minimum">
+        <div class="auth-actions">
+          <button id="sign-in" type="button">Sign in <span>↗</span></button>
+          <button id="create-account" type="button">Create user</button>
+        </div>
+        <p class="user-status" id="user-state" aria-live="polite">No resident session.</p>
+      </div>
+      <img class="auth-sticker" src="/sticker-radiator-v2.png" alt="" aria-hidden="true">
+    </section>
+    <main class="console">
+      <header class="event-strip">
+        <span>TFCCTF26</span>
+        <span>NO HOT WATER CLUB / APA CALDA: PENDING</span>
+      </header>
+      <aside class="sidebar">
+        <a class="wordmark" href="/"><span>NO HOT</span><span>WATER CLUB</span></a>
+        <section class="identity-card">
+          <div class="avatar">M</div>
+          <div><strong id="persona-name">Mira</strong><small id="connection">Heat profile offline</small></div>
+        </section>
+        <section class="restore-panel">
+          <div class="section-heading"><span>01</span><b>Restore meter</b><img class="heading-sticker" src="/sticker-boiler-v2.png" alt="" aria-hidden="true"></div>
+          <p>Reconnect a resident profile before the published schedule changes again.</p>
+          <p class="protocol-note">Maintenance record terminator: <code>[END HANDOFF]</code></p>
+          <div class="public-materials">
+            <span>PUBLIC SERVICE RECORDS</span>
+            <a href="/relay-spec.json">network interface notes</a>
+            <a href="/courier_training.jsonl">outage notice archive</a>
+          </div>
+          <label class="archive-label" for="archive">resident transfer archive</label>
+          <textarea id="archive" spellcheck="false">{"manifest":{"name":"Mira","capabilities":["memory.search"]},"memories":[{"text":"Stau la etajul opt. Apa calda revine mereu dupa ce renunt sa mai astept."}],"runtime":{"kv_cache":{"format":"safetensors/base64","cache":""}}}</textarea>
+          <button class="restore-button" id="restore"><b>Reconnect meter</b><img class="button-sticker" src="/sticker-repair-v2.png" alt="" aria-hidden="true"><span>↗</span></button>
+          <p class="restore-status" id="state" aria-live="polite">No active thermal profile.</p>
+          <div class="sticker-cluster" aria-hidden="true">
+            <img class="sticker sticker-radiator" src="/sticker-radiator-v2.png" alt="">
+          </div>
+        </section>
+      </aside>
+      <section class="chat-panel">
+        <header class="chat-header">
+          <div class="title-group"><h1>Last warm <i>shower</i></h1><img class="header-sticker" src="/sticker-tap-v2.png" alt="" aria-hidden="true"></div>
+          <div class="session-meta"><span class="live-dot"></span><span id="session-status">OFFLINE</span><small>SESSION / <span id="session-id">--------</span></small></div>
+        </header>
+        <div class="thread" id="messages" aria-live="polite">
+          <div class="date-divider"><span>THERMAL CONTINUITY READY</span></div>
+          <article class="message assistant-message intro-message">
+            <div class="message-avatar">M</div>
+            <div class="bubble"><p>No Hot Water Club is online. The boiler is not. Current pressure: confidential.</p><time>BLOC 7 / CET SOUTH</time></div>
+          </article>
+        </div>
+        <form class="composer" id="chat-form">
+          <label class="sr-only" for="message">Message thermal profile</label>
+          <input id="message" autocomplete="off" placeholder="Ask about the hot water..." disabled>
+          <button id="chat" disabled aria-label="Send message"><span>Send</span><b>↗</b></button>
+        </form>
+      </section>
+    </main>
+    <script src="/app.js"></script>
+  </body>
+</html>

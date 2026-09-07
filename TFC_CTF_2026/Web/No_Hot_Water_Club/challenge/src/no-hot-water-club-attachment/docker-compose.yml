@@ -1,0 +1,31 @@
+name: no-hot-water-club-attachment
+
+services:
+  app:
+    build: .
+    image: no-hot-water-club-attachment:amd64
+    platform: linux/amd64
+    environment:
+      PORT: "3000"
+      BRAIN_URL: http://127.0.0.1:8000
+      FLAG: TFCCTF{fake_flag}
+      SOURCE_MODEL: Qwen/Qwen2.5-0.5B-Instruct
+      SOURCE_REVISION: 7ae557604adf67be50417f59c2c2f167def9a775
+      TARGET_MODEL: Qwen/Qwen2.5-0.5B
+      TARGET_REVISION: 060db6499f32faf8b98477b0a26969ef7d8b998
+      CHAT_MODEL: Qwen/Qwen2.5-0.5B-Instruct
+      CHAT_REVISION: 7ae557604adf67be50417f59c2c2f167def9a775
+      MESSAGE_BATCH_WINDOW_MS: "120"
+      HF_HOME: /models
+    ports:
+      - "${NO_HOT_WATER_CLUB_PORT:-3002}:3000"
+    volumes:
+      - hf-models:/models
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health'); urllib.request.urlopen('http://127.0.0.1:3000/health')"]
+      interval: 5s
+      timeout: 3s
+      retries: 30
+
+volumes:
+  hf-models:

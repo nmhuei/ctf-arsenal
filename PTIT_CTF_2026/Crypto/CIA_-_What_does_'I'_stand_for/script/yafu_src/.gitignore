@@ -1,0 +1,31 @@
+# .gitignore
+# Build artifacts
+*.o
+*.a
+/yafu
+*.no
+*.qo
+.deps/
+
+# Logs / Checkpoints / data files
+*.log
+siqs.dat
+cadoWorkdir
+/*.db
+nfs.*
+*.optrpt
+*.obj
+*.tlog
+*.last_spq*
+
+# visual studio build
+build.vc22/.vs/*
+*.idb
+*.pdb
+*.user
+*.recipe
+
+# makefile configuration
+config.mk
+
+

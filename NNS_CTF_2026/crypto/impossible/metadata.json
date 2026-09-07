@@ -1,0 +1,78 @@
+{
+  "id": "crypto_impossible",
+  "name": "impossible",
+  "category": "crypto",
+  "points": 86,
+  "author": "hoover",
+  "tags": [],
+  "hints": [],
+  "connection_info": null,
+  "solved_by_me": false,
+  "solves_count": 92,
+  "submit_endpoint": null,
+  "instance_info": {
+    "is_container": true,
+    "status": "running",
+    "last_updated": "2026-09-05 01:07:09",
+    "active_instance": "impossible-092be3c57a10.chall.nnsc.tf:1337",
+    "last_entry": "impossible-092be3c57a10.chall.nnsc.tf:1337",
+    "endpoints": [
+      {
+        "kind": "tcp-ssl",
+        "host": "impossible-092be3c57a10.chall.nnsc.tf",
+        "port": 1337
+      }
+    ]
+  },
+  "downloaded_files": [
+    {
+      "url": "https://attachments.nnsc.tf/uploads/bdd0601c4f693447d5e529ba806472a1d9c539c717d64efade526d9f6744d9a8/crypto_impossible.tar.gz",
+      "name": "crypto_impossible.tar.gz",
+      "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/crypto/impossible/challenge/crypto_impossible.tar.gz",
+      "success": true,
+      "source": "platform_attachment",
+      "message": "Đã tải trực tiếp thành công",
+      "verification": {
+        "etag": "\"a4807f857699bd222496c32f918a919f\"",
+        "final_url": "https://attachments.nnsc.tf/uploads/bdd0601c4f693447d5e529ba806472a1d9c539c717d64efade526d9f6744d9a8/crypto_impossible.tar.gz",
+        "last_modified": "Thu, 03 Sep 2026 13:24:08 GMT",
+        "schema_version": 1,
+        "sha256": null,
+        "size": 5923,
+        "url": "https://attachments.nnsc.tf/uploads/bdd0601c4f693447d5e529ba806472a1d9c539c717d64efade526d9f6744d9a8/crypto_impossible.tar.gz",
+        "verified_at": "2026-09-04T16:05:46Z"
+      }
+    }
+  ],
+  "raw": {
+    "id": "crypto_impossible",
+    "name": "impossible",
+    "description": "In the ashes of a ceremony held long ago, you found a secret that was\nnot hidden nearly well enough\n\nUse it to convince the Groth16 verifier that you are authorized to approve\na huge mint!\n\n",
+    "category": "crypto",
+    "author": "hoover",
+    "files": [
+      {
+        "name": "crypto_impossible.tar.gz",
+        "url": "https://attachments.nnsc.tf/uploads/bdd0601c4f693447d5e529ba806472a1d9c539c717d64efade526d9f6744d9a8/crypto_impossible.tar.gz"
+      }
+    ],
+    "points": 500,
+    "solves": 0,
+    "sortWeight": 0
+  },
+  "status": {
+    "schema_version": 2,
+    "solve": "unsolved",
+    "flag": {
+      "value": null,
+      "state": "none"
+    },
+    "writeup": "none",
+    "writeup_auto": true,
+    "notes": "",
+    "labels": [],
+    "container": "running",
+    "synced_at": "2026-09-05T07:11:32Z",
+    "updated_at": "2026-09-05T07:11:32Z"
+  }
+}

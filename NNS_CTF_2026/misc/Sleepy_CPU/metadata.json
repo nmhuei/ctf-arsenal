@@ -1,0 +1,65 @@
+{
+  "id": "misc_Sleepy CPU",
+  "name": "Sleepy CPU",
+  "category": "misc",
+  "points": 66,
+  "author": "simen",
+  "tags": [],
+  "hints": [],
+  "connection_info": null,
+  "solved_by_me": false,
+  "solves_count": 190,
+  "submit_endpoint": null,
+  "instance_info": {},
+  "downloaded_files": [
+    {
+      "url": "https://attachments.nnsc.tf/uploads/796c2a7db12c452c30220d83f4c4711d2890abb5995b9d2db8b407230e6dc861/misc_sleepy-cpu.tar.gz",
+      "name": "misc_sleepy-cpu.tar.gz",
+      "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/misc/Sleepy_CPU/challenge/misc_sleepy-cpu.tar.gz",
+      "success": true,
+      "source": "platform_attachment",
+      "message": "Đã tải trực tiếp thành công",
+      "verification": {
+        "etag": "\"5dbb7de2cefbc306c83826349fa152ed\"",
+        "final_url": "https://attachments.nnsc.tf/uploads/796c2a7db12c452c30220d83f4c4711d2890abb5995b9d2db8b407230e6dc861/misc_sleepy-cpu.tar.gz",
+        "last_modified": "Thu, 03 Sep 2026 13:22:58 GMT",
+        "schema_version": 1,
+        "sha256": null,
+        "size": 5888768,
+        "url": "https://attachments.nnsc.tf/uploads/796c2a7db12c452c30220d83f4c4711d2890abb5995b9d2db8b407230e6dc861/misc_sleepy-cpu.tar.gz",
+        "verified_at": "2026-09-04T16:05:45Z"
+      }
+    }
+  ],
+  "raw": {
+    "id": "misc_Sleepy CPU",
+    "name": "Sleepy CPU",
+    "description": "Power analysis is a technique where the current consumption of a device is measured to gather information about what it is doing.\n\nThe attached `.jls` file contains measurements of the current consumption of a real microcontroller board executing the supplied code.\nIt can be opened and viewed in the Joulescope application.\n\nAnalyse the provided firmware source code and the current measurements to extract the flag.\n\n",
+    "category": "misc",
+    "author": "simen",
+    "files": [
+      {
+        "name": "misc_sleepy-cpu.tar.gz",
+        "url": "https://attachments.nnsc.tf/uploads/796c2a7db12c452c30220d83f4c4711d2890abb5995b9d2db8b407230e6dc861/misc_sleepy-cpu.tar.gz"
+      }
+    ],
+    "points": 500,
+    "solves": 1,
+    "sortWeight": 100
+  },
+  "status": {
+    "schema_version": 2,
+    "solve": "unsolved",
+    "flag": {
+      "value": null,
+      "state": "none"
+    },
+    "writeup": "none",
+    "writeup_auto": true,
+    "notes": "",
+    "labels": [],
+    "container": "none",
+    "synced_at": "2026-09-05T07:11:32Z",
+    "updated_at": "2026-09-05T07:11:32Z"
+  }
+}

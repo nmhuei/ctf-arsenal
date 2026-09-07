@@ -1,0 +1,71 @@
+linux_gmp:
+  stage: build
+  script:
+    - autoreconf -i
+    - ./configure
+    - make
+    - make check || cat test-suite.log
+  artifacts:
+    paths:
+      - test-suite.log
+  tags:
+    - linux
+
+linux_gwnum:
+  stage: build
+  script:
+    - ./gwnum_linux.sh
+  artifacts:
+    paths:
+      - test-suite.log
+  tags:
+    - linux
+
+check_on_osx:
+  stage: build
+  script:
+    - eval `/opt/homebrew/bin/brew shellenv`
+    - autoreconf -i
+    - ./configure --with-gmp=/opt/homebrew
+    - make
+    - make check || cat test-suite.log
+  artifacts:
+    paths:
+      - test-suite.log
+  tags:
+    - osx
+
+# Format-detection cell: compile gw_ecmstag1.c and Fgw.c on macOS
+# clang under -Werror=format. macOS clang has uint64_t = unsigned
+# long long (vs. unsigned long on Linux), so this is the only cell
+# in the matrix where %lu/uint64_t mismatches in the GWNUM-gated
+# files actually warn. Validated on
+# https://github.com/edgarcosta/ecm/actions: a deliberate revert of
+# the fix at gw_ecmstag1.c:1350 fails the equivalent cell with the
+# expected -Wformat error; the green run on the same branch passes
+# both Intel and Apple Silicon.
+#
+# Compile-only by design: the prebuilt gwnum.a in prime95's
+# v30.19 b21 zip ships only macOS Intel objects, and Apple's
+# ld-prime crashes parsing them. We don't link, so neither matters
+# -- a zero-byte gwnum.a is enough to satisfy
+# AC_CHECK_FILE([$with_gwnum/gwnum.a], ...) at configure.ac:369.
+check_on_osx_gwnum_format:
+  stage: build
+  script:
+    - eval `/opt/homebrew/bin/brew shellenv`
+    - autoreconf -i
+    - mkdir -p /tmp/P95
+    - curl -sL -o /tmp/P95/P95_source.zip https://www.mersenne.org/download/software/v30/30.19/p95v3019b21.source.zip
+    - unzip -q -o -d /tmp/P95 /tmp/P95/P95_source.zip
+    - touch /tmp/P95/gwnum/gwnum.a
+    - ./configure --with-gmp=/opt/homebrew --disable-shared --with-gwnum=/tmp/P95/gwnum
+    - >
+      CONFIGURED_CFLAGS=$(grep '^CFLAGS = ' Makefile | head -1 | sed 's/^CFLAGS = //') &&
+      make CFLAGS="$CONFIGURED_CFLAGS -Werror=format -Werror=format-extra-args" libecm_la-gw_ecmstag1.lo libecm_la-Fgw.lo
+    - ls -la libecm_la-gw_ecmstag1.lo libecm_la-Fgw.lo
+  artifacts:
+    paths:
+      - test-suite.log
+  tags:
+    - osx

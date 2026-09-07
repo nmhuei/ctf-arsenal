@@ -1,0 +1,22 @@
+name: "triangle-dev"
+
+services:
+  challenge:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    hostname: "triangle"
+    privileged: true
+    cgroup: "host"
+    tmpfs:
+      - "/run"
+      - "/var/run"
+    ulimits:
+      nproc: 65535
+      nofile:
+        soft: 65535
+        hard: 65535
+    ports:
+      - "127.0.0.1:7681:7681"
+    environment:
+      FLAG: "NNS{test_flag}"

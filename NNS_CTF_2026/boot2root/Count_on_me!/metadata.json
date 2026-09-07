@@ -1,0 +1,48 @@
+{
+  "id": "boot2root_Count on me!",
+  "name": "Count on me!",
+  "category": "boot2root",
+  "points": 244,
+  "author": "0xle",
+  "tags": [],
+  "hints": [],
+  "connection_info": null,
+  "solved_by_me": false,
+  "solves_count": 16,
+  "submit_endpoint": null,
+  "instance_info": {
+    "is_container": true,
+    "status": "running",
+    "last_updated": "2026-09-05 08:01:37",
+    "active_instance": "count-on-me-79a5d915b257.chall.nnsc.tf:443",
+    "last_entry": "count-on-me-79a5d915b257.chall.nnsc.tf:443",
+    "remaining_time": 2941
+  },
+  "downloaded_files": [],
+  "raw": {
+    "id": "boot2root_Count on me!",
+    "name": "Count on me!",
+    "description": "You can always count on me! Or..?\n\n> [!NOTE]\n> The flag is located at `/root/flag.txt`\n\n> [!NOTE]\n> This is a 0day challenge and we are hoping you keep th{is|ese} 0day{|s} to yourself until the vulnerabilit{y|ies} {is|are} patched.\n\n",
+    "category": "boot2root",
+    "author": "0xle",
+    "files": [],
+    "points": 500,
+    "solves": 0,
+    "sortWeight": 0
+  },
+  "status": {
+    "schema_version": 2,
+    "solve": "unsolved",
+    "flag": {
+      "value": null,
+      "state": "none"
+    },
+    "writeup": "none",
+    "writeup_auto": true,
+    "notes": "",
+    "labels": [],
+    "container": "running",
+    "synced_at": "2026-09-05T07:11:32Z",
+    "updated_at": "2026-09-05T07:11:33Z"
+  }
+}

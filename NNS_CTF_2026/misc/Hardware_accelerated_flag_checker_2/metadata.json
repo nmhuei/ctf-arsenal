@@ -1,0 +1,65 @@
+{
+  "id": "misc_Hardware accelerated flag checker 2",
+  "name": "Hardware accelerated flag checker 2",
+  "category": "misc",
+  "points": 81,
+  "author": "simen",
+  "tags": [],
+  "hints": [],
+  "connection_info": null,
+  "solved_by_me": false,
+  "solves_count": 105,
+  "submit_endpoint": null,
+  "instance_info": {},
+  "downloaded_files": [
+    {
+      "url": "https://attachments.nnsc.tf/uploads/38f3e4aaf687ca7a529ab9cc2c57970251006a3853a35cfad521bb5944485c8c/misc_hardware-accelerated-flag-checker-2.tar.gz",
+      "name": "misc_hardware-accelerated-flag-checker-2.tar.gz",
+      "saved_path": "/home/light/Workspace/CTF/NNS_CTF_2026/misc/Hardware_accelerated_flag_checker_2/challenge/misc_hardware-accelerated-flag-checker-2.tar.gz",
+      "success": true,
+      "source": "platform_attachment",
+      "message": "Đã tải trực tiếp thành công",
+      "verification": {
+        "etag": "\"7ecfd01ba702f78479aa91561aa252ea\"",
+        "final_url": "https://attachments.nnsc.tf/uploads/38f3e4aaf687ca7a529ab9cc2c57970251006a3853a35cfad521bb5944485c8c/misc_hardware-accelerated-flag-checker-2.tar.gz",
+        "last_modified": "Thu, 03 Sep 2026 13:21:56 GMT",
+        "schema_version": 1,
+        "sha256": null,
+        "size": 209885,
+        "url": "https://attachments.nnsc.tf/uploads/38f3e4aaf687ca7a529ab9cc2c57970251006a3853a35cfad521bb5944485c8c/misc_hardware-accelerated-flag-checker-2.tar.gz",
+        "verified_at": "2026-09-04T16:05:46Z"
+      }
+    }
+  ],
+  "raw": {
+    "id": "misc_Hardware accelerated flag checker 2",
+    "name": "Hardware accelerated flag checker 2",
+    "description": "The previous hardware accelerated flag checker was not quite ready for production. I made a new one using the SKY130A PDK, ready for tapeout.\n\n",
+    "category": "misc",
+    "author": "simen",
+    "files": [
+      {
+        "name": "misc_hardware-accelerated-flag-checker-2.tar.gz",
+        "url": "https://attachments.nnsc.tf/uploads/38f3e4aaf687ca7a529ab9cc2c57970251006a3853a35cfad521bb5944485c8c/misc_hardware-accelerated-flag-checker-2.tar.gz"
+      }
+    ],
+    "points": 500,
+    "solves": 0,
+    "sortWeight": 0
+  },
+  "status": {
+    "schema_version": 2,
+    "solve": "unsolved",
+    "flag": {
+      "value": null,
+      "state": "none"
+    },
+    "writeup": "none",
+    "writeup_auto": true,
+    "notes": "",
+    "labels": [],
+    "container": "none",
+    "synced_at": "2026-09-05T07:11:32Z",
+    "updated_at": "2026-09-05T07:11:32Z"
+  }
+}

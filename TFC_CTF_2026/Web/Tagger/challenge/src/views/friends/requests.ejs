@@ -1,0 +1,79 @@
+<%- include('../partials/header') %>
+
+<section class="page-heading">
+  <div>
+    <p class="eyebrow">CONNECTION QUEUE</p>
+    <h1>Friend requests</h1>
+    <p>Choose who gets added to your trusted channel.</p>
+  </div>
+  <span class="counter"><%= incoming.length %> INCOMING</span>
+</section>
+
+<div class="two-column">
+  <section class="window content-window">
+    <div class="window-bar">
+      <span>INCOMING.DAT</span>
+      <div class="window-controls"><i></i><i></i><i></i></div>
+    </div>
+    <div class="panel-body">
+      <% if (incoming.length) { %>
+        <div class="request-list">
+          <% incoming.forEach((request) => { %>
+            <article class="request-row">
+              <div class="pixel-avatar"><%= request.sender.username.charAt(0).toUpperCase() %></div>
+              <div class="request-copy">
+                <h2><%= request.sender.username %></h2>
+                <p>Sent <%= formatTime(request.created_at) %></p>
+              </div>
+              <div class="request-actions">
+                <form action="/friends/accept/<%= request.id %>" method="post">
+                  <button class="button button-primary" type="submit">ACCEPT</button>
+                </form>
+                <form action="/friends/reject/<%= request.id %>" method="post">
+                  <button class="button button-danger" type="submit">REJECT</button>
+                </form>
+              </div>
+            </article>
+          <% }) %>
+        </div>
+      <% } else { %>
+        <div class="empty-state compact">
+          <div class="empty-icon">0</div>
+          <h2>Queue empty</h2>
+          <p>No new requests are waiting.</p>
+        </div>
+      <% } %>
+    </div>
+  </section>
+
+  <section class="window content-window">
+    <div class="window-bar window-bar-muted">
+      <span>OUTGOING.DAT</span>
+      <div class="window-controls"><i></i><i></i><i></i></div>
+    </div>
+    <div class="panel-body">
+      <% if (outgoing.length) { %>
+        <div class="request-list">
+          <% outgoing.forEach((request) => { %>
+            <article class="request-row">
+              <div class="pixel-avatar pink"><%= request.recipient.username.charAt(0).toUpperCase() %></div>
+              <div class="request-copy">
+                <h2><%= request.recipient.username %></h2>
+                <p>Awaiting response</p>
+              </div>
+              <span class="pending-label">PENDING</span>
+            </article>
+          <% }) %>
+        </div>
+      <% } else { %>
+        <div class="empty-state compact">
+          <div class="empty-icon">→</div>
+          <h2>No signals sent</h2>
+          <p><a href="/discover">Discover someone new.</a></p>
+        </div>
+      <% } %>
+    </div>
+  </section>
+</div>
+
+<%- include('../partials/footer') %>

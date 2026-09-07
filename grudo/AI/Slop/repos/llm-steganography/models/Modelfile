@@ -1,0 +1,7 @@
+# Modelfile for local GGUF (see https://docs.ollama.com/import)
+# Recreate: cd models && ollama create llama3-local -f Modelfile
+#
+# Copy the GGUF from your Ollama install as llama3.gguf (or symlink), e.g.:
+#   cp ~/.ollama/models/blobs/sha256-<digest> ./llama3.gguf
+
+FROM ./llama3.gguf

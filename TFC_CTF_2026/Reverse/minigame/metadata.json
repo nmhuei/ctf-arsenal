@@ -1,0 +1,80 @@
+{
+  "id": "225277b6-5f36-4299-a83a-f0218d0b9276",
+  "name": "minigame",
+  "category": "Reverse",
+  "points": 57,
+  "author": "minipif",
+  "tags": [
+    "GRANDPA"
+  ],
+  "hints": [],
+  "connection_info": null,
+  "solved_by_me": true,
+  "solves_count": 174,
+  "submit_endpoint": null,
+  "instance_info": {},
+  "downloaded_files": [
+    {
+      "url": "https://api.ctf.thefewchosen.com/challenge-files/minigame_4aaf356ca3c9ba57",
+      "name": "minigame",
+      "saved_path": "/home/light/Workspace/CTF/TFC_CTF_2026/Reverse/minigame/challenge/minigame",
+      "success": true,
+      "source": "platform_attachment",
+      "message": "Đã tải trực tiếp thành công",
+      "verification": {
+        "etag": null,
+        "final_url": "https://api.ctf.thefewchosen.com/challenge-files/minigame_4aaf356ca3c9ba57",
+        "last_modified": null,
+        "schema_version": 1,
+        "sha256": null,
+        "size": 2074248,
+        "url": "https://api.ctf.thefewchosen.com/challenge-files/minigame_4aaf356ca3c9ba57",
+        "verified_at": "2026-09-05T14:42:24Z"
+      }
+    }
+  ],
+  "raw": {
+    "category_id": "f027d346-1ee7-48b9-8720-15a158caf09d",
+    "difficulty_id": "d693c1dd-450f-42aa-be57-353b6b45552c",
+    "challenge_name": "minigame",
+    "challenge_author": "minipif",
+    "challenge_id": "225277b6-5f36-4299-a83a-f0218d0b9276",
+    "flags": [
+      {
+        "flag_id": "f3cce99f-4629-404d-8f2a-b614d45f9ab6",
+        "flag_points": 125,
+        "flag_question": "",
+        "flag_order": 16,
+        "is_solved": false
+      }
+    ],
+    "description": "a game",
+    "files": [
+      {
+        "file_name": "minigame",
+        "file_url": "https://api.ctf.thefewchosen.com/challenge-files/minigame_4aaf356ca3c9ba57"
+      }
+    ],
+    "is_dynamic": false,
+    "amount_solves": 118,
+    "connection_type": null,
+    "image_name": null,
+    "http_only": null,
+    "allow_host_header_override": null
+  },
+  "status": {
+    "schema_version": 2,
+    "solve": "solved_by_me",
+    "flag": {
+      "value": null,
+      "state": "none"
+    },
+    "writeup": "none",
+    "writeup_auto": true,
+    "notes": "",
+    "labels": [],
+    "container": "none",
+    "synced_at": "2026-09-06T05:34:41Z",
+    "updated_at": "2026-09-06T05:34:41Z"
+  }
+}

@@ -1,0 +1,41 @@
+<%- include('../partials/header') %>
+
+<section class="page-heading">
+  <div>
+    <p class="eyebrow">CONTROL PANEL</p>
+    <h1>Settings</h1>
+    <p>Configure how your profile appears on the Tagger network.</p>
+  </div>
+</section>
+
+<section class="window settings-window">
+  <div class="window-bar">
+    <span>PROFILE_CONFIG.SYS</span>
+    <div class="window-controls"><i></i><i></i><i></i></div>
+  </div>
+  <div class="settings-profile">
+    <div class="pixel-avatar large"><%= currentUser.username.charAt(0).toUpperCase() %></div>
+    <div>
+      <p class="eyebrow">CURRENT HANDLE</p>
+      <h2><%= currentUser.username %></h2>
+      <p>Member since <%= formatTime(currentUser.created_at) %></p>
+    </div>
+  </div>
+  <form class="visibility-form" action="/settings/visibility" method="post">
+    <div>
+      <h2>Directory visibility</h2>
+      <p>Hidden profiles do not appear in Discover. Existing friends can still message you.</p>
+    </div>
+    <label class="toggle-row">
+      <span>
+        <strong>Hide my profile</strong>
+        <small><%= currentUser.hidden ? 'You are hidden from search.' : 'You are visible in search.' %></small>
+      </span>
+      <input type="checkbox" name="hidden" <%= currentUser.hidden ? 'checked' : '' %> />
+      <span class="toggle" aria-hidden="true"></span>
+    </label>
+    <button class="button button-primary" type="submit">SAVE CONFIGURATION</button>
+  </form>
+</section>
+
+<%- include('../partials/footer') %>

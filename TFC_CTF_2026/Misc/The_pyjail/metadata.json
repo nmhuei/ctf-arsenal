@@ -1,0 +1,82 @@
+{
+  "id": "e5813711-226c-4419-9650-d1fbe8779ba6",
+  "name": "The pyjail",
+  "category": "Misc",
+  "points": 226,
+  "author": "Hiumee",
+  "tags": [
+    "GRANDPA",
+    "container",
+    "nodeport"
+  ],
+  "hints": [],
+  "connection_info": null,
+  "solved_by_me": false,
+  "solves_count": 63,
+  "submit_endpoint": null,
+  "instance_info": {},
+  "downloaded_files": [
+    {
+      "url": "https://api.ctf.thefewchosen.com/challenge-files/jail_a50fb446c82467f3.zip",
+      "name": "jail.zip",
+      "saved_path": "/home/light/Workspace/CTF/TFC_CTF_2026/Misc/The_pyjail/challenge/jail.zip",
+      "success": true,
+      "source": "platform_attachment",
+      "message": "Đã tải trực tiếp thành công",
+      "verification": {
+        "etag": null,
+        "final_url": "https://api.ctf.thefewchosen.com/challenge-files/jail_a50fb446c82467f3.zip",
+        "last_modified": null,
+        "schema_version": 1,
+        "sha256": null,
+        "size": 1371,
+        "url": "https://api.ctf.thefewchosen.com/challenge-files/jail_a50fb446c82467f3.zip",
+        "verified_at": "2026-09-05T14:42:23Z"
+      }
+    }
+  ],
+  "raw": {
+    "category_id": "c76d2ce0-8d43-4304-8da0-65d861b7afcf",
+    "difficulty_id": "d693c1dd-450f-42aa-be57-353b6b45552c",
+    "challenge_name": "The pyjail",
+    "challenge_author": "Hiumee",
+    "challenge_id": "e5813711-226c-4419-9650-d1fbe8779ba6",
+    "flags": [
+      {
+        "flag_id": "c820235b-39ae-4dca-9a1f-aa79088453ae",
+        "flag_points": 327,
+        "flag_question": "",
+        "flag_order": 28,
+        "is_solved": false
+      }
+    ],
+    "description": "pyjail",
+    "files": [
+      {
+        "file_name": "jail.zip",
+        "file_url": "https://api.ctf.thefewchosen.com/challenge-files/jail_a50fb446c82467f3.zip"
+      }
+    ],
+    "is_dynamic": true,
+    "amount_solves": 30,
+    "connection_type": "nodeport",
+    "image_name": "python-jail",
+    "http_only": false,
+    "allow_host_header_override": false
+  },
+  "status": {
+    "schema_version": 2,
+    "solve": "unsolved",
+    "flag": {
+      "value": null,
+      "state": "none"
+    },
+    "writeup": "none",
+    "writeup_auto": true,
+    "notes": "",
+    "labels": [],
+    "container": "none",
+    "synced_at": "2026-09-06T05:10:58Z",
+    "updated_at": "2026-09-06T05:10:58Z"
+  }
+}
