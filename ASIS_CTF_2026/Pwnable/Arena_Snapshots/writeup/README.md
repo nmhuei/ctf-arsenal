@@ -3,9 +3,9 @@
 | Property | Value |
 | :--- | :--- |
 | **Category** | `Pwnable` |
-| **Points** | `53` |
+| **Points** | `36` |
 | **Author** | `-` |
-| **Solves** | `102` |
+| **Solves** | `187` |
 
 ---
 

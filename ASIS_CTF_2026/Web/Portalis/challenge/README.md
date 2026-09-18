@@ -3,8 +3,8 @@
 | Property | Value |
 | :--- | :--- |
 | **Category** | `Web` |
-| **Points** | `209` |
-| **Solves** | 18 |
+| **Points** | `55` |
+| **Solves** | 96 |
 | **Tags** | `Web` |
 
 ## 🔌 Connection / Service

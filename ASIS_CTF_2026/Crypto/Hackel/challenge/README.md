@@ -3,8 +3,8 @@
 | Property | Value |
 | :--- | :--- |
 | **Category** | `Crypto` |
-| **Points** | `45` |
-| **Solves** | 127 |
+| **Points** | `24` |
+| **Solves** | 525 |
 | **Tags** | `Crypto`, `Baby 👶` |
 
 ## 🔌 Connection / Service
@@ -45,12 +45,9 @@ nc 65.109.208.91 3771
 
 ## 🚩 Flag & Solution
 
-- [ ] Solved
-
-```
-FLAG{...}
-```
+- [x] Solved
 
 ### Writeup / Notes
 
-*(Write your solution steps and notes here)*
+The challenge features an alleged post-quantum vault based on permutation group presentations. In reality, words representing 0 and 1 bits are formed from raw generator sequences without reduction modulo relations (`0` bits contain only `'a'`, while `1` bits contain `'b'`). Option 5 can be answered instantly in under 5 seconds by checking `'b' in word`, which immediately reveals the flag. Option 2 can also be decrypted offline with the same logic. Full details in [Writeup](file:///home/light/Workspace/CTF/ASIS_CTF_2026/Crypto/Hackel/writeup/README.md).
+

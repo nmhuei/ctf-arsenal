@@ -3,9 +3,9 @@
 | Property | Value |
 | :--- | :--- |
 | **Category** | `Web` |
-| **Points** | `500` |
+| **Points** | `55` |
 | **Author** | `-` |
-| **Solves** | `1` |
+| **Solves** | `98` |
 
 ---
 

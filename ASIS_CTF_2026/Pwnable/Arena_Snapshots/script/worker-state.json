@@ -1,0 +1,29 @@
+{
+  "state": "failed",
+  "phase": "stopped",
+  "error_code": "E_WORKER_CRASH",
+  "message": "Worker process is no longer alive.",
+  "pid": 410452,
+  "exit_code": null,
+  "ended_at": "2026-09-17T08:43:07Z",
+  "filter_detected": false,
+  "agy_timeout_detected": false,
+  "last_output": "    mov rdx, qword [var_8h]\\r\\n│           0x000029d3      64482b1425..   sub rdx, qword fs:[0x28]\\r\\n│       ┌─\\u003c 0x000029dc      7506           jne 0x29e4\\r\\n│       │   0x000029de      4883c410       add rsp, 0x10\\r\\n│       │   0x000029e2      5b             pop rbx\\r\\n│       │   0x000029e3      c3             ret\\r\\n│       │   ; CODE XREF from fcn.00002930 @ 0x29dc(x)\\r\\n└       └─\\u003e 0x000029e4      e8f7f6ffff     call sym.imp.__stack_chk_fail ; void __stack_chk_fail(void)\\r\\n\"}}}",
+  "display_id": 17,
+  "challenge_id": 90,
+  "updated_at": "2026-09-17T08:43:07Z",
+  "started_at": "2026-09-17T07:57:54Z",
+  "heartbeat_at": "2026-09-17T07:59:54Z",
+  "command": [
+    "/home/light/.local/bin/agy",
+    "--mode",
+    "accept-edits",
+    "--dangerously-skip-permissions",
+    "--output-format",
+    "stream-json",
+    "--print-timeout",
+    "3660s",
+    "--print"
+  ],
+  "solver_mtime_ns_before": 1789624566531459946
+}

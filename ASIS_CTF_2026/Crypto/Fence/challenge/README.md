@@ -3,8 +3,8 @@
 | Property | Value |
 | :--- | :--- |
 | **Category** | `Crypto` |
-| **Points** | `142` |
-| **Solves** | 30 |
+| **Points** | `29` |
+| **Solves** | 286 |
 | **Tags** | `Crypto` |
 
 ## 📝 Description
@@ -20,7 +20,7 @@ Five locks, one dense true [fence](/tasks/Fence_7e750d85599a53701faa9ec6b58323c4
 
 ## 🚩 Flag & Solution
 
-- [ ] Solved
+- [x] Solved
 
 ```
 FLAG{...}

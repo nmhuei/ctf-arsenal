@@ -3,8 +3,8 @@
 | Property | Value |
 | :--- | :--- |
 | **Category** | `Reverse` |
-| **Points** | `500` |
-| **Solves** | 1 |
+| **Points** | `45` |
+| **Solves** | 131 |
 | **Tags** | `Reverse` |
 
 ## 📝 Description

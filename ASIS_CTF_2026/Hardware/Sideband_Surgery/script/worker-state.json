@@ -1,0 +1,29 @@
+{
+  "state": "failed",
+  "phase": "verify_local",
+  "error_code": "E_VERIFY_LOCAL",
+  "message": "Worker did not update the generated solver template.",
+  "pid": 69782,
+  "exit_code": 0,
+  "ended_at": "2026-09-17T07:43:31Z",
+  "filter_detected": false,
+  "agy_timeout_detected": false,
+  "last_output": "mpletion.\\nWaiting for segments 2 and 3 to finish.\\nWaiting for completion.\\nSegment 3 is currently decoding. The final output is imminent.\\nWaiting for task completion.\\nWaiting for segment 3 to finish.\\n\",\"error\":\"Individual quota reached. Please upgrade your subscription to increase your limits. Resets in 4h27m55s.\",\"duration_seconds\":1370.71984598,\"num_turns\":1,\"usage\":{\"input_tokens\":1701902,\"output_tokens\":78054,\"thinking_tokens\":40699,\"cache_read_tokens\":16568353,\"total_tokens\":1779956}}}",
+  "display_id": 14,
+  "challenge_id": 100,
+  "updated_at": "2026-09-17T07:43:31Z",
+  "started_at": "2026-09-17T07:17:05Z",
+  "heartbeat_at": "2026-09-17T07:43:26Z",
+  "command": [
+    "/home/light/.local/bin/agy",
+    "--mode",
+    "accept-edits",
+    "--dangerously-skip-permissions",
+    "--output-format",
+    "stream-json",
+    "--print-timeout",
+    "3660s",
+    "--print"
+  ],
+  "solver_mtime_ns_before": 1789624570722826277
+}

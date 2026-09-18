@@ -3,8 +3,8 @@
 | Property | Value |
 | :--- | :--- |
 | **Category** | `Hardware` |
-| **Points** | `500` |
-| **Solves** | 0 |
+| **Points** | `285` |
+| **Solves** | 11 |
 | **Tags** | `Hardware` |
 
 ## 📝 Description

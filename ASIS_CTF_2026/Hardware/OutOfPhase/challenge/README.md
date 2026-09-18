@@ -3,8 +3,8 @@
 | Property | Value |
 | :--- | :--- |
 | **Category** | `Hardware` |
-| **Points** | `500` |
-| **Solves** | 0 |
+| **Points** | `85` |
+| **Solves** | 56 |
 | **Tags** | `Hardware` |
 
 ## 📝 Description
@@ -16,7 +16,7 @@ Everything is perfectly [normal](/tasks/OutOfPhase_1dd759f2c7c8108677e71fee6f0f6
 
 | File / Resource | Source | Status | Local Path / URL |
 | :--- | :--- | :--- | :--- |
-| `OutOfPhase_1dd759f2c7c8108677e71fee6f0f62744c5919d5.txz` | `platform_attachment` | ❌ Failed | [https://asisctf.com/tasks/OutOfPhase_1dd759f2c7c8108677e71fee6f0f62744c5919d5.txz](https://asisctf.com/tasks/OutOfPhase_1dd759f2c7c8108677e71fee6f0f62744c5919d5.txz) |
+| `OutOfPhase_1dd759f2c7c8108677e71fee6f0f62744c5919d5.txz` | `platform_attachment` | ✅ Downloaded | [OutOfPhase_1dd759f2c7c8108677e71fee6f0f62744c5919d5.txz](OutOfPhase_1dd759f2c7c8108677e71fee6f0f62744c5919d5.txz) |
 
 ## 🚩 Flag & Solution
 

@@ -3,9 +3,9 @@
 | Property | Value |
 | :--- | :--- |
 | **Category** | `Hardware` |
-| **Points** | `169` |
+| **Points** | `50` |
 | **Author** | `-` |
-| **Solves** | `24` |
+| **Solves** | `110` |
 
 ---
 

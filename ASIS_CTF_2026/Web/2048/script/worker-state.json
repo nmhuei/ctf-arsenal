@@ -1,0 +1,30 @@
+{
+  "state": "completed",
+  "phase": "completed",
+  "error_code": null,
+  "message": "Worker finished and reported local verification.",
+  "pid": 118383,
+  "exit_code": 0,
+  "ended_at": "2026-09-17T07:26:05Z",
+  "filter_detected": false,
+  "agy_timeout_detected": false,
+  "last_output": "e:///home/light/Workspace/CTF/ASIS_CTF_2026/Web/2048/script/worker-report.json)\\n- **Challenge Spec**: [`challenge/README.md`](file:///home/light/Workspace/CTF/ASIS_CTF_2026/Web/2048/challenge/README.md)\\n- **Full Writeup**: [`writeup/README.md`](file:///home/light/Workspace/CTF/ASIS_CTF_2026/Web/2048/writeup/README.md)\\n\",\"duration_seconds\":203.656171042,\"num_turns\":1,\"usage\":{\"input_tokens\":372711,\"output_tokens\":15044,\"thinking_tokens\":6729,\"cache_read_tokens\":1617051,\"total_tokens\":387755}}}",
+  "display_id": 31,
+  "challenge_id": 105,
+  "updated_at": "2026-09-17T07:26:05Z",
+  "started_at": "2026-09-17T07:22:35Z",
+  "heartbeat_at": "2026-09-17T07:26:01Z",
+  "command": [
+    "/home/light/.local/bin/agy",
+    "--mode",
+    "accept-edits",
+    "--dangerously-skip-permissions",
+    "--output-format",
+    "stream-json",
+    "--print-timeout",
+    "3660s",
+    "--print"
+  ],
+  "solver_mtime_ns_before": 1789624569500148380,
+  "candidate_flag": "ASIS{f4r3w3ll_cl4ss1c_h3ll0_unc3rt41n_3r4!}"
+}

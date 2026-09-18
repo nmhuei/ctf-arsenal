@@ -3,9 +3,9 @@
 | Property | Value |
 | :--- | :--- |
 | **Category** | `Reverse` |
-| **Points** | `450` |
+| **Points** | `40` |
 | **Author** | `-` |
-| **Solves** | `3` |
+| **Solves** | `157` |
 
 ---
 
@@ -38,5 +38,5 @@ python3 ../solver/solve.py
 
 ## 🚩 Flag
 
-- Status: `- [x] Solved`
+- Status: `- [ ] Solved`
 - Flag: `FLAG{...}`

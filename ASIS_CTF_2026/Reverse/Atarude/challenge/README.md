@@ -3,8 +3,8 @@
 | Property | Value |
 | :--- | :--- |
 | **Category** | `Reverse` |
-| **Points** | `450` |
-| **Solves** | 3 |
+| **Points** | `40` |
+| **Solves** | 157 |
 | **Tags** | `Reverse` |
 
 ## 📝 Description
@@ -21,7 +21,7 @@ Reverse the weird little [Atarude](/tasks/Atarude_e39d6ecbf3f6d04dee16fc4a904677
 
 ## 🚩 Flag & Solution
 
-- [ ] Solved
+- [x] Solved
 
 ```
 FLAG{...}

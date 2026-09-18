@@ -3,9 +3,9 @@
 | Property | Value |
 | :--- | :--- |
 | **Category** | `Pwnable` |
-| **Points** | `398` |
+| **Points** | `44` |
 | **Author** | `-` |
-| **Solves** | `5` |
+| **Solves** | `133` |
 
 ---
 
@@ -38,5 +38,5 @@ python3 ../solver/solve.py
 
 ## 🚩 Flag
 
-- Status: `- [x] Solved`
+- Status: `- [ ] Solved`
 - Flag: `FLAG{...}`

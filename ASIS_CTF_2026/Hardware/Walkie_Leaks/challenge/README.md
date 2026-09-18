@@ -3,8 +3,8 @@
 | Property | Value |
 | :--- | :--- |
 | **Category** | `Hardware` |
-| **Points** | `102` |
-| **Solves** | 45 |
+| **Points** | `52` |
+| **Solves** | 105 |
 | **Tags** | `Hardware` |
 
 ## 📝 Description
@@ -22,7 +22,7 @@ Whatever its owner left behind was not meant for curious ears.
 
 ## 🚩 Flag & Solution
 
-- [ ] Solved
+- [x] Solved
 
 ```
 FLAG{...}

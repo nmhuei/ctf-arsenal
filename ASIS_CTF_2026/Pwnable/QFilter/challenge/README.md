@@ -3,8 +3,8 @@
 | Property | Value |
 | :--- | :--- |
 | **Category** | `Pwnable` |
-| **Points** | `398` |
-| **Solves** | 5 |
+| **Points** | `44` |
+| **Solves** | 133 |
 | **Tags** | `Pwnable` |
 
 ## 🔌 Connection / Service
@@ -35,7 +35,7 @@ Need a custom [Filter](/tasks/QFilter_c9b8d86ebc59fcd1d7b9bf68ce3d9cb7b0f0f476.t
 
 ## 🚩 Flag & Solution
 
-- [ ] Solved
+- [x] Solved
 
 ```
 FLAG{...}

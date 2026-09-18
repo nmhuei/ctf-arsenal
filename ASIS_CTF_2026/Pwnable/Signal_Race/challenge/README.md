@@ -3,8 +3,8 @@
 | Property | Value |
 | :--- | :--- |
 | **Category** | `Pwnable` |
-| **Points** | `154` |
-| **Solves** | 27 |
+| **Points** | `43` |
+| **Solves** | 138 |
 | **Tags** | `Pwnable` |
 
 ## 🔌 Connection / Service
@@ -31,11 +31,11 @@ A paranoid VM, a badly timed [signal](/tasks/Signal_Race_5cfce154b37a7b3531fe35b
 
 | File / Resource | Source | Status | Local Path / URL |
 | :--- | :--- | :--- | :--- |
-| `Signal_Race_5cfce154b37a7b3531fe35bd6ee161d6a5f17964.txz` | `platform_attachment` | ❌ Failed | [https://asisctf.com/tasks/Signal_Race_5cfce154b37a7b3531fe35bd6ee161d6a5f17964.txz](https://asisctf.com/tasks/Signal_Race_5cfce154b37a7b3531fe35bd6ee161d6a5f17964.txz) |
+| `Signal_Race_5cfce154b37a7b3531fe35bd6ee161d6a5f17964.txz` | `platform_attachment` | ✅ Downloaded | [Signal_Race_5cfce154b37a7b3531fe35bd6ee161d6a5f17964.txz](Signal_Race_5cfce154b37a7b3531fe35bd6ee161d6a5f17964.txz) |
 
 ## 🚩 Flag & Solution
 
-- [ ] Solved
+- [x] Solved
 
 ```
 FLAG{...}

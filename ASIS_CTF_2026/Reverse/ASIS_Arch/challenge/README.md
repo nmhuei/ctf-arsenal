@@ -3,8 +3,8 @@
 | Property | Value |
 | :--- | :--- |
 | **Category** | `Reverse` |
-| **Points** | `64` |
-| **Solves** | 80 |
+| **Points** | `34` |
+| **Solves** | 203 |
 | **Tags** | `Reverse` |
 
 ## 📝 Description
@@ -32,12 +32,15 @@ Flag format: `ASIS{...}`
 
 ## 🚩 Flag & Solution
 
-- [ ] Solved
+- [x] Solved
 
 ```
-FLAG{...}
+ASIS{M1ddL3_3nd14n_N1bbL35_M4k3_Q3MU_D122y!}
 ```
 
 ### Writeup / Notes
 
-*(Write your solution steps and notes here)*
+The challenge involves reversing a custom 16-bit RISC architecture (`ASISARCH`) implemented in `qemu-asisarch`. The binary decrypts and executes instructions with a position-dependent instruction permutation. The verification consists of 10 rounds of a 3-layer cipher (S-box + key mixing, modular addition diffusion, cellular rotation diffusion) over 22 16-bit words (44 bytes). Each layer was inverted to recover the flag.
+
+See [`../writeup/README.md`](../writeup/README.md) for full writeup and [`../solver/solve.py`](../solver/solve.py) for the exploit script.
+

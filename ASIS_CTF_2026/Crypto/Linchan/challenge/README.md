@@ -3,8 +3,8 @@
 | Property | Value |
 | :--- | :--- |
 | **Category** | `Crypto` |
-| **Points** | `107` |
-| **Solves** | 42 |
+| **Points** | `31` |
+| **Solves** | 244 |
 | **Tags** | `Crypto` |
 
 ## 📝 Description
@@ -16,11 +16,11 @@
 
 | File / Resource | Source | Status | Local Path / URL |
 | :--- | :--- | :--- | :--- |
-| `linchan_06fa8bb304d3897d6f8a4aeab998c4826420da2e.txz` | `platform_attachment` | ❌ Failed | [https://asisctf.com/tasks/linchan_06fa8bb304d3897d6f8a4aeab998c4826420da2e.txz](https://asisctf.com/tasks/linchan_06fa8bb304d3897d6f8a4aeab998c4826420da2e.txz) |
+| `linchan_06fa8bb304d3897d6f8a4aeab998c4826420da2e.txz` | `platform_attachment` | ✅ Downloaded | [linchan_06fa8bb304d3897d6f8a4aeab998c4826420da2e.txz](linchan_06fa8bb304d3897d6f8a4aeab998c4826420da2e.txz) |
 
 ## 🚩 Flag & Solution
 
-- [ ] Solved
+- [x] Solved
 
 ```
 FLAG{...}

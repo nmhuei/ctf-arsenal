@@ -3,17 +3,18 @@
 | Property | Value |
 | :--- | :--- |
 | **Category** | `Crypto` |
-| **Points** | `500` |
+| **Points** | `34` |
 | **Author** | `-` |
-| **Solves** | `0` |
+| **Solves** | `208` |
 
 ---
 
 ## 📝 Challenge Overview
 
 <h1>Less is more</h1>
-<p>We captured traffic from a prototype signing device. The implementation is small, but some records in the capture do not match a normal run. Note the <a href="/tasks/less_is_more_c21e39cc296efe86ee76902cae855a705bd74214.txz"><strong>less is more</strong></a>.</p>
+<p>We captured traffic from a prototype signing device. The implementation is small, but some records in the capture do not match a normal run. Note the <a href="/tasks/new_less_is_more_ea1eac39bcc48aec35b0e24fedd620acacca68a9.txz"><strong>less is more</strong></a>.</p>
 <p>The device sealed its backup vault with a key derived from its secret matrices. Recover the vault key, open the vault, and take the <code>flag</code>.</p>
+<p><strong>Note:</strong> Please redownload the attachment!</p>
 
 
 ---

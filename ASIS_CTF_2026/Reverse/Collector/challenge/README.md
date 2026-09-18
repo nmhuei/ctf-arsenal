@@ -3,8 +3,8 @@
 | Property | Value |
 | :--- | :--- |
 | **Category** | `Reverse` |
-| **Points** | `500` |
-| **Solves** | 0 |
+| **Points** | `423` |
+| **Solves** | 4 |
 | **Tags** | `Reverse` |
 
 ## 📝 Description
@@ -16,7 +16,7 @@ The garbage [collector](/tasks/Collector_74c92ebeb1228fa20a858574384df47c66656f8
 
 | File / Resource | Source | Status | Local Path / URL |
 | :--- | :--- | :--- | :--- |
-| `Collector_74c92ebeb1228fa20a858574384df47c66656f89.txz` | `platform_attachment` | ❌ Failed | [https://asisctf.com/tasks/Collector_74c92ebeb1228fa20a858574384df47c66656f89.txz](https://asisctf.com/tasks/Collector_74c92ebeb1228fa20a858574384df47c66656f89.txz) |
+| `Collector_74c92ebeb1228fa20a858574384df47c66656f89.txz` | `platform_attachment` | ✅ Downloaded | [Collector_74c92ebeb1228fa20a858574384df47c66656f89.txz](Collector_74c92ebeb1228fa20a858574384df47c66656f89.txz) |
 
 ## 🚩 Flag & Solution
 

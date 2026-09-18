@@ -1,9 +1,16 @@
 #!/usr/bin/env python3
 # Solution for: Dark Pixels (Hardware)
+import argparse
 
-def solve():
+def parse_args():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--url', help='Optional remote URL adapter')
+    parser.add_argument('--remote', metavar='HOST:PORT', help='Optional remote TCP adapter')
+    return parser.parse_args()
+
+def solve(options):
     # TODO: Solution script
     print("[*] Solving Dark Pixels...")
 
 if __name__ == '__main__':
-    solve()
+    solve(parse_args())

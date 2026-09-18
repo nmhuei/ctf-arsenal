@@ -3,9 +3,9 @@
 | Property | Value |
 | :--- | :--- |
 | **Category** | `Pwnable` |
-| **Points** | `247` |
+| **Points** | `48` |
 | **Author** | `-` |
-| **Solves** | `14` |
+| **Solves** | `118` |
 
 ---
 
@@ -13,13 +13,15 @@
 
 <p>A <a href="/tasks/dead-letter-queue_b8dacfd42cdadda3d61139356adf6267e8aeed9d.txz"><strong>queue</strong></a> where lost messages go to panic quietly.</p>
 <p><code>nc 91.107.187.160 18111</code></p>
+<p><code>nc 91.107.183.101 18111</code></p>
 
 
 ---
 
 ## 🔍 Reconnaissance & Vulnerability Analysis
 
-- Target Connection: `nc 91.107.187.160 18111`
+- Target Connection: `nc 91.107.187.160 18111
+nc 91.107.183.101 18111`
 - Category: `Pwnable`
 - Key observations & vulnerability hypothesis:
   *(Document reverse engineering, source code review, or protocol analysis here)*

@@ -1,110 +1,186 @@
 #!/usr/bin/env python3
 """
-ASIS CTF 2026 - ASIS Arch (Reverse, 64 pts)
-Solver: Analytical Inversion of the ASISARCH Custom VM 10-Round Cipher
+Solution for: ASIS Arch (Reverse) - ASIS CTF Quals 2026
+Flag: ASIS{M1ddL3_3nd14n_N1bbL35_M4k3_Q3MU_D122y!}
 """
-
 import os
 import subprocess
-import sys
+from pathlib import Path
+
+def rol8(v, n):
+    n &= 7
+    return ((v << n) | (v >> (8 - n))) & 0xff
 
 def rol16(v, n):
-    n %= 16
+    n &= 15
     return ((v << n) | (v >> (16 - n))) & 0xffff
 
-def ror16(v, n):
-    n %= 16
-    return ((v >> n) | (v << (16 - n))) & 0xffff
-
-def L(x):
+def theta(x):
     return x ^ rol16(x, 5) ^ rol16(x, 11)
 
+TABLE_PERM = [
+    [0, 1, 2, 3],
+    [2, 0, 3, 1],
+    [3, 2, 1, 0],
+    [1, 3, 0, 2],
+]
+
+OPCODES = {
+    0x10: 'NOP', 0x15: 'MOV_IMM', 0x21: 'ADD_IMM', 0x27: 'SUB_IMM', 0x32: 'XOR_IMM',
+    0x38: 'AND_IMM', 0x44: 'ROL_IMM', 0x4b: 'MOV_REG', 0x50: 'ADD_REG', 0x56: 'SUB_REG',
+    0x5c: 'XOR_REG', 0x63: 'LOAD8', 0x69: 'STORE8', 0x71: 'LOAD16', 0x77: 'STORE16',
+    0x80: 'JMP', 0x86: 'JZ', 0x8c: 'JNZ', 0x92: 'PUSH', 0x98: 'POP', 0xa1: 'CALL',
+    0xa7: 'RET', 0xb3: 'GETC', 0xb9: 'PUTC', 0xc2: 'SBOX', 0xfe: 'HALT',
+}
+
+def decode_insn(mem, pc):
+    esi = pc
+    ax = (pc ^ 0x9e37) & 0xffff
+    ax = (ax * 0x1039) & 0xffff
+    ax = (ax + 0x79b9) & 0xffff
+    edi = ax
+    perm_idx = (ax >> 14) & 3
+    di = rol16(edi, 5)
+    edi = di
+    
+    p = TABLE_PERM[perm_idx]
+    r9d = mem[pc + p[0]]
+    r8d = mem[pc + p[1]]
+    m2 = mem[pc + p[2]]
+    edx = mem[pc + p[3]]
+    
+    eax = (0x5d * esi) & 0xffffffff
+    eax ^= edi
+    al = (eax ^ m2) & 0xff
+    
+    cx = (edi >> 5) & 0xffff
+    al = rol8(al, cx & 7)
+    al ^= 0x6d
+    opcode = al
+    
+    ecx = edi
+    eax = (esi * 8) & 0xffffffff
+    r8d ^= edi
+    cx = (edi >> 2) & 0xffff
+    ecx = cx
+    eax = (eax - esi) & 0xffffffff
+    r8b = rol8(r8d & 0xff, 4)
+    eax ^= ecx
+    r8d = r8b
+    eax ^= r9d
+    al = eax & 0xff
+    
+    eax = ((al * 5) ^ 3) & 7
+    r14d = (eax * 5) ^ 3
+    rd = r14d & 7
+    
+    ah = (edi >> 8) & 0xff
+    dl = (edx ^ ah) & 0xff
+    dl = rol8(dl, 4)
+    edx = (dl << 8) | r8d
+    dx = rol16(edx & 0xffff, 5)
+    imm16 = dx
+    
+    rs = (((imm16 & 7) * 5) ^ 3) & 7
+    offset = imm16 >> 3
+    
+    return opcode, rd, imm16, rs, offset
+
 def solve():
-    base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    qemu_bin = os.path.join(base_dir, 'challenge', 'ASIS-Arch', 'qemu-asisarch')
-    rom_bin = os.path.join(base_dir, 'challenge', 'ASIS-Arch', 'challenge.rom')
+    base_dir = Path(__file__).resolve().parent.parent
+    rom_path = base_dir / 'challenge' / 'ASIS-Arch' / 'challenge.rom'
+    emu_path = base_dir / 'challenge' / 'ASIS-Arch' / 'qemu-asisarch'
 
-    # Read SBOX table from ELF at 0x2160 (256 bytes)
-    with open(qemu_bin, 'rb') as f:
-        elf = f.read()
+    with open(rom_path, 'rb') as f:
+        rom = f.read()
+    payload = rom[0x20:]
+    mem = bytearray(0x10000)
+    mem[:len(payload)] = payload
 
-    sbox = list(elf[0x2160 : 0x2260])
+    with open(emu_path, 'rb') as f:
+        qemu_data = f.read()
+    sbox = qemu_data[0x2160:0x2260]
     inv_sbox = [0] * 256
     for i, v in enumerate(sbox):
         inv_sbox[v] = i
 
-    def sbox_word(w):
-        hi = sbox[(w >> 8) & 0xff]
-        lo = sbox[w & 0xff]
-        return (hi << 8) | lo
+    # Extract Layer A keys from the 10 Layer A rounds
+    layer_a_rounds = [0, 3, 6, 9, 12, 15, 18, 21, 24, 27]
+    stores = []
+    for pc in range(0x0024, 0x7874, 4):
+        op, rd, imm16, rs, off = decode_insn(mem, pc)
+        if OPCODES.get(op) == 'STORE16':
+            stores.append(pc)
 
-    def inv_sbox_word(w):
-        hi = inv_sbox[(w >> 8) & 0xff]
-        lo = inv_sbox[w & 0xff]
-        return (hi << 8) | lo
+    all_layer_a_keys = []
+    for r in layer_a_rounds:
+        keys = []
+        r_stores = stores[r * 22 : (r + 1) * 22]
+        for st_pc in r_stores:
+            for p in range(st_pc - 16, st_pc, 4):
+                op, rd, imm16, rs, off = decode_insn(mem, p)
+                if OPCODES.get(op) == 'MOV_IMM' and rd == 1:
+                    keys.append(imm16)
+        all_layer_a_keys.append(keys)
 
-    # 10 Round keys extracted from ROM instruction stream
-    # Each round has 22 16-bit keys for the 22 words of the 44-byte flag
-    ROUND_KEYS = [
-        [40503, 36366, 48709, 44700, 57043, 53034, 65377, 61368, 8191, 3126, 15373, 11332, 23707, 19666, 32041, 28000, 40359, 36350, 47669, 43532, 55875, 51866],
-        [31161, 27008, 22987, 18706, 14685, 10404, 6383, 2102, 63601, 60344, 56195, 52170, 47893, 43868, 39591, 35566, 31273, 27248, 23995, 19842, 15821, 11540],
-        [34283, 38354, 42393, 46400, 50447, 54518, 58557, 62564, 1059, 6122, 10193, 14232, 18247, 22286, 26357, 30396, 34427, 38434, 41449, 45520, 49567, 53574],
-        [51819, 55890, 59929, 64192, 35471, 39798, 43837, 48100, 19363, 22634, 26705, 30744, 2247, 6286, 10613, 14652, 51707, 55714, 61033, 65104, 36383, 40646],
-        [4919, 782, 13125, 9116, 21459, 16938, 29281, 25272, 37631, 33078, 45325, 41284, 53659, 49618, 61481, 57440, 4263, 254, 14133, 9996, 22339, 18330],
-        [16962, 21115, 25136, 29417, 678, 4959, 8980, 13261, 50058, 53315, 57464, 61489, 33006, 37031, 41308, 45333, 16850, 20875, 26176, 30329, 1590, 5871],
-        [47073, 42968, 38803, 34634, 63237, 59132, 54967, 50798, 13865, 9696, 5595, 1426, 30029, 25860, 21759, 17590, 46193, 42024, 37859, 33754, 62357, 58188],
-        [23953, 19880, 32227, 27962, 7541, 3212, 15559, 11294, 56409, 53136, 65451, 61410, 40765, 36724, 48783, 44742, 24065, 20056, 31123, 27050, 6629, 2364],
-        [12091, 16130, 3913, 8080, 28639, 32294, 20077, 24244, 44787, 48442, 36097, 40264, 60823, 64990, 52261, 56428, 11435, 15602, 2873, 6912, 27471, 31638],
-        [54949, 50844, 63191, 58894, 38465, 34744, 47091, 42794, 22381, 17572, 29855, 25814, 5129, 1088, 13755, 9714, 54581, 50540, 62119, 58014, 37585, 33288]
+    # Extract target expected values
+    offsets = [
+        0x0008, 0x0050, 0x0028, 0x0038, 0x0010, 0x0090, 0x0018, 0x0088,
+        0x00a8, 0x0040, 0x00a0, 0x0080, 0x0070, 0x0068, 0x0048, 0x0030,
+        0x0078, 0x0058, 0x0098, 0x0000, 0x0020, 0x0060
     ]
+    base = 0x7cdb
+    buf = []
+    for off in offsets:
+        addr = base + off
+        w1 = payload[addr] | (payload[addr + 1] << 8)
+        w2 = payload[addr + 2] | (payload[addr + 3] << 8)
+        buf.append(w1 ^ w2)
 
-    # Target 16-bit words extracted from ROM at 0x7ce3..
-    REAL_TARGETS = [
-        0x544c, 0x15a0, 0xeb44, 0x09d6, 0xb6ab, 0x496e, 0xfd0a, 0x3806,
-        0xf1df, 0x0913, 0xffd8, 0x8549, 0xdebb, 0x5400, 0x261a, 0x5185,
-        0xa205, 0xa0b8, 0xbe18, 0xefff, 0xb9b9, 0xe889
-    ]
+    # Invert 10 rounds from k = 9 down to 0
+    for k in range(9, -1, -1):
+        # 1. Inverse Layer C (cellular diffusion step)
+        shift = k + 1
+        for i in range(21, -1, -1):
+            t1 = theta(buf[(i + 1) % 22])
+            t2 = rol16(theta(buf[(i + 2) % 22]), shift)
+            buf[i] ^= t1 ^ t2
 
-    def decrypt(ciphertext_words):
-        w = list(ciphertext_words)
-        for k in range(9, -1, -1):
-            # Invert Step C: Cellular Automaton Diffusion
-            for i in range(21, -1, -1):
-                w[i] ^= L(w[(i + 1) % 22]) ^ rol16(L(w[(i + 2) % 22]), k + 1)
-            # Invert Step B: Feistel ARX Cascade
-            for i in range(21, 0, -1):
-                w[i] = (w[i] - w[i - 1] - 0x5a5a) & 0xffff
-            w[0] = (w[0] - w[21] - 0x5a5a) & 0xffff
-            # Invert Step A: SubBytes & AddRoundKey
-            for i in range(22):
-                w[i] = inv_sbox_word(w[i] ^ ROUND_KEYS[k][i])
-        return w
+        # 2. Inverse Layer B (cyclic modular addition step)
+        for i in range(21, 0, -1):
+            buf[i] = (buf[i] - buf[i - 1] - 0x5a5a) & 0xffff
+        buf[0] = (buf[0] - buf[21] - 0x5a5a) & 0xffff
 
-    recovered_words = decrypt(REAL_TARGETS)
+        # 3. Inverse Layer A (S-box + XOR key)
+        keys = all_layer_a_keys[k]
+        for i in range(22):
+            val = buf[i] ^ keys[i]
+            hi = inv_sbox[(val >> 8) & 0xff]
+            lo = inv_sbox[val & 0xff]
+            buf[i] = (hi << 8) | lo
 
-    flag_bytes = bytearray(44)
-    for i in range(22):
-        w = recovered_words[i]
-        flag_bytes[2 * i] = w & 0xff
-        flag_bytes[2 * i + 1] = (w >> 8) & 0xff
+    flag_bytes = bytearray()
+    for w in buf:
+        flag_bytes.append(w & 0xff)
+        flag_bytes.append((w >> 8) & 0xff)
 
-    flag_str = flag_bytes.decode('utf-8')
-    print(f'[+] Flag recovered: {flag_str}')
+    flag = flag_bytes.decode('utf-8')
+    print(f'[+] Recovered Flag: {flag}')
 
-    # Verify against qemu binary
-    if os.path.exists(qemu_bin) and os.path.exists(rom_bin):
-        p = subprocess.Popen(
-            [qemu_bin, '-M', 'asisboard', '-kernel', rom_bin, '-nographic'],
-            stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True
+    # Verify directly with emulator
+    if os.path.exists(emu_path):
+        proc = subprocess.run(
+            [str(emu_path), '-M', 'asisboard', '-kernel', str(rom_path), '-nographic'],
+            input=f'{flag}\n',
+            capture_output=True,
+            text=True
         )
-        out, _ = p.communicate(input=flag_str + '\n', timeout=5)
-        if '[+] Access Granted! Flag verified.' in out:
-            print('[+] QEMU verification passed: Access Granted!')
+        if 'Access Granted' in proc.stdout:
+            print('[+] Local verification: PASSED (Access Granted)')
         else:
-            print('[-] Verification failed!')
+            print(f'[-] Local verification: FAILED ({proc.stdout.strip()})')
 
-    return flag_str
+    return flag
 
 if __name__ == '__main__':
     solve()
-

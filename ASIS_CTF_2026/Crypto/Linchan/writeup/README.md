@@ -3,9 +3,9 @@
 | Property | Value |
 | :--- | :--- |
 | **Category** | `Crypto` |
-| **Points** | `107` |
+| **Points** | `31` |
 | **Author** | `-` |
-| **Solves** | `42` |
+| **Solves** | `244` |
 
 ---
 

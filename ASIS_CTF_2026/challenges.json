@@ -5,33 +5,24 @@
     "platform": "asisctf",
     "user": "bqa",
     "team": "USTH_ExOdia",
-    "game_id": null,
-    "ctftime_id": 3033,
-    "event_window": {
-      "start": "2026-08-29T14:00:00+00:00",
-      "end": "2026-08-30T14:00:00+00:00",
-      "source": "ctftime:3033",
-      "confidence": "medium"
-    },
-    "flag_format": "^ASIS\\{.+\\}$",
-    "flag_format_source": "rules"
+    "game_id": null
   },
-  "total_challenges": 25,
-  "total_points": 4099,
+  "total_challenges": 37,
+  "total_points": 3164,
   "categories": {
     "Baby 👶": 1,
-    "Reverse": 5,
-    "Crypto": 5,
-    "Pwnable": 4,
-    "Hardware": 5,
-    "Web": 5
+    "Reverse": 9,
+    "Crypto": 8,
+    "Pwnable": 5,
+    "Hardware": 7,
+    "Web": 7
   },
   "challenges": [
     {
       "id": 65,
       "name": "Mic Check",
       "category": "Baby 👶",
-      "points": 38,
+      "points": 31,
       "author": null,
       "tags": [
         "Baby 👶"
@@ -39,7 +30,7 @@
       "hints": [],
       "connection_info": null,
       "solved_by_me": true,
-      "solves_count": 167,
+      "solves_count": 252,
       "submit_endpoint": null,
       "instance_info": {},
       "files": []
@@ -48,7 +39,7 @@
       "id": 66,
       "name": "NEON",
       "category": "Reverse",
-      "points": 107,
+      "points": 62,
       "author": null,
       "tags": [
         "Reverse"
@@ -56,7 +47,7 @@
       "hints": [],
       "connection_info": null,
       "solved_by_me": false,
-      "solves_count": 42,
+      "solves_count": 82,
       "submit_endpoint": null,
       "instance_info": {},
       "files": [
@@ -66,7 +57,17 @@
           "saved_path": "/home/light/Workspace/CTF/ASIS_CTF_2026/Reverse/NEON/challenge/Neon_63f8799ec2513ba483db2848c2f0db82d5f512fc.txz",
           "success": true,
           "source": "platform_attachment",
-          "message": "Đã tải trực tiếp thành công"
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"6a927fd8-d7c430\"",
+            "final_url": "https://asisctf.com/tasks/Neon_63f8799ec2513ba483db2848c2f0db82d5f512fc.txz",
+            "last_modified": "Sat, 29 Aug 2026 06:44:40 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 14140464,
+            "url": "https://asisctf.com/tasks/Neon_63f8799ec2513ba483db2848c2f0db82d5f512fc.txz",
+            "verified_at": "2026-09-17T05:56:04Z"
+          }
         }
       ]
     },
@@ -74,7 +75,7 @@
       "id": 67,
       "name": "Beyond the fourth wall",
       "category": "Reverse",
-      "points": 117,
+      "points": 45,
       "author": null,
       "tags": [
         "Reverse"
@@ -82,7 +83,7 @@
       "hints": [],
       "connection_info": null,
       "solved_by_me": false,
-      "solves_count": 38,
+      "solves_count": 131,
       "submit_endpoint": null,
       "instance_info": {},
       "files": [
@@ -92,7 +93,17 @@
           "saved_path": "/home/light/Workspace/CTF/ASIS_CTF_2026/Reverse/Beyond_the_fourth_wall/challenge/Beyond_f1953d166f193f5567efd26a832b8b9f316f5410.txz",
           "success": true,
           "source": "platform_attachment",
-          "message": "Đã tải trực tiếp thành công"
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"6a928fda-58c2c\"",
+            "final_url": "https://asisctf.com/tasks/Beyond_f1953d166f193f5567efd26a832b8b9f316f5410.txz",
+            "last_modified": "Sat, 29 Aug 2026 07:52:58 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 363564,
+            "url": "https://asisctf.com/tasks/Beyond_f1953d166f193f5567efd26a832b8b9f316f5410.txz",
+            "verified_at": "2026-09-17T05:56:02Z"
+          }
         }
       ]
     },
@@ -100,7 +111,7 @@
       "id": 68,
       "name": "Atarude",
       "category": "Reverse",
-      "points": 51,
+      "points": 40,
       "author": null,
       "tags": [
         "Reverse"
@@ -108,7 +119,7 @@
       "hints": [],
       "connection_info": null,
       "solved_by_me": true,
-      "solves_count": 109,
+      "solves_count": 157,
       "submit_endpoint": null,
       "instance_info": {},
       "files": [
@@ -118,7 +129,17 @@
           "saved_path": "/home/light/Workspace/CTF/ASIS_CTF_2026/Reverse/Atarude/challenge/Atarude_e39d6ecbf3f6d04dee16fc4a9046770fa3bdd9f3.txz",
           "success": true,
           "source": "platform_attachment",
-          "message": "Đã tải trực tiếp thành công"
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"6a91a9ee-c3c480\"",
+            "final_url": "https://asisctf.com/tasks/Atarude_e39d6ecbf3f6d04dee16fc4a9046770fa3bdd9f3.txz",
+            "last_modified": "Fri, 28 Aug 2026 15:31:58 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 12829824,
+            "url": "https://asisctf.com/tasks/Atarude_e39d6ecbf3f6d04dee16fc4a9046770fa3bdd9f3.txz",
+            "verified_at": "2026-09-17T05:56:04Z"
+          }
         }
       ]
     },
@@ -126,7 +147,7 @@
       "id": 69,
       "name": "ASIS Arch",
       "category": "Reverse",
-      "points": 53,
+      "points": 34,
       "author": null,
       "tags": [
         "Reverse"
@@ -134,7 +155,7 @@
       "hints": [],
       "connection_info": null,
       "solved_by_me": true,
-      "solves_count": 102,
+      "solves_count": 203,
       "submit_endpoint": null,
       "instance_info": {},
       "files": [
@@ -144,7 +165,17 @@
           "saved_path": "/home/light/Workspace/CTF/ASIS_CTF_2026/Reverse/ASIS_Arch/challenge/ASIS-Arch_2671a9f8046f73ecbbaa579a1daca1819e975772.txz",
           "success": true,
           "source": "platform_attachment",
-          "message": "Đã tải trực tiếp thành công"
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"6a9290d4-7600\"",
+            "final_url": "https://asisctf.com/tasks/ASIS-Arch_2671a9f8046f73ecbbaa579a1daca1819e975772.txz",
+            "last_modified": "Sat, 29 Aug 2026 07:57:08 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 30208,
+            "url": "https://asisctf.com/tasks/ASIS-Arch_2671a9f8046f73ecbbaa579a1daca1819e975772.txz",
+            "verified_at": "2026-09-17T05:56:03Z"
+          }
         }
       ]
     },
@@ -152,7 +183,7 @@
       "id": 70,
       "name": "Collector",
       "category": "Reverse",
-      "points": 500,
+      "points": 423,
       "author": null,
       "tags": [
         "Reverse"
@@ -160,17 +191,171 @@
       "hints": [],
       "connection_info": null,
       "solved_by_me": false,
-      "solves_count": 0,
+      "solves_count": 4,
       "submit_endpoint": null,
       "instance_info": {},
       "files": [
         {
           "url": "https://asisctf.com/tasks/Collector_74c92ebeb1228fa20a858574384df47c66656f89.txz",
           "name": "Collector_74c92ebeb1228fa20a858574384df47c66656f89.txz",
-          "saved_path": null,
-          "success": false,
+          "saved_path": "/home/light/Workspace/CTF/ASIS_CTF_2026/Reverse/Collector/challenge/Collector_74c92ebeb1228fa20a858574384df47c66656f89.txz",
+          "success": true,
           "source": "platform_attachment",
-          "message": "Tải file thất bại (HTTP status, lỗi kết nối hoặc nội dung HTML)"
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"6a9314c1-41488\"",
+            "final_url": "https://asisctf.com/tasks/Collector_74c92ebeb1228fa20a858574384df47c66656f89.txz",
+            "last_modified": "Sat, 29 Aug 2026 17:20:01 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 267400,
+            "url": "https://asisctf.com/tasks/Collector_74c92ebeb1228fa20a858574384df47c66656f89.txz",
+            "verified_at": "2026-09-17T05:56:04Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": 71,
+      "name": "Ham Fisted",
+      "category": "Reverse",
+      "points": 63,
+      "author": null,
+      "tags": [
+        "Reverse"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 81,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://asisctf.com/tasks/Ham_Fisted_6f9c1de6aa7af20440d679d0cee116802fe8306f.txz",
+          "name": "Ham_Fisted_6f9c1de6aa7af20440d679d0cee116802fe8306f.txz",
+          "saved_path": "/home/light/Workspace/CTF/ASIS_CTF_2026/Reverse/Ham_Fisted/challenge/Ham_Fisted_6f9c1de6aa7af20440d679d0cee116802fe8306f.txz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"6a9291e6-b9ee8\"",
+            "final_url": "https://asisctf.com/tasks/Ham_Fisted_6f9c1de6aa7af20440d679d0cee116802fe8306f.txz",
+            "last_modified": "Sat, 29 Aug 2026 08:01:42 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 761576,
+            "url": "https://asisctf.com/tasks/Ham_Fisted_6f9c1de6aa7af20440d679d0cee116802fe8306f.txz",
+            "verified_at": "2026-09-17T05:56:04Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": 72,
+      "name": "LeakMeAk",
+      "category": "Reverse",
+      "points": 39,
+      "author": null,
+      "tags": [
+        "Reverse"
+      ],
+      "hints": [],
+      "connection_info": "nc 65.109.208.91 3117",
+      "solved_by_me": true,
+      "solves_count": 165,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://asisctf.com/tasks/LeakMeAk_f9e29089aee4968435d8e68e316f36d37d1bd002.txz",
+          "name": "LeakMeAk_f9e29089aee4968435d8e68e316f36d37d1bd002.txz",
+          "saved_path": "/home/light/Workspace/CTF/ASIS_CTF_2026/Reverse/LeakMeAk/challenge/LeakMeAk_f9e29089aee4968435d8e68e316f36d37d1bd002.txz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"6a929290-b4c\"",
+            "final_url": "https://asisctf.com/tasks/LeakMeAk_f9e29089aee4968435d8e68e316f36d37d1bd002.txz",
+            "last_modified": "Sat, 29 Aug 2026 08:04:32 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 2892,
+            "url": "https://asisctf.com/tasks/LeakMeAk_f9e29089aee4968435d8e68e316f36d37d1bd002.txz",
+            "verified_at": "2026-09-17T05:56:04Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": 73,
+      "name": "Lesh",
+      "category": "Reverse",
+      "points": 46,
+      "author": null,
+      "tags": [
+        "Reverse"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 124,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://asisctf.com/tasks/Lesh_6d7379445e6714458e86c4c7a98924c3c7eb0d45.txz",
+          "name": "Lesh_6d7379445e6714458e86c4c7a98924c3c7eb0d45.txz",
+          "saved_path": "/home/light/Workspace/CTF/ASIS_CTF_2026/Reverse/Lesh/challenge/Lesh_6d7379445e6714458e86c4c7a98924c3c7eb0d45.txz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"6a91f163-110c\"",
+            "final_url": "https://asisctf.com/tasks/Lesh_6d7379445e6714458e86c4c7a98924c3c7eb0d45.txz",
+            "last_modified": "Fri, 28 Aug 2026 20:36:51 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 4364,
+            "url": "https://asisctf.com/tasks/Lesh_6d7379445e6714458e86c4c7a98924c3c7eb0d45.txz",
+            "verified_at": "2026-09-17T05:56:04Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": 74,
+      "name": "Mousa",
+      "category": "Reverse",
+      "points": 334,
+      "author": null,
+      "tags": [
+        "Reverse"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 8,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://asisctf.com/tasks/Mousa_de7044d063bf697cd581f2a19891d1a6ea3cc15f.txz",
+          "name": "Mousa_de7044d063bf697cd581f2a19891d1a6ea3cc15f.txz",
+          "saved_path": "/home/light/Workspace/CTF/ASIS_CTF_2026/Reverse/Mousa/challenge/Mousa_de7044d063bf697cd581f2a19891d1a6ea3cc15f.txz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"6a91a5d5-105af1c\"",
+            "final_url": "https://asisctf.com/tasks/Mousa_de7044d063bf697cd581f2a19891d1a6ea3cc15f.txz",
+            "last_modified": "Fri, 28 Aug 2026 15:14:29 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 17149724,
+            "url": "https://asisctf.com/tasks/Mousa_de7044d063bf697cd581f2a19891d1a6ea3cc15f.txz",
+            "verified_at": "2026-09-17T05:56:07Z"
+          }
         }
       ]
     },
@@ -178,15 +363,15 @@
       "id": 75,
       "name": "Fence",
       "category": "Crypto",
-      "points": 64,
+      "points": 29,
       "author": null,
       "tags": [
         "Crypto"
       ],
       "hints": [],
       "connection_info": null,
-      "solved_by_me": false,
-      "solves_count": 80,
+      "solved_by_me": true,
+      "solves_count": 286,
       "submit_endpoint": null,
       "instance_info": {},
       "files": [
@@ -196,7 +381,17 @@
           "saved_path": "/home/light/Workspace/CTF/ASIS_CTF_2026/Crypto/Fence/challenge/Fence_7e750d85599a53701faa9ec6b58323c4b4a9d977.txz",
           "success": true,
           "source": "platform_attachment",
-          "message": "Đã tải trực tiếp thành công"
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"6a9027c6-1440\"",
+            "final_url": "https://asisctf.com/tasks/Fence_7e750d85599a53701faa9ec6b58323c4b4a9d977.txz",
+            "last_modified": "Thu, 27 Aug 2026 12:04:22 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 5184,
+            "url": "https://asisctf.com/tasks/Fence_7e750d85599a53701faa9ec6b58323c4b4a9d977.txz",
+            "verified_at": "2026-09-17T05:56:04Z"
+          }
         }
       ]
     },
@@ -204,7 +399,7 @@
       "id": 76,
       "name": "Hackel",
       "category": "Crypto",
-      "points": 26,
+      "points": 24,
       "author": null,
       "tags": [
         "Crypto",
@@ -213,7 +408,7 @@
       "hints": [],
       "connection_info": "nc 65.109.208.91 3771",
       "solved_by_me": true,
-      "solves_count": 418,
+      "solves_count": 525,
       "submit_endpoint": null,
       "instance_info": {},
       "files": [
@@ -223,7 +418,17 @@
           "saved_path": "/home/light/Workspace/CTF/ASIS_CTF_2026/Crypto/Hackel/challenge/Hackel_167b289c63c46836d376945105d757028321303a.txz",
           "success": true,
           "source": "platform_attachment",
-          "message": "Đã tải trực tiếp thành công"
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"6a92a46c-fcc\"",
+            "final_url": "https://asisctf.com/tasks/Hackel_167b289c63c46836d376945105d757028321303a.txz",
+            "last_modified": "Sat, 29 Aug 2026 09:20:44 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 4044,
+            "url": "https://asisctf.com/tasks/Hackel_167b289c63c46836d376945105d757028321303a.txz",
+            "verified_at": "2026-09-17T05:56:05Z"
+          }
         }
       ]
     },
@@ -231,7 +436,7 @@
       "id": 77,
       "name": "Headache",
       "category": "Crypto",
-      "points": 59,
+      "points": 34,
       "author": null,
       "tags": [
         "Crypto"
@@ -239,7 +444,7 @@
       "hints": [],
       "connection_info": "nc 65.109.208.91 1337",
       "solved_by_me": true,
-      "solves_count": 89,
+      "solves_count": 205,
       "submit_endpoint": null,
       "instance_info": {},
       "files": [
@@ -249,7 +454,17 @@
           "saved_path": "/home/light/Workspace/CTF/ASIS_CTF_2026/Crypto/Headache/challenge/Headache_dd252a8948d2ec605553e4047246b8f81cf801cd.txz",
           "success": true,
           "source": "platform_attachment",
-          "message": "Đã tải trực tiếp thành công"
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"6a9296ac-8ac\"",
+            "final_url": "https://asisctf.com/tasks/Headache_dd252a8948d2ec605553e4047246b8f81cf801cd.txz",
+            "last_modified": "Sat, 29 Aug 2026 08:22:04 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 2220,
+            "url": "https://asisctf.com/tasks/Headache_dd252a8948d2ec605553e4047246b8f81cf801cd.txz",
+            "verified_at": "2026-09-17T05:56:05Z"
+          }
         }
       ]
     },
@@ -257,25 +472,35 @@
       "id": 78,
       "name": "Less is more",
       "category": "Crypto",
-      "points": 201,
+      "points": 34,
       "author": null,
       "tags": [
         "Crypto"
       ],
       "hints": [],
       "connection_info": null,
-      "solved_by_me": false,
-      "solves_count": 19,
+      "solved_by_me": true,
+      "solves_count": 208,
       "submit_endpoint": null,
       "instance_info": {},
       "files": [
         {
-          "url": "https://asisctf.com/tasks/less_is_more_c21e39cc296efe86ee76902cae855a705bd74214.txz",
-          "name": "less_is_more_c21e39cc296efe86ee76902cae855a705bd74214.txz",
-          "saved_path": "/home/light/Workspace/CTF/ASIS_CTF_2026/Crypto/Less_is_more/challenge/less_is_more_c21e39cc296efe86ee76902cae855a705bd74214.txz",
+          "url": "https://asisctf.com/tasks/new_less_is_more_ea1eac39bcc48aec35b0e24fedd620acacca68a9.txz",
+          "name": "new_less_is_more_ea1eac39bcc48aec35b0e24fedd620acacca68a9.txz",
+          "saved_path": "/home/light/Workspace/CTF/ASIS_CTF_2026/Crypto/Less_is_more/challenge/new_less_is_more_ea1eac39bcc48aec35b0e24fedd620acacca68a9.txz",
           "success": true,
           "source": "platform_attachment",
-          "message": "Đã tải trực tiếp thành công"
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"6a931cdf-481f68c\"",
+            "final_url": "https://asisctf.com/tasks/new_less_is_more_ea1eac39bcc48aec35b0e24fedd620acacca68a9.txz",
+            "last_modified": "Sat, 29 Aug 2026 17:54:39 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 75626124,
+            "url": "https://asisctf.com/tasks/new_less_is_more_ea1eac39bcc48aec35b0e24fedd620acacca68a9.txz",
+            "verified_at": "2026-09-17T05:56:09Z"
+          }
         }
       ]
     },
@@ -283,25 +508,143 @@
       "id": 79,
       "name": "Linchan",
       "category": "Crypto",
-      "points": 107,
+      "points": 31,
       "author": null,
       "tags": [
         "Crypto"
       ],
       "hints": [],
       "connection_info": null,
-      "solved_by_me": false,
-      "solves_count": 42,
+      "solved_by_me": true,
+      "solves_count": 244,
       "submit_endpoint": null,
       "instance_info": {},
       "files": [
         {
           "url": "https://asisctf.com/tasks/linchan_06fa8bb304d3897d6f8a4aeab998c4826420da2e.txz",
           "name": "linchan_06fa8bb304d3897d6f8a4aeab998c4826420da2e.txz",
-          "saved_path": null,
-          "success": false,
+          "saved_path": "/home/light/Workspace/CTF/ASIS_CTF_2026/Crypto/Linchan/challenge/linchan_06fa8bb304d3897d6f8a4aeab998c4826420da2e.txz",
+          "success": true,
           "source": "platform_attachment",
-          "message": "Tải file thất bại (HTTP status, lỗi kết nối hoặc nội dung HTML)"
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"6a929783-3e380\"",
+            "final_url": "https://asisctf.com/tasks/linchan_06fa8bb304d3897d6f8a4aeab998c4826420da2e.txz",
+            "last_modified": "Sat, 29 Aug 2026 08:25:39 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 254848,
+            "url": "https://asisctf.com/tasks/linchan_06fa8bb304d3897d6f8a4aeab998c4826420da2e.txz",
+            "verified_at": "2026-09-17T05:56:06Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": 80,
+      "name": "Mario",
+      "category": "Crypto",
+      "points": 30,
+      "author": null,
+      "tags": [
+        "Crypto"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": true,
+      "solves_count": 261,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://asisctf.com/tasks/Mario_54cbb43878d3a5c046aa628521c24b99a71e4295.txz",
+          "name": "Mario_54cbb43878d3a5c046aa628521c24b99a71e4295.txz",
+          "saved_path": "/home/light/Workspace/CTF/ASIS_CTF_2026/Crypto/Mario/challenge/Mario_54cbb43878d3a5c046aa628521c24b99a71e4295.txz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"6a9299a4-2c2c8\"",
+            "final_url": "https://asisctf.com/tasks/Mario_54cbb43878d3a5c046aa628521c24b99a71e4295.txz",
+            "last_modified": "Sat, 29 Aug 2026 08:34:44 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 180936,
+            "url": "https://asisctf.com/tasks/Mario_54cbb43878d3a5c046aa628521c24b99a71e4295.txz",
+            "verified_at": "2026-09-17T05:56:05Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": 83,
+      "name": "Pancake",
+      "category": "Crypto",
+      "points": 32,
+      "author": null,
+      "tags": [
+        "Crypto"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": true,
+      "solves_count": 232,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://asisctf.com/tasks/Pancake_bf844b6c9e574c6f80b121155918b76ff3658962.txz",
+          "name": "Pancake_bf844b6c9e574c6f80b121155918b76ff3658962.txz",
+          "saved_path": "/home/light/Workspace/CTF/ASIS_CTF_2026/Crypto/Pancake/challenge/Pancake_bf844b6c9e574c6f80b121155918b76ff3658962.txz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"6a92a9de-10b0\"",
+            "final_url": "https://asisctf.com/tasks/Pancake_bf844b6c9e574c6f80b121155918b76ff3658962.txz",
+            "last_modified": "Sat, 29 Aug 2026 09:43:58 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 4272,
+            "url": "https://asisctf.com/tasks/Pancake_bf844b6c9e574c6f80b121155918b76ff3658962.txz",
+            "verified_at": "2026-09-17T05:56:05Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": 86,
+      "name": "Sultan",
+      "category": "Crypto",
+      "points": 40,
+      "author": null,
+      "tags": [
+        "Crypto"
+      ],
+      "hints": [],
+      "connection_info": "http://91.107.152.21:17131",
+      "solved_by_me": true,
+      "solves_count": 158,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://asisctf.com/tasks/Sultan_3941e94ae8b90cd1152a5ffb08edcfecc6949fd4.txz",
+          "name": "Sultan_3941e94ae8b90cd1152a5ffb08edcfecc6949fd4.txz",
+          "saved_path": "/home/light/Workspace/CTF/ASIS_CTF_2026/Crypto/Sultan/challenge/Sultan_3941e94ae8b90cd1152a5ffb08edcfecc6949fd4.txz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"6a92e185-2018\"",
+            "final_url": "https://asisctf.com/tasks/Sultan_3941e94ae8b90cd1152a5ffb08edcfecc6949fd4.txz",
+            "last_modified": "Sat, 29 Aug 2026 13:41:25 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 8216,
+            "url": "https://asisctf.com/tasks/Sultan_3941e94ae8b90cd1152a5ffb08edcfecc6949fd4.txz",
+            "verified_at": "2026-09-17T05:56:06Z"
+          }
         }
       ]
     },
@@ -309,7 +652,7 @@
       "id": 89,
       "name": "QFilter",
       "category": "Pwnable",
-      "points": 60,
+      "points": 44,
       "author": null,
       "tags": [
         "Pwnable"
@@ -317,7 +660,7 @@
       "hints": [],
       "connection_info": "nc 65.109.208.46 1337",
       "solved_by_me": true,
-      "solves_count": 87,
+      "solves_count": 133,
       "submit_endpoint": null,
       "instance_info": {},
       "files": [
@@ -327,7 +670,17 @@
           "saved_path": "/home/light/Workspace/CTF/ASIS_CTF_2026/Pwnable/QFilter/challenge/QFilter_c9b8d86ebc59fcd1d7b9bf68ce3d9cb7b0f0f476.txz",
           "success": true,
           "source": "platform_attachment",
-          "message": "Đã tải trực tiếp thành công"
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"6a92d5fa-ab460\"",
+            "final_url": "https://asisctf.com/tasks/QFilter_c9b8d86ebc59fcd1d7b9bf68ce3d9cb7b0f0f476.txz",
+            "last_modified": "Sat, 29 Aug 2026 12:52:10 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 701536,
+            "url": "https://asisctf.com/tasks/QFilter_c9b8d86ebc59fcd1d7b9bf68ce3d9cb7b0f0f476.txz",
+            "verified_at": "2026-09-17T05:56:06Z"
+          }
         }
       ]
     },
@@ -335,7 +688,7 @@
       "id": 90,
       "name": "Arena Snapshots",
       "category": "Pwnable",
-      "points": 49,
+      "points": 36,
       "author": null,
       "tags": [
         "Pwnable"
@@ -343,7 +696,7 @@
       "hints": [],
       "connection_info": "nc 91.107.187.160 18123",
       "solved_by_me": true,
-      "solves_count": 113,
+      "solves_count": 187,
       "submit_endpoint": null,
       "instance_info": {},
       "files": [
@@ -353,7 +706,17 @@
           "saved_path": "/home/light/Workspace/CTF/ASIS_CTF_2026/Pwnable/Arena_Snapshots/challenge/arena-snapshots_f3df2911b7bb124d34b4810d8ee87330959ae1ad.txz",
           "success": true,
           "source": "platform_attachment",
-          "message": "Đã tải trực tiếp thành công"
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"6a92ef65-1b98\"",
+            "final_url": "https://asisctf.com/tasks/arena-snapshots_f3df2911b7bb124d34b4810d8ee87330959ae1ad.txz",
+            "last_modified": "Sat, 29 Aug 2026 14:40:37 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 7064,
+            "url": "https://asisctf.com/tasks/arena-snapshots_f3df2911b7bb124d34b4810d8ee87330959ae1ad.txz",
+            "verified_at": "2026-09-17T05:56:06Z"
+          }
         }
       ]
     },
@@ -361,15 +724,15 @@
       "id": 91,
       "name": "Dead Letter",
       "category": "Pwnable",
-      "points": 150,
+      "points": 48,
       "author": null,
       "tags": [
         "Pwnable"
       ],
       "hints": [],
       "connection_info": "nc 91.107.187.160 18111\nnc 91.107.183.101 18111",
-      "solved_by_me": false,
-      "solves_count": 28,
+      "solved_by_me": true,
+      "solves_count": 118,
       "submit_endpoint": null,
       "instance_info": {},
       "files": [
@@ -379,7 +742,17 @@
           "saved_path": "/home/light/Workspace/CTF/ASIS_CTF_2026/Pwnable/Dead_Letter/challenge/dead-letter-queue_b8dacfd42cdadda3d61139356adf6267e8aeed9d.txz",
           "success": true,
           "source": "platform_attachment",
-          "message": "Đã tải trực tiếp thành công"
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"6a9307dd-2378\"",
+            "final_url": "https://asisctf.com/tasks/dead-letter-queue_b8dacfd42cdadda3d61139356adf6267e8aeed9d.txz",
+            "last_modified": "Sat, 29 Aug 2026 16:25:01 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 9080,
+            "url": "https://asisctf.com/tasks/dead-letter-queue_b8dacfd42cdadda3d61139356adf6267e8aeed9d.txz",
+            "verified_at": "2026-09-17T05:56:06Z"
+          }
         }
       ]
     },
@@ -387,25 +760,71 @@
       "id": 92,
       "name": "Signal Race",
       "category": "Pwnable",
-      "points": 154,
+      "points": 43,
       "author": null,
       "tags": [
         "Pwnable"
       ],
       "hints": [],
       "connection_info": "nc 91.107.187.160 18121",
-      "solved_by_me": false,
-      "solves_count": 27,
+      "solved_by_me": true,
+      "solves_count": 138,
       "submit_endpoint": null,
       "instance_info": {},
       "files": [
         {
           "url": "https://asisctf.com/tasks/Signal_Race_5cfce154b37a7b3531fe35bd6ee161d6a5f17964.txz",
           "name": "Signal_Race_5cfce154b37a7b3531fe35bd6ee161d6a5f17964.txz",
-          "saved_path": null,
-          "success": false,
+          "saved_path": "/home/light/Workspace/CTF/ASIS_CTF_2026/Pwnable/Signal_Race/challenge/Signal_Race_5cfce154b37a7b3531fe35bd6ee161d6a5f17964.txz",
+          "success": true,
           "source": "platform_attachment",
-          "message": "Tải file thất bại (HTTP status, lỗi kết nối hoặc nội dung HTML)"
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"6a931851-1bcc\"",
+            "final_url": "https://asisctf.com/tasks/Signal_Race_5cfce154b37a7b3531fe35bd6ee161d6a5f17964.txz",
+            "last_modified": "Sat, 29 Aug 2026 17:35:13 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 7116,
+            "url": "https://asisctf.com/tasks/Signal_Race_5cfce154b37a7b3531fe35bd6ee161d6a5f17964.txz",
+            "verified_at": "2026-09-17T05:56:06Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": 93,
+      "name": "Revenant buddy",
+      "category": "Pwnable",
+      "points": 40,
+      "author": null,
+      "tags": [
+        "Pwnable"
+      ],
+      "hints": [],
+      "connection_info": "nc 91.107.151.102 18113",
+      "solved_by_me": true,
+      "solves_count": 154,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://asisctf.com/tasks/Revenant-Buddy_80182662e602ed9daef4d375850549d7ce547524.txz",
+          "name": "Revenant-Buddy_80182662e602ed9daef4d375850549d7ce547524.txz",
+          "saved_path": "/home/light/Workspace/CTF/ASIS_CTF_2026/Pwnable/Revenant_buddy/challenge/Revenant-Buddy_80182662e602ed9daef4d375850549d7ce547524.txz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"6a9339a6-54c38\"",
+            "final_url": "https://asisctf.com/tasks/Revenant-Buddy_80182662e602ed9daef4d375850549d7ce547524.txz",
+            "last_modified": "Sat, 29 Aug 2026 19:57:26 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 347192,
+            "url": "https://asisctf.com/tasks/Revenant-Buddy_80182662e602ed9daef4d375850549d7ce547524.txz",
+            "verified_at": "2026-09-17T05:56:07Z"
+          }
         }
       ]
     },
@@ -413,7 +832,7 @@
       "id": 97,
       "name": "Dark Pixels",
       "category": "Hardware",
-      "points": 450,
+      "points": 285,
       "author": null,
       "tags": [
         "Hardware"
@@ -421,7 +840,7 @@
       "hints": [],
       "connection_info": null,
       "solved_by_me": false,
-      "solves_count": 3,
+      "solves_count": 11,
       "submit_endpoint": null,
       "instance_info": {},
       "files": [
@@ -431,7 +850,17 @@
           "saved_path": "/home/light/Workspace/CTF/ASIS_CTF_2026/Hardware/Dark_Pixels/challenge/Dark_Pixels_ee0b1a8546f3089ecdc709caae25f2458055b17d.txz",
           "success": true,
           "source": "platform_attachment",
-          "message": "Đã tải trực tiếp thành công"
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"6a92db54-26efc\"",
+            "final_url": "https://asisctf.com/tasks/Dark_Pixels_ee0b1a8546f3089ecdc709caae25f2458055b17d.txz",
+            "last_modified": "Sat, 29 Aug 2026 13:15:00 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 159484,
+            "url": "https://asisctf.com/tasks/Dark_Pixels_ee0b1a8546f3089ecdc709caae25f2458055b17d.txz",
+            "verified_at": "2026-09-17T05:56:07Z"
+          }
         }
       ]
     },
@@ -439,7 +868,7 @@
       "id": 98,
       "name": "Walkie Leaks",
       "category": "Hardware",
-      "points": 90,
+      "points": 52,
       "author": null,
       "tags": [
         "Hardware"
@@ -447,7 +876,7 @@
       "hints": [],
       "connection_info": null,
       "solved_by_me": true,
-      "solves_count": 52,
+      "solves_count": 105,
       "submit_endpoint": null,
       "instance_info": {},
       "files": [
@@ -457,7 +886,17 @@
           "saved_path": "/home/light/Workspace/CTF/ASIS_CTF_2026/Hardware/Walkie_Leaks/challenge/Walkie_Leaks_78c7ca2709a3888185294c3d5355129120530446.txz",
           "success": true,
           "source": "platform_attachment",
-          "message": "Đã tải trực tiếp thành công"
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"6a92dc15-7ea38\"",
+            "final_url": "https://asisctf.com/tasks/Walkie_Leaks_78c7ca2709a3888185294c3d5355129120530446.txz",
+            "last_modified": "Sat, 29 Aug 2026 13:18:13 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 518712,
+            "url": "https://asisctf.com/tasks/Walkie_Leaks_78c7ca2709a3888185294c3d5355129120530446.txz",
+            "verified_at": "2026-09-17T05:56:07Z"
+          }
         }
       ]
     },
@@ -465,7 +904,7 @@
       "id": 99,
       "name": "Silent Carrier",
       "category": "Hardware",
-      "points": 300,
+      "points": 112,
       "author": null,
       "tags": [
         "Hardware"
@@ -473,7 +912,7 @@
       "hints": [],
       "connection_info": null,
       "solved_by_me": false,
-      "solves_count": 10,
+      "solves_count": 40,
       "submit_endpoint": null,
       "instance_info": {},
       "files": [
@@ -483,7 +922,17 @@
           "saved_path": "/home/light/Workspace/CTF/ASIS_CTF_2026/Hardware/Silent_Carrier/challenge/Silent_Carrier_90e22b763b55c21688be352fdd0e92144e5d7196.txz",
           "success": true,
           "source": "platform_attachment",
-          "message": "Đã tải trực tiếp thành công"
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"6a92de8b-488c550\"",
+            "final_url": "https://asisctf.com/tasks/Silent_Carrier_90e22b763b55c21688be352fdd0e92144e5d7196.txz",
+            "last_modified": "Sat, 29 Aug 2026 13:28:43 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 76072272,
+            "url": "https://asisctf.com/tasks/Silent_Carrier_90e22b763b55c21688be352fdd0e92144e5d7196.txz",
+            "verified_at": "2026-09-17T05:56:11Z"
+          }
         }
       ]
     },
@@ -491,15 +940,15 @@
       "id": 100,
       "name": "Sideband Surgery",
       "category": "Hardware",
-      "points": 103,
+      "points": 50,
       "author": null,
       "tags": [
         "Hardware"
       ],
       "hints": [],
       "connection_info": null,
-      "solved_by_me": false,
-      "solves_count": 44,
+      "solved_by_me": true,
+      "solves_count": 110,
       "submit_endpoint": null,
       "instance_info": {},
       "files": [
@@ -509,13 +958,59 @@
           "saved_path": "/home/light/Workspace/CTF/ASIS_CTF_2026/Hardware/Sideband_Surgery/challenge/Sideband_Surgery_3465e7c40b2224d64b5c96c9869ddad0e3e21bca.txz",
           "success": true,
           "source": "platform_attachment",
-          "message": "Đã tải trực tiếp thành công"
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"6a92dd7c-357702c\"",
+            "final_url": "https://asisctf.com/tasks/Sideband_Surgery_3465e7c40b2224d64b5c96c9869ddad0e3e21bca.txz",
+            "last_modified": "Sat, 29 Aug 2026 13:24:12 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 56061996,
+            "url": "https://asisctf.com/tasks/Sideband_Surgery_3465e7c40b2224d64b5c96c9869ddad0e3e21bca.txz",
+            "verified_at": "2026-09-17T05:56:10Z"
+          }
         }
       ]
     },
     {
       "id": 101,
       "name": "OutOfPhase",
+      "category": "Hardware",
+      "points": 85,
+      "author": null,
+      "tags": [
+        "Hardware"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 56,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://asisctf.com/tasks/OutOfPhase_1dd759f2c7c8108677e71fee6f0f62744c5919d5.txz",
+          "name": "OutOfPhase_1dd759f2c7c8108677e71fee6f0f62744c5919d5.txz",
+          "saved_path": "/home/light/Workspace/CTF/ASIS_CTF_2026/Hardware/OutOfPhase/challenge/OutOfPhase_1dd759f2c7c8108677e71fee6f0f62744c5919d5.txz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"6a930d1e-e27e8\"",
+            "final_url": "https://asisctf.com/tasks/OutOfPhase_1dd759f2c7c8108677e71fee6f0f62744c5919d5.txz",
+            "last_modified": "Sat, 29 Aug 2026 16:47:26 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 927720,
+            "url": "https://asisctf.com/tasks/OutOfPhase_1dd759f2c7c8108677e71fee6f0f62744c5919d5.txz",
+            "verified_at": "2026-09-17T05:56:07Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": 102,
+      "name": "Echoes",
       "category": "Hardware",
       "points": 500,
       "author": null,
@@ -530,12 +1025,58 @@
       "instance_info": {},
       "files": [
         {
-          "url": "https://asisctf.com/tasks/OutOfPhase_1dd759f2c7c8108677e71fee6f0f62744c5919d5.txz",
-          "name": "OutOfPhase_1dd759f2c7c8108677e71fee6f0f62744c5919d5.txz",
-          "saved_path": null,
-          "success": false,
+          "url": "https://asisctf.com/tasks/Echoes_a6abb166d71df1315e611540520dde97d6811a75.txz",
+          "name": "Echoes_a6abb166d71df1315e611540520dde97d6811a75.txz",
+          "saved_path": "/home/light/Workspace/CTF/ASIS_CTF_2026/Hardware/Echoes/challenge/Echoes_a6abb166d71df1315e611540520dde97d6811a75.txz",
+          "success": true,
           "source": "platform_attachment",
-          "message": "Tải file thất bại (HTTP status, lỗi kết nối hoặc nội dung HTML)"
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"6a931764-e070\"",
+            "final_url": "https://asisctf.com/tasks/Echoes_a6abb166d71df1315e611540520dde97d6811a75.txz",
+            "last_modified": "Sat, 29 Aug 2026 17:31:16 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 57456,
+            "url": "https://asisctf.com/tasks/Echoes_a6abb166d71df1315e611540520dde97d6811a75.txz",
+            "verified_at": "2026-09-17T05:56:08Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": 103,
+      "name": "Ggreyline",
+      "category": "Hardware",
+      "points": 100,
+      "author": null,
+      "tags": [
+        "Hardware"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 46,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://asisctf.com/tasks/Gray_Line_f961e0a1c03db9aa6000d8d034153dac6302d251.txz",
+          "name": "Gray_Line_f961e0a1c03db9aa6000d8d034153dac6302d251.txz",
+          "saved_path": "/home/light/Workspace/CTF/ASIS_CTF_2026/Hardware/Ggreyline/challenge/Gray_Line_f961e0a1c03db9aa6000d8d034153dac6302d251.txz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"6a93232e-12d92e0\"",
+            "final_url": "https://asisctf.com/tasks/Gray_Line_f961e0a1c03db9aa6000d8d034153dac6302d251.txz",
+            "last_modified": "Sat, 29 Aug 2026 18:21:34 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 19763936,
+            "url": "https://asisctf.com/tasks/Gray_Line_f961e0a1c03db9aa6000d8d034153dac6302d251.txz",
+            "verified_at": "2026-09-17T05:56:11Z"
+          }
         }
       ]
     },
@@ -543,7 +1084,7 @@
       "id": 105,
       "name": "2048",
       "category": "Web",
-      "points": 34,
+      "points": 29,
       "author": null,
       "tags": [
         "Web"
@@ -551,7 +1092,7 @@
       "hints": [],
       "connection_info": "nc 91.107.164.78 8080",
       "solved_by_me": true,
-      "solves_count": 207,
+      "solves_count": 289,
       "submit_endpoint": null,
       "instance_info": {},
       "files": []
@@ -560,7 +1101,7 @@
       "id": 106,
       "name": "Portalis",
       "category": "Web",
-      "points": 146,
+      "points": 55,
       "author": null,
       "tags": [
         "Web"
@@ -568,7 +1109,24 @@
       "hints": [],
       "connection_info": "http://91.107.189.166:3000",
       "solved_by_me": false,
-      "solves_count": 29,
+      "solves_count": 96,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": []
+    },
+    {
+      "id": 107,
+      "name": "Interdimensional Ledger",
+      "category": "Web",
+      "points": 90,
+      "author": null,
+      "tags": [
+        "Web"
+      ],
+      "hints": [],
+      "connection_info": "http://91.107.252.227:3000",
+      "solved_by_me": false,
+      "solves_count": 52,
       "submit_endpoint": null,
       "instance_info": {},
       "files": []
@@ -577,7 +1135,7 @@
       "id": 108,
       "name": "Profile",
       "category": "Web",
-      "points": 500,
+      "points": 55,
       "author": null,
       "tags": [
         "Web"
@@ -585,7 +1143,7 @@
       "hints": [],
       "connection_info": "nc 91.107.243.187 80",
       "solved_by_me": false,
-      "solves_count": 1,
+      "solves_count": 98,
       "submit_endpoint": null,
       "instance_info": {},
       "files": []
@@ -594,7 +1152,7 @@
       "id": 109,
       "name": "Another Baby Web!",
       "category": "Web",
-      "points": 98,
+      "points": 51,
       "author": null,
       "tags": [
         "Web",
@@ -603,7 +1161,7 @@
       "hints": [],
       "connection_info": "http://91.107.191.73:29994/",
       "solved_by_me": false,
-      "solves_count": 47,
+      "solves_count": 108,
       "submit_endpoint": null,
       "instance_info": {},
       "files": []
@@ -612,7 +1170,7 @@
       "id": 110,
       "name": "🎟 The Lottery Race",
       "category": "Web",
-      "points": 142,
+      "points": 56,
       "author": null,
       "tags": [
         "Web"
@@ -620,10 +1178,46 @@
       "hints": [],
       "connection_info": "http://91.107.150.87:33617/",
       "solved_by_me": false,
-      "solves_count": 30,
+      "solves_count": 94,
       "submit_endpoint": null,
       "instance_info": {},
       "files": []
+    },
+    {
+      "id": 111,
+      "name": "Proxy Dough",
+      "category": "Web",
+      "points": 62,
+      "author": null,
+      "tags": [
+        "Web"
+      ],
+      "hints": [],
+      "connection_info": "https://proxydough.net",
+      "solved_by_me": false,
+      "solves_count": 82,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://asisctf.com/tasks/ProxyDough_faab7cb2ef78e1be178d2feffc266a4e6fba3233.txz",
+          "name": "ProxyDough_faab7cb2ef78e1be178d2feffc266a4e6fba3233.txz",
+          "saved_path": "/home/light/Workspace/CTF/ASIS_CTF_2026/Web/Proxy_Dough/challenge/ProxyDough_faab7cb2ef78e1be178d2feffc266a4e6fba3233.txz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"6a8c5298-ca0\"",
+            "final_url": "https://asisctf.com/tasks/ProxyDough_faab7cb2ef78e1be178d2feffc266a4e6fba3233.txz",
+            "last_modified": "Mon, 24 Aug 2026 14:18:00 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 3232,
+            "url": "https://asisctf.com/tasks/ProxyDough_faab7cb2ef78e1be178d2feffc266a4e6fba3233.txz",
+            "verified_at": "2026-09-17T05:56:09Z"
+          }
+        }
+      ]
     }
   ]
 }

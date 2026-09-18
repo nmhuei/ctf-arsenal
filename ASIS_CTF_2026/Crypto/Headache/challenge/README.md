@@ -3,8 +3,8 @@
 | Property | Value |
 | :--- | :--- |
 | **Category** | `Crypto` |
-| **Points** | `69` |
-| **Solves** | 72 |
+| **Points** | `34` |
+| **Solves** | 205 |
 | **Tags** | `Crypto` |
 
 ## 🔌 Connection / Service
@@ -36,7 +36,7 @@ is a haunted math blender. Crack its secret matrices, forge tags, get flag.
 
 ## 🚩 Flag & Solution
 
-- [ ] Solved
+- [x] Solved
 
 ```
 FLAG{...}

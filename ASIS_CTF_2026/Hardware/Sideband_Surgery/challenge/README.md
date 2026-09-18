@@ -3,8 +3,8 @@
 | Property | Value |
 | :--- | :--- |
 | **Category** | `Hardware` |
-| **Points** | `169` |
-| **Solves** | 24 |
+| **Points** | `50` |
+| **Solves** | 110 |
 | **Tags** | `Hardware` |
 
 ## 📝 Description
@@ -22,7 +22,7 @@ The signal is a mess, but messes are what CTF players do best.
 
 ## 🚩 Flag & Solution
 
-- [ ] Solved
+- [x] Solved
 
 ```
 FLAG{...}

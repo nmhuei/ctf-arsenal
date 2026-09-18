@@ -3,9 +3,9 @@
 | Property | Value |
 | :--- | :--- |
 | **Category** | `Crypto` |
-| **Points** | `69` |
+| **Points** | `34` |
 | **Author** | `-` |
-| **Solves** | `72` |
+| **Solves** | `205` |
 
 ---
 
@@ -39,5 +39,5 @@ python3 ../solver/solve.py
 
 ## 🚩 Flag
 
-- Status: `- [x] Solved`
-- Flag: `ASIS{c0uPleD_n0nL1n3Ar_Dynam!c5_R3c0vEry_v1A_p0l3s_&_l34st_squ4r3s!!}`
+- Status: `- [ ] Solved`
+- Flag: `FLAG{...}`

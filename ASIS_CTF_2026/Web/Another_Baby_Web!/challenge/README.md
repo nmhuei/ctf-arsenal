@@ -3,8 +3,8 @@
 | Property | Value |
 | :--- | :--- |
 | **Category** | `Web` |
-| **Points** | `150` |
-| **Solves** | 28 |
+| **Points** | `51` |
+| **Solves** | 108 |
 | **Tags** | `Web`, `Baby 👶` |
 
 ## 🔌 Connection / Service

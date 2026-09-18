@@ -2,7 +2,7 @@
   "id": 70,
   "name": "Collector",
   "category": "Reverse",
-  "points": 500,
+  "points": 423,
   "author": null,
   "tags": [
     "Reverse"
@@ -10,17 +10,27 @@
   "hints": [],
   "connection_info": null,
   "solved_by_me": false,
-  "solves_count": 0,
+  "solves_count": 4,
   "submit_endpoint": null,
   "instance_info": {},
   "downloaded_files": [
     {
       "url": "https://asisctf.com/tasks/Collector_74c92ebeb1228fa20a858574384df47c66656f89.txz",
       "name": "Collector_74c92ebeb1228fa20a858574384df47c66656f89.txz",
-      "saved_path": null,
-      "success": false,
+      "saved_path": "/home/light/Workspace/CTF/ASIS_CTF_2026/Reverse/Collector/challenge/Collector_74c92ebeb1228fa20a858574384df47c66656f89.txz",
+      "success": true,
       "source": "platform_attachment",
-      "message": "Tải file thất bại (HTTP status, lỗi kết nối hoặc nội dung HTML)"
+      "message": "Đã tải trực tiếp thành công",
+      "verification": {
+        "etag": "\"6a9314c1-41488\"",
+        "final_url": "https://asisctf.com/tasks/Collector_74c92ebeb1228fa20a858574384df47c66656f89.txz",
+        "last_modified": "Sat, 29 Aug 2026 17:20:01 GMT",
+        "schema_version": 1,
+        "sha256": null,
+        "size": 267400,
+        "url": "https://asisctf.com/tasks/Collector_74c92ebeb1228fa20a858574384df47c66656f89.txz",
+        "verified_at": "2026-09-17T05:56:04Z"
+      }
     }
   ],
   "raw": {
@@ -30,11 +40,36 @@
     "points": 500,
     "published_at": "2026-08-29 18:00:00",
     "fixedPoints": 19,
-    "solves_count": 0,
-    "first_n_solves": [],
+    "solves_count": 4,
+    "first_n_solves": [
+      {
+        "team_id": 2457,
+        "team_name": "세상에 이란일이",
+        "challenge_name": "Collector",
+        "challenge_id": 70,
+        "solved_at": "2026-08-29 22:23:57",
+        "time_to_solve": "0d 04h 23m 57s"
+      },
+      {
+        "team_id": 2616,
+        "team_name": "오이시",
+        "challenge_name": "Collector",
+        "challenge_id": 70,
+        "solved_at": "2026-08-30 01:45:32",
+        "time_to_solve": "0d 07h 45m 32s"
+      },
+      {
+        "team_id": 1922,
+        "team_name": "TeamH4C",
+        "challenge_name": "Collector",
+        "challenge_id": 70,
+        "solved_at": "2026-08-30 01:48:04",
+        "time_to_solve": "0d 07h 48m 4s"
+      }
+    ],
     "SolvedByCurrentTeam": false,
-    "dynamic_points": 500,
-    "rewardable_dynamic_points": 500,
+    "dynamic_points": 423,
+    "rewardable_dynamic_points": 398,
     "chartData": [
       0,
       0,
@@ -43,9 +78,9 @@
       0,
       0,
       0,
-      0,
-      0,
-      0
+      1,
+      2,
+      1
     ],
     "categories": [
       {
@@ -59,6 +94,39 @@
         }
       }
     ],
-    "solves": []
+    "solves": [
+      {
+        "id": 5394,
+        "user_id": 4010,
+        "team_id": 2457,
+        "challenge_id": 70,
+        "created_at": "2026-08-29T22:23:57.000000Z",
+        "updated_at": "2026-08-29T22:23:57.000000Z"
+      },
+      {
+        "id": 5862,
+        "user_id": 4332,
+        "team_id": 2616,
+        "challenge_id": 70,
+        "created_at": "2026-08-30T01:45:32.000000Z",
+        "updated_at": "2026-08-30T01:45:32.000000Z"
+      },
+      {
+        "id": 5871,
+        "user_id": 4023,
+        "team_id": 1922,
+        "challenge_id": 70,
+        "created_at": "2026-08-30T01:48:04.000000Z",
+        "updated_at": "2026-08-30T01:48:04.000000Z"
+      },
+      {
+        "id": 6312,
+        "user_id": 2501,
+        "team_id": 1622,
+        "challenge_id": 70,
+        "created_at": "2026-08-30T04:32:59.000000Z",
+        "updated_at": "2026-08-30T04:32:59.000000Z"
+      }
+    ]
   }
 }

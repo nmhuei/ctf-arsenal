@@ -3,8 +3,8 @@
 | Property | Value |
 | :--- | :--- |
 | **Category** | `Pwnable` |
-| **Points** | `53` |
-| **Solves** | 102 |
+| **Points** | `36` |
+| **Solves** | 187 |
 | **Tags** | `Pwnable` |
 
 ## 🔌 Connection / Service

@@ -3,9 +3,9 @@
 | Property | Value |
 | :--- | :--- |
 | **Category** | `Reverse` |
-| **Points** | `500` |
+| **Points** | `45` |
 | **Author** | `-` |
-| **Solves** | `1` |
+| **Solves** | `131` |
 
 ---
 

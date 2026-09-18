@@ -1,0 +1,74 @@
+{
+  "id": 102,
+  "name": "Echoes",
+  "category": "Hardware",
+  "points": 500,
+  "author": null,
+  "tags": [
+    "Hardware"
+  ],
+  "hints": [],
+  "connection_info": null,
+  "solved_by_me": false,
+  "solves_count": 0,
+  "submit_endpoint": null,
+  "instance_info": {},
+  "downloaded_files": [
+    {
+      "url": "https://asisctf.com/tasks/Echoes_a6abb166d71df1315e611540520dde97d6811a75.txz",
+      "name": "Echoes_a6abb166d71df1315e611540520dde97d6811a75.txz",
+      "saved_path": "/home/light/Workspace/CTF/ASIS_CTF_2026/Hardware/Echoes/challenge/Echoes_a6abb166d71df1315e611540520dde97d6811a75.txz",
+      "success": true,
+      "source": "platform_attachment",
+      "message": "Đã tải trực tiếp thành công",
+      "verification": {
+        "etag": "\"6a931764-e070\"",
+        "final_url": "https://asisctf.com/tasks/Echoes_a6abb166d71df1315e611540520dde97d6811a75.txz",
+        "last_modified": "Sat, 29 Aug 2026 17:31:16 GMT",
+        "schema_version": 1,
+        "sha256": null,
+        "size": 57456,
+        "url": "https://asisctf.com/tasks/Echoes_a6abb166d71df1315e611540520dde97d6811a75.txz",
+        "verified_at": "2026-09-17T05:56:08Z"
+      }
+    }
+  ],
+  "raw": {
+    "id": 102,
+    "name": "Echoes",
+    "description": "<p>Two <a href=\"/tasks/Echoes_a6abb166d71df1315e611540520dde97d6811a75.txz\"><strong>chips</strong></a> tried to talk at once. Now their argument is your problem.</p>\n<p><strong>Hint:</strong> Echoes do not speak one segment at a time.</p>\n<p>The three PRBS reference intervals reveal a five-step history in the analog signal. Use this learned model to decode the two unknown intervals as a path through four states:</p>\n<p><code>NONE, A, B, and AB</code></p>\n<p>When you have stream candidates, bind them with:</p>\n<p>stream_a + stream_b + public_nonce</p>\n<p>Then verify the HMAC tag stored in <code>eeprom.bin</code>.</p>\n<p>All required files are already provided: <code>session.ecap</code>, <code>transaction.json</code>, and <code>eeprom.bin</code>.</p>\n",
+    "points": 500,
+    "published_at": "2026-08-29 19:00:00",
+    "fixedPoints": 19,
+    "solves_count": 0,
+    "first_n_solves": [],
+    "SolvedByCurrentTeam": false,
+    "dynamic_points": 500,
+    "rewardable_dynamic_points": 500,
+    "chartData": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "categories": [
+      {
+        "id": 7,
+        "name": "Hardware",
+        "created_at": "2025-09-09T05:37:59.000000Z",
+        "updated_at": "2025-09-09T05:37:59.000000Z",
+        "pivot": {
+          "challenge_id": 102,
+          "category_id": 7
+        }
+      }
+    ],
+    "solves": []
+  }
+}

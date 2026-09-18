@@ -3,9 +3,9 @@
 | Property | Value |
 | :--- | :--- |
 | **Category** | `Hardware` |
-| **Points** | `102` |
+| **Points** | `52` |
 | **Author** | `-` |
-| **Solves** | `45` |
+| **Solves** | `105` |
 
 ---
 
@@ -38,5 +38,5 @@ python3 ../solver/solve.py
 
 ## 🚩 Flag
 
-- Status: `- [x] Solved`
+- Status: `- [ ] Solved`
 - Flag: `FLAG{...}`

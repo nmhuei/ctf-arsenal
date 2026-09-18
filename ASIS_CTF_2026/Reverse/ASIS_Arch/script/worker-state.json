@@ -1,0 +1,30 @@
+{
+  "state": "completed",
+  "phase": "completed",
+  "error_code": null,
+  "message": "Worker finished and reported local verification.",
+  "pid": 106226,
+  "exit_code": 0,
+  "ended_at": "2026-09-17T07:28:19Z",
+  "filter_detected": false,
+  "agy_timeout_detected": false,
+  "last_output": "TF_2026/Reverse/ASIS_Arch/flag.txt)\\n- Full technical writeup: [`writeup/README.md`](file:///home/light/Workspace/CTF/ASIS_CTF_2026/Reverse/ASIS_Arch/writeup/README.md)\\n- Local verification report: [`script/worker-report.json`](file:///home/light/Workspace/CTF/ASIS_CTF_2026/Reverse/ASIS_Arch/script/worker-report.json)\\n\",\"duration_seconds\":417.374221147,\"num_turns\":1,\"usage\":{\"input_tokens\":817959,\"output_tokens\":76214,\"thinking_tokens\":28217,\"cache_read_tokens\":5794258,\"total_tokens\":894173}}}",
+  "display_id": 22,
+  "challenge_id": 69,
+  "updated_at": "2026-09-17T07:28:19Z",
+  "started_at": "2026-09-17T07:21:14Z",
+  "heartbeat_at": "2026-09-17T07:28:14Z",
+  "command": [
+    "/home/light/.local/bin/agy",
+    "--mode",
+    "accept-edits",
+    "--dangerously-skip-permissions",
+    "--output-format",
+    "stream-json",
+    "--print-timeout",
+    "3660s",
+    "--print"
+  ],
+  "solver_mtime_ns_before": 1789624563260325556,
+  "candidate_flag": "ASIS{test}"
+}

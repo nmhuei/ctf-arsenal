@@ -1,0 +1,4 @@
+{
+  "local_verification": "passed",
+  "summary": "Reversed the custom ASISARCH VM architecture and instruction decoding in qemu-asisarch. Reconstructed the full 26-opcode ISA including custom S-box substitutions, PC/register decoding, arithmetic/logical operations, and memory access. Identified the 10 iterations of a 3-layer cipher (S-box + key XOR, cyclic modular addition diffusion, cellular rotation diffusion) verifying the 44-byte input against target values at 0x7cdb. Inverted all 3 layers algebraically and recovered the exact flag: ASIS{M1ddL3_3nd14n_N1bbL35_M4k3_Q3MU_D122y!}. Verified execution directly with qemu-asisarch emulator returning Access Granted."
+}

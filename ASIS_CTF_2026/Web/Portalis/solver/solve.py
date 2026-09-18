@@ -1,17 +1,25 @@
 #!/usr/bin/env python3
 # Solution for: Portalis (Web)
+import argparse
 import requests
 import re
 
-TARGET_URL = "http://91.107.189.166:3000"
-session = requests.Session()
+LOCAL_URL = "http://127.0.0.1:8000"
 
-def solve():
-    print(f"[*] Attacking: {TARGET_URL}")
-    resp = session.get(TARGET_URL)
+def parse_args():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--url', help='Remote URL; omitted means the local harness')
+    parser.add_argument('--remote', metavar='HOST:PORT', help='Optional TCP adapter')
+    return parser.parse_args()
+
+def solve(options):
+    target_url = options.url or LOCAL_URL
+    session = requests.Session()
+    print(f"[*] Testing: {target_url}")
+    resp = session.get(target_url)
     print(f"[*] Status: {resp.status_code}")
 
     # TODO: Exploit logic here
 
 if __name__ == '__main__':
-    solve()
+    solve(parse_args())
