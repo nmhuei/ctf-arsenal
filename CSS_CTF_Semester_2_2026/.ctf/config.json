@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "auto_sync": {
+    "enabled": false,
+    "mode": "manual",
+    "policy": {
+      "notices": false,
+      "scoreboard": false,
+      "challenge_rescan": false
+    },
+    "intervals_sec": {
+      "notices": 15,
+      "scoreboard": 60,
+      "challenges": 120,
+      "keepalive": 60
+    },
+    "grace_seconds": 300,
+    "auto_exit_on_end": true
+  }
+}

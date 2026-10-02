@@ -1,0 +1,1176 @@
+{
+  "ctf_info": {
+    "title": "CSS CTF Semester 2 2026",
+    "url": "https://ctf.cybersecurity.sydney",
+    "platform": "ctfd",
+    "user": "SuperBQA",
+    "team": null,
+    "game_id": null,
+    "ctftime_id": 3434,
+    "event_window": {
+      "start": "2026-09-30T06:30:00+00:00",
+      "end": "2026-10-01T22:00:00+00:00",
+      "source": "ctfd:window.init",
+      "confidence": "medium"
+    }
+  },
+  "total_challenges": 31,
+  "total_points": 2666,
+  "categories": {
+    "Welcome": 1,
+    "OSINT": 3,
+    "PWN": 3,
+    "Hardware: Reverse Engineering": 2,
+    "Web": 3,
+    "Misc": 5,
+    "AI/ML Security": 1,
+    "Cryptography": 4,
+    "Forensics": 4,
+    "Steganography": 1,
+    "Blockchain": 2,
+    "Reverse Engineering": 2
+  },
+  "challenges": [
+    {
+      "id": 34,
+      "name": "Welcome to Nexus",
+      "category": "Welcome",
+      "points": 10,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": "CSSCTF{noodle_is_the_best}",
+      "solved_by_me": true,
+      "solves_count": 723,
+      "submit_endpoint": "https://ctf.cybersecurity.sydney/api/v1/challenges/attempt",
+      "instance_info": {},
+      "files": []
+    },
+    {
+      "id": 5,
+      "name": "Dead Faction Servers",
+      "category": "OSINT",
+      "points": 10,
+      "author": null,
+      "tags": [
+        "Beginner"
+      ],
+      "hints": [
+        {
+          "id": 16,
+          "cost": 10,
+          "title": "Hint 1"
+        },
+        {
+          "id": 17,
+          "cost": 10,
+          "title": "Hint 2"
+        },
+        {
+          "id": 18,
+          "cost": 10,
+          "title": "Hint 3"
+        }
+      ],
+      "connection_info": null,
+      "solved_by_me": true,
+      "solves_count": 329,
+      "submit_endpoint": "https://ctf.cybersecurity.sydney/api/v1/challenges/attempt",
+      "instance_info": {},
+      "files": []
+    },
+    {
+      "id": 4,
+      "name": "Kuiper Belt Relay Core",
+      "category": "PWN",
+      "points": 15,
+      "author": null,
+      "tags": [
+        "Beginner"
+      ],
+      "hints": [
+        {
+          "id": 12,
+          "cost": 10,
+          "title": "Hint 1"
+        },
+        {
+          "id": 13,
+          "cost": 10,
+          "title": "Hint 2"
+        },
+        {
+          "id": 14,
+          "cost": 10,
+          "title": "Hint 3"
+        },
+        {
+          "id": 15,
+          "cost": 10,
+          "title": "Hint 4"
+        }
+      ],
+      "connection_info": null,
+      "solved_by_me": true,
+      "solves_count": 191,
+      "submit_endpoint": "https://ctf.cybersecurity.sydney/api/v1/challenges/attempt",
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://ctf.cybersecurity.sydney/files/35de28d2fa72ebafa8961906de91c494/echo.c?token=eyJ1c2VyX2lkIjoxNTE0LCJ0ZWFtX2lkIjo5MDEsImZpbGVfaWQiOjI0fQ.ar4JBw.ht7ppyjXyJMPl7MwavaDIDbhk2A",
+          "name": "echo.c",
+          "saved_path": "/home/light/Workspace/CTF/CSS_CTF_Semester_2_2026/PWN/Kuiper_Belt_Relay_Core/challenge/echo.c",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"190684f682f897288d4a4ff632ae9ed2\"",
+            "final_url": "https://storage.googleapis.com/css-ctf-2026-ctfd-storage/35de28d2fa72ebafa8961906de91c494/echo.c?response-content-disposition=attachment%3B%20filename%3Decho.c&response-cache-control=max-age%3D3600&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=GOOG1ED6D36XTQWHIJ3OCUSNVSF35ELGUTBF6O3HLTECT6HPQAG64J3CQPHMO%2F20261001%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20261001T070000Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=51b60aec9eed2fb95be3910e56600040bdacbeb3455d79f4e3066a833d2c0860",
+            "last_modified": "Tue, 29 Sep 2026 11:26:53 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 774,
+            "url": "https://ctf.cybersecurity.sydney/files/35de28d2fa72ebafa8961906de91c494/echo.c?token=eyJ1c2VyX2lkIjoxNTE0LCJ0ZWFtX2lkIjo5MDEsImZpbGVfaWQiOjI0fQ.ar4JBw.ht7ppyjXyJMPl7MwavaDIDbhk2A",
+            "verified_at": "2026-10-01T07:17:34Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "name": "Lamp Drill",
+      "category": "Hardware: Reverse Engineering",
+      "points": 15,
+      "author": null,
+      "tags": [
+        "Beginner"
+      ],
+      "hints": [
+        {
+          "id": 20,
+          "cost": 5,
+          "title": "These artists may help"
+        },
+        {
+          "id": 25,
+          "cost": 15,
+          "title": "Logical"
+        }
+      ],
+      "connection_info": null,
+      "solved_by_me": true,
+      "solves_count": 486,
+      "submit_endpoint": "https://ctf.cybersecurity.sydney/api/v1/challenges/attempt",
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://ctf.cybersecurity.sydney/files/ea637225db4016d9a5a1b2d4e844f49e/lampDrill.png?token=eyJ1c2VyX2lkIjoxNTE0LCJ0ZWFtX2lkIjo5MDEsImZpbGVfaWQiOjM3fQ.ar3NQQ.y81zzQosjlkN9O_YAFx2FhPdYLU",
+          "name": "lampDrill.png",
+          "saved_path": "/home/light/Workspace/CTF/CSS_CTF_Semester_2_2026/Hardware_Reverse_Engineering/Lamp_Drill/challenge/lampDrill.png",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"cb463984659349dffccf5f471c87588f\"",
+            "final_url": "https://storage.googleapis.com/css-ctf-2026-ctfd-storage/ea637225db4016d9a5a1b2d4e844f49e/lampDrill.png?response-content-disposition=attachment%3B%20filename%3DlampDrill.png&response-cache-control=max-age%3D3600&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=GOOG1ED6D36XTQWHIJ3OCUSNVSF35ELGUTBF6O3HLTECT6HPQAG64J3CQPHMO%2F20261001%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20261001T030000Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=959688968feb11e40970e4289468dee137161938c7a170a175733b8d7806698c",
+            "last_modified": "Tue, 29 Sep 2026 21:39:21 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 99758,
+            "url": "https://ctf.cybersecurity.sydney/files/ea637225db4016d9a5a1b2d4e844f49e/lampDrill.png?token=eyJ1c2VyX2lkIjoxNTE0LCJ0ZWFtX2lkIjo5MDEsImZpbGVfaWQiOjM3fQ.ar3NQQ.y81zzQosjlkN9O_YAFx2FhPdYLU",
+            "verified_at": "2026-10-01T03:03:07Z"
+          }
+        },
+        {
+          "url": "https://ctf.cybersecurity.sydney/files/c06c8cff2e7b6e9c31ca6bc880e982b9/lampDrill.svg?token=eyJ1c2VyX2lkIjoxNTE0LCJ0ZWFtX2lkIjo5MDEsImZpbGVfaWQiOjM4fQ.ar3NQQ.VMvbCQ25aK94JB_m2_cc9x914i4",
+          "name": "lampDrill.svg",
+          "saved_path": "/home/light/Workspace/CTF/CSS_CTF_Semester_2_2026/Hardware_Reverse_Engineering/Lamp_Drill/challenge/lampDrill.svg",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"2d72d18b13f0fac2c8a3c6df62c88b70\"",
+            "final_url": "https://storage.googleapis.com/css-ctf-2026-ctfd-storage/c06c8cff2e7b6e9c31ca6bc880e982b9/lampDrill.svg?response-content-disposition=attachment%3B%20filename%3DlampDrill.svg&response-cache-control=max-age%3D3600&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=GOOG1ED6D36XTQWHIJ3OCUSNVSF35ELGUTBF6O3HLTECT6HPQAG64J3CQPHMO%2F20261001%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20261001T030000Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=f13c47b6a1418265647261b9163a49380c3d0f65a1f32d7656f65738ea5e44d6",
+            "last_modified": "Tue, 29 Sep 2026 21:39:22 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 54671,
+            "url": "https://ctf.cybersecurity.sydney/files/c06c8cff2e7b6e9c31ca6bc880e982b9/lampDrill.svg?token=eyJ1c2VyX2lkIjoxNTE0LCJ0ZWFtX2lkIjo5MDEsImZpbGVfaWQiOjM4fQ.ar3NQQ.VMvbCQ25aK94JB_m2_cc9x914i4",
+            "verified_at": "2026-10-01T03:03:08Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "name": "Server Juice",
+      "category": "OSINT",
+      "points": 15,
+      "author": null,
+      "tags": [
+        "Beginner"
+      ],
+      "hints": [
+        {
+          "id": 19,
+          "cost": 10,
+          "title": "Social",
+          "content": "instagram.com/cybersecuritysydney\n\nHave a scroll..."
+        }
+      ],
+      "connection_info": null,
+      "solved_by_me": true,
+      "solves_count": 296,
+      "submit_endpoint": "https://ctf.cybersecurity.sydney/api/v1/challenges/attempt",
+      "instance_info": {},
+      "files": []
+    },
+    {
+      "id": 38,
+      "name": "Welcome to Star City",
+      "category": "Web",
+      "points": 15,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": true,
+      "solves_count": 572,
+      "submit_endpoint": "https://ctf.cybersecurity.sydney/api/v1/challenges/attempt",
+      "instance_info": {},
+      "files": []
+    },
+    {
+      "id": 22,
+      "name": "A Star Trail 1",
+      "category": "Misc",
+      "points": 20,
+      "author": null,
+      "tags": [
+        "Beginner"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": true,
+      "solves_count": 411,
+      "submit_endpoint": "https://ctf.cybersecurity.sydney/api/v1/challenges/attempt",
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://ctf.cybersecurity.sydney/files/4296729130de8a42450e4adaa7564447/A_Star_Trail.png?token=eyJ1c2VyX2lkIjoxNTE0LCJ0ZWFtX2lkIjo5MDEsImZpbGVfaWQiOjQwfQ.ar3NQg.z5lYbyxmBNuwfcALb7ynHe-SBCw",
+          "name": "A_Star_Trail.png",
+          "saved_path": "/home/light/Workspace/CTF/CSS_CTF_Semester_2_2026/Misc/A_Star_Trail_1/challenge/A_Star_Trail.png",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"62ce48a8b359aa0166bdea5206719592\"",
+            "final_url": "https://storage.googleapis.com/css-ctf-2026-ctfd-storage/4296729130de8a42450e4adaa7564447/A_Star_Trail.png?response-content-disposition=attachment%3B%20filename%3DA_Star_Trail.png&response-cache-control=max-age%3D3600&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=GOOG1ED6D36XTQWHIJ3OCUSNVSF35ELGUTBF6O3HLTECT6HPQAG64J3CQPHMO%2F20261001%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20261001T030000Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=9cdc6d03f755656822f412021cab2cfceefeae08fdbcacd72ac6d10260f7ec23",
+            "last_modified": "Wed, 30 Sep 2026 01:48:42 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 597693,
+            "url": "https://ctf.cybersecurity.sydney/files/4296729130de8a42450e4adaa7564447/A_Star_Trail.png?token=eyJ1c2VyX2lkIjoxNTE0LCJ0ZWFtX2lkIjo5MDEsImZpbGVfaWQiOjQwfQ.ar3NQg.z5lYbyxmBNuwfcALb7ynHe-SBCw",
+            "verified_at": "2026-10-01T03:03:11Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": 47,
+      "name": "After hours...",
+      "category": "AI/ML Security",
+      "points": 20,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": "http://34.116.80.78:8000",
+      "solved_by_me": true,
+      "solves_count": 371,
+      "submit_endpoint": "https://ctf.cybersecurity.sydney/api/v1/challenges/attempt",
+      "instance_info": {},
+      "files": []
+    },
+    {
+      "id": 3,
+      "name": "Dockside Ticket Office",
+      "category": "PWN",
+      "points": 25,
+      "author": null,
+      "tags": [
+        "Beginner"
+      ],
+      "hints": [
+        {
+          "id": 6,
+          "cost": 20,
+          "title": ""
+        }
+      ],
+      "connection_info": null,
+      "solved_by_me": true,
+      "solves_count": 332,
+      "submit_endpoint": "https://ctf.cybersecurity.sydney/api/v1/challenges/attempt",
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://ctf.cybersecurity.sydney/files/a247dc1f0c693652e51c14b2b21a139c/dockside_ticket?token=eyJ1c2VyX2lkIjoxNTE0LCJ0ZWFtX2lkIjo5MDEsImZpbGVfaWQiOjV9.ar3NQw.m99Wdygrul5awz61aks4KqHB2EQ",
+          "name": "dockside_ticket",
+          "saved_path": "/home/light/Workspace/CTF/CSS_CTF_Semester_2_2026/PWN/Dockside_Ticket_Office/challenge/dockside_ticket",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"5821c8ab11f49402521ae9022cb3f001\"",
+            "final_url": "https://storage.googleapis.com/css-ctf-2026-ctfd-storage/a247dc1f0c693652e51c14b2b21a139c/dockside_ticket?response-content-disposition=attachment%3B%20filename%3Ddockside_ticket&response-cache-control=max-age%3D3600&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=GOOG1ED6D36XTQWHIJ3OCUSNVSF35ELGUTBF6O3HLTECT6HPQAG64J3CQPHMO%2F20261001%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20261001T030000Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=f10512850fa289f791cf9b5ec3768d006f79bfd4286cca2fd34096fa6261414e",
+            "last_modified": "Mon, 28 Sep 2026 08:16:10 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 16664,
+            "url": "https://ctf.cybersecurity.sydney/files/a247dc1f0c693652e51c14b2b21a139c/dockside_ticket?token=eyJ1c2VyX2lkIjoxNTE0LCJ0ZWFtX2lkIjo5MDEsImZpbGVfaWQiOjV9.ar3NQw.m99Wdygrul5awz61aks4KqHB2EQ",
+            "verified_at": "2026-10-01T03:03:07Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "name": "Chrono I",
+      "category": "Cryptography",
+      "points": 25,
+      "author": null,
+      "tags": [
+        "Beginner"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": true,
+      "solves_count": 538,
+      "submit_endpoint": "https://ctf.cybersecurity.sydney/api/v1/challenges/attempt",
+      "instance_info": {},
+      "files": []
+    },
+    {
+      "id": 48,
+      "name": "2(-1) Senses",
+      "category": "OSINT",
+      "points": 30,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": true,
+      "solves_count": 243,
+      "submit_endpoint": "https://ctf.cybersecurity.sydney/api/v1/challenges/attempt",
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://ctf.cybersecurity.sydney/files/51f745f04d5daba773a082d637dba41d/2senses_puzzle.wav?token=eyJ1c2VyX2lkIjoxNTE0LCJ0ZWFtX2lkIjo5MDEsImZpbGVfaWQiOjU1fQ.ar3NRA.G8_OKS_0GuT7EzFYxLCpkL3l8Bg",
+          "name": "2senses_puzzle.wav",
+          "saved_path": "/home/light/Workspace/CTF/CSS_CTF_Semester_2_2026/OSINT/2(-1)_Senses/challenge/2senses_puzzle.wav",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"32be81c8f7fca2c2929b7bd3274fbc5c\"",
+            "final_url": "https://storage.googleapis.com/css-ctf-2026-ctfd-storage/51f745f04d5daba773a082d637dba41d/2senses_puzzle.wav?response-content-disposition=attachment%3B%20filename%3D2senses_puzzle.wav&response-cache-control=max-age%3D3600&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=GOOG1ED6D36XTQWHIJ3OCUSNVSF35ELGUTBF6O3HLTECT6HPQAG64J3CQPHMO%2F20261001%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20261001T030000Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=3cc70be54aa06d748662233fb5dca2c060847aab3f90162816afedfb0f181771",
+            "last_modified": "Wed, 30 Sep 2026 17:14:40 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 1499602,
+            "url": "https://ctf.cybersecurity.sydney/files/51f745f04d5daba773a082d637dba41d/2senses_puzzle.wav?token=eyJ1c2VyX2lkIjoxNTE0LCJ0ZWFtX2lkIjo5MDEsImZpbGVfaWQiOjU1fQ.ar3NRA.G8_OKS_0GuT7EzFYxLCpkL3l8Bg",
+            "verified_at": "2026-10-01T03:03:19Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "name": "Echoes of the Relay",
+      "category": "Forensics",
+      "points": 33,
+      "author": null,
+      "tags": [
+        "Beginner"
+      ],
+      "hints": [
+        {
+          "id": 1,
+          "cost": 10,
+          "title": ""
+        },
+        {
+          "id": 2,
+          "cost": 15,
+          "title": ""
+        }
+      ],
+      "connection_info": null,
+      "solved_by_me": true,
+      "solves_count": 344,
+      "submit_endpoint": "https://ctf.cybersecurity.sydney/api/v1/challenges/attempt",
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://ctf.cybersecurity.sydney/files/2c95075251d7db1ac211a9744ce181c8/relay_backup.img?token=eyJ1c2VyX2lkIjoxNTE0LCJ0ZWFtX2lkIjo5MDEsImZpbGVfaWQiOjMzfQ.ar3NRA.kxZifX8vNupBivzHWdPsklJpIVM",
+          "name": "relay_backup.img",
+          "saved_path": "/home/light/Workspace/CTF/CSS_CTF_Semester_2_2026/Forensics/Echoes_of_the_Relay/challenge/relay_backup.img",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"78c3344f7f958c8d862f31115b23d0ed-4\"",
+            "final_url": "https://storage.googleapis.com/css-ctf-2026-ctfd-storage/2c95075251d7db1ac211a9744ce181c8/relay_backup.img?response-content-disposition=attachment%3B%20filename%3Drelay_backup.img&response-cache-control=max-age%3D3600&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=GOOG1ED6D36XTQWHIJ3OCUSNVSF35ELGUTBF6O3HLTECT6HPQAG64J3CQPHMO%2F20261001%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20261001T030000Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=e3f765b0602afc7fe227029072f7c248775a78b44c28875c4412116c79eded18",
+            "last_modified": "Tue, 29 Sep 2026 20:09:09 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 33554432,
+            "url": "https://ctf.cybersecurity.sydney/files/2c95075251d7db1ac211a9744ce181c8/relay_backup.img?token=eyJ1c2VyX2lkIjoxNTE0LCJ0ZWFtX2lkIjo5MDEsImZpbGVfaWQiOjMzfQ.ar3NRA.kxZifX8vNupBivzHWdPsklJpIVM",
+            "verified_at": "2026-10-01T03:04:16Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "name": "Colour Shift",
+      "category": "Steganography",
+      "points": 45,
+      "author": null,
+      "tags": [
+        "Beginner"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": true,
+      "solves_count": 421,
+      "submit_endpoint": "https://ctf.cybersecurity.sydney/api/v1/challenges/attempt",
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://ctf.cybersecurity.sydney/files/a84573e82068e20a9fc175a17f511325/colorshiftctf.bmp?token=eyJ1c2VyX2lkIjoxNTE0LCJ0ZWFtX2lkIjo5MDEsImZpbGVfaWQiOjE3fQ.ar3NRQ.bKqH0cPaUp-Cis0F-zgBAARPmDo",
+          "name": "colorshiftctf.bmp",
+          "saved_path": "/home/light/Workspace/CTF/CSS_CTF_Semester_2_2026/Steganography/Colour_Shift/challenge/colorshiftctf.bmp",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"27d4d1e26eed548d2ff1d66a0580cbf7\"",
+            "final_url": "https://storage.googleapis.com/css-ctf-2026-ctfd-storage/a84573e82068e20a9fc175a17f511325/colorshiftctf.bmp?response-content-disposition=attachment%3B%20filename%3Dcolorshiftctf.bmp&response-cache-control=max-age%3D3600&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=GOOG1ED6D36XTQWHIJ3OCUSNVSF35ELGUTBF6O3HLTECT6HPQAG64J3CQPHMO%2F20261001%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20261001T030000Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=2e521153edc83cdb152f32bd9418c07963a5bc02eb0133bb5192eaf21bf6cc02",
+            "last_modified": "Mon, 28 Sep 2026 08:55:46 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 1083738,
+            "url": "https://ctf.cybersecurity.sydney/files/a84573e82068e20a9fc175a17f511325/colorshiftctf.bmp?token=eyJ1c2VyX2lkIjoxNTE0LCJ0ZWFtX2lkIjo5MDEsImZpbGVfaWQiOjE3fQ.ar3NRQ.bKqH0cPaUp-Cis0F-zgBAARPmDo",
+            "verified_at": "2026-10-01T03:03:18Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "name": "Secret Supernovas",
+      "category": "Web",
+      "points": 50,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": true,
+      "solves_count": 432,
+      "submit_endpoint": "https://ctf.cybersecurity.sydney/api/v1/challenges/attempt",
+      "instance_info": {},
+      "files": []
+    },
+    {
+      "id": 44,
+      "name": "Gateway",
+      "category": "Blockchain",
+      "points": 50,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": "nc 34.116.80.78 31337",
+      "solved_by_me": true,
+      "solves_count": 166,
+      "submit_endpoint": "https://ctf.cybersecurity.sydney/api/v1/challenges/attempt",
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://ctf.cybersecurity.sydney/files/f5b697622131ca2408616d405b9b685b/Gate.sol?token=eyJ1c2VyX2lkIjoxNTE0LCJ0ZWFtX2lkIjo5MDEsImZpbGVfaWQiOjUwfQ.ar4JCg.zk4yMUwOH77qdkEt5sNmqPlE6mE",
+          "name": "Gate.sol",
+          "saved_path": "/home/light/Workspace/CTF/CSS_CTF_Semester_2_2026/Blockchain/Gateway/challenge/Gate.sol",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"afba93b31ce88e086cce60588d86adfd\"",
+            "final_url": "https://storage.googleapis.com/css-ctf-2026-ctfd-storage/f5b697622131ca2408616d405b9b685b/Gate.sol?response-content-disposition=attachment%3B%20filename%3DGate.sol&response-cache-control=max-age%3D3600&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=GOOG1ED6D36XTQWHIJ3OCUSNVSF35ELGUTBF6O3HLTECT6HPQAG64J3CQPHMO%2F20261001%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20261001T070000Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=b21d674bbbe34b12b57bc601bf7131effe1f93e810919abe4fa1c16765e3466e",
+            "last_modified": "Wed, 30 Sep 2026 16:42:38 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 1202,
+            "url": "https://ctf.cybersecurity.sydney/files/f5b697622131ca2408616d405b9b685b/Gate.sol?token=eyJ1c2VyX2lkIjoxNTE0LCJ0ZWFtX2lkIjo5MDEsImZpbGVfaWQiOjUwfQ.ar4JCg.zk4yMUwOH77qdkEt5sNmqPlE6mE",
+            "verified_at": "2026-10-01T07:17:34Z"
+          }
+        },
+        {
+          "url": "https://ctf.cybersecurity.sydney/files/3f3cf0f07962547b71c16837944420e0/Setup.sol?token=eyJ1c2VyX2lkIjoxNTE0LCJ0ZWFtX2lkIjo5MDEsImZpbGVfaWQiOjUxfQ.ar4JCg.n6wGJpeaajNI0H3EDrM2W6ixL78",
+          "name": "Setup.sol",
+          "saved_path": "/home/light/Workspace/CTF/CSS_CTF_Semester_2_2026/Blockchain/Gateway/challenge/Setup.sol",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"67cbef4c0333f9eb6896bdd4181b6d4b\"",
+            "final_url": "https://storage.googleapis.com/css-ctf-2026-ctfd-storage/3f3cf0f07962547b71c16837944420e0/Setup.sol?response-content-disposition=attachment%3B%20filename%3DSetup.sol&response-cache-control=max-age%3D3600&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=GOOG1ED6D36XTQWHIJ3OCUSNVSF35ELGUTBF6O3HLTECT6HPQAG64J3CQPHMO%2F20261001%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20261001T070000Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=5bc9d243ccce39bee2d62098345af86e67b62fe666902129406f0aff89cf1802",
+            "last_modified": "Wed, 30 Sep 2026 16:42:39 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 307,
+            "url": "https://ctf.cybersecurity.sydney/files/3f3cf0f07962547b71c16837944420e0/Setup.sol?token=eyJ1c2VyX2lkIjoxNTE0LCJ0ZWFtX2lkIjo5MDEsImZpbGVfaWQiOjUxfQ.ar4JCg.n6wGJpeaajNI0H3EDrM2W6ixL78",
+            "verified_at": "2026-10-01T07:17:35Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": 46,
+      "name": "prince walk",
+      "category": "Reverse Engineering",
+      "points": 50,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": true,
+      "solves_count": 306,
+      "submit_endpoint": "https://ctf.cybersecurity.sydney/api/v1/challenges/attempt",
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://ctf.cybersecurity.sydney/files/832c1108ac69fdd3087d9ae910c9bcf9/prince_walk?token=eyJ1c2VyX2lkIjoxNTE0LCJ0ZWFtX2lkIjo5MDEsImZpbGVfaWQiOjU0fQ.ar3NRQ.MJwquYn20KGM52pGBJQTVVaAZWA",
+          "name": "prince_walk",
+          "saved_path": "/home/light/Workspace/CTF/CSS_CTF_Semester_2_2026/Reverse_Engineering/prince_walk/challenge/prince_walk",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"472fec7789b791ec9234ce2cdd7216ef\"",
+            "final_url": "https://storage.googleapis.com/css-ctf-2026-ctfd-storage/832c1108ac69fdd3087d9ae910c9bcf9/prince_walk?response-content-disposition=attachment%3B%20filename%3Dprince_walk&response-cache-control=max-age%3D3600&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=GOOG1ED6D36XTQWHIJ3OCUSNVSF35ELGUTBF6O3HLTECT6HPQAG64J3CQPHMO%2F20261001%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20261001T030000Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=f2ba4bff0f79daeb20d51a411e02b508f20728237cd9953ae4dd86234bd34838",
+            "last_modified": "Wed, 30 Sep 2026 17:10:13 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 92384,
+            "url": "https://ctf.cybersecurity.sydney/files/832c1108ac69fdd3087d9ae910c9bcf9/prince_walk?token=eyJ1c2VyX2lkIjoxNTE0LCJ0ZWFtX2lkIjo5MDEsImZpbGVfaWQiOjU0fQ.ar3NRQ.MJwquYn20KGM52pGBJQTVVaAZWA",
+            "verified_at": "2026-10-01T03:03:15Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": 49,
+      "name": "Maintenance Log",
+      "category": "PWN",
+      "points": 50,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": "nc 34.116.80.78 7312",
+      "solved_by_me": true,
+      "solves_count": 251,
+      "submit_endpoint": "https://ctf.cybersecurity.sydney/api/v1/challenges/attempt",
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://ctf.cybersecurity.sydney/files/1abd705bb6ef8163b56372c46de4ce3b/sector01_handout.zip?token=eyJ1c2VyX2lkIjoxNTE0LCJ0ZWFtX2lkIjo5MDEsImZpbGVfaWQiOjU2fQ.ar3NRg.THrBMCJoDqdNz3_YKtkaOQqTMFM",
+          "name": "sector01_handout.zip",
+          "saved_path": "/home/light/Workspace/CTF/CSS_CTF_Semester_2_2026/PWN/Maintenance_Log/challenge/sector01_handout.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"6b22b8f4b391bb34098877ea30a51d88\"",
+            "final_url": "https://storage.googleapis.com/css-ctf-2026-ctfd-storage/1abd705bb6ef8163b56372c46de4ce3b/sector01_handout.zip?response-content-disposition=attachment%3B%20filename%3Dsector01_handout.zip&response-cache-control=max-age%3D3600&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=GOOG1ED6D36XTQWHIJ3OCUSNVSF35ELGUTBF6O3HLTECT6HPQAG64J3CQPHMO%2F20261001%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20261001T030000Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=0d81965ba5a6540f5d623dc0e27c792082ee861b84114d393a6eb3857b70dd85",
+            "last_modified": "Wed, 30 Sep 2026 17:20:07 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 3493,
+            "url": "https://ctf.cybersecurity.sydney/files/1abd705bb6ef8163b56372c46de4ce3b/sector01_handout.zip?token=eyJ1c2VyX2lkIjoxNTE0LCJ0ZWFtX2lkIjo5MDEsImZpbGVfaWQiOjU2fQ.ar3NRg.THrBMCJoDqdNz3_YKtkaOQqTMFM",
+            "verified_at": "2026-10-01T03:03:17Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "name": "Chimera Vault",
+      "category": "Cryptography",
+      "points": 65,
+      "author": null,
+      "tags": [
+        "Intermediate"
+      ],
+      "hints": [],
+      "connection_info": "nc 34.116.80.78 7334",
+      "solved_by_me": true,
+      "solves_count": 204,
+      "submit_endpoint": "https://ctf.cybersecurity.sydney/api/v1/challenges/attempt",
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://ctf.cybersecurity.sydney/files/80aba4be3d406354e4d76ed49d096cea/chimera_vault.tar.gz?token=eyJ1c2VyX2lkIjoxNTE0LCJ0ZWFtX2lkIjo5MDEsImZpbGVfaWQiOjQ5fQ.ar4JCQ.OafWwWP9ZCTol5x7ojhw5oHlFdY",
+          "name": "chimera_vault.tar.gz",
+          "saved_path": "/home/light/Workspace/CTF/CSS_CTF_Semester_2_2026/Cryptography/Chimera_Vault/challenge/chimera_vault.tar.gz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"342e1228ab5b84483753456a675aa15c\"",
+            "final_url": "https://storage.googleapis.com/css-ctf-2026-ctfd-storage/80aba4be3d406354e4d76ed49d096cea/chimera_vault.tar.gz?response-content-disposition=attachment%3B%20filename%3Dchimera_vault.tar.gz&response-cache-control=max-age%3D3600&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=GOOG1ED6D36XTQWHIJ3OCUSNVSF35ELGUTBF6O3HLTECT6HPQAG64J3CQPHMO%2F20261001%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20261001T070000Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=24fa6638950daeb8b7eb417c96d79c163da6549a61e05d193741473a969742ef",
+            "last_modified": "Wed, 30 Sep 2026 15:58:26 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 2281,
+            "url": "https://ctf.cybersecurity.sydney/files/80aba4be3d406354e4d76ed49d096cea/chimera_vault.tar.gz?token=eyJ1c2VyX2lkIjoxNTE0LCJ0ZWFtX2lkIjo5MDEsImZpbGVfaWQiOjQ5fQ.ar4JCQ.OafWwWP9ZCTol5x7ojhw5oHlFdY",
+            "verified_at": "2026-10-01T07:17:34Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "The False Timeline",
+      "category": "Forensics",
+      "points": 66,
+      "author": null,
+      "tags": [
+        "Intermediate"
+      ],
+      "hints": [
+        {
+          "id": 3,
+          "cost": 30,
+          "title": ""
+        },
+        {
+          "id": 4,
+          "cost": 40,
+          "title": ""
+        },
+        {
+          "id": 5,
+          "cost": 60,
+          "title": ""
+        }
+      ],
+      "connection_info": null,
+      "solved_by_me": true,
+      "solves_count": 420,
+      "submit_endpoint": "https://ctf.cybersecurity.sydney/api/v1/challenges/attempt",
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://ctf.cybersecurity.sydney/files/98c203c6ad86f6620d67907d6d9188d7/nexus_relay.img.xz?token=eyJ1c2VyX2lkIjoxNTE0LCJ0ZWFtX2lkIjo5MDEsImZpbGVfaWQiOjR9.ar3NRw.-sF-Prod0Xx5DQ3Pl6qnq0lnz0g",
+          "name": "nexus_relay.img.xz",
+          "saved_path": "/home/light/Workspace/CTF/CSS_CTF_Semester_2_2026/Forensics/The_False_Timeline/challenge/nexus_relay.img.xz",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"05c1d72a93196b8ea55e933478ee5b87\"",
+            "final_url": "https://storage.googleapis.com/css-ctf-2026-ctfd-storage/98c203c6ad86f6620d67907d6d9188d7/nexus_relay.img.xz?response-content-disposition=attachment%3B%20filename%3Dnexus_relay.img.xz&response-cache-control=max-age%3D3600&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=GOOG1ED6D36XTQWHIJ3OCUSNVSF35ELGUTBF6O3HLTECT6HPQAG64J3CQPHMO%2F20261001%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20261001T030000Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=836efe9b86ffefc8c945279db7d1ea9f408920341a106d71883c2226eda1d6a1",
+            "last_modified": "Mon, 28 Sep 2026 08:16:03 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 23736,
+            "url": "https://ctf.cybersecurity.sydney/files/98c203c6ad86f6620d67907d6d9188d7/nexus_relay.img.xz?token=eyJ1c2VyX2lkIjoxNTE0LCJ0ZWFtX2lkIjo5MDEsImZpbGVfaWQiOjR9.ar3NRw.-sF-Prod0Xx5DQ3Pl6qnq0lnz0g",
+            "verified_at": "2026-10-01T03:03:21Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": 50,
+      "name": "Cloudy with a Chance of Spaceships",
+      "category": "Web",
+      "points": 67,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": true,
+      "solves_count": 113,
+      "submit_endpoint": "https://ctf.cybersecurity.sydney/api/v1/challenges/attempt",
+      "instance_info": {},
+      "files": []
+    },
+    {
+      "id": 24,
+      "name": "A Star Trail 2",
+      "category": "Misc",
+      "points": 75,
+      "author": null,
+      "tags": [
+        "Intermediate"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": true,
+      "solves_count": 336,
+      "submit_endpoint": "https://ctf.cybersecurity.sydney/api/v1/challenges/attempt",
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://ctf.cybersecurity.sydney/files/5d6d2a66ba22ed7822d73f6d03bb50b6/map.zip?token=eyJ1c2VyX2lkIjoxNTE0LCJ0ZWFtX2lkIjo5MDEsImZpbGVfaWQiOjQyfQ.ar58Ag.EncPmlW9bmEkjvQkuThs3jx6lxo",
+          "name": "map.zip",
+          "saved_path": "/home/light/Workspace/CTF/CSS_CTF_Semester_2_2026/Misc/A_Star_Trail_2/challenge/map.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"93ebdd78a656561ec6a82031c3d6d8b8\"",
+            "final_url": "https://storage.googleapis.com/css-ctf-2026-ctfd-storage/5d6d2a66ba22ed7822d73f6d03bb50b6/map.zip?response-content-disposition=attachment%3B%20filename%3Dmap.zip&response-cache-control=max-age%3D3600&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=GOOG1ED6D36XTQWHIJ3OCUSNVSF35ELGUTBF6O3HLTECT6HPQAG64J3CQPHMO%2F20261001%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20261001T150000Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=6424f6690bc6c370892ad91eec15afab07f6d498c7a71708793a7e4866e5cc50",
+            "last_modified": "Wed, 30 Sep 2026 06:31:58 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 2663657,
+            "url": "https://ctf.cybersecurity.sydney/files/5d6d2a66ba22ed7822d73f6d03bb50b6/map.zip?token=eyJ1c2VyX2lkIjoxNTE0LCJ0ZWFtX2lkIjo5MDEsImZpbGVfaWQiOjQyfQ.ar58Ag.EncPmlW9bmEkjvQkuThs3jx6lxo",
+            "verified_at": "2026-10-01T15:28:06Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "name": "FLAPPY BOARD",
+      "category": "Reverse Engineering",
+      "points": 80,
+      "author": null,
+      "tags": [
+        "Intermediate"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": true,
+      "solves_count": 202,
+      "submit_endpoint": "https://ctf.cybersecurity.sydney/api/v1/challenges/attempt",
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://ctf.cybersecurity.sydney/files/ce1791cc0ddcea999587d2f3fc4a8f8c/flappy_board?token=eyJ1c2VyX2lkIjoxNTE0LCJ0ZWFtX2lkIjo5MDEsImZpbGVfaWQiOjIxfQ.ar3NRw.wnFvSYmkmYfmU0m5I1VBG8ZWNuI",
+          "name": "flappy_board",
+          "saved_path": "/home/light/Workspace/CTF/CSS_CTF_Semester_2_2026/Reverse_Engineering/FLAPPY_BOARD/challenge/flappy_board",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"fa394f43db808cfb62f8c49f4c1ed2dc\"",
+            "final_url": "https://storage.googleapis.com/css-ctf-2026-ctfd-storage/ce1791cc0ddcea999587d2f3fc4a8f8c/flappy_board?response-content-disposition=attachment%3B%20filename%3Dflappy_board&response-cache-control=max-age%3D3600&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=GOOG1ED6D36XTQWHIJ3OCUSNVSF35ELGUTBF6O3HLTECT6HPQAG64J3CQPHMO%2F20261001%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20261001T030000Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=b8a01b8a29aacd0653ef275da32d1629196ec63bbd2440e9ad68b4cb25dec277",
+            "last_modified": "Tue, 29 Sep 2026 10:19:51 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 43736,
+            "url": "https://ctf.cybersecurity.sydney/files/ce1791cc0ddcea999587d2f3fc4a8f8c/flappy_board?token=eyJ1c2VyX2lkIjoxNTE0LCJ0ZWFtX2lkIjo5MDEsImZpbGVfaWQiOjIxfQ.ar3NRw.wnFvSYmkmYfmU0m5I1VBG8ZWNuI",
+            "verified_at": "2026-10-01T03:03:19Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "name": "Signal Fracture",
+      "category": "Forensics",
+      "points": 100,
+      "author": null,
+      "tags": [
+        "Intermediate"
+      ],
+      "hints": [
+        {
+          "id": 9,
+          "cost": 35,
+          "title": ""
+        },
+        {
+          "id": 10,
+          "cost": 40,
+          "title": ""
+        },
+        {
+          "id": 11,
+          "cost": 50,
+          "title": ""
+        }
+      ],
+      "connection_info": null,
+      "solved_by_me": true,
+      "solves_count": 388,
+      "submit_endpoint": "https://ctf.cybersecurity.sydney/api/v1/challenges/attempt",
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://ctf.cybersecurity.sydney/files/3f869e8072bae308c68fac72131eebe3/Signal_Fracture.zip?token=eyJ1c2VyX2lkIjoxNTE0LCJ0ZWFtX2lkIjo5MDEsImZpbGVfaWQiOjE5fQ.ar3NRw.5vnGq3FvXeG4X5F9hdnCtcTzmOk",
+          "name": "Signal_Fracture.zip",
+          "saved_path": "/home/light/Workspace/CTF/CSS_CTF_Semester_2_2026/Forensics/Signal_Fracture/challenge/Signal_Fracture.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"45324b409f778fabbc0a401646b8eda6\"",
+            "final_url": "https://storage.googleapis.com/css-ctf-2026-ctfd-storage/3f869e8072bae308c68fac72131eebe3/Signal_Fracture.zip?response-content-disposition=attachment%3B%20filename%3DSignal_Fracture.zip&response-cache-control=max-age%3D3600&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=GOOG1ED6D36XTQWHIJ3OCUSNVSF35ELGUTBF6O3HLTECT6HPQAG64J3CQPHMO%2F20261001%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20261001T030000Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=6585bf564b7e4748a87a9a0d9d4139982dce8528c7b6a7f6af7644901ee398ed",
+            "last_modified": "Mon, 28 Sep 2026 09:11:29 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 81969,
+            "url": "https://ctf.cybersecurity.sydney/files/3f869e8072bae308c68fac72131eebe3/Signal_Fracture.zip?token=eyJ1c2VyX2lkIjoxNTE0LCJ0ZWFtX2lkIjo5MDEsImZpbGVfaWQiOjE5fQ.ar3NRw.5vnGq3FvXeG4X5F9hdnCtcTzmOk",
+            "verified_at": "2026-10-01T03:03:20Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "name": "Chrono II",
+      "category": "Cryptography",
+      "points": 100,
+      "author": null,
+      "tags": [
+        "Intermediate"
+      ],
+      "hints": [],
+      "connection_info": "http://34.116.80.78:8001",
+      "solved_by_me": true,
+      "solves_count": 374,
+      "submit_endpoint": "https://ctf.cybersecurity.sydney/api/v1/challenges/attempt",
+      "instance_info": {},
+      "files": []
+    },
+    {
+      "id": 45,
+      "name": "Lottery",
+      "category": "Blockchain",
+      "points": 100,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": "nc 34.116.80.78 31338",
+      "solved_by_me": true,
+      "solves_count": 165,
+      "submit_endpoint": "https://ctf.cybersecurity.sydney/api/v1/challenges/attempt",
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://ctf.cybersecurity.sydney/files/c681430b9af2bbf2c1326b955479f0e0/Lottery.sol?token=eyJ1c2VyX2lkIjoxNTE0LCJ0ZWFtX2lkIjo5MDEsImZpbGVfaWQiOjUyfQ.ar4JCg.J9blBXi-HWFn8JFa0dG4tobLpDk",
+          "name": "Lottery.sol",
+          "saved_path": "/home/light/Workspace/CTF/CSS_CTF_Semester_2_2026/Blockchain/Lottery/challenge/Lottery.sol",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"c257626eb77a2345f66a4957bd08208d\"",
+            "final_url": "https://storage.googleapis.com/css-ctf-2026-ctfd-storage/c681430b9af2bbf2c1326b955479f0e0/Lottery.sol?response-content-disposition=attachment%3B%20filename%3DLottery.sol&response-cache-control=max-age%3D3600&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=GOOG1ED6D36XTQWHIJ3OCUSNVSF35ELGUTBF6O3HLTECT6HPQAG64J3CQPHMO%2F20261001%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20261001T070000Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=0c5b1fd930cc599a9f4050fae95a1d668aadfe84b94d636a6d788ab5aa1b0a40",
+            "last_modified": "Wed, 30 Sep 2026 16:44:54 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 1153,
+            "url": "https://ctf.cybersecurity.sydney/files/c681430b9af2bbf2c1326b955479f0e0/Lottery.sol?token=eyJ1c2VyX2lkIjoxNTE0LCJ0ZWFtX2lkIjo5MDEsImZpbGVfaWQiOjUyfQ.ar4JCg.J9blBXi-HWFn8JFa0dG4tobLpDk",
+            "verified_at": "2026-10-01T07:17:34Z"
+          }
+        },
+        {
+          "url": "https://ctf.cybersecurity.sydney/files/de7a6fe545633dee5a173343cc9b8039/Setup.sol?token=eyJ1c2VyX2lkIjoxNTE0LCJ0ZWFtX2lkIjo5MDEsImZpbGVfaWQiOjUzfQ.ar4JCg.c5Pq3jPv5wlqhs_GHGDFRJulq20",
+          "name": "Setup.sol",
+          "saved_path": "/home/light/Workspace/CTF/CSS_CTF_Semester_2_2026/Blockchain/Lottery/challenge/Setup.sol",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"0ccec3f1b47d006fcba0036e40ba4a0c\"",
+            "final_url": "https://storage.googleapis.com/css-ctf-2026-ctfd-storage/de7a6fe545633dee5a173343cc9b8039/Setup.sol?response-content-disposition=attachment%3B%20filename%3DSetup.sol&response-cache-control=max-age%3D3600&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=GOOG1ED6D36XTQWHIJ3OCUSNVSF35ELGUTBF6O3HLTECT6HPQAG64J3CQPHMO%2F20261001%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20261001T070000Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=95e6332da4bd7903047c32e67faa81776a5ae6fe68ef8cbb3ff6ab56ac2b077b",
+            "last_modified": "Wed, 30 Sep 2026 16:44:55 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 314,
+            "url": "https://ctf.cybersecurity.sydney/files/de7a6fe545633dee5a173343cc9b8039/Setup.sol?token=eyJ1c2VyX2lkIjoxNTE0LCJ0ZWFtX2lkIjo5MDEsImZpbGVfaWQiOjUzfQ.ar4JCg.c5Pq3jPv5wlqhs_GHGDFRJulq20",
+            "verified_at": "2026-10-01T07:17:35Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "name": "Ghost Frequency",
+      "category": "Forensics",
+      "points": 115,
+      "author": null,
+      "tags": [
+        "Advanced"
+      ],
+      "hints": [
+        {
+          "id": 7,
+          "cost": 100,
+          "title": ""
+        },
+        {
+          "id": 8,
+          "cost": 110,
+          "title": ""
+        }
+      ],
+      "connection_info": null,
+      "solved_by_me": true,
+      "solves_count": 354,
+      "submit_endpoint": "https://ctf.cybersecurity.sydney/api/v1/challenges/attempt",
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://ctf.cybersecurity.sydney/files/75ff7041496f3a2d0d91b971103313ac/KBR17_blackbox.wav?token=eyJ1c2VyX2lkIjoxNTE0LCJ0ZWFtX2lkIjo5MDEsImZpbGVfaWQiOjE4fQ.ar3NSA.3R_JJvDSVzUrW9i_eg56cGFk3zQ",
+          "name": "KBR17_blackbox.wav",
+          "saved_path": "/home/light/Workspace/CTF/CSS_CTF_Semester_2_2026/Forensics/Ghost_Frequency/challenge/KBR17_blackbox.wav",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"29ae7b1a64e6c92969d4421a11a4f1fb-3\"",
+            "final_url": "https://storage.googleapis.com/css-ctf-2026-ctfd-storage/75ff7041496f3a2d0d91b971103313ac/KBR17_blackbox.wav?response-content-disposition=attachment%3B%20filename%3DKBR17_blackbox.wav&response-cache-control=max-age%3D3600&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=GOOG1ED6D36XTQWHIJ3OCUSNVSF35ELGUTBF6O3HLTECT6HPQAG64J3CQPHMO%2F20261001%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20261001T030000Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=b864b80e51c737833a7479b4e469f9238bf4ae71c047a674a662c1c5e5636ab3",
+            "last_modified": "Mon, 28 Sep 2026 09:09:17 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 22118476,
+            "url": "https://ctf.cybersecurity.sydney/files/75ff7041496f3a2d0d91b971103313ac/KBR17_blackbox.wav?token=eyJ1c2VyX2lkIjoxNTE0LCJ0ZWFtX2lkIjo5MDEsImZpbGVfaWQiOjE4fQ.ar3NSA.3R_JJvDSVzUrW9i_eg56cGFk3zQ",
+            "verified_at": "2026-10-01T03:04:44Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "name": "A Star Trail 3",
+      "category": "Misc",
+      "points": 120,
+      "author": null,
+      "tags": [
+        "Advanced"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": true,
+      "solves_count": 186,
+      "submit_endpoint": "https://ctf.cybersecurity.sydney/api/v1/challenges/attempt",
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://ctf.cybersecurity.sydney/files/a362ee152cd8807432e834a5a85335bc/map2.zip?token=eyJ1c2VyX2lkIjoxNTE0LCJ0ZWFtX2lkIjo5MDEsImZpbGVfaWQiOjQzfQ.ar58BA.dKuYYMb13zbl7aGEGEmXN0M0eEo",
+          "name": "map2.zip",
+          "saved_path": "/home/light/Workspace/CTF/CSS_CTF_Semester_2_2026/Misc/A_Star_Trail_3/challenge/map2.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"a840f08c65ff8d9f4c66821731a470b4\"",
+            "final_url": "https://storage.googleapis.com/css-ctf-2026-ctfd-storage/a362ee152cd8807432e834a5a85335bc/map2.zip?response-content-disposition=attachment%3B%20filename%3Dmap2.zip&response-cache-control=max-age%3D3600&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=GOOG1ED6D36XTQWHIJ3OCUSNVSF35ELGUTBF6O3HLTECT6HPQAG64J3CQPHMO%2F20261001%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20261001T150000Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=99e12239bdf27adf7f0c8824f80270f65d14f087c536844d4f17390bff6a7f60",
+            "last_modified": "Wed, 30 Sep 2026 06:32:14 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 5716845,
+            "url": "https://ctf.cybersecurity.sydney/files/a362ee152cd8807432e834a5a85335bc/map2.zip?token=eyJ1c2VyX2lkIjoxNTE0LCJ0ZWFtX2lkIjo5MDEsImZpbGVfaWQiOjQzfQ.ar58BA.dKuYYMb13zbl7aGEGEmXN0M0eEo",
+            "verified_at": "2026-10-01T15:28:06Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "name": "Severed Symmetry",
+      "category": "Cryptography",
+      "points": 200,
+      "author": null,
+      "tags": [
+        "Expert"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": true,
+      "solves_count": 257,
+      "submit_endpoint": "https://ctf.cybersecurity.sydney/api/v1/challenges/attempt",
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://ctf.cybersecurity.sydney/files/c166b9d8f3079a9b0e9be1b5f94592a0/out.txt?token=eyJ1c2VyX2lkIjoxNTE0LCJ0ZWFtX2lkIjo5MDEsImZpbGVfaWQiOjIyfQ.ar3NSQ.1Kw3FIH1OWMV92QOWtvSw7z92I0",
+          "name": "out.txt",
+          "saved_path": "/home/light/Workspace/CTF/CSS_CTF_Semester_2_2026/Cryptography/Severed_Symmetry/challenge/out.txt",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"d8b6127b8135136bcfa4722c98f2dc01-4\"",
+            "final_url": "https://storage.googleapis.com/css-ctf-2026-ctfd-storage/c166b9d8f3079a9b0e9be1b5f94592a0/out.txt?response-content-disposition=attachment%3B%20filename%3Dout.txt&response-cache-control=max-age%3D3600&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=GOOG1ED6D36XTQWHIJ3OCUSNVSF35ELGUTBF6O3HLTECT6HPQAG64J3CQPHMO%2F20261001%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20261001T030000Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=b79a2c5dc72ee5ae11f77173236fc386c6e0d207e399cbb638db6699802d6c8c",
+            "last_modified": "Tue, 29 Sep 2026 10:22:44 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 31778814,
+            "url": "https://ctf.cybersecurity.sydney/files/c166b9d8f3079a9b0e9be1b5f94592a0/out.txt?token=eyJ1c2VyX2lkIjoxNTE0LCJ0ZWFtX2lkIjo5MDEsImZpbGVfaWQiOjIyfQ.ar3NSQ.1Kw3FIH1OWMV92QOWtvSw7z92I0",
+            "verified_at": "2026-10-01T03:04:44Z"
+          }
+        },
+        {
+          "url": "https://ctf.cybersecurity.sydney/files/6d5dd73b5758d2762bbe3136e2f0dd7a/source.py?token=eyJ1c2VyX2lkIjoxNTE0LCJ0ZWFtX2lkIjo5MDEsImZpbGVfaWQiOjIzfQ.ar3NSQ.OX4l2F6GGCKVngS8DHoEGf1TqTc",
+          "name": "source.py",
+          "saved_path": "/home/light/Workspace/CTF/CSS_CTF_Semester_2_2026/Cryptography/Severed_Symmetry/challenge/source.py",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"7c4973193f3c7943cc2790aa2293efa8\"",
+            "final_url": "https://storage.googleapis.com/css-ctf-2026-ctfd-storage/6d5dd73b5758d2762bbe3136e2f0dd7a/source.py?response-content-disposition=attachment%3B%20filename%3Dsource.py&response-cache-control=max-age%3D3600&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=GOOG1ED6D36XTQWHIJ3OCUSNVSF35ELGUTBF6O3HLTECT6HPQAG64J3CQPHMO%2F20261001%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20261001T030000Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=4c5107e5df13d2cb898080ea0446b5b94bfe0383818145d8d78179bb8ccc9c87",
+            "last_modified": "Tue, 29 Sep 2026 10:22:45 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 10103,
+            "url": "https://ctf.cybersecurity.sydney/files/6d5dd73b5758d2762bbe3136e2f0dd7a/source.py?token=eyJ1c2VyX2lkIjoxNTE0LCJ0ZWFtX2lkIjo5MDEsImZpbGVfaWQiOjIzfQ.ar3NSQ.OX4l2F6GGCKVngS8DHoEGf1TqTc",
+            "verified_at": "2026-10-01T03:04:46Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "The Astrolobe Overwrite",
+      "category": "Misc",
+      "points": 250,
+      "author": null,
+      "tags": [
+        "Expert",
+        "PWN",
+        "Reverse Engineering"
+      ],
+      "hints": [],
+      "connection_info": "nc 34.116.80.78 7654",
+      "solved_by_me": true,
+      "solves_count": 145,
+      "submit_endpoint": "https://ctf.cybersecurity.sydney/api/v1/challenges/attempt",
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://ctf.cybersecurity.sydney/files/861c8dac4e545b7a0bf8e7e5e025ccac/ouroboros.7z?token=eyJ1c2VyX2lkIjoxNTE0LCJ0ZWFtX2lkIjo5MDEsImZpbGVfaWQiOjMyfQ.ar4JCw.RUj9rWQQZUaK2ushI5_Bn0L1qLE",
+          "name": "ouroboros.7z",
+          "saved_path": "/home/light/Workspace/CTF/CSS_CTF_Semester_2_2026/Misc/The_Astrolobe_Overwrite/challenge/ouroboros.7z",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"86d072102274a38b672f6dec1669e838\"",
+            "final_url": "https://storage.googleapis.com/css-ctf-2026-ctfd-storage/861c8dac4e545b7a0bf8e7e5e025ccac/ouroboros.7z?response-content-disposition=attachment%3B%20filename%3Douroboros.7z&response-cache-control=max-age%3D3600&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=GOOG1ED6D36XTQWHIJ3OCUSNVSF35ELGUTBF6O3HLTECT6HPQAG64J3CQPHMO%2F20261001%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20261001T070000Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=bf612f4177b5a13b04dabd6439e9383a7ea1d5e9b95eb462c2ad1f1e427f4cfc",
+            "last_modified": "Tue, 29 Sep 2026 19:12:01 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 4121,
+            "url": "https://ctf.cybersecurity.sydney/files/861c8dac4e545b7a0bf8e7e5e025ccac/ouroboros.7z?token=eyJ1c2VyX2lkIjoxNTE0LCJ0ZWFtX2lkIjo5MDEsImZpbGVfaWQiOjMyfQ.ar4JCw.RUj9rWQQZUaK2ushI5_Bn0L1qLE",
+            "verified_at": "2026-10-01T07:17:35Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "name": "Silicon Snare",
+      "category": "Hardware: Reverse Engineering",
+      "points": 250,
+      "author": null,
+      "tags": [
+        "Expert"
+      ],
+      "hints": [
+        {
+          "id": 21,
+          "cost": 150,
+          "title": "First bits"
+        },
+        {
+          "id": 22,
+          "cost": 50,
+          "title": "Getting started"
+        },
+        {
+          "id": 23,
+          "cost": 100,
+          "title": "Shift gates"
+        }
+      ],
+      "connection_info": null,
+      "solved_by_me": true,
+      "solves_count": 344,
+      "submit_endpoint": "https://ctf.cybersecurity.sydney/api/v1/challenges/attempt",
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://ctf.cybersecurity.sydney/files/4dba29343f5d1e64f36b4074e707b7d5/schematic.svg?token=eyJ1c2VyX2lkIjoxNTE0LCJ0ZWFtX2lkIjo5MDEsImZpbGVfaWQiOjI3fQ.ar3NSQ.FyTSlPtpCiH_OpyI_95iQ3P7i7Y",
+          "name": "schematic.svg",
+          "saved_path": "/home/light/Workspace/CTF/CSS_CTF_Semester_2_2026/Hardware_Reverse_Engineering/Silicon_Snare/challenge/schematic.svg",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"25d9539a7035c8f1c1c348d2a181ea87\"",
+            "final_url": "https://storage.googleapis.com/css-ctf-2026-ctfd-storage/4dba29343f5d1e64f36b4074e707b7d5/schematic.svg?response-content-disposition=attachment%3B%20filename%3Dschematic.svg&response-cache-control=max-age%3D3600&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=GOOG1ED6D36XTQWHIJ3OCUSNVSF35ELGUTBF6O3HLTECT6HPQAG64J3CQPHMO%2F20261001%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20261001T030000Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=3f64db0e0507bb4db33b91f17b146433d45e5777f15ecdda16f998a4c81f8c9a",
+            "last_modified": "Tue, 29 Sep 2026 14:45:30 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 987498,
+            "url": "https://ctf.cybersecurity.sydney/files/4dba29343f5d1e64f36b4074e707b7d5/schematic.svg?token=eyJ1c2VyX2lkIjoxNTE0LCJ0ZWFtX2lkIjo5MDEsImZpbGVfaWQiOjI3fQ.ar3NSQ.FyTSlPtpCiH_OpyI_95iQ3P7i7Y",
+            "verified_at": "2026-10-01T03:03:42Z"
+          }
+        },
+        {
+          "url": "https://ctf.cybersecurity.sydney/files/acfc630fb87330bda3de37ff89228ff2/schematic.png?token=eyJ1c2VyX2lkIjoxNTE0LCJ0ZWFtX2lkIjo5MDEsImZpbGVfaWQiOjI5fQ.ar3NSQ.JCVJBxuuhnA7x1MlIw-nDJXwO_Q",
+          "name": "schematic.png",
+          "saved_path": "/home/light/Workspace/CTF/CSS_CTF_Semester_2_2026/Hardware_Reverse_Engineering/Silicon_Snare/challenge/schematic.png",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": "\"a25e6bcb22cc10a510221b5545577539\"",
+            "final_url": "https://storage.googleapis.com/css-ctf-2026-ctfd-storage/acfc630fb87330bda3de37ff89228ff2/schematic.png?response-content-disposition=attachment%3B%20filename%3Dschematic.png&response-cache-control=max-age%3D3600&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=GOOG1ED6D36XTQWHIJ3OCUSNVSF35ELGUTBF6O3HLTECT6HPQAG64J3CQPHMO%2F20261001%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20261001T030000Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=0f0bfa85e3239435bf9662d5730dca9ad401babc3736888bd4d728680d07b14a",
+            "last_modified": "Tue, 29 Sep 2026 14:47:30 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 1900723,
+            "url": "https://ctf.cybersecurity.sydney/files/acfc630fb87330bda3de37ff89228ff2/schematic.png?token=eyJ1c2VyX2lkIjoxNTE0LCJ0ZWFtX2lkIjo5MDEsImZpbGVfaWQiOjI5fQ.ar3NSQ.JCVJBxuuhnA7x1MlIw-nDJXwO_Q",
+            "verified_at": "2026-10-01T03:04:02Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "name": "Orthogonal Singularity",
+      "category": "Misc",
+      "points": 600,
+      "author": null,
+      "tags": [
+        "Expert"
+      ],
+      "hints": [
+        {
+          "id": 26,
+          "cost": 150,
+          "title": ""
+        },
+        {
+          "id": 27,
+          "cost": 0,
+          "title": "you want a hint?",
+          "content": "lol no 😜"
+        }
+      ],
+      "connection_info": "nc 34.116.80.78 7878",
+      "solved_by_me": false,
+      "solves_count": 0,
+      "submit_endpoint": "https://ctf.cybersecurity.sydney/api/v1/challenges/attempt",
+      "instance_info": {},
+      "files": []
+    }
+  ]
+}
