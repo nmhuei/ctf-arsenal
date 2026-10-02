@@ -1,0 +1,53 @@
+{
+  "id": 25,
+  "name": "rainier",
+  "category": "Osint",
+  "points": 100,
+  "author": null,
+  "tags": [
+    "osint",
+    "beginner"
+  ],
+  "hints": [],
+  "connection_info": null,
+  "solved_by_me": false,
+  "solves_count": 236,
+  "submit_endpoint": null,
+  "instance_info": {},
+  "downloaded_files": [
+    {
+      "url": "https://api-k17ctf.secso.cc/files/local/JjVrtnnsKSlqwxkAH9m6v?iat=1789138800&sig=eLhoJ0ORCFWa9_xiaMnncHhmeNgKHfOG564FhtGKqy8",
+      "name": "rainier.jpg",
+      "saved_path": "/home/light/Workspace/CTF/K17_CTF_2026/Osint/rainier/challenge/rainier.jpg",
+      "success": true,
+      "source": "platform_attachment",
+      "message": "Đã tải trực tiếp thành công",
+      "verification": {
+        "etag": null,
+        "final_url": "https://api-k17ctf.secso.cc/files/local/JjVrtnnsKSlqwxkAH9m6v?iat=1789138800&sig=eLhoJ0ORCFWa9_xiaMnncHhmeNgKHfOG564FhtGKqy8",
+        "last_modified": null,
+        "schema_version": 1,
+        "sha256": null,
+        "size": 727988,
+        "url": "https://api-k17ctf.secso.cc/files/local/JjVrtnnsKSlqwxkAH9m6v?iat=1789138800&sig=eLhoJ0ORCFWa9_xiaMnncHhmeNgKHfOG564FhtGKqy8",
+        "verified_at": "2026-09-11T15:01:33Z"
+      }
+    }
+  ],
+  "raw": {
+    "id": 25,
+    "slug": "rainier",
+    "title": "rainier",
+    "tags": {
+      "categories": "osint",
+      "difficulty": "beginner"
+    },
+    "hidden": false,
+    "value": 100,
+    "solve_count": 236,
+    "solved_by_me": false
+  },
+  "instance_status": "none",
+  "instance_note": "Local attachment challenge (no remote container required).",
+  "instance": ""
+}

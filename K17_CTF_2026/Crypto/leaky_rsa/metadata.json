@@ -1,0 +1,87 @@
+{
+  "id": 12,
+  "name": "leaky rsa",
+  "category": "Crypto",
+  "points": 100,
+  "author": null,
+  "tags": [
+    "crypto",
+    "easy"
+  ],
+  "hints": [],
+  "connection_info": null,
+  "solved_by_me": true,
+  "solves_count": 233,
+  "submit_endpoint": null,
+  "instance_info": {},
+  "downloaded_files": [
+    {
+      "url": "https://api-k17ctf.secso.cc/files/local/G9FeHE7i1h7TtaRyeUV6a?iat=1789138800&sig=XP9J-b7E6T9o9snsAEyBcGgeEOmo8rC4Ibb7YaQPyj4",
+      "name": "chal.py",
+      "saved_path": "/home/light/Workspace/CTF/K17_CTF_2026/Crypto/leaky_rsa/challenge/chal.py",
+      "success": true,
+      "source": "platform_attachment",
+      "message": "Đã tải trực tiếp thành công",
+      "verification": {
+        "etag": null,
+        "final_url": "https://api-k17ctf.secso.cc/files/local/G9FeHE7i1h7TtaRyeUV6a?iat=1789138800&sig=XP9J-b7E6T9o9snsAEyBcGgeEOmo8rC4Ibb7YaQPyj4",
+        "last_modified": null,
+        "schema_version": 1,
+        "sha256": null,
+        "size": 568,
+        "url": "https://api-k17ctf.secso.cc/files/local/G9FeHE7i1h7TtaRyeUV6a?iat=1789138800&sig=XP9J-b7E6T9o9snsAEyBcGgeEOmo8rC4Ibb7YaQPyj4",
+        "verified_at": "2026-09-11T15:01:27Z"
+      }
+    },
+    {
+      "url": "https://api-k17ctf.secso.cc/files/local/JuJS5_1oNRpgaFxq_lWe6?iat=1789138800&sig=XQceHPYJaFOB1B7K-6oWPH4_vI62QLOKEx43LZzn00A",
+      "name": "out.txt",
+      "saved_path": "/home/light/Workspace/CTF/K17_CTF_2026/Crypto/leaky_rsa/challenge/out.txt",
+      "success": true,
+      "source": "platform_attachment",
+      "message": "Đã tải trực tiếp thành công",
+      "verification": {
+        "etag": null,
+        "final_url": "https://api-k17ctf.secso.cc/files/local/JuJS5_1oNRpgaFxq_lWe6?iat=1789138800&sig=XQceHPYJaFOB1B7K-6oWPH4_vI62QLOKEx43LZzn00A",
+        "last_modified": null,
+        "schema_version": 1,
+        "sha256": null,
+        "size": 1569,
+        "url": "https://api-k17ctf.secso.cc/files/local/JuJS5_1oNRpgaFxq_lWe6?iat=1789138800&sig=XQceHPYJaFOB1B7K-6oWPH4_vI62QLOKEx43LZzn00A",
+        "verified_at": "2026-09-11T15:01:28Z"
+      }
+    }
+  ],
+  "raw": {
+    "id": 12,
+    "slug": "leaky-rsa",
+    "title": "leaky rsa",
+    "tags": {
+      "categories": "crypto",
+      "difficulty": "easy"
+    },
+    "hidden": false,
+    "value": 100,
+    "solve_count": 233,
+    "solved_by_me": false
+  },
+  "submitted_flag": "K17{th3_t1tan1c_sh0uldv3_us3d_duct_t4p3}",
+  "status": {
+    "schema_version": 2,
+    "solve": "solved_by_me",
+    "flag": {
+      "value": "K17{th3_t1tan1c_sh0uldv3_us3d_duct_t4p3}",
+      "state": "submitted_correct"
+    },
+    "writeup": "none",
+    "writeup_auto": true,
+    "notes": "",
+    "labels": [],
+    "container": "none",
+    "synced_at": null,
+    "updated_at": "2026-09-11T15:28:05Z"
+  },
+  "instance_status": "none",
+  "instance_note": "Local attachment challenge (no remote container required).",
+  "instance": ""
+}

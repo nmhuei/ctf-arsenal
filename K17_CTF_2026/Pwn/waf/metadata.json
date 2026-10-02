@@ -1,0 +1,53 @@
+{
+  "id": 34,
+  "name": "waf",
+  "category": "Pwn",
+  "points": 181,
+  "author": null,
+  "tags": [
+    "pwn",
+    "medium"
+  ],
+  "hints": [],
+  "connection_info": "chal.secso.cc:4006",
+  "solved_by_me": false,
+  "solves_count": 48,
+  "submit_endpoint": null,
+  "instance_info": {},
+  "downloaded_files": [
+    {
+      "url": "https://api-k17ctf.secso.cc/files/local/eMw6linqRkq89Lj6RTtaA?iat=1789138800&sig=PwO8eK1AwIS2z7BsMehiH4_AoP5lQd8evKRduVbNNUs",
+      "name": "handout.zip",
+      "saved_path": "/home/light/Workspace/CTF/K17_CTF_2026/Pwn/waf/challenge/handout.zip",
+      "success": true,
+      "source": "platform_attachment",
+      "message": "Đã tải trực tiếp thành công",
+      "verification": {
+        "etag": null,
+        "final_url": "https://api-k17ctf.secso.cc/files/local/eMw6linqRkq89Lj6RTtaA?iat=1789138800&sig=PwO8eK1AwIS2z7BsMehiH4_AoP5lQd8evKRduVbNNUs",
+        "last_modified": null,
+        "schema_version": 1,
+        "sha256": null,
+        "size": 3328,
+        "url": "https://api-k17ctf.secso.cc/files/local/eMw6linqRkq89Lj6RTtaA?iat=1789138800&sig=PwO8eK1AwIS2z7BsMehiH4_AoP5lQd8evKRduVbNNUs",
+        "verified_at": "2026-09-11T15:01:30Z"
+      }
+    }
+  ],
+  "raw": {
+    "id": 34,
+    "slug": "waf",
+    "title": "waf",
+    "tags": {
+      "categories": "pwn",
+      "difficulty": "medium"
+    },
+    "hidden": false,
+    "value": 181,
+    "solve_count": 48,
+    "solved_by_me": false
+  },
+  "instance_status": "on",
+  "instance_note": "Target URL / endpoint active at chal.secso.cc:4006.",
+  "instance": "chal.secso.cc:4006"
+}

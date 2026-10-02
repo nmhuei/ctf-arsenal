@@ -1,0 +1,87 @@
+{
+  "id": 13,
+  "name": "shamir secret spilling",
+  "category": "Crypto",
+  "points": 100,
+  "author": null,
+  "tags": [
+    "crypto",
+    "medium"
+  ],
+  "hints": [],
+  "connection_info": null,
+  "solved_by_me": true,
+  "solves_count": 150,
+  "submit_endpoint": null,
+  "instance_info": {},
+  "downloaded_files": [
+    {
+      "url": "https://api-k17ctf.secso.cc/files/local/SorKkNGqANOqk_m1OBdEn?iat=1789138800&sig=0OvVObgG-yLU3BV69BmK4AHTmT5D_kKPE7CD_xMqyH4",
+      "name": "chal.py",
+      "saved_path": "/home/light/Workspace/CTF/K17_CTF_2026/Crypto/shamir_secret_spilling/challenge/chal.py",
+      "success": true,
+      "source": "platform_attachment",
+      "message": "Đã tải trực tiếp thành công",
+      "verification": {
+        "etag": null,
+        "final_url": "https://api-k17ctf.secso.cc/files/local/SorKkNGqANOqk_m1OBdEn?iat=1789138800&sig=0OvVObgG-yLU3BV69BmK4AHTmT5D_kKPE7CD_xMqyH4",
+        "last_modified": null,
+        "schema_version": 1,
+        "sha256": null,
+        "size": 1028,
+        "url": "https://api-k17ctf.secso.cc/files/local/SorKkNGqANOqk_m1OBdEn?iat=1789138800&sig=0OvVObgG-yLU3BV69BmK4AHTmT5D_kKPE7CD_xMqyH4",
+        "verified_at": "2026-09-11T15:01:27Z"
+      }
+    },
+    {
+      "url": "https://api-k17ctf.secso.cc/files/local/NdgA4XozA2gB2_fqJxU1I?iat=1789138800&sig=_jyDji9UHK5zQfV4tmTBLuTcqOJIA1foiL9r7LLKYhE",
+      "name": "out.txt",
+      "saved_path": "/home/light/Workspace/CTF/K17_CTF_2026/Crypto/shamir_secret_spilling/challenge/out.txt",
+      "success": true,
+      "source": "platform_attachment",
+      "message": "Đã tải trực tiếp thành công",
+      "verification": {
+        "etag": null,
+        "final_url": "https://api-k17ctf.secso.cc/files/local/NdgA4XozA2gB2_fqJxU1I?iat=1789138800&sig=_jyDji9UHK5zQfV4tmTBLuTcqOJIA1foiL9r7LLKYhE",
+        "last_modified": null,
+        "schema_version": 1,
+        "sha256": null,
+        "size": 7808,
+        "url": "https://api-k17ctf.secso.cc/files/local/NdgA4XozA2gB2_fqJxU1I?iat=1789138800&sig=_jyDji9UHK5zQfV4tmTBLuTcqOJIA1foiL9r7LLKYhE",
+        "verified_at": "2026-09-11T15:01:32Z"
+      }
+    }
+  ],
+  "raw": {
+    "id": 13,
+    "slug": "sss",
+    "title": "shamir secret spilling",
+    "tags": {
+      "categories": "crypto",
+      "difficulty": "medium"
+    },
+    "hidden": false,
+    "value": 100,
+    "solve_count": 150,
+    "solved_by_me": false
+  },
+  "submitted_flag": "K17{0ur_cl1ent5_r3ally_d0nt_like_r0tating_their_keys!}",
+  "status": {
+    "schema_version": 2,
+    "solve": "solved_by_me",
+    "flag": {
+      "value": "K17{0ur_cl1ent5_r3ally_d0nt_like_r0tating_their_keys!}",
+      "state": "submitted_correct"
+    },
+    "writeup": "none",
+    "writeup_auto": true,
+    "notes": "",
+    "labels": [],
+    "container": "none",
+    "synced_at": null,
+    "updated_at": "2026-09-11T15:31:04Z"
+  },
+  "instance_status": "none",
+  "instance_note": "Local attachment challenge (no remote container required).",
+  "instance": ""
+}

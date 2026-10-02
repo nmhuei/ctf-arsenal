@@ -1,0 +1,70 @@
+{
+  "id": 10,
+  "name": "cry-pto",
+  "category": "Crypto",
+  "points": 100,
+  "author": null,
+  "tags": [
+    "beginner",
+    "crypto",
+    "beginner"
+  ],
+  "hints": [],
+  "connection_info": "chal.secso.cc:2000",
+  "solved_by_me": true,
+  "solves_count": 236,
+  "submit_endpoint": null,
+  "instance_info": {},
+  "downloaded_files": [
+    {
+      "url": "https://api-k17ctf.secso.cc/files/local/n3UV9inPNFkgnbehz9BPq?iat=1789138800&sig=z3slZY46UsJE2Q8dYU7n1Hz-Ut9OZiNJwp1pdk4-6hE",
+      "name": "chal.py",
+      "saved_path": "/home/light/Workspace/CTF/K17_CTF_2026/Crypto/cry-pto/challenge/chal.py",
+      "success": true,
+      "source": "platform_attachment",
+      "message": "Đã tải trực tiếp thành công",
+      "verification": {
+        "etag": null,
+        "final_url": "https://api-k17ctf.secso.cc/files/local/n3UV9inPNFkgnbehz9BPq?iat=1789138800&sig=z3slZY46UsJE2Q8dYU7n1Hz-Ut9OZiNJwp1pdk4-6hE",
+        "last_modified": null,
+        "schema_version": 1,
+        "sha256": null,
+        "size": 1579,
+        "url": "https://api-k17ctf.secso.cc/files/local/n3UV9inPNFkgnbehz9BPq?iat=1789138800&sig=z3slZY46UsJE2Q8dYU7n1Hz-Ut9OZiNJwp1pdk4-6hE",
+        "verified_at": "2026-09-11T15:01:27Z"
+      }
+    }
+  ],
+  "raw": {
+    "id": 10,
+    "slug": "cry-pto",
+    "title": "cry-pto",
+    "tags": {
+      "categories": "beginner,crypto",
+      "difficulty": "beginner"
+    },
+    "hidden": false,
+    "value": 100,
+    "solve_count": 236,
+    "solved_by_me": false
+  },
+  "submitted_flag": "K17{y0u_ar3_f1ll3d_w1th_deter1min4t10n}",
+  "status": {
+    "schema_version": 2,
+    "solve": "solved_by_me",
+    "flag": {
+      "value": "K17{y0u_ar3_f1ll3d_w1th_deter1min4t10n}",
+      "state": "submitted_correct"
+    },
+    "writeup": "none",
+    "writeup_auto": true,
+    "notes": "",
+    "labels": [],
+    "container": "none",
+    "synced_at": null,
+    "updated_at": "2026-09-11T15:18:40Z"
+  },
+  "instance_status": "on",
+  "instance_note": "Target URL / endpoint active at chal.secso.cc:2000.",
+  "instance": "chal.secso.cc:2000"
+}

@@ -1,0 +1,54 @@
+{
+  "id": 33,
+  "name": "online-roulette",
+  "category": "Pwn",
+  "points": 100,
+  "author": null,
+  "tags": [
+    "beginner",
+    "pwn",
+    "beginner"
+  ],
+  "hints": [],
+  "connection_info": "chal.secso.cc:4000",
+  "solved_by_me": false,
+  "solves_count": 142,
+  "submit_endpoint": null,
+  "instance_info": {},
+  "downloaded_files": [
+    {
+      "url": "https://api-k17ctf.secso.cc/files/local/u22bT0bPdbAufv0zlCMzN?iat=1789138800&sig=jpp6LiALUxvbZT25i6mm9QSctFgbJGAhfcA5t0dJZUs",
+      "name": "chal.c",
+      "saved_path": "/home/light/Workspace/CTF/K17_CTF_2026/Pwn/online-roulette/challenge/chal.c",
+      "success": true,
+      "source": "platform_attachment",
+      "message": "Đã tải trực tiếp thành công",
+      "verification": {
+        "etag": null,
+        "final_url": "https://api-k17ctf.secso.cc/files/local/u22bT0bPdbAufv0zlCMzN?iat=1789138800&sig=jpp6LiALUxvbZT25i6mm9QSctFgbJGAhfcA5t0dJZUs",
+        "last_modified": null,
+        "schema_version": 1,
+        "sha256": null,
+        "size": 2577,
+        "url": "https://api-k17ctf.secso.cc/files/local/u22bT0bPdbAufv0zlCMzN?iat=1789138800&sig=jpp6LiALUxvbZT25i6mm9QSctFgbJGAhfcA5t0dJZUs",
+        "verified_at": "2026-09-11T15:01:36Z"
+      }
+    }
+  ],
+  "raw": {
+    "id": 33,
+    "slug": "online-roulette",
+    "title": "online-roulette",
+    "tags": {
+      "categories": "beginner,pwn",
+      "difficulty": "beginner"
+    },
+    "hidden": false,
+    "value": 100,
+    "solve_count": 142,
+    "solved_by_me": false
+  },
+  "instance_status": "on",
+  "instance_note": "Target URL / endpoint active at chal.secso.cc:4000.",
+  "instance": "chal.secso.cc:4000"
+}

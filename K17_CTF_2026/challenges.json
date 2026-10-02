@@ -1,0 +1,1395 @@
+{
+  "ctf_info": {
+    "title": "K17_CTF_2026",
+    "url": "https://scoreboard.k17ctf.secso.cc",
+    "platform": "noctf",
+    "user": "bqa",
+    "team": "AI_slop",
+    "game_id": null,
+    "ctftime_id": 3145,
+    "event_window": {
+      "start": "2026-09-11T00:00:00+00:00",
+      "end": "2026-09-13T00:00:00+00:00",
+      "source": "noctf:k17ctf",
+      "confidence": "medium"
+    },
+    "flag_format": "^K17\\{.+\\}$",
+    "flag_format_source": "rules"
+  },
+  "total_challenges": 37,
+  "total_points": 4811,
+  "categories": {
+    "Web": 6,
+    "Crypto": 5,
+    "Misc": 8,
+    "Pwn": 9,
+    "Forensics": 2,
+    "Osint": 2,
+    "Rev": 5
+  },
+  "challenges": [
+    {
+      "id": 3,
+      "name": "DriveOne",
+      "category": "Web",
+      "points": 142,
+      "author": null,
+      "tags": [
+        "web",
+        "hard"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 73,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://api-k17ctf.secso.cc/files/local/rzKvMVrZCL98vt8UTfkht?iat=1789138800&sig=hAHOLKBWVS6tnvx9sLBGcbhGornMaDtKrh0EgaL4fUc",
+          "name": "handout.zip",
+          "saved_path": "/home/light/Workspace/CTF/K17_CTF_2026/Web/DriveOne/challenge/handout.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": null,
+            "final_url": "https://api-k17ctf.secso.cc/files/local/rzKvMVrZCL98vt8UTfkht?iat=1789138800&sig=hAHOLKBWVS6tnvx9sLBGcbhGornMaDtKrh0EgaL4fUc",
+            "last_modified": null,
+            "schema_version": 1,
+            "sha256": null,
+            "size": 324646,
+            "url": "https://api-k17ctf.secso.cc/files/local/rzKvMVrZCL98vt8UTfkht?iat=1789138800&sig=hAHOLKBWVS6tnvx9sLBGcbhGornMaDtKrh0EgaL4fUc",
+            "verified_at": "2026-09-11T15:01:27Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Duplex",
+      "category": "Web",
+      "points": 134,
+      "author": null,
+      "tags": [
+        "web",
+        "hard"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 80,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://api-k17ctf.secso.cc/files/local/B9-5vOByGdnRD4v3CCNIo?iat=1789138800&sig=kKYb8T3fMHCQ_LhUoQTQYbvRqwvWUrNsVGWNy3_tNuo",
+          "name": "handout.zip",
+          "saved_path": "/home/light/Workspace/CTF/K17_CTF_2026/Web/Duplex/challenge/handout.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": null,
+            "final_url": "https://api-k17ctf.secso.cc/files/local/B9-5vOByGdnRD4v3CCNIo?iat=1789138800&sig=kKYb8T3fMHCQ_LhUoQTQYbvRqwvWUrNsVGWNy3_tNuo",
+            "last_modified": null,
+            "schema_version": 1,
+            "sha256": null,
+            "size": 324145,
+            "url": "https://api-k17ctf.secso.cc/files/local/B9-5vOByGdnRD4v3CCNIo?iat=1789138800&sig=kKYb8T3fMHCQ_LhUoQTQYbvRqwvWUrNsVGWNy3_tNuo",
+            "verified_at": "2026-09-11T15:01:28Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "edwalk",
+      "category": "Web",
+      "points": 100,
+      "author": null,
+      "tags": [
+        "beginner",
+        "web",
+        "beginner"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 258,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": []
+    },
+    {
+      "id": 6,
+      "name": "macrohard azuer",
+      "category": "Web",
+      "points": 100,
+      "author": null,
+      "tags": [
+        "web",
+        "medium"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 121,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://api-k17ctf.secso.cc/files/local/cPzhwXl3xXsmW_TIsesk7?iat=1789138800&sig=pfasjuCB29oALmBGJkvL5EegI3481ePv3mP5GGOj9ck",
+          "name": "handout.zip",
+          "saved_path": "/home/light/Workspace/CTF/K17_CTF_2026/Web/macrohard_azuer/challenge/handout.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": null,
+            "final_url": "https://api-k17ctf.secso.cc/files/local/cPzhwXl3xXsmW_TIsesk7?iat=1789138800&sig=pfasjuCB29oALmBGJkvL5EegI3481ePv3mP5GGOj9ck",
+            "last_modified": null,
+            "schema_version": 1,
+            "sha256": null,
+            "size": 8202,
+            "url": "https://api-k17ctf.secso.cc/files/local/cPzhwXl3xXsmW_TIsesk7?iat=1789138800&sig=pfasjuCB29oALmBGJkvL5EegI3481ePv3mP5GGOj9ck",
+            "verified_at": "2026-09-11T15:01:26Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "blowfish",
+      "category": "Crypto",
+      "points": 121,
+      "author": "yellowsubmarine1447",
+      "tags": [
+        "crypto",
+        "hard"
+      ],
+      "hints": [],
+      "connection_info": "chal.secso.cc:2001",
+      "solved_by_me": false,
+      "solves_count": 93,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://api-k17ctf.secso.cc/files/local/OdocpDg_Y46EfiMVtCoVW?iat=1789138800&sig=HK80nZqnc-lZ9s3mRoDLkAagQPsiyRPlY60_ZkIzSG4",
+          "name": "handout.zip",
+          "saved_path": "/home/light/Workspace/CTF/K17_CTF_2026/Crypto/blowfish/challenge/handout.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": null,
+            "final_url": "https://api-k17ctf.secso.cc/files/local/OdocpDg_Y46EfiMVtCoVW?iat=1789138800&sig=HK80nZqnc-lZ9s3mRoDLkAagQPsiyRPlY60_ZkIzSG4",
+            "last_modified": null,
+            "schema_version": 1,
+            "sha256": null,
+            "size": 1715,
+            "url": "https://api-k17ctf.secso.cc/files/local/OdocpDg_Y46EfiMVtCoVW?iat=1789138800&sig=HK80nZqnc-lZ9s3mRoDLkAagQPsiyRPlY60_ZkIzSG4",
+            "verified_at": "2026-09-11T15:01:25Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "cry-pto",
+      "category": "Crypto",
+      "points": 100,
+      "author": null,
+      "tags": [
+        "beginner",
+        "crypto",
+        "beginner"
+      ],
+      "hints": [],
+      "connection_info": "chal.secso.cc:2000",
+      "solved_by_me": false,
+      "solves_count": 236,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://api-k17ctf.secso.cc/files/local/n3UV9inPNFkgnbehz9BPq?iat=1789138800&sig=z3slZY46UsJE2Q8dYU7n1Hz-Ut9OZiNJwp1pdk4-6hE",
+          "name": "chal.py",
+          "saved_path": "/home/light/Workspace/CTF/K17_CTF_2026/Crypto/cry-pto/challenge/chal.py",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": null,
+            "final_url": "https://api-k17ctf.secso.cc/files/local/n3UV9inPNFkgnbehz9BPq?iat=1789138800&sig=z3slZY46UsJE2Q8dYU7n1Hz-Ut9OZiNJwp1pdk4-6hE",
+            "last_modified": null,
+            "schema_version": 1,
+            "sha256": null,
+            "size": 1579,
+            "url": "https://api-k17ctf.secso.cc/files/local/n3UV9inPNFkgnbehz9BPq?iat=1789138800&sig=z3slZY46UsJE2Q8dYU7n1Hz-Ut9OZiNJwp1pdk4-6hE",
+            "verified_at": "2026-09-11T15:01:27Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "name": "leaky rsa",
+      "category": "Crypto",
+      "points": 100,
+      "author": null,
+      "tags": [
+        "crypto",
+        "easy"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 233,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://api-k17ctf.secso.cc/files/local/G9FeHE7i1h7TtaRyeUV6a?iat=1789138800&sig=XP9J-b7E6T9o9snsAEyBcGgeEOmo8rC4Ibb7YaQPyj4",
+          "name": "chal.py",
+          "saved_path": "/home/light/Workspace/CTF/K17_CTF_2026/Crypto/leaky_rsa/challenge/chal.py",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": null,
+            "final_url": "https://api-k17ctf.secso.cc/files/local/G9FeHE7i1h7TtaRyeUV6a?iat=1789138800&sig=XP9J-b7E6T9o9snsAEyBcGgeEOmo8rC4Ibb7YaQPyj4",
+            "last_modified": null,
+            "schema_version": 1,
+            "sha256": null,
+            "size": 568,
+            "url": "https://api-k17ctf.secso.cc/files/local/G9FeHE7i1h7TtaRyeUV6a?iat=1789138800&sig=XP9J-b7E6T9o9snsAEyBcGgeEOmo8rC4Ibb7YaQPyj4",
+            "verified_at": "2026-09-11T15:01:27Z"
+          }
+        },
+        {
+          "url": "https://api-k17ctf.secso.cc/files/local/JuJS5_1oNRpgaFxq_lWe6?iat=1789138800&sig=XQceHPYJaFOB1B7K-6oWPH4_vI62QLOKEx43LZzn00A",
+          "name": "out.txt",
+          "saved_path": "/home/light/Workspace/CTF/K17_CTF_2026/Crypto/leaky_rsa/challenge/out.txt",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": null,
+            "final_url": "https://api-k17ctf.secso.cc/files/local/JuJS5_1oNRpgaFxq_lWe6?iat=1789138800&sig=XQceHPYJaFOB1B7K-6oWPH4_vI62QLOKEx43LZzn00A",
+            "last_modified": null,
+            "schema_version": 1,
+            "sha256": null,
+            "size": 1569,
+            "url": "https://api-k17ctf.secso.cc/files/local/JuJS5_1oNRpgaFxq_lWe6?iat=1789138800&sig=XQceHPYJaFOB1B7K-6oWPH4_vI62QLOKEx43LZzn00A",
+            "verified_at": "2026-09-11T15:01:28Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "name": "shamir secret spilling",
+      "category": "Crypto",
+      "points": 100,
+      "author": null,
+      "tags": [
+        "crypto",
+        "medium"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 150,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://api-k17ctf.secso.cc/files/local/SorKkNGqANOqk_m1OBdEn?iat=1789138800&sig=0OvVObgG-yLU3BV69BmK4AHTmT5D_kKPE7CD_xMqyH4",
+          "name": "chal.py",
+          "saved_path": "/home/light/Workspace/CTF/K17_CTF_2026/Crypto/shamir_secret_spilling/challenge/chal.py",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": null,
+            "final_url": "https://api-k17ctf.secso.cc/files/local/SorKkNGqANOqk_m1OBdEn?iat=1789138800&sig=0OvVObgG-yLU3BV69BmK4AHTmT5D_kKPE7CD_xMqyH4",
+            "last_modified": null,
+            "schema_version": 1,
+            "sha256": null,
+            "size": 1028,
+            "url": "https://api-k17ctf.secso.cc/files/local/SorKkNGqANOqk_m1OBdEn?iat=1789138800&sig=0OvVObgG-yLU3BV69BmK4AHTmT5D_kKPE7CD_xMqyH4",
+            "verified_at": "2026-09-11T15:01:27Z"
+          }
+        },
+        {
+          "url": "https://api-k17ctf.secso.cc/files/local/NdgA4XozA2gB2_fqJxU1I?iat=1789138800&sig=_jyDji9UHK5zQfV4tmTBLuTcqOJIA1foiL9r7LLKYhE",
+          "name": "out.txt",
+          "saved_path": "/home/light/Workspace/CTF/K17_CTF_2026/Crypto/shamir_secret_spilling/challenge/out.txt",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": null,
+            "final_url": "https://api-k17ctf.secso.cc/files/local/NdgA4XozA2gB2_fqJxU1I?iat=1789138800&sig=_jyDji9UHK5zQfV4tmTBLuTcqOJIA1foiL9r7LLKYhE",
+            "last_modified": null,
+            "schema_version": 1,
+            "sha256": null,
+            "size": 7808,
+            "url": "https://api-k17ctf.secso.cc/files/local/NdgA4XozA2gB2_fqJxU1I?iat=1789138800&sig=_jyDji9UHK5zQfV4tmTBLuTcqOJIA1foiL9r7LLKYhE",
+            "verified_at": "2026-09-11T15:01:32Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "name": "discord",
+      "category": "Misc",
+      "points": 100,
+      "author": null,
+      "tags": [
+        "meta",
+        "easy"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": true,
+      "solves_count": 338,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": []
+    },
+    {
+      "id": 7,
+      "name": "polynomial evaluator",
+      "category": "Web",
+      "points": 166,
+      "author": null,
+      "tags": [
+        "web",
+        "medium"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 56,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": []
+    },
+    {
+      "id": 8,
+      "name": "whatsNew",
+      "category": "Web",
+      "points": 196,
+      "author": null,
+      "tags": [
+        "web",
+        "hard"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 41,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://api-k17ctf.secso.cc/files/local/e7yv6IOm58tBOa7pMDMoW?iat=1789138800&sig=eslnv2XhF7bwcU1qpUfW4Hwn0OzPeaN38g-gD_yYtgs",
+          "name": "handout.zip",
+          "saved_path": "/home/light/Workspace/CTF/K17_CTF_2026/Web/whatsNew/challenge/handout.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": null,
+            "final_url": "https://api-k17ctf.secso.cc/files/local/e7yv6IOm58tBOa7pMDMoW?iat=1789138800&sig=eslnv2XhF7bwcU1qpUfW4Hwn0OzPeaN38g-gD_yYtgs",
+            "last_modified": null,
+            "schema_version": 1,
+            "sha256": null,
+            "size": 26015,
+            "url": "https://api-k17ctf.secso.cc/files/local/e7yv6IOm58tBOa7pMDMoW?iat=1789138800&sig=eslnv2XhF7bwcU1qpUfW4Hwn0OzPeaN38g-gD_yYtgs",
+            "verified_at": "2026-09-11T15:01:27Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "name": "sanity check",
+      "category": "Misc",
+      "points": 100,
+      "author": null,
+      "tags": [
+        "meta",
+        "beginner"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": true,
+      "solves_count": 384,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": []
+    },
+    {
+      "id": 16,
+      "name": "archive trap",
+      "category": "Misc",
+      "points": 100,
+      "author": null,
+      "tags": [
+        "misc",
+        "easy"
+      ],
+      "hints": [],
+      "connection_info": "chal.secso.cc:3000",
+      "solved_by_me": false,
+      "solves_count": 167,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://api-k17ctf.secso.cc/files/local/ytcDHRcyQ0jAEsHffm9kl?iat=1789138800&sig=HiIczSkGJ5UvXQB0kvsGdstdKV3eo4zyFOByxrsi0E4",
+          "name": "handout.zip",
+          "saved_path": "/home/light/Workspace/CTF/K17_CTF_2026/Misc/archive_trap/challenge/handout.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": null,
+            "final_url": "https://api-k17ctf.secso.cc/files/local/ytcDHRcyQ0jAEsHffm9kl?iat=1789138800&sig=HiIczSkGJ5UvXQB0kvsGdstdKV3eo4zyFOByxrsi0E4",
+            "last_modified": null,
+            "schema_version": 1,
+            "sha256": null,
+            "size": 1111,
+            "url": "https://api-k17ctf.secso.cc/files/local/ytcDHRcyQ0jAEsHffm9kl?iat=1789138800&sig=HiIczSkGJ5UvXQB0kvsGdstdKV3eo4zyFOByxrsi0E4",
+            "verified_at": "2026-09-11T15:01:29Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "name": "P = NP",
+      "category": "Misc",
+      "points": 100,
+      "author": null,
+      "tags": [
+        "beginner",
+        "misc",
+        "beginner"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": true,
+      "solves_count": 257,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://api-k17ctf.secso.cc/files/local/PqEaQyFUpFdMWhqsCy7lZ?iat=1789138800&sig=1UL02pr9A5EJKhv_498SXq-5JCZ-9ReYQbarqt2Zac8",
+          "name": "p-equals-np.pdf",
+          "saved_path": "/home/light/Workspace/CTF/K17_CTF_2026/Misc/P_=_NP/challenge/p-equals-np.pdf",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": null,
+            "final_url": "https://api-k17ctf.secso.cc/files/local/PqEaQyFUpFdMWhqsCy7lZ?iat=1789138800&sig=1UL02pr9A5EJKhv_498SXq-5JCZ-9ReYQbarqt2Zac8",
+            "last_modified": null,
+            "schema_version": 1,
+            "sha256": null,
+            "size": 332159,
+            "url": "https://api-k17ctf.secso.cc/files/local/PqEaQyFUpFdMWhqsCy7lZ?iat=1789138800&sig=1UL02pr9A5EJKhv_498SXq-5JCZ-9ReYQbarqt2Zac8",
+            "verified_at": "2026-09-11T15:01:29Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "name": "verify you are human",
+      "category": "Misc",
+      "points": 113,
+      "author": null,
+      "tags": [
+        "misc",
+        "forensics",
+        "medium"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 103,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://drive.google.com/drive/folders/1G53mkIvei6gnPV-OXRjX2lR63MfteFe4?usp=sharing`",
+          "name": null,
+          "saved_path": null,
+          "success": false,
+          "source": "description_gdrive",
+          "message": "Tải thất bại qua handler gdrive (không lấy được stream tải trực tiếp).",
+          "verification": {}
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "name": "sudo but good",
+      "category": "Misc",
+      "points": 136,
+      "author": null,
+      "tags": [
+        "misc",
+        "medium"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 78,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://api-k17ctf.secso.cc/files/local/sYaDjkoSzX0otNfNislaR?iat=1789138800&sig=GnKe8wbPt7uw1G7lCvY1yMdA9e4zojxyR2fdJedlZwo",
+          "name": "handout.zip",
+          "saved_path": "/home/light/Workspace/CTF/K17_CTF_2026/Misc/sudo_but_good/challenge/handout.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": null,
+            "final_url": "https://api-k17ctf.secso.cc/files/local/sYaDjkoSzX0otNfNislaR?iat=1789138800&sig=GnKe8wbPt7uw1G7lCvY1yMdA9e4zojxyR2fdJedlZwo",
+            "last_modified": null,
+            "schema_version": 1,
+            "sha256": null,
+            "size": 5760,
+            "url": "https://api-k17ctf.secso.cc/files/local/sYaDjkoSzX0otNfNislaR?iat=1789138800&sig=GnKe8wbPt7uw1G7lCvY1yMdA9e4zojxyR2fdJedlZwo",
+            "verified_at": "2026-09-11T15:01:30Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "name": "waf",
+      "category": "Pwn",
+      "points": 181,
+      "author": null,
+      "tags": [
+        "pwn",
+        "medium"
+      ],
+      "hints": [],
+      "connection_info": "chal.secso.cc:4006",
+      "solved_by_me": false,
+      "solves_count": 48,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://api-k17ctf.secso.cc/files/local/eMw6linqRkq89Lj6RTtaA?iat=1789138800&sig=PwO8eK1AwIS2z7BsMehiH4_AoP5lQd8evKRduVbNNUs",
+          "name": "handout.zip",
+          "saved_path": "/home/light/Workspace/CTF/K17_CTF_2026/Pwn/waf/challenge/handout.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": null,
+            "final_url": "https://api-k17ctf.secso.cc/files/local/eMw6linqRkq89Lj6RTtaA?iat=1789138800&sig=PwO8eK1AwIS2z7BsMehiH4_AoP5lQd8evKRduVbNNUs",
+            "last_modified": null,
+            "schema_version": 1,
+            "sha256": null,
+            "size": 3328,
+            "url": "https://api-k17ctf.secso.cc/files/local/eMw6linqRkq89Lj6RTtaA?iat=1789138800&sig=PwO8eK1AwIS2z7BsMehiH4_AoP5lQd8evKRduVbNNUs",
+            "verified_at": "2026-09-11T15:01:30Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "name": "get fixed boi",
+      "category": "Forensics",
+      "points": 115,
+      "author": null,
+      "tags": [
+        "forensics",
+        "medium"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 101,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://api-k17ctf.secso.cc/files/local/T9gbF1zBFuEefTJ2j2y5S?iat=1789138800&sig=BZFRQPJOjAh9ttqQSioiCsSVQ2GoSWrPoaXCgcWUNQA",
+          "name": "AWholeNewWorld.wld",
+          "saved_path": "/home/light/Workspace/CTF/K17_CTF_2026/Forensics/get_fixed_boi/challenge/AWholeNewWorld.wld",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": null,
+            "final_url": "https://api-k17ctf.secso.cc/files/local/T9gbF1zBFuEefTJ2j2y5S?iat=1789138800&sig=BZFRQPJOjAh9ttqQSioiCsSVQ2GoSWrPoaXCgcWUNQA",
+            "last_modified": null,
+            "schema_version": 1,
+            "sha256": null,
+            "size": 2773013,
+            "url": "https://api-k17ctf.secso.cc/files/local/T9gbF1zBFuEefTJ2j2y5S?iat=1789138800&sig=BZFRQPJOjAh9ttqQSioiCsSVQ2GoSWrPoaXCgcWUNQA",
+            "verified_at": "2026-09-11T15:01:32Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "name": "prime calc",
+      "category": "Misc",
+      "points": 189,
+      "author": null,
+      "tags": [
+        "misc",
+        "web",
+        "hard"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 44,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://api-k17ctf.secso.cc/files/local/myBiZ3CBhAkUV9c8z_1gL?iat=1789138800&sig=uZQ2NqnW4cTnBJMgLSbmipD0SkWWx7hPMc1i19u7xWc",
+          "name": "handout.zip",
+          "saved_path": "/home/light/Workspace/CTF/K17_CTF_2026/Misc/prime_calc/challenge/handout.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": null,
+            "final_url": "https://api-k17ctf.secso.cc/files/local/myBiZ3CBhAkUV9c8z_1gL?iat=1789138800&sig=uZQ2NqnW4cTnBJMgLSbmipD0SkWWx7hPMc1i19u7xWc",
+            "last_modified": null,
+            "schema_version": 1,
+            "sha256": null,
+            "size": 7491,
+            "url": "https://api-k17ctf.secso.cc/files/local/myBiZ3CBhAkUV9c8z_1gL?iat=1789138800&sig=uZQ2NqnW4cTnBJMgLSbmipD0SkWWx7hPMc1i19u7xWc",
+            "verified_at": "2026-09-11T15:01:31Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "name": "spot",
+      "category": "Misc",
+      "points": 204,
+      "author": null,
+      "tags": [
+        "misc",
+        "hard"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 38,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://api-k17ctf.secso.cc/files/local/BZU--atdgXIhqRAZSblzl?iat=1789138800&sig=amvXY0-MSW4A0zu0vHjTQPsESBLhuhF265OgBptxV_E",
+          "name": "handout.zip",
+          "saved_path": "/home/light/Workspace/CTF/K17_CTF_2026/Misc/spot/challenge/handout.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": null,
+            "final_url": "https://api-k17ctf.secso.cc/files/local/BZU--atdgXIhqRAZSblzl?iat=1789138800&sig=amvXY0-MSW4A0zu0vHjTQPsESBLhuhF265OgBptxV_E",
+            "last_modified": null,
+            "schema_version": 1,
+            "sha256": null,
+            "size": 6849,
+            "url": "https://api-k17ctf.secso.cc/files/local/BZU--atdgXIhqRAZSblzl?iat=1789138800&sig=amvXY0-MSW4A0zu0vHjTQPsESBLhuhF265OgBptxV_E",
+            "verified_at": "2026-09-11T15:01:32Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "name": "larpfest",
+      "category": "Osint",
+      "points": 100,
+      "author": null,
+      "tags": [
+        "osint",
+        "easy"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 163,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": []
+    },
+    {
+      "id": 25,
+      "name": "rainier",
+      "category": "Osint",
+      "points": 100,
+      "author": null,
+      "tags": [
+        "osint",
+        "beginner"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 236,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://api-k17ctf.secso.cc/files/local/JjVrtnnsKSlqwxkAH9m6v?iat=1789138800&sig=eLhoJ0ORCFWa9_xiaMnncHhmeNgKHfOG564FhtGKqy8",
+          "name": "rainier.jpg",
+          "saved_path": "/home/light/Workspace/CTF/K17_CTF_2026/Osint/rainier/challenge/rainier.jpg",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": null,
+            "final_url": "https://api-k17ctf.secso.cc/files/local/JjVrtnnsKSlqwxkAH9m6v?iat=1789138800&sig=eLhoJ0ORCFWa9_xiaMnncHhmeNgKHfOG564FhtGKqy8",
+            "last_modified": null,
+            "schema_version": 1,
+            "sha256": null,
+            "size": 727988,
+            "url": "https://api-k17ctf.secso.cc/files/local/JjVrtnnsKSlqwxkAH9m6v?iat=1789138800&sig=eLhoJ0ORCFWa9_xiaMnncHhmeNgKHfOG564FhtGKqy8",
+            "verified_at": "2026-09-11T15:01:33Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "name": "big-win",
+      "category": "Pwn",
+      "points": 100,
+      "author": null,
+      "tags": [
+        "pwn",
+        "easy"
+      ],
+      "hints": [],
+      "connection_info": "chal.secso.cc:4001",
+      "solved_by_me": false,
+      "solves_count": 144,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://api-k17ctf.secso.cc/files/local/zvBq3WHgBUmIDK-ExTRq4?iat=1789138800&sig=v6wSIrzJvP78lTKcDIWttOvMCLbIO1AMfN900Kb5hL0",
+          "name": "chal.c",
+          "saved_path": "/home/light/Workspace/CTF/K17_CTF_2026/Pwn/big-win/challenge/chal.c",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": null,
+            "final_url": "https://api-k17ctf.secso.cc/files/local/zvBq3WHgBUmIDK-ExTRq4?iat=1789138800&sig=v6wSIrzJvP78lTKcDIWttOvMCLbIO1AMfN900Kb5hL0",
+            "last_modified": null,
+            "schema_version": 1,
+            "sha256": null,
+            "size": 1397,
+            "url": "https://api-k17ctf.secso.cc/files/local/zvBq3WHgBUmIDK-ExTRq4?iat=1789138800&sig=v6wSIrzJvP78lTKcDIWttOvMCLbIO1AMfN900Kb5hL0",
+            "verified_at": "2026-09-11T15:01:33Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "name": "huge binary 1",
+      "category": "Pwn",
+      "points": 111,
+      "author": null,
+      "tags": [
+        "pwn",
+        "easy"
+      ],
+      "hints": [],
+      "connection_info": "chal.secso.cc:4002",
+      "solved_by_me": false,
+      "solves_count": 105,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://api-k17ctf.secso.cc/files/local/iNhVpJxwpeWBNs3q7RRov?iat=1789138800&sig=c223f3qzCHjquQH4gLVHkfq2Qi8tKZJtSzBd9NTGyy8",
+          "name": "handout.zip",
+          "saved_path": "/home/light/Workspace/CTF/K17_CTF_2026/Pwn/huge_binary_1/challenge/handout.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": null,
+            "final_url": "https://api-k17ctf.secso.cc/files/local/iNhVpJxwpeWBNs3q7RRov?iat=1789138800&sig=c223f3qzCHjquQH4gLVHkfq2Qi8tKZJtSzBd9NTGyy8",
+            "last_modified": null,
+            "schema_version": 1,
+            "sha256": null,
+            "size": 927448,
+            "url": "https://api-k17ctf.secso.cc/files/local/iNhVpJxwpeWBNs3q7RRov?iat=1789138800&sig=c223f3qzCHjquQH4gLVHkfq2Qi8tKZJtSzBd9NTGyy8",
+            "verified_at": "2026-09-11T15:01:35Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "name": "huge binary 2",
+      "category": "Pwn",
+      "points": 216,
+      "author": null,
+      "tags": [
+        "pwn",
+        "hard"
+      ],
+      "hints": [],
+      "connection_info": "chal.secso.cc:4005",
+      "solved_by_me": false,
+      "solves_count": 34,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://api-k17ctf.secso.cc/files/local/Evs1kvHAofTCNKOJ5lQhs?iat=1789138800&sig=SvJNN2RRigerJR1C66_H-TTKIrXmInKoG6T26XAbVag",
+          "name": "handout.zip",
+          "saved_path": "/home/light/Workspace/CTF/K17_CTF_2026/Pwn/huge_binary_2/challenge/handout.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": null,
+            "final_url": "https://api-k17ctf.secso.cc/files/local/Evs1kvHAofTCNKOJ5lQhs?iat=1789138800&sig=SvJNN2RRigerJR1C66_H-TTKIrXmInKoG6T26XAbVag",
+            "last_modified": null,
+            "schema_version": 1,
+            "sha256": null,
+            "size": 927548,
+            "url": "https://api-k17ctf.secso.cc/files/local/Evs1kvHAofTCNKOJ5lQhs?iat=1789138800&sig=SvJNN2RRigerJR1C66_H-TTKIrXmInKoG6T26XAbVag",
+            "verified_at": "2026-09-11T15:01:35Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "name": "ihyh",
+      "category": "Pwn",
+      "points": 210,
+      "author": null,
+      "tags": [
+        "pwn",
+        "hard"
+      ],
+      "hints": [],
+      "connection_info": "chal.secso.cc:4007",
+      "solved_by_me": false,
+      "solves_count": 36,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://api-k17ctf.secso.cc/files/local/7KnxFZfROuMEgOVkVBSAh?iat=1789138800&sig=noS7aJlAmYnvVihYdKHYTaeJrZqyI0xzSXvjv_ieYnU",
+          "name": "handout.zip",
+          "saved_path": "/home/light/Workspace/CTF/K17_CTF_2026/Pwn/ihyh/challenge/handout.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": null,
+            "final_url": "https://api-k17ctf.secso.cc/files/local/7KnxFZfROuMEgOVkVBSAh?iat=1789138800&sig=noS7aJlAmYnvVihYdKHYTaeJrZqyI0xzSXvjv_ieYnU",
+            "last_modified": null,
+            "schema_version": 1,
+            "sha256": null,
+            "size": 5756,
+            "url": "https://api-k17ctf.secso.cc/files/local/7KnxFZfROuMEgOVkVBSAh?iat=1789138800&sig=noS7aJlAmYnvVihYdKHYTaeJrZqyI0xzSXvjv_ieYnU",
+            "verified_at": "2026-09-11T15:01:34Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "name": "java notes",
+      "category": "Pwn",
+      "points": 144,
+      "author": null,
+      "tags": [
+        "pwn",
+        "medium"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 71,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://api-k17ctf.secso.cc/files/local/y4pHvNBq-NC2Al0Ozmtfj?iat=1789138800&sig=5UZgVE0x5HrvmTsPpjXkYu9g6y5hLapfuvPP0F8jlCA",
+          "name": "handout.zip",
+          "saved_path": "/home/light/Workspace/CTF/K17_CTF_2026/Pwn/java_notes/challenge/handout.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": null,
+            "final_url": "https://api-k17ctf.secso.cc/files/local/y4pHvNBq-NC2Al0Ozmtfj?iat=1789138800&sig=5UZgVE0x5HrvmTsPpjXkYu9g6y5hLapfuvPP0F8jlCA",
+            "last_modified": null,
+            "schema_version": 1,
+            "sha256": null,
+            "size": 6589,
+            "url": "https://api-k17ctf.secso.cc/files/local/y4pHvNBq-NC2Al0Ozmtfj?iat=1789138800&sig=5UZgVE0x5HrvmTsPpjXkYu9g6y5hLapfuvPP0F8jlCA",
+            "verified_at": "2026-09-11T15:01:42Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "name": "make-a-wish",
+      "category": "Pwn",
+      "points": 151,
+      "author": null,
+      "tags": [
+        "pwn",
+        "medium"
+      ],
+      "hints": [],
+      "connection_info": "chal.secso.cc:4004",
+      "solved_by_me": false,
+      "solves_count": 66,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://api-k17ctf.secso.cc/files/local/35MhHLOZe_2OHPj0RMp-W?iat=1789138800&sig=giPHoZ4AYnUQypGBrbq4CRF40fxeK1C1ULWDXik6m1E",
+          "name": "handout.zip",
+          "saved_path": "/home/light/Workspace/CTF/K17_CTF_2026/Pwn/make-a-wish/challenge/handout.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": null,
+            "final_url": "https://api-k17ctf.secso.cc/files/local/35MhHLOZe_2OHPj0RMp-W?iat=1789138800&sig=giPHoZ4AYnUQypGBrbq4CRF40fxeK1C1ULWDXik6m1E",
+            "last_modified": null,
+            "schema_version": 1,
+            "sha256": null,
+            "size": 4683,
+            "url": "https://api-k17ctf.secso.cc/files/local/35MhHLOZe_2OHPj0RMp-W?iat=1789138800&sig=giPHoZ4AYnUQypGBrbq4CRF40fxeK1C1ULWDXik6m1E",
+            "verified_at": "2026-09-11T15:01:35Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "name": "not json",
+      "category": "Pwn",
+      "points": 216,
+      "author": null,
+      "tags": [
+        "pwn",
+        "hard"
+      ],
+      "hints": [],
+      "connection_info": "chal.secso.cc:4003",
+      "solved_by_me": false,
+      "solves_count": 34,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://api-k17ctf.secso.cc/files/local/qADRtbl1JvvvOhZPBm6bs?iat=1789138800&sig=d0ZUhbMl-j2Ezojgjq_r1kabrnR6IE-BCGhV0ZlI_-U",
+          "name": "handout.zip",
+          "saved_path": "/home/light/Workspace/CTF/K17_CTF_2026/Pwn/not_json/challenge/handout.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": null,
+            "final_url": "https://api-k17ctf.secso.cc/files/local/qADRtbl1JvvvOhZPBm6bs?iat=1789138800&sig=d0ZUhbMl-j2Ezojgjq_r1kabrnR6IE-BCGhV0ZlI_-U",
+            "last_modified": null,
+            "schema_version": 1,
+            "sha256": null,
+            "size": 4550,
+            "url": "https://api-k17ctf.secso.cc/files/local/qADRtbl1JvvvOhZPBm6bs?iat=1789138800&sig=d0ZUhbMl-j2Ezojgjq_r1kabrnR6IE-BCGhV0ZlI_-U",
+            "verified_at": "2026-09-11T15:01:35Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "name": "online-roulette",
+      "category": "Pwn",
+      "points": 100,
+      "author": null,
+      "tags": [
+        "beginner",
+        "pwn",
+        "beginner"
+      ],
+      "hints": [],
+      "connection_info": "chal.secso.cc:4000",
+      "solved_by_me": false,
+      "solves_count": 142,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://api-k17ctf.secso.cc/files/local/u22bT0bPdbAufv0zlCMzN?iat=1789138800&sig=jpp6LiALUxvbZT25i6mm9QSctFgbJGAhfcA5t0dJZUs",
+          "name": "chal.c",
+          "saved_path": "/home/light/Workspace/CTF/K17_CTF_2026/Pwn/online-roulette/challenge/chal.c",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": null,
+            "final_url": "https://api-k17ctf.secso.cc/files/local/u22bT0bPdbAufv0zlCMzN?iat=1789138800&sig=jpp6LiALUxvbZT25i6mm9QSctFgbJGAhfcA5t0dJZUs",
+            "last_modified": null,
+            "schema_version": 1,
+            "sha256": null,
+            "size": 2577,
+            "url": "https://api-k17ctf.secso.cc/files/local/u22bT0bPdbAufv0zlCMzN?iat=1789138800&sig=jpp6LiALUxvbZT25i6mm9QSctFgbJGAhfcA5t0dJZUs",
+            "verified_at": "2026-09-11T15:01:36Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "name": "etch-a-sketch",
+      "category": "Rev",
+      "points": 100,
+      "author": null,
+      "tags": [
+        "rev",
+        "easy"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 191,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://api-k17ctf.secso.cc/files/local/zVeFFZrLlbEscghyQTSWo?iat=1789138800&sig=JxsNhFH4zbpyOtMgIB-OZLxdEDd3uREwn_FLWfRB_m8",
+          "name": "etchasketch",
+          "saved_path": "/home/light/Workspace/CTF/K17_CTF_2026/Rev/etch-a-sketch/challenge/etchasketch",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": null,
+            "final_url": "https://api-k17ctf.secso.cc/files/local/zVeFFZrLlbEscghyQTSWo?iat=1789138800&sig=JxsNhFH4zbpyOtMgIB-OZLxdEDd3uREwn_FLWfRB_m8",
+            "last_modified": null,
+            "schema_version": 1,
+            "sha256": null,
+            "size": 16216,
+            "url": "https://api-k17ctf.secso.cc/files/local/zVeFFZrLlbEscghyQTSWo?iat=1789138800&sig=JxsNhFH4zbpyOtMgIB-OZLxdEDd3uREwn_FLWfRB_m8",
+            "verified_at": "2026-09-11T15:01:39Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "name": "reverse captcha",
+      "category": "Rev",
+      "points": 100,
+      "author": null,
+      "tags": [
+        "beginner",
+        "rev",
+        "web",
+        "beginner"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 253,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": []
+    },
+    {
+      "id": 36,
+      "name": "Evilgram",
+      "category": "Rev",
+      "points": 100,
+      "author": null,
+      "tags": [
+        "rev",
+        "medium"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 145,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://api-k17ctf.secso.cc/files/local/orVd48nMAxhYkX3sILScJ?iat=1789138800&sig=SFnI5NZq8JGbylJBKkdarpJp0M7VnMQ04aVNOo5HCGI",
+          "name": "handout.zip",
+          "saved_path": "/home/light/Workspace/CTF/K17_CTF_2026/Rev/Evilgram/challenge/handout.zip",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": null,
+            "final_url": "https://api-k17ctf.secso.cc/files/local/orVd48nMAxhYkX3sILScJ?iat=1789138800&sig=SFnI5NZq8JGbylJBKkdarpJp0M7VnMQ04aVNOo5HCGI",
+            "last_modified": null,
+            "schema_version": 1,
+            "sha256": null,
+            "size": 18192,
+            "url": "https://api-k17ctf.secso.cc/files/local/orVd48nMAxhYkX3sILScJ?iat=1789138800&sig=SFnI5NZq8JGbylJBKkdarpJp0M7VnMQ04aVNOo5HCGI",
+            "verified_at": "2026-09-11T15:01:38Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "name": "monoid",
+      "category": "Rev",
+      "points": 100,
+      "author": "m0wiii",
+      "tags": [
+        "rev",
+        "medium"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 164,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://api-k17ctf.secso.cc/files/local/2aliJAoLBRRFsgMq6ZOLt?iat=1789138800&sig=RxDxI7CXR85CFY1cOUUM4mD2Fv9Q0jzFuWIfX6SUB3Q",
+          "name": "Main.dump-asm",
+          "saved_path": "/home/light/Workspace/CTF/K17_CTF_2026/Rev/monoid/challenge/Main.dump-asm",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": null,
+            "final_url": "https://api-k17ctf.secso.cc/files/local/2aliJAoLBRRFsgMq6ZOLt?iat=1789138800&sig=RxDxI7CXR85CFY1cOUUM4mD2Fv9Q0jzFuWIfX6SUB3Q",
+            "last_modified": null,
+            "schema_version": 1,
+            "sha256": null,
+            "size": 100977,
+            "url": "https://api-k17ctf.secso.cc/files/local/2aliJAoLBRRFsgMq6ZOLt?iat=1789138800&sig=RxDxI7CXR85CFY1cOUUM4mD2Fv9Q0jzFuWIfX6SUB3Q",
+            "verified_at": "2026-09-11T15:01:37Z"
+          }
+        },
+        {
+          "url": "https://api-k17ctf.secso.cc/files/local/zSRQG-4CB83euK99gdDM-?iat=1789138800&sig=i4W00_cKfQ-WrbeRrxB1q_swJScAAnFonJSnxVsFeVc",
+          "name": "Main.dump-simpl",
+          "saved_path": "/home/light/Workspace/CTF/K17_CTF_2026/Rev/monoid/challenge/Main.dump-simpl",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": null,
+            "final_url": "https://api-k17ctf.secso.cc/files/local/zSRQG-4CB83euK99gdDM-?iat=1789138800&sig=i4W00_cKfQ-WrbeRrxB1q_swJScAAnFonJSnxVsFeVc",
+            "last_modified": null,
+            "schema_version": 1,
+            "sha256": null,
+            "size": 28590,
+            "url": "https://api-k17ctf.secso.cc/files/local/zSRQG-4CB83euK99gdDM-?iat=1789138800&sig=i4W00_cKfQ-WrbeRrxB1q_swJScAAnFonJSnxVsFeVc",
+            "verified_at": "2026-09-11T15:01:39Z"
+          }
+        },
+        {
+          "url": "https://api-k17ctf.secso.cc/files/local/0MVrXdgWrV-d5nHYDDRbL?iat=1789138800&sig=OpYcY9B_BuvJmmPSWbKcYQwBu2cxpKlWJFGf3BIWCDw",
+          "name": "out.txt",
+          "saved_path": "/home/light/Workspace/CTF/K17_CTF_2026/Rev/monoid/challenge/out.txt",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": null,
+            "final_url": "https://api-k17ctf.secso.cc/files/local/0MVrXdgWrV-d5nHYDDRbL?iat=1789138800&sig=OpYcY9B_BuvJmmPSWbKcYQwBu2cxpKlWJFGf3BIWCDw",
+            "last_modified": null,
+            "schema_version": 1,
+            "sha256": null,
+            "size": 3104,
+            "url": "https://api-k17ctf.secso.cc/files/local/0MVrXdgWrV-d5nHYDDRbL?iat=1789138800&sig=OpYcY9B_BuvJmmPSWbKcYQwBu2cxpKlWJFGf3BIWCDw",
+            "verified_at": "2026-09-11T15:01:40Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "name": "close enough",
+      "category": "Forensics",
+      "points": 100,
+      "author": null,
+      "tags": [
+        "forensics",
+        "easy"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 205,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://api-k17ctf.secso.cc/files/local/oFE-jkii-eZF9vNFPhCuS?iat=1789138800&sig=YqDYhamtx5bhEPHthkDan1XkZVvRWVc50l8vs6wsUaw",
+          "name": "out.pkl.part",
+          "saved_path": "/home/light/Workspace/CTF/K17_CTF_2026/Forensics/close_enough/challenge/out.pkl.part",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": null,
+            "final_url": "https://api-k17ctf.secso.cc/files/local/oFE-jkii-eZF9vNFPhCuS?iat=1789138800&sig=YqDYhamtx5bhEPHthkDan1XkZVvRWVc50l8vs6wsUaw",
+            "last_modified": null,
+            "schema_version": 1,
+            "sha256": null,
+            "size": 376,
+            "url": "https://api-k17ctf.secso.cc/files/local/oFE-jkii-eZF9vNFPhCuS?iat=1789138800&sig=YqDYhamtx5bhEPHthkDan1XkZVvRWVc50l8vs6wsUaw",
+            "verified_at": "2026-09-11T15:01:41Z"
+          }
+        },
+        {
+          "url": "https://api-k17ctf.secso.cc/files/local/7rLyXUjsktI339cI1nd1g?iat=1789138800&sig=f1NyKoxx-m4teagndkC4VeWAqqVEAXeriBlRPr49_h8",
+          "name": "ekv.py",
+          "saved_path": "/home/light/Workspace/CTF/K17_CTF_2026/Forensics/close_enough/challenge/ekv.py",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": null,
+            "final_url": "https://api-k17ctf.secso.cc/files/local/7rLyXUjsktI339cI1nd1g?iat=1789138800&sig=f1NyKoxx-m4teagndkC4VeWAqqVEAXeriBlRPr49_h8",
+            "last_modified": null,
+            "schema_version": 1,
+            "sha256": null,
+            "size": 355,
+            "url": "https://api-k17ctf.secso.cc/files/local/7rLyXUjsktI339cI1nd1g?iat=1789138800&sig=f1NyKoxx-m4teagndkC4VeWAqqVEAXeriBlRPr49_h8",
+            "verified_at": "2026-09-11T15:01:42Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "name": "cryjail",
+      "category": "Crypto",
+      "points": 148,
+      "author": null,
+      "tags": [
+        "crypto",
+        "misc",
+        "hard"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 68,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://api-k17ctf.secso.cc/files/local/k3IDQmp4ZCK8GMQsGtlHS?iat=1789138800&sig=mlhQd-dfw3pGHrKwimA8w3nmH9bSf69LY18SUWn9l7g",
+          "name": "chall.py",
+          "saved_path": "/home/light/Workspace/CTF/K17_CTF_2026/Crypto/cryjail/challenge/chall.py",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": null,
+            "final_url": "https://api-k17ctf.secso.cc/files/local/k3IDQmp4ZCK8GMQsGtlHS?iat=1789138800&sig=mlhQd-dfw3pGHrKwimA8w3nmH9bSf69LY18SUWn9l7g",
+            "last_modified": null,
+            "schema_version": 1,
+            "sha256": null,
+            "size": 5826,
+            "url": "https://api-k17ctf.secso.cc/files/local/k3IDQmp4ZCK8GMQsGtlHS?iat=1789138800&sig=mlhQd-dfw3pGHrKwimA8w3nmH9bSf69LY18SUWn9l7g",
+            "verified_at": "2026-09-11T15:01:40Z"
+          }
+        },
+        {
+          "url": "https://api-k17ctf.secso.cc/files/local/O8psnduEkp6w-csMo2k_A?iat=1789138800&sig=jFrZ1P87ObYlkmc_j-dBFS1U03RN8WAbqiiO3Q36EiE",
+          "name": "Dockerfile",
+          "saved_path": "/home/light/Workspace/CTF/K17_CTF_2026/Crypto/cryjail/challenge/Dockerfile",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": null,
+            "final_url": "https://api-k17ctf.secso.cc/files/local/O8psnduEkp6w-csMo2k_A?iat=1789138800&sig=jFrZ1P87ObYlkmc_j-dBFS1U03RN8WAbqiiO3Q36EiE",
+            "last_modified": null,
+            "schema_version": 1,
+            "sha256": null,
+            "size": 467,
+            "url": "https://api-k17ctf.secso.cc/files/local/O8psnduEkp6w-csMo2k_A?iat=1789138800&sig=jFrZ1P87ObYlkmc_j-dBFS1U03RN8WAbqiiO3Q36EiE",
+            "verified_at": "2026-09-11T15:01:42Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "name": "srev",
+      "category": "Rev",
+      "points": 118,
+      "author": null,
+      "tags": [
+        "rev",
+        "hard"
+      ],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 97,
+      "submit_endpoint": null,
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://api-k17ctf.secso.cc/files/local/gZgF34lHkPXfE-q1LWMm0?iat=1789138800&sig=zzfx8165DVMpKXdv4emiwC22_L3pgCdjOA9kihvbDGU",
+          "name": "srev",
+          "saved_path": "/home/light/Workspace/CTF/K17_CTF_2026/Rev/srev/challenge/srev",
+          "success": true,
+          "source": "platform_attachment",
+          "message": "Đã tải trực tiếp thành công",
+          "verification": {
+            "etag": null,
+            "final_url": "https://api-k17ctf.secso.cc/files/local/gZgF34lHkPXfE-q1LWMm0?iat=1789138800&sig=zzfx8165DVMpKXdv4emiwC22_L3pgCdjOA9kihvbDGU",
+            "last_modified": null,
+            "schema_version": 1,
+            "sha256": null,
+            "size": 92408,
+            "url": "https://api-k17ctf.secso.cc/files/local/gZgF34lHkPXfE-q1LWMm0?iat=1789138800&sig=zzfx8165DVMpKXdv4emiwC22_L3pgCdjOA9kihvbDGU",
+            "verified_at": "2026-09-11T15:01:41Z"
+          }
+        }
+      ]
+    }
+  ]
+}

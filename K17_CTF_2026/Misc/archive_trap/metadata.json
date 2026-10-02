@@ -1,0 +1,53 @@
+{
+  "id": 16,
+  "name": "archive trap",
+  "category": "Misc",
+  "points": 100,
+  "author": null,
+  "tags": [
+    "misc",
+    "easy"
+  ],
+  "hints": [],
+  "connection_info": "chal.secso.cc:3000",
+  "solved_by_me": false,
+  "solves_count": 167,
+  "submit_endpoint": null,
+  "instance_info": {},
+  "downloaded_files": [
+    {
+      "url": "https://api-k17ctf.secso.cc/files/local/ytcDHRcyQ0jAEsHffm9kl?iat=1789138800&sig=HiIczSkGJ5UvXQB0kvsGdstdKV3eo4zyFOByxrsi0E4",
+      "name": "handout.zip",
+      "saved_path": "/home/light/Workspace/CTF/K17_CTF_2026/Misc/archive_trap/challenge/handout.zip",
+      "success": true,
+      "source": "platform_attachment",
+      "message": "Đã tải trực tiếp thành công",
+      "verification": {
+        "etag": null,
+        "final_url": "https://api-k17ctf.secso.cc/files/local/ytcDHRcyQ0jAEsHffm9kl?iat=1789138800&sig=HiIczSkGJ5UvXQB0kvsGdstdKV3eo4zyFOByxrsi0E4",
+        "last_modified": null,
+        "schema_version": 1,
+        "sha256": null,
+        "size": 1111,
+        "url": "https://api-k17ctf.secso.cc/files/local/ytcDHRcyQ0jAEsHffm9kl?iat=1789138800&sig=HiIczSkGJ5UvXQB0kvsGdstdKV3eo4zyFOByxrsi0E4",
+        "verified_at": "2026-09-11T15:01:29Z"
+      }
+    }
+  ],
+  "raw": {
+    "id": 16,
+    "slug": "archive-trap",
+    "title": "archive trap",
+    "tags": {
+      "categories": "misc",
+      "difficulty": "easy"
+    },
+    "hidden": false,
+    "value": 100,
+    "solve_count": 167,
+    "solved_by_me": false
+  },
+  "instance_status": "on",
+  "instance_note": "Target URL / endpoint active at chal.secso.cc:3000.",
+  "instance": "chal.secso.cc:3000"
+}

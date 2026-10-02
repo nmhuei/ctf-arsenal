@@ -1,0 +1,53 @@
+{
+  "id": 28,
+  "name": "huge binary 2",
+  "category": "Pwn",
+  "points": 216,
+  "author": null,
+  "tags": [
+    "pwn",
+    "hard"
+  ],
+  "hints": [],
+  "connection_info": "chal.secso.cc:4005",
+  "solved_by_me": false,
+  "solves_count": 34,
+  "submit_endpoint": null,
+  "instance_info": {},
+  "downloaded_files": [
+    {
+      "url": "https://api-k17ctf.secso.cc/files/local/Evs1kvHAofTCNKOJ5lQhs?iat=1789138800&sig=SvJNN2RRigerJR1C66_H-TTKIrXmInKoG6T26XAbVag",
+      "name": "handout.zip",
+      "saved_path": "/home/light/Workspace/CTF/K17_CTF_2026/Pwn/huge_binary_2/challenge/handout.zip",
+      "success": true,
+      "source": "platform_attachment",
+      "message": "Đã tải trực tiếp thành công",
+      "verification": {
+        "etag": null,
+        "final_url": "https://api-k17ctf.secso.cc/files/local/Evs1kvHAofTCNKOJ5lQhs?iat=1789138800&sig=SvJNN2RRigerJR1C66_H-TTKIrXmInKoG6T26XAbVag",
+        "last_modified": null,
+        "schema_version": 1,
+        "sha256": null,
+        "size": 927548,
+        "url": "https://api-k17ctf.secso.cc/files/local/Evs1kvHAofTCNKOJ5lQhs?iat=1789138800&sig=SvJNN2RRigerJR1C66_H-TTKIrXmInKoG6T26XAbVag",
+        "verified_at": "2026-09-11T15:01:35Z"
+      }
+    }
+  ],
+  "raw": {
+    "id": 28,
+    "slug": "huge-binary",
+    "title": "huge binary 2",
+    "tags": {
+      "categories": "pwn",
+      "difficulty": "hard"
+    },
+    "hidden": false,
+    "value": 216,
+    "solve_count": 34,
+    "solved_by_me": false
+  },
+  "instance_status": "on",
+  "instance_note": "Target URL / endpoint active at chal.secso.cc:4005.",
+  "instance": "chal.secso.cc:4005"
+}

@@ -1,0 +1,53 @@
+{
+  "id": 31,
+  "name": "make-a-wish",
+  "category": "Pwn",
+  "points": 151,
+  "author": null,
+  "tags": [
+    "pwn",
+    "medium"
+  ],
+  "hints": [],
+  "connection_info": "chal.secso.cc:4004",
+  "solved_by_me": false,
+  "solves_count": 66,
+  "submit_endpoint": null,
+  "instance_info": {},
+  "downloaded_files": [
+    {
+      "url": "https://api-k17ctf.secso.cc/files/local/35MhHLOZe_2OHPj0RMp-W?iat=1789138800&sig=giPHoZ4AYnUQypGBrbq4CRF40fxeK1C1ULWDXik6m1E",
+      "name": "handout.zip",
+      "saved_path": "/home/light/Workspace/CTF/K17_CTF_2026/Pwn/make-a-wish/challenge/handout.zip",
+      "success": true,
+      "source": "platform_attachment",
+      "message": "Đã tải trực tiếp thành công",
+      "verification": {
+        "etag": null,
+        "final_url": "https://api-k17ctf.secso.cc/files/local/35MhHLOZe_2OHPj0RMp-W?iat=1789138800&sig=giPHoZ4AYnUQypGBrbq4CRF40fxeK1C1ULWDXik6m1E",
+        "last_modified": null,
+        "schema_version": 1,
+        "sha256": null,
+        "size": 4683,
+        "url": "https://api-k17ctf.secso.cc/files/local/35MhHLOZe_2OHPj0RMp-W?iat=1789138800&sig=giPHoZ4AYnUQypGBrbq4CRF40fxeK1C1ULWDXik6m1E",
+        "verified_at": "2026-09-11T15:01:35Z"
+      }
+    }
+  ],
+  "raw": {
+    "id": 31,
+    "slug": "make-a-wish",
+    "title": "make-a-wish",
+    "tags": {
+      "categories": "pwn",
+      "difficulty": "medium"
+    },
+    "hidden": false,
+    "value": 151,
+    "solve_count": 66,
+    "solved_by_me": false
+  },
+  "instance_status": "on",
+  "instance_note": "Target URL / endpoint active at chal.secso.cc:4004.",
+  "instance": "chal.secso.cc:4004"
+}

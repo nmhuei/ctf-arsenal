@@ -1,0 +1,53 @@
+{
+  "id": 26,
+  "name": "big-win",
+  "category": "Pwn",
+  "points": 100,
+  "author": null,
+  "tags": [
+    "pwn",
+    "easy"
+  ],
+  "hints": [],
+  "connection_info": "chal.secso.cc:4001",
+  "solved_by_me": false,
+  "solves_count": 144,
+  "submit_endpoint": null,
+  "instance_info": {},
+  "downloaded_files": [
+    {
+      "url": "https://api-k17ctf.secso.cc/files/local/zvBq3WHgBUmIDK-ExTRq4?iat=1789138800&sig=v6wSIrzJvP78lTKcDIWttOvMCLbIO1AMfN900Kb5hL0",
+      "name": "chal.c",
+      "saved_path": "/home/light/Workspace/CTF/K17_CTF_2026/Pwn/big-win/challenge/chal.c",
+      "success": true,
+      "source": "platform_attachment",
+      "message": "Đã tải trực tiếp thành công",
+      "verification": {
+        "etag": null,
+        "final_url": "https://api-k17ctf.secso.cc/files/local/zvBq3WHgBUmIDK-ExTRq4?iat=1789138800&sig=v6wSIrzJvP78lTKcDIWttOvMCLbIO1AMfN900Kb5hL0",
+        "last_modified": null,
+        "schema_version": 1,
+        "sha256": null,
+        "size": 1397,
+        "url": "https://api-k17ctf.secso.cc/files/local/zvBq3WHgBUmIDK-ExTRq4?iat=1789138800&sig=v6wSIrzJvP78lTKcDIWttOvMCLbIO1AMfN900Kb5hL0",
+        "verified_at": "2026-09-11T15:01:33Z"
+      }
+    }
+  ],
+  "raw": {
+    "id": 26,
+    "slug": "big-win",
+    "title": "big-win",
+    "tags": {
+      "categories": "pwn",
+      "difficulty": "easy"
+    },
+    "hidden": false,
+    "value": 100,
+    "solve_count": 144,
+    "solved_by_me": false
+  },
+  "instance_status": "on",
+  "instance_note": "Target URL / endpoint active at chal.secso.cc:4001.",
+  "instance": "chal.secso.cc:4001"
+}
