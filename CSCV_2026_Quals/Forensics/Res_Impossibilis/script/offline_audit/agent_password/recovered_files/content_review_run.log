@@ -1,0 +1,96 @@
+{
+  "manifest_sha256": "9e43b8a23682d0aee0c279d75a23b07215adeacf6fb54d20628b36aef6e2f707",
+  "verified_files": 37,
+  "candidate_source_counts": {
+    "whole_member": 37,
+    "line": 272,
+    "assignment_rhs": 161,
+    "text_token": 1298,
+    "encoded_token": 1872,
+    "json_key": 1812,
+    "json_value": 609,
+    "json_scalar": 303,
+    "decoded_base64_round1": 433,
+    "decoded_hex_round1": 37,
+    "decoded_base64_round2": 439,
+    "decoded_hex_round2": 37
+  },
+  "unique_candidate_sequences": 2639,
+  "candidate_byte_sum": 179340,
+  "maximum_substring_length": 128,
+  "match_criterion": "Exact 670e8462 306591b4 8372919d ZIPCrypto state",
+  "matches": [],
+  "declared_backup_password_matches": false,
+  "captured_client_random_count": 121,
+  "tls_keylog": [
+    {
+      "label": "CLIENT_HANDSHAKE_TRAFFIC_SECRET",
+      "random_hex_length": 64,
+      "secret_hex_length": 64,
+      "hex_valid": true,
+      "random": "9a4bf201cc88102491a0c82104bd881920ac88102491a0c82104bd881920ac88",
+      "random_present_in_capture": false
+    },
+    {
+      "label": "SERVER_HANDSHAKE_TRAFFIC_SECRET",
+      "random_hex_length": 64,
+      "secret_hex_length": 64,
+      "hex_valid": true,
+      "random": "9a4bf201cc88102491a0c82104bd881920ac88102491a0c82104bd881920ac88",
+      "random_present_in_capture": false
+    },
+    {
+      "label": "CLIENT_TRAFFIC_SECRET_0",
+      "random_hex_length": 64,
+      "secret_hex_length": 64,
+      "hex_valid": true,
+      "random": "9a4bf201cc88102491a0c82104bd881920ac88102491a0c82104bd881920ac88",
+      "random_present_in_capture": false
+    },
+    {
+      "label": "SERVER_TRAFFIC_SECRET_0",
+      "random_hex_length": 64,
+      "secret_hex_length": 64,
+      "hex_valid": true,
+      "random": "9a4bf201cc88102491a0c82104bd881920ac88102491a0c82104bd881920ac88",
+      "random_present_in_capture": false
+    },
+    {
+      "label": "EXPORTER_SECRET",
+      "random_hex_length": 64,
+      "secret_hex_length": 64,
+      "hex_valid": true,
+      "random": "9a4bf201cc88102491a0c82104bd881920ac88102491a0c82104bd881920ac88",
+      "random_present_in_capture": false
+    }
+  ],
+  "kdbx": {
+    "length": 254,
+    "signatures": [
+      "0x9aa2d903",
+      "0xb54bfb67"
+    ],
+    "format_version": "0x40000",
+    "first_field_id": 1,
+    "first_field_size": 921658128,
+    "remaining_field_bytes": 237,
+    "first_field_overruns_file": true
+  },
+  "xlsx": {
+    "length": 54,
+    "is_zip": false,
+    "content_repr": "b'PK\\x03\\x04[MOCK_CONFIDENTIAL_SPREADSHEET_PAYROLL_DATA_2026]\\n'"
+  },
+  "vpn_keys": [
+    {
+      "field": "PrivateKey",
+      "decoded_bytes": 31,
+      "decoded_text": "hello_world_fake_key_do_not_use"
+    },
+    {
+      "field": "PublicKey",
+      "decoded_bytes": 32,
+      "decoded_text": "fake_public_key_for_testing_1234"
+    }
+  ]
+}

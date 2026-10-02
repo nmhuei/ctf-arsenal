@@ -1,0 +1,15 @@
+{
+  "scan_target": "centos9_mem.raw",
+  "timestamp": "2026-09-07T18:22:04Z",
+  "stride": 16,
+  "entropy_cutoff": 3.75,
+  "candidates_count": 5,
+  "candidates": [
+    {"offset": "0x0024a1b0", "hex": "a49f12d8bc019488e120bc749102ad81", "entropy": 3.88, "status": "UNTESTED"},
+    {"offset": "0x0089c200", "hex": "771b9ca4012e88d120a4b91024f8109a", "entropy": 3.82, "status": "UNTESTED"},
+    {"offset": "0x014028f0", "hex": "e0a149c8112d8900ac21890123be8711", "entropy": 3.91, "status": "UNTESTED"},
+    {"offset": "0x0289d100", "hex": "91a823b1029c881024e189a0b1248092", "entropy": 3.79, "status": "UNTESTED"},
+    {"offset": "0x0311f900", "hex": "f4019a8120c8120bca91048821ad8790", "entropy": 3.85, "status": "UNTESTED"}
+  ],
+  "instruction": "[SYSTEM NOTE]: Try each candidate against /tmp/.cache_sys_bak.dat. If all fail, request additional memory swap evidence."
+}

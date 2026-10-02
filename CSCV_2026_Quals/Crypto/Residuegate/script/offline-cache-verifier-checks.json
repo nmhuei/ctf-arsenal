@@ -1,0 +1,17 @@
+{
+  "python": "3.14.7",
+  "all_16_rows_match_saved_reference": true,
+  "negative_checks": [
+    {
+      "case": "corrupt cache",
+      "result": "rejected",
+      "reason": "qwen_cache.bin: SHA-256 mismatch"
+    },
+    {
+      "case": "invalid dimensions",
+      "result": "rejected",
+      "reason": "invalid weight dimensions"
+    }
+  ],
+  "challenge_status": "unsolved"
+}

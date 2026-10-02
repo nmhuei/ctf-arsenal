@@ -1,0 +1,16 @@
+{
+  "sha256": "338af6b4092e34a5b7f97c053d963c98f11763ea9b187c4855693846e653d68b",
+  "size": 112,
+  "header_bytes": "4348414c4c41474501080c0018001800",
+  "header_after_magic": [
+    1,
+    8,
+    12,
+    24,
+    24
+  ],
+  "hypothesis": "Four byte operations followed by combining the second block; VM semantics unknown",
+  "tested": 139392,
+  "flag_candidates": [],
+  "printable_candidates": []
+}

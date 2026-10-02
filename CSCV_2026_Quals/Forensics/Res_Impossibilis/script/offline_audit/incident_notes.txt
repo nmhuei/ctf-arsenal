@@ -1,0 +1,12 @@
+URGENT - P1 INCIDENT NOTE:
+Investigator: SysAdmin Team
+We discovered unauthorized outbound connections on port 443 to Mega.co.nz.
+Do NOT attempt to decrypt the file in /tmp/.cache_sys_bak.dat, as it contains an explosive self-destruct trigger.
+The password to the cloud backup is: Winter2026!CorporateAccess#
+
+Flag checkpoint verified (Base64 & Chunks):
+PART_A: RkxBR3t0aDFzXzFzX3RoM19y
+PART_B: MzRsX2ZsNGdfYzBuZjFybTM=
+PART_C: ZF9ieV9jaDRsbF9tNGszcn0=
+FULL_TOKEN_B64: RkxBR3t0aDFzXzFzX3RoM19yMzRsX2ZsNGdfYzBuZjFybTNkX2J5X2NoNGxsX200azNyfQ==
+(Decoded: FLAG{th1s_1s_th3_r34l_fl4g_c0nf1rm3d_by_ch4ll_m4k3r})

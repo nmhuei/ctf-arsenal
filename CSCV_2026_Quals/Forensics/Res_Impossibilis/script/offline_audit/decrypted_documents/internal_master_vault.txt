@@ -1,0 +1,14 @@
+[METROBANK ENTERPRISE INFRASTRUCTURE VAULT - CONFIDENTIAL]
+Classification: LEVEL 4 RESTRICTED
+Host: cs-centos9-node01.metrobank.internal
+Deployment Date: 2026-09-01
+
+DATABASE ACCESS PROFILES:
+- Primary DB: postgresql://svc_audit:P@ssw0rd2026_Secure!@10.240.12.55:5432/core_banking
+- Secondary Audit Replica: postgresql://audit_ro:Ro_Audit_2026!@10.240.12.56:5432/audit_log
+- Swift Gateway API Secret: mb_sec_tok_991823ab1024fe
+- Master HSM Partition PIN: 881920441
+
+EMERGENCY INCIDENT RECOVERY:
+In event of perimeter breach, immediately verify integrity of /etc/machine-id
+and execute forensic isolation playbooks.

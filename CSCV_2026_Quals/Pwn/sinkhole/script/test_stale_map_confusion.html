@@ -1,0 +1,54 @@
+<!doctype html>
+<meta charset="utf-8">
+<script>
+// Keep the profiled reader as a DOUBLE access while a second alias changes
+// the same elements backing store to OBJECT.  The final call aliases src and
+// alias, so the loop's second iteration tests whether its map fact is stale.
+const prefix = [];
+const mutateLines = ["function mutate(a, x) {", "a.push({ mutated: x });"];
+for (let i = 0; i < 650; i++) mutateLines.push(`if (x === ${i}) return ${i};`);
+mutateLines.push("return a.length;", "}", "return mutate;");
+const mutate = new Function(mutateLines.join("\n"))();
+prefix.push("function trigger(x, src, alias, dst, obj, idx, limit, fn) {");
+for (let i = 0; i < 650; i++) {
+  prefix.push(`if (x === ${i}) x += 1;`);
+}
+prefix.push("src[4] = 1.1;");
+prefix.push("dst[0] = obj;");
+prefix.push("let i = 0, res = 0;");
+prefix.push("while (i < limit) {");
+for (let i = 0; i < 430; i++) {
+  prefix.push(`res = (res + i + ${i % 7}) | 0;`);
+}
+prefix.push("res = src[idx] + 0.0;");
+prefix.push("if (i === 0) res = (res + (fn(alias, obj) & 0)) | 0;");
+prefix.push("i++;");
+prefix.push("}");
+prefix.push("return res;");
+prefix.push("}");
+prefix.push("return trigger;");
+const trigger = new Function(prefix.join("\n"))();
+
+function makeDouble() { return [1.1, 2.2, 3.3]; }
+function makeObject() { return [{ warm: 1 }, { warm: 2 }, { warm: 3 }]; }
+
+const obj = { marker: 0x1337 };
+for (let i = 0; i < 10000; i++) {
+  trigger(1000, makeDouble(), makeDouble(), makeObject(), obj, 0, 2, mutate);
+}
+
+const victim = makeDouble();
+const alias = victim;
+const dst = makeObject();
+let result;
+try {
+  result = trigger(1000, victim, alias, dst, obj, 0, 2, mutate);
+  console.log("result", typeof result, result);
+} catch (e) {
+  console.log("caught", e && e.name, e && e.message);
+}
+for (let i = 0; i < 6; i++) {
+  try { console.log("victim" + i, typeof victim[i], victim[i]); } catch (e) { console.log("victim" + i, "ERR", e); }
+}
+console.log("victim length", victim.length);
+</script>

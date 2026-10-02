@@ -1,0 +1,25 @@
+{
+  "fixture": {
+    "passed": true,
+    "j0_hex": "000102030405060708090a0b00000001",
+    "wrong_key_rejected": true,
+    "corrupt_tag_rejected": true
+  },
+  "cipher_suite": "0x1301",
+  "source_unique_aes128_keys": 22,
+  "aes256_rows_excluded": 25,
+  "key_variants": 88,
+  "record_counts": {
+    "client": 2,
+    "server": 5
+  },
+  "key_record_tests": 616,
+  "j0_counter_matches": [],
+  "authenticated_records": [],
+  "nonce_consistency": [],
+  "interpretation": "Each tag-derived J0 suffix match is a 32-bit consistency filter; require independent structure/multiple-record evidence.",
+  "capture_hashes": {
+    "client": "19eb1218a5e6bdd0c3566a2e2a88be622c0a6a7c431c4b9e9a60621765e5a5a4",
+    "server": "f014658ec4f12288e516c9727076ac847d3476e19fa9c1e9c33c81561f7ed436"
+  }
+}

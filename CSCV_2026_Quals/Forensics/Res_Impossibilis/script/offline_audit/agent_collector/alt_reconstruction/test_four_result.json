@@ -1,0 +1,21 @@
+{
+  "hypotheses": 262,
+  "pair_checks": 22236464,
+  "bounded_epoch_combinations": 4580711584,
+  "elapsed": 2.6678287982940674,
+  "crc_hits": [
+    {
+      "hypothesis": 33,
+      "epochs": [
+        1791432500,
+        1791432567,
+        1791432469,
+        1791432442
+      ],
+      "state_match": false,
+      "prefix": "https:play.google.com:443:.::3\t0\t20704\thttps:play.google.com:443:play.google.com:443::n:1791432500:h3:y:1788840424:n::|n:y:\nhttps:play.google.com:443:.:^partitionKey=%28https%2Cmozilla.org%29:3\t0\t20704\thttps:play.google.com:443:play.google.com:443::n:1791432567:h3:y:1788840424:n:^partitionKey=%28https%2Cmozilla.org%29:|n:y:\nhttps:adservice.google.com:443:.:^partitionKey=%28https%2Ccoccoc.com%29:3\t0\t20704\thttps:adservice.google.com:443:adservice.google.com:443::n:1791432469:h3:y:1788840424:n:^partitionKey=%28https%2Ccoccoc.com%29:|n:y:\nhttps:sb-ssl.google.com:443:.:^partitionKey=%28https%2Ccoccoc.com%29:3\t0\t20704\thttps:sb-ssl.google.com:443:sb-ssl.google.com:443::n:17914324"
+    }
+  ],
+  "verified": [],
+  "method": "CRC32 affine combination of three independently bounded10digitexpiryfields; all hits checked against full96-bitZIPstateatplaintext681. No arbitrary byte patches."
+}

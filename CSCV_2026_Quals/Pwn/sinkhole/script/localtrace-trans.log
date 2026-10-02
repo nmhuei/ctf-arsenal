@@ -1,0 +1,114 @@
+[3742205:3742205:0925/141825.343294:ERROR:ui/gl/angle_platform_impl.cc:48] Display.cpp:1136 (initialize): ANGLE Display::initialize error 0: Internal Vulkan error (-3): Initialization of an object could not be completed for implementation-specific reasons, in ../../third_party/angle/src/libANGLE/renderer/vulkan/vk_renderer.cpp, initialize:2484.
+ERR: Display.cpp:1136 (initialize): ANGLE Display::initialize error 0: Internal Vulkan error (-3): Initialization of an object could not be completed for implementation-specific reasons, in ../../third_party/angle/src/libANGLE/renderer/vulkan/vk_renderer.cpp, initialize:2484.
+[3742205:3742205:0925/141825.343474:ERROR:ui/gl/egl_util.cc:92] EGL Driver message (Critical) eglInitialize: Internal Vulkan error (-3): Initialization of an object could not be completed for implementation-specific reasons, in ../../third_party/angle/src/libANGLE/renderer/vulkan/vk_renderer.cpp, initialize:2484.
+[3742205:3742205:0925/141825.343493:ERROR:ui/gl/gl_display.cc:630] eglInitialize SwANGLE failed with error EGL_NOT_INITIALIZED
+[3742205:3742205:0925/141825.343529:ERROR:ui/gl/gl_display.cc:665] Initialization of all (1) EGL display types failed.
+[3742205:3742205:0925/141825.343546:ERROR:ui/ozone/common/gl_ozone_egl.cc:26] GLDisplayEGL::Initialize failed.
+[3742205:3742205:0925/141825.343809:ERROR:ui/gl/angle_platform_impl.cc:48] Display.cpp:1136 (initialize): ANGLE Display::initialize error 0: Internal Vulkan error (-3): Initialization of an object could not be completed for implementation-specific reasons, in ../../third_party/angle/src/libANGLE/renderer/vulkan/vk_renderer.cpp, initialize:2484.
+ERR: Display.cpp:1136 (initialize): ANGLE Display::initialize error 0: Internal Vulkan error (-3): Initialization of an object could not be completed for implementation-specific reasons, in ../../third_party/angle/src/libANGLE/renderer/vulkan/vk_renderer.cpp, initialize:2484.
+[3742205:3742205:0925/141825.343838:ERROR:ui/gl/egl_util.cc:92] EGL Driver message (Critical) eglInitialize: Internal Vulkan error (-3): Initialization of an object could not be completed for implementation-specific reasons, in ../../third_party/angle/src/libANGLE/renderer/vulkan/vk_renderer.cpp, initialize:2484.
+[3742205:3742205:0925/141825.343853:ERROR:ui/gl/gl_display.cc:630] eglInitialize SwANGLE failed with error EGL_NOT_INITIALIZED
+[3742205:3742205:0925/141825.343867:ERROR:ui/gl/gl_display.cc:665] Initialization of all (1) EGL display types failed.
+[3742205:3742205:0925/141825.343885:ERROR:ui/ozone/common/gl_ozone_egl.cc:26] GLDisplayEGL::Initialize failed.
+[3742205:3742205:0925/141825.345088:ERROR:components/viz/service/main/viz_main_impl.cc:190] Exiting GPU process due to errors during initialization
+[3742157:3742157:0925/141825.384306:WARNING:chrome/browser/signin/account_consistency_mode_manager.cc:74] Desktop Identity Consistency cannot be enabled as no OAuth client ID and client secret have been configured.
+[3742244:3742244:0925/141825.412537:ERROR:ui/gl/angle_platform_impl.cc:48] Display.cpp:1136 (initialize): ANGLE Display::initialize error 0: Internal Vulkan error (-3): Initialization of an object could not be completed for implementation-specific reasons, in ../../third_party/angle/src/libANGLE/renderer/vulkan/vk_renderer.cpp, initialize:2484.
+ERR: Display.cpp:1136 (initialize): ANGLE Display::initialize error 0: Internal Vulkan error (-3): Initialization of an object could not be completed for implementation-specific reasons, in ../../third_party/angle/src/libANGLE/renderer/vulkan/vk_renderer.cpp, initialize:2484.
+[3742244:3742244:0925/141825.412665:ERROR:ui/gl/egl_util.cc:92] EGL Driver message (Critical) eglInitialize: Internal Vulkan error (-3): Initialization of an object could not be completed for implementation-specific reasons, in ../../third_party/angle/src/libANGLE/renderer/vulkan/vk_renderer.cpp, initialize:2484.
+[3742244:3742244:0925/141825.412706:ERROR:ui/gl/gl_display.cc:630] eglInitialize SwANGLE failed with error EGL_NOT_INITIALIZED
+[3742244:3742244:0925/141825.412743:ERROR:ui/gl/gl_display.cc:665] Initialization of all (1) EGL display types failed.
+[3742244:3742244:0925/141825.412824:ERROR:ui/ozone/common/gl_ozone_egl.cc:26] GLDisplayEGL::Initialize failed.
+[3742244:3742244:0925/141825.413265:ERROR:ui/gl/angle_platform_impl.cc:48] Display.cpp:1136 (initialize): ANGLE Display::initialize error 0: Internal Vulkan error (-3): Initialization of an object could not be completed for implementation-specific reasons, in ../../third_party/angle/src/libANGLE/renderer/vulkan/vk_renderer.cpp, initialize:2484.
+ERR: Display.cpp:1136 (initialize): ANGLE Display::initialize error 0: Internal Vulkan error (-3): Initialization of an object could not be completed for implementation-specific reasons, in ../../third_party/angle/src/libANGLE/renderer/vulkan/vk_renderer.cpp, initialize:2484.
+[3742244:3742244:0925/141825.413327:ERROR:ui/gl/egl_util.cc:92] EGL Driver message (Critical) eglInitialize: Internal Vulkan error (-3): Initialization of an object could not be completed for implementation-specific reasons, in ../../third_party/angle/src/libANGLE/renderer/vulkan/vk_renderer.cpp, initialize:2484.
+[3742244:3742244:0925/141825.413364:ERROR:ui/gl/gl_display.cc:630] eglInitialize SwANGLE failed with error EGL_NOT_INITIALIZED
+[3742244:3742244:0925/141825.413396:ERROR:ui/gl/gl_display.cc:665] Initialization of all (1) EGL display types failed.
+[3742244:3742244:0925/141825.413441:ERROR:ui/ozone/common/gl_ozone_egl.cc:26] GLDisplayEGL::Initialize failed.
+[3742244:3742244:0925/141825.415115:ERROR:components/viz/service/main/viz_main_impl.cc:190] Exiting GPU process due to errors during initialization
+[3742265:3742265:0925/141825.439708:WARNING:content/child/runtime_features.cc:522] AttributionReporting cannot be enabled in this configuration. Use --enable-features=ConversionMeasurement in addition.
+[3742157:3742157:0925/141825.478569:WARNING:ui/aura/window.cc:1464] StackChildLayerRelativeTo called with unmanaged layer(s). child=WebContentsViewAura child_managed=0 target=WebContentsViewAura target_managed=0
+[3742157:3742157:0925/141825.478659:WARNING:ui/aura/window.cc:1464] StackChildLayerRelativeTo called with unmanaged layer(s). child=WebContentsViewAura child_managed=0 target=WebContentsViewAura target_managed=0
+[3742321:3742321:0925/141825.479498:WARNING:content/child/runtime_features.cc:522] AttributionReporting cannot be enabled in this configuration. Use --enable-features=ConversionMeasurement in addition.
+[3742323:3742323:0925/141825.479868:WARNING:content/child/runtime_features.cc:522] AttributionReporting cannot be enabled in this configuration. Use --enable-features=ConversionMeasurement in addition.
+[3742356:3742356:0925/141825.501608:ERROR:ui/gl/angle_platform_impl.cc:48] Display.cpp:1136 (initialize): ANGLE Display::initialize error 0: Internal Vulkan error (-3): Initialization of an object could not be completed for implementation-specific reasons, in ../../third_party/angle/src/libANGLE/renderer/vulkan/vk_renderer.cpp, initialize:2484.
+ERR: Display.cpp:1136 (initialize): ANGLE Display::initialize error 0: Internal Vulkan error (-3): Initialization of an object could not be completed for implementation-specific reasons, in ../../third_party/angle/src/libANGLE/renderer/vulkan/vk_renderer.cpp, initialize:2484.
+[3742356:3742356:0925/141825.501933:ERROR:ui/gl/egl_util.cc:92] EGL Driver message (Critical) eglInitialize: Internal Vulkan error (-3): Initialization of an object could not be completed for implementation-specific reasons, in ../../third_party/angle/src/libANGLE/renderer/vulkan/vk_renderer.cpp, initialize:2484.
+[3742356:3742356:0925/141825.501995:ERROR:ui/gl/gl_display.cc:630] eglInitialize SwANGLE failed with error EGL_NOT_INITIALIZED
+[3742356:3742356:0925/141825.502018:ERROR:ui/gl/gl_display.cc:665] Initialization of all (1) EGL display types failed.
+[3742356:3742356:0925/141825.502743:ERROR:ui/ozone/common/gl_ozone_egl.cc:26] GLDisplayEGL::Initialize failed.
+[3742356:3742356:0925/141825.503435:ERROR:ui/gl/angle_platform_impl.cc:48] Display.cpp:1136 (initialize): ANGLE Display::initialize error 0: Internal Vulkan error (-3): Initialization of an object could not be completed for implementation-specific reasons, in ../../third_party/angle/src/libANGLE/renderer/vulkan/vk_renderer.cpp, initialize:2484.
+ERR: Display.cpp:1136 (initialize): ANGLE Display::initialize error 0: Internal Vulkan error (-3): Initialization of an object could not be completed for implementation-specific reasons, in ../../third_party/angle/src/libANGLE/renderer/vulkan/vk_renderer.cpp, initialize:2484.
+[3742356:3742356:0925/141825.503574:ERROR:ui/gl/egl_util.cc:92] EGL Driver message (Critical) eglInitialize: Internal Vulkan error (-3): Initialization of an object could not be completed for implementation-specific reasons, in ../../third_party/angle/src/libANGLE/renderer/vulkan/vk_renderer.cpp, initialize:2484.
+[3742356:3742356:0925/141825.503626:ERROR:ui/gl/gl_display.cc:630] eglInitialize SwANGLE failed with error EGL_NOT_INITIALIZED
+[3742356:3742356:0925/141825.503667:ERROR:ui/gl/gl_display.cc:665] Initialization of all (1) EGL display types failed.
+[3742356:3742356:0925/141825.503713:ERROR:ui/ozone/common/gl_ozone_egl.cc:26] GLDisplayEGL::Initialize failed.
+[3742356:3742356:0925/141825.506155:ERROR:components/viz/service/main/viz_main_impl.cc:190] Exiting GPU process due to errors during initialization
+---------------------------------------------------
+Begin compiling method mojo.internal.StructField using Maglev
+[3742378:3742378:0925/141825.518228:ERROR:ui/gl/angle_platform_impl.cc:48] Display.cpp:1136 (initialize): ANGLE Display::initialize error 0: Internal Vulkan error (-3): Initialization of an object could not be completed for implementation-specific reasons, in ../../third_party/angle/src/libANGLE/renderer/vulkan/vk_renderer.cpp, initialize:2484.
+ERR: Display.cpp:1136 (initialize): ANGLE Display::initialize error 0: Internal Vulkan error (-3): Initialization of an object could not be completed for implementation-specific reasons, in ../../third_party/angle/src/libANGLE/renderer/vulkan/vk_renderer.cpp, initialize:2484.
+[3742378:3742378:0925/141825.518349:ERROR:ui/gl/egl_util.cc:92] EGL Driver message (Critical) eglInitialize: Internal Vulkan error (-3): Initialization of an object could not be completed for implementation-specific reasons, in ../../third_party/angle/src/libANGLE/renderer/vulkan/vk_renderer.cpp, initialize:2484.
+[3742378:3742378:0925/141825.518409:ERROR:ui/gl/gl_display.cc:630] eglInitialize SwANGLE failed with error EGL_NOT_INITIALIZED
+[3742378:3742378:0925/141825.518450:ERROR:ui/gl/gl_display.cc:665] Initialization of all (1) EGL display types failed.
+[3742378:3742378:0925/141825.518491:ERROR:ui/ozone/common/gl_ozone_egl.cc:26] GLDisplayEGL::Initialize failed.
+[3742378:3742378:0925/141825.518995:ERROR:ui/gl/angle_platform_impl.cc:48] Display.cpp:1136 (initialize): ANGLE Display::initialize error 0: Internal Vulkan error (-3): Initialization of an object could not be completed for implementation-specific reasons, in ../../third_party/angle/src/libANGLE/renderer/vulkan/vk_renderer.cpp, initialize:2484.
+ERR: Display.cpp:1136 (initialize): ANGLE Display::initialize error 0: Internal Vulkan error (-3): Initialization of an object could not be completed for implementation-specific reasons, in ../../third_party/angle/src/libANGLE/renderer/vulkan/vk_renderer.cpp, initialize:2484.
+[3742378:3742378:0925/141825.519074:ERROR:ui/gl/egl_util.cc:92] EGL Driver message (Critical) eglInitialize: Internal Vulkan error (-3): Initialization of an object could not be completed for implementation-specific reasons, in ../../third_party/angle/src/libANGLE/renderer/vulkan/vk_renderer.cpp, initialize:2484.
+[3742378:3742378:0925/141825.519125:ERROR:ui/gl/gl_display.cc:630] eglInitialize SwANGLE failed with error EGL_NOT_INITIALIZED
+[3742378:3742378:0925/141825.519165:ERROR:ui/gl/gl_display.cc:665] Initialization of all (1) EGL display types failed.
+[3742378:3742378:0925/141825.519204:ERROR:ui/ozone/common/gl_ozone_egl.cc:26] GLDisplayEGL::Initialize failed.
+---------------------------------------------------
+Finished compiling method mojo.internal.StructField using Maglev
+[3742378:3742378:0925/141825.521343:ERROR:components/viz/service/main/viz_main_impl.cc:190] Exiting GPU process due to errors during initialization
+[3742157:3742157:0925/141825.522251:WARNING:components/dbus/xdg/portal.cc:126] Failed to register with org.freedesktop.host.portal.Registry
+[3742390:3742390:0925/141825.528292:WARNING:content/child/runtime_features.cc:522] AttributionReporting cannot be enabled in this configuration. Use --enable-features=ConversionMeasurement in addition.
+[3742399:3742399:0925/141825.531682:WARNING:media/gpu/vaapi/vaapi_wrapper.cc:130] Should skip nVidia device named: nvidia-drm
+[3742399:3742399:0925/141825.532659:WARNING:sandbox/policy/linux/sandbox_linux.cc:405] InitializeSandbox() called with multiple threads in process gpu-process.
+---------------------------------------------------
+Begin compiling method trigger using Maglev
+---------------------------------------------------
+Begin compiling method  using Maglev
+---------------------------------------------------
+Finished compiling method  using Maglev
+[3742157:3742157:0925/141825.597917:INFO:CONSOLE:24] "transition-only warmup complete", source: http://127.0.0.1:8000/test_transition_loop.html (24)
+---------------------------------------------------
+Begin compiling method mojo.internal.StructField using Maglev
+---------------------------------------------------
+Finished compiling method mojo.internal.StructField using Maglev
+---------------------------------------------------
+Begin compiling method d$1 using Maglev
+---------------------------------------------------
+Finished compiling method d$1 using Maglev
+---------------------------------------------------
+Begin compiling method _$Eu using Maglev
+---------------------------------------------------
+Finished compiling method _$Eu using Maglev
+---------------------------------------------------
+Begin compiling method d$1 using Maglev
+---------------------------------------------------
+Finished compiling method d$1 using Maglev
+---------------------------------------------------
+Begin compiling method mojo.internal.StructField using Maglev
+---------------------------------------------------
+Begin compiling method _$Eu using Maglev
+---------------------------------------------------
+Finished compiling method mojo.internal.StructField using Maglev
+---------------------------------------------------
+Finished compiling method _$Eu using Maglev
+---------------------------------------------------
+Begin compiling method c$2 using Maglev
+---------------------------------------------------
+Finished compiling method c$2 using Maglev
+---------------------------------------------------
+Begin compiling method getUint32 using Maglev
+---------------------------------------------------
+Finished compiling method getUint32 using Maglev
+---------------------------------------------------
+Finished compiling method trigger using Maglev
+[3742157:3742157:0925/141827.602545:INFO:CONSOLE:28] "result number 2.2 victim0 object [object Object]", source: http://127.0.0.1:8000/test_transition_loop.html (28)
+[3742984:3742984:0925/141828.481566:WARNING:content/child/runtime_features.cc:522] AttributionReporting cannot be enabled in this configuration. Use --enable-features=ConversionMeasurement in addition.
+[3742157:3742172:0925/141829.055728:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: PHONE_REGISTRATION_ERROR
+[3742157:3742172:0925/141829.056273:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: PHONE_REGISTRATION_ERROR
+[3742157:3742172:0925/141829.177072:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: PHONE_REGISTRATION_ERROR
+[3742157:3742172:0925/141829.307509:ERROR:google_apis/gcm/engine/mcs_client.cc:702]   Error code: 401  Error message: Authentication Failed: wrong_secret
+[3742157:3742172:0925/141829.307548:ERROR:google_apis/gcm/engine/mcs_client.cc:704] Failed to log in to GCM, resetting connection.

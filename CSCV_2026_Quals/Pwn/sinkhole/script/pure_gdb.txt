@@ -1,0 +1,14 @@
+set pagination off
+set logging file /tmp/pure_gdb.log
+set logging enabled on
+
+b v8::internal::maglev::MaglevStoreSink::TrySinkIntoLoop
+commands
+  silent
+  finish
+  printf "=== TrySinkIntoLoop returned: %d ===\n", $rax
+  continue
+end
+
+run
+quit

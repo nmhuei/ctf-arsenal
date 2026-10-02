@@ -1,0 +1,695 @@
+{
+  "verified_files": 37,
+  "total_files": 39,
+  "password_recovered": false,
+  "entries": [
+    {
+      "index": 0,
+      "name": "staged/incident_triage_confirmed.txt",
+      "crc32": "0x58e4cad4",
+      "compressed_size": 851,
+      "plain_size": 839,
+      "local_offset": 0,
+      "status": "verified",
+      "sources": [
+        "agent_archive/00_incident_triage_confirmed.txt"
+      ],
+      "recovery_method": "memory ciphertext decrypted",
+      "crc_valid": true,
+      "size_valid": true,
+      "known_ciphertext_bytes_matched": 851,
+      "sha256": "05df858960f0f32d84732f5e9c54caec7f4f4665178a10091f7ec215b6053bf6",
+      "output": "00_incident_triage_confirmed.txt"
+    },
+    {
+      "index": 1,
+      "name": "staged/network_topology_report.csv",
+      "crc32": "0xc035f47c",
+      "compressed_size": 536,
+      "plain_size": 524,
+      "local_offset": 917,
+      "status": "verified",
+      "sources": [
+        "agent_archive/01_network_topology_report.csv"
+      ],
+      "recovery_method": "memory ciphertext decrypted",
+      "crc_valid": true,
+      "size_valid": true,
+      "known_ciphertext_bytes_matched": 536,
+      "sha256": "295fbdd2a45a09ad3cbcfc24313a06c6cec8dadcefd3c3cdbf2d142a3810897e",
+      "output": "01_network_topology_report.csv"
+    },
+    {
+      "index": 2,
+      "name": "staged/security_investigation_brief.pdf",
+      "crc32": "0xa38d8475",
+      "compressed_size": 1121,
+      "plain_size": 1109,
+      "local_offset": 1517,
+      "status": "verified",
+      "sources": [
+        "agent_archive/02_security_investigation_brief.pdf"
+      ],
+      "recovery_method": "memory ciphertext decrypted",
+      "crc_valid": true,
+      "size_valid": true,
+      "known_ciphertext_bytes_matched": 1121,
+      "sha256": "8984892907189fdb82313db8ab1c400de46b31586611d4701d37b6ff4bdf1eb9",
+      "output": "02_security_investigation_brief.pdf"
+    },
+    {
+      "index": 3,
+      "name": "staged/research_bookmarks.txt",
+      "crc32": "0x1ecbc4c3",
+      "compressed_size": 1863,
+      "plain_size": 1851,
+      "local_offset": 2707,
+      "status": "verified",
+      "sources": [
+        "agent_archive/03_research_bookmarks.txt"
+      ],
+      "recovery_method": "memory ciphertext decrypted",
+      "crc_valid": true,
+      "size_valid": true,
+      "known_ciphertext_bytes_matched": 1863,
+      "sha256": "7cd36e57c0cc55e9a7b2201cd02c2e75143e8f06bdf3199a2a62f7e7cf972ee1",
+      "output": "03_research_bookmarks.txt"
+    },
+    {
+      "index": 4,
+      "name": "staged/vault_backup.key",
+      "crc32": "0xf2072598",
+      "compressed_size": 345,
+      "plain_size": 333,
+      "local_offset": 4629,
+      "status": "verified",
+      "sources": [
+        "agent_archive/04_vault_backup.key"
+      ],
+      "recovery_method": "memory ciphertext decrypted",
+      "crc_valid": true,
+      "size_valid": true,
+      "known_ciphertext_bytes_matched": 345,
+      "sha256": "0ee06355c4d5a99a7e2fe617a823e323906f253a0958503c1db6852d932f94df",
+      "output": "04_vault_backup.key"
+    },
+    {
+      "index": 5,
+      "name": "staged/candidate_keys.json",
+      "crc32": "0x322dea82",
+      "compressed_size": 880,
+      "plain_size": 868,
+      "local_offset": 5027,
+      "status": "verified",
+      "sources": [
+        "agent_archive/05_candidate_keys.json"
+      ],
+      "recovery_method": "memory ciphertext decrypted",
+      "crc_valid": true,
+      "size_valid": true,
+      "known_ciphertext_bytes_matched": 880,
+      "sha256": "c4a3d86b21b45339ffd918b904ee7b083c404b3375a6169eba3baa698124fd0f",
+      "output": "05_candidate_keys.json"
+    },
+    {
+      "index": 6,
+      "name": "staged/internal_master_vault.txt",
+      "crc32": "0x318339e6",
+      "compressed_size": 627,
+      "plain_size": 615,
+      "local_offset": 5963,
+      "status": "verified",
+      "sources": [
+        "agent_archive/06_internal_master_vault.txt"
+      ],
+      "recovery_method": "memory ciphertext decrypted",
+      "crc_valid": true,
+      "size_valid": true,
+      "known_ciphertext_bytes_matched": 627,
+      "sha256": "9c204954efd42833e0b9378e5fac04eb49a5ca25c5d8cb2bd7e8a763f492a7c0",
+      "output": "06_internal_master_vault.txt"
+    },
+    {
+      "index": 7,
+      "name": "staged/customer_pii_vault_2026.csv",
+      "crc32": "0xe26ee675",
+      "compressed_size": 378,
+      "plain_size": 366,
+      "local_offset": 6652,
+      "status": "verified",
+      "sources": [
+        "agent_archive/07_customer_pii_vault_2026.csv"
+      ],
+      "recovery_method": "memory ciphertext decrypted",
+      "crc_valid": true,
+      "size_valid": true,
+      "known_ciphertext_bytes_matched": 378,
+      "sha256": "16e6ef1a73623404237e3ebca7faabd816a6c334294ab8c13d6340933ebcc61a",
+      "output": "07_customer_pii_vault_2026.csv"
+    },
+    {
+      "index": 8,
+      "name": "staged/q3_financial_audit_confidential.xlsx",
+      "crc32": "0x209ac2dc",
+      "compressed_size": 66,
+      "plain_size": 54,
+      "local_offset": 7094,
+      "status": "verified",
+      "sources": [
+        "agent_archive/08_q3_financial_audit_confidential.xlsx"
+      ],
+      "recovery_method": "memory ciphertext decrypted",
+      "crc_valid": true,
+      "size_valid": true,
+      "known_ciphertext_bytes_matched": 66,
+      "sha256": "6ff2dae14d3bd8a21b04da1373128587da7898aa12a1e37e22acbbf5ac4a0e84",
+      "output": "08_q3_financial_audit_confidential.xlsx"
+    },
+    {
+      "index": 9,
+      "name": "staged/incident_notes.txt",
+      "crc32": "0xa002e914",
+      "compressed_size": 618,
+      "plain_size": 606,
+      "local_offset": 7233,
+      "status": "verified",
+      "sources": [
+        "agent_archive/09_incident_notes.txt"
+      ],
+      "recovery_method": "memory ciphertext decrypted",
+      "crc_valid": true,
+      "size_valid": true,
+      "known_ciphertext_bytes_matched": 618,
+      "sha256": "94831e59d4e73e2cc5b04d2c6bb8d859e1bd049570fe4ad85e98c25e3bd9c181",
+      "output": "09_incident_notes.txt"
+    },
+    {
+      "index": 10,
+      "name": "staged/staged_encryption_token.conf",
+      "crc32": "0x79f1c00f",
+      "compressed_size": 417,
+      "plain_size": 405,
+      "local_offset": 7906,
+      "status": "verified",
+      "sources": [
+        "agent_archive/10_staged_encryption_token.conf"
+      ],
+      "recovery_method": "memory ciphertext decrypted",
+      "crc_valid": true,
+      "size_valid": true,
+      "known_ciphertext_bytes_matched": 417,
+      "sha256": "61a9c127f3fad98f45071287abdb58102798fe8a8f5eec874e47463b8e403cd6",
+      "output": "10_staged_encryption_token.conf"
+    },
+    {
+      "index": 11,
+      "name": "staged/system_telemetry_dump.json",
+      "crc32": "0x39fb1e00",
+      "compressed_size": 361,
+      "plain_size": 349,
+      "local_offset": 8388,
+      "status": "verified",
+      "sources": [
+        "agent_archive/11_system_telemetry_dump.json"
+      ],
+      "recovery_method": "memory ciphertext decrypted",
+      "crc_valid": true,
+      "size_valid": true,
+      "known_ciphertext_bytes_matched": 361,
+      "sha256": "20e81d08ca9d222a755bd2b17abb829dc49c8c475d6681fd2517c0f366e1400d",
+      "output": "11_system_telemetry_dump.json"
+    },
+    {
+      "index": 12,
+      "name": "staged/admin_infrastructure_tokens.conf",
+      "crc32": "0x6c2b0042",
+      "compressed_size": 182,
+      "plain_size": 170,
+      "local_offset": 8812,
+      "status": "verified",
+      "sources": [
+        "agent_archive/12_admin_infrastructure_tokens.conf"
+      ],
+      "recovery_method": "memory ciphertext decrypted",
+      "crc_valid": true,
+      "size_valid": true,
+      "known_ciphertext_bytes_matched": 182,
+      "sha256": "1795c6bab2a882e49163edd6db19a2e1c7536e9dbcf52f4372a938e5a5bd7c0e",
+      "output": "12_admin_infrastructure_tokens.conf"
+    },
+    {
+      "index": 13,
+      "name": "staged/vpn_profile.conf",
+      "crc32": "0xd4793b90",
+      "compressed_size": 248,
+      "plain_size": 236,
+      "local_offset": 9063,
+      "status": "verified",
+      "sources": [
+        "agent_archive/13_vpn_profile.conf"
+      ],
+      "recovery_method": "memory ciphertext decrypted",
+      "crc_valid": true,
+      "size_valid": true,
+      "known_ciphertext_bytes_matched": 248,
+      "sha256": "b855afde3ae5f304712d28d29fead29b67d01d1bb16aaf2639a69dfeb3d32593",
+      "output": "13_vpn_profile.conf"
+    },
+    {
+      "index": 14,
+      "name": "staged/sslkeylog_debug.txt",
+      "crc32": "0xa7195f08",
+      "compressed_size": 896,
+      "plain_size": 884,
+      "local_offset": 9364,
+      "status": "verified",
+      "sources": [
+        "agent_archive/14_sslkeylog_debug.txt"
+      ],
+      "recovery_method": "memory ciphertext decrypted",
+      "crc_valid": true,
+      "size_valid": true,
+      "known_ciphertext_bytes_matched": 896,
+      "sha256": "51829ae9e5d8d1d661d188691db909b1f06d0a9dbe216ba85b54b34e56a7aae6",
+      "output": "14_sslkeylog_debug.txt"
+    },
+    {
+      "index": 15,
+      "name": "staged/backup_credentials.kdbx",
+      "crc32": "0xdbf83ec0",
+      "compressed_size": 266,
+      "plain_size": 254,
+      "local_offset": 10316,
+      "status": "verified",
+      "sources": [
+        "agent_archive/15_backup_credentials.kdbx"
+      ],
+      "recovery_method": "memory ciphertext decrypted",
+      "crc_valid": true,
+      "size_valid": true,
+      "known_ciphertext_bytes_matched": 266,
+      "sha256": "5d5ce752e2384054a5e7dd287bdabe8098bfd1c15ad0adf174d8e814361709c9",
+      "output": "15_backup_credentials.kdbx"
+    },
+    {
+      "index": 16,
+      "name": "staged/manifest.json",
+      "crc32": "0xc148b652",
+      "compressed_size": 250,
+      "plain_size": 238,
+      "local_offset": 10642,
+      "status": "verified",
+      "sources": [
+        "agent_archive/16_manifest.json"
+      ],
+      "recovery_method": "memory ciphertext decrypted",
+      "crc_valid": true,
+      "size_valid": true,
+      "known_ciphertext_bytes_matched": 250,
+      "sha256": "44844cf3dde6e80087ae0e6bf0d9326d7ef7d23326d24ac83af0850be26923d2",
+      "output": "16_manifest.json"
+    },
+    {
+      "index": 17,
+      "name": "staged/manifest.json",
+      "crc32": "0x9e2868f3",
+      "compressed_size": 134,
+      "plain_size": 122,
+      "local_offset": 10942,
+      "status": "verified",
+      "sources": [
+        "agent_archive/17_manifest.json"
+      ],
+      "recovery_method": "memory ciphertext decrypted",
+      "crc_valid": true,
+      "size_valid": true,
+      "known_ciphertext_bytes_matched": 134,
+      "sha256": "51c311a4ba03140bcd1c827f8d93dba50cadda736925903b26e95609275dbffd",
+      "output": "17_manifest.json"
+    },
+    {
+      "index": 18,
+      "name": "staged/manifest.json",
+      "crc32": "0x299abaab",
+      "compressed_size": 850,
+      "plain_size": 838,
+      "local_offset": 11126,
+      "status": "verified",
+      "sources": [
+        "agent_archive/18_manifest.json"
+      ],
+      "recovery_method": "memory ciphertext decrypted",
+      "crc_valid": true,
+      "size_valid": true,
+      "known_ciphertext_bytes_matched": 850,
+      "sha256": "62c7a08dc23c54cc0a63d2bdb5efd3c2f535e5b1b1de6c4167c96c7dce90a429",
+      "output": "18_manifest.json"
+    },
+    {
+      "index": 19,
+      "name": "staged/afaljjbleihmahhpckngondmgohleljb.json",
+      "crc32": "0xf6d2a7a7",
+      "compressed_size": 85,
+      "plain_size": 73,
+      "local_offset": 12026,
+      "status": "verified",
+      "sources": [
+        "agent_archive/19_afaljjbleihmahhpckngondmgohleljb.json"
+      ],
+      "recovery_method": "memory ciphertext decrypted",
+      "crc_valid": true,
+      "size_valid": true,
+      "known_ciphertext_bytes_matched": 85,
+      "sha256": "221848029c93b7431d2b502794b30de52773b7bbf5ccd7e26db1332a25e4ef90",
+      "output": "19_afaljjbleihmahhpckngondmgohleljb.json"
+    },
+    {
+      "index": 20,
+      "name": "staged/gcopfpdkmpdacdmbjonfjmbnccmnjdoi.json",
+      "crc32": "0x46aec8e4",
+      "compressed_size": 82,
+      "plain_size": 70,
+      "local_offset": 12185,
+      "status": "verified",
+      "sources": [
+        "agent_archive/20_gcopfpdkmpdacdmbjonfjmbnccmnjdoi.json"
+      ],
+      "recovery_method": "memory ciphertext decrypted",
+      "crc_valid": true,
+      "size_valid": true,
+      "known_ciphertext_bytes_matched": 82,
+      "sha256": "b7c7ec1d20ca84934bc7a3d979911a6b0b945ff4c2423b64899d3d8ffdd95788",
+      "output": "20_gcopfpdkmpdacdmbjonfjmbnccmnjdoi.json"
+    },
+    {
+      "index": 21,
+      "name": "staged/gfgbmghkdjckppeomloefmbphdfmokgd.json",
+      "crc32": "0xbd519a83",
+      "compressed_size": 82,
+      "plain_size": 70,
+      "local_offset": 12341,
+      "status": "verified",
+      "sources": [
+        "agent_archive/21_gfgbmghkdjckppeomloefmbphdfmokgd.json"
+      ],
+      "recovery_method": "memory ciphertext decrypted",
+      "crc_valid": true,
+      "size_valid": true,
+      "known_ciphertext_bytes_matched": 82,
+      "sha256": "9b200c0854c3daf0afb6e92c8ab127f3cd19445facbde7532d4dd0e1f48ed5f1",
+      "output": "21_gfgbmghkdjckppeomloefmbphdfmokgd.json"
+    },
+    {
+      "index": 22,
+      "name": "staged/jdfkmiabjpfjacifcmihfdjhpnjpiick.json",
+      "crc32": "0x7bff3a58",
+      "compressed_size": 83,
+      "plain_size": 71,
+      "local_offset": 12497,
+      "status": "verified",
+      "sources": [
+        "agent_archive/22_jdfkmiabjpfjacifcmihfdjhpnjpiick.json"
+      ],
+      "recovery_method": "memory ciphertext decrypted",
+      "crc_valid": true,
+      "size_valid": true,
+      "known_ciphertext_bytes_matched": 83,
+      "sha256": "8a41826e906978c1fb412e8242eaf3244d114b87337d916923e0848951216ff3",
+      "output": "22_jdfkmiabjpfjacifcmihfdjhpnjpiick.json"
+    },
+    {
+      "index": 23,
+      "name": "staged/vk_swiftshader_icd.json",
+      "crc32": "0x63f6170",
+      "compressed_size": 119,
+      "plain_size": 107,
+      "local_offset": 12654,
+      "status": "verified",
+      "sources": [
+        "agent_archive/23_vk_swiftshader_icd.json"
+      ],
+      "recovery_method": "memory ciphertext decrypted",
+      "crc_valid": true,
+      "size_valid": true,
+      "known_ciphertext_bytes_matched": 119,
+      "sha256": "c9eef28b6b984fec220ef0abfecc40b502d46946706e47bfe97707027cb818bd",
+      "output": "23_vk_swiftshader_icd.json"
+    },
+    {
+      "index": 24,
+      "name": "staged/sessionCheckpoints.json",
+      "crc32": "0xa3e8300b",
+      "compressed_size": 300,
+      "plain_size": 288,
+      "local_offset": 12833,
+      "status": "verified",
+      "sources": [
+        "agent_archive/24_sessionCheckpoints.json"
+      ],
+      "recovery_method": "memory ciphertext decrypted",
+      "crc_valid": true,
+      "size_valid": true,
+      "known_ciphertext_bytes_matched": 300,
+      "sha256": "2fca1f29b73dd5b4159fa1eb16e69276482f5224ba7d2219a547039129a51f0e",
+      "output": "24_sessionCheckpoints.json"
+    },
+    {
+      "index": 25,
+      "name": "staged/times.json",
+      "crc32": "0x56806f32",
+      "compressed_size": 62,
+      "plain_size": 50,
+      "local_offset": 13193,
+      "status": "verified",
+      "sources": [
+        "agent_archive/25_times.json"
+      ],
+      "recovery_method": "memory ciphertext decrypted",
+      "crc_valid": true,
+      "size_valid": true,
+      "known_ciphertext_bytes_matched": 62,
+      "sha256": "02c6f8ea635edb09c172a4eea4f697c5aef006463824bc61b3443a2318e525cb",
+      "output": "25_times.json"
+    },
+    {
+      "index": 26,
+      "name": "staged/pkcs11.txt",
+      "crc32": "0xc79d2ed2",
+      "compressed_size": 454,
+      "plain_size": 442,
+      "local_offset": 13302,
+      "status": "verified",
+      "sources": [
+        "agent_archive/26_pkcs11.txt"
+      ],
+      "recovery_method": "memory ciphertext decrypted",
+      "crc_valid": true,
+      "size_valid": true,
+      "known_ciphertext_bytes_matched": 454,
+      "sha256": "f8013cf5214a503409a75a05064cba2a8b512866642fc1037172b686e231c67a",
+      "output": "26_pkcs11.txt"
+    },
+    {
+      "index": 27,
+      "name": "staged/extensions.json",
+      "crc32": "0x20a2f078",
+      "compressed_size": 37595,
+      "plain_size": 37583,
+      "local_offset": 13803,
+      "status": "verified",
+      "sources": [
+        "agent_archive/27_extensions.json"
+      ],
+      "recovery_method": "Firefox reference plus memory ciphertext, full CRC verified",
+      "crc_valid": true,
+      "size_valid": true,
+      "known_ciphertext_bytes_matched": 24031,
+      "sha256": "0fdc36387d24f69187849a35cd27bb487a80f2f38f4604684beb3921b2da6698",
+      "output": "27_extensions.json"
+    },
+    {
+      "index": 28,
+      "name": "staged/addons.json",
+      "crc32": "0x6b4c9b65",
+      "compressed_size": 36,
+      "plain_size": 24,
+      "local_offset": 51450,
+      "status": "verified",
+      "sources": [
+        "agent_archive/28_addons.json"
+      ],
+      "recovery_method": "memory ciphertext decrypted",
+      "crc_valid": true,
+      "size_valid": true,
+      "known_ciphertext_bytes_matched": 36,
+      "sha256": "d587cec944023447dc91bc5f71e2291711ba5add337464837909a26f34bc5a06",
+      "output": "28_addons.json"
+    },
+    {
+      "index": 29,
+      "name": "staged/state.json",
+      "crc32": "0x97ccc43c",
+      "compressed_size": 63,
+      "plain_size": 51,
+      "local_offset": 51534,
+      "status": "verified",
+      "sources": [
+        "agent_archive/29_state.json"
+      ],
+      "recovery_method": "memory ciphertext decrypted",
+      "crc_valid": true,
+      "size_valid": true,
+      "known_ciphertext_bytes_matched": 63,
+      "sha256": "cc8430bac0cb91fbb5ed433f7232400c660336f6dc87ee0bd99a44f1599a9b71",
+      "output": "29_state.json"
+    },
+    {
+      "index": 30,
+      "name": "staged/session-state.json",
+      "crc32": "0x7bdf95a5",
+      "compressed_size": 173,
+      "plain_size": 161,
+      "local_offset": 51644,
+      "status": "verified",
+      "sources": [
+        "agent_archive/30_session-state.json"
+      ],
+      "recovery_method": "memory ciphertext decrypted",
+      "crc_valid": true,
+      "size_valid": true,
+      "known_ciphertext_bytes_matched": 173,
+      "sha256": "b7b12ab11a751ab67ebc5947db1bb4264ab162abac4353ca0d91be496b58a3ea",
+      "output": "30_session-state.json"
+    },
+    {
+      "index": 31,
+      "name": "staged/extension-preferences.json",
+      "crc32": "0x3431d481",
+      "compressed_size": 1392,
+      "plain_size": 1380,
+      "local_offset": 51872,
+      "status": "verified",
+      "sources": [
+        "root_files/31_extension-preferences.json"
+      ],
+      "recovery_method": "known prefix completed with Firefox default",
+      "crc_valid": true,
+      "size_valid": true,
+      "known_ciphertext_bytes_matched": 1293,
+      "sha256": "4d74f4ecce3d8bd150e533d4083abfa299b914e3ee3d9a7b24badc918cc1dfea",
+      "output": "31_extension-preferences.json"
+    },
+    {
+      "index": 32,
+      "name": "staged/shield-preference-experiments.json",
+      "crc32": "0x93a63aed",
+      "compressed_size": 30,
+      "plain_size": 18,
+      "local_offset": 53327,
+      "status": "verified",
+      "sources": [
+        "agent_password/recovered_files/32_shield-preference-experiments.json"
+      ],
+      "recovery_method": "Firefox default reconstructed and CRC checked",
+      "crc_valid": true,
+      "size_valid": true,
+      "known_ciphertext_bytes_matched": 0,
+      "sha256": "704d28223a4320a853df4a19d48c7015cf79d56a5317cc3475b6305fa43dcc05",
+      "output": "32_shield-preference-experiments.json"
+    },
+    {
+      "index": 33,
+      "name": "staged/containers.json",
+      "crc32": "0x6d062582",
+      "compressed_size": 951,
+      "plain_size": 939,
+      "local_offset": 53428,
+      "status": "verified",
+      "sources": [
+        "agent_password/recovered_files/33_containers.json"
+      ],
+      "recovery_method": "Firefox default reconstructed and CRC checked",
+      "crc_valid": true,
+      "size_valid": true,
+      "known_ciphertext_bytes_matched": 0,
+      "sha256": "854ff2076f71097b030c302a1ea71d8e851d2920b9ff5fc8dc8f16c91ba95b72",
+      "output": "33_containers.json"
+    },
+    {
+      "index": 34,
+      "name": "staged/handlers.json",
+      "crc32": "0x6df5e5fd",
+      "compressed_size": 695,
+      "plain_size": 683,
+      "local_offset": 54431,
+      "status": "verified",
+      "sources": [
+        "agent_password/recovered_files/34_handlers.json"
+      ],
+      "recovery_method": "Firefox default reconstructed and CRC checked",
+      "crc_valid": true,
+      "size_valid": true,
+      "known_ciphertext_bytes_matched": 0,
+      "sha256": "7d4fd8b32f01a66e9357c0aba57e3283493dce4ed66b9c12e30e9236e2d5bf12",
+      "output": "34_handlers.json"
+    },
+    {
+      "index": 35,
+      "name": "staged/broadcast-listeners.json",
+      "crc32": "0xdae4fd3d",
+      "compressed_size": 216,
+      "plain_size": 204,
+      "local_offset": 55176,
+      "status": "verified",
+      "sources": [
+        "agent_password/recovered_files/35_broadcast-listeners.json"
+      ],
+      "recovery_method": "Firefox default reconstructed and CRC checked",
+      "crc_valid": true,
+      "size_valid": true,
+      "known_ciphertext_bytes_matched": 0,
+      "sha256": "9cf589357fceea2f37cd1a925e5d33fd517a44d22a16c357f7fb5d4d187034aa",
+      "output": "35_broadcast-listeners.json"
+    },
+    {
+      "index": 36,
+      "name": "staged/SiteSecurityServiceState.txt",
+      "crc32": "0xe16206f5",
+      "compressed_size": 1055,
+      "plain_size": 1043,
+      "local_offset": 55453,
+      "status": "missing",
+      "sources": [],
+      "recovery_method": "pending"
+    },
+    {
+      "index": 37,
+      "name": "staged/AlternateServices.txt",
+      "crc32": "0x25489b76",
+      "compressed_size": 5410,
+      "plain_size": 5398,
+      "local_offset": 56573,
+      "status": "missing",
+      "sources": [],
+      "recovery_method": "pending"
+    },
+    {
+      "index": 38,
+      "name": "staged/xulstore.json",
+      "crc32": "0xe36edd3f",
+      "compressed_size": 352,
+      "plain_size": 340,
+      "local_offset": 62041,
+      "status": "verified",
+      "sources": [
+        "agent_archive/38_xulstore.json"
+      ],
+      "recovery_method": "memory ciphertext decrypted",
+      "crc_valid": true,
+      "size_valid": true,
+      "known_ciphertext_bytes_matched": 352,
+      "sha256": "e9040d7628539430655e237c860cdb5e74a3c8be9941cabb9b2da1393303c58a",
+      "output": "38_xulstore.json"
+    }
+  ]
+}

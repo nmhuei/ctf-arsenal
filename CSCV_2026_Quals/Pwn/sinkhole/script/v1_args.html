@@ -1,0 +1,25 @@
+<!DOCTYPE html><html><body><script>
+let dummy = { a: 1 };
+let stable = [dummy, 2.2, 3.3];
+
+function create_and_warmup() {
+  let lines = [];
+  lines.push("function v1_args(x, arr, obj) {");
+  for (let i = 0; i < 650; i++) lines.push(`  if (x === ${i}) return ${i};`);
+  lines.push(`return x + arr.length;`);
+  lines.push("}");
+  lines.push("return v1_args;");
+  let fn = new Function(lines.join("\n"))();
+  
+  for (let i = 0; i < 20000; i++) {
+    fn(i, stable, dummy);
+  }
+  return fn;
+}
+
+async function main() {
+  let fn = create_and_warmup();
+  await new Promise(r => setTimeout(r, 500));
+}
+main();
+</script></body></html>

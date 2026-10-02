@@ -1,0 +1,15 @@
+#separator \x09
+#set_separator	,
+#empty_field	(empty)
+#unset_field	-
+#path	x509
+#open	2026-09-25-12-54-16
+#fields	ts	fingerprint	certificate.version	certificate.serial	certificate.subject	certificate.issuer	certificate.not_valid_before	certificate.not_valid_after	certificate.key_alg	certificate.sig_alg	certificate.key_type	certificate.key_length	certificate.exponent	certificate.curve	san.dns	san.uri	san.email	san.ip	basic_constraints.ca	basic_constraints.path_len	host_cert	client_cert
+#types	time	string	count	string	string	string	time	time	string	string	string	count	string	string	vector[string]	vector[string]	vector[string]	vector[addr]	bool	count	bool	bool
+1788884984.798242	c3919efc8965b8622d3be94078d18c5c0d80a38f1753d6b21b594eeb61d5e60f	3	05EAC5DB1876DF693A210F8583E1622F83DF	CN=content-signature-2.cdn.mozilla.net	CN=YR2,O=Let's Encrypt,C=US	1785285768.000000	1793061767.000000	rsaEncryption	sha256WithRSAEncryption	rsa	2048	65537	-	content-signature-2.cdn.mozilla.net	-	-	-	F	-	T	F
+1788884984.798242	238b85a0099c65b970477d5724f1a1d475ce5058cffe4efa8733899bdb863c47	3	4EBD24947E24D394802D84A52FD5B319	CN=YR2,O=Let's Encrypt,C=US	CN=Root YR,O=ISRG,C=US	1756857600.000000	1851551999.000000	rsaEncryption	sha256WithRSAEncryption	rsa	2048	65537	-	-	-	-	-	T	0	F	F
+1788884984.798242	072639d0b140d5bffae16ad9c3f6cc6086040621f51ee61a6d46a8915c07cf76	3	F24B6D17F9D9AD7CB1C9FEA78782699F	CN=Root YR,O=ISRG,C=US	CN=ISRG Root X1,O=Internet Security Research Group,C=US	1778630400.000000	1977782399.000000	rsaEncryption	sha256WithRSAEncryption	rsa	4096	65537	-	-	-	-	-	T	-	F	F
+1788885145.625047	b5817ceaf671413b908ca11889d54b2da382352c6995af236ed5b8c2305bc723	3	07C43CBE57F8D05C385F4474	CN=*.coccoc.com	CN=GlobalSign GCC R6 AlphaSSL CA 2025,O=GlobalSign nv-sa,C=BE	1776841159.000000	1794034759.000000	rsaEncryption	sha256WithRSAEncryption	rsa	2048	65537	-	*.coccoc.com,coccoc.com	-	-	-	F	-	T	F
+1788885145.625047	a883559231f8388daf35ce41c8101040ae8fd9b656434247b9475af592cc08ca	3	837D4EB89E912FE72CAD3BC7692DDC20	CN=GlobalSign GCC R6 AlphaSSL CA 2025,O=GlobalSign nv-sa,C=BE	CN=GlobalSign,O=GlobalSign,OU=GlobalSign Root CA - R6	1747795012.000000	1810857600.000000	rsaEncryption	sha256WithRSAEncryption	rsa	2048	65537	-	-	-	-	-	T	0	F	F
+1788885145.625047	c84e1378b974a991acdcdd733421e3061e6fa21a0491c8902bafde3855e0063e	3	751E3F5649E74CBBF69D0026B67CAA8C	CN=GlobalSign,O=GlobalSign,OU=GlobalSign Root CA - R6	CN=GlobalSign Root CA,OU=Root CA,O=GlobalSign nv-sa,C=BE	1560902400.000000	1832673600.000000	rsaEncryption	sha384WithRSAEncryption	rsa	4096	65537	-	-	-	-	-	T	-	F	F
+#close	2026-09-25-12-54-17

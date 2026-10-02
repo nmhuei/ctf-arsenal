@@ -1,0 +1,8 @@
+{
+  "author": "daveops",
+  "content": "# Lessons from Five Years of On-Call\n\nFive years of pager duty teaches you things no book can.\n\n## Alerts must be actionable\n\nIf an alert fires and the first question is 'so what do I do?', the alert is broken. Every alert needs a runbook link.\n\n## Runbooks rot\n\nA runbook not updated after an incident is a liability. Build runbook review into your post-mortem template.\n\n## 3 AM reveals your real architecture\n\nWhatever breaks at 3 AM is your actual critical path, not what the architecture diagram says.\n\n## Blameless post-mortems work\n\nTeams that feel safe reporting failures fix more than teams that don't. The data is unambiguous.\n",
+  "created_at": "2026-04-18T18:00:00Z",
+  "id": "6512bd43-d9ca-a6e0-2c99-0b0a82652dca",
+  "sig": "u_0154721cbd9640f7990c7815",
+  "title": "Lessons from five years of on-call"
+}

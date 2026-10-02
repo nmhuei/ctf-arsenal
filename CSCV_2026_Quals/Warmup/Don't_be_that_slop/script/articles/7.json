@@ -1,0 +1,8 @@
+{
+  "author": "grace_h",
+  "content": "# DuckDB for Data Engineers: A Practical Guide\n\nDuckDB has quietly become my favourite tool for ad-hoc data analysis.\n\n## What it is\n\nAn in-process OLAP database. Think SQLite but column-oriented and optimised for analytical queries.\n\n## Where it shines\n\n```sql\nSELECT month, SUM(revenue)\nFROM read_parquet('s3://my-bucket/sales/*.parquet')\nGROUP BY 1 ORDER BY 1;\n```\n\nNo cluster to provision. No schema to define. Just run the query.\n\n## Limitations\n\n- Not designed for concurrent writes\n- Not a replacement for transactional databases\n\nFor read-heavy analytics pipelines, DuckDB is hard to beat.\n",
+  "created_at": "2026-03-19T15:00:00Z",
+  "id": "8f14e45f-ceea-167a-5a36-dedd4bea2543",
+  "sig": "u_8f6b33e32a9122d10bdf9164",
+  "title": "DuckDB for data engineers: a practical guide"
+}

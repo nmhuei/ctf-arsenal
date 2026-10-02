@@ -1,0 +1,20 @@
+<!DOCTYPE html><html><body><script>
+function create_and_warmup(n) {
+  let lines = [];
+  lines.push(`function fn_${n}(x) {`);
+  for (let i = 0; i < n; i++) lines.push(`  if (x === ${i}) return ${i};`);
+  lines.push("  return x + 1;");
+  lines.push("}");
+  lines.push(`return fn_${n};`);
+  let fn = new Function(lines.join("\n"))();
+  for (let i = 0; i < 20000; i++) fn(i);
+  return fn;
+}
+
+async function main() {
+  let fn = create_and_warmup(650);
+  await new Promise(r => setTimeout(r, 500));
+  console.log("WARMUP_FINISHED");
+}
+main();
+</script></body></html>

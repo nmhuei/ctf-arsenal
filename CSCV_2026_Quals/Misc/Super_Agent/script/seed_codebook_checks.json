@@ -1,0 +1,109 @@
+{
+  "distinct_opcodes": [
+    15,
+    18,
+    69,
+    106,
+    161,
+    163,
+    177,
+    188,
+    220,
+    236
+  ],
+  "models_tested": 192,
+  "hypothesis": "Python Random seed-derived opcode permutation; small semantic opcode IDs",
+  "matches_under_32": [],
+  "best_five": [
+    {
+      "seed": "a_first16:bytes",
+      "method": "unique_randrange",
+      "direction": "forward",
+      "max_id": 159,
+      "ids": [
+        63,
+        154,
+        159,
+        61,
+        126,
+        137,
+        95,
+        31,
+        67,
+        116
+      ]
+    },
+    {
+      "seed": "sha256_a:little",
+      "method": "shuffle",
+      "direction": "inverse",
+      "max_id": 166,
+      "ids": [
+        59,
+        92,
+        84,
+        166,
+        82,
+        71,
+        12,
+        163,
+        111,
+        161
+      ]
+    },
+    {
+      "seed": "sha256_a:bytes",
+      "method": "shuffle",
+      "direction": "forward",
+      "max_id": 167,
+      "ids": [
+        167,
+        2,
+        105,
+        115,
+        81,
+        137,
+        121,
+        122,
+        159,
+        29
+      ]
+    },
+    {
+      "seed": "a_last8:hex",
+      "method": "sample",
+      "direction": "inverse",
+      "max_id": 170,
+      "ids": [
+        98,
+        169,
+        21,
+        154,
+        67,
+        116,
+        170,
+        4,
+        94,
+        72
+      ]
+    },
+    {
+      "seed": "a_last16:big",
+      "method": "shuffle",
+      "direction": "inverse",
+      "max_id": 172,
+      "ids": [
+        19,
+        169,
+        51,
+        164,
+        125,
+        172,
+        116,
+        155,
+        62,
+        121
+      ]
+    }
+  ]
+}

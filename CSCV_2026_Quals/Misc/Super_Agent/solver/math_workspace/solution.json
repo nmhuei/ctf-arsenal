@@ -1,0 +1,165 @@
+{
+  "best_candidates": [
+    {
+      "matched": 2,
+      "mismatches": 22,
+      "operators": [
+        "add",
+        "swap_nibbles",
+        "xor",
+        "xor"
+      ]
+    },
+    {
+      "matched": 2,
+      "mismatches": 22,
+      "operators": [
+        "xor",
+        "ror",
+        "mul",
+        "sub"
+      ]
+    },
+    {
+      "matched": 2,
+      "mismatches": 22,
+      "operators": [
+        "xor",
+        "mul",
+        "mul",
+        "sub"
+      ]
+    },
+    {
+      "matched": 2,
+      "mismatches": 22,
+      "operators": [
+        "rol",
+        "shl",
+        "identity",
+        "sub"
+      ]
+    },
+    {
+      "matched": 2,
+      "mismatches": 22,
+      "operators": [
+        "rol",
+        "shl",
+        "mul",
+        "sub"
+      ]
+    },
+    {
+      "matched": 2,
+      "mismatches": 22,
+      "operators": [
+        "ror",
+        "identity",
+        "sub",
+        "xor"
+      ]
+    },
+    {
+      "matched": 2,
+      "mismatches": 22,
+      "operators": [
+        "ror",
+        "add",
+        "xor",
+        "rsub"
+      ]
+    },
+    {
+      "matched": 2,
+      "mismatches": 22,
+      "operators": [
+        "not",
+        "add",
+        "rol",
+        "sub"
+      ]
+    },
+    {
+      "matched": 2,
+      "mismatches": 22,
+      "operators": [
+        "not",
+        "shl",
+        "identity",
+        "sub"
+      ]
+    },
+    {
+      "matched": 2,
+      "mismatches": 22,
+      "operators": [
+        "not",
+        "shl",
+        "mul",
+        "sub"
+      ]
+    }
+  ],
+  "operator_count": 12,
+  "selected_solution": null,
+  "solutions": [],
+  "stage_operator_names": {
+    "phi1": [
+      "identity",
+      "add",
+      "sub",
+      "rsub",
+      "xor",
+      "rol",
+      "ror",
+      "not",
+      "swap_nibbles",
+      "shl",
+      "shr"
+    ],
+    "phi2": [
+      "identity",
+      "add",
+      "sub",
+      "rsub",
+      "xor",
+      "rol",
+      "ror",
+      "mul",
+      "not",
+      "swap_nibbles",
+      "shl",
+      "shr"
+    ],
+    "phi3": [
+      "identity",
+      "add",
+      "sub",
+      "rsub",
+      "xor",
+      "rol",
+      "ror",
+      "mul",
+      "not",
+      "swap_nibbles",
+      "shl",
+      "shr"
+    ],
+    "phi4": [
+      "identity",
+      "add",
+      "sub",
+      "rsub",
+      "xor",
+      "rol",
+      "ror",
+      "not",
+      "swap_nibbles",
+      "shl",
+      "shr"
+    ]
+  },
+  "status": "no_exact_mapping",
+  "tested_tuple_count": 17424
+}

@@ -1,0 +1,63 @@
+{
+  "cases": [
+    {
+      "seq": 0,
+      "content_bytes": 0,
+      "passed": true
+    },
+    {
+      "seq": 1,
+      "content_bytes": 1,
+      "passed": true
+    },
+    {
+      "seq": 2,
+      "content_bytes": 7,
+      "passed": true
+    },
+    {
+      "seq": 3,
+      "content_bytes": 15,
+      "passed": true
+    },
+    {
+      "seq": 4,
+      "content_bytes": 16,
+      "passed": true
+    },
+    {
+      "seq": 5,
+      "content_bytes": 17,
+      "passed": true
+    },
+    {
+      "seq": 6,
+      "content_bytes": 31,
+      "passed": true
+    },
+    {
+      "seq": 7,
+      "content_bytes": 32,
+      "passed": true
+    },
+    {
+      "seq": 8,
+      "content_bytes": 33,
+      "passed": true
+    },
+    {
+      "seq": 9,
+      "content_bytes": 589,
+      "passed": true
+    },
+    {
+      "seq": 10,
+      "content_bytes": 16384,
+      "passed": true
+    }
+  ],
+  "ghash_implementations_agree": true,
+  "nonce_recovery_passed": true,
+  "seq_iv_consistency_passed": true,
+  "corrupt_tags_rejected": true
+}

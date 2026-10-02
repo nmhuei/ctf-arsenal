@@ -1,0 +1,8 @@
+{
+  "author": "eve_sec",
+  "content": "# Understanding CORS: The Developer's Field Guide\n\nCross-Origin Resource Sharing trips up almost every web developer at least once. Let's fix that.\n\n## The one-line explanation\n\nBrowsers block cross-origin requests unless the server explicitly says the origin is allowed.\n\n## Simple vs preflighted requests\n\nA `GET` with no custom headers is simple \u2014 no preflight. A `POST` with `Content-Type: application/json` triggers a preflight `OPTIONS` first.\n\n## The dangerous misconfiguration\n\n```\nAccess-Control-Allow-Origin: *\nAccess-Control-Allow-Credentials: true\n```\n\nBrowsers reject this combination, but some proxy layers strip the credentials flag and pass the request anyway. Always audit your CORS headers in production.\n",
+  "created_at": "2026-04-27T01:00:00Z",
+  "id": "c20ad4d7-6fe9-7759-aa27-a0c99bff6710",
+  "sig": "u_cd4271114050fd228b616f1d",
+  "title": "Understanding CORS: the developer's field guide"
+}

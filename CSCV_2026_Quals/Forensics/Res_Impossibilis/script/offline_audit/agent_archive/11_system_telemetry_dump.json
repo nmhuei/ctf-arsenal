@@ -1,0 +1,9 @@
+{
+  "kernel_telemetry": {
+    "ebpf_filter_id": 4092,
+    "hook_point": "kprobe/sys_enter_connect",
+    "ring_buffer_status": "LOCKED",
+    "cached_packet_hash": "e0a1789c24de817f09ac245e8103c7f8a109b82143d9e0541172a39f68bc1458",
+    "triage_directive": "If packet decryption fails due to GCM tag mismatch, halt and request full VM snapshot."
+  }
+}

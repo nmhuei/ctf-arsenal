@@ -1,0 +1,8 @@
+{
+  "author": "grace_h",
+  "content": "# Data Pipelines: Batch vs Streaming\n\nChoosing between batch and streaming is one of the first decisions in any data project. Here's a framework.\n\n## Batch\n\nProcess data at scheduled intervals. Simple, reliable, well-tooled. Choose batch when freshness requirements are in hours or days.\n\n## Streaming\n\nProcess events as they arrive. Lower latency, higher operational complexity. Choose streaming when freshness requirements are in seconds or minutes.\n\n## The false dichotomy\n\nMost real systems need both: streaming for low-latency views, batch for historical backfill and reconciliation. Design your pipeline to support both from the start.\n",
+  "created_at": "2026-05-13T16:00:00Z",
+  "id": "aab32389-22bc-c25a-6f60-6eb525ffdc56",
+  "sig": "u_8f6b33e32a9122d10bdf9164",
+  "title": "Data pipelines: batch vs streaming"
+}

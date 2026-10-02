@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "platform": {
+    "url": "https://qual.cscv.vn",
+    "type": "ctfd"
+  },
+  "auto_sync": {
+    "enabled": true,
+    "mode": "window",
+    "policy": {
+      "notices": true,
+      "scoreboard": true,
+      "challenge_rescan": true
+    },
+    "intervals_sec": {
+      "notices": 15,
+      "scoreboard": 60,
+      "challenges": 120,
+      "keepalive": 60
+    },
+    "grace_seconds": 300,
+    "auto_exit_on_end": true
+  },
+  "flag_format": "^CSCV2026\\{.+\\}$"
+}

@@ -1,0 +1,8 @@
+{
+  "author": "frank77",
+  "content": "# Writing Safe C in 2026\n\nC is not going away. Here's how to write it safely.\n\n## Use `-Wall -Wextra -Werror`\n\nTreat every warning as an error from day one. Retrofitting this onto an existing codebase is painful.\n\n## Prefer stack allocation\n\nEvery `malloc` is a liability. If it fits on the stack, put it there.\n\n## Use AddressSanitizer in CI\n\nAdd `-fsanitize=address` to your CI build. It catches buffer overflows and use-after-free at runtime.\n\n## Static analysis\n\n`clang-tidy` and `cppcheck` catch patterns the compiler misses. Run them on every pull request.\n",
+  "created_at": "2026-05-05T13:00:00Z",
+  "id": "c51ce410-c124-a10e-0db5-e4b97fc2af39",
+  "sig": "u_580aa44c55d7ef0ce9f8dfc9",
+  "title": "Writing safe C in 2026"
+}

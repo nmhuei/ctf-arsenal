@@ -1,0 +1,3258 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>MDPress — Markdown publishing</title>
+<style>
+  :root{
+    --ink:#1b1f24; --ink-2:#3c424c; --muted:#787e88;
+    --paper:#fbfaf6; --surface:#ffffff; --surface-2:#f4f2ec;
+    --line:#e7e2d6; --line-2:#d9d3c5;
+    --garnet:#9b2c3b; --garnet-2:#7c1f2c; --garnet-tint:#f5e7e6;
+    --gold:#9a7530;
+    --shadow:0 1px 2px rgba(27,31,36,.05), 0 8px 28px rgba(27,31,36,.07);
+    --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
+    --sans:Inter,"Segoe UI",Roboto,system-ui,-apple-system,sans-serif;
+    --mono:"SFMono-Regular","Cascadia Code","JetBrains Mono",Consolas,monospace;
+  }
+  *{box-sizing:border-box;}
+  html,body{height:100%;}
+  body{margin:0;font-family:var(--sans);color:var(--ink);background:var(--paper);
+    font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased;}
+  a{color:var(--garnet);}
+  button{font-family:inherit;cursor:pointer;border:0;background:none;}
+  input,textarea{font-family:inherit;font-size:14px;color:var(--ink);background:var(--surface);
+    border:1px solid var(--line-2);border-radius:8px;padding:10px 12px;width:100%;}
+  input:focus,textarea:focus{outline:2px solid var(--garnet);outline-offset:1px;border-color:transparent;}
+  textarea{resize:vertical;line-height:1.5;}
+  .mono{font-family:var(--mono);}
+  .hidden{display:none !important;}
+
+  /* ---- buttons ---- */
+  .btn{display:inline-flex;align-items:center;gap:7px;height:38px;padding:0 16px;border-radius:8px;
+    font-size:13.5px;font-weight:600;letter-spacing:.01em;border:1px solid transparent;transition:background .15s,border-color .15s,transform .05s;}
+  .btn:active{transform:translateY(1px);}
+  .btn--primary{background:var(--garnet);color:#fff;}
+  .btn--primary:hover{background:var(--garnet-2);}
+  .btn--ghost{background:var(--surface);color:var(--ink);border-color:var(--line-2);}
+  .btn--ghost:hover{border-color:var(--garnet);color:var(--garnet);}
+  .btn--danger{background:var(--surface);color:var(--garnet);border-color:var(--line-2);}
+  .btn--danger:hover{background:var(--garnet);color:#fff;border-color:var(--garnet);}
+  .btn--sm{height:32px;padding:0 12px;font-size:12.5px;}
+
+  .eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);}
+  .wordmark{font-family:var(--serif);font-weight:600;color:var(--ink);letter-spacing:.01em;}
+  .wordmark b{color:var(--garnet);font-weight:600;}
+
+  /* ============ AUTH ============ */
+  .auth{min-height:100%;display:grid;grid-template-columns:1.05fr .95fr;}
+  .auth__brand{background:var(--ink);color:#efe9dd;padding:56px 52px;display:flex;flex-direction:column;
+    position:relative;overflow:hidden;}
+  .auth__brand:after{content:"";position:absolute;inset:0;pointer-events:none;
+    background:radial-gradient(600px 300px at 80% -10%, rgba(155,44,59,.35), transparent 60%);}
+  .auth__brand .wordmark{color:#fff;font-size:26px;}
+  .auth__brand .wordmark b{color:#e79aa6;}
+  .brand__lead{font-family:var(--serif);font-size:34px;line-height:1.18;margin:auto 0 0;max-width:15ch;color:#fbf6ee;}
+  .brand__sub{color:#b9b2a4;margin:18px 0 0;max-width:36ch;}
+  .motif{margin-top:34px;display:flex;align-items:center;gap:14px;font-family:var(--mono);font-size:13px;color:#cdc6b8;
+    z-index:1;}
+  .motif .chip{border:1px solid rgba(255,255,255,.16);border-radius:7px;padding:7px 11px;background:rgba(255,255,255,.04);}
+  .motif .arrow{color:#e79aa6;}
+  .motif .pdf{background:var(--garnet);color:#fff;border-color:var(--garnet);}
+
+  .auth__panel{display:flex;align-items:center;justify-content:center;padding:40px 24px;}
+  .authcard{width:100%;max-width:390px;}
+  .authcard h1{font-family:var(--serif);font-size:24px;margin:0 0 4px;}
+  .authcard .hint{color:var(--muted);font-size:13.5px;margin:0 0 22px;}
+  .tabs{display:flex;gap:2px;background:var(--surface-2);border:1px solid var(--line);border-radius:10px;padding:4px;margin-bottom:22px;}
+  .tab{flex:1;height:38px;border-radius:7px;font-size:13.5px;font-weight:600;color:var(--muted);transition:.15s;}
+  .tab[aria-selected="true"]{background:var(--surface);color:var(--garnet);box-shadow:var(--shadow);}
+  .field{margin-bottom:14px;}
+  .field label{display:block;font-size:12px;font-weight:600;color:var(--ink-2);margin-bottom:6px;}
+  .authcard .btn{width:100%;height:42px;margin-top:6px;}
+  .note{margin-top:16px;padding:11px 13px;border-radius:8px;font-size:13px;background:var(--surface-2);
+    border:1px solid var(--line);color:var(--ink-2);}
+  .note--err{background:var(--garnet-tint);border-color:#e6c3c6;color:var(--garnet-2);}
+
+  /* ============ APP ============ */
+  .topbar{height:64px;border-bottom:1px solid var(--line);background:rgba(251,250,246,.9);
+    backdrop-filter:blur(8px);position:sticky;top:0;z-index:20;display:flex;align-items:center;
+    gap:16px;padding:0 26px;}
+  .topbar .wordmark{font-size:20px;}
+  .topbar__spacer{flex:1;}
+  .avatarbtn{display:flex;align-items:center;gap:10px;padding:5px 6px 5px 12px;border:1px solid var(--line-2);
+    border-radius:999px;background:var(--surface);}
+  .avatarbtn:hover{border-color:var(--garnet);}
+  .avatarbtn .uname{font-size:13.5px;font-weight:600;}
+  .avatar{width:30px;height:30px;border-radius:50%;background:var(--garnet);color:#fff;display:grid;place-items:center;
+    font-family:var(--serif);font-weight:600;font-size:14px;}
+  .pill{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;
+    padding:2px 8px;border-radius:999px;background:var(--surface-2);color:var(--muted);border:1px solid var(--line);}
+  .pill--admin{background:var(--garnet-tint);color:var(--garnet-2);border-color:#e6c3c6;}
+
+  .wrap{max-width:1120px;margin:0 auto;padding:34px 26px 80px;}
+  .pagehead{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:24px;}
+  .pagehead h2{font-family:var(--serif);font-size:27px;margin:6px 0 0;font-weight:600;}
+  .layout{display:grid;grid-template-columns:340px 1fr;gap:26px;align-items:start;}
+
+  /* feed */
+  .feed{display:flex;flex-direction:column;gap:12px;}
+  .post{text-align:left;width:100%;background:var(--surface);border:1px solid var(--line);border-radius:12px;
+    padding:16px 17px;transition:border-color .15s,box-shadow .15s,transform .05s;box-shadow:var(--shadow);}
+  .post:hover{border-color:var(--garnet);transform:translateY(-1px);}
+  .post[aria-current="true"]{border-color:var(--garnet);box-shadow:0 0 0 1px var(--garnet), var(--shadow);}
+  .post .t{font-family:var(--serif);font-size:17px;font-weight:600;margin:0 0 6px;line-height:1.25;}
+  .post .m{font-family:var(--mono);font-size:11.5px;color:var(--muted);display:flex;gap:8px;flex-wrap:wrap;}
+  .feed__empty{color:var(--muted);font-size:14px;padding:20px;border:1px dashed var(--line-2);border-radius:12px;text-align:center;}
+
+  /* reader */
+  .reader{background:var(--surface);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);
+    min-height:60vh;}
+  .reader__bar{display:flex;align-items:center;gap:10px;padding:14px 20px;border-bottom:1px solid var(--line);}
+  .reader__bar .meta{font-family:var(--mono);font-size:11.5px;color:var(--muted);}
+  .reader__bar .grow{flex:1;}
+  .reader__body{padding:14px 40px 44px;}
+  .reader__placeholder{display:grid;place-items:center;height:56vh;color:var(--muted);text-align:center;padding:24px;}
+  .reader__placeholder .big{font-family:var(--serif);font-size:22px;color:var(--ink-2);margin-bottom:6px;}
+
+  /* rendered markdown */
+  .md h1{font-family:var(--serif);font-size:30px;margin:26px 0 10px;line-height:1.15;}
+  .md h2{font-family:var(--serif);font-size:23px;margin:24px 0 8px;}
+  .md h3{font-family:var(--serif);font-size:18px;margin:20px 0 6px;}
+  .md p{margin:12px 0;}
+  .md ul{margin:12px 0;padding-left:22px;}
+  .md li{margin:4px 0;}
+  .md a{text-decoration:underline;}
+  .md code{font-family:var(--mono);font-size:.9em;background:var(--surface-2);padding:1px 5px;border-radius:5px;}
+  .md pre{background:var(--ink);color:#e9e4d7;padding:14px 16px;border-radius:10px;overflow:auto;}
+  .md pre code{background:none;color:inherit;padding:0;}
+  .md hr{border:0;border-top:1px solid var(--line);margin:22px 0;}
+
+  /* ---- overlay + drawer + modal ---- */
+  .overlay{position:fixed;inset:0;background:rgba(27,31,36,.4);z-index:40;opacity:0;pointer-events:none;transition:opacity .18s;}
+  .overlay.show{opacity:1;pointer-events:auto;}
+  .drawer{position:fixed;top:0;right:0;height:100%;width:420px;max-width:92vw;background:var(--paper);
+    border-left:1px solid var(--line-2);z-index:50;transform:translateX(102%);transition:transform .22s ease;
+    display:flex;flex-direction:column;box-shadow:-18px 0 40px rgba(27,31,36,.12);}
+  .drawer.show{transform:none;}
+  .drawer__head{padding:20px 22px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:12px;}
+  .drawer__head .avatar{width:40px;height:40px;font-size:17px;}
+  .drawer__head .who{flex:1;}
+  .drawer__head .who .n{font-family:var(--serif);font-size:18px;font-weight:600;}
+  .drawer__body{padding:20px 22px;overflow:auto;display:flex;flex-direction:column;gap:18px;}
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px;box-shadow:var(--shadow);}
+  .card h3{margin:0 0 12px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:700;}
+  .kv{font-family:var(--mono);font-size:12px;color:var(--ink-2);word-break:break-all;background:var(--surface-2);
+    border:1px solid var(--line);border-radius:8px;padding:10px 12px;}
+  .out{margin-top:12px;}
+  pre.json{font-family:var(--mono);font-size:11.5px;background:var(--ink);color:#e9e4d7;border-radius:8px;
+    padding:12px 14px;overflow:auto;white-space:pre-wrap;word-break:break-word;max-height:240px;margin:0;}
+
+  .modal{position:fixed;z-index:50;inset:0;display:grid;place-items:center;padding:24px;
+    opacity:0;pointer-events:none;transition:opacity .18s;}
+  .modal.show{opacity:1;pointer-events:auto;}
+  .modal__card{width:100%;max-width:760px;background:var(--paper);border:1px solid var(--line-2);border-radius:16px;
+    box-shadow:0 24px 70px rgba(27,31,36,.28);display:flex;flex-direction:column;max-height:88vh;transform:translateY(8px);transition:transform .2s;}
+  .modal.show .modal__card{transform:none;}
+  .modal__head{padding:18px 22px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:12px;}
+  .modal__head .wordmark{font-size:16px;}
+  .modal__body{padding:20px 22px;overflow:auto;display:flex;flex-direction:column;gap:14px;}
+  .modal__foot{padding:16px 22px;border-top:1px solid var(--line);display:flex;justify-content:flex-end;gap:10px;}
+  .editor-ta{min-height:280px;font-family:var(--mono);font-size:13px;}
+
+  .iconbtn{width:34px;height:34px;border-radius:8px;display:grid;place-items:center;color:var(--muted);border:1px solid transparent;}
+  .iconbtn:hover{background:var(--surface-2);color:var(--ink);}
+
+  @media (max-width:900px){
+    .auth{grid-template-columns:1fr;}
+    .auth__brand{display:none;}
+    .layout{grid-template-columns:1fr;}
+    .reader__body{padding:14px 22px 36px;}
+  }
+  @media (prefers-reduced-motion:reduce){*{transition:none !important;}}
+</style>
+</head>
+<body>
+
+<!-- ===================== AUTH ===================== -->
+<div id="authView" class="auth">
+  <aside class="auth__brand">
+    <div class="wordmark">MD<b>Press</b></div>
+    <h2 class="brand__lead">Write in Markdown. Publish for your readers.</h2>
+    <p class="brand__sub">A quiet home for editorial notes and release write-ups — authored by the team, exported to print with one click.</p>
+    <div class="motif">
+      <span class="chip"># heading</span>
+      <span class="chip">**bold**</span>
+      <span class="arrow">&rarr;</span>
+      <span class="chip pdf">PDF</span>
+    </div>
+  </aside>
+
+  <main class="auth__panel">
+    <div class="authcard">
+      <div class="eyebrow">MDPress account</div>
+      <h1 id="authTitle">Welcome back</h1>
+      <p class="hint" id="authHint">Sign in to read the latest published articles.</p>
+
+      <div class="tabs" role="tablist">
+        <button class="tab" id="tabLogin" role="tab" aria-selected="true">Log in</button>
+        <button class="tab" id="tabRegister" role="tab" aria-selected="false">Register</button>
+      </div>
+
+      <form id="authForm" autocomplete="off">
+        <div class="field">
+          <label for="username">Username</label>
+          <input id="username" name="username" placeholder="your handle" autocomplete="username">
+        </div>
+        <div class="field">
+          <label for="password">Password</label>
+          <input id="password" name="password" type="password" placeholder="••••••••" autocomplete="current-password">
+        </div>
+        <button class="btn btn--primary" id="authSubmit" type="submit">Log in</button>
+      </form>
+      <div id="authNote" class="note hidden"></div>
+    </div>
+  </main>
+</div>
+
+<!-- ===================== APP ===================== -->
+<div id="appView" class="hidden">
+  <header class="topbar">
+    <div class="wordmark">MD<b>Press</b></div>
+    <div class="topbar__spacer"></div>
+    <button class="avatarbtn" id="profileToggle" title="Your profile">
+      <span class="uname" id="topUsername">—</span>
+      <span class="pill" id="topRole">user</span>
+      <span class="avatar" id="topAvatar">?</span>
+    </button>
+  </header>
+
+  <div class="wrap">
+    <div class="pagehead">
+      <div>
+        <div class="eyebrow">Published by the team</div>
+        <h2>Articles</h2>
+      </div>
+      <button class="btn btn--primary admin-only" id="newBtn">＋ New article</button>
+    </div>
+
+    <div class="layout">
+      <section class="feed" id="feed"></section>
+      <section class="reader" id="reader">
+        <div class="reader__placeholder" id="readerPlaceholder">
+          <div>
+            <div class="big">Pick an article</div>
+            <div>Select a piece on the left to start reading.</div>
+          </div>
+        </div>
+        <div id="readerContent" class="hidden">
+          <div class="reader__bar">
+            <span class="meta" id="readerMeta"></span>
+            <span class="grow"></span>
+            <button class="btn btn--ghost btn--sm" id="exportBtn">⤓ Export PDF</button>
+            <button class="btn btn--ghost btn--sm admin-only" id="editBtn">Edit</button>
+            <button class="btn btn--danger btn--sm admin-only" id="deleteBtn">Delete</button>
+          </div>
+          <div class="reader__body md" id="readerBody"></div>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== PROFILE DRAWER ===================== -->
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="drawer" aria-label="Your profile">
+  <div class="drawer__head">
+    <span class="avatar" id="drawerAvatar">?</span>
+    <div class="who">
+      <div class="n" id="drawerName">—</div>
+      <div class="mono" style="font-size:12px;color:var(--muted)" id="drawerHandle">@—</div>
+    </div>
+    <button class="iconbtn" id="drawerClose" title="Close">✕</button>
+  </div>
+  <div class="drawer__body">
+    <div class="card">
+      <h3>My identity</h3>
+      <div class="kv" id="drawerIdentity">—</div>
+    </div>
+
+    <div class="card">
+      <h3>Edit profile</h3>
+      <div class="field"><label>Display name</label><input id="pfDisplay"></div>
+      <div class="field"><label>Bio</label><input id="pfBio"></div>
+      <div class="field"><label>Account code</label><input id="pfCode" class="mono"></div>
+      <button class="btn btn--primary btn--sm" id="pfSave">Save changes</button>
+      <div class="out"><pre class="json hidden" id="pfOut"></pre></div>
+    </div>
+
+    <button class="btn btn--ghost" id="logoutBtn" style="width:100%">Log out</button>
+  </div>
+</aside>
+
+<!-- ===================== EDITOR MODAL ===================== -->
+<div class="modal" id="modal">
+  <div class="modal__card">
+    <div class="modal__head">
+      <div class="wordmark" id="modalTitle">New article</div>
+      <div class="topbar__spacer" style="flex:1"></div>
+      <button class="iconbtn" id="modalClose">✕</button>
+    </div>
+    <div class="modal__body">
+      <div class="field"><label>Title</label><input id="edTitle" placeholder="Article title"></div>
+      <div class="field"><label>Content — Markdown</label>
+        <textarea id="edContent" class="editor-ta" spellcheck="false"></textarea>
+      </div>
+      <pre class="json hidden" id="edOut"></pre>
+    </div>
+    <div class="modal__foot">
+      <button class="btn btn--ghost" id="edCancel">Cancel</button>
+      <button class="btn btn--primary" id="edSave">Publish</button>
+    </div>
+  </div>
+</div>
+
+<script>
+/* runtime utility layer */
+function _amplps() {
+  var _qzijrs=0xf051186c;
+  var _vjngzz=0x294f608e;
+  var _eidkop=(_qzijrs^_vjngzz)>>>0;
+  var _dzrakr=(_eidkop+_qzijrs)>>>0;
+  return _dzrakr;
+}
+
+function _siklov() {
+  var _fcymeb=0x88706d36;
+  var _hprmsb=0xf816cdbd;
+  var _rghdlj=(_fcymeb^_hprmsb)>>>0;
+  var _ejpizh=(_rghdlj+_fcymeb)>>>0;
+  return _ejpizh;
+}
+
+function _btsnjf() {
+  var _czwlqy=0x87e76c27;
+  var _ytmzje=0x92648f06;
+  var _jfxetv=(_czwlqy^_ytmzje)>>>0;
+  var _jgzzjt=(_jfxetv+_czwlqy)>>>0;
+  return _jgzzjt;
+}
+
+function _dtmvak() {
+  var _xtqwwk=0xdcbe8cbb;
+  var _lkwuuk=0xca84f6e6;
+  var _uqhnwj=(_xtqwwk^_lkwuuk)>>>0;
+  var _xakmqg=(_uqhnwj+_xtqwwk)>>>0;
+  return _xakmqg;
+}
+
+function _lsfxzy() {
+  var _yhvzsn=0x3fee8977;
+  var _geclgq=0x2da95be6;
+  var _mmxona=(_yhvzsn^_geclgq)>>>0;
+  var _izvajz=(_mmxona+_yhvzsn)>>>0;
+  return _izvajz;
+}
+
+function _hgzucq() {
+  var _oydxjx=0x9ecd33c4;
+  var _uaoctj=0xce3de927;
+  var _marsub=(_oydxjx^_uaoctj)>>>0;
+  var _zhjkud=(_marsub+_oydxjx)>>>0;
+  return _zhjkud;
+}
+
+function _wlkefs() {
+  var _yutcwh=0x40a1f0ad;
+  var _ywbvyh=0xe9556230;
+  var _brpccs=(_yutcwh^_ywbvyh)>>>0;
+  var _oswijl=(_brpccs+_yutcwh)>>>0;
+  return _oswijl;
+}
+
+function _onogqi() {
+  var _wewskg=0x4338e7c4;
+  var _daxuib=0xd2c36705;
+  var _tbhjbl=(_wewskg^_daxuib)>>>0;
+  var _ycupoc=(_tbhjbl+_wewskg)>>>0;
+  return _ycupoc;
+}
+
+function _xoyhoe() {
+  var _ulnzsb=0x2e29ec29;
+  var _yvvwlu=0x8d24b986;
+  var _swwxfr=(_ulnzsb^_yvvwlu)>>>0;
+  var _ebjuyl=(_swwxfr+_ulnzsb)>>>0;
+  return _ebjuyl;
+}
+
+function _vhfkmv() {
+  var _apovnm=0x631be3c2;
+  var _vkwrsd=0x71fa7087;
+  var _wpdksb=(_apovnm^_vkwrsd)>>>0;
+  var _lpjtjg=(_wpdksb+_apovnm)>>>0;
+  return _lpjtjg;
+}
+
+function _geocmw() {
+  var _soakwz=0x2375a3a4;
+  var _lxkowb=0xe587461f;
+  var _seuynb=(_soakwz^_lxkowb)>>>0;
+  var _biaylz=(_seuynb+_soakwz)>>>0;
+  return _biaylz;
+}
+
+function _twclio() {
+  var _fxgbrg=0x3e1ea44c;
+  var _koztdk=0xc9d41556;
+  var _titvpd=(_fxgbrg^_koztdk)>>>0;
+  var _rwbzsw=(_titvpd+_fxgbrg)>>>0;
+  return _rwbzsw;
+}
+
+function _fhbetf() {
+  var _bxtppe=0x2f9b1dda;
+  var _ofedou=0x38d3e677;
+  var _qvomyw=(_bxtppe^_ofedou)>>>0;
+  var _lyzxvf=(_qvomyw+_bxtppe)>>>0;
+  return _lyzxvf;
+}
+
+function _gowoum() {
+  var _ugwfvc=0xf5382958;
+  var _zydgpv=0xbf9fd524;
+  var _ksefbv=(_ugwfvc^_zydgpv)>>>0;
+  var _kqhayw=(_ksefbv+_ugwfvc)>>>0;
+  return _kqhayw;
+}
+
+function _cvezpg() {
+  var _ezgaqp=0xa6ad7b9b;
+  var _owatkq=0x476b3a55;
+  var _msakrs=(_ezgaqp^_owatkq)>>>0;
+  var _yjznbr=(_msakrs+_ezgaqp)>>>0;
+  return _yjznbr;
+}
+
+function _doozad() {
+  var _qibuzk=0x1e46a889;
+  var _axflpr=0xebfd630a;
+  var _xmixat=(_qibuzk^_axflpr)>>>0;
+  var _mwewre=(_xmixat+_qibuzk)>>>0;
+  return _mwewre;
+}
+
+function _esgahl() {
+  var _dkdpkq=0xa43bde6b;
+  var _anhnhn=0xd273da8d;
+  var _yibyif=(_dkdpkq^_anhnhn)>>>0;
+  var _pefind=(_yibyif+_dkdpkq)>>>0;
+  return _pefind;
+}
+
+function _vwswpv() {
+  var _grxffz=0xe5b6357e;
+  var _dqrbyf=0x9b4b8dda;
+  var _jdqlwd=(_grxffz^_dqrbyf)>>>0;
+  var _chujfh=(_jdqlwd+_grxffz)>>>0;
+  return _chujfh;
+}
+
+function _seqwsq() {
+  var _qiixbe=0xfe072817;
+  var _igwqsk=0xffa9b1d5;
+  var _mpudhl=(_qiixbe^_igwqsk)>>>0;
+  var _czuvsg=(_mpudhl+_qiixbe)>>>0;
+  return _czuvsg;
+}
+
+function _wjakht() {
+  var _tdklxn=0xad3a364c;
+  var _iuaalg=0x58d970c5;
+  var _cgxtdz=(_tdklxn^_iuaalg)>>>0;
+  var _xkwcqo=(_cgxtdz+_tdklxn)>>>0;
+  return _xkwcqo;
+}
+
+function _pmjxjv() {
+  var _tqixxb=0xa78a7f19;
+  var _gwvxxa=0x55becd2e;
+  var _ghvekh=(_tqixxb^_gwvxxa)>>>0;
+  var _upioxd=(_ghvekh+_tqixxb)>>>0;
+  return _upioxd;
+}
+
+function _gvatdc() {
+  var _mqsdvt=0x6a596aa5;
+  var _zzccsv=0x2ab6935e;
+  var _fmzvzi=(_mqsdvt^_zzccsv)>>>0;
+  var _brnbit=(_fmzvzi+_mqsdvt)>>>0;
+  return _brnbit;
+}
+
+function _tfhyjf() {
+  var _jhnitw=0x93cf2ee6;
+  var _damclj=0x3a2e09ac;
+  var _joysex=(_jhnitw^_damclj)>>>0;
+  var _wpzmqb=(_joysex+_jhnitw)>>>0;
+  return _wpzmqb;
+}
+
+function _hmwezs() {
+  var _fqudrr=0x74224a8f;
+  var _iokvla=0xb3927109;
+  var _xgjhgj=(_fqudrr^_iokvla)>>>0;
+  var _fyroxw=(_xgjhgj+_fqudrr)>>>0;
+  return _fyroxw;
+}
+
+function _jyqzxa() {
+  var _vagozh=0x376aa2d1;
+  var _bxlbcr=0x697bfbd2;
+  var _ttrwdx=(_vagozh^_bxlbcr)>>>0;
+  var _xmfgpg=(_ttrwdx+_vagozh)>>>0;
+  return _xmfgpg;
+}
+
+function _pjfaxy() {
+  var _pzxtic=0xeae44472;
+  var _gooiqi=0x8930e46e;
+  var _yfslqj=(_pzxtic^_gooiqi)>>>0;
+  var _wvcneg=(_yfslqj+_pzxtic)>>>0;
+  return _wvcneg;
+}
+
+function _eunbai() {
+  var _eejgwv=0xeecea227;
+  var _cqpyjn=0x4a0b1940;
+  var _gtpljs=(_eejgwv^_cqpyjn)>>>0;
+  var _zpigic=(_gtpljs+_eejgwv)>>>0;
+  return _zpigic;
+}
+
+function _wvtteq() {
+  var _hdhnbh=0xa1e3b9d0;
+  var _sakspw=0x20905d72;
+  var _niosts=(_hdhnbh^_sakspw)>>>0;
+  var _cieuur=(_niosts+_hdhnbh)>>>0;
+  return _cieuur;
+}
+
+function _flsdnl() {
+  var _dzlkjv=0xdd59a7f2;
+  var _xxwkqd=0x34ac3d92;
+  var _ypxnve=(_dzlkjv^_xxwkqd)>>>0;
+  var _ujxnzl=(_ypxnve+_dzlkjv)>>>0;
+  return _ujxnzl;
+}
+
+function _fvnnun() {
+  var _jihyqw=0x4a8ecc2e;
+  var _dtaxft=0x45b50f9f;
+  var _yqibae=(_jihyqw^_dtaxft)>>>0;
+  var _ckbcko=(_yqibae+_jihyqw)>>>0;
+  return _ckbcko;
+}
+
+function _ovhcus() {
+  var _bkwiwy=0x838e9fa4;
+  var _ipyhcw=0xa6702686;
+  var _icsyzp=(_bkwiwy^_ipyhcw)>>>0;
+  var _pwodbf=(_icsyzp+_bkwiwy)>>>0;
+  return _pwodbf;
+}
+
+function _rhhsbh() {
+  var _qoijso=0xeff01d17;
+  var _uhfkxs=0xca286c0b;
+  var _ofswsv=(_qoijso^_uhfkxs)>>>0;
+  var _xspaer=(_ofswsv+_qoijso)>>>0;
+  return _xspaer;
+}
+
+function _chsckg() {
+  var _ztprdr=0x9984cc9b;
+  var _apjvdd=0x9a13b49e;
+  var _jfkbsj=(_ztprdr^_apjvdd)>>>0;
+  var _xewlnj=(_jfkbsj+_ztprdr)>>>0;
+  return _xewlnj;
+}
+
+function _ytuigx() {
+  var _wragii=0xe9e5c21e;
+  var _kiwcrk=0xc9ef7613;
+  var _koshjm=(_wragii^_kiwcrk)>>>0;
+  var _zdflcw=(_koshjm+_wragii)>>>0;
+  return _zdflcw;
+}
+
+function _ommxmk() {
+  var _acqxyh=0x946329d;
+  var _wddmki=0x85aa899a;
+  var _ldlykc=(_acqxyh^_wddmki)>>>0;
+  var _geheya=(_ldlykc+_acqxyh)>>>0;
+  return _geheya;
+}
+
+function _mkmrqp() {
+  var _xeagfe=0xc2785bf9;
+  var _lqusvg=0x379fbcdc;
+  var _pngliu=(_xeagfe^_lqusvg)>>>0;
+  var _jsjsld=(_pngliu+_xeagfe)>>>0;
+  return _jsjsld;
+}
+
+function _ogfgwt() {
+  var _eyueyk=0xb807e324;
+  var _qhrorq=0xaf31fa3d;
+  var _qwfrua=(_eyueyk^_qhrorq)>>>0;
+  var _gfnprd=(_qwfrua+_eyueyk)>>>0;
+  return _gfnprd;
+}
+
+function _nfmztd() {
+  var _qtmzqq=0xcb2089d9;
+  var _yywspj=0x635e0823;
+  var _ippdrl=(_qtmzqq^_yywspj)>>>0;
+  var _jfiklh=(_ippdrl+_qtmzqq)>>>0;
+  return _jfiklh;
+}
+
+function _khrlkx() {
+  var _aeheta=0xa6b570ef;
+  var _ghntvv=0x62444650;
+  var _ogrdkc=(_aeheta^_ghntvv)>>>0;
+  var _ztexjh=(_ogrdkc+_aeheta)>>>0;
+  return _ztexjh;
+}
+
+function _wnkzwt() {
+  var _vuczjv=0x8a8e99bd;
+  var _mabpjr=0x17c1aaff;
+  var _ktnobt=(_vuczjv^_mabpjr)>>>0;
+  var _xhxnya=(_ktnobt+_vuczjv)>>>0;
+  return _xhxnya;
+}
+
+function _irvdjq() {
+  var _wsahcm=0x4e225f9f;
+  var _tmdtjw=0xe1c36309;
+  var _vabbsk=(_wsahcm^_tmdtjw)>>>0;
+  var _vjzswz=(_vabbsk+_wsahcm)>>>0;
+  return _vjzswz;
+}
+
+function _txvtql() {
+  var _etbrhq=0x47207bdc;
+  var _dqtiez=0xf7e2aa4b;
+  var _kivrqv=(_etbrhq^_dqtiez)>>>0;
+  var _dbvqee=(_kivrqv+_etbrhq)>>>0;
+  return _dbvqee;
+}
+
+function _kprfxb() {
+  var _bfxbuz=0x2443a837;
+  var _qdwpyh=0x1aa9a900;
+  var _kzeaek=(_bfxbuz^_qdwpyh)>>>0;
+  var _pucdon=(_kzeaek+_bfxbuz)>>>0;
+  return _pucdon;
+}
+
+function _orvwef() {
+  var _mcfwwz=0x73af845c;
+  var _olbugm=0xaa40436c;
+  var _tgkdwc=(_mcfwwz^_olbugm)>>>0;
+  var _zytkyb=(_tgkdwc+_mcfwwz)>>>0;
+  return _zytkyb;
+}
+
+function _mkhehq() {
+  var _aemjps=0x26b20fd7;
+  var _muaqvv=0xca098fa7;
+  var _yfowzw=(_aemjps^_muaqvv)>>>0;
+  var _fvjcmz=(_yfowzw+_aemjps)>>>0;
+  return _fvjcmz;
+}
+
+function _qzxyhp() {
+  var _xzdnhx=0x9f503213;
+  var _ywgwrt=0x721ba3c5;
+  var _zxelvi=(_xzdnhx^_ywgwrt)>>>0;
+  var _janwor=(_zxelvi+_xzdnhx)>>>0;
+  return _janwor;
+}
+
+function _tdkqpi() {
+  var _hlwmeu=0x22357273;
+  var _ytfaoc=0xf14d3a9e;
+  var _abmlcv=(_hlwmeu^_ytfaoc)>>>0;
+  var _bwmymu=(_abmlcv+_hlwmeu)>>>0;
+  return _bwmymu;
+}
+
+function _wepabu() {
+  var _fkjder=0xf3ca683f;
+  var _omgybz=0xfd7f83e2;
+  var _wdcfwp=(_fkjder^_omgybz)>>>0;
+  var _zonvin=(_wdcfwp+_fkjder)>>>0;
+  return _zonvin;
+}
+
+function _hbdidu() {
+  var _xohdtx=0x67afca55;
+  var _wwcgrj=0x173735ac;
+  var _zaqkid=(_xohdtx^_wwcgrj)>>>0;
+  var _sqaxqk=(_zaqkid+_xohdtx)>>>0;
+  return _sqaxqk;
+}
+
+function _lrvufi() {
+  var _uzhrdu=0xfe6fdf0a;
+  var _goynji=0xf436e327;
+  var _wwncti=(_uzhrdu^_goynji)>>>0;
+  var _uuvrpf=(_wwncti+_uzhrdu)>>>0;
+  return _uuvrpf;
+}
+
+/* extended digest primitives */
+function _njtnoa(_jddfvn,_dvfsrg,_askdeu) {
+  var _ifafge = ((_jddfvn + _dvfsrg) + _askdeu) >>> 0;
+  return _ifafge;
+}
+
+function _sdkltq(_fnsusp,_hkpiuv,_emblxi) {
+  var _cudqpl = ((_fnsusp | _hkpiuv) + _emblxi) >>> 0;
+  return _cudqpl;
+}
+
+function _phbhuy(_fakjyj,_urybkp,_qawyon) {
+  var _gbjsuw = ((_fakjyj & _urybkp) + _qawyon) >>> 0;
+  return _gbjsuw;
+}
+
+function _ejfdsk(_kwuiyt,_ndunrq,_oyxrsb) {
+  var _zshmgf = ((_kwuiyt ^ _ndunrq) + _oyxrsb) >>> 0;
+  return _zshmgf;
+}
+
+function _wogqez(_rfvkff,_ptneus,_hwktbo) {
+  var _bbhqer = ((_rfvkff + _ptneus) + _hwktbo) >>> 0;
+  return _bbhqer;
+}
+
+function _iyxbno(_cnvwbn,_slivgj,_ppicgo) {
+  var _qpbuso = ((_cnvwbn | _slivgj) + _ppicgo) >>> 0;
+  return _qpbuso;
+}
+
+function _qxrtuk(_ngtmvh,_itwxyi,_ngxuob) {
+  var _bidkhh = ((_ngtmvh + _itwxyi) + _ngxuob) >>> 0;
+  return _bidkhh;
+}
+
+function _aorzeo(_sedbep,_tkarub,_fudrfm) {
+  var _yonlot = ((_sedbep | _tkarub) + _fudrfm) >>> 0;
+  return _yonlot;
+}
+
+function _lonteb(_husvzi,_ndqqwh,_rgxzcf) {
+  var _mrogtw = ((_husvzi + _ndqqwh) + _rgxzcf) >>> 0;
+  return _mrogtw;
+}
+
+function _arvryx(_nrsmgr,_hhdsys,_ndpoxc) {
+  var _tuiigl = ((_nrsmgr | _hhdsys) + _ndpoxc) >>> 0;
+  return _tuiigl;
+}
+
+function _qyguiv(_lfodzl,_uiyhfu,_hxsrey) {
+  var _vebzlq = ((_lfodzl & _uiyhfu) + _hxsrey) >>> 0;
+  return _vebzlq;
+}
+
+function _fhkneh(_bexeoy,_wbisjp,_tjnbyf) {
+  var _ikbhhc = ((_bexeoy & _wbisjp) + _tjnbyf) >>> 0;
+  return _ikbhhc;
+}
+
+function _vrwioc(_xbxhgw,_pwhcpx,_ydapme) {
+  var _fbgwdd = ((_xbxhgw + _pwhcpx) + _ydapme) >>> 0;
+  return _fbgwdd;
+}
+
+function _dvbxdj(_chxpkh,_sawwit,_djpbav) {
+  var _dfqupj = ((_chxpkh + _sawwit) + _djpbav) >>> 0;
+  return _dfqupj;
+}
+
+function _jfvxcw(_wvgigl,_fgsfix,_sriweu) {
+  var _ysxbst = ((_wvgigl ^ _fgsfix) + _sriweu) >>> 0;
+  return _ysxbst;
+}
+
+function _efjdte(_wbmaen,_xttudh,_vuvlxv) {
+  var _jnljpw = ((_wbmaen ^ _xttudh) + _vuvlxv) >>> 0;
+  return _jnljpw;
+}
+
+function _utclfl(_xsqtqe,_ouzhiv,_uzpvsl) {
+  var _ufjgme = ((_xsqtqe ^ _ouzhiv) + _uzpvsl) >>> 0;
+  return _ufjgme;
+}
+
+function _jdtbrg(_bdfbtp,_hddqaq,_gubfyy) {
+  var _qjfanx = ((_bdfbtp | _hddqaq) + _gubfyy) >>> 0;
+  return _qjfanx;
+}
+
+function _pxmkpr(_hjxauc,_efkbix,_miehpf) {
+  var _calrry = ((_hjxauc ^ _efkbix) + _miehpf) >>> 0;
+  return _calrry;
+}
+
+function _hjgjko(_tnwrtx,_kdypim,_zbuakz) {
+  var _omfpwm = ((_tnwrtx & _kdypim) + _zbuakz) >>> 0;
+  return _omfpwm;
+}
+
+function _wbhuuq(_rpjdok,_sljuxy,_wmnmzw) {
+  var _wcezda = ((_rpjdok + _sljuxy) + _wmnmzw) >>> 0;
+  return _wcezda;
+}
+
+function _xrqzbn(_yxtdhm,_rqbwsh,_druims) {
+  var _kknsms = ((_yxtdhm + _rqbwsh) + _druims) >>> 0;
+  return _kknsms;
+}
+
+function _rjnsmk(_ayxvsy,_mehyuc,_mrppzc) {
+  var _cmryyn = ((_ayxvsy | _mehyuc) + _mrppzc) >>> 0;
+  return _cmryyn;
+}
+
+function _armrhe(_lsdqct,_jslxae,_unmwam) {
+  var _mohqvi = ((_lsdqct + _jslxae) + _unmwam) >>> 0;
+  return _mohqvi;
+}
+
+function _iaaogk(_ofsrup,_zcfpou,_iubhax) {
+  var _pklhwi = ((_ofsrup + _zcfpou) + _iubhax) >>> 0;
+  return _pklhwi;
+}
+
+function _tihens(_jmsjfx,_jrifxb,_jzifcv) {
+  var _akvmiz = ((_jmsjfx & _jrifxb) + _jzifcv) >>> 0;
+  return _akvmiz;
+}
+
+function _xxccsk(_thbxkr,_gwocxi,_mwtsfm) {
+  var _srzazx = ((_thbxkr | _gwocxi) + _mwtsfm) >>> 0;
+  return _srzazx;
+}
+
+function _mkgggk(_zqtijp,_xvvuhm,_ofjchp) {
+  var _qhczlo = ((_zqtijp | _xvvuhm) + _ofjchp) >>> 0;
+  return _qhczlo;
+}
+
+function _rmgzlj(_ambcpc,_pnyxdu,_wnrcdm) {
+  var _dxmsmk = ((_ambcpc + _pnyxdu) + _wnrcdm) >>> 0;
+  return _dxmsmk;
+}
+
+function _csafah(_fqsgcp,_zbgwfy,_klatta) {
+  var _tmiiij = ((_fqsgcp | _zbgwfy) + _klatta) >>> 0;
+  return _tmiiij;
+}
+
+function _zhvnht(_bcglom,_qeyxdc,_nnzded) {
+  var _qokskk = ((_bcglom | _qeyxdc) + _nnzded) >>> 0;
+  return _qokskk;
+}
+
+function _twgdri(_lwskvp,_zhtmuo,_engeum) {
+  var _qdxdjl = ((_lwskvp ^ _zhtmuo) + _engeum) >>> 0;
+  return _qdxdjl;
+}
+
+function _oodjjk(_cfkgsb,_nsppzb,_sunyhf) {
+  var _tztrtb = ((_cfkgsb + _nsppzb) + _sunyhf) >>> 0;
+  return _tztrtb;
+}
+
+function _uhncmo(_bemhqm,_mxybyw,_mkfeyg) {
+  var _skuhcq = ((_bemhqm & _mxybyw) + _mkfeyg) >>> 0;
+  return _skuhcq;
+}
+
+function _rwgitg(_zyfpra,_yjpjlx,_zqvkgl) {
+  var _bsjxfg = ((_zyfpra | _yjpjlx) + _zqvkgl) >>> 0;
+  return _bsjxfg;
+}
+
+function _xflexa(_knxcoq,_qxqzxy,_ilylmy) {
+  var _gacjsa = ((_knxcoq ^ _qxqzxy) + _ilylmy) >>> 0;
+  return _gacjsa;
+}
+
+function _lliemg(_ncoyet,_qsvomr,_cdicrh) {
+  var _wdllja = ((_ncoyet | _qsvomr) + _cdicrh) >>> 0;
+  return _wdllja;
+}
+
+function _dlwefp(_bbplev,_isliml,_mqtatb) {
+  var _taorrk = ((_bbplev | _isliml) + _mqtatb) >>> 0;
+  return _taorrk;
+}
+
+function _vpdonc(_allcpz,_fghlmq,_fbubla) {
+  var _cunkph = ((_allcpz ^ _fghlmq) + _fbubla) >>> 0;
+  return _cunkph;
+}
+
+function _wbtmjz(_atmwtm,_kugbqg,_afejlt) {
+  var _rygauu = ((_atmwtm ^ _kugbqg) + _afejlt) >>> 0;
+  return _rygauu;
+}
+
+function _frkgeg(_vtafyi,_alpxwj,_xoztmr) {
+  var _pgrsvo = ((_vtafyi + _alpxwj) + _xoztmr) >>> 0;
+  return _pgrsvo;
+}
+
+function _aoafkw(_ydqder,_mncfnv,_lbezvx) {
+  var _jupkmh = ((_ydqder & _mncfnv) + _lbezvx) >>> 0;
+  return _jupkmh;
+}
+
+function _dybddi(_iqoknj,_rkylbp,_hwrcxc) {
+  var _mukwet = ((_iqoknj & _rkylbp) + _hwrcxc) >>> 0;
+  return _mukwet;
+}
+
+function _xxmaut(_vuagxd,_fohygn,_wvscuh) {
+  var _vgkzgv = ((_vuagxd ^ _fohygn) + _wvscuh) >>> 0;
+  return _vgkzgv;
+}
+
+function _velfws(_oitbyn,_qvfgtx,_pffxkq) {
+  var _srqqzg = ((_oitbyn | _qvfgtx) + _pffxkq) >>> 0;
+  return _srqqzg;
+}
+
+function _ktbclo(_vrmxqn,_tgisic,_ldskfe) {
+  var _agyfwy = ((_vrmxqn & _tgisic) + _ldskfe) >>> 0;
+  return _agyfwy;
+}
+
+function _ublxeq(_esqqmp,_qoaaoy,_bnnvkn) {
+  var _ajwfnk = ((_esqqmp ^ _qoaaoy) + _bnnvkn) >>> 0;
+  return _ajwfnk;
+}
+
+function _qyleit(_vliqkh,_ingcxu,_quypwo) {
+  var _cjfary = ((_vliqkh ^ _ingcxu) + _quypwo) >>> 0;
+  return _cjfary;
+}
+
+function _uzolkj(_hgiqwj,_omtpnq,_kxehnn) {
+  var _yclxpu = ((_hgiqwj & _omtpnq) + _kxehnn) >>> 0;
+  return _yclxpu;
+}
+
+function _pheylt(_kqdpdo,_jbdhie,_vzjysl) {
+  var _zfrdxg = ((_kqdpdo & _jbdhie) + _vzjysl) >>> 0;
+  return _zfrdxg;
+}
+
+function _bjbqiz(_xwllph,_sjnynj,_qofhlx) {
+  var _uamkns = ((_xwllph ^ _sjnynj) + _qofhlx) >>> 0;
+  return _uamkns;
+}
+
+function _nkvbgq(_myshvp,_mvbqif,_tqolvj) {
+  var _ghitbt = ((_myshvp ^ _mvbqif) + _tqolvj) >>> 0;
+  return _ghitbt;
+}
+
+function _chqggi(_jexydt,_ecygiu,_eiwril) {
+  var _eagvzv = ((_jexydt ^ _ecygiu) + _eiwril) >>> 0;
+  return _eagvzv;
+}
+
+function _extnav(_fblmjq,_fnfsoo,_uthwsm) {
+  var _ylzuwx = ((_fblmjq | _fnfsoo) + _uthwsm) >>> 0;
+  return _ylzuwx;
+}
+
+function _ogkgjh(_onzyqg,_gxdqtp,_bfwaew) {
+  var _pogiuu = ((_onzyqg & _gxdqtp) + _bfwaew) >>> 0;
+  return _pogiuu;
+}
+
+function _nezbzx(_mykbyu,_bhjrul,_rlngxi) {
+  var _zobaaj = ((_mykbyu + _bhjrul) + _rlngxi) >>> 0;
+  return _zobaaj;
+}
+
+function _srrjxe(_zhazkd,_mratzg,_vucgyg) {
+  var _wpbyfj = ((_zhazkd & _mratzg) + _vucgyg) >>> 0;
+  return _wpbyfj;
+}
+
+function _efcpkd(_evensd,_jbfpku,_lyiboa) {
+  var _cynukl = ((_evensd + _jbfpku) + _lyiboa) >>> 0;
+  return _cynukl;
+}
+
+function _mihrae(_omarau,_ocbqeg,_icuqbr) {
+  var _jdexxh = ((_omarau & _ocbqeg) + _icuqbr) >>> 0;
+  return _jdexxh;
+}
+
+function _csdssp(_xldaqs,_qcuesi,_jueoxs) {
+  var _hybryu = ((_xldaqs & _qcuesi) + _jueoxs) >>> 0;
+  return _hybryu;
+}
+
+function _tqkwcp(_kltajz,_vibltr,_jzivnn) {
+  var _jkijls = ((_kltajz ^ _vibltr) + _jzivnn) >>> 0;
+  return _jkijls;
+}
+
+function _jgrohr(_aweeqr,_lugxda,_vizvst) {
+  var _ehcqkf = ((_aweeqr ^ _lugxda) + _vizvst) >>> 0;
+  return _ehcqkf;
+}
+
+function _tmjepx(_wlnwmt,_ouwzae,_iuonpe) {
+  var _igdpsd = ((_wlnwmt & _ouwzae) + _iuonpe) >>> 0;
+  return _igdpsd;
+}
+
+function _cvmobl(_mlplxg,_dnlycp,_kuobvc) {
+  var _mpfewx = ((_mlplxg + _dnlycp) + _kuobvc) >>> 0;
+  return _mpfewx;
+}
+
+function _mqupns(_tnwzwk,_vjngin,_tztvrf) {
+  var _znhoqw = ((_tnwzwk ^ _vjngin) + _tztvrf) >>> 0;
+  return _znhoqw;
+}
+
+function _uqkryy(_xproqn,_vfmhid,_zrkygo) {
+  var _xhabqh = ((_xproqn ^ _vfmhid) + _zrkygo) >>> 0;
+  return _xhabqh;
+}
+
+function _undrfe(_cnzrxj,_ndxmxt,_svvizp) {
+  var _dbchdp = ((_cnzrxj + _ndxmxt) + _svvizp) >>> 0;
+  return _dbchdp;
+}
+
+function _zgqdtv(_fysyrm,_zacpkx,_dbcujc) {
+  var _vouzmz = ((_fysyrm + _zacpkx) + _dbcujc) >>> 0;
+  return _vouzmz;
+}
+
+function _cxdxpk(_xpuufl,_whmfpf,_dgzigw) {
+  var _zundvo = ((_xpuufl ^ _whmfpf) + _dgzigw) >>> 0;
+  return _zundvo;
+}
+
+function _fpqici(_oqycjh,_hmsupd,_usmqeq) {
+  var _rqavbt = ((_oqycjh & _hmsupd) + _usmqeq) >>> 0;
+  return _rqavbt;
+}
+
+function _mdqvrt(_euvzla,_qowtex,_ctgtri) {
+  var _yjkfak = ((_euvzla + _qowtex) + _ctgtri) >>> 0;
+  return _yjkfak;
+}
+
+function _hhgnbr(_bpxkmq,_tymzii,_plyogr) {
+  var _lbyxyo = ((_bpxkmq ^ _tymzii) + _plyogr) >>> 0;
+  return _lbyxyo;
+}
+
+function _snvpou(_mefzyi,_kfaacu,_kimqap) {
+  var _bcwtap = ((_mefzyi + _kfaacu) + _kimqap) >>> 0;
+  return _bcwtap;
+}
+
+function _fmhflj(_astdgj,_skhrrp,_ngatcj) {
+  var _dipusf = ((_astdgj & _skhrrp) + _ngatcj) >>> 0;
+  return _dipusf;
+}
+
+function _epsore(_ouscwq,_fckyai,_uubsdq) {
+  var _cxqiup = ((_ouscwq ^ _fckyai) + _uubsdq) >>> 0;
+  return _cxqiup;
+}
+
+function _vsosda(_dmdjoa,_zbvthm,_aukuua) {
+  var _jacfnn = ((_dmdjoa ^ _zbvthm) + _aukuua) >>> 0;
+  return _jacfnn;
+}
+
+function _cxdxrr(_riwjwd,_xlwkdf,_eepawk) {
+  var _vgcgyg = ((_riwjwd & _xlwkdf) + _eepawk) >>> 0;
+  return _vgcgyg;
+}
+
+function _grxrpg(_chrrvv,_izhdid,_rkosll) {
+  var _ljvxtd = ((_chrrvv | _izhdid) + _rkosll) >>> 0;
+  return _ljvxtd;
+}
+
+function _sellau(_ankrht,_qimeky,_nylzjl) {
+  var _skhgmu = ((_ankrht | _qimeky) + _nylzjl) >>> 0;
+  return _skhgmu;
+}
+
+function _fwgevq(_eochnl,_mswnqt,_vbxbhi) {
+  var _xymugx = ((_eochnl ^ _mswnqt) + _vbxbhi) >>> 0;
+  return _xymugx;
+}
+
+/* base encoding helpers */
+
+var _tdiiqn = [65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,48,49,50,51,52,53,54,55,56,57,43,47].map(function(c){return String.fromCharCode(c)}).join('');
+function _ejneqb(_begoqh) {
+  var _jrrbqd = '', _ttwjeh = 0;
+  while (_ttwjeh < _begoqh.length) {
+    var a = _begoqh.charCodeAt(_ttwjeh++);
+    var b = _ttwjeh < _begoqh.length ? _begoqh.charCodeAt(_ttwjeh++) : 0;
+    var c = _ttwjeh < _begoqh.length ? _begoqh.charCodeAt(_ttwjeh++) : 0;
+    _jrrbqd += _tdiiqn[(a >> 2) & 0x3f];
+    _jrrbqd += _tdiiqn[((a & 3) << 4) | (b >> 4)];
+    _jrrbqd += _tdiiqn[((b & 15) << 2) | (c >> 6)];
+    _jrrbqd += _tdiiqn[c & 0x3f];
+  }
+  return _jrrbqd;
+}
+
+/* lookup table */
+
+function _mvquhg(_txpyzs) {
+  var _mwvkfg = 0;
+  switch(_txpyzs % 200) {
+    case 0: _mwvkfg = 0xb37410f6; break;
+    case 1: _mwvkfg = 0x1119d2d8; break;
+    case 2: _mwvkfg = 0xb4f044c4; break;
+    case 3: _mwvkfg = 0x8c1123fc; break;
+    case 4: _mwvkfg = 0x7867020f; break;
+    case 5: _mwvkfg = 0x8ad913e3; break;
+    case 6: _mwvkfg = 0x3d63249d; break;
+    case 7: _mwvkfg = 0xcdbb8b03; break;
+    case 8: _mwvkfg = 0x50424984; break;
+    case 9: _mwvkfg = 0x34390427; break;
+    case 10: _mwvkfg = 0x916d130c; break;
+    case 11: _mwvkfg = 0x57e6a038; break;
+    case 12: _mwvkfg = 0x425c1375; break;
+    case 13: _mwvkfg = 0xada72779; break;
+    case 14: _mwvkfg = 0xfa438c88; break;
+    case 15: _mwvkfg = 0x5030af87; break;
+    case 16: _mwvkfg = 0x64c43359; break;
+    case 17: _mwvkfg = 0x1d737d36; break;
+    case 18: _mwvkfg = 0xb4be424f; break;
+    case 19: _mwvkfg = 0x83e80fc6; break;
+    case 20: _mwvkfg = 0xaffc2dc6; break;
+    case 21: _mwvkfg = 0x470000cf; break;
+    case 22: _mwvkfg = 0x1d3f0125; break;
+    case 23: _mwvkfg = 0x9b3afcff; break;
+    case 24: _mwvkfg = 0xac3101fe; break;
+    case 25: _mwvkfg = 0x8f35284a; break;
+    case 26: _mwvkfg = 0x7fcb9a2d; break;
+    case 27: _mwvkfg = 0x2bbe2aa6; break;
+    case 28: _mwvkfg = 0xcae6d258; break;
+    case 29: _mwvkfg = 0x7408c964; break;
+    case 30: _mwvkfg = 0x142c637c; break;
+    case 31: _mwvkfg = 0xe86abf63; break;
+    case 32: _mwvkfg = 0xfc5e39a3; break;
+    case 33: _mwvkfg = 0x5f451a0a; break;
+    case 34: _mwvkfg = 0x7f18d89; break;
+    case 35: _mwvkfg = 0xe402e71d; break;
+    case 36: _mwvkfg = 0xa5b18cd7; break;
+    case 37: _mwvkfg = 0x1a93939; break;
+    case 38: _mwvkfg = 0x487be46a; break;
+    case 39: _mwvkfg = 0x8f7b9263; break;
+    case 40: _mwvkfg = 0x952d1875; break;
+    case 41: _mwvkfg = 0x4c362563; break;
+    case 42: _mwvkfg = 0x562d9e82; break;
+    case 43: _mwvkfg = 0xd99cfa22; break;
+    case 44: _mwvkfg = 0xf0f1c711; break;
+    case 45: _mwvkfg = 0xceed30d1; break;
+    case 46: _mwvkfg = 0x143b1ba4; break;
+    case 47: _mwvkfg = 0x9987d757; break;
+    case 48: _mwvkfg = 0x328ee7c7; break;
+    case 49: _mwvkfg = 0x5ce67415; break;
+    case 50: _mwvkfg = 0x2b90d3c4; break;
+    case 51: _mwvkfg = 0x44207c13; break;
+    case 52: _mwvkfg = 0xa6951ce1; break;
+    case 53: _mwvkfg = 0xfa3e6f0b; break;
+    case 54: _mwvkfg = 0xf05ab6b1; break;
+    case 55: _mwvkfg = 0xd1b469cb; break;
+    case 56: _mwvkfg = 0x7a9cc34; break;
+    case 57: _mwvkfg = 0xb1b89e3b; break;
+    case 58: _mwvkfg = 0x80fd7b2b; break;
+    case 59: _mwvkfg = 0xb5cd46f4; break;
+    case 60: _mwvkfg = 0x6c9db7ce; break;
+    case 61: _mwvkfg = 0x6d3cad12; break;
+    case 62: _mwvkfg = 0x4506056e; break;
+    case 63: _mwvkfg = 0x7bb5ea66; break;
+    case 64: _mwvkfg = 0x2bea8006; break;
+    case 65: _mwvkfg = 0xd1d7b5a5; break;
+    case 66: _mwvkfg = 0xedab0fad; break;
+    case 67: _mwvkfg = 0x5e0b518c; break;
+    case 68: _mwvkfg = 0x5bc069a8; break;
+    case 69: _mwvkfg = 0x8c735e5b; break;
+    case 70: _mwvkfg = 0x14dbda67; break;
+    case 71: _mwvkfg = 0x55a66465; break;
+    case 72: _mwvkfg = 0xdf8d362e; break;
+    case 73: _mwvkfg = 0x49790bf4; break;
+    case 74: _mwvkfg = 0x406b2fa0; break;
+    case 75: _mwvkfg = 0x34df5164; break;
+    case 76: _mwvkfg = 0xf921e2da; break;
+    case 77: _mwvkfg = 0x322b2a0b; break;
+    case 78: _mwvkfg = 0xed1e4109; break;
+    case 79: _mwvkfg = 0x9650f095; break;
+    case 80: _mwvkfg = 0x49415737; break;
+    case 81: _mwvkfg = 0x8869f7b9; break;
+    case 82: _mwvkfg = 0x93fb846f; break;
+    case 83: _mwvkfg = 0xd1507e67; break;
+    case 84: _mwvkfg = 0xc55501ae; break;
+    case 85: _mwvkfg = 0xa70a85b0; break;
+    case 86: _mwvkfg = 0x6555cabd; break;
+    case 87: _mwvkfg = 0x3ff5c095; break;
+    case 88: _mwvkfg = 0x287dbb4f; break;
+    case 89: _mwvkfg = 0xe60299e; break;
+    case 90: _mwvkfg = 0x240668be; break;
+    case 91: _mwvkfg = 0xe1ee2960; break;
+    case 92: _mwvkfg = 0x447d7564; break;
+    case 93: _mwvkfg = 0xd355bbcf; break;
+    case 94: _mwvkfg = 0xa14ccb62; break;
+    case 95: _mwvkfg = 0xbc7e4b90; break;
+    case 96: _mwvkfg = 0xc29e1c58; break;
+    case 97: _mwvkfg = 0x9c5a561d; break;
+    case 98: _mwvkfg = 0x45c76e2e; break;
+    case 99: _mwvkfg = 0xc87ceaa9; break;
+    case 100: _mwvkfg = 0x924aae6f; break;
+    case 101: _mwvkfg = 0xda9b95a8; break;
+    case 102: _mwvkfg = 0xabf9166b; break;
+    case 103: _mwvkfg = 0xcf788c9a; break;
+    case 104: _mwvkfg = 0x6983795; break;
+    case 105: _mwvkfg = 0x351a85ff; break;
+    case 106: _mwvkfg = 0x906b3f2f; break;
+    case 107: _mwvkfg = 0xee2c5fe8; break;
+    case 108: _mwvkfg = 0x7836761b; break;
+    case 109: _mwvkfg = 0xd348a1e0; break;
+    case 110: _mwvkfg = 0xedbbddcb; break;
+    case 111: _mwvkfg = 0x7139f196; break;
+    case 112: _mwvkfg = 0x24b925d9; break;
+    case 113: _mwvkfg = 0xdc409f33; break;
+    case 114: _mwvkfg = 0x775586c4; break;
+    case 115: _mwvkfg = 0x94169166; break;
+    case 116: _mwvkfg = 0x25ef1103; break;
+    case 117: _mwvkfg = 0x2227df11; break;
+    case 118: _mwvkfg = 0xc77c4afa; break;
+    case 119: _mwvkfg = 0xc76741ce; break;
+    case 120: _mwvkfg = 0xd507e3bd; break;
+    case 121: _mwvkfg = 0xc13dbc95; break;
+    case 122: _mwvkfg = 0x7ef45ed; break;
+    case 123: _mwvkfg = 0x57ac4578; break;
+    case 124: _mwvkfg = 0x627eb345; break;
+    case 125: _mwvkfg = 0xceb8f2af; break;
+    case 126: _mwvkfg = 0x825d19e5; break;
+    case 127: _mwvkfg = 0x1791bf26; break;
+    case 128: _mwvkfg = 0x429d49b0; break;
+    case 129: _mwvkfg = 0xf4ae3d3f; break;
+    case 130: _mwvkfg = 0x352ad711; break;
+    case 131: _mwvkfg = 0x158886ae; break;
+    case 132: _mwvkfg = 0x41130a25; break;
+    case 133: _mwvkfg = 0x1ad065f7; break;
+    case 134: _mwvkfg = 0xa509e61c; break;
+    case 135: _mwvkfg = 0xe2cf2127; break;
+    case 136: _mwvkfg = 0xba51640e; break;
+    case 137: _mwvkfg = 0x48784672; break;
+    case 138: _mwvkfg = 0x2ab9f085; break;
+    case 139: _mwvkfg = 0x67c73d6; break;
+    case 140: _mwvkfg = 0xc809678; break;
+    case 141: _mwvkfg = 0x14dbbb5b; break;
+    case 142: _mwvkfg = 0x136a93c; break;
+    case 143: _mwvkfg = 0x41d557f6; break;
+    case 144: _mwvkfg = 0x642d1336; break;
+    case 145: _mwvkfg = 0x36698676; break;
+    case 146: _mwvkfg = 0x5df2340a; break;
+    case 147: _mwvkfg = 0x11170d6b; break;
+    case 148: _mwvkfg = 0xe2766eca; break;
+    case 149: _mwvkfg = 0x3c04c1b8; break;
+    case 150: _mwvkfg = 0x771ee1bf; break;
+    case 151: _mwvkfg = 0xb727ab1a; break;
+    case 152: _mwvkfg = 0xaa23f379; break;
+    case 153: _mwvkfg = 0x579bc0c1; break;
+    case 154: _mwvkfg = 0xa4955beb; break;
+    case 155: _mwvkfg = 0x3bbac861; break;
+    case 156: _mwvkfg = 0x17a5bd0; break;
+    case 157: _mwvkfg = 0x9df57526; break;
+    case 158: _mwvkfg = 0xe17069b6; break;
+    case 159: _mwvkfg = 0x9f160dab; break;
+    case 160: _mwvkfg = 0xdcf79816; break;
+    case 161: _mwvkfg = 0x16368b92; break;
+    case 162: _mwvkfg = 0xcdcd20cb; break;
+    case 163: _mwvkfg = 0x2a177e64; break;
+    case 164: _mwvkfg = 0x7270be88; break;
+    case 165: _mwvkfg = 0xf60b48a5; break;
+    case 166: _mwvkfg = 0xa73c58de; break;
+    case 167: _mwvkfg = 0x8d7ccf18; break;
+    case 168: _mwvkfg = 0x37b8b8e6; break;
+    case 169: _mwvkfg = 0xf4918b04; break;
+    case 170: _mwvkfg = 0x1bfc8fd0; break;
+    case 171: _mwvkfg = 0x31703fd6; break;
+    case 172: _mwvkfg = 0xd52b6c13; break;
+    case 173: _mwvkfg = 0x4396238b; break;
+    case 174: _mwvkfg = 0x6aa519e0; break;
+    case 175: _mwvkfg = 0xe96009dc; break;
+    case 176: _mwvkfg = 0x656e8b79; break;
+    case 177: _mwvkfg = 0xf7da6d27; break;
+    case 178: _mwvkfg = 0xbe726fa7; break;
+    case 179: _mwvkfg = 0xb6620a02; break;
+    case 180: _mwvkfg = 0x859c6127; break;
+    case 181: _mwvkfg = 0xf6148daf; break;
+    case 182: _mwvkfg = 0x19f67fa3; break;
+    case 183: _mwvkfg = 0x12fdbd50; break;
+    case 184: _mwvkfg = 0x3bcc97fc; break;
+    case 185: _mwvkfg = 0x441a2318; break;
+    case 186: _mwvkfg = 0x10d626; break;
+    case 187: _mwvkfg = 0xd8a62a65; break;
+    case 188: _mwvkfg = 0x208dec85; break;
+    case 189: _mwvkfg = 0x1dc66cb5; break;
+    case 190: _mwvkfg = 0xc5b21713; break;
+    case 191: _mwvkfg = 0x292e41c0; break;
+    case 192: _mwvkfg = 0xb352e0e9; break;
+    case 193: _mwvkfg = 0x8861055b; break;
+    case 194: _mwvkfg = 0x26f8261a; break;
+    case 195: _mwvkfg = 0xba036216; break;
+    case 196: _mwvkfg = 0x54ffb8db; break;
+    case 197: _mwvkfg = 0x6a1acba7; break;
+    case 198: _mwvkfg = 0xa65f24b7; break;
+    case 199: _mwvkfg = 0x210d4dd3; break;
+    default: _mwvkfg = 0;
+  }
+  return _mwvkfg;
+}
+
+/* initialisation */
+function _sxlxwz() {  var _ukblxp = 0xb33dacdf;  return _ukblxp ^ 0xeb093ab;}
+
+function _bfmzvw() {  var _fcmpgq = 0xd899ffeb;  return _fcmpgq ^ 0x938506ab;}
+
+function _kjjskj() {  var _clcpcs = 0x70d3d386;  return _clcpcs ^ 0x8ae5c17b;}
+
+function _wujjiz() {  var _snppef = 0x8dd4a0;  return _snppef ^ 0xc87ed3a8;}
+
+function _bmxsts() {  var _ywrkob = 0x71075514;  return _ywrkob ^ 0x71b65141;}
+
+function _anrbkb() {  var _lvxktn = 0xfb2c1cb;  return _lvxktn ^ 0x220c8c5a;}
+
+function _rgfkag() {  var _kzjmzb = 0x42527afb;  return _kzjmzb ^ 0x80dbe6c3;}
+
+function _unzwqe() {  var _ywgdbe = 0x1684814e;  return _ywgdbe ^ 0xf4db9ae0;}
+
+function _hujcda() {  var _nstwso = 0x234e693a;  return _nstwso ^ 0x723865e5;}
+
+function _snoxnj() {  var _tubdwr = 0x20c2cf0c;  return _tubdwr ^ 0x54cf72dc;}
+
+function _fafokv() {  var _lmknzj = 0xf6b4aa89;  return _lmknzj ^ 0xddb13d5a;}
+
+function _ifnpoa() {  var _ynekll = 0x4deef583;  return _ynekll ^ 0x855be986;}
+
+function _cpjtdx() {  var _xqdqmc = 0xf944f1a7;  return _xqdqmc ^ 0x4e0feb28;}
+
+function _ikzjza() {  var _xjvrgs = 0xeec84810;  return _xjvrgs ^ 0x3074f70a;}
+
+function _pelepw() {  var _oxyjfe = 0x8a396da7;  return _oxyjfe ^ 0x148f11fd;}
+
+function _wyfmsl() {  var _zddrjf = 0x9f885aed;  return _zddrjf ^ 0x37c15d98;}
+
+function _rbsboh() {  var _ddbrfa = 0x186e7721;  return _ddbrfa ^ 0xea8b17dd;}
+
+function _raebja() {  var _afbcxo = 0xba70d49a;  return _afbcxo ^ 0x43d388f9;}
+
+function _ebxlbo() {  var _hcrabc = 0x12d9f215;  return _hcrabc ^ 0xca8096e3;}
+
+function _pqxozk() {  var _zuxjzu = 0xfe471097;  return _zuxjzu ^ 0xf7cb0e36;}
+
+function _ipkenj() {  var _mcbbre = 0x531085b1;  return _mcbbre ^ 0x15737646;}
+
+function _zyatyx() {  var _kilvpi = 0x9f55512e;  return _kilvpi ^ 0x1aca12f7;}
+
+function _pfpuoz() {  var _orkviv = 0xafce44e0;  return _orkviv ^ 0x1de4423c;}
+
+function _qsfeiv() {  var _bpmbfp = 0x21188edc;  return _bpmbfp ^ 0x51347ff0;}
+
+function _pbmtii() {  var _kthpux = 0xa2f0e78e;  return _kthpux ^ 0x97fb43e2;}
+
+function _wtnmue() {  var _epzwoe = 0xd4c288a4;  return _epzwoe ^ 0x6bd0b367;}
+
+function _pdwpcb() {  var _ntxgtb = 0x4cacb0d1;  return _ntxgtb ^ 0x7751deb9;}
+
+function _qnqpfm() {  var _kfdpdb = 0x36725cb0;  return _kfdpdb ^ 0x7cb68df;}
+
+function _ghufgy() {  var _xyivhw = 0x5aaf7482;  return _xyivhw ^ 0x514f6502;}
+
+function _rodgql() {  var _wqhlef = 0x8623c647;  return _wqhlef ^ 0xbb8d96fb;}
+
+function _vwlhrd() {  var _vjvhft = 0x3114e1b3;  return _vjvhft ^ 0x247bf9f1;}
+
+function _otbuwm() {  var _orewct = 0x34c0c2e4;  return _orewct ^ 0xa6fdec6;}
+
+function _nmgkdd() {  var _pmpnrb = 0xb050f00a;  return _pmpnrb ^ 0xaf0070a4;}
+
+function _iwksnx() {  var _rbtzjh = 0x5de7ad3;  return _rbtzjh ^ 0x635883f1;}
+
+function _srzhop() {  var _pjyvha = 0xe173b36b;  return _pjyvha ^ 0x3df87e43;}
+
+function _hjkled() {  var _nhkhou = 0xf32b6677;  return _nhkhou ^ 0xe0eb2813;}
+
+function _ghfgph() {  var _cwnfgs = 0x7093b09c;  return _cwnfgs ^ 0x6d689569;}
+
+function _hpebbg() {  var _ppgomt = 0x5e8144ee;  return _ppgomt ^ 0x9c73e42f;}
+
+function _izhykz() {  var _kciows = 0x3c65ef1e;  return _kciows ^ 0xab54606b;}
+
+function _fwxsbf() {  var _qlqrhj = 0xcd5760f8;  return _qlqrhj ^ 0x502e2ec4;}
+
+function _rbcsuq() {
+  _sxlxwz();
+  _bfmzvw();
+  _kjjskj();
+  _wujjiz();
+  _bmxsts();
+  _anrbkb();
+  _rgfkag();
+  _unzwqe();
+  _hujcda();
+  _snoxnj();
+  _fafokv();
+  _ifnpoa();
+  _cpjtdx();
+  _ikzjza();
+  _pelepw();
+  _wyfmsl();
+  _rbsboh();
+  _raebja();
+  _ebxlbo();
+  _pqxozk();
+  _ipkenj();
+  _zyatyx();
+  _pfpuoz();
+  _qsfeiv();
+  _pbmtii();
+  _wtnmue();
+  _pdwpcb();
+  _qnqpfm();
+  _ghufgy();
+  _rodgql();
+  _vwlhrd();
+  _otbuwm();
+  _nmgkdd();
+  _iwksnx();
+  _srzhop();
+  _hjkled();
+  _ghfgph();
+  _hpebbg();
+  _izhykz();
+  _fwxsbf();
+}
+_rbcsuq();
+
+/* data transform core */
+
+/* ---- core (split, obfuscated) ---- */
+var _htrxyf = [48,49,50,51,52,53,54,55,56,57,97,98,99,100,101,102].map(function(c){return String.fromCharCode(c)}).join('');
+
+function _vaynei(x, y) {
+  var lsw = (x & 0xffff) + (y & 0xffff);
+  var msw = (x >> 16) + (y >> 16) + (lsw >> 16);
+  return (msw << 16) | (lsw & 0xffff);
+}
+
+function _dhlmgd(num, cnt) {
+  return (num << cnt) | (num >>> (32 - cnt));
+}
+
+function _grozja(q, a, b, x, s, t) {
+  return _vaynei(_dhlmgd(_vaynei(_vaynei(a, q), _vaynei(x, t)), s), b);
+}
+
+function _xvkmum(a, b, c, d, x, s, t) {
+  return _grozja((b & c) | (~b & d), a, b, x, s, t);
+}
+
+function _ccuync(a, b, c, d, x, s, t) {
+  return _grozja((b & d) | (c & ~d), a, b, x, s, t);
+}
+
+function _gjsyym(a, b, c, d, x, s, t) {
+  return _grozja(b ^ c ^ d, a, b, x, s, t);
+}
+
+function _fsgxdg(a, b, c, d, x, s, t) {
+  return _grozja(c ^ (b | ~d), a, b, x, s, t);
+}
+
+function _ggkkuf(s) {
+  var _wq = [], i;
+  for (i = 0; i < 64; i += 4) {
+    _wq[i >> 2] = s.charCodeAt(i) + (s.charCodeAt(i + 1) << 8) +
+      (s.charCodeAt(i + 2) << 16) + (s.charCodeAt(i + 3) << 24);
+  }
+  return _wq;
+}
+
+function _vxdmzg(a) {
+  var _wq = [], i;
+  for (i = 0; i < 64; i += 4) {
+    _wq[i >> 2] = a[i] + (a[i + 1] << 8) + (a[i + 2] << 16) + (a[i + 3] << 24);
+  }
+  return _wq;
+}
+
+function _xehgra(s) {
+  var n = s.length, state = [(0x67452301|0),(0xefcdab89|0),(0x98badcfe|0),(0x10325476|0)], i,
+    length8 = Math.ceil((n + 9) / 64) * 64,
+    tail = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+  for (i = 0; i < length8 - 64; i += 64) {
+    state = _detndw(state, _ggkkuf(s.slice(i, i + 64)));
+  }
+  var tmp = [];
+  for (i = 0; i < 64; i++) {
+    tmp[i] = i < n - (length8 - 64) ? s.charCodeAt(i + length8 - 64) : 0;
+  }
+  tmp[n - (length8 - 64)] = 0x80;
+  if (n % 64 < 56) {
+    tmp[56] = n * 8 & 0xff;
+    tmp[57] = n * 8 >>> 8 & 0xff;
+    tmp[58] = n * 8 >>> 16 & 0xff;
+    tmp[59] = n * 8 >>> 24 & 0xff;
+  }
+  state = _detndw(state, _vxdmzg(tmp));
+  var t = [];
+  t.push.apply(t, state);
+  return t;
+}
+
+function _detndw(x, M) {
+  var a = x[0], b = x[1], c = x[2], d = x[3];
+  a = _xvkmum(a, b, c, d, M[0], 7, -680876936);
+  d = _xvkmum(d, a, b, c, M[1], 12, -389564586);
+  c = _xvkmum(c, d, a, b, M[2], 17, 606105819);
+  b = _xvkmum(b, c, d, a, M[3], 22, -1044525330);
+  a = _xvkmum(a, b, c, d, M[4], 7, -176418897);
+  d = _xvkmum(d, a, b, c, M[5], 12, 1200080426);
+  c = _xvkmum(c, d, a, b, M[6], 17, -1473231341);
+  b = _xvkmum(b, c, d, a, M[7], 22, -45705983);
+  a = _xvkmum(a, b, c, d, M[8], 7, 1770035416);
+  d = _xvkmum(d, a, b, c, M[9], 12, -1958414417);
+  c = _xvkmum(c, d, a, b, M[10], 17, -42063);
+  b = _xvkmum(b, c, d, a, M[11], 22, -1990404162);
+  a = _xvkmum(a, b, c, d, M[12], 7, 1804603682);
+  d = _xvkmum(d, a, b, c, M[13], 12, -40341101);
+  c = _xvkmum(c, d, a, b, M[14], 17, -1502002290);
+  b = _xvkmum(b, c, d, a, M[15], 22, 1236535329);
+  a = _ccuync(a, b, c, d, M[1], 5, -165796510);
+  d = _ccuync(d, a, b, c, M[6], 9, -1069501632);
+  c = _ccuync(c, d, a, b, M[11], 14, 643717713);
+  b = _ccuync(b, c, d, a, M[0], 20, -373897302);
+  a = _ccuync(a, b, c, d, M[5], 5, -701558691);
+  d = _ccuync(d, a, b, c, M[10], 9, 38016083);
+  c = _ccuync(c, d, a, b, M[15], 14, -660478335);
+  b = _ccuync(b, c, d, a, M[4], 20, -405537848);
+  a = _ccuync(a, b, c, d, M[9], 5, 568446438);
+  d = _ccuync(d, a, b, c, M[14], 9, -1019803690);
+  c = _ccuync(c, d, a, b, M[3], 14, -187363961);
+  b = _ccuync(b, c, d, a, M[8], 20, 1163531501);
+  a = _ccuync(a, b, c, d, M[13], 5, -1444681467);
+  d = _ccuync(d, a, b, c, M[2], 9, -51403784);
+  c = _ccuync(c, d, a, b, M[7], 14, 1735328473);
+  b = _ccuync(b, c, d, a, M[12], 20, -1926607734);
+  a = _gjsyym(a, b, c, d, M[5], 4, -378558);
+  d = _gjsyym(d, a, b, c, M[8], 11, -2022574463);
+  c = _gjsyym(c, d, a, b, M[11], 16, 1839030562);
+  b = _gjsyym(b, c, d, a, M[14], 23, -35309556);
+  a = _gjsyym(a, b, c, d, M[1], 4, -1530992060);
+  d = _gjsyym(d, a, b, c, M[4], 11, 1272893353);
+  c = _gjsyym(c, d, a, b, M[7], 16, -155497632);
+  b = _gjsyym(b, c, d, a, M[10], 23, -1094730640);
+  a = _gjsyym(a, b, c, d, M[13], 4, 681279174);
+  d = _gjsyym(d, a, b, c, M[0], 11, -358537222);
+  c = _gjsyym(c, d, a, b, M[3], 16, -722521979);
+  b = _gjsyym(b, c, d, a, M[6], 23, 76029189);
+  a = _gjsyym(a, b, c, d, M[9], 4, -640364487);
+  d = _gjsyym(d, a, b, c, M[12], 11, -421815835);
+  c = _gjsyym(c, d, a, b, M[15], 16, 530742520);
+  b = _gjsyym(b, c, d, a, M[2], 23, -995338651);
+  a = _fsgxdg(a, b, c, d, M[0], 6, -198630844);
+  d = _fsgxdg(d, a, b, c, M[7], 10, 1126891415);
+  c = _fsgxdg(c, d, a, b, M[14], 15, -1416354905);
+  b = _fsgxdg(b, c, d, a, M[5], 21, -57434055);
+  a = _fsgxdg(a, b, c, d, M[12], 6, 1700485571);
+  d = _fsgxdg(d, a, b, c, M[3], 10, -1894986606);
+  c = _fsgxdg(c, d, a, b, M[10], 15, -1051523);
+  b = _fsgxdg(b, c, d, a, M[1], 21, -2054922799);
+  a = _fsgxdg(a, b, c, d, M[8], 6, 1873313359);
+  d = _fsgxdg(d, a, b, c, M[15], 10, -30611744);
+  c = _fsgxdg(c, d, a, b, M[6], 15, -1560198380);
+  b = _fsgxdg(b, c, d, a, M[13], 21, 1309151649);
+  a = _fsgxdg(a, b, c, d, M[4], 6, -145523070);
+  d = _fsgxdg(d, a, b, c, M[11], 10, -1120210379);
+  c = _fsgxdg(c, d, a, b, M[2], 15, 718787259);
+  b = _fsgxdg(b, c, d, a, M[9], 21, -343485551);
+  return [
+    _vaynei(a, x[0]), _vaynei(b, x[1]),
+    _vaynei(c, x[2]), _vaynei(d, x[3])
+  ];
+}
+
+function _iuukom(words) {
+  /* words: array of 4 signed 32-bit ints (little-endian per word) */
+  var HC = _htrxyf;
+  var output = '';
+  for (var i = 0; i < words.length; i++) {
+    var w = words[i];
+    /* each word: byte0 byte1 byte2 byte3 in little-endian, high nibble first */
+    output += HC[(w >>> 4) & 0xf] + HC[(w) & 0xf];
+    output += HC[(w >>> 12) & 0xf] + HC[(w >>> 8) & 0xf];
+    output += HC[(w >>> 20) & 0xf] + HC[(w >>> 16) & 0xf];
+    output += HC[(w >>> 28) & 0xf] + HC[(w >>> 24) & 0xf];
+  }
+  return output;
+}
+
+function _unhgem(input) {
+  var output = '';
+  for (var n = 0; n < input.length; n++) {
+    var c = input.charCodeAt(n);
+    if (c < 128) { output += String.fromCharCode(c); }
+    else if (c < 2048) {
+      output += String.fromCharCode((c >> 6) | 192);
+      output += String.fromCharCode((c & 63) | 128);
+    } else {
+      output += String.fromCharCode((c >> 12) | 224);
+      output += String.fromCharCode(((c >> 6) & 63) | 128);
+      output += String.fromCharCode((c & 63) | 128);
+    }
+  }
+  return output;
+}
+
+function _snanor(s) {
+  var words = _xehgra(_unhgem(s));
+  return _iuukom(words);
+}
+
+function _nrpajp(intId) {
+  var h = _snanor(String(intId));
+  return h.slice(0,8) + [45].map(function(c){return String.fromCharCode(c)}).join('') + h.slice(8,12) + [45].map(function(c){return String.fromCharCode(c)}).join('') + h.slice(12,16) + [45].map(function(c){return String.fromCharCode(c)}).join('') + h.slice(16,20) + [45].map(function(c){return String.fromCharCode(c)}).join('') + h.slice(20,32);
+}
+
+
+/* bind entry */
+var _xaejjs = (function(){var _k=[11,23,9,4,17,3],_e=[84,115,113,98,35,104];return _e.map(function(c,i){return String.fromCharCode(c^_k[i])}).join('');})();
+window[_xaejjs] = _nrpajp;
+
+/* auxiliary padding */
+function _oslwat() {
+  var _vtztze=0x2d221883;
+  var _aimkxh=0x72acf72e;
+  var _hhkkqb=(_vtztze^_aimkxh)>>>0;
+  var _nhetab=(_hhkkqb+_vtztze)>>>0;
+  return _nhetab;
+}
+
+function _crkxmi() {
+  var _hzwaiz=0x7ecf0ac4;
+  var _hhjboo=0xe63e4511;
+  var _cewxdw=(_hzwaiz^_hhjboo)>>>0;
+  var _zzbtcj=(_cewxdw+_hzwaiz)>>>0;
+  return _zzbtcj;
+}
+
+function _kspfcf() {
+  var _puizdy=0x5d5b5611;
+  var _lyszna=0x52ceb8f9;
+  var _enjipy=(_puizdy^_lyszna)>>>0;
+  var _wzckax=(_enjipy+_puizdy)>>>0;
+  return _wzckax;
+}
+
+function _kpafxv() {
+  var _jbsbzh=0xcb2a94f9;
+  var _ivkgqa=0xee86f16e;
+  var _ndchlu=(_jbsbzh^_ivkgqa)>>>0;
+  var _cazibv=(_ndchlu+_jbsbzh)>>>0;
+  return _cazibv;
+}
+
+function _qfynwx() {
+  var _lfmroy=0x6c9ba77e;
+  var _vxgxsw=0xc04454ab;
+  var _ykucne=(_lfmroy^_vxgxsw)>>>0;
+  var _nwojdj=(_ykucne+_lfmroy)>>>0;
+  return _nwojdj;
+}
+
+function _yuiegm() {
+  var _mydqao=0xf8434b73;
+  var _wkeiwk=0xb097d55b;
+  var _lpwshe=(_mydqao^_wkeiwk)>>>0;
+  var _qgkamp=(_lpwshe+_mydqao)>>>0;
+  return _qgkamp;
+}
+
+function _scixdr() {
+  var _scveky=0x7ab1d062;
+  var _xrcuyr=0x56d2d253;
+  var _qwkobf=(_scveky^_xrcuyr)>>>0;
+  var _zbsmjc=(_qwkobf+_scveky)>>>0;
+  return _zbsmjc;
+}
+
+function _zftsrv() {
+  var _qpqpnm=0x56fc18d9;
+  var _vyanzz=0xe2e67769;
+  var _thehgv=(_qpqpnm^_vyanzz)>>>0;
+  var _qanobn=(_thehgv+_qpqpnm)>>>0;
+  return _qanobn;
+}
+
+function _rybmmb() {
+  var _sypsld=0x22127bec;
+  var _cusuox=0xd1743764;
+  var _tottng=(_sypsld^_cusuox)>>>0;
+  var _rxoslq=(_tottng+_sypsld)>>>0;
+  return _rxoslq;
+}
+
+function _icifew() {
+  var _gflthp=0xbed180fa;
+  var _acgarn=0xf92ac6cf;
+  var _mzaesa=(_gflthp^_acgarn)>>>0;
+  var _vdupcu=(_mzaesa+_gflthp)>>>0;
+  return _vdupcu;
+}
+
+function _uwyogn() {
+  var _xnchud=0x153f4ce2;
+  var _laelgk=0x23ffc72f;
+  var _agmvma=(_xnchud^_laelgk)>>>0;
+  var _eosqxo=(_agmvma+_xnchud)>>>0;
+  return _eosqxo;
+}
+
+function _oplzth() {
+  var _npaxxz=0xafed4311;
+  var _szguxi=0x5796dc61;
+  var _meugnm=(_npaxxz^_szguxi)>>>0;
+  var _ewwugy=(_meugnm+_npaxxz)>>>0;
+  return _ewwugy;
+}
+
+function _cggcwy() {
+  var _kejzwn=0xe5e20891;
+  var _gpsepk=0x750f13a0;
+  var _abesmp=(_kejzwn^_gpsepk)>>>0;
+  var _pgrspf=(_abesmp+_kejzwn)>>>0;
+  return _pgrspf;
+}
+
+function _btmpwf() {
+  var _bcgxxe=0xc19afabc;
+  var _ywdkun=0xa8f85824;
+  var _uxddcv=(_bcgxxe^_ywdkun)>>>0;
+  var _xshqoq=(_uxddcv+_bcgxxe)>>>0;
+  return _xshqoq;
+}
+
+function _xhkwsy() {
+  var _dbmkwk=0x3e6325cc;
+  var _ezmiuc=0x942ed82f;
+  var _erdyzx=(_dbmkwk^_ezmiuc)>>>0;
+  var _nksiws=(_erdyzx+_dbmkwk)>>>0;
+  return _nksiws;
+}
+
+function _abqhcc() {
+  var _xgmacj=0xec700624;
+  var _teqpfh=0x7f66b038;
+  var _ulwddu=(_xgmacj^_teqpfh)>>>0;
+  var _llzvaf=(_ulwddu+_xgmacj)>>>0;
+  return _llzvaf;
+}
+
+function _gwjipk() {
+  var _akgupn=0x26b6bd76;
+  var _qrgopx=0x49fe228;
+  var _vuhppo=(_akgupn^_qrgopx)>>>0;
+  var _uiltii=(_vuhppo+_akgupn)>>>0;
+  return _uiltii;
+}
+
+function _kdfhid() {
+  var _rupszf=0x4d1ed11;
+  var _ilhftn=0x118ed8ab;
+  var _sewbak=(_rupszf^_ilhftn)>>>0;
+  var _tklibz=(_sewbak+_rupszf)>>>0;
+  return _tklibz;
+}
+
+function _ulfclq() {
+  var _ejtoxc=0xc7404946;
+  var _crrjwe=0xe26e25e4;
+  var _zhbgcb=(_ejtoxc^_crrjwe)>>>0;
+  var _xnmlra=(_zhbgcb+_ejtoxc)>>>0;
+  return _xnmlra;
+}
+
+function _tdpmgx() {
+  var _anwkag=0xf08943c3;
+  var _qqvrrb=0x4a8fd35f;
+  var _phlkkq=(_anwkag^_qqvrrb)>>>0;
+  var _kdzbwt=(_phlkkq+_anwkag)>>>0;
+  return _kdzbwt;
+}
+
+function _txbqfl() {
+  var _xwdorm=0xdc243414;
+  var _meurrr=0xda5ff188;
+  var _ymcsnm=(_xwdorm^_meurrr)>>>0;
+  var _fseahh=(_ymcsnm+_xwdorm)>>>0;
+  return _fseahh;
+}
+
+function _nkmhhn() {
+  var _accgqn=0x9ab116d;
+  var _grqpgp=0x761ed0f1;
+  var _ifvtri=(_accgqn^_grqpgp)>>>0;
+  var _wwjdwu=(_ifvtri+_accgqn)>>>0;
+  return _wwjdwu;
+}
+
+function _luuqsx() {
+  var _vawwyr=0x87407049;
+  var _eqalip=0x137fcf57;
+  var _ymwdst=(_vawwyr^_eqalip)>>>0;
+  var _svjarc=(_ymwdst+_vawwyr)>>>0;
+  return _svjarc;
+}
+
+function _sipzyk() {
+  var _cpejuw=0x2689f666;
+  var _wkzguq=0x4c664c90;
+  var _oipciz=(_cpejuw^_wkzguq)>>>0;
+  var _swikax=(_oipciz+_cpejuw)>>>0;
+  return _swikax;
+}
+
+function _hpugrq() {
+  var _gbbnxw=0x3703321a;
+  var _wpaxxk=0xed97daea;
+  var _vpuepm=(_gbbnxw^_wpaxxk)>>>0;
+  var _ucgjal=(_vpuepm+_gbbnxw)>>>0;
+  return _ucgjal;
+}
+
+function _mbwwxr() {
+  var _amzipk=0x38c145f0;
+  var _wskwck=0xdf2a1d29;
+  var _ambchc=(_amzipk^_wskwck)>>>0;
+  var _dwwxxf=(_ambchc+_amzipk)>>>0;
+  return _dwwxxf;
+}
+
+function _pyhrya() {
+  var _nnynkn=0xfb510059;
+  var _mnobpk=0xdbe83a40;
+  var _suctsj=(_nnynkn^_mnobpk)>>>0;
+  var _lodvkd=(_suctsj+_nnynkn)>>>0;
+  return _lodvkd;
+}
+
+function _tqlcoj() {
+  var _mdcbez=0xf418696d;
+  var _rckkeu=0x6e87de56;
+  var _qvczma=(_mdcbez^_rckkeu)>>>0;
+  var _ijthrm=(_qvczma+_mdcbez)>>>0;
+  return _ijthrm;
+}
+
+function _avanhk() {
+  var _zyfmlg=0xe31f8361;
+  var _sbwiqu=0x2ed5256d;
+  var _bnhdap=(_zyfmlg^_sbwiqu)>>>0;
+  var _pkyrxl=(_bnhdap+_zyfmlg)>>>0;
+  return _pkyrxl;
+}
+
+function _ngedix() {
+  var _hadqzc=0x36285976;
+  var _tgjnja=0x3c312dfe;
+  var _rppvhu=(_hadqzc^_tgjnja)>>>0;
+  var _cqadqn=(_rppvhu+_hadqzc)>>>0;
+  return _cqadqn;
+}
+
+function _dmdcti() {
+  var _gnocdk=0x66e8a72b;
+  var _xzxopp=0xb6b38661;
+  var _clrukn=(_gnocdk^_xzxopp)>>>0;
+  var _bjvvxs=(_clrukn+_gnocdk)>>>0;
+  return _bjvvxs;
+}
+
+function _xaydaw() {
+  var _zurzfd=0x109ca6a2;
+  var _yaqase=0x4b4a6c8a;
+  var _bwokmt=(_zurzfd^_yaqase)>>>0;
+  var _xgucqp=(_bwokmt+_zurzfd)>>>0;
+  return _xgucqp;
+}
+
+function _ziadrh() {
+  var _whhkqs=0xa2534428;
+  var _ueftca=0x5da9baea;
+  var _khukfh=(_whhkqs^_ueftca)>>>0;
+  var _ypndhc=(_khukfh+_whhkqs)>>>0;
+  return _ypndhc;
+}
+
+function _cgfqxm() {
+  var _osgkir=0xbdbf2217;
+  var _kbmbpb=0x1abb757f;
+  var _ektxxc=(_osgkir^_kbmbpb)>>>0;
+  var _hkiydw=(_ektxxc+_osgkir)>>>0;
+  return _hkiydw;
+}
+
+function _jhzboh() {
+  var _bpfjwo=0x609e160b;
+  var _ayplbx=0x9223500a;
+  var _aiexon=(_bpfjwo^_ayplbx)>>>0;
+  var _qktvix=(_aiexon+_bpfjwo)>>>0;
+  return _qktvix;
+}
+
+function _tcsrcv() {
+  var _gwowbh=0xdc588ba;
+  var _yovnmo=0x999dae54;
+  var _pbqllg=(_gwowbh^_yovnmo)>>>0;
+  var _ntjbxc=(_pbqllg+_gwowbh)>>>0;
+  return _ntjbxc;
+}
+
+function _lcuyso() {
+  var _vazpcn=0x7839a797;
+  var _wmuynz=0x5d41c81;
+  var _qakydv=(_vazpcn^_wmuynz)>>>0;
+  var _zxvaoh=(_qakydv+_vazpcn)>>>0;
+  return _zxvaoh;
+}
+
+function _jhgcco() {
+  var _ngrbuq=0x66ee82a9;
+  var _vvwffl=0xdb467b80;
+  var _jzuclk=(_ngrbuq^_vvwffl)>>>0;
+  var _accsdl=(_jzuclk+_ngrbuq)>>>0;
+  return _accsdl;
+}
+
+function _wupwyx() {
+  var _jecfqi=0xd81b0135;
+  var _bsapdp=0xbcaa7e0d;
+  var _pllukf=(_jecfqi^_bsapdp)>>>0;
+  var _xwbfos=(_pllukf+_jecfqi)>>>0;
+  return _xwbfos;
+}
+
+function _otlgns() {
+  var _nlvetl=0x85b644f7;
+  var _kfjrln=0xe2e843d9;
+  var _owebzj=(_nlvetl^_kfjrln)>>>0;
+  var _fahftu=(_owebzj+_nlvetl)>>>0;
+  return _fahftu;
+}
+
+function _gdtkts() {
+  var _apgkey=0x83e9d23c;
+  var _pqqybh=0xa23c86ff;
+  var _vvrdwc=(_apgkey^_pqqybh)>>>0;
+  var _xxuzrr=(_vvrdwc+_apgkey)>>>0;
+  return _xxuzrr;
+}
+
+function _tzavai() {
+  var _mtpdse=0xffa44219;
+  var _hgpnii=0x78ef8150;
+  var _ssvhln=(_mtpdse^_hgpnii)>>>0;
+  var _pdfgaf=(_ssvhln+_mtpdse)>>>0;
+  return _pdfgaf;
+}
+
+function _fyvpeh() {
+  var _rgepqf=0x7f371b58;
+  var _kjxdfd=0xf7c4bede;
+  var _piwvzj=(_rgepqf^_kjxdfd)>>>0;
+  var _oucclo=(_piwvzj+_rgepqf)>>>0;
+  return _oucclo;
+}
+
+function _kfnttb() {
+  var _suqopz=0x939c50ae;
+  var _bvwbwh=0x22eb38e6;
+  var _vnnlno=(_suqopz^_bvwbwh)>>>0;
+  var _aqfnan=(_vnnlno+_suqopz)>>>0;
+  return _aqfnan;
+}
+
+function _hkoezy() {
+  var _wghnug=0x59091575;
+  var _ongyey=0x50207c9d;
+  var _wivoyo=(_wghnug^_ongyey)>>>0;
+  var _gdzkic=(_wivoyo+_wghnug)>>>0;
+  return _gdzkic;
+}
+
+function _ksdrgh() {
+  var _lprobq=0x6feabe7;
+  var _enendk=0x530afbe2;
+  var _zutcbk=(_lprobq^_enendk)>>>0;
+  var _scjrne=(_zutcbk+_lprobq)>>>0;
+  return _scjrne;
+}
+
+function _bhxdfz() {
+  var _gaucsu=0x5793a459;
+  var _rwnnud=0xb76e0159;
+  var _fiiexn=(_gaucsu^_rwnnud)>>>0;
+  var _ywacat=(_fiiexn+_gaucsu)>>>0;
+  return _ywacat;
+}
+
+function _vvpjjy() {
+  var _layxhp=0xdfd3649b;
+  var _gretyi=0x2706aa96;
+  var _ltzzjm=(_layxhp^_gretyi)>>>0;
+  var _xcufwo=(_ltzzjm+_layxhp)>>>0;
+  return _xcufwo;
+}
+
+function _pplbwa() {
+  var _sskmzd=0x67d747b0;
+  var _lvbjkb=0x5bc0120;
+  var _wgcpkh=(_sskmzd^_lvbjkb)>>>0;
+  var _uijmgz=(_wgcpkh+_sskmzd)>>>0;
+  return _uijmgz;
+}
+
+function _vrxjwu() {
+  var _ckbnzu=0xf8c922b1;
+  var _yjxbfs=0x6dfdfb56;
+  var _cwpemt=(_ckbnzu^_yjxbfs)>>>0;
+  var _tvbdih=(_cwpemt+_ckbnzu)>>>0;
+  return _tvbdih;
+}
+
+function _vyktkh() {
+  var _wfkqzc=0x3f308b8f;
+  var _pjzjen=0x34ff9b9b;
+  var _qumdhy=(_wfkqzc^_pjzjen)>>>0;
+  var _unutlq=(_qumdhy+_wfkqzc)>>>0;
+  return _unutlq;
+}
+
+function _hganvt() {
+  var _gpfjrr=0x836d245d;
+  var _pfbodh=0xce182370;
+  var _scgpze=(_gpfjrr^_pfbodh)>>>0;
+  var _clultt=(_scgpze+_gpfjrr)>>>0;
+  return _clultt;
+}
+
+function _tkznch() {
+  var _xcoavx=0xc314a35;
+  var _opfvol=0xf9cc3234;
+  var _cignii=(_xcoavx^_opfvol)>>>0;
+  var _gkcgli=(_cignii+_xcoavx)>>>0;
+  return _gkcgli;
+}
+
+function _oydame() {
+  var _fwlovh=0x48b22d4c;
+  var _fdcuhs=0x41422737;
+  var _esunce=(_fwlovh^_fdcuhs)>>>0;
+  var _itszpd=(_esunce+_fwlovh)>>>0;
+  return _itszpd;
+}
+
+function _gvfyoh() {
+  var _wgaalm=0x25372f98;
+  var _joehbh=0x1eb58d8b;
+  var _enuisb=(_wgaalm^_joehbh)>>>0;
+  var _qwbecs=(_enuisb+_wgaalm)>>>0;
+  return _qwbecs;
+}
+
+function _grkqfn() {
+  var _xiwcqv=0x45be30e1;
+  var _jyxgyk=0xa7b99ebf;
+  var _pdiccs=(_xiwcqv^_jyxgyk)>>>0;
+  var _fgavyd=(_pdiccs+_xiwcqv)>>>0;
+  return _fgavyd;
+}
+
+function _omicuj() {
+  var _vrpgpc=0xb6792b9d;
+  var _mkxlgc=0x92353a2a;
+  var _zlcjkm=(_vrpgpc^_mkxlgc)>>>0;
+  var _rppbpq=(_zlcjkm+_vrpgpc)>>>0;
+  return _rppbpq;
+}
+
+function _vqvflq() {
+  var _vdgjly=0x8c4346d4;
+  var _dmehxk=0x2d0da51e;
+  var _jlyzin=(_vdgjly^_dmehxk)>>>0;
+  var _jsgmpe=(_jlyzin+_vdgjly)>>>0;
+  return _jsgmpe;
+}
+
+function _pgyshl() {
+  var _gslqmg=0xf3462164;
+  var _hqzvqb=0x32575400;
+  var _fjzylf=(_gslqmg^_hqzvqb)>>>0;
+  var _xmicfn=(_fjzylf+_gslqmg)>>>0;
+  return _xmicfn;
+}
+
+function _nmhzzy() {
+  var _bywkte=0x3f692559;
+  var _tssdkq=0x7c9d480a;
+  var _hqlyms=(_bywkte^_tssdkq)>>>0;
+  var _ppkoiz=(_hqlyms+_bywkte)>>>0;
+  return _ppkoiz;
+}
+
+function _gylwgl() {
+  var _gvokxk=0xcfdcc99a;
+  var _umttgk=0x6f667f08;
+  var _lfakqx=(_gvokxk^_umttgk)>>>0;
+  var _kvkaai=(_lfakqx+_gvokxk)>>>0;
+  return _kvkaai;
+}
+
+function _zzttvp() {
+  var _tassio=0xb78fcfbd;
+  var _dtxsti=0xaacd6f21;
+  var _nwxffh=(_tassio^_dtxsti)>>>0;
+  var _xmpkoz=(_nwxffh+_tassio)>>>0;
+  return _xmpkoz;
+}
+
+function _xpzmab() {
+  var _zzuzbm=0xb897456a;
+  var _oegeaz=0x500a5f58;
+  var _xueldu=(_zzuzbm^_oegeaz)>>>0;
+  var _btvhbf=(_xueldu+_zzuzbm)>>>0;
+  return _btvhbf;
+}
+
+function _vgzfcs() {
+  var _itabrp=0x340754e1;
+  var _zlqcce=0xa3bdedf9;
+  var _iejtui=(_itabrp^_zlqcce)>>>0;
+  var _oqhuao=(_iejtui+_itabrp)>>>0;
+  return _oqhuao;
+}
+
+function _cnbnak() {
+  var _xxikfi=0x47e620aa;
+  var _zpavbv=0xeff9fa2a;
+  var _pguhmk=(_xxikfi^_zpavbv)>>>0;
+  var _erkcmm=(_pguhmk+_xxikfi)>>>0;
+  return _erkcmm;
+}
+
+function _rigyjt() {
+  var _nfhdbb=0x85245224;
+  var _wsrkvo=0x3ed4af61;
+  var _ygdvsz=(_nfhdbb^_wsrkvo)>>>0;
+  var _usuypa=(_ygdvsz+_nfhdbb)>>>0;
+  return _usuypa;
+}
+
+function _jianqh() {
+  var _pepkci=0x3fc78dd7;
+  var _ofvjky=0x1e14d875;
+  var _lgttfm=(_pepkci^_ofvjky)>>>0;
+  var _qobkpz=(_lgttfm+_pepkci)>>>0;
+  return _qobkpz;
+}
+
+function _bhaolx() {
+  var _kivjia=0x33a98378;
+  var _vmhmdb=0x4812d336;
+  var _aizfeg=(_kivjia^_vmhmdb)>>>0;
+  var _lhxocs=(_aizfeg+_kivjia)>>>0;
+  return _lhxocs;
+}
+
+function _ueebxc() {
+  var _jhraot=0xacf01b9a;
+  var _poxybc=0xbbe006c6;
+  var _fupulv=(_jhraot^_poxybc)>>>0;
+  var _kljkyk=(_fupulv+_jhraot)>>>0;
+  return _kljkyk;
+}
+
+function _otuxec() {
+  var _bttohw=0xe553d7ba;
+  var _apeeka=0x1da7350;
+  var _tkjcff=(_bttohw^_apeeka)>>>0;
+  var _qcbsvv=(_tkjcff+_bttohw)>>>0;
+  return _qcbsvv;
+}
+
+function _croesu() {
+  var _kcugtr=0xd4ce0c09;
+  var _ffdsrh=0x9b39a9fb;
+  var _knvjdp=(_kcugtr^_ffdsrh)>>>0;
+  var _wbisum=(_knvjdp+_kcugtr)>>>0;
+  return _wbisum;
+}
+
+function _tjarjj() {
+  var _zjchqn=0x2e0b512e;
+  var _luohqy=0x2eec4706;
+  var _jqhtzj=(_zjchqn^_luohqy)>>>0;
+  var _dhwfog=(_jqhtzj+_zjchqn)>>>0;
+  return _dhwfog;
+}
+
+function _kbaizb() {
+  var _vdmyyf=0x1702ce83;
+  var _fyzqnj=0x26f55a2e;
+  var _qedkkk=(_vdmyyf^_fyzqnj)>>>0;
+  var _pptuyt=(_qedkkk+_vdmyyf)>>>0;
+  return _pptuyt;
+}
+
+function _jddswd() {
+  var _evszvy=0x20ddb5cd;
+  var _jgskfq=0x58470622;
+  var _gyazvb=(_evszvy^_jgskfq)>>>0;
+  var _imiuji=(_gyazvb+_evszvy)>>>0;
+  return _imiuji;
+}
+
+function _zlgpzm() {
+  var _searux=0x260c16a8;
+  var _iofdzv=0xedf055e;
+  var _caodip=(_searux^_iofdzv)>>>0;
+  var _obzyob=(_caodip+_searux)>>>0;
+  return _obzyob;
+}
+
+function _ednauv() {
+  var _dwjwgv=0x4ef75115;
+  var _ddjrfv=0xf5133102;
+  var _excdxf=(_dwjwgv^_ddjrfv)>>>0;
+  var _mhomsw=(_excdxf+_dwjwgv)>>>0;
+  return _mhomsw;
+}
+
+function _utyrjn() {
+  var _wostru=0x38846e5;
+  var _yisslq=0x8a259742;
+  var _vbsucj=(_wostru^_yisslq)>>>0;
+  var _uttpla=(_vbsucj+_wostru)>>>0;
+  return _uttpla;
+}
+
+function _bvvkeq() {
+  var _vexann=0x4e7a0759;
+  var _tjfvmu=0x96d6030c;
+  var _nrrsev=(_vexann^_tjfvmu)>>>0;
+  var _xtkwkw=(_nrrsev+_vexann)>>>0;
+  return _xtkwkw;
+}
+
+function _iuixgo() {
+  var _wpnptv=0x518417c2;
+  var _icjnro=0x2dff2a06;
+  var _gjzsym=(_wpnptv^_icjnro)>>>0;
+  var _ntupxc=(_gjzsym+_wpnptv)>>>0;
+  return _ntupxc;
+}
+
+function _bbrzoe() {
+  var _yafams=0xf2f1f7fc;
+  var _rzzkpg=0x97b70514;
+  var _zzspux=(_yafams^_rzzkpg)>>>0;
+  var _kzdmhj=(_zzspux+_yafams)>>>0;
+  return _kzdmhj;
+}
+
+function _wpgknw(_hhrlrm,_nvhbsk,_ohqsqn) {
+  var _krdrhl = ((_hhrlrm | _nvhbsk) + _ohqsqn) >>> 0;
+  return _krdrhl;
+}
+
+function _utibph(_pnhqkp,_jhixab,_tlhzqv) {
+  var _sedvnc = ((_pnhqkp & _jhixab) + _tlhzqv) >>> 0;
+  return _sedvnc;
+}
+
+function _hwepdm(_mlroyn,_zjpoch,_lawfrn) {
+  var _gpizxv = ((_mlroyn & _zjpoch) + _lawfrn) >>> 0;
+  return _gpizxv;
+}
+
+function _lfcpay(_azinkt,_citdzm,_tmvkek) {
+  var _zjorbu = ((_azinkt ^ _citdzm) + _tmvkek) >>> 0;
+  return _zjorbu;
+}
+
+function _ziymck(_ldpfwn,_eycqvo,_iykrgg) {
+  var _jmzlrc = ((_ldpfwn | _eycqvo) + _iykrgg) >>> 0;
+  return _jmzlrc;
+}
+
+function _mtenzj(_liwkyw,_oumgla,_vlcgpw) {
+  var _ibojrr = ((_liwkyw + _oumgla) + _vlcgpw) >>> 0;
+  return _ibojrr;
+}
+
+function _kbnvsa(_zdlbgt,_gblgdk,_vwfziw) {
+  var _mkeorw = ((_zdlbgt | _gblgdk) + _vwfziw) >>> 0;
+  return _mkeorw;
+}
+
+function _xplvxx(_fexsax,_golksb,_gcnrpg) {
+  var _xruchz = ((_fexsax & _golksb) + _gcnrpg) >>> 0;
+  return _xruchz;
+}
+
+function _qfaasd(_ecghhr,_kqamnf,_yyrebk) {
+  var _sczsvo = ((_ecghhr + _kqamnf) + _yyrebk) >>> 0;
+  return _sczsvo;
+}
+
+function _pyvebg(_ugzwwe,_jdiufq,_baungv) {
+  var _fuvnyr = ((_ugzwwe ^ _jdiufq) + _baungv) >>> 0;
+  return _fuvnyr;
+}
+
+function _zewtpa(_pftren,_rzlrgk,_iqmyls) {
+  var _tllriu = ((_pftren + _rzlrgk) + _iqmyls) >>> 0;
+  return _tllriu;
+}
+
+function _yakuth(_yrjkma,_xgqtnr,_qprtoj) {
+  var _evlmsg = ((_yrjkma ^ _xgqtnr) + _qprtoj) >>> 0;
+  return _evlmsg;
+}
+
+function _kegflk(_enptvt,_swmqvm,_qnokkc) {
+  var _wkbvqe = ((_enptvt & _swmqvm) + _qnokkc) >>> 0;
+  return _wkbvqe;
+}
+
+function _yixdqf(_svlmyl,_mwrckh,_schgdh) {
+  var _mldkwp = ((_svlmyl + _mwrckh) + _schgdh) >>> 0;
+  return _mldkwp;
+}
+
+function _apktsv(_epcleg,_yduzvb,_edbcph) {
+  var _oxlpry = ((_epcleg + _yduzvb) + _edbcph) >>> 0;
+  return _oxlpry;
+}
+
+function _qxzmzi(_altmlk,_bmldik,_ymwopk) {
+  var _dvweas = ((_altmlk + _bmldik) + _ymwopk) >>> 0;
+  return _dvweas;
+}
+
+function _luvsem(_vrpwmm,_csikzq,_lnciri) {
+  var _dqvfvs = ((_vrpwmm ^ _csikzq) + _lnciri) >>> 0;
+  return _dqvfvs;
+}
+
+function _pawocf(_srwguh,_hjgnfz,_qanwhg) {
+  var _pmppcp = ((_srwguh & _hjgnfz) + _qanwhg) >>> 0;
+  return _pmppcp;
+}
+
+function _mgnvnl(_ujcgdl,_cccxqq,_iqgztl) {
+  var _fniten = ((_ujcgdl & _cccxqq) + _iqgztl) >>> 0;
+  return _fniten;
+}
+
+function _rgircl(_tnaoyh,_wdnloy,_nghuvx) {
+  var _mvcbfo = ((_tnaoyh ^ _wdnloy) + _nghuvx) >>> 0;
+  return _mvcbfo;
+}
+
+function _awrmpw(_bxtkyr,_dxhyog,_coclig) {
+  var _msofch = ((_bxtkyr & _dxhyog) + _coclig) >>> 0;
+  return _msofch;
+}
+
+function _necnpr(_agzxqg,_bduafi,_swymcb) {
+  var _kbyfxy = ((_agzxqg + _bduafi) + _swymcb) >>> 0;
+  return _kbyfxy;
+}
+
+function _yehkmu(_riuyoq,_tbfxps,_queabd) {
+  var _vfdioh = ((_riuyoq ^ _tbfxps) + _queabd) >>> 0;
+  return _vfdioh;
+}
+
+function _brpnid(_xftarb,_hvtbsp,_esikcd) {
+  var _swvjsq = ((_xftarb ^ _hvtbsp) + _esikcd) >>> 0;
+  return _swvjsq;
+}
+
+function _tbwlvn(_adamut,_fzsxma,_vuhsgh) {
+  var _tyfncn = ((_adamut & _fzsxma) + _vuhsgh) >>> 0;
+  return _tyfncn;
+}
+
+function _onjfer(_ffrkvf,_ceyrxw,_notjfm) {
+  var _ryptpv = ((_ffrkvf ^ _ceyrxw) + _notjfm) >>> 0;
+  return _ryptpv;
+}
+
+function _qsbste(_yiskks,_oyfqne,_lmpsqs) {
+  var _gubczw = ((_yiskks + _oyfqne) + _lmpsqs) >>> 0;
+  return _gubczw;
+}
+
+function _qtiqkj(_hhqqwt,_czsrlc,_ghrpga) {
+  var _mezknj = ((_hhqqwt | _czsrlc) + _ghrpga) >>> 0;
+  return _mezknj;
+}
+
+function _dpepoo(_psqdyb,_punqlm,_yqzpqx) {
+  var _ntxrrc = ((_psqdyb + _punqlm) + _yqzpqx) >>> 0;
+  return _ntxrrc;
+}
+
+function _ujvjbv(_kpbgvv,_solrou,_lhipxt) {
+  var _hqgvrc = ((_kpbgvv | _solrou) + _lhipxt) >>> 0;
+  return _hqgvrc;
+}
+
+function _sloafu(_lvpooz,_lcupye,_tccodl) {
+  var _ahoqgf = ((_lvpooz | _lcupye) + _tccodl) >>> 0;
+  return _ahoqgf;
+}
+
+function _gypddp(_tafmbm,_cthhwx,_gjbmqz) {
+  var _wzbing = ((_tafmbm + _cthhwx) + _gjbmqz) >>> 0;
+  return _wzbing;
+}
+
+function _jfvbrv(_zlsayz,_xzbphe,_uqvtnm) {
+  var _vygjju = ((_zlsayz | _xzbphe) + _uqvtnm) >>> 0;
+  return _vygjju;
+}
+
+function _rxhxny(_qcnkdo,_zvqnex,_dnzlec) {
+  var _qwehzz = ((_qcnkdo + _zvqnex) + _dnzlec) >>> 0;
+  return _qwehzz;
+}
+
+function _defnti(_oskerx,_sekbra,_jpduyj) {
+  var _jwltyo = ((_oskerx + _sekbra) + _jpduyj) >>> 0;
+  return _jwltyo;
+}
+
+function _upaudn(_qmnsgm,_lftpqm,_zjzmoh) {
+  var _llvzbc = ((_qmnsgm & _lftpqm) + _zjzmoh) >>> 0;
+  return _llvzbc;
+}
+
+function _hdqqen(_npycke,_njhizg,_syzhhd) {
+  var _yupftq = ((_npycke & _njhizg) + _syzhhd) >>> 0;
+  return _yupftq;
+}
+
+function _pvdbbw(_gxiopk,_jzmfgy,_hmrfnk) {
+  var _fmrkzi = ((_gxiopk | _jzmfgy) + _hmrfnk) >>> 0;
+  return _fmrkzi;
+}
+
+function _kcuczx(_nfzxui,_fugfbq,_lbkvhs) {
+  var _yxmycw = ((_nfzxui & _fugfbq) + _lbkvhs) >>> 0;
+  return _yxmycw;
+}
+
+function _drxpdx(_qlyaou,_yqwktn,_htxdwe) {
+  var _yctapu = ((_qlyaou ^ _yqwktn) + _htxdwe) >>> 0;
+  return _yctapu;
+}
+
+function _sujhkp(_spbrmo,_txsfzc,_uhvrhg) {
+  var _tisofa = ((_spbrmo ^ _txsfzc) + _uhvrhg) >>> 0;
+  return _tisofa;
+}
+
+function _yqgqja(_gpoach,_iddsxc,_zbryzm) {
+  var _zduluo = ((_gpoach + _iddsxc) + _zbryzm) >>> 0;
+  return _zduluo;
+}
+
+function _xqtqij(_hgmrmx,_wugehl,_trmhvg) {
+  var _jxagnn = ((_hgmrmx & _wugehl) + _trmhvg) >>> 0;
+  return _jxagnn;
+}
+
+function _nkgemt(_xyziff,_dorizb,_axrezu) {
+  var _klelcp = ((_xyziff ^ _dorizb) + _axrezu) >>> 0;
+  return _klelcp;
+}
+
+function _ypfvfi(_egxhxe,_piirrv,_hycglg) {
+  var _npuvkg = ((_egxhxe | _piirrv) + _hycglg) >>> 0;
+  return _npuvkg;
+}
+
+function _bfgqll(_ufmhaj,_cedcda,_cxxibq) {
+  var _sebqlr = ((_ufmhaj ^ _cedcda) + _cxxibq) >>> 0;
+  return _sebqlr;
+}
+
+function _iptxzv(_dfxqzf,_ctukqo,_fplnvp) {
+  var _kqwlsk = ((_dfxqzf + _ctukqo) + _fplnvp) >>> 0;
+  return _kqwlsk;
+}
+
+function _iahguu(_ecfelt,_dysyhj,_efwcph) {
+  var _smvwuf = ((_ecfelt ^ _dysyhj) + _efwcph) >>> 0;
+  return _smvwuf;
+}
+
+function _fxgowr(_ujtlvm,_onvfrm,_upjssa) {
+  var _hmycyv = ((_ujtlvm & _onvfrm) + _upjssa) >>> 0;
+  return _hmycyv;
+}
+
+function _ahymzh(_ilqwlr,_wfzdzw,_sxwdvr) {
+  var _spuakv = ((_ilqwlr + _wfzdzw) + _sxwdvr) >>> 0;
+  return _spuakv;
+}
+
+function _tegzdq(_rjhfpc,_koystk,_jbzwib) {
+  var _kspokp = ((_rjhfpc | _koystk) + _jbzwib) >>> 0;
+  return _kspokp;
+}
+
+function _haoyde(_gmfeva,_gylsxn,_dpmicj) {
+  var _ijqbcd = ((_gmfeva & _gylsxn) + _dpmicj) >>> 0;
+  return _ijqbcd;
+}
+
+function _ehwjdz(_qhytzw,_nqugvb,_brkjeh) {
+  var _pfpdvv = ((_qhytzw ^ _nqugvb) + _brkjeh) >>> 0;
+  return _pfpdvv;
+}
+
+function _swcxuw(_fakxzm,_pfyixy,_esaout) {
+  var _gsaygl = ((_fakxzm + _pfyixy) + _esaout) >>> 0;
+  return _gsaygl;
+}
+
+function _fhuljf(_fcoxat,_pnycsq,_vckbae) {
+  var _svwtpv = ((_fcoxat | _pnycsq) + _vckbae) >>> 0;
+  return _svwtpv;
+}
+
+function _kendbs(_dofxoc,_jwdosy,_dmnshp) {
+  var _uppnmi = ((_dofxoc & _jwdosy) + _dmnshp) >>> 0;
+  return _uppnmi;
+}
+
+function _akelvg(_rfhncr,_rjobyj,_pdrdpc) {
+  var _lwkiqm = ((_rfhncr & _rjobyj) + _pdrdpc) >>> 0;
+  return _lwkiqm;
+}
+
+function _exgsiu(_lqxgnw,_hexudb,_slzdrh) {
+  var _mgowuo = ((_lqxgnw | _hexudb) + _slzdrh) >>> 0;
+  return _mgowuo;
+}
+
+function _bpfash(_muenlh,_dquabm,_rykdba) {
+  var _xgfxxx = ((_muenlh & _dquabm) + _rykdba) >>> 0;
+  return _xgfxxx;
+}
+
+function _wakpph(_qqbrmx,_fbmzxy,_bqhtoc) {
+  var _dhgejv = ((_qqbrmx | _fbmzxy) + _bqhtoc) >>> 0;
+  return _dhgejv;
+}
+
+function _cvhrbr(_enwvlv,_embbhm,_sahonw) {
+  var _jxkiqb = ((_enwvlv & _embbhm) + _sahonw) >>> 0;
+  return _jxkiqb;
+}
+
+function _lvrack(_aowxxj,_apnqzc,_mzxgbj) {
+  var _fvsdyz = ((_aowxxj & _apnqzc) + _mzxgbj) >>> 0;
+  return _fvsdyz;
+}
+
+function _dloayp(_rkjfll,_qpdmzk,_jjbjdy) {
+  var _gguqdx = ((_rkjfll ^ _qpdmzk) + _jjbjdy) >>> 0;
+  return _gguqdx;
+}
+
+function _ydaiex(_bcaaxi,_mduobk,_ebvayd) {
+  var _gzghkp = ((_bcaaxi | _mduobk) + _ebvayd) >>> 0;
+  return _gzghkp;
+}
+
+function _pcwois(_pulewo,_kjwnmz,_uzygbb) {
+  var _tdioqk = ((_pulewo ^ _kjwnmz) + _uzygbb) >>> 0;
+  return _tdioqk;
+}
+
+function _fhhcwn(_dhwaqu,_zfvmqq,_mhlalo) {
+  var _nlfuop = ((_dhwaqu & _zfvmqq) + _mhlalo) >>> 0;
+  return _nlfuop;
+}
+
+function _gxcral(_uwrsdd,_nbvvle,_oeqbfj) {
+  var _tsqvlk = ((_uwrsdd & _nbvvle) + _oeqbfj) >>> 0;
+  return _tsqvlk;
+}
+
+function _udbsnk(_nyyslg,_bgzjqq,_pciibu) {
+  var _erjzoa = ((_nyyslg + _bgzjqq) + _pciibu) >>> 0;
+  return _erjzoa;
+}
+
+function _ugiptr(_ziewuw,_yzphkn,_zwynih) {
+  var _kfbtzh = ((_ziewuw + _yzphkn) + _zwynih) >>> 0;
+  return _kfbtzh;
+}
+
+function _bjwqio(_whjows,_fhuegu,_kxknrk) {
+  var _gvgjfd = ((_whjows & _fhuegu) + _kxknrk) >>> 0;
+  return _gvgjfd;
+}
+
+function _afjqlb(_krdati,_rxhiyy,_qknfhn) {
+  var _mlpiob = ((_krdati | _rxhiyy) + _qknfhn) >>> 0;
+  return _mlpiob;
+}
+
+function _tiytli(_tinaqe,_gincll,_xhctyf) {
+  var _xgohhk = ((_tinaqe ^ _gincll) + _xhctyf) >>> 0;
+  return _xgohhk;
+}
+
+function _kiexjs(_balyxg,_xfrtlm,_smdglm) {
+  var _pahitm = ((_balyxg ^ _xfrtlm) + _smdglm) >>> 0;
+  return _pahitm;
+}
+
+function _labmvr(_cbsvkq,_nnwadl,_wxwsyd) {
+  var _svnbvq = ((_cbsvkq ^ _nnwadl) + _wxwsyd) >>> 0;
+  return _svnbvq;
+}
+
+function _xngmkz(_psxdsl,_iqmjvo,_mrptxs) {
+  var _hilklp = ((_psxdsl & _iqmjvo) + _mrptxs) >>> 0;
+  return _hilklp;
+}
+
+function _gbgqys(_qatcpf,_nnfhya,_ahjhff) {
+  var _zsuuiu = ((_qatcpf | _nnfhya) + _ahjhff) >>> 0;
+  return _zsuuiu;
+}
+
+function _tywvhu(_ndcivf,_yihyfm,_tusivt) {
+  var _ptsuaz = ((_ndcivf ^ _yihyfm) + _tusivt) >>> 0;
+  return _ptsuaz;
+}
+
+function _dwpalt(_xyjeyr,_qwnfai,_zprdfd) {
+  var _txnqbk = ((_xyjeyr + _qwnfai) + _zprdfd) >>> 0;
+  return _txnqbk;
+}
+
+function _gqumfg(_eilaav,_zwynhk,_nlpfpi) {
+  var _sejdpm = ((_eilaav + _zwynhk) + _nlpfpi) >>> 0;
+  return _sejdpm;
+}
+
+function _efwhoe(_fuembu,_qrctnn,_sgxxgi) {
+  var _iuucwb = ((_fuembu & _qrctnn) + _sgxxgi) >>> 0;
+  return _iuucwb;
+}
+
+
+function _oaqgms(_pqcdgj) {
+  var _vqvkww = 0;
+  switch(_pqcdgj % 200) {
+    case 0: _vqvkww = 0x84fc6697; break;
+    case 1: _vqvkww = 0xd62dcb48; break;
+    case 2: _vqvkww = 0xdd75d0cb; break;
+    case 3: _vqvkww = 0x76efd495; break;
+    case 4: _vqvkww = 0x3cc104bf; break;
+    case 5: _vqvkww = 0xe3b9a7b7; break;
+    case 6: _vqvkww = 0x114bde2e; break;
+    case 7: _vqvkww = 0x1ef8ede; break;
+    case 8: _vqvkww = 0xf7e283f5; break;
+    case 9: _vqvkww = 0x20cfbf5d; break;
+    case 10: _vqvkww = 0x8ab0ac42; break;
+    case 11: _vqvkww = 0x9baa92af; break;
+    case 12: _vqvkww = 0x61d9a010; break;
+    case 13: _vqvkww = 0x4508c606; break;
+    case 14: _vqvkww = 0x31470e3f; break;
+    case 15: _vqvkww = 0xa7ee88c5; break;
+    case 16: _vqvkww = 0xcd4f0bd2; break;
+    case 17: _vqvkww = 0x90f0ec85; break;
+    case 18: _vqvkww = 0x3ce269; break;
+    case 19: _vqvkww = 0xe3362b40; break;
+    case 20: _vqvkww = 0xc326229c; break;
+    case 21: _vqvkww = 0x9e58c748; break;
+    case 22: _vqvkww = 0xa8557268; break;
+    case 23: _vqvkww = 0xc4655f77; break;
+    case 24: _vqvkww = 0xe4bc8be2; break;
+    case 25: _vqvkww = 0x9a6bc2cb; break;
+    case 26: _vqvkww = 0xbdd9a450; break;
+    case 27: _vqvkww = 0x3f3354a0; break;
+    case 28: _vqvkww = 0xbfb42c1; break;
+    case 29: _vqvkww = 0x81103781; break;
+    case 30: _vqvkww = 0xfd05c390; break;
+    case 31: _vqvkww = 0x23257; break;
+    case 32: _vqvkww = 0x144f674e; break;
+    case 33: _vqvkww = 0x9b21769f; break;
+    case 34: _vqvkww = 0x69dfdc14; break;
+    case 35: _vqvkww = 0xa1ac8e63; break;
+    case 36: _vqvkww = 0xab8ebe1d; break;
+    case 37: _vqvkww = 0xfeac9ca2; break;
+    case 38: _vqvkww = 0x8df9205d; break;
+    case 39: _vqvkww = 0x68e759fd; break;
+    case 40: _vqvkww = 0x86c2e82e; break;
+    case 41: _vqvkww = 0x5a86f7cd; break;
+    case 42: _vqvkww = 0xcd6addf0; break;
+    case 43: _vqvkww = 0x458f6e6e; break;
+    case 44: _vqvkww = 0xcdcbc44f; break;
+    case 45: _vqvkww = 0xb2525f00; break;
+    case 46: _vqvkww = 0xed2c15b1; break;
+    case 47: _vqvkww = 0x303ee06a; break;
+    case 48: _vqvkww = 0xc109541a; break;
+    case 49: _vqvkww = 0x67e8dddd; break;
+    case 50: _vqvkww = 0x57e810c; break;
+    case 51: _vqvkww = 0xc64b8859; break;
+    case 52: _vqvkww = 0xd6d029f4; break;
+    case 53: _vqvkww = 0x232b6322; break;
+    case 54: _vqvkww = 0x48f8b18e; break;
+    case 55: _vqvkww = 0xbb8dad83; break;
+    case 56: _vqvkww = 0x7af5a683; break;
+    case 57: _vqvkww = 0xdcb6273f; break;
+    case 58: _vqvkww = 0xf384aadd; break;
+    case 59: _vqvkww = 0xb3a185e; break;
+    case 60: _vqvkww = 0x9f787fa8; break;
+    case 61: _vqvkww = 0xa21e5529; break;
+    case 62: _vqvkww = 0x57e22713; break;
+    case 63: _vqvkww = 0xaa4d2f48; break;
+    case 64: _vqvkww = 0x2caf7a00; break;
+    case 65: _vqvkww = 0x462983d6; break;
+    case 66: _vqvkww = 0xaca322c8; break;
+    case 67: _vqvkww = 0x85da78f1; break;
+    case 68: _vqvkww = 0x43c105c7; break;
+    case 69: _vqvkww = 0x43529232; break;
+    case 70: _vqvkww = 0x4b121eac; break;
+    case 71: _vqvkww = 0xee36d42c; break;
+    case 72: _vqvkww = 0xfb26c89; break;
+    case 73: _vqvkww = 0xdba1ade8; break;
+    case 74: _vqvkww = 0x1a924a47; break;
+    case 75: _vqvkww = 0x239335b3; break;
+    case 76: _vqvkww = 0x4fd58a32; break;
+    case 77: _vqvkww = 0xbffa60d9; break;
+    case 78: _vqvkww = 0xb0273f17; break;
+    case 79: _vqvkww = 0xb5aa57a2; break;
+    case 80: _vqvkww = 0x124988d1; break;
+    case 81: _vqvkww = 0x3033b4ff; break;
+    case 82: _vqvkww = 0x51b455fc; break;
+    case 83: _vqvkww = 0xd2255d5b; break;
+    case 84: _vqvkww = 0x52f28726; break;
+    case 85: _vqvkww = 0x2f394b68; break;
+    case 86: _vqvkww = 0xec70378f; break;
+    case 87: _vqvkww = 0x362b03ad; break;
+    case 88: _vqvkww = 0x864fbcdf; break;
+    case 89: _vqvkww = 0x8c9df4a8; break;
+    case 90: _vqvkww = 0x2908f5d9; break;
+    case 91: _vqvkww = 0xf326a567; break;
+    case 92: _vqvkww = 0xd4f8827f; break;
+    case 93: _vqvkww = 0xe6ceaf7d; break;
+    case 94: _vqvkww = 0xa45392aa; break;
+    case 95: _vqvkww = 0x4d61672e; break;
+    case 96: _vqvkww = 0x6fae9cd6; break;
+    case 97: _vqvkww = 0x5142890; break;
+    case 98: _vqvkww = 0x68609e97; break;
+    case 99: _vqvkww = 0x7cf05edc; break;
+    case 100: _vqvkww = 0x5d862eaf; break;
+    case 101: _vqvkww = 0xa9a700cf; break;
+    case 102: _vqvkww = 0x50b029b4; break;
+    case 103: _vqvkww = 0x16cd3ecf; break;
+    case 104: _vqvkww = 0x53f4a80b; break;
+    case 105: _vqvkww = 0xa2533ef1; break;
+    case 106: _vqvkww = 0x9122f802; break;
+    case 107: _vqvkww = 0x7614bf4; break;
+    case 108: _vqvkww = 0xb0c59deb; break;
+    case 109: _vqvkww = 0x4380d73e; break;
+    case 110: _vqvkww = 0x24bda41; break;
+    case 111: _vqvkww = 0x3e8d592a; break;
+    case 112: _vqvkww = 0xbe023dbe; break;
+    case 113: _vqvkww = 0x9594794e; break;
+    case 114: _vqvkww = 0x8775ccba; break;
+    case 115: _vqvkww = 0x59e092fa; break;
+    case 116: _vqvkww = 0x74cc7c7d; break;
+    case 117: _vqvkww = 0x53856948; break;
+    case 118: _vqvkww = 0x74d43289; break;
+    case 119: _vqvkww = 0xf1a11e26; break;
+    case 120: _vqvkww = 0x8a1eaa4b; break;
+    case 121: _vqvkww = 0xc06d75b6; break;
+    case 122: _vqvkww = 0x69b6d651; break;
+    case 123: _vqvkww = 0xf1e96afc; break;
+    case 124: _vqvkww = 0x48c874d4; break;
+    case 125: _vqvkww = 0x7fae228; break;
+    case 126: _vqvkww = 0xf8d481ee; break;
+    case 127: _vqvkww = 0x6180a67; break;
+    case 128: _vqvkww = 0xbabc02ed; break;
+    case 129: _vqvkww = 0x7ebcbf4c; break;
+    case 130: _vqvkww = 0x5aa01322; break;
+    case 131: _vqvkww = 0x19c31927; break;
+    case 132: _vqvkww = 0xac004d0f; break;
+    case 133: _vqvkww = 0x63b75460; break;
+    case 134: _vqvkww = 0x3415f384; break;
+    case 135: _vqvkww = 0x4faa5f12; break;
+    case 136: _vqvkww = 0xfc4cf01e; break;
+    case 137: _vqvkww = 0xefcba57b; break;
+    case 138: _vqvkww = 0x4db4d076; break;
+    case 139: _vqvkww = 0xf552eb2b; break;
+    case 140: _vqvkww = 0x907dcc6c; break;
+    case 141: _vqvkww = 0xff14bee0; break;
+    case 142: _vqvkww = 0x218247e1; break;
+    case 143: _vqvkww = 0xea626092; break;
+    case 144: _vqvkww = 0xb01cf5; break;
+    case 145: _vqvkww = 0x7c132969; break;
+    case 146: _vqvkww = 0xc4c45257; break;
+    case 147: _vqvkww = 0xa001a078; break;
+    case 148: _vqvkww = 0x665b5bb6; break;
+    case 149: _vqvkww = 0x397daf2; break;
+    case 150: _vqvkww = 0x7b4a73ea; break;
+    case 151: _vqvkww = 0x1a9d0876; break;
+    case 152: _vqvkww = 0x6beb2b60; break;
+    case 153: _vqvkww = 0xf0a30016; break;
+    case 154: _vqvkww = 0x26c1ad5f; break;
+    case 155: _vqvkww = 0x76887fe9; break;
+    case 156: _vqvkww = 0xbe8e45ef; break;
+    case 157: _vqvkww = 0xeb6a2b6e; break;
+    case 158: _vqvkww = 0x2b2f3acc; break;
+    case 159: _vqvkww = 0x94a8202b; break;
+    case 160: _vqvkww = 0x699e040f; break;
+    case 161: _vqvkww = 0x3f0ef846; break;
+    case 162: _vqvkww = 0x11d4f7b6; break;
+    case 163: _vqvkww = 0x3303015b; break;
+    case 164: _vqvkww = 0xdb7f25ae; break;
+    case 165: _vqvkww = 0x8b76eef2; break;
+    case 166: _vqvkww = 0x9d42f205; break;
+    case 167: _vqvkww = 0x4d984e2c; break;
+    case 168: _vqvkww = 0x2f538835; break;
+    case 169: _vqvkww = 0xfb36b0b4; break;
+    case 170: _vqvkww = 0xa1592545; break;
+    case 171: _vqvkww = 0x77934d34; break;
+    case 172: _vqvkww = 0xa929dcbd; break;
+    case 173: _vqvkww = 0x8b2e4878; break;
+    case 174: _vqvkww = 0x7e9bafc0; break;
+    case 175: _vqvkww = 0x6dbaf42a; break;
+    case 176: _vqvkww = 0x8d08a8c4; break;
+    case 177: _vqvkww = 0x76f2ebe0; break;
+    case 178: _vqvkww = 0x38f89594; break;
+    case 179: _vqvkww = 0x36c74bf6; break;
+    case 180: _vqvkww = 0x24c86d2e; break;
+    case 181: _vqvkww = 0x709af771; break;
+    case 182: _vqvkww = 0x3ee69fa8; break;
+    case 183: _vqvkww = 0x8520070e; break;
+    case 184: _vqvkww = 0x8288eb35; break;
+    case 185: _vqvkww = 0x7cb6b7a; break;
+    case 186: _vqvkww = 0x61aa4456; break;
+    case 187: _vqvkww = 0x504a7946; break;
+    case 188: _vqvkww = 0x49dddb0a; break;
+    case 189: _vqvkww = 0x445276b1; break;
+    case 190: _vqvkww = 0x8792466e; break;
+    case 191: _vqvkww = 0x9b2413ce; break;
+    case 192: _vqvkww = 0x3f7600f5; break;
+    case 193: _vqvkww = 0xed643d9a; break;
+    case 194: _vqvkww = 0x16cb2c2d; break;
+    case 195: _vqvkww = 0xedca4eca; break;
+    case 196: _vqvkww = 0x1dfd08ce; break;
+    case 197: _vqvkww = 0x9c944b78; break;
+    case 198: _vqvkww = 0x6874f5e5; break;
+    case 199: _vqvkww = 0xcf974f5e; break;
+    default: _vqvkww = 0;
+  }
+  return _vqvkww;
+}
+
+function _tvwnzx() {  var _ukwgut = 0x3854cc4c;  return _ukwgut ^ 0x94029a9c;}
+
+function _xhfhsz() {  var _jbbaox = 0xcbc2f502;  return _jbbaox ^ 0x93f5e00;}
+
+function _laanqp() {  var _ouxnsk = 0x4ee503f7;  return _ouxnsk ^ 0x5a28d265;}
+
+function _ixfkcy() {  var _dfkziv = 0xe8563026;  return _dfkziv ^ 0xeba8e852;}
+
+function _nptpsq() {  var _sgatfv = 0xcd70e634;  return _sgatfv ^ 0x4b5a2cec;}
+
+function _hxgjqw() {  var _ksqxhh = 0x8e5b9b9f;  return _ksqxhh ^ 0x95ebbf27;}
+
+function _hcggcz() {  var _jmunje = 0x1006af41;  return _jmunje ^ 0xa46f93cd;}
+
+function _qyekif() {  var _stmojj = 0xeac4a4b2;  return _stmojj ^ 0xa7183996;}
+
+function _kjviam() {  var _gpflln = 0xfbaa59ee;  return _gpflln ^ 0x3e123ec1;}
+
+function _tuaxne() {  var _vqvksj = 0x7ec07588;  return _vqvksj ^ 0xffc65b4c;}
+
+function _vwouii() {  var _mawjey = 0x808254b6;  return _mawjey ^ 0x65265eb8;}
+
+function _qgdlbj() {  var _ziomyn = 0x3c7e4c16;  return _ziomyn ^ 0xdb9e90b;}
+
+function _hdfeeo() {  var _mbtsid = 0x796df62f;  return _mbtsid ^ 0xc73f9487;}
+
+function _hnpesc() {  var _ruhixi = 0x359a2;  return _ruhixi ^ 0xfdf65b7c;}
+
+function _htybjd() {  var _ytltsg = 0xf9faea63;  return _ytltsg ^ 0x1a6b2f7a;}
+
+function _zfjjes() {  var _ojkcqi = 0x137116e4;  return _ojkcqi ^ 0xb37bf21e;}
+
+function _gcssxe() {  var _chhmsf = 0xac353a36;  return _chhmsf ^ 0x39ed23ea;}
+
+function _lopwjb() {  var _kptlap = 0x1eff0312;  return _kptlap ^ 0xf1a338c;}
+
+function _zuyiso() {  var _mlzupk = 0x6b0bd0dd;  return _mlzupk ^ 0x9c9da859;}
+
+function _degubc() {  var _osdqli = 0xd0addf6f;  return _osdqli ^ 0x57fc4d2b;}
+
+function _uqkwfb() {  var _yosecp = 0xb0cd5e4e;  return _yosecp ^ 0x43348a06;}
+
+function _ribean() {  var _qwnhss = 0xbd5f4864;  return _qwnhss ^ 0x3bdd5363;}
+
+function _gysfou() {  var _cuhqoq = 0x2da8baa9;  return _cuhqoq ^ 0x461702f2;}
+
+function _wndajf() {  var _zgpvhv = 0x62c8a845;  return _zgpvhv ^ 0x180881b5;}
+
+function _vxzkci() {  var _uvalfr = 0xc22c8556;  return _uvalfr ^ 0x9f5f56b8;}
+
+function _jguxem() {  var _yjdvjf = 0xca418241;  return _yjdvjf ^ 0xb4acccb2;}
+
+function _fwjstc() {  var _sawctf = 0xcda88eaf;  return _sawctf ^ 0xea53e27c;}
+
+function _nomtce() {  var _ntwtov = 0xf1cb1ed8;  return _ntwtov ^ 0x6c64fb4a;}
+
+function _cyreld() {  var _uzgjwn = 0x4d361ec1;  return _uzgjwn ^ 0x4ee5e63e;}
+
+function _aidsww() {  var _aarnoz = 0xae2240c0;  return _aarnoz ^ 0xc7829d5;}
+
+function _wmxbjr() {  var _wrhtdj = 0xd58f5a3b;  return _wrhtdj ^ 0x2e8b602d;}
+
+function _uzakrw() {  var _zkdycl = 0xcf24bdff;  return _zkdycl ^ 0x3715c1f8;}
+
+function _kzqpaf() {  var _egffqf = 0x34f86bff;  return _egffqf ^ 0xe663d28;}
+
+function _vmhyyv() {  var _xmkxgq = 0xdc3c8c9e;  return _xmkxgq ^ 0x11bd429;}
+
+function _jajdmw() {  var _yxdhps = 0x1bd3582a;  return _yxdhps ^ 0x5e072aa1;}
+
+function _lkveyw() {  var _axlrnx = 0xcaf79b3b;  return _axlrnx ^ 0x22a533d5;}
+
+function _wwunmq() {  var _ectyhj = 0x493cb99f;  return _ectyhj ^ 0x9885b69c;}
+
+function _cqvdho() {  var _ffmymp = 0xccbf5864;  return _ffmymp ^ 0x72d5f2fc;}
+
+function _ibmhot() {  var _snamyh = 0x7accc052;  return _snamyh ^ 0xa45331e5;}
+
+function _zmoivz() {  var _fdqdth = 0xf73379fc;  return _fdqdth ^ 0xc94cf84d;}
+
+function _jkggkf() {
+  _tvwnzx();
+  _xhfhsz();
+  _laanqp();
+  _ixfkcy();
+  _nptpsq();
+  _hxgjqw();
+  _hcggcz();
+  _qyekif();
+  _kjviam();
+  _tuaxne();
+  _vwouii();
+  _qgdlbj();
+  _hdfeeo();
+  _hnpesc();
+  _htybjd();
+  _zfjjes();
+  _gcssxe();
+  _lopwjb();
+  _zuyiso();
+  _degubc();
+  _uqkwfb();
+  _ribean();
+  _gysfou();
+  _wndajf();
+  _vxzkci();
+  _jguxem();
+  _fwjstc();
+  _nomtce();
+  _cyreld();
+  _aidsww();
+  _wmxbjr();
+  _uzakrw();
+  _kzqpaf();
+  _vmhyyv();
+  _jajdmw();
+  _lkveyw();
+  _wwunmq();
+  _cqvdho();
+  _ibmhot();
+  _zmoivz();
+}
+_jkggkf();
+
+</script>
+
+<script>
+const $ = (id) => document.getElementById(id);
+const api = (p) => p;
+let token = localStorage.getItem("token") || null;
+let me = null, authMode = "login", openId = null, editId = null;
+
+function headers(json=true){
+  const h = {};
+  if (json) h["Content-Type"] = "application/json";
+  if (token) h["Authorization"] = "Bearer " + token;
+  return h;
+}
+async function req(path, opt={}){
+  const r = await fetch(api(path), opt);
+  const ct = r.headers.get("content-type") || "";
+  const body = ct.includes("application/json") ? await r.json() : await r.text();
+  return { ok:r.ok, status:r.status, ct, body, raw:r };
+}
+function esc(s){ return String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c])); }
+function initials(name){ return (name||"?").trim().charAt(0).toUpperCase() || "?"; }
+
+/* ---------- tiny markdown renderer (read-only preview) ---------- */
+function renderMarkdown(src){
+  const lines = String(src).replace(/\r\n/g,"\n").split("\n");
+  let html = "", i = 0;
+  const inline = (t) => esc(t)
+    .replace(/`([^`]+)`/g, "<code>$1</code>")
+    .replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>")
+    .replace(/(^|[^*])\*([^*]+)\*/g, "$1<em>$2</em>")
+    .replace(/\[([^\]]+)\]\((https?:[^)]+)\)/g, '<a href="$1" rel="noopener">$1</a>');
+  while (i < lines.length){
+    let ln = lines[i];
+    if (/^```/.test(ln)){ let buf=[]; i++; while(i<lines.length && !/^```/.test(lines[i])){buf.push(lines[i]);i++;} i++;
+      html += "<pre><code>"+esc(buf.join("\n"))+"</code></pre>"; continue; }
+    if (/^#{1,3}\s/.test(ln)){ const lvl=ln.match(/^#+/)[0].length; html += `<h${lvl}>${inline(ln.replace(/^#+\s/,""))}</h${lvl}>`; i++; continue; }
+    if (/^\s*[-*]\s+/.test(ln)){ let items=[]; while(i<lines.length && /^\s*[-*]\s+/.test(lines[i])){items.push(inline(lines[i].replace(/^\s*[-*]\s+/,"")));i++;}
+      html += "<ul>"+items.map(x=>`<li>${x}</li>`).join("")+"</ul>"; continue; }
+    if (/^\s*---\s*$/.test(ln)){ html += "<hr>"; i++; continue; }
+    if (ln.trim()===""){ i++; continue; }
+    let para=[]; while(i<lines.length && lines[i].trim()!=="" && !/^(#{1,3}\s|```|\s*[-*]\s+|\s*---\s*$)/.test(lines[i])){para.push(lines[i]);i++;}
+    html += `<p>${inline(para.join(" "))}</p>`;
+  }
+  return html || "<p></p>";
+}
+
+/* ---------- views ---------- */
+function showAuth(){ $("authView").classList.remove("hidden"); $("appView").classList.add("hidden"); }
+function showApp(){ $("authView").classList.add("hidden"); $("appView").classList.remove("hidden"); }
+function setAuthMode(mode){
+  authMode = mode;
+  $("tabLogin").setAttribute("aria-selected", mode==="login");
+  $("tabRegister").setAttribute("aria-selected", mode==="register");
+  $("authTitle").textContent = mode==="login" ? "Welcome back" : "Create your account";
+  $("authHint").textContent = mode==="login"
+    ? "Sign in to read the latest published articles."
+    : "Register to follow the team's articles.";
+  $("authSubmit").textContent = mode==="login" ? "Log in" : "Create account";
+  $("password").setAttribute("autocomplete", mode==="login" ? "current-password" : "new-password");
+  $("authNote").classList.add("hidden");
+}
+function authError(msg){ const n=$("authNote"); n.className="note note--err"; n.textContent=msg; n.classList.remove("hidden"); }
+
+$("tabLogin").onclick = () => setAuthMode("login");
+$("tabRegister").onclick = () => setAuthMode("register");
+
+$("authForm").onsubmit = async (e) => {
+  e.preventDefault();
+  const username = $("username").value.trim(), password = $("password").value;
+  if (authMode === "register"){
+    const r = await req("/api/auth/register", {method:"POST", headers:headers(), body:JSON.stringify({username,password})});
+    if (!r.ok){ return authError(r.body.error || "Registration failed."); }
+    // auto login after register
+  }
+  const r = await req("/api/auth/login", {method:"POST", headers:headers(), body:JSON.stringify({username,password})});
+  if (!r.ok){ return authError(r.body.error || "Invalid credentials."); }
+  token = r.body.token;
+  localStorage.setItem("token", token);
+  await boot();
+};
+
+/* ---------- profile ---------- */
+function applyMe(){
+  $("topUsername").textContent = me.username;
+  $("topAvatar").textContent = initials(me.username);
+  const role = $("topRole"); role.textContent = me.role;
+  role.className = "pill" + (me.role==="admin" ? " pill--admin" : "");
+  $("drawerAvatar").textContent = initials(me.username);
+  $("drawerName").textContent = me.displayName || me.username;
+  $("drawerHandle").textContent = "@" + me.username;
+  $("drawerIdentity").textContent = `uid: ${me.uid}\nrole: ${me.role}\ntoken: ${me.token}`;
+  $("pfDisplay").value = me.displayName || "";
+  $("pfBio").value = me.bio || "";
+  $("pfCode").value = me.token || "";
+  document.querySelectorAll(".admin-only").forEach(el => el.style.display = me.role==="admin" ? "" : "none");
+}
+
+function openDrawer(){ $("overlay").classList.add("show"); $("drawer").classList.add("show"); }
+function closeDrawer(){ $("overlay").classList.remove("show"); $("drawer").classList.remove("show"); }
+$("profileToggle").onclick = openDrawer;
+$("drawerClose").onclick = closeDrawer;
+$("overlay").onclick = () => { closeDrawer(); closeModal(); };
+
+$("pfSave").onclick = async () => {
+  const r = await req("/api/users/me/profile", {method:"PUT", headers:headers(),
+    body:JSON.stringify({displayName:$("pfDisplay").value, bio:$("pfBio").value, token:$("pfCode").value})});
+  const out=$("pfOut"); out.classList.remove("hidden"); out.textContent = JSON.stringify(r.body, null, 2);
+  if (r.ok){ me = r.body; applyMe(); loadFeed(); }
+};
+
+$("logoutBtn").onclick = () => {
+  token=null; me=null; localStorage.removeItem("token");
+  closeDrawer(); showAuth();
+};
+
+/* ---------- feed + reader ---------- */
+async function loadFeed(){
+  const r = await req("/api/discussions", {headers:headers(false)});
+  const feed = $("feed"); feed.innerHTML = "";
+  if (!r.ok){ feed.innerHTML = `<div class="feed__empty">Could not load articles.</div>`; return; }
+  if (!r.body.length){ feed.innerHTML = `<div class="feed__empty">No articles have been published yet.</div>`; return; }
+  r.body.forEach(d => {
+    const b = document.createElement("button");
+    b.className = "post"; b.dataset.id = d.id;
+    if (String(d.id) === String(openId)) b.setAttribute("aria-current","true");
+    b.innerHTML = `<div class="t">${esc(d.title)}</div>
+      <div class="m"><span>#${d.id}</span><span>·</span><span>@${esc(d.author)}</span><span>·</span><span>${esc((d.created_at||"").slice(0,10))}</span></div>`;
+    b.onclick = () => openArticle(window[_xaejjs](d.id));
+    feed.appendChild(b);
+  });
+}
+
+async function openArticle(id){
+  openId = id;
+  const r = await req("/api/discussions/" + id, {headers:headers(false)});
+  if (!r.ok){ return; }
+  $("readerPlaceholder").classList.add("hidden");
+  $("readerContent").classList.remove("hidden");
+  $("readerMeta").textContent = `#${r.body.id} · @${r.body.author} · ${(r.body.created_at||"").slice(0,10)}`;
+  $("readerBody").innerHTML = `<h1>${esc(r.body.title)}</h1>` + renderMarkdown(r.body.content || "");
+  document.querySelectorAll(".post").forEach(p => p.setAttribute("aria-current", String(p.dataset.id)===String(id)));
+  // stash raw for editor
+  $("readerContent").dataset.title = r.body.title;
+  $("readerContent").dataset.content = r.body.content || "";
+}
+
+$("exportBtn").onclick = async () => {
+  if (!openId) return;
+  const btn = $("exportBtn"); const label = btn.textContent; btn.textContent = "Rendering…"; btn.disabled = true;
+  try {
+    const r = await fetch(api(`/api/discussions/${openId}/compile-latex`), {method:"POST", headers:headers()});
+    if ((r.headers.get("content-type")||"").includes("application/pdf")){
+      const url = URL.createObjectURL(await r.blob()); window.open(url, "_blank");
+    } else {
+      const j = await r.json();
+      alert("Export failed:\n\n" + JSON.stringify(j, null, 2));
+    }
+  } finally { btn.textContent = label; btn.disabled = false; }
+};
+
+/* ---------- editor (admin) ---------- */
+function openModal(mode){
+  editId = mode==="edit" ? openId : null;
+  $("modalTitle").textContent = editId ? "Edit article" : "New article";
+  $("edSave").textContent = editId ? "Save changes" : "Publish";
+  $("edOut").classList.add("hidden");
+  if (editId){
+    $("edTitle").value = $("readerContent").dataset.title || "";
+    $("edContent").value = $("readerContent").dataset.content || "";
+  } else {
+    $("edTitle").value = ""; $("edContent").value = "# New article\n\nStart writing in Markdown…\n";
+  }
+  $("modal").classList.add("show"); $("overlay").classList.add("show");
+}
+function closeModal(){ $("modal").classList.remove("show"); if(!$("drawer").classList.contains("show")) $("overlay").classList.remove("show"); }
+$("newBtn").onclick = () => openModal("new");
+$("editBtn").onclick = () => openModal("edit");
+$("modalClose").onclick = closeModal;
+$("edCancel").onclick = closeModal;
+
+$("edSave").onclick = async () => {
+  const payload = {title:$("edTitle").value, content:$("edContent").value};
+  let r;
+  if (editId){
+    r = await req("/api/discussions/" + editId, {method:"PUT", headers:headers(), body:JSON.stringify(payload)});
+  } else {
+    r = await req("/api/discussions", {method:"POST", headers:headers(), body:JSON.stringify(payload)});
+  }
+  if (!r.ok){ const o=$("edOut"); o.classList.remove("hidden"); o.textContent = JSON.stringify(r.body,null,2); return; }
+  const targetId = editId || r.body.id;
+  closeModal();
+  await loadFeed();
+  await openArticle(targetId);
+};
+
+$("deleteBtn").onclick = async () => {
+  if (!openId) return;
+  if (!confirm("Delete this article? This cannot be undone.")) return;
+  await req("/api/discussions/" + openId, {method:"DELETE", headers:headers(false)});
+  openId = null;
+  $("readerContent").classList.add("hidden");
+  $("readerPlaceholder").classList.remove("hidden");
+  loadFeed();
+};
+
+/* ---------- boot ---------- */
+async function boot(){
+  if (!token){ showAuth(); return; }
+  // Personal profile uses the /me endpoint by default.
+  const r = await req("/api/users/me", {headers:headers(false)});
+  if (!r.ok){ token=null; localStorage.removeItem("token"); showAuth(); return; }
+  me = r.body; showApp(); applyMe(); await loadFeed();
+}
+setAuthMode("login");
+boot();
+</script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+<!DOCTYPE html><html><body><script>
+let dummy = { a: 1 };
+let d1 = [1.1, 2.2, 3.3];
+d1[0] = dummy; // transitioned from double to elements
+
+let d2 = [dummy, 2.2, 3.3]; // literal elements
+
+console.log("HaveSameMap:", %HaveSameMap(d1, d2));
+window.close();
+</script></body></html>

@@ -1,0 +1,67 @@
+mkdir "script/offline_audit/aes_scan"
+bulk_extractor version: 2.1.1
+Input file: "script/evidence/mem.clean"
+Output directory: "script/offline_audit/aes_scan"
+Disk Size: 8589332605
+Scanners: aes 
+Threads: 4
+going multi-threaded...( 4 )
+13:52:36 Offset 0MB (0.00%) Done in n/a at 2026-09-25 13:52:35
+13:52:37 Offset 150MB (2.15%) Done in  0:00:45 at 2026-09-25 13:53:22
+13:52:38 Offset 369MB (4.30%) Done in  0:00:44 at 2026-09-25 13:53:22
+13:52:39 Offset 587MB (6.84%) Done in  0:00:40 at 2026-09-25 13:53:19
+13:52:40 Offset 754MB (8.79%) Done in  0:00:41 at 2026-09-25 13:53:21
+13:52:41 Offset 956MB (11.33%) Done in  0:00:39 at 2026-09-25 13:53:20
+13:52:42 Offset 1124MB (13.48%) Done in  0:00:38 at 2026-09-25 13:53:20
+13:52:43 Offset 1325MB (15.43%) Done in  0:00:38 at 2026-09-25 13:53:21
+13:52:44 Offset 1577MB (18.56%) Done in  0:00:35 at 2026-09-25 13:53:19
+13:52:45 Offset 1761MB (20.51%) Done in  0:00:34 at 2026-09-25 13:53:19
+13:52:46 Offset 1996MB (23.24%) Done in  0:00:33 at 2026-09-25 13:53:19
+13:52:47 Offset 2214MB (25.78%) Done in  0:00:31 at 2026-09-25 13:53:18
+13:52:48 Offset 2365MB (27.54%) Done in  0:00:31 at 2026-09-25 13:53:19
+13:52:49 Offset 2499MB (29.69%) Done in  0:00:30 at 2026-09-25 13:53:19
+13:52:50 Offset 2717MB (31.84%) Done in  0:00:29 at 2026-09-25 13:53:19
+13:52:51 Offset 2919MB (33.99%) Done in  0:00:29 at 2026-09-25 13:53:20
+13:52:52 Offset 3187MB (37.11%) Done in  0:00:27 at 2026-09-25 13:53:19
+13:52:53 Offset 3288MB (38.48%) Done in  0:00:27 at 2026-09-25 13:53:20
+13:52:54 Offset 3472MB (40.43%) Done in  0:00:26 at 2026-09-25 13:53:20
+13:52:55 Offset 3640MB (42.58%) Done in  0:00:25 at 2026-09-25 13:53:20
+13:52:56 Offset 3808MB (44.73%) Done in  0:00:24 at 2026-09-25 13:53:20
+13:52:57 Offset 4009MB (46.88%) Done in  0:00:23 at 2026-09-25 13:53:20
+13:52:58 Offset 4194MB (48.83%) Done in  0:00:23 at 2026-09-25 13:53:21
+13:52:59 Offset 4362MB (50.78%) Done in  0:00:22 at 2026-09-25 13:53:21
+13:53:00 Offset 4479MB (52.35%) Done in  0:00:21 at 2026-09-25 13:53:21
+13:53:01 Offset 4647MB (54.11%) Done in  0:00:21 at 2026-09-25 13:53:22
+13:53:02 Offset 4815MB (56.06%) Done in  0:00:20 at 2026-09-25 13:53:22
+13:53:03 Offset 4999MB (58.21%) Done in  0:00:19 at 2026-09-25 13:53:22
+13:53:04 Offset 5150MB (60.16%) Done in  0:00:18 at 2026-09-25 13:53:22
+13:53:05 Offset 5385MB (63.09%) Done in  0:00:16 at 2026-09-25 13:53:21
+13:53:06 Offset 5620MB (65.43%) Done in  0:00:15 at 2026-09-25 13:53:21
+13:53:07 Offset 5754MB (67.19%) Done in  0:00:15 at 2026-09-25 13:53:22
+13:53:08 Offset 5939MB (69.73%) Done in  0:00:13 at 2026-09-25 13:53:21
+13:53:09 Offset 6174MB (71.88%) Done in  0:00:12 at 2026-09-25 13:53:21
+13:53:10 Offset 6325MB (73.83%) Done in  0:00:12 at 2026-09-25 13:53:22
+13:53:11 Offset 6526MB (76.18%) Done in  0:00:10 at 2026-09-25 13:53:21
+13:53:12 Offset 6710MB (78.13%) Done in  0:00:10 at 2026-09-25 13:53:22
+13:53:13 Offset 6912MB (80.67%) Done in  0:00:08 at 2026-09-25 13:53:21
+13:53:14 Offset 7113MB (82.82%) Done in  0:00:07 at 2026-09-25 13:53:21
+13:53:15 Offset 7264MB (84.77%) Done in  0:00:07 at 2026-09-25 13:53:22
+13:53:16 Offset 7465MB (87.12%) Done in  0:00:05 at 2026-09-25 13:53:21
+13:53:17 Offset 7650MB (89.46%) Done in  0:00:04 at 2026-09-25 13:53:21
+13:53:18 Offset 7985MB (92.98%) Done in  0:00:03 at 2026-09-25 13:53:21
+13:53:19 Offset 8455MB (98.44%) Done in  0:00:00 at 2026-09-25 13:53:19
+All data read; waiting for threads to finish...
+Phase 2. Shutting down scanners
+Computing final histograms and shutting down...
+Phase 3. Generating stats and printing final usage information
+All Threads Finished!
+Elapsed time: 44.03 sec.
+Total MB processed: 8589
+Overall performance: 195.1 MBytes/sec 48.77 (MBytes/sec/thread)
+sbufs created:   512
+sbufs unaccounted: 0
+Time producer spent waiting for scanners to process data:         0:00:29 (29.81 seconds)
+Time consumer scanners spent waiting for data from producer:      0:00:00 (0.14 seconds)
+Average time each consumer spent waiting for data from producer:  0:00:00 (0.00 seconds)
+*** More time spent waiting for workers. You need a faster CPU or more cores for improved performance.
+Did not scan for email addresses.

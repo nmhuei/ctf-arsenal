@@ -1,0 +1,84 @@
+{
+  "candidates": 472,
+  "password_matches": [],
+  "printable_candidates": [
+    {
+      "file": "0xc2f8040",
+      "physical": "0xc35b000",
+      "hex": "64722f6e64725f647273756170692e633a373134310000006c69627270632f67656e5f6e64722f6e64725f647273756170692e633a37313431000000",
+      "text": "dr/ndr_drsuapi.c:7141\u0000\u0000\u0000librpc/gen_ndr/ndr_drsuapi.c:7141"
+    },
+    {
+      "file": "0x105c9040",
+      "physical": "0x1062c000",
+      "hex": "6b65792025733a2025730a00000000002e2e2f2e2e2f736f75726365332f72656769737472792f7265675f6261636b656e645f64622e633a31343134",
+      "text": "key %s: %s\n\u0000\u0000\u0000\u0000\u0000../../source3/registry/reg_backend_db.c:1414"
+    },
+    {
+      "file": "0x32039040",
+      "physical": "0x3209c000",
+      "hex": "227363686564756c65557064617465416c61726d222c227363686564756c656454696d65223a312e373838383932303833333535652b31327d5d0000",
+      "text": "\"scheduleUpdateAlarm\",\"scheduledTime\":1.788892083355e+12}]"
+    },
+    {
+      "file": "0x81eff040",
+      "physical": "0x81f62000",
+      "hex": "616c75655f696e7433325f67657400006770676d655f636f6e665f6172675f76616c75655f696e7433325f6765742873656c6629202d3e20696e7400",
+      "text": "alue_int32_get\u0000\u0000gpgme_conf_arg_value_int32_get(self) -> int"
+    },
+    {
+      "file": "0xccd1507e",
+      "physical": "0x10cda8000",
+      "hex": "66202f72756e2f6d6f7464203036343420726f6f7420726f6f74202d0a64202f72756e2f6d6f74642e64203037353520726f6f7420726f6f74202d0a",
+      "text": "f /run/motd 0644 root root -\nd /run/motd.d 0755 root root -\n"
+    },
+    {
+      "file": "0xccd6207e",
+      "physical": "0x10cdf5000",
+      "hex": "64202f72756e2f736574726f75626c6573686f6f742037313120736574726f75626c6573686f6f7420736574726f75626c6573686f6f74202d0a0000",
+      "text": "d /run/setroubleshoot 711 setroubleshoot setroubleshoot -\n"
+    },
+    {
+      "file": "0xcda4407e",
+      "physical": "0x10dad7000",
+      "hex": "493a31313437373832370a453a49445f4d4d5f43414e4449444154453d310a453a49445f4e45545f4452495645523d0a563a310a0000000000000000",
+      "text": "I:11477827\nE:ID_MM_CANDIDATE=1\nE:ID_NET_DRIVER=\nV:1\n"
+    },
+    {
+      "file": "0xce29707e",
+      "physical": "0x10e32a000",
+      "hex": "2320436f6d6d616e642d6c696e65206f7074696f6e7320666f72206368726f6e79640a4f5054494f4e533d222d462032220a00000000000000000000",
+      "text": "# Command-line options for chronyd\nOPTIONS=\"-F 2\"\n"
+    },
+    {
+      "file": "0xdcb5407e",
+      "physical": "0x11cbe7000",
+      "hex": "493a31303536303537300a453a49445f56454e444f525f46524f4d5f44415441424153453d564d7761726520496e632e2c0a563a310a000000000000",
+      "text": "I:10560570\nE:ID_VENDOR_FROM_DATABASE=VMware Inc.,\nV:1\n"
+    },
+    {
+      "file": "0xdd3ef07e",
+      "physical": "0x11d482000",
+      "hex": "493a31313130353139380a453a49445f4d4d5f43414e4449444154453d310a473a73797374656d640a513a73797374656d640a563a310a0000000000",
+      "text": "I:11105198\nE:ID_MM_CANDIDATE=1\nG:systemd\nQ:systemd\nV:1\n"
+    },
+    {
+      "file": "0xdd40007e",
+      "physical": "0x11d493000",
+      "hex": "493a31313130313734310a453a49445f4d4d5f43414e4449444154453d310a473a73797374656d640a513a73797374656d640a563a310a0000000000",
+      "text": "I:11101741\nE:ID_MM_CANDIDATE=1\nG:systemd\nQ:systemd\nV:1\n"
+    },
+    {
+      "file": "0xdd41707e",
+      "physical": "0x11d4aa000",
+      "hex": "493a31313039393133350a453a49445f4d4d5f43414e4449444154453d310a473a73797374656d640a513a73797374656d640a563a310a0000000000",
+      "text": "I:11099135\nE:ID_MM_CANDIDATE=1\nG:systemd\nQ:systemd\nV:1\n"
+    },
+    {
+      "file": "0xdd47107e",
+      "physical": "0x11d504000",
+      "hex": "493a31313130353037370a453a49445f4d4d5f43414e4449444154453d310a473a73797374656d640a513a73797374656d640a563a310a0000000000",
+      "text": "I:11105077\nE:ID_MM_CANDIDATE=1\nG:systemd\nQ:systemd\nV:1\n"
+    }
+  ]
+}

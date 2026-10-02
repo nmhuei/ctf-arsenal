@@ -1,0 +1,8 @@
+{
+  "author": "daveops",
+  "content": "# Homelab 2026: What I'm Running\n\nMy homelab has evolved significantly this year. Current stack:\n\n| Service | Host | Notes |\n|---------|------|-------|\n| Proxmox VE | Dell R720 | 256 GB RAM, 12 cores |\n| TrueNAS SCALE | Custom build | 48 TB usable |\n| Kubernetes (k3s) | 3\u00d7 Raspberry Pi 5 | Lightweight workloads |\n| Wireguard | VPS | Remote access |\n\nPower consumption sits around 180 W idle. Not bad for the capabilities.\n",
+  "created_at": "2026-02-26T17:00:00Z",
+  "id": "a87ff679-a2f3-e71d-9181-a67b7542122c",
+  "sig": "u_0154721cbd9640f7990c7815",
+  "title": "Homelab 2026: what I'm running"
+}

@@ -1,0 +1,15 @@
+<!DOCTYPE html><html><body><script>
+let lines = [];
+lines.push("function testB(x, arr, obj) {");
+for (let i = 0; i < 650; i++) lines.push(`  if (x === ${i}) return ${i};`);
+lines.push(`arr[0] = obj; return arr[1];`);
+lines.push("}");
+lines.push("return testB;");
+
+let fn = new Function(lines.join("\n"))();
+let dummy = { a: 1 };
+let dummy_arr = [1.1, 2.2, 3.3];
+
+for (let i = 0; i < 20000; i++) fn(i, dummy_arr, dummy);
+console.log("Warmup done for testB");
+</script></body></html>

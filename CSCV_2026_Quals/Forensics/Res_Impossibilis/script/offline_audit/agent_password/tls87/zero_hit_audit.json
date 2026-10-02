@@ -1,0 +1,13 @@
+{
+  "sample_method": "65536 equally spaced windows across concatenated LiME segment-contained all-byte candidate positions; no cryptographic candidate testing",
+  "sample_windows": 65536,
+  "zero_windows": 13828,
+  "nonzero_windows": 51708,
+  "unique_nonzero_keys": 47097,
+  "duplicate_nonzero_instances": 4611,
+  "max_nonzero_multiplicity": 1226,
+  "full_nonzero_candidate_instances": 6777982065,
+  "independent_unique_ideal_model_max_expected_random_hits": 1.5781219268683344,
+  "idealized_no_hit_probability_at_maximum_unique_count": 0.2063622979835551,
+  "interpretation": "The full scan counts instances, not unique keys. Repeated keys always yield identical outcomes. Even treating every nonzero instance as a distinct independent random AES key, zero random suffix hits has approximately21% probability; duplicates increase this probability. The sample is descriptive and does not estimate the exact full-image unique count."
+}

@@ -1,0 +1,8 @@
+{
+  "author": "bob_dev",
+  "content": "# REST vs GraphQL: A Pragmatist's View\n\nI've built production APIs with both. Here's the honest comparison.\n\n## REST wins when\n\n- Your resource model is stable\n- Caching at the HTTP layer matters\n- Your consumers are third-party and you can't coordinate schema changes\n\n## GraphQL wins when\n\n- Clients have wildly different data-shape needs\n- You're building a BFF (backend for frontend)\n- Rapid iteration speed beats stability\n\n## The real answer\n\nUse whichever your team already knows. Switching costs almost always outweigh the theoretical benefits.\n",
+  "created_at": "2026-04-03T20:00:00Z",
+  "id": "45c48cce-2e2d-7fbd-ea1a-fc51c7c6ad26",
+  "sig": "u_9d95bf8730ec7c87021a28c4",
+  "title": "REST vs GraphQL: a pragmatist's view"
+}

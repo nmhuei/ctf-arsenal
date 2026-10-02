@@ -1,0 +1,4 @@
+{
+  "local_verification": "passed",
+  "summary": "Analyzed MaglevSmiCheckElimination vulnerability (syntactic bounds-check inspection causing CheckedSmiUntag to be replaced with UnsafeSmiUntag, yielding addrof via compressed pointer shift and generational write barrier elision leading to Scavenge UAF). Exploit package organized with exploit.html and runner scripts."
+}

@@ -1,0 +1,117 @@
+Breakpoint 1 at 0x7fee9158ec90: file ../sysdeps/unix/sysv/linux/send.c, line 28.
+Type commands for breakpoint(s) 1, one per line.
+End with a line saying just "end".
+Continuing.
+
+Thread 1 "residuegate-har" received signal SIGINT, Interrupt.
+syscall () at ../sysdeps/unix/sysv/linux/x86_64/syscall.S:38
+38	in ../sysdeps/unix/sysv/linux/x86_64/syscall.S
+LEGEND: STACK | HEAP | CODE | DATA | WX | RODATA
+─────────────[ REGISTERS / show-flags off / show-compact-regs off ]─────────────
+ RAX  0xfffffffffffffe00
+ RBX  0x7fee914a4340 (__errno_location) ◂— mov rax, qword ptr [rip + 0x1bcaa1]
+ RCX  0x7fee9158b109 (syscall+25) ◂— cmp rax, -0xfff
+*RDX  0x41
+ RDI  0x5558e467d940 ◂— 0x41 /* 'A' */
+ RSI  0x89
+ R8   0
+ R9   0xffffffff
+ R10  0
+ R11  0x246
+*R12  0x41
+ R13  0x7fee9158b0f0 (syscall) ◂— mov rax, rdi
+ R14  0x5558e467d930 ◂— 1
+ R15  0x5558e467d940 ◂— 0x41 /* 'A' */
+ RBP  0x7ffeea944da0 ◂— 0xfffffffffffffff8
+ RSP  0x7ffeea944d68 —▸ 0x5558bee48576 ◂— test rax, rax
+ RIP  0x7fee9158b109 (syscall+25) ◂— cmp rax, -0xfff
+──────────────────────[ DISASM / x86-64 / set emulate on ]──────────────────────
+ ► 0x7fee9158b109 <syscall+25>    cmp    rax, -0xfff     0xfffffffffffffe00 - -0xfff     EFLAGS => 0x216 [ cf PF AF zf sf IF df of iopl:00 ac ]
+   0x7fee9158b10f <syscall+31>  ✔ jae    syscall+34                  <syscall+34>
+    ↓
+   0x7fee9158b112 <syscall+34>    mov    rcx, qword ptr [rip + 0xd5ccf]     RCX, [_GLOBAL_OFFSET_TABLE_+616] => 0xfffffffffffffe98
+   0x7fee9158b119 <syscall+41>    neg    eax
+   0x7fee9158b11b <syscall+43>    mov    dword ptr fs:[rcx], eax            [0x7fee91478b58] <= 0x200
+   0x7fee9158b11e <syscall+46>    or     rax, 0xffffffffffffffff            RAX => 0xffffffffffffffff (0x200 | -0x1)
+   0x7fee9158b122 <syscall+50>    ret                                <0x5558bee48576>
+    ↓
+   0x5558bee48576                 test   rax, rax                    0xffffffffffffffff & 0xffffffffffffffff     EFLAGS => 0x286 [ cf PF af zf SF IF df of iopl:00 ac ]
+   0x5558bee48579               ✘ jns    0x5558bee48582              <0x5558bee48582>
+ 
+   0x5558bee4857b                 call   rbx                         <__errno_location>
+ 
+   0x5558bee4857d                 cmp    dword ptr [rax], 4
+───────────────────────────────────[ STACK ]────────────────────────────────────
+00:0000│ rsp 0x7ffeea944d68 —▸ 0x5558bee48576 ◂— test rax, rax
+01:0008│-030 0x7ffeea944d70 ◂— 0xffffffff
+02:0010│-028 0x7ffeea944d78 ◂— 0
+03:0018│-020 0x7ffeea944d80 —▸ 0x5558e467d938 ◂— 0
+04:0020│-018 0x7ffeea944d88 ◂— 6
+05:0028│-010 0x7ffeea944d90 ◂— 6
+06:0030│-008 0x7ffeea944d98 ◂— 0
+07:0038│ rbp 0x7ffeea944da0 ◂— 0xfffffffffffffff8
+─────────────────────────────────[ BACKTRACE ]──────────────────────────────────
+ ► 0 0x7fee9158b109 syscall+25
+   1 0x5558bee48576
+   2 0x5558bdefdb2f
+   3 0x5558bdeb0cb3
+   4 0x5558bdf083c1
+   5 0x7fee914a3fba __libc_start_call_main+122
+   6 0x7fee914a40d7 __libc_start_main+135
+   7 0x5558bdeaaaf5
+─────────────────────────────[ THREADS (13 TOTAL) ]─────────────────────────────
+  ► 1   "residuegate-har" stopped: 0x7fee9158b109 <syscall+25> 
+    13   "tokio-rt-worker" stopped: 0x7fee9158b109 <syscall+25> 
+    12   "tokio-rt-worker" stopped: 0x7fee9158b109 <syscall+25> 
+    11   "tokio-rt-worker" stopped: 0x7fee9158b109 <syscall+25> 
+Not showing 9 thread(s). Use set context-max-threads <number of threads> to change this.
+────────────────────────────────[ LAST SIGNAL ]─────────────────────────────────
+Program received signal SIGINT
+────────────────────────────────────────────────────────────────────────────────
+Breakpoint 2 at 0x7fee9158ced0: file ../sysdeps/unix/sysv/linux/writev.c, line 26.
+Type commands for breakpoint(s) 2, one per line.
+End with a line saying just "end".
+Continuing.
+[Switching to Thread 0x7fee9046f6c0 (LWP 2484544)]
+WRITEV fd=7 count=2
+#0  __GI___writev (fd=0x7, iov=0x7fee9046d998, iovcnt=0x2) at ../sysdeps/unix/sysv/linux/writev.c:26
+#1  0x00005558bee48162 in ?? ()
+#2  0x00005558bdec34d5 in ?? ()
+#3  0x00005558bdec9152 in ?? ()
+#4  0x00005558bdee6d5f in ?? ()
+#5  0x00005558bdecefd3 in ?? ()
+#6  0x00005558bee4c194 in ?? ()
+#7  0x00005558bee51c0e in ?? ()
+#8  0x00005558bee41c6e in ?? ()
+#9  0x00005558bee45eef in ?? ()
+#10 0x00005558bee413cf in ?? ()
+#11 0x00007fee9150f058 in start_thread (arg=<optimized out>) at ./nptl/pthread_create.c:454
+#12 0x00007fee9158d218 in __GI___clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+DEADLOCK DETECTED...
+The deadlock issue is likely caused by using 'commands[\n]continue[\n]end'.
+
+To address this, you have three options:
+
+1. Avoid using 'commands'. Instead, rewrite it as a Python script. For example:
+   
+   # Read more at: https://github.com/pwndbg/pwndbg/issues/425#issuecomment-892302716
+   class Bp(gdb.Breakpoint):
+       def stop(self):
+           print("Breakpoint hit!")
+           return False  # False = continue to next breakpoint, True = stop inferior
+
+   Bp("main")
+   
+
+2. Replace 'continue' with 'pi gdb.execute("continue")' and use 'set gdb-workaround-stop-event disabled-deadlock'.
+   This change reduces the likelihood of deadlocks, while preserving pwndbg functionality.
+
+3. Run 'set gdb-workaround-stop-event enabled', allowing you to keep 'continue' as is.
+   However, this setting may cause pwndbg or gdb.execute to behave asynchronously/unpredictably.
+
+Python Exception <class 'SystemExit'>: 1
+Exception occurred: Error: Selected thread is running. (<class 'gdb.error'>)
+For more info invoke `set exception-verbose on` and rerun the command
+or debug it by yourself with `set exception-debugger on`
+Python Exception <class 'gdb.error'>: Selected thread is running.
+[Inferior 1 (process 2484531) detached]

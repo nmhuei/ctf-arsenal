@@ -1,0 +1,6 @@
+[CryptoEngine]
+Algorithm = AES-128-GCM
+Ciphertext_Target = /tmp/.cache_sys_bak.dat
+Chunk_Stride = 16
+Block_Nonce_Hex = 9a4bf201cc88102491a0c821
+Auth_Tag_Expected = a39f68bc1458e0a1789c24de8

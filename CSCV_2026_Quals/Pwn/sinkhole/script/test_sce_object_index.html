@@ -1,0 +1,29 @@
+<!doctype html>
+<meta charset="utf-8">
+<script>
+const earlyObj = { marker: 0x1337 };
+const lines = ["function trigger(x, arr, idx, limit) {"];
+for (let i = 0; i < 650; i++) lines.push(`if (x === ${i}) return ${i};`);
+lines.push("let i = 0, result = 0;");
+lines.push("while (i < limit) {");
+for (let i = 0; i < 430; i++) lines.push(`result = (result + ${i % 7}) | 0;`);
+lines.push("result = arr[idx];");
+lines.push("i++;");
+lines.push("}");
+lines.push("return result;");
+lines.push("}");
+lines.push("return trigger;");
+const trigger = new Function(lines.join("\n"))();
+
+for (const n of [10_000_000]) {
+  const arr = new Array(n).fill(7);
+  %DebugPrint(earlyObj);
+  for (let i = 0; i < 12000; i++) trigger(1000, arr, 0, 1);
+  try {
+    const result = trigger(1000, arr, earlyObj, 1);
+    console.log("len", n, "result", typeof result, result);
+  } catch (e) {
+    console.log("len", n, "caught", e && e.name, e && e.message);
+  }
+}
+</script>

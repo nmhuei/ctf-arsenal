@@ -1,0 +1,234 @@
+[
+  {
+    "name": "extensions.json",
+    "size": 37583,
+    "crc32": "de68b8e7",
+    "expected": "20a2f078",
+    "verified": false,
+    "pages": [
+      {
+        "index": 0,
+        "phys": null,
+        "file": null,
+        "nonzero": 0,
+        "head": "0000000000000000000000000000000000000000000000000000000000000000",
+        "trace": [
+          {
+            "node": "0xffff978f72446490",
+            "shift": 0,
+            "slot": 0,
+            "entry": "0xb442f0001001"
+          }
+        ]
+      },
+      {
+        "index": 1,
+        "phys": null,
+        "file": null,
+        "nonzero": 0,
+        "head": "0000000000000000000000000000000000000000000000000000000000000000",
+        "trace": [
+          {
+            "node": "0xffff978f72446490",
+            "shift": 0,
+            "slot": 1,
+            "entry": "0xb49fa0001001"
+          }
+        ]
+      },
+      {
+        "index": 2,
+        "phys": null,
+        "file": null,
+        "nonzero": 0,
+        "head": "0000000000000000000000000000000000000000000000000000000000000000",
+        "trace": [
+          {
+            "node": "0xffff978f72446490",
+            "shift": 0,
+            "slot": 2,
+            "entry": "0xb4b860001001"
+          }
+        ]
+      },
+      {
+        "index": 3,
+        "phys": null,
+        "file": null,
+        "nonzero": 0,
+        "head": "0000000000000000000000000000000000000000000000000000000000000000",
+        "trace": [
+          {
+            "node": "0xffff978f72446490",
+            "shift": 0,
+            "slot": 3,
+            "entry": "0xb4b870001001"
+          }
+        ]
+      },
+      {
+        "index": 4,
+        "phys": null,
+        "file": null,
+        "nonzero": 0,
+        "head": "0000000000000000000000000000000000000000000000000000000000000000",
+        "trace": [
+          {
+            "node": "0xffff978f72446490",
+            "shift": 0,
+            "slot": 4,
+            "entry": "0xb4e290001001"
+          }
+        ]
+      },
+      {
+        "index": 5,
+        "phys": null,
+        "file": null,
+        "nonzero": 0,
+        "head": "0000000000000000000000000000000000000000000000000000000000000000",
+        "trace": [
+          {
+            "node": "0xffff978f72446490",
+            "shift": 0,
+            "slot": 5,
+            "entry": "0xb4e2a0001001"
+          }
+        ]
+      },
+      {
+        "index": 6,
+        "phys": null,
+        "file": null,
+        "nonzero": 0,
+        "head": "0000000000000000000000000000000000000000000000000000000000000000",
+        "trace": [
+          {
+            "node": "0xffff978f72446490",
+            "shift": 0,
+            "slot": 6,
+            "entry": "0xb4e2b0001001"
+          }
+        ]
+      },
+      {
+        "index": 7,
+        "phys": null,
+        "file": null,
+        "nonzero": 0,
+        "head": "0000000000000000000000000000000000000000000000000000000000000000",
+        "trace": [
+          {
+            "node": "0xffff978f72446490",
+            "shift": 0,
+            "slot": 7,
+            "entry": "0xb4e2c0001001"
+          }
+        ]
+      },
+      {
+        "index": 8,
+        "phys": null,
+        "file": null,
+        "nonzero": 0,
+        "head": "0000000000000000000000000000000000000000000000000000000000000000",
+        "trace": [
+          {
+            "node": "0xffff978f72446490",
+            "shift": 0,
+            "slot": 8,
+            "entry": "0xb52d80001001"
+          }
+        ]
+      },
+      {
+        "index": 9,
+        "phys": "0x12aa30000",
+        "file": "0xea99d07e",
+        "nonzero": 719,
+        "head": "3834303432373437352c226170706c794261636b67726f756e64557064617465",
+        "trace": [
+          {
+            "node": "0xffff978f72446490",
+            "shift": 0,
+            "slot": 9,
+            "entry": "0xffffe18304aa8c00"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "handlers.json",
+    "size": 683,
+    "crc32": "e072bbae",
+    "expected": "6df5e5fd",
+    "verified": false,
+    "pages": [
+      {
+        "index": 0,
+        "phys": null,
+        "file": null,
+        "nonzero": 0,
+        "head": "0000000000000000000000000000000000000000000000000000000000000000",
+        "trace": []
+      }
+    ]
+  },
+  {
+    "name": "AlternateServices.txt",
+    "size": 5398,
+    "crc32": "e864cb4e",
+    "expected": "25489b76",
+    "verified": false,
+    "pages": [
+      {
+        "index": 0,
+        "phys": "0x212a71000",
+        "file": "0x1d29de07e",
+        "nonzero": 4083,
+        "head": "d04806a6a45221e5205948857d851f2260d5c5834982fa3ff65b8afefd65d576",
+        "trace": [
+          {
+            "node": "0xffff978e7547a000",
+            "shift": 0,
+            "slot": 0,
+            "entry": "0xffffe183084a9c40"
+          }
+        ]
+      },
+      {
+        "index": 1,
+        "phys": "0x21a87b000",
+        "file": "0x1da7e807e",
+        "nonzero": 1302,
+        "head": "66697273745061727479446f6d61696e3d676f6f676c652d622d652e73656172",
+        "trace": [
+          {
+            "node": "0xffff978e7547a000",
+            "shift": 0,
+            "slot": 1,
+            "entry": "0xffffe183086a1ec0"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "SiteSecurityServiceState.txt",
+    "size": 1043,
+    "crc32": "f125d89e",
+    "expected": "e16206f5",
+    "verified": false,
+    "pages": [
+      {
+        "index": 0,
+        "phys": null,
+        "file": null,
+        "nonzero": 0,
+        "head": "0000000000000000000000000000000000000000000000000000000000000000",
+        "trace": []
+      }
+    ]
+  }
+]

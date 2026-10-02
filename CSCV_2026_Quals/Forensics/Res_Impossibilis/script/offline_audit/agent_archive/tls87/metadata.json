@@ -1,0 +1,785 @@
+{
+  "stream": 87,
+  "pcap": "script/evidence/network.pcapng",
+  "packet_count": 130,
+  "first_time": "1788885137.942400800",
+  "last_time": "1788885158.592810700",
+  "directions": {
+    "client": {
+      "size": 68050,
+      "base_raw_sequence": 510565061,
+      "payload_packet_count": 54,
+      "duplicate_payload_bytes": 0,
+      "conflicting_bytes": [],
+      "gaps": [],
+      "segments": [
+        {
+          "frame": 40502,
+          "offset": 0,
+          "length": 1460,
+          "time": "1788885138.152086500"
+        },
+        {
+          "frame": 40503,
+          "offset": 1460,
+          "length": 335,
+          "time": "1788885138.152094600"
+        },
+        {
+          "frame": 40557,
+          "offset": 1795,
+          "length": 64,
+          "time": "1788885138.577727400"
+        },
+        {
+          "frame": 40559,
+          "offset": 1859,
+          "length": 611,
+          "time": "1788885138.579753700"
+        },
+        {
+          "frame": 40593,
+          "offset": 2470,
+          "length": 48,
+          "time": "1788885139.402514700"
+        },
+        {
+          "frame": 40595,
+          "offset": 2518,
+          "length": 1460,
+          "time": "1788885139.403273100"
+        },
+        {
+          "frame": 40596,
+          "offset": 3978,
+          "length": 1460,
+          "time": "1788885139.403284900"
+        },
+        {
+          "frame": 40599,
+          "offset": 5438,
+          "length": 1460,
+          "time": "1788885139.403472800"
+        },
+        {
+          "frame": 40600,
+          "offset": 6898,
+          "length": 1460,
+          "time": "1788885139.403486400"
+        },
+        {
+          "frame": 40603,
+          "offset": 8358,
+          "length": 1460,
+          "time": "1788885139.403799100"
+        },
+        {
+          "frame": 40604,
+          "offset": 9818,
+          "length": 1460,
+          "time": "1788885139.403810900"
+        },
+        {
+          "frame": 40607,
+          "offset": 11278,
+          "length": 1460,
+          "time": "1788885139.404482200"
+        },
+        {
+          "frame": 40608,
+          "offset": 12738,
+          "length": 1460,
+          "time": "1788885139.404489700"
+        },
+        {
+          "frame": 40611,
+          "offset": 14198,
+          "length": 1460,
+          "time": "1788885139.405075100"
+        },
+        {
+          "frame": 40612,
+          "offset": 15658,
+          "length": 1460,
+          "time": "1788885139.405081900"
+        },
+        {
+          "frame": 40615,
+          "offset": 17118,
+          "length": 1460,
+          "time": "1788885139.405614400"
+        },
+        {
+          "frame": 40616,
+          "offset": 18578,
+          "length": 346,
+          "time": "1788885139.405619600"
+        },
+        {
+          "frame": 40619,
+          "offset": 18924,
+          "length": 1460,
+          "time": "1788885139.406189400"
+        },
+        {
+          "frame": 40620,
+          "offset": 20384,
+          "length": 1460,
+          "time": "1788885139.406195400"
+        },
+        {
+          "frame": 40623,
+          "offset": 21844,
+          "length": 1460,
+          "time": "1788885139.406744100"
+        },
+        {
+          "frame": 40624,
+          "offset": 23304,
+          "length": 1460,
+          "time": "1788885139.406750700"
+        },
+        {
+          "frame": 40627,
+          "offset": 24764,
+          "length": 1460,
+          "time": "1788885139.407303700"
+        },
+        {
+          "frame": 40628,
+          "offset": 26224,
+          "length": 1460,
+          "time": "1788885139.407311800"
+        },
+        {
+          "frame": 40631,
+          "offset": 27684,
+          "length": 1460,
+          "time": "1788885139.407856600"
+        },
+        {
+          "frame": 40632,
+          "offset": 29144,
+          "length": 1460,
+          "time": "1788885139.407862600"
+        },
+        {
+          "frame": 40635,
+          "offset": 30604,
+          "length": 1460,
+          "time": "1788885139.408402600"
+        },
+        {
+          "frame": 40636,
+          "offset": 32064,
+          "length": 1460,
+          "time": "1788885139.408415400"
+        },
+        {
+          "frame": 40639,
+          "offset": 33524,
+          "length": 1460,
+          "time": "1788885139.408969900"
+        },
+        {
+          "frame": 40640,
+          "offset": 34984,
+          "length": 346,
+          "time": "1788885139.408975200"
+        },
+        {
+          "frame": 40643,
+          "offset": 35330,
+          "length": 1460,
+          "time": "1788885139.409563800"
+        },
+        {
+          "frame": 40644,
+          "offset": 36790,
+          "length": 1460,
+          "time": "1788885139.409572000"
+        },
+        {
+          "frame": 40647,
+          "offset": 38250,
+          "length": 1460,
+          "time": "1788885139.410084400"
+        },
+        {
+          "frame": 40648,
+          "offset": 39710,
+          "length": 1460,
+          "time": "1788885139.410090900"
+        },
+        {
+          "frame": 40651,
+          "offset": 41170,
+          "length": 1460,
+          "time": "1788885139.410444100"
+        },
+        {
+          "frame": 40652,
+          "offset": 42630,
+          "length": 1460,
+          "time": "1788885139.410450100"
+        },
+        {
+          "frame": 40653,
+          "offset": 44090,
+          "length": 1460,
+          "time": "1788885139.410497700"
+        },
+        {
+          "frame": 40654,
+          "offset": 45550,
+          "length": 1460,
+          "time": "1788885139.410502500"
+        },
+        {
+          "frame": 40659,
+          "offset": 47010,
+          "length": 1460,
+          "time": "1788885139.411078200"
+        },
+        {
+          "frame": 40660,
+          "offset": 48470,
+          "length": 1460,
+          "time": "1788885139.411090000"
+        },
+        {
+          "frame": 40663,
+          "offset": 49930,
+          "length": 1460,
+          "time": "1788885139.411580300"
+        },
+        {
+          "frame": 40664,
+          "offset": 51390,
+          "length": 346,
+          "time": "1788885139.411585400"
+        },
+        {
+          "frame": 40667,
+          "offset": 51736,
+          "length": 1460,
+          "time": "1788885139.412134700"
+        },
+        {
+          "frame": 40668,
+          "offset": 53196,
+          "length": 1460,
+          "time": "1788885139.412140900"
+        },
+        {
+          "frame": 40671,
+          "offset": 54656,
+          "length": 1460,
+          "time": "1788885139.412535100"
+        },
+        {
+          "frame": 40672,
+          "offset": 56116,
+          "length": 1460,
+          "time": "1788885139.412541400"
+        },
+        {
+          "frame": 40675,
+          "offset": 57576,
+          "length": 1460,
+          "time": "1788885139.413020000"
+        },
+        {
+          "frame": 40676,
+          "offset": 59036,
+          "length": 1460,
+          "time": "1788885139.413027800"
+        },
+        {
+          "frame": 40679,
+          "offset": 60496,
+          "length": 1460,
+          "time": "1788885139.413521500"
+        },
+        {
+          "frame": 40680,
+          "offset": 61956,
+          "length": 1460,
+          "time": "1788885139.413527100"
+        },
+        {
+          "frame": 40683,
+          "offset": 63416,
+          "length": 1460,
+          "time": "1788885139.414012700"
+        },
+        {
+          "frame": 40684,
+          "offset": 64876,
+          "length": 1460,
+          "time": "1788885139.414020900"
+        },
+        {
+          "frame": 40687,
+          "offset": 66336,
+          "length": 1460,
+          "time": "1788885139.414492000"
+        },
+        {
+          "frame": 40688,
+          "offset": 67796,
+          "length": 226,
+          "time": "1788885139.414496700"
+        },
+        {
+          "frame": 40919,
+          "offset": 68022,
+          "length": 28,
+          "time": "1788885158.383320200"
+        }
+      ],
+      "tls_records": [
+        {
+          "index": 0,
+          "offset": 0,
+          "content_type": 22,
+          "legacy_version": "0x0301",
+          "length": 1790,
+          "payload_offset": 5,
+          "end": 1795,
+          "after_ccs": false
+        },
+        {
+          "index": 1,
+          "offset": 1795,
+          "content_type": 20,
+          "legacy_version": "0x0303",
+          "length": 1,
+          "payload_offset": 1800,
+          "end": 1801,
+          "after_ccs": false
+        },
+        {
+          "index": 2,
+          "offset": 1801,
+          "content_type": 23,
+          "legacy_version": "0x0303",
+          "length": 53,
+          "payload_offset": 1806,
+          "end": 1859,
+          "after_ccs": true
+        },
+        {
+          "index": 3,
+          "offset": 1859,
+          "content_type": 23,
+          "legacy_version": "0x0303",
+          "length": 606,
+          "payload_offset": 1864,
+          "end": 2470,
+          "after_ccs": true
+        },
+        {
+          "index": 4,
+          "offset": 2470,
+          "content_type": 23,
+          "legacy_version": "0x0303",
+          "length": 43,
+          "payload_offset": 2475,
+          "end": 2518,
+          "after_ccs": true
+        },
+        {
+          "index": 5,
+          "offset": 2518,
+          "content_type": 23,
+          "legacy_version": "0x0303",
+          "length": 16401,
+          "payload_offset": 2523,
+          "end": 18924,
+          "after_ccs": true
+        },
+        {
+          "index": 6,
+          "offset": 18924,
+          "content_type": 23,
+          "legacy_version": "0x0303",
+          "length": 16401,
+          "payload_offset": 18929,
+          "end": 35330,
+          "after_ccs": true
+        },
+        {
+          "index": 7,
+          "offset": 35330,
+          "content_type": 23,
+          "legacy_version": "0x0303",
+          "length": 16401,
+          "payload_offset": 35335,
+          "end": 51736,
+          "after_ccs": true
+        },
+        {
+          "index": 8,
+          "offset": 51736,
+          "content_type": 23,
+          "legacy_version": "0x0303",
+          "length": 16281,
+          "payload_offset": 51741,
+          "end": 68022,
+          "after_ccs": true
+        },
+        {
+          "index": 9,
+          "offset": 68022,
+          "content_type": 23,
+          "legacy_version": "0x0303",
+          "length": 23,
+          "payload_offset": 68027,
+          "end": 68050,
+          "after_ccs": true
+        }
+      ],
+      "handshakes": [
+        {
+          "type": 1,
+          "length": 1786,
+          "hello": {
+            "legacy_version": "0303",
+            "random": "42799c928b22c8a61bd29cf88cf7a0c2f4f892b6133e7d7b31a1a81dc86c0035",
+            "session_id": "ca8798d4c2485ad7043547a356283c8478b6055b8006c97e5965d0e237b5f5fc",
+            "cipher_suites": [
+              "0x8a8a",
+              "0x1301",
+              "0x1302",
+              "0x1303",
+              "0xc02b",
+              "0xc02f",
+              "0xc02c",
+              "0xc030",
+              "0xcca9",
+              "0xcca8",
+              "0xc013",
+              "0xc014",
+              "0x009c",
+              "0x009d",
+              "0x002f",
+              "0x0035"
+            ],
+            "compressions": [
+              0
+            ],
+            "extensions": [
+              {
+                "type": 51914,
+                "length": 0,
+                "hex": ""
+              },
+              {
+                "type": 65281,
+                "length": 1,
+                "hex": "00"
+              },
+              {
+                "type": 27,
+                "length": 3,
+                "hex": "020002"
+              },
+              {
+                "type": 16,
+                "length": 11,
+                "hex": "000908687474702f312e31",
+                "alpn": [
+                  "http/1.1"
+                ]
+              },
+              {
+                "type": 0,
+                "length": 38,
+                "hex": "00240000216766733230346e3037302e7573657273746f726167652e6d6567612e636f2e6e7a",
+                "server_names": [
+                  "gfs204n070.userstorage.mega.co.nz"
+                ]
+              },
+              {
+                "type": 18,
+                "length": 0,
+                "hex": ""
+              },
+              {
+                "type": 13,
+                "length": 18,
+                "hex": "001004030804040105030805050108060601"
+              },
+              {
+                "type": 45,
+                "length": 2,
+                "hex": "0101"
+              },
+              {
+                "type": 35,
+                "length": 0,
+                "hex": ""
+              },
+              {
+                "type": 5,
+                "length": 5,
+                "hex": "0100000000"
+              },
+              {
+                "type": 65037,
+                "length": 250,
+                "hex": "0000010001b600200938710e369bf5d77c76d917221ca438106d1710706c3fb1a41a5063d8b6c52a00d0cbe296838ab81227ae3b3a319432877589d17ba364cb96dd046133316576f43cd44e2e919bdcaa8cf7a974f3858a770ace6b10b87dbb9f5743b26ee00ff4ba4e2324c6940992da5f27da9418cc78eee912de4317912ce5797fc9d062169ef1e9774078081ced9fa8e52eea04427175cba1d4ee3e1a23cdbf909c7ee76fbda5c1720a922a27cad845cb835457adec33d7b2e202dce590fd863171c9221191bed42e52b45fdfd6005f3209874beb7c33a86d4c4741edcefc111eae38aadd5ccb74d802fe27f3d67ef054c9d4dbbc0c45cc"
+              },
+              {
+                "type": 43,
+                "length": 7,
+                "hex": "06caca03040303",
+                "supported_versions": "06caca03040303"
+              },
+              {
+                "type": 10,
+                "length": 12,
+                "hex": "000afafa11ec001d00170018"
+              },
+              {
+                "type": 11,
+                "length": 2,
+                "hex": "0100"
+              },
+              {
+                "type": 23,
+                "length": 0,
+                "hex": ""
+              },
+              {
+                "type": 51,
+                "length": 1263,
+                "hex": "04edfafa00010011ec04c0f3e2851c32b927165a79a24a2d76abe186b1ca1625329a5281650e6ed5ad1ad8babb93a6de33571fb20a507a75497609f41c237769834ac769f04b1946f38186512ca3182f4e3c2112c51af0793ae7047ec6715295b892436c4b80540ebaa0c257eb090cd0693eca7a589c1e771733b56b17e1a50ae06c2639a15064881014606fc22c265fd45d8d7233dde91c0d72ba9642c5b0552b6e913ea6b84a980932768333968b6d1e846a1a62577479231005184ef008e26163747026c26ac942602c33c6b552938d1d1443bb1919d96334dbda474e45514f4289301588d8fc39e40a0701a373d272755ae1ccf3c3050ebcb8f5135751874da4f77c7203a237b6381d902f8275a152631309375f57c1a09f2650f83c0f6a6112fd878a15d32226853f0a1822042648568c7669481afef3207a1433e7e24b4bf4c785c998b02b662d5a921d380d0ec2942366cb19c241274206b9cb35b8e0140a9b8c66b4437c623fc8860bc3ab385d835499bac7523828a9362b4bf2982a707c615c4260356182c36a6c90105726aae67a09335325641a92494a48dc34a6f8a64c9070427194990c9c7ef9250fb330c7ee5002b93061229ba84b8c9471b53f2889aa5cc8a9e7e09463b090fa05961366ca0a6b93e2c77fbada8997f37b0a58bd4f01208aca9861a6a35cc388b9962c30a37d088c71f605581e9b563cbc49ba457459448de71681fb2c07c8fa99441c517fd26d534768b8018e3c361910514743e3c7bd0c7e857b89448c9b85ccb654b0a6f5cba2bf830162e485784364bde36c6f6351ee7832ac1704dd88bd388b194ae4ac2c8542f41b16f02176fbf35f3496023444aeca70b7b58777da69161710918e91446e52282ed804df437cfac7692b28be45e5b16ad856f42bc8d3f13fef88a26417a8a9d886db515b2a75195a7231bc666a25b4c417fc2caf14c975ab3f0b4886d48aa768ba9787930195e70e33e76797ab5d27e2cfcdf59de4d98d80b02f0321cf7f9aa837f764fb513c5aa20c613c8441152a954c534f6cb297b9a0eb2324eb187ba2993024842d0869baa2333f31da0abd7c0a4b37437e57a11ab7676577034eaa410ac4ad37094a119a6cdf126272a4364adc7a4b32019d720370775292150bd6e2186cc10383605ed9e33284fa4bd9a60b2226105a1664511a1124ab6929c356ce7ba3e8827c8124130b114b970857ea05459e5c94481b24e9a8acaad420da733030bb071a511a6d7bb53c1a564a4638ee408922d9c07991b1b9986a4dd4c6c733a6eb606f7342aaf62a5d79ea2bdca617fa40255cc3010000c57e1aba4c2487346b2519dabf93f19eb7f71d5192bc63761506497713e6c0e1c814fec9aa526c117c973484348e3a342ab4853505078077fa345090100233041424c6978b955060727a203e760156cfe91e8b003fc13282eec446b4a25dccf8594ec5b3d53b6d8871a607e2bca9020e9e1b5e1e14231b7bb5012408e5d19a077c58316b98b0428aec427481c3006a044e4b823f54722b7c38a304bb3f688b931bf4437cb16df9889336e94a83cb4f33e340d889c258e96caaf86f65a69f0d85686de0bea4a2604d848a3bd057f411a0b880abb82530297366ebd5a3c7b66ceb0c102dc0afde8c423db7df29ed5e673f959136764c1182880aa399cd98e86c836ff4030b4b56387630dbf69df3083a90e6657442ed7d69d3cb74b67f001d0020ed0dcc1faf9a6fdd341ca56af09a08f9e4321e6fb564f06b91d8e56f0cbb6621"
+              },
+              {
+                "type": 56026,
+                "length": 1,
+                "hex": "00"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "server": {
+      "size": 6288,
+      "base_raw_sequence": 143603628,
+      "payload_packet_count": 9,
+      "duplicate_payload_bytes": 0,
+      "conflicting_bytes": [],
+      "gaps": [],
+      "segments": [
+        {
+          "frame": 40549,
+          "offset": 0,
+          "length": 1460,
+          "time": "1788885138.571165500"
+        },
+        {
+          "frame": 40550,
+          "offset": 1460,
+          "length": 1460,
+          "time": "1788885138.571228100"
+        },
+        {
+          "frame": 40551,
+          "offset": 2920,
+          "length": 1460,
+          "time": "1788885138.571261700"
+        },
+        {
+          "frame": 40552,
+          "offset": 4380,
+          "length": 1141,
+          "time": "1788885138.571303400"
+        },
+        {
+          "frame": 40571,
+          "offset": 5521,
+          "length": 559,
+          "time": "1788885139.038116800"
+        },
+        {
+          "frame": 40699,
+          "offset": 6080,
+          "length": 41,
+          "time": "1788885140.037824600"
+        },
+        {
+          "frame": 40704,
+          "offset": 6121,
+          "length": 78,
+          "time": "1788885140.289763700"
+        },
+        {
+          "frame": 40853,
+          "offset": 6199,
+          "length": 41,
+          "time": "1788885148.128474100"
+        },
+        {
+          "frame": 40932,
+          "offset": 6240,
+          "length": 48,
+          "time": "1788885158.591469800"
+        }
+      ],
+      "tls_records": [
+        {
+          "index": 0,
+          "offset": 0,
+          "content_type": 22,
+          "legacy_version": "0x0303",
+          "length": 122,
+          "payload_offset": 5,
+          "end": 127,
+          "after_ccs": false
+        },
+        {
+          "index": 1,
+          "offset": 127,
+          "content_type": 20,
+          "legacy_version": "0x0303",
+          "length": 1,
+          "payload_offset": 132,
+          "end": 133,
+          "after_ccs": false
+        },
+        {
+          "index": 2,
+          "offset": 133,
+          "content_type": 23,
+          "legacy_version": "0x0303",
+          "length": 5383,
+          "payload_offset": 138,
+          "end": 5521,
+          "after_ccs": true
+        },
+        {
+          "index": 3,
+          "offset": 5521,
+          "content_type": 23,
+          "legacy_version": "0x0303",
+          "length": 413,
+          "payload_offset": 5526,
+          "end": 5939,
+          "after_ccs": true
+        },
+        {
+          "index": 4,
+          "offset": 5939,
+          "content_type": 23,
+          "legacy_version": "0x0303",
+          "length": 136,
+          "payload_offset": 5944,
+          "end": 6080,
+          "after_ccs": true
+        },
+        {
+          "index": 5,
+          "offset": 6080,
+          "content_type": 23,
+          "legacy_version": "0x0303",
+          "length": 36,
+          "payload_offset": 6085,
+          "end": 6121,
+          "after_ccs": true
+        },
+        {
+          "index": 6,
+          "offset": 6121,
+          "content_type": 23,
+          "legacy_version": "0x0303",
+          "length": 73,
+          "payload_offset": 6126,
+          "end": 6199,
+          "after_ccs": true
+        },
+        {
+          "index": 7,
+          "offset": 6199,
+          "content_type": 23,
+          "legacy_version": "0x0303",
+          "length": 36,
+          "payload_offset": 6204,
+          "end": 6240,
+          "after_ccs": true
+        },
+        {
+          "index": 8,
+          "offset": 6240,
+          "content_type": 23,
+          "legacy_version": "0x0303",
+          "length": 19,
+          "payload_offset": 6245,
+          "end": 6264,
+          "after_ccs": true
+        },
+        {
+          "index": 9,
+          "offset": 6264,
+          "content_type": 23,
+          "legacy_version": "0x0303",
+          "length": 19,
+          "payload_offset": 6269,
+          "end": 6288,
+          "after_ccs": true
+        }
+      ],
+      "handshakes": [
+        {
+          "type": 2,
+          "length": 118,
+          "hello": {
+            "legacy_version": "0303",
+            "random": "17fec9b887efe9625c58fa0878cff39be81a7d81f1f41b76a5b61ea1b544dfd5",
+            "session_id": "ca8798d4c2485ad7043547a356283c8478b6055b8006c97e5965d0e237b5f5fc",
+            "cipher_suite": "0x1301",
+            "compression": 0,
+            "extensions": [
+              {
+                "type": 51,
+                "length": 36,
+                "hex": "001d00205691aa0f780f3b74ebd1d3a190f8cd3898fee18189895fa91505f5f4dc919761"
+              },
+              {
+                "type": 43,
+                "length": 2,
+                "hex": "0304",
+                "supported_versions": "0304"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "tshark_handshakes": [
+    {
+      "frame": 40549,
+      "time": "1788885138.571165500",
+      "src": "185.206.24.30",
+      "sport": "443",
+      "dst": "192.168.76.131",
+      "dport": "35918",
+      "seq": 143603628,
+      "ack": "510566856",
+      "flags": 16,
+      "tcp_len": 1460,
+      "hs_type": "2",
+      "hs_version": "0x0303",
+      "hs_random": "17fec9b887efe9625c58fa0878cff39be81a7d81f1f41b76a5b61ea1b544dfd5",
+      "hs_suites": "0x1301",
+      "sni": "",
+      "alpn": "",
+      "supported_version": "0x0304",
+      "direction": "server"
+    }
+  ]
+}

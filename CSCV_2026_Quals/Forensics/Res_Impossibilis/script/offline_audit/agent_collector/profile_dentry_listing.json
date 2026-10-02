@@ -1,0 +1,3215 @@
+[
+  {
+    "dentry": "0xffff979067cd1c00",
+    "path": "/tmp/firefox-clean/127.0.0.1:+4144",
+    "inode": "0x0",
+    "mode": "0x0",
+    "size": 0,
+    "mapping": "0x0",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f8a824240",
+    "path": "/tmp/firefox-clean/saved-telemetry-pings",
+    "inode": "0xffff978f8a8a3960",
+    "mode": "0x41c0",
+    "size": 50,
+    "mapping": "0xffff978f8a8a3ad8",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f8a8243c0",
+    "path": "/tmp/firefox-clean/saved-telemetry-pings/45966594-453c-42c9-a1b2-34d41eb683b6",
+    "inode": "0xffff978f8a8a7d20",
+    "mode": "0x8180",
+    "size": 141825,
+    "mapping": "0xffff978f8a8a7e98",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f8a824780",
+    "path": "/tmp/firefox-clean/xulstore.json",
+    "inode": "0xffff978f8a8a2a60",
+    "mode": "0x8180",
+    "size": 340,
+    "mapping": "0xffff978f8a8a2bd8",
+    "head": "0xb5b3a0001001"
+  },
+  {
+    "dentry": "0xffff978f8a824a80",
+    "path": "/tmp/firefox-clean/sessionstore.jsonlz4",
+    "inode": "0xffff978f8a8a3d20",
+    "mode": "0x8180",
+    "size": 13032,
+    "mapping": "0xffff978f8a8a3e98",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f8a824d80",
+    "path": "/tmp/firefox-clean/features",
+    "inode": "0xffff978f8a8a2e20",
+    "mode": "0x41c0",
+    "size": 52,
+    "mapping": "0xffff978f8a8a2f98",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f8a824540",
+    "path": "/tmp/firefox-clean/features/{ac8d00d4-483f-41e8-8a8d-6c85f4fcbc10}",
+    "inode": "0xffff978f8a8a17a0",
+    "mode": "0x41c0",
+    "size": 6,
+    "mapping": "0xffff978f8a8a1918",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f8a824180",
+    "path": "/tmp/firefox-clean/AlternateServices.txt",
+    "inode": "0xffff978f8a8a0c60",
+    "mode": "0x81b4",
+    "size": 5398,
+    "mapping": "0xffff978f8a8a0dd8",
+    "head": "0xffff978e7547a002"
+  },
+  {
+    "dentry": "0xffff978f8a8249c0",
+    "path": "/tmp/firefox-clean/SiteSecurityServiceState.txt",
+    "inode": "0xffff978f8a8a04e0",
+    "mode": "0x81b4",
+    "size": 1043,
+    "mapping": "0xffff978f8a8a0658",
+    "head": "0xb589a0001001"
+  },
+  {
+    "dentry": "0xffff978f8a824c00",
+    "path": "/tmp/firefox-clean/broadcast-listeners.json",
+    "inode": "0xffff978f8a8a26a0",
+    "mode": "0x8180",
+    "size": 204,
+    "mapping": "0xffff978f8a8a2818",
+    "head": "0xb52e00001001"
+  },
+  {
+    "dentry": "0xffff978f8a8226c0",
+    "path": "/tmp/firefox-clean/safebrowsing",
+    "inode": "0xffff978f8a89b1e0",
+    "mode": "0x41ed",
+    "size": 4096,
+    "mapping": "0xffff978f8a89b358",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f8a824600",
+    "path": "/tmp/firefox-clean/safebrowsing/social-tracking-protection-twitter-digest256.vlpset",
+    "inode": "0xffff978f8a8a35a0",
+    "mode": "0x81b4",
+    "size": 261,
+    "mapping": "0xffff978f8a8a3718",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f8a823e40",
+    "path": "/tmp/firefox-clean/safebrowsing/social-tracking-protection-twitter-digest256.sbstore",
+    "inode": "0xffff978f8a8a1b60",
+    "mode": "0x81b4",
+    "size": 248,
+    "mapping": "0xffff978f8a8a1cd8",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f8a823300",
+    "path": "/tmp/firefox-clean/safebrowsing/social-tracking-protection-linkedin-digest256.vlpset",
+    "inode": "0xffff978f8a8a0120",
+    "mode": "0x81b4",
+    "size": 165,
+    "mapping": "0xffff978f8a8a0298",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f8a8230c0",
+    "path": "/tmp/firefox-clean/safebrowsing/social-tracking-protection-linkedin-digest256.sbstore",
+    "inode": "0xffff978f8a8a1f20",
+    "mode": "0x81b4",
+    "size": 248,
+    "mapping": "0xffff978f8a8a2098",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f8a823b40",
+    "path": "/tmp/firefox-clean/safebrowsing/social-tracking-protection-facebook-digest256.vlpset",
+    "inode": "0xffff978f8a8a1020",
+    "mode": "0x81b4",
+    "size": 485,
+    "mapping": "0xffff978f8a8a1198",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f8a823480",
+    "path": "/tmp/firefox-clean/safebrowsing/social-tracking-protection-facebook-digest256.sbstore",
+    "inode": "0xffff978f8a8a22e0",
+    "mode": "0x81b4",
+    "size": 256,
+    "mapping": "0xffff978f8a8a2458",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f8a823900",
+    "path": "/tmp/firefox-clean/safebrowsing/base-cryptomining-track-digest256.vlpset",
+    "inode": "0xffff978f8a8a08a0",
+    "mode": "0x81b4",
+    "size": 2309,
+    "mapping": "0xffff978f8a8a0a18",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f8a8233c0",
+    "path": "/tmp/firefox-clean/safebrowsing/base-cryptomining-track-digest256.sbstore",
+    "inode": "0xffff978f8a8a31e0",
+    "mode": "0x81b4",
+    "size": 315,
+    "mapping": "0xffff978f8a8a3358",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f8a823240",
+    "path": "/tmp/firefox-clean/safebrowsing/base-fingerprinting-track-digest256.vlpset",
+    "inode": "0xffff978f8a8a13e0",
+    "mode": "0x81b4",
+    "size": 3653,
+    "mapping": "0xffff978f8a8a1558",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f8a823780",
+    "path": "/tmp/firefox-clean/safebrowsing/base-fingerprinting-track-digest256.sbstore",
+    "inode": "0xffff978f8a89d3e0",
+    "mode": "0x81b4",
+    "size": 357,
+    "mapping": "0xffff978f8a89d558",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f8a823a80",
+    "path": "/tmp/firefox-clean/safebrowsing/except-flashsubdoc-digest256.vlpset",
+    "inode": "0xffff978f8a89f960",
+    "mode": "0x81b4",
+    "size": 133,
+    "mapping": "0xffff978f8a89fad8",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f8a823540",
+    "path": "/tmp/firefox-clean/safebrowsing/except-flashsubdoc-digest256.sbstore",
+    "inode": "0xffff978f8a89ea60",
+    "mode": "0x81b4",
+    "size": 244,
+    "mapping": "0xffff978f8a89ebd8",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f8a823d80",
+    "path": "/tmp/firefox-clean/safebrowsing/block-flashsubdoc-digest256.vlpset",
+    "inode": "0xffff978f8a89fd20",
+    "mode": "0x81b4",
+    "size": 73413,
+    "mapping": "0xffff978f8a89fe98",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f8a823180",
+    "path": "/tmp/firefox-clean/safebrowsing/block-flashsubdoc-digest256.sbstore",
+    "inode": "0xffff978f8a89d7a0",
+    "mode": "0x81b4",
+    "size": 2576,
+    "mapping": "0xffff978f8a89d918",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f8a8239c0",
+    "path": "/tmp/firefox-clean/safebrowsing/except-flash-digest256.vlpset",
+    "inode": "0xffff978f8a89ee20",
+    "mode": "0x81b4",
+    "size": 101,
+    "mapping": "0xffff978f8a89ef98",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f8a823c00",
+    "path": "/tmp/firefox-clean/safebrowsing/except-flash-digest256.sbstore",
+    "inode": "0xffff978f8a89cc60",
+    "mode": "0x81b4",
+    "size": 240,
+    "mapping": "0xffff978f8a89cdd8",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f8a823600",
+    "path": "/tmp/firefox-clean/safebrowsing/block-flash-digest256.vlpset",
+    "inode": "0xffff978f8a89c4e0",
+    "mode": "0x81b4",
+    "size": 6661,
+    "mapping": "0xffff978f8a89c658",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f8a823f00",
+    "path": "/tmp/firefox-clean/safebrowsing/block-flash-digest256.sbstore",
+    "inode": "0xffff978f8a89e6a0",
+    "mode": "0x81b4",
+    "size": 451,
+    "mapping": "0xffff978f8a89e818",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f8a823000",
+    "path": "/tmp/firefox-clean/safebrowsing/except-flashallow-digest256.vlpset",
+    "inode": "0xffff978f8a89f5a0",
+    "mode": "0x81b4",
+    "size": 69,
+    "mapping": "0xffff978f8a89f718",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f8a823840",
+    "path": "/tmp/firefox-clean/safebrowsing/except-flashallow-digest256.sbstore",
+    "inode": "0xffff978f8a89db60",
+    "mode": "0x81b4",
+    "size": 236,
+    "mapping": "0xffff978f8a89dcd8",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f8a823cc0",
+    "path": "/tmp/firefox-clean/safebrowsing/allow-flashallow-digest256.vlpset",
+    "inode": "0xffff978f8a89c120",
+    "mode": "0x81b4",
+    "size": 69,
+    "mapping": "0xffff978f8a89c298",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f8a8236c0",
+    "path": "/tmp/firefox-clean/safebrowsing/allow-flashallow-digest256.sbstore",
+    "inode": "0xffff978f8a89df20",
+    "mode": "0x81b4",
+    "size": 236,
+    "mapping": "0xffff978f8a89e098",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f8a822900",
+    "path": "/tmp/firefox-clean/safebrowsing/google-trackwhite-digest256.vlpset",
+    "inode": "0xffff978f8a89d020",
+    "mode": "0x81b4",
+    "size": 1470341,
+    "mapping": "0xffff978f8a89d198",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f8a8223c0",
+    "path": "/tmp/firefox-clean/safebrowsing/google-trackwhite-digest256.sbstore",
+    "inode": "0xffff978f8a89e2e0",
+    "mode": "0x81b4",
+    "size": 46359,
+    "mapping": "0xffff978f8a89e458",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f8a822240",
+    "path": "/tmp/firefox-clean/safebrowsing/mozstd-trackwhite-digest256.vlpset",
+    "inode": "0xffff978f8a89c8a0",
+    "mode": "0x81b4",
+    "size": 308453,
+    "mapping": "0xffff978f8a89ca18",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f8a822780",
+    "path": "/tmp/firefox-clean/safebrowsing/mozstd-trackwhite-digest256.sbstore",
+    "inode": "0xffff978f8a89f1e0",
+    "mode": "0x81b4",
+    "size": 9945,
+    "mapping": "0xffff978f8a89f358",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f8a822a80",
+    "path": "/tmp/firefox-clean/safebrowsing/content-track-digest256.vlpset",
+    "inode": "0xffff978f8a89ae20",
+    "mode": "0x81b4",
+    "size": 15557,
+    "mapping": "0xffff978f8a89af98",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f8a822540",
+    "path": "/tmp/firefox-clean/safebrowsing/content-track-digest256.sbstore",
+    "inode": "0xffff978f8a898c60",
+    "mode": "0x81b4",
+    "size": 735,
+    "mapping": "0xffff978f8a898dd8",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f8a822d80",
+    "path": "/tmp/firefox-clean/safebrowsing/analytics-track-digest256.vlpset",
+    "inode": "0xffff978f8a8984e0",
+    "mode": "0x81b4",
+    "size": 9925,
+    "mapping": "0xffff978f8a898658",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f8a822180",
+    "path": "/tmp/firefox-clean/safebrowsing/analytics-track-digest256.sbstore",
+    "inode": "0xffff978f8a89a6a0",
+    "mode": "0x81b4",
+    "size": 556,
+    "mapping": "0xffff978f8a89a818",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f8a8229c0",
+    "path": "/tmp/firefox-clean/safebrowsing/social-track-digest256.vlpset",
+    "inode": "0xffff978f8a89b5a0",
+    "mode": "0x81b4",
+    "size": 2149,
+    "mapping": "0xffff978f8a89b718",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f8a822c00",
+    "path": "/tmp/firefox-clean/safebrowsing/social-track-digest256.sbstore",
+    "inode": "0xffff978f8a899b60",
+    "mode": "0x81b4",
+    "size": 310,
+    "mapping": "0xffff978f8a899cd8",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f8a822600",
+    "path": "/tmp/firefox-clean/safebrowsing/ads-track-digest256.vlpset",
+    "inode": "0xffff978f8a898120",
+    "mode": "0x81b4",
+    "size": 55461,
+    "mapping": "0xffff978f8a898298",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f8a822f00",
+    "path": "/tmp/firefox-clean/safebrowsing/ads-track-digest256.sbstore",
+    "inode": "0xffff978f8a899f20",
+    "mode": "0x81b4",
+    "size": 2006,
+    "mapping": "0xffff978f8a89a098",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f8a822000",
+    "path": "/tmp/firefox-clean/safebrowsing/mozplugin-block-digest256.vlpset",
+    "inode": "0xffff978f8a899020",
+    "mode": "0x81b4",
+    "size": 3045,
+    "mapping": "0xffff978f8a899198",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f8a822840",
+    "path": "/tmp/firefox-clean/safebrowsing/mozplugin-block-digest256.sbstore",
+    "inode": "0xffff978f8a89a2e0",
+    "mode": "0x81b4",
+    "size": 338,
+    "mapping": "0xffff978f8a89a458",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f8a822cc0",
+    "path": "/tmp/firefox-clean/safebrowsing/google4",
+    "inode": "0xffff978f8a8988a0",
+    "mode": "0x41ed",
+    "size": 6,
+    "mapping": "0xffff978f8a898a18",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f8a822e40",
+    "path": "/tmp/firefox-clean/formhistory.sqlite",
+    "inode": "0xffff978f8a8993e0",
+    "mode": "0x81a4",
+    "size": 262144,
+    "mapping": "0xffff978f8a899558",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f8a822300",
+    "path": "/tmp/firefox-clean/handlers.json",
+    "inode": "0xffff978f8a89b960",
+    "mode": "0x8180",
+    "size": 683,
+    "mapping": "0xffff978f8a89bad8",
+    "head": "0xb52df0001001"
+  },
+  {
+    "dentry": "0xffff978f8a8220c0",
+    "path": "/tmp/firefox-clean/containers.json",
+    "inode": "0xffff978f8a89aa60",
+    "mode": "0x81b4",
+    "size": 939,
+    "mapping": "0xffff978f8a89abd8",
+    "head": "0xb5db70001001"
+  },
+  {
+    "dentry": "0xffff978f8a822b40",
+    "path": "/tmp/firefox-clean/sessionstore-backups",
+    "inode": "0xffff978f8a89bd20",
+    "mode": "0x41c0",
+    "size": 6,
+    "mapping": "0xffff978f8a89be98",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f8a822480",
+    "path": "/tmp/firefox-clean/shield-preference-experiments.json",
+    "inode": "0xffff978f8a8997a0",
+    "mode": "0x8180",
+    "size": 18,
+    "mapping": "0xffff978f8a899918",
+    "head": "0xb52de0001001"
+  },
+  {
+    "dentry": "0xffff978f8a821c00",
+    "path": "/tmp/firefox-clean/search.json.mozlz4",
+    "inode": "0xffff978f8a8948a0",
+    "mode": "0x81b4",
+    "size": 180,
+    "mapping": "0xffff978f8a894a18",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f8a821600",
+    "path": "/tmp/firefox-clean/extension-preferences.json",
+    "inode": "0xffff978f8a8971e0",
+    "mode": "0x8180",
+    "size": 1380,
+    "mapping": "0xffff978f8a897358",
+    "head": "0xb52dd0001001"
+  },
+  {
+    "dentry": "0xffff978f8a821f00",
+    "path": "/tmp/firefox-clean/addonStartup.json.lz4",
+    "inode": "0xffff978f8a8953e0",
+    "mode": "0x8180",
+    "size": 3932,
+    "mapping": "0xffff978f8a895558",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f8a821540",
+    "path": "/tmp/firefox-clean/datareporting",
+    "inode": "0xffff978f8a8917a0",
+    "mode": "0x41ed",
+    "size": 79,
+    "mapping": "0xffff978f8a891918",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f8a821000",
+    "path": "/tmp/firefox-clean/datareporting/session-state.json",
+    "inode": "0xffff978f8a897960",
+    "mode": "0x8180",
+    "size": 161,
+    "mapping": "0xffff978f8a897ad8",
+    "head": "0xb52dc0001001"
+  },
+  {
+    "dentry": "0xffff978f8a8210c0",
+    "path": "/tmp/firefox-clean/datareporting/archived",
+    "inode": "0xffff978f8a8944e0",
+    "mode": "0x41c0",
+    "size": 21,
+    "mapping": "0xffff978f8a894658",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f8a821300",
+    "path": "/tmp/firefox-clean/datareporting/archived/2026-09",
+    "inode": "0xffff978f8a894c60",
+    "mode": "0x41c0",
+    "size": 4096,
+    "mapping": "0xffff978f8a894dd8",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f8a821780",
+    "path": "/tmp/firefox-clean/datareporting/glean",
+    "inode": "0xffff978f8a895020",
+    "mode": "0x41fd",
+    "size": 62,
+    "mapping": "0xffff978f8a895198",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f8a821b40",
+    "path": "/tmp/firefox-clean/datareporting/glean/tmp",
+    "inode": "0xffff978f8a8966a0",
+    "mode": "0x41fd",
+    "size": 6,
+    "mapping": "0xffff978f8a896818",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f8a821480",
+    "path": "/tmp/firefox-clean/datareporting/glean/pending_pings",
+    "inode": "0xffff978f8a8975a0",
+    "mode": "0x41fd",
+    "size": 6,
+    "mapping": "0xffff978f8a897718",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f8a8213c0",
+    "path": "/tmp/firefox-clean/datareporting/glean/db",
+    "inode": "0xffff978f8a894120",
+    "mode": "0x41fd",
+    "size": 27,
+    "mapping": "0xffff978f8a894298",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f8a821240",
+    "path": "/tmp/firefox-clean/datareporting/glean/events",
+    "inode": "0xffff978f8a895f20",
+    "mode": "0x41fd",
+    "size": 6,
+    "mapping": "0xffff978f8a896098",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f8a821a80",
+    "path": "/tmp/firefox-clean/datareporting/state.json",
+    "inode": "0xffff978f8a8962e0",
+    "mode": "0x81b4",
+    "size": 51,
+    "mapping": "0xffff978f8a896458",
+    "head": "0xb52db0001001"
+  },
+  {
+    "dentry": "0xffff978f8a821d80",
+    "path": "/tmp/firefox-clean/protections.sqlite",
+    "inode": "0xffff978f8a892e20",
+    "mode": "0x81a4",
+    "size": 65536,
+    "mapping": "0xffff978f8a892f98",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f8a821180",
+    "path": "/tmp/firefox-clean/content-prefs.sqlite",
+    "inode": "0xffff978f8a890c60",
+    "mode": "0x81a4",
+    "size": 229376,
+    "mapping": "0xffff978f8a890dd8",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f8a820cc0",
+    "path": "/tmp/firefox-clean/bookmarkbackups",
+    "inode": "0xffff978f8a8926a0",
+    "mode": "0x41ed",
+    "size": 69,
+    "mapping": "0xffff978f8a892818",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f8a8219c0",
+    "path": "/tmp/firefox-clean/bookmarkbackups/bookmarks-2026-09-08_9_l9ysGxkbOf23mYPdvAo85Q==.jsonlz4",
+    "inode": "0xffff978f8a8904e0",
+    "mode": "0x8180",
+    "size": 701,
+    "mapping": "0xffff978f8a890658",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f8a8206c0",
+    "path": "/tmp/firefox-clean/favicons.sqlite",
+    "inode": "0xffff978f8a8935a0",
+    "mode": "0x81a4",
+    "size": 5242880,
+    "mapping": "0xffff978f8a893718",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f8a820e40",
+    "path": "/tmp/firefox-clean/places.sqlite",
+    "inode": "0xffff978f8a891b60",
+    "mode": "0x81a4",
+    "size": 5242880,
+    "mapping": "0xffff978f8a891cd8",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f8a820300",
+    "path": "/tmp/firefox-clean/thumbnails",
+    "inode": "0xffff978f8a890120",
+    "mode": "0x41ed",
+    "size": 6,
+    "mapping": "0xffff978f8a890298",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f8a8200c0",
+    "path": "/tmp/firefox-clean/webappsstore.sqlite",
+    "inode": "0xffff978f8a891f20",
+    "mode": "0x81a4",
+    "size": 98304,
+    "mapping": "0xffff978f8a892098",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f8a820b40",
+    "path": "/tmp/firefox-clean/addons.json",
+    "inode": "0xffff978f8a891020",
+    "mode": "0x81b4",
+    "size": 24,
+    "mapping": "0xffff978f8a891198",
+    "head": "0xb52d90001001"
+  },
+  {
+    "dentry": "0xffff978f8a820480",
+    "path": "/tmp/firefox-clean/extensions.json",
+    "inode": "0xffff978f8a8922e0",
+    "mode": "0x81b4",
+    "size": 37583,
+    "mapping": "0xffff978f8a892458",
+    "head": "0xffff978f72446492"
+  },
+  {
+    "dentry": "0xffff978f8a820900",
+    "path": "/tmp/firefox-clean/security_state",
+    "inode": "0xffff978f8a8908a0",
+    "mode": "0x41fd",
+    "size": 6,
+    "mapping": "0xffff978f8a890a18",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f8a8203c0",
+    "path": "/tmp/firefox-clean/key4.db",
+    "inode": "0xffff978f8a8931e0",
+    "mode": "0x8180",
+    "size": 294912,
+    "mapping": "0xffff978f8a893358",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f8a820240",
+    "path": "/tmp/firefox-clean/cert9.db",
+    "inode": "0xffff978f8a8913e0",
+    "mode": "0x8180",
+    "size": 229376,
+    "mapping": "0xffff978f8a891558",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f8a820780",
+    "path": "/tmp/firefox-clean/pkcs11.txt",
+    "inode": "0xffff978f8a893960",
+    "mode": "0x8180",
+    "size": 442,
+    "mapping": "0xffff978f8a893ad8",
+    "head": "0xb442e0001001"
+  },
+  {
+    "dentry": "0xffff978f8a820a80",
+    "path": "/tmp/firefox-clean/times.json",
+    "inode": "0xffff978f8a892a60",
+    "mode": "0x81b4",
+    "size": 50,
+    "mapping": "0xffff978f8a892bd8",
+    "head": "0xb442d0001001"
+  },
+  {
+    "dentry": "0xffff978f606923c0",
+    "path": "/tmp/firefox-clean/storage",
+    "inode": "0xffff978f8a889b60",
+    "mode": "0x41ed",
+    "size": 55,
+    "mapping": "0xffff978f8a889cd8",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f8a820600",
+    "path": "/tmp/firefox-clean/storage/default",
+    "inode": "0xffff978f8a88df20",
+    "mode": "0x41ed",
+    "size": 91,
+    "mapping": "0xffff978f8a88e098",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f8a820c00",
+    "path": "/tmp/firefox-clean/storage/default/moz-extension+++075b8d58-f0c7-4a6d-a74f-a3df0848af91^userContextId=4294967295",
+    "inode": "0xffff978f8a88c120",
+    "mode": "0x41ed",
+    "size": 37,
+    "mapping": "0xffff978f8a88c298",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f8a820f00",
+    "path": "/tmp/firefox-clean/storage/temporary",
+    "inode": "0xffff978f8a88d020",
+    "mode": "0x41ed",
+    "size": 6,
+    "mapping": "0xffff978f8a88d198",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f606920c0",
+    "path": "/tmp/firefox-clean/storage/permanent",
+    "inode": "0xffff978f8a88b5a0",
+    "mode": "0x41ed",
+    "size": 20,
+    "mapping": "0xffff978f8a88b718",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f60692480",
+    "path": "/tmp/firefox-clean/storage/permanent/chrome",
+    "inode": "0xffff978f8a88a6a0",
+    "mode": "0x41ed",
+    "size": 37,
+    "mapping": "0xffff978f8a88a818",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f60692900",
+    "path": "/tmp/firefox-clean/storage.sqlite",
+    "inode": "0xffff978f8a888120",
+    "mode": "0x81a4",
+    "size": 4096,
+    "mapping": "0xffff978f8a888298",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f60692000",
+    "path": "/tmp/firefox-clean/sessionCheckpoints.json",
+    "inode": "0xffff978f8a889f20",
+    "mode": "0x81b4",
+    "size": 288,
+    "mapping": "0xffff978f8a88a098",
+    "head": "0xb442c0001001"
+  },
+  {
+    "dentry": "0xffff978f60692a80",
+    "path": "/tmp/firefox-clean/prefs.js",
+    "inode": "0xffff978f8a889020",
+    "mode": "0x8180",
+    "size": 7748,
+    "mapping": "0xffff978f8a889198",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f60692300",
+    "path": "/tmp/firefox-clean/cookies.sqlite",
+    "inode": "0xffff978f8a88a2e0",
+    "mode": "0x81a4",
+    "size": 524288,
+    "mapping": "0xffff978f8a88a458",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f60692840",
+    "path": "/tmp/firefox-clean/permissions.sqlite",
+    "inode": "0xffff978f8a8888a0",
+    "mode": "0x81a4",
+    "size": 98304,
+    "mapping": "0xffff978f8a888a18",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f607dc000",
+    "path": "/tmp/firefox-clean/cache2",
+    "inode": "0xffff978f8a80fd20",
+    "mode": "0x41c0",
+    "size": 35,
+    "mapping": "0xffff978f8a80fe98",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f60692240",
+    "path": "/tmp/firefox-clean/cache2/doomed",
+    "inode": "0xffff978f8a88b1e0",
+    "mode": "0x41c0",
+    "size": 6,
+    "mapping": "0xffff978f8a88b358",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f607dc480",
+    "path": "/tmp/firefox-clean/cache2/entries",
+    "inode": "0xffff978f8a80ea60",
+    "mode": "0x41c0",
+    "size": 16384,
+    "mapping": "0xffff978f8a80ebd8",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f60692780",
+    "path": "/tmp/firefox-clean/cache2/entries/DB34BDA9C0A4A550569614BD859245182C3B8F98",
+    "inode": "0xffff978f8a8893e0",
+    "mode": "0x8180",
+    "size": 14166,
+    "mapping": "0xffff978f8a889558",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f60692cc0",
+    "path": "/tmp/firefox-clean/cache2/entries/7A106CFFF32E1B6B60510A1F355EFB31988E4DC0",
+    "inode": "0xffff978f8a88b960",
+    "mode": "0x8180",
+    "size": 26197,
+    "mapping": "0xffff978f8a88bad8",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f5642fb40",
+    "path": "/tmp/firefox-clean/cache2/entries/6EF68D6F7CB67CC9EC5E8E08A65032361085AE66",
+    "inode": "0xffff978f8a88aa60",
+    "mode": "0x8180",
+    "size": 26028,
+    "mapping": "0xffff978f8a88abd8",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f68e26240",
+    "path": "/tmp/firefox-clean/cache2/entries/F512770BD16FF3AC01E2874F135C516EA9C4D15A",
+    "inode": "0xffff978f8a88bd20",
+    "mode": "0x8180",
+    "size": 13945,
+    "mapping": "0xffff978f8a88be98",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f68e26900",
+    "path": "/tmp/firefox-clean/cache2/entries/C61E3D0BEAC1731094B0D9ABA3C9D4AC40ACF66E",
+    "inode": "0xffff978f8a8897a0",
+    "mode": "0x8180",
+    "size": 14166,
+    "mapping": "0xffff978f8a889918",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f68e263c0",
+    "path": "/tmp/firefox-clean/cache2/entries/7943793AD6EF12CA229A1DF7A721B44C210BBC82",
+    "inode": "0xffff978f8a8871e0",
+    "mode": "0x8180",
+    "size": 10461,
+    "mapping": "0xffff978f8a887358",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f68e26780",
+    "path": "/tmp/firefox-clean/cache2/entries/52C12CC6B53AA7F6EF49428E5DFE26A0936BE64F",
+    "inode": "0xffff978f8a8853e0",
+    "mode": "0x8180",
+    "size": 10164,
+    "mapping": "0xffff978f8a885558",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f68e27e40",
+    "path": "/tmp/firefox-clean/cache2/entries/23397540DC5FD043C5F2F0EDDAE8BD223A7C5D04",
+    "inode": "0xffff978f8a887960",
+    "mode": "0x8180",
+    "size": 10137,
+    "mapping": "0xffff978f8a887ad8",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f68e276c0",
+    "path": "/tmp/firefox-clean/cache2/entries/69892869FEF307023AA0760692657E8FB2DF00E2",
+    "inode": "0xffff978f8a886a60",
+    "mode": "0x8180",
+    "size": 13981,
+    "mapping": "0xffff978f8a886bd8",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f56477e40",
+    "path": "/tmp/firefox-clean/cache2/entries/3BBD3AE27A63EEC06E76A3F00D36F6345C24C512",
+    "inode": "0xffff978f8a887d20",
+    "mode": "0x8180",
+    "size": 13981,
+    "mapping": "0xffff978f8a887e98",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f564773c0",
+    "path": "/tmp/firefox-clean/cache2/entries/83838153BEEBFA53E679BE2200DFCF40CED1B4BC",
+    "inode": "0xffff978f8a8857a0",
+    "mode": "0x8180",
+    "size": 10479,
+    "mapping": "0xffff978f8a885918",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f56477600",
+    "path": "/tmp/firefox-clean/cache2/entries/EA45B224ECE61AF479DFE5AFC063DF1F59C1A38D",
+    "inode": "0xffff978f8a886e20",
+    "mode": "0x8180",
+    "size": 8501,
+    "mapping": "0xffff978f8a886f98",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f56477d80",
+    "path": "/tmp/firefox-clean/cache2/entries/1D62E64532BB6B6D8F1E5815E6681D994AB0A2F4",
+    "inode": "0xffff978f8a884c60",
+    "mode": "0x8180",
+    "size": 14253,
+    "mapping": "0xffff978f8a884dd8",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f56477900",
+    "path": "/tmp/firefox-clean/cache2/entries/A75EE16DD19966E9E70105766E42599213DEB87F",
+    "inode": "0xffff978f8a8844e0",
+    "mode": "0x8180",
+    "size": 13871,
+    "mapping": "0xffff978f8a884658",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f564770c0",
+    "path": "/tmp/firefox-clean/cache2/entries/1B1F45D9075CB32E0BD37D4CCDA4428359C022CE",
+    "inode": "0xffff978f8a8866a0",
+    "mode": "0x8180",
+    "size": 103,
+    "mapping": "0xffff978f8a886818",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f56477300",
+    "path": "/tmp/firefox-clean/cache2/entries/BE03156300320F28A7A33C2FF7605AF0770B9520",
+    "inode": "0xffff978f8a8875a0",
+    "mode": "0x8180",
+    "size": 9726,
+    "mapping": "0xffff978f8a887718",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f56477cc0",
+    "path": "/tmp/firefox-clean/cache2/entries/37C64C2494F8E3EE1C56C0374DADC4DF055ED613",
+    "inode": "0xffff978f8a885b60",
+    "mode": "0x8180",
+    "size": 9157,
+    "mapping": "0xffff978f8a885cd8",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f56477a80",
+    "path": "/tmp/firefox-clean/cache2/entries/962031878388FAFCABADD75C58315CC0675057A2",
+    "inode": "0xffff978f8a884120",
+    "mode": "0x8180",
+    "size": 13942,
+    "mapping": "0xffff978f8a884298",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f56477f00",
+    "path": "/tmp/firefox-clean/cache2/entries/9931636E44E2CB15EF6A84BE8D49FEA9206B73E8",
+    "inode": "0xffff978f8a885f20",
+    "mode": "0x8180",
+    "size": 14851,
+    "mapping": "0xffff978f8a886098",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f56477480",
+    "path": "/tmp/firefox-clean/cache2/entries/6A08A321BEE0AA614C10E0B6D603E13BDBE1B06C",
+    "inode": "0xffff978f8a885020",
+    "mode": "0x8180",
+    "size": 13543,
+    "mapping": "0xffff978f8a885198",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f5648f300",
+    "path": "/tmp/firefox-clean/cache2/entries/B653A45F2BD982E3E111AA7FA3C71EF8910B9B18",
+    "inode": "0xffff978f8a8862e0",
+    "mode": "0x8180",
+    "size": 14166,
+    "mapping": "0xffff978f8a886458",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f5647a9c0",
+    "path": "/tmp/firefox-clean/cache2/entries/8337EFAD06ACDFF43F0021A576CCA054CDCED68C",
+    "inode": "0xffff978f8a8848a0",
+    "mode": "0x8180",
+    "size": 13060,
+    "mapping": "0xffff978f8a884a18",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f5647a180",
+    "path": "/tmp/firefox-clean/cache2/entries/DC6DE5D5A4D7AD4666A32DC8CC3D71C3ABFF7DC1",
+    "inode": "0xffff978f8a880120",
+    "mode": "0x8180",
+    "size": 69744,
+    "mapping": "0xffff978f8a880298",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f56609480",
+    "path": "/tmp/firefox-clean/cache2/entries/47F3F1F56ADF02E959EBF29F79DB82686AC45122",
+    "inode": "0xffff978f8a881f20",
+    "mode": "0x8180",
+    "size": 66802,
+    "mapping": "0xffff978f8a882098",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f56609600",
+    "path": "/tmp/firefox-clean/cache2/entries/2A8039927476240CBC4F37723E90C1A45ACB2AD5",
+    "inode": "0xffff978f8a881020",
+    "mode": "0x8180",
+    "size": 68231,
+    "mapping": "0xffff978f8a881198",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f56609e40",
+    "path": "/tmp/firefox-clean/cache2/entries/61683CEA2E6BCF1B4E966C818666E3CEFF0319FF",
+    "inode": "0xffff978f8a8822e0",
+    "mode": "0x8180",
+    "size": 14287,
+    "mapping": "0xffff978f8a882458",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f56609900",
+    "path": "/tmp/firefox-clean/cache2/entries/B34485242437F98C95F751AABDCDD98904B4444F",
+    "inode": "0xffff978f8a8808a0",
+    "mode": "0x8180",
+    "size": 11515,
+    "mapping": "0xffff978f8a880a18",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f56609b40",
+    "path": "/tmp/firefox-clean/cache2/entries/B96708368B35287515A5DB37C130319711660C68",
+    "inode": "0xffff978f8a8831e0",
+    "mode": "0x8180",
+    "size": 28946,
+    "mapping": "0xffff978f8a883358",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f56609840",
+    "path": "/tmp/firefox-clean/cache2/entries/60EE3E906F3B6A18BA97574E961A68B78E1670C8",
+    "inode": "0xffff978f8a8813e0",
+    "mode": "0x8180",
+    "size": 34133,
+    "mapping": "0xffff978f8a881558",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f56609000",
+    "path": "/tmp/firefox-clean/cache2/entries/D657EDDA0CEE5DFCAC34E466FC40133D18108D63",
+    "inode": "0xffff978f8a883960",
+    "mode": "0x8180",
+    "size": 21908,
+    "mapping": "0xffff978f8a883ad8",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f604bdf00",
+    "path": "/tmp/firefox-clean/cache2/entries/525F21E89884AF5D634B9A53FE10DD23B8E8DF7B",
+    "inode": "0xffff978f8a882a60",
+    "mode": "0x8180",
+    "size": 14215,
+    "mapping": "0xffff978f8a882bd8",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f604bdc00",
+    "path": "/tmp/firefox-clean/cache2/entries/B4C69E4F1918CA33DB217F35382BDFC62ECA7750",
+    "inode": "0xffff978f8a883d20",
+    "mode": "0x8180",
+    "size": 13869,
+    "mapping": "0xffff978f8a883e98",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f604bd240",
+    "path": "/tmp/firefox-clean/cache2/entries/7145275717F02C23D12D0472868E0202003BBBC2",
+    "inode": "0xffff978f8a8817a0",
+    "mode": "0x8180",
+    "size": 685,
+    "mapping": "0xffff978f8a881918",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f604bd600",
+    "path": "/tmp/firefox-clean/cache2/entries/4E7BB10517A397EE27B8CCC0BACC54ACEEA3FDF1",
+    "inode": "0xffff978f8a882e20",
+    "mode": "0x8180",
+    "size": 12797,
+    "mapping": "0xffff978f8a882f98",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f604bd540",
+    "path": "/tmp/firefox-clean/cache2/entries/675306FFCFAE6AD77597AE0FB176F4F8DC33CA91",
+    "inode": "0xffff978f8a880c60",
+    "mode": "0x8180",
+    "size": 17165,
+    "mapping": "0xffff978f8a880dd8",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f604bda80",
+    "path": "/tmp/firefox-clean/cache2/entries/6B4FC5A781C12330D28E41978E4E4BA49E5FEA7E",
+    "inode": "0xffff978f8a8804e0",
+    "mode": "0x8180",
+    "size": 152089,
+    "mapping": "0xffff978f8a880658",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f604bd3c0",
+    "path": "/tmp/firefox-clean/cache2/entries/8308ED4D0A5C97619EA4B63887B98625BBCD54B4",
+    "inode": "0xffff978f8a8826a0",
+    "mode": "0x8180",
+    "size": 124677,
+    "mapping": "0xffff978f8a882818",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f604bd9c0",
+    "path": "/tmp/firefox-clean/cache2/entries/A4FB7066DA90225EF11C2B9E7DF55845112CA6CF",
+    "inode": "0xffff978f8a8835a0",
+    "mode": "0x8180",
+    "size": 31137,
+    "mapping": "0xffff978f8a883718",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f56707b40",
+    "path": "/tmp/firefox-clean/cache2/entries/B620050AFDD109AFC11A1C41544D173C294A344F",
+    "inode": "0xffff978f8a881b60",
+    "mode": "0x8180",
+    "size": 201650,
+    "mapping": "0xffff978f8a881cd8",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f6068c0c0",
+    "path": "/tmp/firefox-clean/cache2/entries/4739E68FD947EA42A2C2E38D50EEC8A5C34F15A4",
+    "inode": "0xffff978f8a87f960",
+    "mode": "0x8180",
+    "size": 12300,
+    "mapping": "0xffff978f8a87fad8",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f6068c540",
+    "path": "/tmp/firefox-clean/cache2/entries/28529ABD37B32964B915AF2E281A18AD832B0FA3",
+    "inode": "0xffff978f8a87ea60",
+    "mode": "0x8180",
+    "size": 14108,
+    "mapping": "0xffff978f8a87ebd8",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f6068cd80",
+    "path": "/tmp/firefox-clean/cache2/entries/A09DBF9A4B54DB8538B20A1AD416684297EDC079",
+    "inode": "0xffff978f8a87fd20",
+    "mode": "0x8180",
+    "size": 13164,
+    "mapping": "0xffff978f8a87fe98",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f6068ce40",
+    "path": "/tmp/firefox-clean/cache2/entries/2322D71FF210E6F33C3B935B01940D0BCAE1840C",
+    "inode": "0xffff978f8a87d7a0",
+    "mode": "0x8180",
+    "size": 16530,
+    "mapping": "0xffff978f8a87d918",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f6068c480",
+    "path": "/tmp/firefox-clean/cache2/entries/0FFC88B533F31B112831903D8DACD7DA4749430E",
+    "inode": "0xffff978f8a87ee20",
+    "mode": "0x8180",
+    "size": 15996,
+    "mapping": "0xffff978f8a87ef98",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f6068c900",
+    "path": "/tmp/firefox-clean/cache2/entries/207F6B046D16B573D1F14161D6F51554B04453AC",
+    "inode": "0xffff978f8a87cc60",
+    "mode": "0x8180",
+    "size": 10307,
+    "mapping": "0xffff978f8a87cdd8",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f6068c3c0",
+    "path": "/tmp/firefox-clean/cache2/entries/E55ADD4E4153EF6954723FEE58DBE71CA1742BA1",
+    "inode": "0xffff978f8a87c4e0",
+    "mode": "0x8180",
+    "size": 11788,
+    "mapping": "0xffff978f8a87c658",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f6068cb40",
+    "path": "/tmp/firefox-clean/cache2/entries/8DBF0523D98D29D7DD57D644E001F05D94FD9E16",
+    "inode": "0xffff978f8a87e6a0",
+    "mode": "0x8180",
+    "size": 176553,
+    "mapping": "0xffff978f8a87e818",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f6068c600",
+    "path": "/tmp/firefox-clean/cache2/entries/7CE31399FF6BBA9B46F5424A853B4D36F7815534",
+    "inode": "0xffff978f8a87f5a0",
+    "mode": "0x8180",
+    "size": 12001,
+    "mapping": "0xffff978f8a87f718",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f6068cc00",
+    "path": "/tmp/firefox-clean/cache2/entries/429DD9FA4416608B60B1B2625C892E90508E1263",
+    "inode": "0xffff978f8a87db60",
+    "mode": "0x8180",
+    "size": 12482,
+    "mapping": "0xffff978f8a87dcd8",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f6068c9c0",
+    "path": "/tmp/firefox-clean/cache2/entries/8AE5FEF49B004FE7A0A046A86BC99BABF07E6AAF",
+    "inode": "0xffff978f8a87c120",
+    "mode": "0x8180",
+    "size": 16967,
+    "mapping": "0xffff978f8a87c298",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f6068c180",
+    "path": "/tmp/firefox-clean/cache2/entries/02235D97956912F4E26F04B478DD8E5F3DC0F8FE",
+    "inode": "0xffff978f8a87df20",
+    "mode": "0x8180",
+    "size": 13532,
+    "mapping": "0xffff978f8a87e098",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f6068c780",
+    "path": "/tmp/firefox-clean/cache2/entries/DB183438F135386B6BBD0C6807644BACACE2D20C",
+    "inode": "0xffff978f8a87d020",
+    "mode": "0x8180",
+    "size": 12067,
+    "mapping": "0xffff978f8a87d198",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f5642b600",
+    "path": "/tmp/firefox-clean/cache2/entries/498682BFC1C9D0FBB0406DCAB62CE82DA4407956",
+    "inode": "0xffff978f8a87e2e0",
+    "mode": "0x8180",
+    "size": 18374,
+    "mapping": "0xffff978f8a87e458",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f5642b480",
+    "path": "/tmp/firefox-clean/cache2/entries/B444E95344F98D87469D4F53148E9EB65E1F41B8",
+    "inode": "0xffff978f8a87c8a0",
+    "mode": "0x8180",
+    "size": 13312,
+    "mapping": "0xffff978f8a87ca18",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f5642bc00",
+    "path": "/tmp/firefox-clean/cache2/entries/28CBD89886111EEE542E18A26ED950FD626E3157",
+    "inode": "0xffff978f8a87f1e0",
+    "mode": "0x8180",
+    "size": 12802,
+    "mapping": "0xffff978f8a87f358",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f5642b840",
+    "path": "/tmp/firefox-clean/cache2/entries/FC1A797304895965505D496FD2BC697AECAAE30B",
+    "inode": "0xffff978f8a87d3e0",
+    "mode": "0x8180",
+    "size": 13169,
+    "mapping": "0xffff978f8a87d558",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f5642bcc0",
+    "path": "/tmp/firefox-clean/cache2/entries/5173C03BFC6EAE9EAF35F7D1E95C0501B11D0870",
+    "inode": "0xffff978f8a87b1e0",
+    "mode": "0x8180",
+    "size": 19200,
+    "mapping": "0xffff978f8a87b358",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f564420c0",
+    "path": "/tmp/firefox-clean/cache2/entries/ED813F7E39CC4E1609FFE1AF9920915B216B5532",
+    "inode": "0xffff978f8a8793e0",
+    "mode": "0x8180",
+    "size": 14776,
+    "mapping": "0xffff978f8a879558",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f56442300",
+    "path": "/tmp/firefox-clean/cache2/entries/38C671C6478F9C2899CFF3D0B432DF48A9EAE7A8",
+    "inode": "0xffff978f8a87b960",
+    "mode": "0x8180",
+    "size": 13140,
+    "mapping": "0xffff978f8a87bad8",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f56442e40",
+    "path": "/tmp/firefox-clean/cache2/entries/08857446FC93F8422961ABEFF8B4D8C30C2A7A7F",
+    "inode": "0xffff978f8a87aa60",
+    "mode": "0x8180",
+    "size": 11973,
+    "mapping": "0xffff978f8a87abd8",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f564426c0",
+    "path": "/tmp/firefox-clean/cache2/entries/B8E67E194845415F5E303D4C98ED3F9E6F4FF265",
+    "inode": "0xffff978f8a87bd20",
+    "mode": "0x8180",
+    "size": 162008,
+    "mapping": "0xffff978f8a87be98",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f56442cc0",
+    "path": "/tmp/firefox-clean/cache2/entries/4FA061AC2C5AA4632BF852F5E06B069C47576554",
+    "inode": "0xffff978f8a8797a0",
+    "mode": "0x8180",
+    "size": 184269,
+    "mapping": "0xffff978f8a879918",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f56442840",
+    "path": "/tmp/firefox-clean/cache2/entries/22B36EFB3596CFD6B6603F725BC183AE25E65B61",
+    "inode": "0xffff978f8a87ae20",
+    "mode": "0x8180",
+    "size": 45685,
+    "mapping": "0xffff978f8a87af98",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f56442180",
+    "path": "/tmp/firefox-clean/cache2/entries/66EDA0CFC6AA99B1FE3527B2D7B427BD73E0A704",
+    "inode": "0xffff978f8a878c60",
+    "mode": "0x8180",
+    "size": 66275,
+    "mapping": "0xffff978f8a878dd8",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f56442c00",
+    "path": "/tmp/firefox-clean/cache2/entries/261E4AAE8448CFA63DEF619902C80925F13B67D4",
+    "inode": "0xffff978f8a8784e0",
+    "mode": "0x8180",
+    "size": 134816,
+    "mapping": "0xffff978f8a878658",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f56442600",
+    "path": "/tmp/firefox-clean/cache2/entries/F5670AB9244070168716B0EDB13665AA0F269BC5",
+    "inode": "0xffff978f8a87a6a0",
+    "mode": "0x8180",
+    "size": 54774,
+    "mapping": "0xffff978f8a87a818",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f56442f00",
+    "path": "/tmp/firefox-clean/cache2/entries/6D348CCFF2EDCE448AAB037316241BC451495275",
+    "inode": "0xffff978f8a87b5a0",
+    "mode": "0x8180",
+    "size": 132425,
+    "mapping": "0xffff978f8a87b718",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f564429c0",
+    "path": "/tmp/firefox-clean/cache2/entries/1FFED1BBCED8E6F6559BAC78357BD0C2FEA1758F",
+    "inode": "0xffff978f8a879b60",
+    "mode": "0x8180",
+    "size": 67003,
+    "mapping": "0xffff978f8a879cd8",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f56442000",
+    "path": "/tmp/firefox-clean/cache2/entries/9C47398F3A630F84FDF9A440DD8EA134CBE8F19F",
+    "inode": "0xffff978f8a878120",
+    "mode": "0x8180",
+    "size": 65738,
+    "mapping": "0xffff978f8a878298",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f56442540",
+    "path": "/tmp/firefox-clean/cache2/entries/53D24DD37E6DE319A4FD92E9A5BFDE8B199FF493",
+    "inode": "0xffff978f8a879f20",
+    "mode": "0x8180",
+    "size": 162932,
+    "mapping": "0xffff978f8a87a098",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f56442a80",
+    "path": "/tmp/firefox-clean/cache2/entries/644B52DA678BB689EEA996876069AFF6589F2EFA",
+    "inode": "0xffff978f8a879020",
+    "mode": "0x8180",
+    "size": 18177,
+    "mapping": "0xffff978f8a879198",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f56442780",
+    "path": "/tmp/firefox-clean/cache2/entries/D3679ABE3BA33712C8E079E933D03052FDCE8EDC",
+    "inode": "0xffff978f8a87a2e0",
+    "mode": "0x8180",
+    "size": 67659,
+    "mapping": "0xffff978f8a87a458",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f56442240",
+    "path": "/tmp/firefox-clean/cache2/entries/F814657BC089E657B0047EBEF04279DAFBBBB1B5",
+    "inode": "0xffff978f8a8788a0",
+    "mode": "0x8180",
+    "size": 30986,
+    "mapping": "0xffff978f8a878a18",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f564423c0",
+    "path": "/tmp/firefox-clean/cache2/entries/BD5B491C8102117C2F889627DFCD9A742828F50E",
+    "inode": "0xffff978f8a8744e0",
+    "mode": "0x8180",
+    "size": 9240,
+    "mapping": "0xffff978f8a874658",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f56442900",
+    "path": "/tmp/firefox-clean/cache2/entries/7C9C746A61A2E205CC4BC92186F9296906D79D8D",
+    "inode": "0xffff978f8a8766a0",
+    "mode": "0x8180",
+    "size": 8582,
+    "mapping": "0xffff978f8a876818",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f56442480",
+    "path": "/tmp/firefox-clean/cache2/entries/7606E48C9E7B22826A1F69E140BD23E25B26B94E",
+    "inode": "0xffff978f8a8775a0",
+    "mode": "0x8180",
+    "size": 6801,
+    "mapping": "0xffff978f8a877718",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f56442b40",
+    "path": "/tmp/firefox-clean/cache2/entries/DC626F29B67E7FF75DA0AAB2FD12B20A6A66473E",
+    "inode": "0xffff978f8a875b60",
+    "mode": "0x8180",
+    "size": 6801,
+    "mapping": "0xffff978f8a875cd8",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f56612900",
+    "path": "/tmp/firefox-clean/cache2/entries/C5DA59B0C62A142ABBE30DAC52ECFAB52B6F8186",
+    "inode": "0xffff978f8a874120",
+    "mode": "0x8180",
+    "size": 8519,
+    "mapping": "0xffff978f8a874298",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f56612480",
+    "path": "/tmp/firefox-clean/cache2/entries/11A24EFC7E301237409080A4F3AF395A5E0A89AB",
+    "inode": "0xffff978f8a875f20",
+    "mode": "0x8180",
+    "size": 28142,
+    "mapping": "0xffff978f8a876098",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f56612b40",
+    "path": "/tmp/firefox-clean/cache2/entries/6DE7E99E57B90711241E6F9706A8BD956EEF38E4",
+    "inode": "0xffff978f8a875020",
+    "mode": "0x8180",
+    "size": 11934,
+    "mapping": "0xffff978f8a875198",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f566120c0",
+    "path": "/tmp/firefox-clean/cache2/entries/381BFBE38581214499CAD7AD68DE4ABA9CB21A72",
+    "inode": "0xffff978f8a8762e0",
+    "mode": "0x8180",
+    "size": 178952,
+    "mapping": "0xffff978f8a876458",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f56612300",
+    "path": "/tmp/firefox-clean/cache2/entries/79B58A51AE8BA891E64611DEDBAA2BB4461D3500",
+    "inode": "0xffff978f8a8748a0",
+    "mode": "0x8180",
+    "size": 1274379,
+    "mapping": "0xffff978f8a874a18",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f56612e40",
+    "path": "/tmp/firefox-clean/cache2/entries/7FE01E300471CA751B87C9185302F2141B269E11",
+    "inode": "0xffff978f8a8771e0",
+    "mode": "0x8180",
+    "size": 6618,
+    "mapping": "0xffff978f8a877358",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f60482a80",
+    "path": "/tmp/firefox-clean/cache2/entries/FE255772BC3A42E65BE46038CF09F62109084075",
+    "inode": "0xffff978f8a8753e0",
+    "mode": "0x8180",
+    "size": 23353,
+    "mapping": "0xffff978f8a875558",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f604829c0",
+    "path": "/tmp/firefox-clean/cache2/entries/C18BC0CF8BA6EB3FE4E0C64B6B33E3A74007350D",
+    "inode": "0xffff978f8a877960",
+    "mode": "0x8180",
+    "size": 53631,
+    "mapping": "0xffff978f8a877ad8",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f60482b40",
+    "path": "/tmp/firefox-clean/cache2/entries/D092E696562064CEDB4780ECE09B5D886E74EBE3",
+    "inode": "0xffff978f8a876a60",
+    "mode": "0x8180",
+    "size": 22313,
+    "mapping": "0xffff978f8a876bd8",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f604820c0",
+    "path": "/tmp/firefox-clean/cache2/entries/F0DE1815B11ED24F7BB6CF292D167F50BD8706D9",
+    "inode": "0xffff978f8a877d20",
+    "mode": "0x8180",
+    "size": 18358,
+    "mapping": "0xffff978f8a877e98",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f60482300",
+    "path": "/tmp/firefox-clean/cache2/entries/78FE324E69FE4FF6E36957471EA698217683A575",
+    "inode": "0xffff978f8a8757a0",
+    "mode": "0x8180",
+    "size": 15150,
+    "mapping": "0xffff978f8a875918",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f60482180",
+    "path": "/tmp/firefox-clean/cache2/entries/22AD3A94EDAE118D3F4A3CDB3412A53DE42A1882",
+    "inode": "0xffff978f8a876e20",
+    "mode": "0x8180",
+    "size": 10732,
+    "mapping": "0xffff978f8a876f98",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f60695b40",
+    "path": "/tmp/firefox-clean/cache2/entries/9466C89E1DC154C36EE03EC50E6B2415D088DB7A",
+    "inode": "0xffff978f8a874c60",
+    "mode": "0x8180",
+    "size": 10852,
+    "mapping": "0xffff978f8a874dd8",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f606950c0",
+    "path": "/tmp/firefox-clean/cache2/entries/6D86809C1680C9DC9887803EEE6535969843F6CB",
+    "inode": "0xffff978f8a8735a0",
+    "mode": "0x8180",
+    "size": 12527,
+    "mapping": "0xffff978f8a873718",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f60695300",
+    "path": "/tmp/firefox-clean/cache2/entries/D560ABB1E42EA44DCE6F5C0737D721FF531B4EED",
+    "inode": "0xffff978f8a871b60",
+    "mode": "0x8180",
+    "size": 17818,
+    "mapping": "0xffff978f8a871cd8",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f60695e40",
+    "path": "/tmp/firefox-clean/cache2/entries/F2B505F79DF709D552639CA6E59C9E5E94493001",
+    "inode": "0xffff978f8a870120",
+    "mode": "0x8180",
+    "size": 12101,
+    "mapping": "0xffff978f8a870298",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f564433c0",
+    "path": "/tmp/firefox-clean/cache2/entries/1892CA402BA276A10C586A621B1145BB904B5192",
+    "inode": "0xffff978f8a871f20",
+    "mode": "0x8180",
+    "size": 11196,
+    "mapping": "0xffff978f8a872098",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f56443900",
+    "path": "/tmp/firefox-clean/cache2/entries/9F1B6DED8C254CFDAB0107D73704F18B8F3A2A72",
+    "inode": "0xffff978f8a871020",
+    "mode": "0x8180",
+    "size": 10893,
+    "mapping": "0xffff978f8a871198",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f56443480",
+    "path": "/tmp/firefox-clean/cache2/entries/9EF9CD047578450E4FB6D3EEC14127C769274148",
+    "inode": "0xffff978f8a8722e0",
+    "mode": "0x8180",
+    "size": 14024,
+    "mapping": "0xffff978f8a872458",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f56443b40",
+    "path": "/tmp/firefox-clean/cache2/entries/B2600A0954C2DDB4A269986DDB51B0A85C6E44A2",
+    "inode": "0xffff978f8a8708a0",
+    "mode": "0x8180",
+    "size": 20436,
+    "mapping": "0xffff978f8a870a18",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f564430c0",
+    "path": "/tmp/firefox-clean/cache2/entries/D750F8AB0606853F61A1A60732E96630977D1429",
+    "inode": "0xffff978f8a8731e0",
+    "mode": "0x8180",
+    "size": 10551,
+    "mapping": "0xffff978f8a873358",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f56443300",
+    "path": "/tmp/firefox-clean/cache2/entries/6F903906620B081DF100F0ACC8D7054C837FA3F3",
+    "inode": "0xffff978f8a8713e0",
+    "mode": "0x8180",
+    "size": 14598,
+    "mapping": "0xffff978f8a871558",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f56443e40",
+    "path": "/tmp/firefox-clean/cache2/entries/6BFBDBCB4804D4BE9E2FE763F7735D50EB859342",
+    "inode": "0xffff978f8a873960",
+    "mode": "0x8180",
+    "size": 40632,
+    "mapping": "0xffff978f8a873ad8",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f564436c0",
+    "path": "/tmp/firefox-clean/cache2/entries/589B93D810D6C567FFDD9283F440DEE0E31AACC3",
+    "inode": "0xffff978f8a872a60",
+    "mode": "0x8180",
+    "size": 18514,
+    "mapping": "0xffff978f8a872bd8",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f56443cc0",
+    "path": "/tmp/firefox-clean/cache2/entries/09AE2264C4625EFBC495DB2A03B45ABB1744803F",
+    "inode": "0xffff978f8a873d20",
+    "mode": "0x8180",
+    "size": 26336,
+    "mapping": "0xffff978f8a873e98",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f56443840",
+    "path": "/tmp/firefox-clean/cache2/entries/7170999BBD6284A9D7E89E2A2CB022792BD9809D",
+    "inode": "0xffff978f8a8717a0",
+    "mode": "0x8180",
+    "size": 30715,
+    "mapping": "0xffff978f8a871918",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f56443000",
+    "path": "/tmp/firefox-clean/cache2/entries/286FBE4FFBD9FF8B5CAECBD4A618672CC4905C28",
+    "inode": "0xffff978f8a872e20",
+    "mode": "0x8180",
+    "size": 12024,
+    "mapping": "0xffff978f8a872f98",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f56443f00",
+    "path": "/tmp/firefox-clean/cache2/entries/6E66CDB449C42E98DCEB7C16FF8831F07C5CE560",
+    "inode": "0xffff978f8a870c60",
+    "mode": "0x8180",
+    "size": 29833,
+    "mapping": "0xffff978f8a870dd8",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f56443600",
+    "path": "/tmp/firefox-clean/cache2/entries/80FB532623509A888D6A1792FF23969F2AB67487",
+    "inode": "0xffff978f8a8704e0",
+    "mode": "0x8180",
+    "size": 19993,
+    "mapping": "0xffff978f8a870658",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f56443c00",
+    "path": "/tmp/firefox-clean/cache2/entries/7C01CC43E3BC1C1434F15FB7564E07157BB5E7A7",
+    "inode": "0xffff978f8a8726a0",
+    "mode": "0x8180",
+    "size": 11823,
+    "mapping": "0xffff978f8a872818",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f564439c0",
+    "path": "/tmp/firefox-clean/cache2/entries/6BF5CA458B5E925822BA47D55527D07196EB47C5",
+    "inode": "0xffff978f8a86cc60",
+    "mode": "0x8180",
+    "size": 28583,
+    "mapping": "0xffff978f8a86cdd8",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f56443180",
+    "path": "/tmp/firefox-clean/cache2/entries/C1894651A36B9F446EC58819342C7270BE70FDB1",
+    "inode": "0xffff978f8a86c4e0",
+    "mode": "0x8180",
+    "size": 13846,
+    "mapping": "0xffff978f8a86c658",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f56443d80",
+    "path": "/tmp/firefox-clean/cache2/entries/ED7FE36FEF291ED3179C410B53CBA191799CEEED",
+    "inode": "0xffff978f8a86e6a0",
+    "mode": "0x8180",
+    "size": 13664,
+    "mapping": "0xffff978f8a86e818",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f56443780",
+    "path": "/tmp/firefox-clean/cache2/entries/AB487735920D7FB1D27E2F419BDC57D9537EF5AD",
+    "inode": "0xffff978f8a86f5a0",
+    "mode": "0x8180",
+    "size": 10124,
+    "mapping": "0xffff978f8a86f718",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f56443a80",
+    "path": "/tmp/firefox-clean/cache2/entries/FF442B68CA8BD9ABA1D6923FCCF86A833D2756AB",
+    "inode": "0xffff978f8a86db60",
+    "mode": "0x8180",
+    "size": 10026,
+    "mapping": "0xffff978f8a86dcd8",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f56443540",
+    "path": "/tmp/firefox-clean/cache2/entries/01B45CF3C34D9E5E9DB323A90E5EBB3F9B012556",
+    "inode": "0xffff978f8a86c120",
+    "mode": "0x8180",
+    "size": 10208,
+    "mapping": "0xffff978f8a86c298",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f604c2000",
+    "path": "/tmp/firefox-clean/cache2/entries/AE2C14B5FD12AE65ADF3817C6D5B6BA68B913C50",
+    "inode": "0xffff978f8a86df20",
+    "mode": "0x8180",
+    "size": 11562,
+    "mapping": "0xffff978f8a86e098",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f607a7e40",
+    "path": "/tmp/firefox-clean/cache2/entries/A3EC6D825B23670AF5C9DD6DD4DC6810C5D76C22",
+    "inode": "0xffff978f8a86d020",
+    "mode": "0x8180",
+    "size": 10007,
+    "mapping": "0xffff978f8a86d198",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f607a76c0",
+    "path": "/tmp/firefox-clean/cache2/entries/0B9030F90685D9C8D8DC92A13FC5219E876B3BC8",
+    "inode": "0xffff978f8a86e2e0",
+    "mode": "0x8180",
+    "size": 10280,
+    "mapping": "0xffff978f8a86e458",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f607a7cc0",
+    "path": "/tmp/firefox-clean/cache2/entries/BF72AE003B2653277ED410168AF818CB1EC8655F",
+    "inode": "0xffff978f8a86c8a0",
+    "mode": "0x8180",
+    "size": 10115,
+    "mapping": "0xffff978f8a86ca18",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f607a70c0",
+    "path": "/tmp/firefox-clean/cache2/entries/1BC5ECE0A17004E8F1825957A1A3AA8608EA876B",
+    "inode": "0xffff978f8a86f1e0",
+    "mode": "0x8180",
+    "size": 10205,
+    "mapping": "0xffff978f8a86f358",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f607a7900",
+    "path": "/tmp/firefox-clean/cache2/entries/A85A6200ADD107FDA5B539E7F38EA3F0D1CAFA65",
+    "inode": "0xffff978f8a86d3e0",
+    "mode": "0x8180",
+    "size": 10000,
+    "mapping": "0xffff978f8a86d558",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f607a7b40",
+    "path": "/tmp/firefox-clean/cache2/entries/44D6A1E54951AB317E0EBBDAEFF3B36F5C2AB99F",
+    "inode": "0xffff978f8a86f960",
+    "mode": "0x8180",
+    "size": 10111,
+    "mapping": "0xffff978f8a86fad8",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f607a7480",
+    "path": "/tmp/firefox-clean/cache2/entries/399636ABB59818816E0312EA33C52C8CCABD076F",
+    "inode": "0xffff978f8a86ea60",
+    "mode": "0x8180",
+    "size": 10153,
+    "mapping": "0xffff978f8a86ebd8",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f56616cc0",
+    "path": "/tmp/firefox-clean/cache2/entries/C29E638B52056F9F47C337785D20AF3130DB82AA",
+    "inode": "0xffff978f8a86fd20",
+    "mode": "0x8180",
+    "size": 10033,
+    "mapping": "0xffff978f8a86fe98",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f56616540",
+    "path": "/tmp/firefox-clean/cache2/entries/42BDFE8D382EB4EE8954AB747A8E6E1843ED4D60",
+    "inode": "0xffff978f8a86d7a0",
+    "mode": "0x8180",
+    "size": 10026,
+    "mapping": "0xffff978f8a86d918",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f566163c0",
+    "path": "/tmp/firefox-clean/cache2/entries/95F77E8930B1D766231B86944B00EA314CF057B3",
+    "inode": "0xffff978f8a86ee20",
+    "mode": "0x8180",
+    "size": 118899,
+    "mapping": "0xffff978f8a86ef98",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f56616600",
+    "path": "/tmp/firefox-clean/cache2/entries/480EC828B24387C043CCBF656A247D4F854487A0",
+    "inode": "0xffff978f8a869020",
+    "mode": "0x8180",
+    "size": 10088,
+    "mapping": "0xffff978f8a869198",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f56616f00",
+    "path": "/tmp/firefox-clean/cache2/entries/DE8144D4B92AA8311D1411373AEE76C599F7BCAC",
+    "inode": "0xffff978f8a86a2e0",
+    "mode": "0x8180",
+    "size": 10052,
+    "mapping": "0xffff978f8a86a458",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f56616180",
+    "path": "/tmp/firefox-clean/cache2/entries/B78C1ED746179B835E3A4940DD7134B51913A366",
+    "inode": "0xffff978f8a8688a0",
+    "mode": "0x8180",
+    "size": 314025,
+    "mapping": "0xffff978f8a868a18",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f56616d80",
+    "path": "/tmp/firefox-clean/cache2/entries/70475505DD5D975E4FFC6810362760C312651AC7",
+    "inode": "0xffff978f8a86b1e0",
+    "mode": "0x8180",
+    "size": 14136,
+    "mapping": "0xffff978f8a86b358",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f56616b40",
+    "path": "/tmp/firefox-clean/cache2/entries/050FD82A24950862306967A1717C404BA1A9DC3F",
+    "inode": "0xffff978f8a8693e0",
+    "mode": "0x8180",
+    "size": 56982,
+    "mapping": "0xffff978f8a869558",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f56616a80",
+    "path": "/tmp/firefox-clean/cache2/entries/881C43ED9AEAD4AA86D28E70E60579F9553A17AB",
+    "inode": "0xffff978f8a86b960",
+    "mode": "0x8180",
+    "size": 195792,
+    "mapping": "0xffff978f8a86bad8",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f56616780",
+    "path": "/tmp/firefox-clean/cache2/entries/8E6C71593C21B565457B8A5D8AA65FCBDB1D5F4A",
+    "inode": "0xffff978f8a86aa60",
+    "mode": "0x8180",
+    "size": 167642,
+    "mapping": "0xffff978f8a86abd8",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f56616840",
+    "path": "/tmp/firefox-clean/cache2/entries/182634FE592746556B757838165986DFE05A9869",
+    "inode": "0xffff978f8a86bd20",
+    "mode": "0x8180",
+    "size": 81082,
+    "mapping": "0xffff978f8a86be98",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f56712c00",
+    "path": "/tmp/firefox-clean/cache2/entries/8AFB33C648D17BE05374C55399E07B2A0C393F78",
+    "inode": "0xffff978f8a8697a0",
+    "mode": "0x8180",
+    "size": 12114,
+    "mapping": "0xffff978f8a869918",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f5655c9c0",
+    "path": "/tmp/firefox-clean/cache2/entries/705928EC57C6070B2F7E3F423AF1AAB533952FF8",
+    "inode": "0xffff978f8a86ae20",
+    "mode": "0x8180",
+    "size": 71839,
+    "mapping": "0xffff978f8a86af98",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f5655cc00",
+    "path": "/tmp/firefox-clean/cache2/entries/E9C976DE31E539D991556488E1417A5599D6741B",
+    "inode": "0xffff978f8a868c60",
+    "mode": "0x8180",
+    "size": 11575,
+    "mapping": "0xffff978f8a868dd8",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f5655c600",
+    "path": "/tmp/firefox-clean/cache2/entries/3F87DE40631BE04DEA91B774709A2F935D4ACC07",
+    "inode": "0xffff978f8a8684e0",
+    "mode": "0x8180",
+    "size": 11404,
+    "mapping": "0xffff978f8a868658",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f5655cf00",
+    "path": "/tmp/firefox-clean/cache2/entries/98396C6EC89930A009427CBEFEF7ED573598FE63",
+    "inode": "0xffff978f8a86a6a0",
+    "mode": "0x8180",
+    "size": 13408,
+    "mapping": "0xffff978f8a86a818",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f5655c000",
+    "path": "/tmp/firefox-clean/cache2/entries/56FC8DF6F008EE4A471CE0AF23F03A8C4786F50F",
+    "inode": "0xffff978f8a86b5a0",
+    "mode": "0x8180",
+    "size": 32818,
+    "mapping": "0xffff978f8a86b718",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f5655c780",
+    "path": "/tmp/firefox-clean/cache2/entries/870B98BD83F27D06AA143E04271C1D80977E412F",
+    "inode": "0xffff978f8a869b60",
+    "mode": "0x8180",
+    "size": 103054,
+    "mapping": "0xffff978f8a869cd8",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f5655ce40",
+    "path": "/tmp/firefox-clean/cache2/entries/198DB98CD2D2BE5EBAC9955563CB93BB58D48643",
+    "inode": "0xffff978f8a868120",
+    "mode": "0x8180",
+    "size": 14448,
+    "mapping": "0xffff978f8a868298",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f5655c180",
+    "path": "/tmp/firefox-clean/cache2/entries/981690E520EE5750B7141124AE72673EB29FD3A5",
+    "inode": "0xffff978f8a869f20",
+    "mode": "0x8180",
+    "size": 13052,
+    "mapping": "0xffff978f8a86a098",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f5655c300",
+    "path": "/tmp/firefox-clean/cache2/entries/6E9A3DE9D8DC33C0094A98BA220046FA7A1B7A01",
+    "inode": "0xffff978f8a865b60",
+    "mode": "0x8180",
+    "size": 17474,
+    "mapping": "0xffff978f8a865cd8",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f5655c6c0",
+    "path": "/tmp/firefox-clean/cache2/entries/6C21567FEF05793865CB375201E5CADF872AE461",
+    "inode": "0xffff978f8a864120",
+    "mode": "0x8180",
+    "size": 11633,
+    "mapping": "0xffff978f8a864298",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f5655cb40",
+    "path": "/tmp/firefox-clean/cache2/entries/904D44EA284D7099EAE7EF4A58290E8E244D2768",
+    "inode": "0xffff978f8a865f20",
+    "mode": "0x8180",
+    "size": 11716,
+    "mapping": "0xffff978f8a866098",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f5655c0c0",
+    "path": "/tmp/firefox-clean/cache2/entries/664F4DBDDF2D0D021CA7B94C78C24DC805E4D68C",
+    "inode": "0xffff978f8a865020",
+    "mode": "0x8180",
+    "size": 18359,
+    "mapping": "0xffff978f8a865198",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f5655ca80",
+    "path": "/tmp/firefox-clean/cache2/entries/59B4DCF74A69310222545B59C02A4A4BC2976DC9",
+    "inode": "0xffff978f8a8662e0",
+    "mode": "0x8180",
+    "size": 11755,
+    "mapping": "0xffff978f8a866458",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f5655c900",
+    "path": "/tmp/firefox-clean/cache2/entries/DFB87029D89442C0B1C6C8B2B4CAA01D0143AEEC",
+    "inode": "0xffff978f8a8648a0",
+    "mode": "0x8180",
+    "size": 12005,
+    "mapping": "0xffff978f8a864a18",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f5655c540",
+    "path": "/tmp/firefox-clean/cache2/entries/DDF20699ABAFA18958BBCC46BFD3014E7D368193",
+    "inode": "0xffff978f8a8671e0",
+    "mode": "0x8180",
+    "size": 31904,
+    "mapping": "0xffff978f8a867358",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f5655c3c0",
+    "path": "/tmp/firefox-clean/cache2/entries/F61C0578A331F4570065790F9085E072A9F7CB2D",
+    "inode": "0xffff978f8a8653e0",
+    "mode": "0x8180",
+    "size": 23573,
+    "mapping": "0xffff978f8a865558",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f5655cd80",
+    "path": "/tmp/firefox-clean/cache2/entries/36DCE7A62C3AD3B82B038DE7CB9EDE0D139688CA",
+    "inode": "0xffff978f8a867960",
+    "mode": "0x8180",
+    "size": 85399,
+    "mapping": "0xffff978f8a867ad8",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f5655c240",
+    "path": "/tmp/firefox-clean/cache2/entries/9E95FBCC9A0C32C03A1B54888974A69B58C891F1",
+    "inode": "0xffff978f8a866a60",
+    "mode": "0x8180",
+    "size": 22232,
+    "mapping": "0xffff978f8a866bd8",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f56557600",
+    "path": "/tmp/firefox-clean/cache2/entries/FE2ED471FCAD033E99C61B259AE997BBE4AFCAEC",
+    "inode": "0xffff978f8a867d20",
+    "mode": "0x8180",
+    "size": 20572,
+    "mapping": "0xffff978f8a867e98",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f56557d80",
+    "path": "/tmp/firefox-clean/cache2/entries/4963C2203DEFFBDA9D47E5EBB8A7B45AC28D8075",
+    "inode": "0xffff978f8a8657a0",
+    "mode": "0x8180",
+    "size": 48345,
+    "mapping": "0xffff978f8a865918",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f56484c00",
+    "path": "/tmp/firefox-clean/cache2/entries/CC1D52531E3932756B1E79E02FFEE5BE0353F378",
+    "inode": "0xffff978f8a866e20",
+    "mode": "0x8180",
+    "size": 8200,
+    "mapping": "0xffff978f8a866f98",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f56484600",
+    "path": "/tmp/firefox-clean/cache2/entries/E08B76ED4F56BDE81BE6B45535D8405649CC11D2",
+    "inode": "0xffff978f8a864c60",
+    "mode": "0x8180",
+    "size": 31776,
+    "mapping": "0xffff978f8a864dd8",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f56484840",
+    "path": "/tmp/firefox-clean/cache2/entries/5B2960C46A341015ECD87F33FD5EDF0917578A4D",
+    "inode": "0xffff978f8a8644e0",
+    "mode": "0x8180",
+    "size": 27670,
+    "mapping": "0xffff978f8a864658",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f604c19c0",
+    "path": "/tmp/firefox-clean/cache2/entries/3A1C8103DD73C49258B92B0795C8C3FC52DCBA2A",
+    "inode": "0xffff978f8a8666a0",
+    "mode": "0x8180",
+    "size": 26242,
+    "mapping": "0xffff978f8a866818",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f604c1d80",
+    "path": "/tmp/firefox-clean/cache2/entries/971EFAAA9B0B689081F09009D73AD0A696CC2253",
+    "inode": "0xffff978f8a8675a0",
+    "mode": "0x8180",
+    "size": 35190,
+    "mapping": "0xffff978f8a867718",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f604c1cc0",
+    "path": "/tmp/firefox-clean/cache2/entries/FFECAE66CE2849BD55C946E40343266750A7351D",
+    "inode": "0xffff978f8a861f20",
+    "mode": "0x8180",
+    "size": 12715,
+    "mapping": "0xffff978f8a862098",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f604c1180",
+    "path": "/tmp/firefox-clean/cache2/entries/E51FB8E9EC4EB8831AE86D73B234EB86EEB1C117",
+    "inode": "0xffff978f8a861020",
+    "mode": "0x8180",
+    "size": 10802,
+    "mapping": "0xffff978f8a861198",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f604c1540",
+    "path": "/tmp/firefox-clean/cache2/entries/70AE31736DB9576A8C4D0357B078A15851291802",
+    "inode": "0xffff978f8a8622e0",
+    "mode": "0x8180",
+    "size": 41512,
+    "mapping": "0xffff978f8a862458",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f604c1a80",
+    "path": "/tmp/firefox-clean/cache2/entries/957D6D5FAB3BFB3D25A5F67F274006C036269B5A",
+    "inode": "0xffff978f8a8608a0",
+    "mode": "0x8180",
+    "size": 40715,
+    "mapping": "0xffff978f8a860a18",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f604c1f00",
+    "path": "/tmp/firefox-clean/cache2/entries/37F2CCE8D8EB594E92762ABBBC498AE507C4B5AE",
+    "inode": "0xffff978f8a8631e0",
+    "mode": "0x8180",
+    "size": 8285,
+    "mapping": "0xffff978f8a863358",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f604c1300",
+    "path": "/tmp/firefox-clean/cache2/entries/BA6C9ABFD157950B74153AF33B2E6EFEECF4EC58",
+    "inode": "0xffff978f8a8613e0",
+    "mode": "0x8180",
+    "size": 76670,
+    "mapping": "0xffff978f8a861558",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f604c1e40",
+    "path": "/tmp/firefox-clean/cache2/entries/FD06D956F2A26EC2E6843EDD877DFA59572085B7",
+    "inode": "0xffff978f8a863960",
+    "mode": "0x8180",
+    "size": 9267,
+    "mapping": "0xffff978f8a863ad8",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f604c10c0",
+    "path": "/tmp/firefox-clean/cache2/entries/5EF1715354F32AE4A0F54AD9B6405A11126BFCDE",
+    "inode": "0xffff978f8a862a60",
+    "mode": "0x8180",
+    "size": 8621,
+    "mapping": "0xffff978f8a862bd8",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f604c1b40",
+    "path": "/tmp/firefox-clean/cache2/entries/D3614825BC47D962C7845624A252EB65F6B995F2",
+    "inode": "0xffff978f8a863d20",
+    "mode": "0x8180",
+    "size": 6822,
+    "mapping": "0xffff978f8a863e98",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f604c1000",
+    "path": "/tmp/firefox-clean/cache2/entries/753C0384327999FBDE1B66255ACF33F8F51CD9F3",
+    "inode": "0xffff978f8a8617a0",
+    "mode": "0x8180",
+    "size": 6822,
+    "mapping": "0xffff978f8a861918",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f604c1840",
+    "path": "/tmp/firefox-clean/cache2/entries/833A5F84E494B2EF5D840E90E652D6B1E8734F91",
+    "inode": "0xffff978f8a862e20",
+    "mode": "0x8180",
+    "size": 29259,
+    "mapping": "0xffff978f8a862f98",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f604c1480",
+    "path": "/tmp/firefox-clean/cache2/entries/A4E08A77C470661236FD6A450F7ED7980A871B79",
+    "inode": "0xffff978f8a860c60",
+    "mode": "0x8180",
+    "size": 10514,
+    "mapping": "0xffff978f8a860dd8",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f606799c0",
+    "path": "/tmp/firefox-clean/cache2/entries/BD740436A5B9A329E89533DBA27F3FCBDE72379A",
+    "inode": "0xffff978f8a8604e0",
+    "mode": "0x8180",
+    "size": 8557,
+    "mapping": "0xffff978f8a860658",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f607d9600",
+    "path": "/tmp/firefox-clean/cache2/entries/8F43078EC787ED83256BAE3F0D1C7CD26B6035EB",
+    "inode": "0xffff978f8a8626a0",
+    "mode": "0x8180",
+    "size": 53310,
+    "mapping": "0xffff978f8a862818",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f607d9f00",
+    "path": "/tmp/firefox-clean/cache2/entries/62C0719BFCA0D7DC19062C75C3A43E9149D2E2C0",
+    "inode": "0xffff978f8a8635a0",
+    "mode": "0x8180",
+    "size": 9103,
+    "mapping": "0xffff978f8a863718",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f607d9000",
+    "path": "/tmp/firefox-clean/cache2/entries/F322344E75218865C862E05885C94AB10F5A79F0",
+    "inode": "0xffff978f8a861b60",
+    "mode": "0x8180",
+    "size": 9113,
+    "mapping": "0xffff978f8a861cd8",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f607d9840",
+    "path": "/tmp/firefox-clean/cache2/entries/F63724DCB8CBF6448FD417055F867AC2EAC2ED5A",
+    "inode": "0xffff978f8a860120",
+    "mode": "0x8180",
+    "size": 9104,
+    "mapping": "0xffff978f8a860298",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f607d9180",
+    "path": "/tmp/firefox-clean/cache2/entries/1B0CC654CEFE1110F6DBC2DB7356304DF7778F19",
+    "inode": "0xffff978f8a81df20",
+    "mode": "0x8180",
+    "size": 9111,
+    "mapping": "0xffff978f8a81e098",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f607d99c0",
+    "path": "/tmp/firefox-clean/cache2/entries/FB16D99302C03642D891D3658FBB78C7E462F2B7",
+    "inode": "0xffff978f8a81d020",
+    "mode": "0x8180",
+    "size": 9092,
+    "mapping": "0xffff978f8a81d198",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f607d9900",
+    "path": "/tmp/firefox-clean/cache2/entries/005AE4FE748852A3B1529BA188AEB1E2EA087816",
+    "inode": "0xffff978f8a81e2e0",
+    "mode": "0x8180",
+    "size": 9102,
+    "mapping": "0xffff978f8a81e458",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f607d9480",
+    "path": "/tmp/firefox-clean/cache2/entries/F94A21CAED9B5B5CE09FF39B7E91E5220943D338",
+    "inode": "0xffff978f8a81c8a0",
+    "mode": "0x8180",
+    "size": 9123,
+    "mapping": "0xffff978f8a81ca18",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f607d9b40",
+    "path": "/tmp/firefox-clean/cache2/entries/369A8A998E17F2DD5F868D4B027A7EDC18E045F0",
+    "inode": "0xffff978f8a81f1e0",
+    "mode": "0x8180",
+    "size": 9672,
+    "mapping": "0xffff978f8a81f358",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f607d9a80",
+    "path": "/tmp/firefox-clean/cache2/entries/B92A3687C9F7B995F56E9458658D0E753FB2F730",
+    "inode": "0xffff978f8a81d3e0",
+    "mode": "0x8180",
+    "size": 10890,
+    "mapping": "0xffff978f8a81d558",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f607d9780",
+    "path": "/tmp/firefox-clean/cache2/entries/D6B0ADD0DAEA00708CBB4290B85CCA0E0FA79061",
+    "inode": "0xffff978f8a81f960",
+    "mode": "0x8180",
+    "size": 10499,
+    "mapping": "0xffff978f8a81fad8",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f607d9540",
+    "path": "/tmp/firefox-clean/cache2/entries/0EDDF8C091E2FED62E44BEDDDC1723F5BF38FE4F",
+    "inode": "0xffff978f8a81ea60",
+    "mode": "0x8180",
+    "size": 244,
+    "mapping": "0xffff978f8a81ebd8",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f607d8840",
+    "path": "/tmp/firefox-clean/cache2/entries/F18D85F52EBBBA2AB081EF739ED0D6E8A76D497C",
+    "inode": "0xffff978f8a81fd20",
+    "mode": "0x8180",
+    "size": 605,
+    "mapping": "0xffff978f8a81fe98",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f607d8e40",
+    "path": "/tmp/firefox-clean/cache2/entries/039090029E64BC91E87E77199A6A6BE11FC39B6F",
+    "inode": "0xffff978f8a81d7a0",
+    "mode": "0x8180",
+    "size": 11011,
+    "mapping": "0xffff978f8a81d918",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f607d8300",
+    "path": "/tmp/firefox-clean/cache2/entries/BAD08A3E21C4F7892B1B0ECBC0B21B15E905A695",
+    "inode": "0xffff978f8a81ee20",
+    "mode": "0x8180",
+    "size": 9132,
+    "mapping": "0xffff978f8a81ef98",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f607d8b40",
+    "path": "/tmp/firefox-clean/cache2/entries/BD0F1A16DD6597589FAF3CA167A4EB99F85085D9",
+    "inode": "0xffff978f8a81cc60",
+    "mode": "0x8180",
+    "size": 9141,
+    "mapping": "0xffff978f8a81cdd8",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f607d8480",
+    "path": "/tmp/firefox-clean/cache2/entries/04303E16E659DD7A7332392B4DECDF7CD6909EB3",
+    "inode": "0xffff978f8a81c4e0",
+    "mode": "0x8180",
+    "size": 9180,
+    "mapping": "0xffff978f8a81c658",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f607d8900",
+    "path": "/tmp/firefox-clean/cache2/entries/00A6E3003A1A952685F41AD0C7DDA55C6CB14639",
+    "inode": "0xffff978f8a81e6a0",
+    "mode": "0x8180",
+    "size": 9167,
+    "mapping": "0xffff978f8a81e818",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f607d83c0",
+    "path": "/tmp/firefox-clean/cache2/entries/63F48F4F7F1BC3195F5AB831F9794F3DBA2D30E1",
+    "inode": "0xffff978f8a81f5a0",
+    "mode": "0x8180",
+    "size": 12410,
+    "mapping": "0xffff978f8a81f718",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f607d8240",
+    "path": "/tmp/firefox-clean/cache2/entries/CDA62003B1B987A64F1FAC75D1484DBFF94F08FB",
+    "inode": "0xffff978f8a81db60",
+    "mode": "0x8180",
+    "size": 10500,
+    "mapping": "0xffff978f8a81dcd8",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f607d8780",
+    "path": "/tmp/firefox-clean/cache2/entries/82B312D18B0BBA9982EE9EB41F272A2C49EC2655",
+    "inode": "0xffff978f8a81c120",
+    "mode": "0x8180",
+    "size": 12502,
+    "mapping": "0xffff978f8a81c298",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f607d8f00",
+    "path": "/tmp/firefox-clean/cache2/entries/89C9B59023C6004C5FCA8E641B2BD533BAA7F06E",
+    "inode": "0xffff978f8a8197a0",
+    "mode": "0x8180",
+    "size": 10490,
+    "mapping": "0xffff978f8a819918",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f607d8000",
+    "path": "/tmp/firefox-clean/cache2/entries/DCEAA8669ED0D86815531C7A64712718AEA7AB3E",
+    "inode": "0xffff978f8a81ae20",
+    "mode": "0x8180",
+    "size": 12872,
+    "mapping": "0xffff978f8a81af98",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f607d8a80",
+    "path": "/tmp/firefox-clean/cache2/entries/DB2D5F7FACAF38AC0CA371EEC2333CDE6F38D529",
+    "inode": "0xffff978f8a818c60",
+    "mode": "0x8180",
+    "size": 17928,
+    "mapping": "0xffff978f8a818dd8",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f607d8540",
+    "path": "/tmp/firefox-clean/cache2/entries/BA59279CC6CFD1073638F657233F1D59E22B0B47",
+    "inode": "0xffff978f8a8184e0",
+    "mode": "0x8180",
+    "size": 10492,
+    "mapping": "0xffff978f8a818658",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f607d8180",
+    "path": "/tmp/firefox-clean/cache2/entries/51CC275DACDF73964B1ECE21C034AA08BE40D2C5",
+    "inode": "0xffff978f8a81a6a0",
+    "mode": "0x8180",
+    "size": 120065,
+    "mapping": "0xffff978f8a81a818",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f607d8d80",
+    "path": "/tmp/firefox-clean/cache2/entries/A5B1EBF02189ED616ABB5113C434EEA35CBA41FE",
+    "inode": "0xffff978f8a81b5a0",
+    "mode": "0x8180",
+    "size": 12488,
+    "mapping": "0xffff978f8a81b718",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f607d89c0",
+    "path": "/tmp/firefox-clean/cache2/entries/0908FD017DEAB17ABFB1D19379FBF81C8156267A",
+    "inode": "0xffff978f8a819b60",
+    "mode": "0x8180",
+    "size": 9097,
+    "mapping": "0xffff978f8a819cd8",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f607d8cc0",
+    "path": "/tmp/firefox-clean/cache2/entries/5F9F808D24CC7C2B05A491661F596C5EBE36CF05",
+    "inode": "0xffff978f8a818120",
+    "mode": "0x8180",
+    "size": 12740,
+    "mapping": "0xffff978f8a818298",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f607d86c0",
+    "path": "/tmp/firefox-clean/cache2/entries/6AE1AD9386901279105BDCBABE00776B97C972E9",
+    "inode": "0xffff978f8a819f20",
+    "mode": "0x8180",
+    "size": 12595,
+    "mapping": "0xffff978f8a81a098",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f607d80c0",
+    "path": "/tmp/firefox-clean/cache2/entries/D26D95F07D8F3733534F2C8FB4228E7BAD0C727D",
+    "inode": "0xffff978f8a819020",
+    "mode": "0x8180",
+    "size": 8332,
+    "mapping": "0xffff978f8a819198",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f56481180",
+    "path": "/tmp/firefox-clean/cache2/entries/01096D03928D472972F0328667E3943125CC0541",
+    "inode": "0xffff978f8a81a2e0",
+    "mode": "0x8180",
+    "size": 10007,
+    "mapping": "0xffff978f8a81a458",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f564819c0",
+    "path": "/tmp/firefox-clean/cache2/entries/2B1119058B6D38BEAAA108F88E19E399F2D2F5D8",
+    "inode": "0xffff978f8a8188a0",
+    "mode": "0x8180",
+    "size": 12172,
+    "mapping": "0xffff978f8a818a18",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f56481600",
+    "path": "/tmp/firefox-clean/cache2/entries/DAA46BB4C0961523D9B5D1AF636A0E4AFBB79477",
+    "inode": "0xffff978f8a81b1e0",
+    "mode": "0x8180",
+    "size": 12338,
+    "mapping": "0xffff978f8a81b358",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f56481f00",
+    "path": "/tmp/firefox-clean/cache2/entries/C46C7ECDB9BBED905855CA620A88BD8FB27FC168",
+    "inode": "0xffff978f8a8193e0",
+    "mode": "0x8180",
+    "size": 12397,
+    "mapping": "0xffff978f8a819558",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f56481000",
+    "path": "/tmp/firefox-clean/cache2/entries/109D080055C1548CE320A422FD98DA1D5E1A5BC8",
+    "inode": "0xffff978f8a81b960",
+    "mode": "0x8180",
+    "size": 12217,
+    "mapping": "0xffff978f8a81bad8",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f56481840",
+    "path": "/tmp/firefox-clean/cache2/entries/C103C4873D337E963440203E5C3ED3A9FD04C522",
+    "inode": "0xffff978f8a81aa60",
+    "mode": "0x8180",
+    "size": 38367,
+    "mapping": "0xffff978f8a81abd8",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f56481cc0",
+    "path": "/tmp/firefox-clean/cache2/entries/AC4388372EAC9A2259E1D3C023707BF0229591EA",
+    "inode": "0xffff978f8a81bd20",
+    "mode": "0x8180",
+    "size": 12263,
+    "mapping": "0xffff978f8a81be98",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f564816c0",
+    "path": "/tmp/firefox-clean/cache2/entries/867334C28FE2CCCDE9CA4990C722C75D53FB8406",
+    "inode": "0xffff978f8a817960",
+    "mode": "0x8180",
+    "size": 12406,
+    "mapping": "0xffff978f8a817ad8",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f56481e40",
+    "path": "/tmp/firefox-clean/cache2/entries/AD66DCE798A676DD10E21FF44227D9DA28893051",
+    "inode": "0xffff978f8a816a60",
+    "mode": "0x8180",
+    "size": 12329,
+    "mapping": "0xffff978f8a816bd8",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f56481300",
+    "path": "/tmp/firefox-clean/cache2/entries/6762E24BB9F66A6430B9C774503510453B4EBA21",
+    "inode": "0xffff978f8a817d20",
+    "mode": "0x8180",
+    "size": 12646,
+    "mapping": "0xffff978f8a817e98",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f564810c0",
+    "path": "/tmp/firefox-clean/cache2/entries/0A0CA8561C6B695410714D0302EF2FF3332B2DC9",
+    "inode": "0xffff978f8a8157a0",
+    "mode": "0x8180",
+    "size": 40630,
+    "mapping": "0xffff978f8a815918",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f56481b40",
+    "path": "/tmp/firefox-clean/cache2/entries/1AA3CEA83EF6614B1ED48502AA18C34C601D7A6E",
+    "inode": "0xffff978f8a816e20",
+    "mode": "0x8180",
+    "size": 38326,
+    "mapping": "0xffff978f8a816f98",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f5648b900",
+    "path": "/tmp/firefox-clean/cache2/entries/CEEF2E39B12AFC288FCA29C123775A89E82A75B9",
+    "inode": "0xffff978f8a814c60",
+    "mode": "0x8180",
+    "size": 40118,
+    "mapping": "0xffff978f8a814dd8",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f56476180",
+    "path": "/tmp/firefox-clean/cache2/entries/7E9DA9EC4DDB4DA2E504E51B4D269CD08269D71A",
+    "inode": "0xffff978f8a8144e0",
+    "mode": "0x8180",
+    "size": 106493,
+    "mapping": "0xffff978f8a814658",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f56476480",
+    "path": "/tmp/firefox-clean/cache2/entries/04C60F36B9F31544EE8BA18F6C3A35C189A7DE0F",
+    "inode": "0xffff978f8a8166a0",
+    "mode": "0x8180",
+    "size": 9130,
+    "mapping": "0xffff978f8a816818",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f56476840",
+    "path": "/tmp/firefox-clean/cache2/entries/4017D9FF8CB84428BB32D85E2E34443E11C412D1",
+    "inode": "0xffff978f8a8175a0",
+    "mode": "0x8180",
+    "size": 38242,
+    "mapping": "0xffff978f8a817718",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f60685c00",
+    "path": "/tmp/firefox-clean/cache2/entries/AF3A599CBEC4015A036214F87E487286FF6BE099",
+    "inode": "0xffff978f8a815b60",
+    "mode": "0x8180",
+    "size": 59437,
+    "mapping": "0xffff978f8a815cd8",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f606856c0",
+    "path": "/tmp/firefox-clean/cache2/entries/08CA666BB9027892CCAD9ECE20C62D3E977E00FD",
+    "inode": "0xffff978f8a814120",
+    "mode": "0x8180",
+    "size": 15997,
+    "mapping": "0xffff978f8a814298",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f60685300",
+    "path": "/tmp/firefox-clean/cache2/entries/3A34DE5FB48FD6D5330FBF0DC06DA2EEA2AA0AEA",
+    "inode": "0xffff978f8a815f20",
+    "mode": "0x8180",
+    "size": 12648,
+    "mapping": "0xffff978f8a816098",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f60685e40",
+    "path": "/tmp/firefox-clean/cache2/entries/E451CEBB47B1158D93BF0742EC58A13CA9615652",
+    "inode": "0xffff978f8a815020",
+    "mode": "0x8180",
+    "size": 13899,
+    "mapping": "0xffff978f8a815198",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f60685cc0",
+    "path": "/tmp/firefox-clean/cache2/entries/02E0B45B540D264EBD6A87D667A4A9C97EE4D9BA",
+    "inode": "0xffff978f8a8162e0",
+    "mode": "0x8180",
+    "size": 12497,
+    "mapping": "0xffff978f8a816458",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f60685840",
+    "path": "/tmp/firefox-clean/cache2/entries/8EC47823E136EE1A5ACF4F315230836C3A8CCD27",
+    "inode": "0xffff978f8a8148a0",
+    "mode": "0x8180",
+    "size": 14123,
+    "mapping": "0xffff978f8a814a18",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f60685d80",
+    "path": "/tmp/firefox-clean/cache2/entries/5E033066CBCDA631073927190815776E89927B0A",
+    "inode": "0xffff978f8a8171e0",
+    "mode": "0x8180",
+    "size": 15134,
+    "mapping": "0xffff978f8a817358",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f60685180",
+    "path": "/tmp/firefox-clean/cache2/entries/767DA611CD722806C1166BF2E027790B4F83EFBE",
+    "inode": "0xffff978f8a8153e0",
+    "mode": "0x8180",
+    "size": 17331,
+    "mapping": "0xffff978f8a815558",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f606850c0",
+    "path": "/tmp/firefox-clean/cache2/entries/2BA3380C0C397F13E8EB43526AD6F10AF77C8D3B",
+    "inode": "0xffff978f8a8117a0",
+    "mode": "0x8180",
+    "size": 12544,
+    "mapping": "0xffff978f8a811918",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f60685a80",
+    "path": "/tmp/firefox-clean/cache2/entries/6569325C0317D2D6802A27DDE78DFC3F74697DCF",
+    "inode": "0xffff978f8a812e20",
+    "mode": "0x8180",
+    "size": 13110,
+    "mapping": "0xffff978f8a812f98",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f60685780",
+    "path": "/tmp/firefox-clean/cache2/entries/4CA8AC28F86D5338D457171836CF0A52B3D8681F",
+    "inode": "0xffff978f8a810c60",
+    "mode": "0x8180",
+    "size": 32690,
+    "mapping": "0xffff978f8a810dd8",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f60685b40",
+    "path": "/tmp/firefox-clean/cache2/entries/B144C7C8ED9154316CBC2F167B1765F24B068F11",
+    "inode": "0xffff978f8a8104e0",
+    "mode": "0x8180",
+    "size": 12118,
+    "mapping": "0xffff978f8a810658",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f5648cd80",
+    "path": "/tmp/firefox-clean/cache2/entries/1113727F8980C6FB7A332C90FC47BAE73DF6F8B1",
+    "inode": "0xffff978f8a8126a0",
+    "mode": "0x8180",
+    "size": 20950,
+    "mapping": "0xffff978f8a812818",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f5648ce40",
+    "path": "/tmp/firefox-clean/cache2/entries/7804312874FD500FFB65EC69390EFD312853C8D5",
+    "inode": "0xffff978f8a8135a0",
+    "mode": "0x8180",
+    "size": 14030,
+    "mapping": "0xffff978f8a813718",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f5a065900",
+    "path": "/tmp/firefox-clean/cache2/entries/D6940013168567C14667F8A28DC703013C103D3A",
+    "inode": "0xffff978f8a811b60",
+    "mode": "0x8180",
+    "size": 14314,
+    "mapping": "0xffff978f8a811cd8",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f5a065e40",
+    "path": "/tmp/firefox-clean/cache2/entries/54A1A0EF288012409FD6A2A11098985403983DB3",
+    "inode": "0xffff978f8a810120",
+    "mode": "0x8180",
+    "size": 17580,
+    "mapping": "0xffff978f8a810298",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f5a065480",
+    "path": "/tmp/firefox-clean/cache2/entries/31C9F9F909A2B6BE80D2DD9CA5637DCFEE831CAC",
+    "inode": "0xffff978f8a811f20",
+    "mode": "0x8180",
+    "size": 14636,
+    "mapping": "0xffff978f8a812098",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f5a065b40",
+    "path": "/tmp/firefox-clean/cache2/entries/6EE4973625370D95CE6A18602DCB9FB79F4AF4A8",
+    "inode": "0xffff978f8a811020",
+    "mode": "0x8180",
+    "size": 14115,
+    "mapping": "0xffff978f8a811198",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f5a0650c0",
+    "path": "/tmp/firefox-clean/cache2/entries/9F6E75A8EAEBF2E0A422CA7E4A82840DDA9700E5",
+    "inode": "0xffff978f8a8122e0",
+    "mode": "0x8180",
+    "size": 8512,
+    "mapping": "0xffff978f8a812458",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f56427780",
+    "path": "/tmp/firefox-clean/cache2/entries/8540EC873F08CBAD5DF5121BD3BABF95624B4A14",
+    "inode": "0xffff978f8a8108a0",
+    "mode": "0x8180",
+    "size": 10419,
+    "mapping": "0xffff978f8a810a18",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f5a066c00",
+    "path": "/tmp/firefox-clean/cache2/entries/44230749A38B6989F56217B435A03E84CCADE62D",
+    "inode": "0xffff978f8a8131e0",
+    "mode": "0x8180",
+    "size": 38176,
+    "mapping": "0xffff978f8a813358",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f56489cc0",
+    "path": "/tmp/firefox-clean/cache2/entries/5EF87C6582286683FA325ABB76DDFDC241A7231B",
+    "inode": "0xffff978f8a8113e0",
+    "mode": "0x8180",
+    "size": 7842,
+    "mapping": "0xffff978f8a811558",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f5a06d300",
+    "path": "/tmp/firefox-clean/cache2/entries/136F705360379D3CE869F93015BF46EE3502D5E9",
+    "inode": "0xffff978f8a813960",
+    "mode": "0x8180",
+    "size": 96415,
+    "mapping": "0xffff978f8a813ad8",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f5a06d0c0",
+    "path": "/tmp/firefox-clean/cache2/entries/DA1500878B3322179D95CCDA47D635DC394B62EB",
+    "inode": "0xffff978f8a812a60",
+    "mode": "0x8180",
+    "size": 12794,
+    "mapping": "0xffff978f8a812bd8",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f5a06d840",
+    "path": "/tmp/firefox-clean/cache2/entries/5CAA0F2AB0FBF29AA525878A74D824B4E10F05DF",
+    "inode": "0xffff978f8a813d20",
+    "mode": "0x8180",
+    "size": 130024,
+    "mapping": "0xffff978f8a813e98",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f5a06dcc0",
+    "path": "/tmp/firefox-clean/cache2/entries/037778A55E1B7E9BED3390289866D09402D6C913",
+    "inode": "0xffff978f8a80f5a0",
+    "mode": "0x8180",
+    "size": 10511,
+    "mapping": "0xffff978f8a80f718",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f607dc180",
+    "path": "/tmp/firefox-clean/cache2/entries/AA9340A5C87BCF5B1FED13ACA7364A586AF0AB4E",
+    "inode": "0xffff978f8a80db60",
+    "mode": "0x8180",
+    "size": 10510,
+    "mapping": "0xffff978f8a80dcd8",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f607dc900",
+    "path": "/tmp/firefox-clean/cache2/entries/BCDB8244649DC7DAD4990F3599FC2428A11DCB71",
+    "inode": "0xffff978f8a80c120",
+    "mode": "0x8180",
+    "size": 8778,
+    "mapping": "0xffff978f8a80c298",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f607dcc00",
+    "path": "/tmp/firefox-clean/cache2/entries/025A649D9DCB4A04E25493BF8DB9B67B177A1F2E",
+    "inode": "0xffff978f8a80df20",
+    "mode": "0x8180",
+    "size": 21039,
+    "mapping": "0xffff978f8a80e098",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f607dcb40",
+    "path": "/tmp/firefox-clean/cache2/entries/71F863F493BD473A99EF9733520FADAECA5BE4AC",
+    "inode": "0xffff978f8a80d020",
+    "mode": "0x8180",
+    "size": 11314,
+    "mapping": "0xffff978f8a80d198",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f607dce40",
+    "path": "/tmp/firefox-clean/cache2/entries/9791C5C5B74D86E0A84A89103407BC057D9AC856",
+    "inode": "0xffff978f8a80e2e0",
+    "mode": "0x8180",
+    "size": 9058,
+    "mapping": "0xffff978f8a80e458",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f607dc780",
+    "path": "/tmp/firefox-clean/cache2/entries/8D61FFDC1E773A943A056AF66E4BF1589870AB95",
+    "inode": "0xffff978f8a80c8a0",
+    "mode": "0x8180",
+    "size": 9297,
+    "mapping": "0xffff978f8a80ca18",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f607dca80",
+    "path": "/tmp/firefox-clean/cache2/entries/D23F7952044A1A6016B80DED46FC563716A295DF",
+    "inode": "0xffff978f8a80f1e0",
+    "mode": "0x8180",
+    "size": 10513,
+    "mapping": "0xffff978f8a80f358",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f607dcd80",
+    "path": "/tmp/firefox-clean/cache2/entries/82F4CDEDC8A08E6BCE520A4114F15825F2E886F6",
+    "inode": "0xffff978f8a80d3e0",
+    "mode": "0x8180",
+    "size": 30299,
+    "mapping": "0xffff978f8a80d558",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f607dc540",
+    "path": "/tmp/firefox-clean/cache2/entries/90E321EE94230DCDBDCD2EC0B77C695A4FC21F78",
+    "inode": "0xffff978f8a80f960",
+    "mode": "0x8180",
+    "size": 10502,
+    "mapping": "0xffff978f8a80fad8",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f607dc840",
+    "path": "/tmp/firefox-clean/startupCache",
+    "inode": "0xffff978f8a8097a0",
+    "mode": "0x41fd",
+    "size": 128,
+    "mapping": "0xffff978f8a809918",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f607dcf00",
+    "path": "/tmp/firefox-clean/startupCache/startupCache.8.little",
+    "inode": "0xffff978f8a80d7a0",
+    "mode": "0x81a4",
+    "size": 5573905,
+    "mapping": "0xffff978f8a80d918",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f607dc600",
+    "path": "/tmp/firefox-clean/startupCache/scriptCache-child.bin",
+    "inode": "0xffff978f8a80ee20",
+    "mode": "0x81a4",
+    "size": 2264228,
+    "mapping": "0xffff978f8a80ef98",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f607dccc0",
+    "path": "/tmp/firefox-clean/startupCache/scriptCache.bin",
+    "inode": "0xffff978f8a80cc60",
+    "mode": "0x81a4",
+    "size": 8021417,
+    "mapping": "0xffff978f8a80cdd8",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f607dc0c0",
+    "path": "/tmp/firefox-clean/startupCache/urlCache.bin",
+    "inode": "0xffff978f8a80c4e0",
+    "mode": "0x81a4",
+    "size": 3089,
+    "mapping": "0xffff978f8a80c658",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f607dc300",
+    "path": "/tmp/firefox-clean/startupCache/webext.sc.lz4",
+    "inode": "0xffff978f8a80e6a0",
+    "mode": "0x81b4",
+    "size": 103076,
+    "mapping": "0xffff978f8a80e818",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f5661a9c0",
+    "path": "/tmp/firefox-clean/compatibility.ini",
+    "inode": "0xffff978f8a80ae20",
+    "mode": "0x8180",
+    "size": 166,
+    "mapping": "0xffff978f8a80af98",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f604ba000",
+    "path": "/tmp/firefox-clean/lock",
+    "inode": "0xffff978f8a808c60",
+    "mode": "0xa1ff",
+    "size": 15,
+    "mapping": "0xffff978f8a808dd8",
+    "head": "0x0"
+  },
+  {
+    "dentry": "0xffff978f604ba840",
+    "path": "/tmp/firefox-clean/.parentlock",
+    "inode": "0xffff978f8a8084e0",
+    "mode": "0x81b4",
+    "size": 0,
+    "mapping": "0xffff978f8a808658",
+    "head": "0x0"
+  }
+]

@@ -1,0 +1,102 @@
+[
+  {
+    "source": "full",
+    "plaintext_length": 57,
+    "xor_key_bytes": 1,
+    "crc_consistent": false
+  },
+  {
+    "source": "full",
+    "plaintext_length": 57,
+    "xor_key_bytes": 2,
+    "crc_consistent": false
+  },
+  {
+    "source": "full",
+    "plaintext_length": 57,
+    "xor_key_bytes": 3,
+    "crc_consistent": false
+  },
+  {
+    "source": "full",
+    "plaintext_length": 57,
+    "xor_key_bytes": 4,
+    "crc_consistent": true,
+    "free_bits": 0,
+    "result": 0
+  },
+  {
+    "source": "full",
+    "plaintext_length": 57,
+    "xor_key_bytes": 5,
+    "crc_consistent": true,
+    "free_bits": 8,
+    "result": 0
+  },
+  {
+    "source": "full",
+    "plaintext_length": 57,
+    "xor_key_bytes": 6,
+    "crc_consistent": true,
+    "free_bits": 16,
+    "result": 0
+  },
+  {
+    "source": "full",
+    "plaintext_length": 57,
+    "xor_key_bytes": 7,
+    "crc_consistent": true,
+    "free_bits": 24,
+    "result": 0
+  },
+  {
+    "source": "suffix60",
+    "plaintext_length": 45,
+    "xor_key_bytes": 1,
+    "crc_consistent": false
+  },
+  {
+    "source": "suffix60",
+    "plaintext_length": 45,
+    "xor_key_bytes": 2,
+    "crc_consistent": false
+  },
+  {
+    "source": "suffix60",
+    "plaintext_length": 45,
+    "xor_key_bytes": 3,
+    "crc_consistent": false
+  },
+  {
+    "source": "suffix60",
+    "plaintext_length": 45,
+    "xor_key_bytes": 4,
+    "crc_consistent": true,
+    "free_bits": 0,
+    "result": 0
+  },
+  {
+    "source": "suffix60",
+    "plaintext_length": 45,
+    "xor_key_bytes": 5,
+    "crc_consistent": true,
+    "free_bits": 8,
+    "result": 0
+  },
+  {
+    "source": "suffix60",
+    "plaintext_length": 45,
+    "xor_key_bytes": 6,
+    "crc_consistent": true,
+    "free_bits": 16,
+    "result": 0
+  },
+  {
+    "source": "suffix60",
+    "plaintext_length": 45,
+    "xor_key_bytes": 7,
+    "crc_consistent": true,
+    "free_bits": 24,
+    "result": 0
+  }
+]

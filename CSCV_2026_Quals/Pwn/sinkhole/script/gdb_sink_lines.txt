@@ -1,0 +1,21 @@
+set pagination off
+set breakpoint pending on
+set logging file /tmp/gdb_sink_lines.log
+set logging enabled on
+
+b maglev-store-sink.cc:41
+commands
+  silent
+  printf "=== LINE 41 HIT: from=%d to=%d in loop %p ===\n", from, to, header
+  continue
+end
+
+b maglev-store-sink.cc:53
+commands
+  silent
+  printf "🔥🔥🔥 LINE 53 HIT! SINK SUCCESSFUL! 🔥🔥🔥\n"
+  continue
+end
+
+run
+quit

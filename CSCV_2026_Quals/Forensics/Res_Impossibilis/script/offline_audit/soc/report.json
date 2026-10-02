@@ -1,0 +1,634 @@
+{
+  "tshark": {
+    "unique_client_randoms": 121,
+    "previous_count": 64,
+    "tcp_clienthellos": 87,
+    "non_tcp_clienthellos": 34,
+    "newly_observed": 57,
+    "ram_keylog_matches": [],
+    "note": "ClientHello rows can include QUIC; tcp.stream is blank for non-TCP traffic."
+  },
+  "suricata": {
+    "version": "8.0.6",
+    "events": {
+      "dns": 482,
+      "tls": 87,
+      "mdns": 36,
+      "quic": 91,
+      "anomaly": 39,
+      "flow": 436,
+      "http": 488,
+      "fileinfo": 449,
+      "stats": 1
+    },
+    "packets": 740595,
+    "packet_bytes": 978270136,
+    "invalid_packets": 0,
+    "tcp_reassembly_gaps": 0,
+    "tls_parser_errors": {
+      "gap": 0,
+      "alloc": 0,
+      "parser": 0,
+      "internal": 0
+    },
+    "rules_loaded": 0,
+    "note": "Protocol analysis only; no threat signature rules loaded. Empty alerts do not establish benign traffic."
+  },
+  "http_hosts": {
+    "connectivity-check.ubuntu.com.": 1,
+    "security.ubuntu.com": 40,
+    "in.archive.ubuntu.com": 447
+  },
+  "anomalies": {
+    "stream.fin_but_no_session": 29,
+    "stream.rst_but_no_session": 10
+  },
+  "mega_transfers": [
+    {
+      "start_epoch": 1788885067.30775,
+      "zeek_uid": "CUsxp6MzCWcMg3VJj",
+      "tuple": [
+        "192.168.76.131",
+        "38126",
+        "69.30.89.11",
+        "443"
+      ],
+      "sni": "gfs240n101.userstorage.mega.co.nz",
+      "tshark_stream_candidates": [
+        "71",
+        "69",
+        "72",
+        "70"
+      ],
+      "client_payload_bytes": 3243,
+      "server_payload_bytes": 1319095,
+      "zeek_missed_bytes": 0,
+      "suricata_flow_id": 1040305218363087,
+      "community_id": "1:DF4RzyhU1Z/lL5SF5aYk9f9VdlQ=",
+      "tls": {
+        "sni": "gfs240n101.userstorage.mega.co.nz",
+        "version": "TLS 1.3",
+        "ja3": {
+          "hash": "de1f5214e76ba75a5de191720111f935",
+          "string": "771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,16-23-5-13-17613-18-51-45-27-65281-0-10-35-11-65037-43,4588-29-23-24,0"
+        },
+        "ja3s": {
+          "hash": "eb1d94daa7e0344597e756a1fb6e7054",
+          "string": "771,4865,51-43"
+        },
+        "ja4": "t13d1516h2_8daaf6152771_d8a2da3f94cd",
+        "client_alpns": [
+          "h2",
+          "http/1.1"
+        ]
+      }
+    },
+    {
+      "start_epoch": 1788885067.308148,
+      "zeek_uid": "CfQ0pX35AZhAa6U8U1",
+      "tuple": [
+        "192.168.76.131",
+        "38128",
+        "69.30.89.11",
+        "443"
+      ],
+      "sni": "gfs240n101.userstorage.mega.co.nz",
+      "tshark_stream_candidates": [
+        "71",
+        "69",
+        "72",
+        "70"
+      ],
+      "client_payload_bytes": 3340,
+      "server_payload_bytes": 1581592,
+      "zeek_missed_bytes": 0,
+      "suricata_flow_id": 1042014061059860,
+      "community_id": "1:87gGEeUExPAkGuNIyBtFMdiQAzk=",
+      "tls": {
+        "sni": "gfs240n101.userstorage.mega.co.nz",
+        "version": "TLS 1.3",
+        "ja3": {
+          "hash": "5a3f0bcc8574b5d619d7f1be2581db0c",
+          "string": "771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,65037-18-35-10-5-11-65281-13-45-0-23-27-16-17613-43-51,4588-29-23-24,0"
+        },
+        "ja3s": {
+          "hash": "eb1d94daa7e0344597e756a1fb6e7054",
+          "string": "771,4865,51-43"
+        },
+        "ja4": "t13d1516h2_8daaf6152771_d8a2da3f94cd",
+        "client_alpns": [
+          "h2",
+          "http/1.1"
+        ]
+      }
+    },
+    {
+      "start_epoch": 1788885067.308471,
+      "zeek_uid": "Cp3K9Rz7uhkhKogtd",
+      "tuple": [
+        "192.168.76.131",
+        "38130",
+        "69.30.89.11",
+        "443"
+      ],
+      "sni": "gfs240n101.userstorage.mega.co.nz",
+      "tshark_stream_candidates": [
+        "71",
+        "69",
+        "72",
+        "70"
+      ],
+      "client_payload_bytes": 4021,
+      "server_payload_bytes": 1844414,
+      "zeek_missed_bytes": 0,
+      "suricata_flow_id": 1043400204393478,
+      "community_id": "1:cx1UqZHAvDyJEEtkXm5PJ6CWceU=",
+      "tls": {
+        "sni": "gfs240n101.userstorage.mega.co.nz",
+        "version": "TLS 1.3",
+        "ja3": {
+          "hash": "88bd22d1034fc018806671bc31a3775c",
+          "string": "771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,35-0-43-51-65281-13-45-11-23-27-10-5-18-17613-65037-16,4588-29-23-24,0"
+        },
+        "ja3s": {
+          "hash": "eb1d94daa7e0344597e756a1fb6e7054",
+          "string": "771,4865,51-43"
+        },
+        "ja4": "t13d1516h2_8daaf6152771_d8a2da3f94cd",
+        "client_alpns": [
+          "h2",
+          "http/1.1"
+        ]
+      }
+    },
+    {
+      "start_epoch": 1788885067.308811,
+      "zeek_uid": "C475av1HkAMPyAUS36",
+      "tuple": [
+        "192.168.76.131",
+        "38132",
+        "69.30.89.11",
+        "443"
+      ],
+      "sni": "gfs240n101.userstorage.mega.co.nz",
+      "tshark_stream_candidates": [
+        "71",
+        "69",
+        "72",
+        "70"
+      ],
+      "client_payload_bytes": 4026,
+      "server_payload_bytes": 2106910,
+      "zeek_missed_bytes": 0,
+      "suricata_flow_id": 1044861066740692,
+      "community_id": "1:+gEYlvMbTKGEKx3ljduaLa54p5A=",
+      "tls": {
+        "sni": "gfs240n101.userstorage.mega.co.nz",
+        "version": "TLS 1.3",
+        "ja3": {
+          "hash": "eb8e0d592de5b6262a3bd10f6587a06d",
+          "string": "771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,16-65037-43-23-17613-51-13-45-35-18-5-65281-0-27-10-11,4588-29-23-24,0"
+        },
+        "ja3s": {
+          "hash": "eb1d94daa7e0344597e756a1fb6e7054",
+          "string": "771,4865,51-43"
+        },
+        "ja4": "t13d1516h2_8daaf6152771_d8a2da3f94cd",
+        "client_alpns": [
+          "h2",
+          "http/1.1"
+        ]
+      }
+    },
+    {
+      "start_epoch": 1788885069.275922,
+      "zeek_uid": "CjIKXG3nIjhQFvd8y5",
+      "tuple": [
+        "192.168.76.131",
+        "38134",
+        "69.30.89.11",
+        "443"
+      ],
+      "sni": "gfs240n101.userstorage.mega.co.nz",
+      "tshark_stream_candidates": [
+        "73",
+        "74"
+      ],
+      "client_payload_bytes": 2813,
+      "server_payload_bytes": 1050971,
+      "zeek_missed_bytes": 0,
+      "suricata_flow_id": 1466553604892263,
+      "community_id": "1:frJ+6aLvRLv74l8+S/nzOh3qTwQ=",
+      "tls": {
+        "sni": "gfs240n101.userstorage.mega.co.nz",
+        "version": "TLS 1.3",
+        "ja3": {
+          "hash": "bfa74ae010885b4c17b3f04978443050",
+          "string": "771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,65281-10-17613-43-11-27-0-35-45-18-23-51-13-16-65037-5-41,4588-29-23-24,0"
+        },
+        "ja3s": {
+          "hash": "2b0648ab686ee45e0e7c35fcfb0eea7e",
+          "string": "771,4865,41-51-43"
+        },
+        "ja4": "t13d1517h2_8daaf6152771_b6f405a00624",
+        "client_alpns": [
+          "h2",
+          "http/1.1"
+        ]
+      }
+    },
+    {
+      "start_epoch": 1788885069.672598,
+      "zeek_uid": "CVWQVZ3a9aK7OQrSQ1",
+      "tuple": [
+        "192.168.76.131",
+        "38136",
+        "69.30.89.11",
+        "443"
+      ],
+      "sni": "gfs240n101.userstorage.mega.co.nz",
+      "tshark_stream_candidates": [
+        "74"
+      ],
+      "client_payload_bytes": 2781,
+      "server_payload_bytes": 733954,
+      "zeek_missed_bytes": 0,
+      "suricata_flow_id": 1481412893704809,
+      "community_id": "1:A4QudYop7HIcxetxI4RsTEop3L8=",
+      "tls": {
+        "sni": "gfs240n101.userstorage.mega.co.nz",
+        "version": "TLS 1.3",
+        "ja3": {
+          "hash": "bb2b83582e5e27bb789884e3d810e390",
+          "string": "771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,17613-16-13-45-43-0-11-10-23-18-35-27-51-5-65281-65037-41,4588-29-23-24,0"
+        },
+        "ja3s": {
+          "hash": "2b0648ab686ee45e0e7c35fcfb0eea7e",
+          "string": "771,4865,41-51-43"
+        },
+        "ja4": "t13d1517h2_8daaf6152771_b6f405a00624",
+        "client_alpns": [
+          "h2",
+          "http/1.1"
+        ]
+      }
+    },
+    {
+      "start_epoch": 1788885070.551731,
+      "zeek_uid": "CGbpIE4HOi8eyfaU64",
+      "tuple": [
+        "192.168.76.131",
+        "48418",
+        "89.44.168.33",
+        "443"
+      ],
+      "sni": "gfs270n323.userstorage.mega.co.nz",
+      "tshark_stream_candidates": [
+        "75"
+      ],
+      "client_payload_bytes": 2614,
+      "server_payload_bytes": 29681,
+      "zeek_missed_bytes": 0,
+      "suricata_flow_id": 1806718623298040,
+      "community_id": "1:q3OW3V7k2wXhyjwG8vAKwvjxMzQ=",
+      "tls": {
+        "sni": "gfs270n323.userstorage.mega.co.nz",
+        "version": "TLS 1.3",
+        "ja3": {
+          "hash": "6e404c9a5cd6b991da3a666d47d2c2b5",
+          "string": "771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,23-16-18-43-10-45-17613-5-51-0-27-65037-11-65281-35-13,4588-29-23-24,0"
+        },
+        "ja3s": {
+          "hash": "eb1d94daa7e0344597e756a1fb6e7054",
+          "string": "771,4865,51-43"
+        },
+        "ja4": "t13d1516h2_8daaf6152771_d8a2da3f94cd",
+        "client_alpns": [
+          "h2",
+          "http/1.1"
+        ]
+      }
+    },
+    {
+      "start_epoch": 1788885137.630836,
+      "zeek_uid": "CLNKQiytq7QryL9d3",
+      "tuple": [
+        "192.168.76.131",
+        "36518",
+        "89.44.168.100",
+        "443"
+      ],
+      "sni": "gfs270n384.userstorage.mega.co.nz",
+      "tshark_stream_candidates": [
+        "85"
+      ],
+      "client_payload_bytes": 2470,
+      "server_payload_bytes": 6080,
+      "zeek_missed_bytes": 0,
+      "suricata_flow_id": 457622679382374,
+      "community_id": "1:2jnpOL7RxCgL3JYc7yy8G5TB9Wo=",
+      "tls": {
+        "sni": "gfs270n384.userstorage.mega.co.nz",
+        "version": "TLS 1.3",
+        "ja3": {
+          "hash": "afca4250ce21caad9305b91602bad188",
+          "string": "771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,45-16-13-51-18-23-65281-35-27-5-65037-43-0-10-11,4588-29-23-24,0"
+        },
+        "ja3s": {
+          "hash": "eb1d94daa7e0344597e756a1fb6e7054",
+          "string": "771,4865,51-43"
+        },
+        "ja4": "t13d1515h1_8daaf6152771_0a20fe35d3a5",
+        "client_alpns": [
+          "http/1.1"
+        ]
+      }
+    },
+    {
+      "start_epoch": 1788885137.759504,
+      "zeek_uid": "CVvDJe2kWu3Myup0Gc",
+      "tuple": [
+        "192.168.76.131",
+        "57848",
+        "69.30.89.14",
+        "443"
+      ],
+      "sni": "gfs240n104.userstorage.mega.co.nz",
+      "tshark_stream_candidates": [
+        "86"
+      ],
+      "client_payload_bytes": 2434,
+      "server_payload_bytes": 6128,
+      "zeek_missed_bytes": 0,
+      "suricata_flow_id": 447295240952977,
+      "community_id": "1:KnCW3QjDv6Fidqnj+e0gqa5r8qc=",
+      "tls": {
+        "sni": "gfs240n104.userstorage.mega.co.nz",
+        "version": "TLS 1.3",
+        "ja3": {
+          "hash": "048ae9863968d7d1f2b519742ad828af",
+          "string": "771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,18-51-65037-65281-16-35-5-23-27-0-45-11-13-43-10,4588-29-23-24,0"
+        },
+        "ja3s": {
+          "hash": "eb1d94daa7e0344597e756a1fb6e7054",
+          "string": "771,4865,51-43"
+        },
+        "ja4": "t13d1515h1_8daaf6152771_0a20fe35d3a5",
+        "client_alpns": [
+          "http/1.1"
+        ]
+      }
+    },
+    {
+      "start_epoch": 1788885137.9424,
+      "zeek_uid": "COQjBbuNQ2CdaA2l4",
+      "tuple": [
+        "192.168.76.131",
+        "35918",
+        "185.206.24.30",
+        "443"
+      ],
+      "sni": "gfs204n070.userstorage.mega.co.nz",
+      "tshark_stream_candidates": [
+        "87",
+        "89"
+      ],
+      "client_payload_bytes": 68050,
+      "server_payload_bytes": 6288,
+      "zeek_missed_bytes": 0,
+      "suricata_flow_id": 388404927928137,
+      "community_id": "1:bhMIXvaQLDzQ3v9H6/f9l9XMBdU=",
+      "tls": {
+        "sni": "gfs204n070.userstorage.mega.co.nz",
+        "version": "TLS 1.3",
+        "ja3": {
+          "hash": "70c80f598a2ede681e600e181f0f5dcc",
+          "string": "771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,65281-27-16-0-18-13-45-35-5-65037-43-10-11-23-51,4588-29-23-24,0"
+        },
+        "ja3s": {
+          "hash": "eb1d94daa7e0344597e756a1fb6e7054",
+          "string": "771,4865,51-43"
+        },
+        "ja4": "t13d1515h1_8daaf6152771_0a20fe35d3a5",
+        "client_alpns": [
+          "http/1.1"
+        ]
+      }
+    },
+    {
+      "start_epoch": 1788885139.049597,
+      "zeek_uid": "C0jUAX3SGGdcW9brI8",
+      "tuple": [
+        "192.168.76.131",
+        "35920",
+        "185.206.24.30",
+        "443"
+      ],
+      "sni": "gfs204n070.userstorage.mega.co.nz",
+      "tshark_stream_candidates": [
+        "89"
+      ],
+      "client_payload_bytes": 2721,
+      "server_payload_bytes": 825,
+      "zeek_missed_bytes": 0,
+      "suricata_flow_id": 1057445557613598,
+      "community_id": "1:OFndCAN17BA8grx+SUOtGg40efY=",
+      "tls": {
+        "sni": "gfs204n070.userstorage.mega.co.nz",
+        "version": "TLS 1.3",
+        "ja3": {
+          "hash": "557baf46c56b7131113d17017125771a",
+          "string": "771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,16-13-65037-35-43-65281-11-51-0-10-45-27-5-18-23-41,4588-29-23-24,0"
+        },
+        "ja3s": {
+          "hash": "2b0648ab686ee45e0e7c35fcfb0eea7e",
+          "string": "771,4865,41-51-43"
+        },
+        "ja4": "t13d1516h1_8daaf6152771_0d365e64def3",
+        "client_alpns": [
+          "http/1.1"
+        ]
+      }
+    },
+    {
+      "start_epoch": 1788885148.457334,
+      "zeek_uid": "C6CfF7246aTHMXVZN1",
+      "tuple": [
+        "192.168.76.131",
+        "51048",
+        "69.30.89.62",
+        "443"
+      ],
+      "sni": "gfs240n140.userstorage.mega.co.nz",
+      "tshark_stream_candidates": [
+        "93"
+      ],
+      "client_payload_bytes": 2434,
+      "server_payload_bytes": 6169,
+      "zeek_missed_bytes": 0,
+      "suricata_flow_id": 1401287054033961,
+      "community_id": "1:6pyE8MDza+Trw/wfClSeAyNgGZ0=",
+      "tls": {
+        "sni": "gfs240n140.userstorage.mega.co.nz",
+        "version": "TLS 1.3",
+        "ja3": {
+          "hash": "6b8b00fb1af2e61e19db8bb51c7b5689",
+          "string": "771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,13-65037-23-18-5-27-51-10-16-11-35-0-45-43-65281,4588-29-23-24,0"
+        },
+        "ja3s": {
+          "hash": "eb1d94daa7e0344597e756a1fb6e7054",
+          "string": "771,4865,51-43"
+        },
+        "ja4": "t13d1515h1_8daaf6152771_0a20fe35d3a5",
+        "client_alpns": [
+          "http/1.1"
+        ]
+      }
+    },
+    {
+      "start_epoch": 1788885158.413809,
+      "zeek_uid": "CSufoo4QHRwOqG2aVe",
+      "tuple": [
+        "192.168.76.131",
+        "47810",
+        "185.206.24.31",
+        "443"
+      ],
+      "sni": "gfs204n071.userstorage.mega.co.nz",
+      "tshark_stream_candidates": [
+        "94"
+      ],
+      "client_payload_bytes": 2530,
+      "server_payload_bytes": 6128,
+      "zeek_missed_bytes": 0,
+      "suricata_flow_id": 1777298049062931,
+      "community_id": "1:Q8OLDgAo3tFJ7nGwPm4tpEqcIjQ=",
+      "tls": {
+        "sni": "gfs204n071.userstorage.mega.co.nz",
+        "version": "TLS 1.3",
+        "ja3": {
+          "hash": "6106145b40ef70bc6d29924192b05174",
+          "string": "771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,10-51-65281-35-23-16-5-45-0-27-43-65037-13-18-11,4588-29-23-24,0"
+        },
+        "ja3s": {
+          "hash": "eb1d94daa7e0344597e756a1fb6e7054",
+          "string": "771,4865,51-43"
+        },
+        "ja4": "t13d1515h1_8daaf6152771_0a20fe35d3a5",
+        "client_alpns": [
+          "http/1.1"
+        ]
+      }
+    },
+    {
+      "start_epoch": 1788885158.542335,
+      "zeek_uid": "CPXXG24KZ2lTAWaLS3",
+      "tuple": [
+        "192.168.76.131",
+        "35432",
+        "69.30.89.65",
+        "443"
+      ],
+      "sni": "gfs240n201.userstorage.mega.co.nz",
+      "tshark_stream_candidates": [
+        "95"
+      ],
+      "client_payload_bytes": 2466,
+      "server_payload_bytes": 6169,
+      "zeek_missed_bytes": 0,
+      "suricata_flow_id": 1766362079344215,
+      "community_id": "1:HcIFlac8NwbaVYyqF2Q/Fv7QioE=",
+      "tls": {
+        "sni": "gfs240n201.userstorage.mega.co.nz",
+        "version": "TLS 1.3",
+        "ja3": {
+          "hash": "b359c26939a8f7b788db6f2327f5727c",
+          "string": "771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,18-0-27-16-51-10-11-5-35-23-65281-45-13-43-65037,4588-29-23-24,0"
+        },
+        "ja3s": {
+          "hash": "eb1d94daa7e0344597e756a1fb6e7054",
+          "string": "771,4865,51-43"
+        },
+        "ja4": "t13d1515h1_8daaf6152771_0a20fe35d3a5",
+        "client_alpns": [
+          "http/1.1"
+        ]
+      }
+    },
+    {
+      "start_epoch": 1788885302.404976,
+      "zeek_uid": "CQ6vy41bYkN2RgLQJ2",
+      "tuple": [
+        "192.168.76.131",
+        "35924",
+        "185.206.24.30",
+        "443"
+      ],
+      "sni": "gfs204n070.userstorage.mega.co.nz",
+      "tshark_stream_candidates": [
+        "109"
+      ],
+      "client_payload_bytes": 2725,
+      "server_payload_bytes": 777,
+      "zeek_missed_bytes": 0,
+      "suricata_flow_id": 1739361348948023,
+      "community_id": "1:X0cScKYexCfS02Xq3K6dxFkgMg4=",
+      "tls": {
+        "sni": "gfs204n070.userstorage.mega.co.nz",
+        "version": "TLS 1.3",
+        "ja3": {
+          "hash": "d9634ff6a1da2e84ed5e961559ffeb42",
+          "string": "771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,11-16-0-51-27-65281-5-43-45-23-18-35-65037-13-10-41,4588-29-23-24,0"
+        },
+        "ja3s": {
+          "hash": "2b0648ab686ee45e0e7c35fcfb0eea7e",
+          "string": "771,4865,41-51-43"
+        },
+        "ja4": "t13d1516h1_8daaf6152771_0d365e64def3",
+        "client_alpns": [
+          "http/1.1"
+        ]
+      }
+    },
+    {
+      "start_epoch": 1788885302.720102,
+      "zeek_uid": "CD7pc31Hqv5hTd6eUk",
+      "tuple": [
+        "192.168.76.131",
+        "57850",
+        "69.30.89.14",
+        "443"
+      ],
+      "sni": "gfs240n104.userstorage.mega.co.nz",
+      "tshark_stream_candidates": [
+        "111"
+      ],
+      "client_payload_bytes": 2629,
+      "server_payload_bytes": 777,
+      "zeek_missed_bytes": 0,
+      "suricata_flow_id": 1966916729431082,
+      "community_id": "1:sdhB07XlH9AO6BOWVseJUfwDdIE=",
+      "tls": {
+        "sni": "gfs240n104.userstorage.mega.co.nz",
+        "version": "TLS 1.3",
+        "ja3": {
+          "hash": "0392c5a2d8e96a05df47692910609fe2",
+          "string": "771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,13-27-0-16-65037-45-43-11-51-18-35-5-23-65281-10-41,4588-29-23-24,0"
+        },
+        "ja3s": {
+          "hash": "2b0648ab686ee45e0e7c35fcfb0eea7e",
+          "string": "771,4865,41-51-43"
+        },
+        "ja4": "t13d1516h1_8daaf6152771_0d365e64def3",
+        "client_alpns": [
+          "http/1.1"
+        ]
+      }
+    }
+  ],
+  "limits": [
+    "TLS contents remain encrypted.",
+    "A client offering h2 does not establish which ALPN the TLS 1.3 server selected.",
+    "Traffic byte counts include TLS overhead and cannot identify an exact file by themselves."
+  ]
+}

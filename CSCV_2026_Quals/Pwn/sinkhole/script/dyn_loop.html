@@ -1,0 +1,15 @@
+<!DOCTYPE html><html><body><script>
+let lines = [];
+lines.push("function dyn_loop(x, arr, obj) {");
+for (let i = 0; i < 650; i++) lines.push(`  if (x === ${i}) return ${i};`);
+lines.push(`arr[0] = obj; let r = 0; for (let j = 0; j < x; j++) { r = arr[1]; } return r;`);
+lines.push("}");
+lines.push("return dyn_loop;");
+
+let fn = new Function(lines.join("\n"))();
+let dummy = { a: 1 };
+let dummy_arr = [1.1, 2.2, 3.3];
+
+for (let i = 0; i < 20000; i++) fn(i, dummy_arr, dummy);
+console.log("Warmup done for dyn_loop");
+</script></body></html>

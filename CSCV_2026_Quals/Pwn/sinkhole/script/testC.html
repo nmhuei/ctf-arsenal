@@ -1,0 +1,15 @@
+<!DOCTYPE html><html><body><script>
+let lines = [];
+lines.push("function testC(x, arr, obj) {");
+for (let i = 0; i < 650; i++) lines.push(`  if (x === ${i}) return ${i};`);
+lines.push(`arr[0] = obj; let r = 0; while (r < 1) { r = arr[1]; break; } return r;`);
+lines.push("}");
+lines.push("return testC;");
+
+let fn = new Function(lines.join("\n"))();
+let dummy = { a: 1 };
+let dummy_arr = [1.1, 2.2, 3.3];
+
+for (let i = 0; i < 20000; i++) fn(i, dummy_arr, dummy);
+console.log("Warmup done for testC");
+</script></body></html>

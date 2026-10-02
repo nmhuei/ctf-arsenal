@@ -1,0 +1,36 @@
+<!doctype html>
+<meta charset="utf-8">
+<script>
+const idxObj = { marker: 0x41414141 };
+const valueObj = { payload: 0x42424242 };
+
+function trigger(x, arr, idx, value, limit) {
+  let result = 0;
+  for (let warm = 0; warm < 650; warm++) {
+    if (x === 0x1337) return result;
+    result += warm & 1;
+  }
+  let i = 0;
+  while (i < limit) {
+    let a = i + 1;
+    for (let k = 0; k < 430; k++) a = (a + k) | 0;
+    arr[idx] = value;
+    result += a & 1;
+    i++;
+  }
+  return result;
+}
+
+const arr = [valueObj];
+arr.length = 10_000_000;
+for (let i = 0; i < 15_000; i++) trigger(0, arr, 0, valueObj, 1);
+console.log('warmup');
+try {
+  const result = trigger(0, arr, idxObj, valueObj, 1);
+  console.log('result', typeof result, String(result));
+  console.log('arr0', arr[0] === valueObj, typeof arr[0]);
+  console.log('idx', idxObj.marker, 'value', valueObj.payload, 'len', arr.length);
+} catch (e) {
+  console.log('caught', e && e.name, e && e.message);
+}
+</script>

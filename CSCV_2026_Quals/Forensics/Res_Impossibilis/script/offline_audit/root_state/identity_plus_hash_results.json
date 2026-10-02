@@ -1,0 +1,13 @@
+{
+  "hypothesis": "Observed identity outside a formatted hash; not a recovered formula",
+  "hypothetical_log": "Password=<hostname><separator><16 hex characters>\\n",
+  "hostname_length": 33,
+  "source_bases": 1090,
+  "hash_representations": 107550,
+  "counts": {
+    "tested": 6883200,
+    "length50": 583384
+  },
+  "matches": [],
+  "seconds": 4.5221848740002315
+}

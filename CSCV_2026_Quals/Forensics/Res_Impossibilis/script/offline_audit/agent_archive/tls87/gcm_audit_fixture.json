@@ -1,0 +1,21 @@
+{
+  "key": "000102030405060708090a0b0c0d0e0f",
+  "base_iv": "101112131415161718191a1b",
+  "records": [
+    {
+      "seq": 0,
+      "aad": "170303002a",
+      "ciphertext": "836b578f2029df9763a82f90e76fbf6a6a9345a907f961b28fdc",
+      "tag": "1dbdce2e3eb59249f004d320bf3a6f3f",
+      "plaintext": "474554202f6669787475726520485454502f312e310d0a0d0a17"
+    },
+    {
+      "seq": 6,
+      "aad": "1703030017",
+      "ciphertext": "8d7c4d5debcfea",
+      "tag": "cb4dac459cdadb50f1798c09c6e2cdbc",
+      "plaintext": "88800123456717"
+    }
+  ],
+  "kind": "generated offline fixture; no captured secrets"
+}

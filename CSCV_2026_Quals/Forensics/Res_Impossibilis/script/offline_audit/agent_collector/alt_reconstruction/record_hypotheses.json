@@ -1,0 +1,188 @@
+[
+  {
+    "n": 3,
+    "slots": [
+      0,
+      2,
+      13
+    ],
+    "records": [
+      {
+        "host": "incoming.telemetry.mozilla.org",
+        "attr": "^partitionKey=%28https%2Cgoogle.com%29",
+        "key": "https:incoming.telemetry.mozilla.org:443:.:^partitionKey=%28https%2Cgoogle.com%29:3",
+        "length": 245,
+        "observed_host": true
+      },
+      {
+        "host": "rr3---sn-42u-i5olr.googlevideo.com",
+        "attr": "^partitionKey=%28https%2Ccoccoc.com%29",
+        "key": "https:rr3---sn-42u-i5olr.googlevideo.com:443:.:^partitionKey=%28https%2Ccoccoc.com%29:3",
+        "length": 257,
+        "observed_host": true
+      },
+      {
+        "host": "incoming.telemetry.mozilla.org",
+        "attr": "^partitionKey=%28https%2Ccoccoc.com%29",
+        "key": "https:incoming.telemetry.mozilla.org:443:.:^partitionKey=%28https%2Ccoccoc.com%29:3",
+        "length": 245,
+        "observed_host": true
+      }
+    ]
+  },
+  {
+    "n": 3,
+    "slots": [
+      2,
+      5,
+      11
+    ],
+    "records": [
+      {
+        "host": "rr3---sn-42u-i5olr.googlevideo.com",
+        "attr": "^partitionKey=%28https%2Ccoccoc.com%29",
+        "key": "https:rr3---sn-42u-i5olr.googlevideo.com:443:.:^partitionKey=%28https%2Ccoccoc.com%29:3",
+        "length": 257,
+        "observed_host": true
+      },
+      {
+        "host": "www.googletagservices.com",
+        "attr": "^partitionKey=%28https%2Cgoogle.com%29",
+        "key": "https:www.googletagservices.com:443:.:^partitionKey=%28https%2Cgoogle.com%29:3",
+        "length": 230,
+        "observed_host": false
+      },
+      {
+        "host": "suggestqueries-clients6.youtube.com",
+        "attr": "^partitionKey=%28https%2Ccoccoc.com%29",
+        "key": "https:suggestqueries-clients6.youtube.com:443:.:^partitionKey=%28https%2Ccoccoc.com%29:3",
+        "length": 260,
+        "observed_host": true
+      }
+    ]
+  },
+  {
+    "n": 3,
+    "slots": [
+      2,
+      5,
+      15
+    ],
+    "records": [
+      {
+        "host": "rr3---sn-42u-i5olr.googlevideo.com",
+        "attr": "^partitionKey=%28https%2Ccoccoc.com%29",
+        "key": "https:rr3---sn-42u-i5olr.googlevideo.com:443:.:^partitionKey=%28https%2Ccoccoc.com%29:3",
+        "length": 257,
+        "observed_host": true
+      },
+      {
+        "host": "passwordsleakcheck-pa.googleapis.com",
+        "attr": "^partitionKey=%28https%2Ccoccoc.com%29",
+        "key": "https:passwordsleakcheck-pa.googleapis.com:443:.:^partitionKey=%28https%2Ccoccoc.com%29:3",
+        "length": 263,
+        "observed_host": true
+      },
+      {
+        "host": "www.google-analytics.com",
+        "attr": "^partitionKey=%28https%2Ccoccoc.com%29",
+        "key": "https:www.google-analytics.com:443:.:^partitionKey=%28https%2Ccoccoc.com%29:3",
+        "length": 227,
+        "observed_host": true
+      }
+    ]
+  },
+  {
+    "n": 3,
+    "slots": [
+      2,
+      5,
+      15
+    ],
+    "records": [
+      {
+        "host": "rr3---sn-42u-i5olr.googlevideo.com",
+        "attr": "^partitionKey=%28https%2Ccoccoc.com%29",
+        "key": "https:rr3---sn-42u-i5olr.googlevideo.com:443:.:^partitionKey=%28https%2Ccoccoc.com%29:3",
+        "length": 257,
+        "observed_host": true
+      },
+      {
+        "host": "passwordsleakcheck-pa.googleapis.com",
+        "attr": "^partitionKey=%28https%2Ccoccoc.com%29",
+        "key": "https:passwordsleakcheck-pa.googleapis.com:443:.:^partitionKey=%28https%2Ccoccoc.com%29:3",
+        "length": 263,
+        "observed_host": true
+      },
+      {
+        "host": "www.googletagmanager.com",
+        "attr": "^partitionKey=%28https%2Ccoccoc.com%29",
+        "key": "https:www.googletagmanager.com:443:.:^partitionKey=%28https%2Ccoccoc.com%29:3",
+        "length": 227,
+        "observed_host": true
+      }
+    ]
+  },
+  {
+    "n": 3,
+    "slots": [
+      2,
+      11,
+      15
+    ],
+    "records": [
+      {
+        "host": "rr3---sn-42u-i5olr.googlevideo.com",
+        "attr": "^partitionKey=%28https%2Ccoccoc.com%29",
+        "key": "https:rr3---sn-42u-i5olr.googlevideo.com:443:.:^partitionKey=%28https%2Ccoccoc.com%29:3",
+        "length": 257,
+        "observed_host": true
+      },
+      {
+        "host": "passwordsleakcheck-pa.googleapis.com",
+        "attr": "^partitionKey=%28https%2Cgoogle.com%29",
+        "key": "https:passwordsleakcheck-pa.googleapis.com:443:.:^partitionKey=%28https%2Cgoogle.com%29:3",
+        "length": 263,
+        "observed_host": true
+      },
+      {
+        "host": "www.google-analytics.com",
+        "attr": "^partitionKey=%28https%2Ccoccoc.com%29",
+        "key": "https:www.google-analytics.com:443:.:^partitionKey=%28https%2Ccoccoc.com%29:3",
+        "length": 227,
+        "observed_host": true
+      }
+    ]
+  },
+  {
+    "n": 3,
+    "slots": [
+      2,
+      11,
+      15
+    ],
+    "records": [
+      {
+        "host": "rr3---sn-42u-i5olr.googlevideo.com",
+        "attr": "^partitionKey=%28https%2Ccoccoc.com%29",
+        "key": "https:rr3---sn-42u-i5olr.googlevideo.com:443:.:^partitionKey=%28https%2Ccoccoc.com%29:3",
+        "length": 257,
+        "observed_host": true
+      },
+      {
+        "host": "passwordsleakcheck-pa.googleapis.com",
+        "attr": "^partitionKey=%28https%2Cgoogle.com%29",
+        "key": "https:passwordsleakcheck-pa.googleapis.com:443:.:^partitionKey=%28https%2Cgoogle.com%29:3",
+        "length": 263,
+        "observed_host": true
+      },
+      {
+        "host": "www.googletagmanager.com",
+        "attr": "^partitionKey=%28https%2Ccoccoc.com%29",
+        "key": "https:www.googletagmanager.com:443:.:^partitionKey=%28https%2Ccoccoc.com%29:3",
+        "length": 227,
+        "observed_host": true
+      }
+    ]
+  }
+]

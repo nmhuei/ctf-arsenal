@@ -1,0 +1,6 @@
+native fixture passed; wrong-key control rejected
+segment physical=0x1000 file=0x20 file_mod16=0 keys=643057
+segment physical=0x100000 file=0x9d040 file_mod16=0 keys=3218931696
+segment physical=0xbff00000 file=0xbfe6d05f file_mod16=15 keys=1048560
+segment physical=0x100000000 file=0xbff6d07e file_mod16=14 keys=5368709104
+{"benchmark":false,"threads":4,"candidate_positions_total":8589332417,"visited":8589332417,"nonzero_tested":6777982065,"zero_instances_skipped_after_one_key_test":1811350352,"hits":0,"elapsed_seconds":145.339689,"tested_keys_per_second":46635451.865,"conservative_full_seconds":184.180}

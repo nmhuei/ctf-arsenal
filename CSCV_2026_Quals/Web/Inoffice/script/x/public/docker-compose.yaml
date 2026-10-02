@@ -1,0 +1,31 @@
+
+services:
+  haproxy:
+    image: haproxy:2.9.7-alpine
+    ports:
+      - "${HOST_PORT}:1337"
+    volumes:
+      - ./haproxy/haproxy.conf:/usr/local/etc/haproxy/haproxy.cfg:ro
+    environment:
+      - FRONT_PORT=1337
+      - BACK_SERVER=backserver
+      - BACK_PORT=9000
+    restart: unless-stopped
+    networks:
+      - default
+      - office
+
+  backserver:
+    build: backserver
+    container_name: inoffice-backserver
+    restart: unless-stopped
+    volumes:
+      - ./backserver/src:/app:ro
+      - ./backserver/flag.txt:/flag.txt:ro
+    networks:
+      - office
+
+networks:
+  office:
+    internal: true
+  

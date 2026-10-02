@@ -1,0 +1,27 @@
+<!DOCTYPE html><html><body><script>
+function create_trigger() {
+  let lines = [];
+  lines.push("function test_sink(x, arr, obj, limit) {");
+  for (let i = 0; i < 650; i++) lines.push(`  if (x === ${i}) return ${i};`);
+  lines.push("  arr[0] = obj;");
+  lines.push("  let leaked = arr[1];");
+  lines.push("  let i = 0;");
+  lines.push("  while (i < limit) { i++; }");
+  lines.push("  return leaked;");
+  lines.push("}");
+  lines.push("return test_sink;");
+  let fn = new Function(lines.join("\n"))();
+  return fn;
+}
+
+let fn = create_trigger();
+let pool = [];
+let dummy = { a: 1 };
+for (let i = 0; i < 1200; i++) pool.push([1.1, 2.2, 3.3]);
+for (let i = 0; i < 1200; i++) fn(1000, pool[i], dummy, 1);
+
+setTimeout(() => {
+  console.log("Ready to exit");
+  window.close();
+}, 2000);
+</script></body></html>

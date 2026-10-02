@@ -1,0 +1,368 @@
+{
+  "source_archive": "pte_archive.zip: RAM-observed pages only",
+  "seed": 1788885121,
+  "seed_as_unix_utc": "2026-09-08T16:32:01+00:00",
+  "observed_headers": 33,
+  "observed_random_bytes": 363,
+  "header_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    38
+  ],
+  "not_independently_observed_indices": [
+    32,
+    33,
+    34,
+    35,
+    36,
+    37
+  ],
+  "matches": [
+    {
+      "index": 0,
+      "name": "staged/incident_triage_confirmed.txt",
+      "header": "d534070c1972f229fcfec458",
+      "rand_offset": 0,
+      "random11_match": true,
+      "crc_high_byte_match": true,
+      "two_crc_bytes_match": false
+    },
+    {
+      "index": 1,
+      "name": "staged/network_topology_report.csv",
+      "header": "af3b96d909860df9c76828c0",
+      "rand_offset": 11,
+      "random11_match": true,
+      "crc_high_byte_match": true,
+      "two_crc_bytes_match": false
+    },
+    {
+      "index": 2,
+      "name": "staged/security_investigation_brief.pdf",
+      "header": "8a80f19a667f3a4957107ea3",
+      "rand_offset": 22,
+      "random11_match": true,
+      "crc_high_byte_match": true,
+      "two_crc_bytes_match": false
+    },
+    {
+      "index": 3,
+      "name": "staged/research_bookmarks.txt",
+      "header": "5e1c97d00ec0cc0c847b471e",
+      "rand_offset": 33,
+      "random11_match": true,
+      "crc_high_byte_match": true,
+      "two_crc_bytes_match": false
+    },
+    {
+      "index": 4,
+      "name": "staged/vault_backup.key",
+      "header": "1a5450a0624968ca72f24af2",
+      "rand_offset": 44,
+      "random11_match": true,
+      "crc_high_byte_match": true,
+      "two_crc_bytes_match": false
+    },
+    {
+      "index": 5,
+      "name": "staged/candidate_keys.json",
+      "header": "638db1e3c7fa3ad77899f332",
+      "rand_offset": 55,
+      "random11_match": true,
+      "crc_high_byte_match": true,
+      "two_crc_bytes_match": false
+    },
+    {
+      "index": 6,
+      "name": "staged/internal_master_vault.txt",
+      "header": "0f6901cf360e54b1556e0631",
+      "rand_offset": 66,
+      "random11_match": true,
+      "crc_high_byte_match": true,
+      "two_crc_bytes_match": false
+    },
+    {
+      "index": 7,
+      "name": "staged/customer_pii_vault_2026.csv",
+      "header": "a60f68ef773261697cc5f6e2",
+      "rand_offset": 77,
+      "random11_match": true,
+      "crc_high_byte_match": true,
+      "two_crc_bytes_match": false
+    },
+    {
+      "index": 8,
+      "name": "staged/q3_financial_audit_confidential.xlsx",
+      "header": "2da8be28e295a07b89b0e520",
+      "rand_offset": 88,
+      "random11_match": true,
+      "crc_high_byte_match": true,
+      "two_crc_bytes_match": false
+    },
+    {
+      "index": 9,
+      "name": "staged/incident_notes.txt",
+      "header": "8a7f1b98d3ccee42d29451a0",
+      "rand_offset": 99,
+      "random11_match": true,
+      "crc_high_byte_match": true,
+      "two_crc_bytes_match": false
+    },
+    {
+      "index": 10,
+      "name": "staged/staged_encryption_token.conf",
+      "header": "3a83c86ce531e9aa28165279",
+      "rand_offset": 110,
+      "random11_match": true,
+      "crc_high_byte_match": true,
+      "two_crc_bytes_match": false
+    },
+    {
+      "index": 11,
+      "name": "staged/system_telemetry_dump.json",
+      "header": "e63e347bdfb0048f958f0e39",
+      "rand_offset": 121,
+      "random11_match": true,
+      "crc_high_byte_match": true,
+      "two_crc_bytes_match": false
+    },
+    {
+      "index": 12,
+      "name": "staged/admin_infrastructure_tokens.conf",
+      "header": "b027e27c15244fa975892d6c",
+      "rand_offset": 132,
+      "random11_match": true,
+      "crc_high_byte_match": true,
+      "two_crc_bytes_match": false
+    },
+    {
+      "index": 13,
+      "name": "staged/vpn_profile.conf",
+      "header": "3df6126edfbc96f50e7c34d4",
+      "rand_offset": 143,
+      "random11_match": true,
+      "crc_high_byte_match": true,
+      "two_crc_bytes_match": false
+    },
+    {
+      "index": 14,
+      "name": "staged/sslkeylog_debug.txt",
+      "header": "42f813f2fca2878bb037b3a7",
+      "rand_offset": 154,
+      "random11_match": true,
+      "crc_high_byte_match": true,
+      "two_crc_bytes_match": false
+    },
+    {
+      "index": 15,
+      "name": "staged/backup_credentials.kdbx",
+      "header": "92b4c8b603722b8c9f6882db",
+      "rand_offset": 165,
+      "random11_match": true,
+      "crc_high_byte_match": true,
+      "two_crc_bytes_match": false
+    },
+    {
+      "index": 16,
+      "name": "staged/manifest.json",
+      "header": "b1d7616d6d577bea8bbde2c1",
+      "rand_offset": 176,
+      "random11_match": true,
+      "crc_high_byte_match": true,
+      "two_crc_bytes_match": false
+    },
+    {
+      "index": 17,
+      "name": "staged/manifest.json",
+      "header": "9eb0de40376af06f1d83239e",
+      "rand_offset": 187,
+      "random11_match": true,
+      "crc_high_byte_match": true,
+      "two_crc_bytes_match": false
+    },
+    {
+      "index": 18,
+      "name": "staged/manifest.json",
+      "header": "e539265765b2f6cd35a7a429",
+      "rand_offset": 198,
+      "random11_match": true,
+      "crc_high_byte_match": true,
+      "two_crc_bytes_match": false
+    },
+    {
+      "index": 19,
+      "name": "staged/afaljjbleihmahhpckngondmgohleljb.json",
+      "header": "961412ed8ffc784dde16fdf6",
+      "rand_offset": 209,
+      "random11_match": true,
+      "crc_high_byte_match": true,
+      "two_crc_bytes_match": false
+    },
+    {
+      "index": 20,
+      "name": "staged/gcopfpdkmpdacdmbjonfjmbnccmnjdoi.json",
+      "header": "bc56342647a343cac6290346",
+      "rand_offset": 220,
+      "random11_match": true,
+      "crc_high_byte_match": true,
+      "two_crc_bytes_match": false
+    },
+    {
+      "index": 21,
+      "name": "staged/gfgbmghkdjckppeomloefmbphdfmokgd.json",
+      "header": "ec80689f7736d41eda6a33bd",
+      "rand_offset": 231,
+      "random11_match": true,
+      "crc_high_byte_match": true,
+      "two_crc_bytes_match": false
+    },
+    {
+      "index": 22,
+      "name": "staged/jdfkmiabjpfjacifcmihfdjhpnjpiick.json",
+      "header": "ec58c2e8d00fc6e70c833d7b",
+      "rand_offset": 242,
+      "random11_match": true,
+      "crc_high_byte_match": true,
+      "two_crc_bytes_match": false
+    },
+    {
+      "index": 23,
+      "name": "staged/vk_swiftshader_icd.json",
+      "header": "41a984e4ed4eab1652979606",
+      "rand_offset": 253,
+      "random11_match": true,
+      "crc_high_byte_match": true,
+      "two_crc_bytes_match": false
+    },
+    {
+      "index": 24,
+      "name": "staged/sessionCheckpoints.json",
+      "header": "ba360df00a2ccb755fb7cda3",
+      "rand_offset": 264,
+      "random11_match": true,
+      "crc_high_byte_match": true,
+      "two_crc_bytes_match": false
+    },
+    {
+      "index": 25,
+      "name": "staged/times.json",
+      "header": "21a09d3166843de9c27e9356",
+      "rand_offset": 275,
+      "random11_match": true,
+      "crc_high_byte_match": true,
+      "two_crc_bytes_match": false
+    },
+    {
+      "index": 26,
+      "name": "staged/pkcs11.txt",
+      "header": "466380950e96e7a52ca1dcc7",
+      "rand_offset": 286,
+      "random11_match": true,
+      "crc_high_byte_match": true,
+      "two_crc_bytes_match": false
+    },
+    {
+      "index": 27,
+      "name": "staged/extensions.json",
+      "header": "3a92e6665d5bc51428e6b420",
+      "rand_offset": 297,
+      "random11_match": true,
+      "crc_high_byte_match": true,
+      "two_crc_bytes_match": false
+    },
+    {
+      "index": 28,
+      "name": "staged/addons.json",
+      "header": "c6171b4a55040cd39753366b",
+      "rand_offset": 308,
+      "random11_match": true,
+      "crc_high_byte_match": true,
+      "two_crc_bytes_match": false
+    },
+    {
+      "index": 29,
+      "name": "staged/state.json",
+      "header": "17e844adcfeada70c6140297",
+      "rand_offset": 319,
+      "random11_match": true,
+      "crc_high_byte_match": true,
+      "two_crc_bytes_match": false
+    },
+    {
+      "index": 30,
+      "name": "staged/session-state.json",
+      "header": "ac7a5f083f74302528f63d7b",
+      "rand_offset": 330,
+      "random11_match": true,
+      "crc_high_byte_match": true,
+      "two_crc_bytes_match": false
+    },
+    {
+      "index": 31,
+      "name": "staged/extension-preferences.json",
+      "header": "434192484d65dfa09cf78834",
+      "rand_offset": 341,
+      "random11_match": true,
+      "crc_high_byte_match": true,
+      "two_crc_bytes_match": false
+    },
+    {
+      "index": 38,
+      "name": "staged/xulstore.json",
+      "header": "6a04074812c13349c0691fe3",
+      "rand_offset": 418,
+      "random11_match": true,
+      "crc_high_byte_match": true,
+      "two_crc_bytes_match": false
+    }
+  ],
+  "two_crc_counterexamples": 33,
+  "unique_central_fingerprints": [
+    {
+      "made_by": 20,
+      "needed": 20,
+      "flags": 1,
+      "method": 0,
+      "time": "0x6800",
+      "date": "0x5521",
+      "extra_length": 0,
+      "comment_length": 0,
+      "disk": 0,
+      "internal_attrs": 0,
+      "external_attrs": 0
+    }
+  ],
+  "header_timestamp_decoded": "2022-09-01 13:00:00 (DOS local time; all entries)",
+  "seed_role": "effective header PRNG seed; not a password derivation result",
+  "password_formation_identified": false
+}

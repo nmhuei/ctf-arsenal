@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Office</title>
+</head>
+<body>
+    <div class="upload-container">
+        <h1>Upload yours works</h1>
+        <p class="subtitle">Select a file to upload</p>
+        <form id="uploadForm">
+            <label for="fileInput" class="file-label"> Choose File </label>
+            <input type="file" id="fileInput" name="file" required>
+            <button type="submit" id="uploadButton"> Upload </button>
+            <div id="status" class="status"></div>
+        </form>
+    </div>
+
+    <script>
+        const uploadUrl = "{{ url_for('process') }}";
+
+        const form = document.getElementById("uploadForm");
+        const fileInput = document.getElementById("fileInput");
+        const uploadButton = document.getElementById("uploadButton");
+        const status = document.getElementById("status");
+
+        form.addEventListener("submit", async function (event) {
+            event.preventDefault();
+
+            if (!fileInput.files.length) {
+                status.textContent = "Please select a file.";
+                return;
+            }
+
+            const formData = new FormData();
+            formData.append("file", fileInput.files[0]);
+
+            uploadButton.disabled = true;
+            uploadButton.textContent = "Uploading...";
+            status.textContent = "";
+
+            try {
+                const response = await fetch(uploadUrl, {
+                    method: "POST",
+                    body: formData
+                });
+
+                if (!response.ok) {
+                    throw new Error(`Upload failed: ${response.status}`);
+                }
+
+                status.textContent = "File uploaded successfully.";
+
+                form.reset();
+
+            } catch (error) {
+                status.textContent = "Upload failed.";
+                console.error(error);
+            } finally {
+                uploadButton.disabled = false;
+                uploadButton.textContent = "Upload";
+            }
+        });
+    </script>
+
+</body>
+</html>

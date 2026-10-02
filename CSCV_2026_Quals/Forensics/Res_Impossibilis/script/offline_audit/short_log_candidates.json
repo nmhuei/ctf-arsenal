@@ -1,0 +1,4997 @@
+[
+  {
+    "offset": "0x92674",
+    "length": 76,
+    "text": "WARNING: PAE disabled. Use parameter 'forcepae' to enable at your own risk!\n"
+  },
+  {
+    "offset": "0x9285f",
+    "length": 43,
+    "text": "A20 gate not responding, unable to boot...\n"
+  },
+  {
+    "offset": "0x1453400",
+    "length": 70,
+    "text": "fileno() -> integer\n\nReturn the integer file descriptor of the socket."
+  },
+  {
+    "offset": "0x1453fa0",
+    "length": 80,
+    "text": "getnameinfo(sockaddr, flags) --> (host, port)\n\nGet host and port for a sockaddr."
+  },
+  {
+    "offset": "0x1761be0",
+    "length": 45,
+    "text": "sethostname(name)\n\nSets the hostname to name."
+  },
+  {
+    "offset": "0x178f1e0",
+    "length": 40,
+    "text": "_test_decode_cert($module, path, /)\n--\n\n"
+  },
+  {
+    "offset": "0x18d2630",
+    "length": 64,
+    "text": "e \"GNOME\" .\n<urn:software-category:Utility> a nfo:SoftwareCatego"
+  },
+  {
+    "offset": "0x1e79420",
+    "length": 78,
+    "text": "3.9.18 (main, Sep  7 2023, 00:00:00) \n[GCC 11.4.1 20230605 (Red Hat 11.4.1-2)]"
+  },
+  {
+    "offset": "0x21442a0",
+    "length": 65,
+    "text": "abs($module, x, /)\n--\n\nReturn the absolute value of the argument."
+  },
+  {
+    "offset": "0x21a25a0",
+    "length": 78,
+    "text": "a2b_qp($module, /, data, header=False)\n--\n\nDecode a string of qp-encoded data."
+  },
+  {
+    "offset": "0x21a2600",
+    "length": 64,
+    "text": "crc32($module, data, crc=0, /)\n--\n\nCompute CRC-32 incrementally."
+  },
+  {
+    "offset": "0x21a2660",
+    "length": 67,
+    "text": "crc_hqx($module, data, crc, /)\n--\n\nCompute CRC-CCITT incrementally."
+  },
+  {
+    "offset": "0x21a26c0",
+    "length": 67,
+    "text": "rledecode_hqx($module, data, /)\n--\n\nDecode hexbin RLE-coded string."
+  },
+  {
+    "offset": "0x21a2cc0",
+    "length": 47,
+    "text": "b2a_hqx($module, data, /)\n--\n\nEncode .hqx data."
+  },
+  {
+    "offset": "0x21a2d40",
+    "length": 75,
+    "text": "b2a_base64($module, data, /, *, newline=True)\n--\n\nBase64-code line of data."
+  },
+  {
+    "offset": "0x21a2de0",
+    "length": 70,
+    "text": "b2a_uu($module, data, /, *, backtick=False)\n--\n\nUuencode line of data."
+  },
+  {
+    "offset": "0x2834ac0",
+    "length": 69,
+    "text": "tan($module, x, /)\n--\n\nReturn the tangent of x (measured in radians)."
+  },
+  {
+    "offset": "0x2834ba0",
+    "length": 66,
+    "text": "sin($module, x, /)\n--\n\nReturn the sine of x (measured in radians)."
+  },
+  {
+    "offset": "0x2834d20",
+    "length": 67,
+    "text": "radians($module, x, /)\n--\n\nConvert angle x from degrees to radians."
+  },
+  {
+    "offset": "0x283e740",
+    "length": 45,
+    "text": "gamma($module, x, /)\n--\n\nGamma function at x."
+  },
+  {
+    "offset": "0x283ea40",
+    "length": 65,
+    "text": "fabs($module, x, /)\n--\n\nReturn the absolute value of the float x."
+  },
+  {
+    "offset": "0x283ebc0",
+    "length": 43,
+    "text": "erf($module, x, /)\n--\n\nError function at x."
+  },
+  {
+    "offset": "0x283ed20",
+    "length": 67,
+    "text": "degrees($module, x, /)\n--\n\nConvert angle x from radians to degrees."
+  },
+  {
+    "offset": "0x283edc0",
+    "length": 68,
+    "text": "cos($module, x, /)\n--\n\nReturn the cosine of x (measured in radians)."
+  },
+  {
+    "offset": "0x283ef60",
+    "length": 68,
+    "text": "atanh($module, x, /)\n--\n\nReturn the inverse hyperbolic tangent of x."
+  },
+  {
+    "offset": "0x283f0e0",
+    "length": 65,
+    "text": "asinh($module, x, /)\n--\n\nReturn the inverse hyperbolic sine of x."
+  },
+  {
+    "offset": "0x283f1c0",
+    "length": 67,
+    "text": "acosh($module, x, /)\n--\n\nReturn the inverse hyperbolic cosine of x."
+  },
+  {
+    "offset": "0x2848600",
+    "length": 44,
+    "text": "setrlimit($module, resource, limits, /)\n--\n\n"
+  },
+  {
+    "offset": "0x284fd40",
+    "length": 72,
+    "text": "fromfd($type, fd, /)\n--\n\nCreate an epoll object from a given control fd."
+  },
+  {
+    "offset": "0x2ad0040",
+    "length": 56,
+    "text": "{?buildroot:%{buildroot}}%{_sysconfdir} \\\n\tdatadir=%{?bu"
+  },
+  {
+    "offset": "0x35cd3b0",
+    "length": 55,
+    "text": "sys.version_info\n\nVersion information as a named tuple."
+  },
+  {
+    "offset": "0x3610518",
+    "length": 45,
+    "text": "Quake I save: e3m7 The haunted halls (secret)"
+  },
+  {
+    "offset": "0x3610808",
+    "length": 45,
+    "text": "Quake I save: e4m8 The nameless city (secret)"
+  },
+  {
+    "offset": "0x36e11e0",
+    "length": 75,
+    "text": "setpgid($module, pid, pgrp, /)\n--\n\nCall the system call setpgid(pid, pgrp)."
+  },
+  {
+    "offset": "0x36e1a00",
+    "length": 80,
+    "text": "setgroups($module, groups, /)\n--\n\nSet the groups of the current process to list."
+  },
+  {
+    "offset": "0x36e1ac0",
+    "length": 75,
+    "text": "setegid($module, egid, /)\n--\n\nSet the current process's effective group id."
+  },
+  {
+    "offset": "0x36e1bc0",
+    "length": 74,
+    "text": "seteuid($module, euid, /)\n--\n\nSet the current process's effective user id."
+  },
+  {
+    "offset": "0x36e1c60",
+    "length": 72,
+    "text": "killpg($module, pgid, signal, /)\n--\n\nKill a process group with a signal."
+  },
+  {
+    "offset": "0x36e1ee0",
+    "length": 80,
+    "text": "getgroups($module, /)\n--\n\nReturn list of supplemental group IDs for the process."
+  },
+  {
+    "offset": "0x36e2140",
+    "length": 79,
+    "text": "raise_signal($module, signalnum, /)\n--\n\nSend a signal to the executing process."
+  },
+  {
+    "offset": "0x36e2320",
+    "length": 71,
+    "text": "getitimer($module, which, /)\n--\n\nReturns current value of given itimer."
+  },
+  {
+    "offset": "0x36e2b80",
+    "length": 69,
+    "text": "_ncallbacks() -> int\n\nReturn the number of registered exit functions."
+  },
+  {
+    "offset": "0x36e2cc0",
+    "length": 73,
+    "text": "_clear() -> None\n\nClear the list of previously registered exit functions."
+  },
+  {
+    "offset": "0x36e4380",
+    "length": 78,
+    "text": "tee($module, iterable, n=2, /)\n--\n\nReturns a tuple of n independent iterators."
+  },
+  {
+    "offset": "0x36e5b80",
+    "length": 40,
+    "text": "ge($module, a, b, /)\n--\n\nSame as a >= b."
+  },
+  {
+    "offset": "0x36e5c00",
+    "length": 40,
+    "text": "le($module, a, b, /)\n--\n\nSame as a <= b."
+  },
+  {
+    "offset": "0x36e5c80",
+    "length": 40,
+    "text": "ne($module, a, b, /)\n--\n\nSame as a != b."
+  },
+  {
+    "offset": "0x36e5cc0",
+    "length": 40,
+    "text": "eq($module, a, b, /)\n--\n\nSame as a == b."
+  },
+  {
+    "offset": "0x36e5d00",
+    "length": 43,
+    "text": "ipow($module, a, b, /)\n--\n\nSame as a **= b."
+  },
+  {
+    "offset": "0x36e5d40",
+    "length": 41,
+    "text": "pow($module, a, b, /)\n--\n\nSame as a ** b."
+  },
+  {
+    "offset": "0x36e5d80",
+    "length": 47,
+    "text": "delitem($module, a, b, /)\n--\n\nSame as del a[b]."
+  },
+  {
+    "offset": "0x36e5e00",
+    "length": 43,
+    "text": "getitem($module, a, b, /)\n--\n\nSame as a[b]."
+  },
+  {
+    "offset": "0x36e5e40",
+    "length": 68,
+    "text": "iconcat($module, a, b, /)\n--\n\nSame as a += b, for a and b sequences."
+  },
+  {
+    "offset": "0x36e5ea0",
+    "length": 66,
+    "text": "concat($module, a, b, /)\n--\n\nSame as a + b, for a and b sequences."
+  },
+  {
+    "offset": "0x36e5f00",
+    "length": 41,
+    "text": "ior($module, a, b, /)\n--\n\nSame as a |= b."
+  },
+  {
+    "offset": "0x36e5f40",
+    "length": 42,
+    "text": "ixor($module, a, b, /)\n--\n\nSame as a ^= b."
+  },
+  {
+    "offset": "0x36e5f80",
+    "length": 42,
+    "text": "iand($module, a, b, /)\n--\n\nSame as a &= b."
+  },
+  {
+    "offset": "0x36e5fc0",
+    "length": 46,
+    "text": "irshift($module, a, b, /)\n--\n\nSame as a >>= b."
+  },
+  {
+    "offset": "0x36e6000",
+    "length": 46,
+    "text": "ilshift($module, a, b, /)\n--\n\nSame as a <<= b."
+  },
+  {
+    "offset": "0x36e6040",
+    "length": 42,
+    "text": "imod($module, a, b, /)\n--\n\nSame as a %= b."
+  },
+  {
+    "offset": "0x36e6080",
+    "length": 46,
+    "text": "itruediv($module, a, b, /)\n--\n\nSame as a /= b."
+  },
+  {
+    "offset": "0x36e60c0",
+    "length": 48,
+    "text": "ifloordiv($module, a, b, /)\n--\n\nSame as a //= b."
+  },
+  {
+    "offset": "0x36e6100",
+    "length": 45,
+    "text": "imatmul($module, a, b, /)\n--\n\nSame as a @= b."
+  },
+  {
+    "offset": "0x36e6140",
+    "length": 42,
+    "text": "imul($module, a, b, /)\n--\n\nSame as a *= b."
+  },
+  {
+    "offset": "0x36e6180",
+    "length": 42,
+    "text": "isub($module, a, b, /)\n--\n\nSame as a -= b."
+  },
+  {
+    "offset": "0x36e61c0",
+    "length": 42,
+    "text": "iadd($module, a, b, /)\n--\n\nSame as a += b."
+  },
+  {
+    "offset": "0x36e6200",
+    "length": 40,
+    "text": "or_($module, a, b, /)\n--\n\nSame as a | b."
+  },
+  {
+    "offset": "0x36e6240",
+    "length": 40,
+    "text": "xor($module, a, b, /)\n--\n\nSame as a ^ b."
+  },
+  {
+    "offset": "0x36e6280",
+    "length": 41,
+    "text": "and_($module, a, b, /)\n--\n\nSame as a & b."
+  },
+  {
+    "offset": "0x36e6300",
+    "length": 44,
+    "text": "rshift($module, a, b, /)\n--\n\nSame as a >> b."
+  },
+  {
+    "offset": "0x36e6340",
+    "length": 44,
+    "text": "lshift($module, a, b, /)\n--\n\nSame as a << b."
+  },
+  {
+    "offset": "0x36e64c0",
+    "length": 40,
+    "text": "mod($module, a, b, /)\n--\n\nSame as a % b."
+  },
+  {
+    "offset": "0x36e6500",
+    "length": 44,
+    "text": "truediv($module, a, b, /)\n--\n\nSame as a / b."
+  },
+  {
+    "offset": "0x36e6540",
+    "length": 46,
+    "text": "floordiv($module, a, b, /)\n--\n\nSame as a // b."
+  },
+  {
+    "offset": "0x36e6580",
+    "length": 43,
+    "text": "matmul($module, a, b, /)\n--\n\nSame as a @ b."
+  },
+  {
+    "offset": "0x36e65c0",
+    "length": 40,
+    "text": "mul($module, a, b, /)\n--\n\nSame as a * b."
+  },
+  {
+    "offset": "0x36e6600",
+    "length": 40,
+    "text": "sub($module, a, b, /)\n--\n\nSame as a - b."
+  },
+  {
+    "offset": "0x36e6640",
+    "length": 40,
+    "text": "add($module, a, b, /)\n--\n\nSame as a + b."
+  },
+  {
+    "offset": "0x36e6680",
+    "length": 46,
+    "text": "index($module, a, /)\n--\n\nSame as a.__index__()"
+  },
+  {
+    "offset": "0x36e66c0",
+    "length": 48,
+    "text": "is_not($module, a, b, /)\n--\n\nSame as a is not b."
+  },
+  {
+    "offset": "0x36e6700",
+    "length": 41,
+    "text": "is_($module, a, b, /)\n--\n\nSame as a is b."
+  },
+  {
+    "offset": "0x36e67e0",
+    "length": 71,
+    "text": "contains($module, a, b, /)\n--\n\nSame as b in a (note reversed operands)."
+  },
+  {
+    "offset": "0x36e6840",
+    "length": 67,
+    "text": "truth($module, a, /)\n--\n\nReturn True if a is true, False otherwise."
+  },
+  {
+    "offset": "0x36e77a0",
+    "length": 64,
+    "text": "charmap_decode($module, data, errors=None, mapping=None, /)\n--\n\n"
+  },
+  {
+    "offset": "0x36e7840",
+    "length": 48,
+    "text": "ascii_decode($module, data, errors=None, /)\n--\n\n"
+  },
+  {
+    "offset": "0x36e7880",
+    "length": 47,
+    "text": "ascii_encode($module, str, errors=None, /)\n--\n\n"
+  },
+  {
+    "offset": "0x36e7940",
+    "length": 73,
+    "text": "raw_unicode_escape_decode($module, data, errors=None, final=True, /)\n--\n\n"
+  },
+  {
+    "offset": "0x36e79e0",
+    "length": 69,
+    "text": "unicode_escape_decode($module, data, errors=None, final=True, /)\n--\n\n"
+  },
+  {
+    "offset": "0x36e7ae0",
+    "length": 65,
+    "text": "utf_32_be_decode($module, data, errors=None, final=False, /)\n--\n\n"
+  },
+  {
+    "offset": "0x36e7b40",
+    "length": 65,
+    "text": "utf_32_le_decode($module, data, errors=None, final=False, /)\n--\n\n"
+  },
+  {
+    "offset": "0x36e7d00",
+    "length": 65,
+    "text": "utf_16_be_decode($module, data, errors=None, final=False, /)\n--\n\n"
+  },
+  {
+    "offset": "0x36e7d60",
+    "length": 65,
+    "text": "utf_16_le_decode($module, data, errors=None, final=False, /)\n--\n\n"
+  },
+  {
+    "offset": "0x36e7f00",
+    "length": 47,
+    "text": "utf_7_encode($module, str, errors=None, /)\n--\n\n"
+  },
+  {
+    "offset": "0x36e7f80",
+    "length": 47,
+    "text": "utf_8_encode($module, str, errors=None, /)\n--\n\n"
+  },
+  {
+    "offset": "0x36e9080",
+    "length": 43,
+    "text": "unicode_tolower($module, character, /)\n--\n\n"
+  },
+  {
+    "offset": "0x36e90c0",
+    "length": 41,
+    "text": "ascii_tolower($module, character, /)\n--\n\n"
+  },
+  {
+    "offset": "0x36e9100",
+    "length": 43,
+    "text": "unicode_iscased($module, character, /)\n--\n\n"
+  },
+  {
+    "offset": "0x36e9f80",
+    "length": 64,
+    "text": "inode($self, /)\n--\n\nReturn inode of the entry; cached per entry."
+  },
+  {
+    "offset": "0x36ea420",
+    "length": 73,
+    "text": "getrandom($module, /, size, flags=0)\n--\n\nObtain a series of random bytes."
+  },
+  {
+    "offset": "0x36ebc40",
+    "length": 79,
+    "text": "WEXITSTATUS($module, /, status)\n--\n\nReturn the process return code from status."
+  },
+  {
+    "offset": "0x36ec0e0",
+    "length": 75,
+    "text": "strerror($module, code, /)\n--\n\nTranslate an error code to a message string."
+  },
+  {
+    "offset": "0x36ec180",
+    "length": 74,
+    "text": "putenv($module, name, value, /)\n--\n\nChange or add an environment variable."
+  },
+  {
+    "offset": "0x36ed4a0",
+    "length": 74,
+    "text": "write($module, fd, data, /)\n--\n\nWrite a bytes object to a file descriptor."
+  },
+  {
+    "offset": "0x36edce0",
+    "length": 74,
+    "text": "dup2($module, /, fd, fd2, inheritable=True)\n--\n\nDuplicate file descriptor."
+  },
+  {
+    "offset": "0x36edd40",
+    "length": 64,
+    "text": "dup($module, fd, /)\n--\n\nReturn a duplicate of a file descriptor."
+  },
+  {
+    "offset": "0x36f48c0",
+    "length": 79,
+    "text": "clear_traces($module, /)\n--\n\nClear traces of memory blocks allocated by Python."
+  },
+  {
+    "offset": "0x36f4a80",
+    "length": 68,
+    "text": "writable($self, /)\n--\n\nReturns True if the IO object can be written."
+  },
+  {
+    "offset": "0x36f4ae0",
+    "length": 65,
+    "text": "readable($self, /)\n--\n\nReturns True if the IO object can be read."
+  },
+  {
+    "offset": "0x36f4b40",
+    "length": 67,
+    "text": "seekable($self, /)\n--\n\nReturns True if the IO object can be seeked."
+  },
+  {
+    "offset": "0x36f4fe0",
+    "length": 66,
+    "text": "getvalue($self, /)\n--\n\nRetrieve the entire contents of the object."
+  },
+  {
+    "offset": "0x36f5260",
+    "length": 79,
+    "text": "Read until newline or EOF.\n\nReturns an empty string if EOF is hit immediately.\n"
+  },
+  {
+    "offset": "0x36f5400",
+    "length": 74,
+    "text": "The error setting of the decoder or encoder.\n\nSubclasses should override.\n"
+  },
+  {
+    "offset": "0x36f5640",
+    "length": 41,
+    "text": "decode($self, /, input, final=False)\n--\n\n"
+  },
+  {
+    "offset": "0x36f70c0",
+    "length": 74,
+    "text": "getvalue($self, /)\n--\n\nRetrieve the entire contents of the BytesIO object."
+  },
+  {
+    "offset": "0x36f76c0",
+    "length": 80,
+    "text": "write($self, b, /)\n--\n\nWrite bytes to file.\n\nReturn the number of bytes written."
+  },
+  {
+    "offset": "0x36f7820",
+    "length": 47,
+    "text": "close($self, /)\n--\n\nDisable all I/O operations."
+  },
+  {
+    "offset": "0x36f7d40",
+    "length": 67,
+    "text": "isatty($self, /)\n--\n\nTrue if the file is connected to a TTY device."
+  },
+  {
+    "offset": "0x36f7da0",
+    "length": 72,
+    "text": "fileno($self, /)\n--\n\nReturn the underlying file descriptor (an integer)."
+  },
+  {
+    "offset": "0x36fb4c0",
+    "length": 73,
+    "text": "bindtextdomain(domain, dir) -> string\nBind the C library's domain to dir."
+  },
+  {
+    "offset": "0x36fb5e0",
+    "length": 68,
+    "text": "dgettext(domain, msg) -> string\nReturn translation of msg in domain."
+  },
+  {
+    "offset": "0x36fbbe0",
+    "length": 68,
+    "text": "_release_save() -> tuple\n\nFor internal use by `threading.Condition`."
+  },
+  {
+    "offset": "0x36fbc40",
+    "length": 75,
+    "text": "_acquire_restore(state) -> None\n\nFor internal use by `threading.Condition`."
+  },
+  {
+    "offset": "0x36fc140",
+    "length": 68,
+    "text": "ExceptHookArgs\n\nType used to pass arguments to threading.excepthook."
+  },
+  {
+    "offset": "0x36fd180",
+    "length": 74,
+    "text": "get_clock_info(name: str) -> dict\n\nGet information of the specified clock."
+  },
+  {
+    "offset": "0x36fd1e0",
+    "length": 78,
+    "text": "perf_counter_ns() -> int\n\nPerformance counter for benchmarking as nanoseconds."
+  },
+  {
+    "offset": "0x36fd440",
+    "length": 75,
+    "text": "monotonic_ns() -> int\n\nMonotonic clock, cannot go backward, as nanoseconds."
+  },
+  {
+    "offset": "0x36fe640",
+    "length": 72,
+    "text": "clock_settime(clk_id, time)\n\nSet the time of the specified clock clk_id."
+  },
+  {
+    "offset": "0x36fe700",
+    "length": 78,
+    "text": "clock_gettime(clk_id) -> float\n\nReturn the time of the specified clock clk_id."
+  },
+  {
+    "offset": "0x36fe760",
+    "length": 73,
+    "text": "time_ns() -> int\n\nReturn the current time in nanoseconds since the Epoch."
+  },
+  {
+    "offset": "0x36feda0",
+    "length": 66,
+    "text": "S_ISPORT(mode) -> bool\n\nReturn True if mode is from an event port."
+  },
+  {
+    "offset": "0x36fee80",
+    "length": 67,
+    "text": "S_ISLNK(mode) -> bool\n\nReturn True if mode is from a symbolic link."
+  },
+  {
+    "offset": "0x36feee0",
+    "length": 72,
+    "text": "S_ISFIFO(mode) -> bool\n\nReturn True if mode is from a FIFO (named pipe)."
+  },
+  {
+    "offset": "0x36fef40",
+    "length": 66,
+    "text": "S_ISREG(mode) -> bool\n\nReturn True if mode is from a regular file."
+  },
+  {
+    "offset": "0x36fefa0",
+    "length": 79,
+    "text": "S_ISBLK(mode) -> bool\n\nReturn True if mode is from a block special device file."
+  },
+  {
+    "offset": "0x36ffbe0",
+    "length": 77,
+    "text": "pthread_kill($module, thread_id, signalnum, /)\n--\n\nSend a signal to a thread."
+  },
+  {
+    "offset": "0x39b6720",
+    "length": 71,
+    "text": "\n        Return importlib.resource-compatible resource reader.\n        "
+  },
+  {
+    "offset": "0x39b6d20",
+    "length": 78,
+    "text": "Return the string representation of the path with forward (/)\n        slashes."
+  },
+  {
+    "offset": "0x39b6ea0",
+    "length": 69,
+    "text": "\n        Return True if this path matches the given pattern.\n        "
+  },
+  {
+    "offset": "0x3a09240",
+    "length": 41,
+    "text": "source_hash($module, /, key, source)\n--\n\n"
+  },
+  {
+    "offset": "0x3a09380",
+    "length": 65,
+    "text": "exec_dynamic($module, mod, /)\n--\n\nInitialize an extension module."
+  },
+  {
+    "offset": "0x3a09560",
+    "length": 64,
+    "text": "create_builtin($module, spec, /)\n--\n\nCreate an extension module."
+  },
+  {
+    "offset": "0x3ff49e0",
+    "length": 48,
+    "text": "{0:d} 1 255 {{ 1 index exch /.notdef put }} for\n"
+  },
+  {
+    "offset": "0x40dcca0",
+    "length": 45,
+    "text": "Object allocated at (most recent call last):\n"
+  },
+  {
+    "offset": "0x4104a10",
+    "length": 62,
+    "text": "check_log_size: open of debug file %s failed - using console.\n"
+  },
+  {
+    "offset": "0x4c2e0a0",
+    "length": 72,
+    "text": "keys($self, /)\n--\n\nReturn a list of all variables in the context object."
+  },
+  {
+    "offset": "0x4c72df0",
+    "length": 40,
+    "text": "OOM: failed to make string list from %s\n"
+  },
+  {
+    "offset": "0x4cb83a0",
+    "length": 80,
+    "text": "ord($module, c, /)\n--\n\nReturn the Unicode code point for a one-character string."
+  },
+  {
+    "offset": "0x4cb88e0",
+    "length": 67,
+    "text": "len($module, obj, /)\n--\n\nReturn the number of items in a container."
+  },
+  {
+    "offset": "0x4d00860",
+    "length": 66,
+    "text": "system($module, /, command)\n--\n\nExecute the command in a subshell."
+  },
+  {
+    "offset": "0x515b040",
+    "length": 71,
+    "text": "geteuid($module, /)\n--\n\nReturn the current process's effective user id."
+  },
+  {
+    "offset": "0x515b0a0",
+    "length": 72,
+    "text": "getegid($module, /)\n--\n\nReturn the current process's effective group id."
+  },
+  {
+    "offset": "0x515d180",
+    "length": 58,
+    "text": "\n        Return the current state of the encoder.\n        "
+  },
+  {
+    "offset": "0x515d2d0",
+    "length": 57,
+    "text": "\n        Reset the decoder to the initial state.\n        "
+  },
+  {
+    "offset": "0x52f403f",
+    "length": 73,
+    "text": "P\n  If they are unavailable, using them will raise a NotImplementedError."
+  },
+  {
+    "offset": "0x52f4ba0",
+    "length": 75,
+    "text": "getpriority($module, /, which, who)\n--\n\nReturn program scheduling priority."
+  },
+  {
+    "offset": "0x5463d20",
+    "length": 70,
+    "text": "\nDuring handling of the above exception, another exception occurred:\n\n"
+  },
+  {
+    "offset": "0x54e15e0",
+    "length": 45,
+    "text": "ZlibArchiveReader.is_pep420_namespace_package"
+  },
+  {
+    "offset": "0x550e338",
+    "length": 50,
+    "text": "Quake I save: hip2m6 The gremlin's domain (secret)"
+  },
+  {
+    "offset": "0x550e4b0",
+    "length": 50,
+    "text": "Quake I save: hipdm1 The edge of oblivion (secret)"
+  },
+  {
+    "offset": "0x574b940",
+    "length": 41,
+    "text": "reverse($self, /)\n--\n\nReverse *IN PLACE*."
+  },
+  {
+    "offset": "0x574b980",
+    "length": 65,
+    "text": "count($self, value, /)\n--\n\nReturn number of occurrences of value."
+  },
+  {
+    "offset": "0x574bc40",
+    "length": 66,
+    "text": "append($self, object, /)\n--\n\nAppend object to the end of the list."
+  },
+  {
+    "offset": "0x574bce0",
+    "length": 47,
+    "text": "clear($self, /)\n--\n\nRemove all items from list."
+  },
+  {
+    "offset": "0x574bd20",
+    "length": 73,
+    "text": "__sizeof__($self, /)\n--\n\nReturn the size of the list in memory, in bytes."
+  },
+  {
+    "offset": "0x574bd80",
+    "length": 67,
+    "text": "__reversed__($self, /)\n--\n\nReturn a reverse iterator over the list."
+  },
+  {
+    "offset": "0x5757780",
+    "length": 69,
+    "text": "toreadonly($self, /)\n--\n\nReturn a readonly version of the memoryview."
+  },
+  {
+    "offset": "0x57577e0",
+    "length": 80,
+    "text": "cast($self, /, format, *, shape)\n--\n\nCast a memoryview to a new format or shape."
+  },
+  {
+    "offset": "0x5757840",
+    "length": 73,
+    "text": "tolist($self, /)\n--\n\nReturn the data in the buffer as a list of elements."
+  },
+  {
+    "offset": "0x5758000",
+    "length": 64,
+    "text": "setdefault($self, /, key, default=None)\n--\n\nInsert key with a va"
+  },
+  {
+    "offset": "0x5759200",
+    "length": 72,
+    "text": "__reversed__($self, /)\n--\n\nReturn a reverse iterator over the dict keys."
+  },
+  {
+    "offset": "0x575c2c0",
+    "length": 71,
+    "text": "get_threshold($module, /)\n--\n\nReturn the current collection thresholds."
+  },
+  {
+    "offset": "0x575c3c0",
+    "length": 80,
+    "text": "get_count($module, /)\n--\n\nReturn a three-tuple of the current collection counts."
+  },
+  {
+    "offset": "0x575c420",
+    "length": 69,
+    "text": "get_debug($module, /)\n--\n\nGet the garbage collection debugging flags."
+  },
+  {
+    "offset": "0x5c568f0",
+    "length": 49,
+    "text": "../../../../usr/lib64/samba/libsecrets3-samba4.so"
+  },
+  {
+    "offset": "0x6805d60",
+    "length": 60,
+    "text": "nection_send_message_with_reply_unlocked complete_in_idle_cb"
+  },
+  {
+    "offset": "0x6bf9040",
+    "length": 72,
+    "text": "db3a9e930), failed=0 ()\ndard::name,standard::display-name,standard::icon"
+  },
+  {
+    "offset": "0x6f0b6a0",
+    "length": 70,
+    "text": "__sizeof__($self, /)\n--\n\nReturn memory consumption of the type object."
+  },
+  {
+    "offset": "0x6f0b700",
+    "length": 67,
+    "text": "__dir__($self, /)\n--\n\nSpecialized __dir__ implementation for types."
+  },
+  {
+    "offset": "0x6f0b760",
+    "length": 73,
+    "text": "__subclasscheck__($self, subclass, /)\n--\n\nCheck if a class is a subclass."
+  },
+  {
+    "offset": "0x6f0b7c0",
+    "length": 76,
+    "text": "__instancecheck__($self, instance, /)\n--\n\nCheck if an object is an instance."
+  },
+  {
+    "offset": "0x6f0b820",
+    "length": 67,
+    "text": "__subclasses__($self, /)\n--\n\nReturn a list of immediate subclasses."
+  },
+  {
+    "offset": "0x6f0b8c0",
+    "length": 79,
+    "text": "type(object) -> the object's type\ntype(name, bases, dict, **kwds) -> a new type"
+  },
+  {
+    "offset": "0x6f0bbc0",
+    "length": 43,
+    "text": "__reduce__($self, /)\n--\n\nHelper for pickle."
+  },
+  {
+    "offset": "0x6f82580",
+    "length": 45,
+    "text": "Coroutine created at (most recent call last)\n"
+  },
+  {
+    "offset": "0x79a92c0",
+    "length": 60,
+    "text": "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t"
+  },
+  {
+    "offset": "0x7a539a0",
+    "length": 76,
+    "text": "Expand ~ and ~user constructs.\n\n    If user or $HOME is unknown, do nothing."
+  },
+  {
+    "offset": "0x7be4220",
+    "length": 65,
+    "text": "\n        Close the temporary file, possibly deleting it.\n        "
+  },
+  {
+    "offset": "0x7bea040",
+    "length": 69,
+    "text": "n.\n\nWhen an argument is passed, work like built-in round(x, ndigits)."
+  },
+  {
+    "offset": "0x7bea120",
+    "length": 73,
+    "text": "__trunc__($self, /)\n--\n\nReturn the Integral closest to x between 0 and x."
+  },
+  {
+    "offset": "0x7bea180",
+    "length": 72,
+    "text": "conjugate($self, /)\n--\n\nReturn self, the complex conjugate of any float."
+  },
+  {
+    "offset": "0x7bead80",
+    "length": 74,
+    "text": "complex.__format__() -> str\n\nConvert to a string according to format_spec."
+  },
+  {
+    "offset": "0x7befca0",
+    "length": 64,
+    "text": "is_integer($self, /)\n--\n\nReturn True if the float is an integer."
+  },
+  {
+    "offset": "0x7bf21c0",
+    "length": 66,
+    "text": "method(function, instance)\n\nCreate a bound instance method object."
+  },
+  {
+    "offset": "0x7bf9a80",
+    "length": 68,
+    "text": "reverse($self, /)\n--\n\nReverse the order of the values in B in place."
+  },
+  {
+    "offset": "0x7bfee00",
+    "length": 75,
+    "text": "__reduce_ex__($self, proto=0, /)\n--\n\nReturn state information for pickling."
+  },
+  {
+    "offset": "0x7bfee60",
+    "length": 68,
+    "text": "B.__alloc__() -> int\n\nReturn the number of bytes actually allocated."
+  },
+  {
+    "offset": "0x7c08720",
+    "length": 71,
+    "text": "upper($self, /)\n--\n\nReturn a copy of the string converted to uppercase."
+  },
+  {
+    "offset": "0x7c09160",
+    "length": 71,
+    "text": "lower($self, /)\n--\n\nReturn a copy of the string converted to lowercase."
+  },
+  {
+    "offset": "0x7c6d360",
+    "length": 75,
+    "text": "__sizeof__($self, /)\n--\n\nReturn the size of the string in memory, in bytes."
+  },
+  {
+    "offset": "0x7ce95e0",
+    "length": 41,
+    "text": "\n        Fall back to `uname -p`\n        "
+  },
+  {
+    "offset": "0x7d5fd00",
+    "length": 41,
+    "text": "\n    Support for integer-based Flags\n    "
+  },
+  {
+    "offset": "0x7d5fe80",
+    "length": 45,
+    "text": "\n    Extract all members from the value.\n    "
+  },
+  {
+    "offset": "0x7d6bda0",
+    "length": 76,
+    "text": "\n        Create a composite member iff value contains only members.\n        "
+  },
+  {
+    "offset": "0x7d7c730",
+    "length": 48,
+    "text": "\n        Whether this path is a socket.\n        "
+  },
+  {
+    "offset": "0x7d7cc00",
+    "length": 61,
+    "text": "\n    Returns True if a __dunder__ name, False otherwise.\n    "
+  },
+  {
+    "offset": "0x7d7cff0",
+    "length": 54,
+    "text": "\n        classes/types should always be True.\n        "
+  },
+  {
+    "offset": "0x7d80400",
+    "length": 43,
+    "text": "\n        Whether this path exists.\n        "
+  },
+  {
+    "offset": "0x7d806a0",
+    "length": 46,
+    "text": "\n        Whether this path is a FIFO.\n        "
+  },
+  {
+    "offset": "0x7d80d00",
+    "length": 44,
+    "text": "\n    Make the given class un-picklable.\n    "
+  },
+  {
+    "offset": "0x7da7520",
+    "length": 80,
+    "text": "A flavour implements a particular (platform-specific) set of path\n    semantics."
+  },
+  {
+    "offset": "0x84fe800",
+    "length": 47,
+    "text": "clear($self, /)\n--\n\nRemove all items from memo."
+  },
+  {
+    "offset": "0x8575040",
+    "length": 64,
+    "text": "ulates most of the methods of a file object with\n    the excepti"
+  },
+  {
+    "offset": "0x8b60510",
+    "length": 60,
+    "text": "ies to prevent Secure Boot changes when the system restarts."
+  },
+  {
+    "offset": "0x901303a",
+    "length": 70,
+    "text": "H[]A\\A9f, 0x92, 0xd9, 0xd4, 0xc3, 0xce, 0xed, 0xe0, 0xf7, 0xfa,\n    0x"
+  },
+  {
+    "offset": "0x9b92f20",
+    "length": 78,
+    "text": "copy($self, /)\n--\n\nReturn a duplicate of the context with all flags cleared.\n\n"
+  },
+  {
+    "offset": "0x9b93000",
+    "length": 68,
+    "text": "shift($self, x, y, /)\n--\n\nReturn a copy of x, shifted by y places.\n\n"
+  },
+  {
+    "offset": "0x9b93120",
+    "length": 69,
+    "text": "rotate($self, x, y, /)\n--\n\nReturn a copy of x, rotated by y places.\n\n"
+  },
+  {
+    "offset": "0x9b93420",
+    "length": 71,
+    "text": "number_class($self, x, /)\n--\n\nReturn an indication of the class of x.\n\n"
+  },
+  {
+    "offset": "0x9b93520",
+    "length": 73,
+    "text": "copy_negate($self, x, /)\n--\n\nReturn a copy of x with the sign inverted.\n\n"
+  },
+  {
+    "offset": "0x9b935c0",
+    "length": 70,
+    "text": "copy_abs($self, x, /)\n--\n\nReturn a copy of x with the sign set to 0.\n\n"
+  },
+  {
+    "offset": "0x9b93660",
+    "length": 71,
+    "text": "is_zero($self, x, /)\n--\n\nReturn True if x is a zero, False otherwise.\n\n"
+  },
+  {
+    "offset": "0x9b936c0",
+    "length": 79,
+    "text": "is_subnormal($self, x, /)\n--\n\nReturn True if x is subnormal, False otherwise.\n\n"
+  },
+  {
+    "offset": "0x9b93720",
+    "length": 80,
+    "text": "is_snan($self, x, /)\n--\n\nReturn True if x is a signaling NaN, False otherwise.\n\n"
+  },
+  {
+    "offset": "0x9b93780",
+    "length": 75,
+    "text": "is_signed($self, x, /)\n--\n\nReturn True if x is negative, False otherwise.\n\n"
+  },
+  {
+    "offset": "0x9b937e0",
+    "length": 76,
+    "text": "is_qnan($self, x, /)\n--\n\nReturn True if x is a quiet NaN, False otherwise.\n\n"
+  },
+  {
+    "offset": "0x9b938a0",
+    "length": 78,
+    "text": "is_nan($self, x, /)\n--\n\nReturn True if x is a qNaN or sNaN, False otherwise.\n\n"
+  },
+  {
+    "offset": "0x9b93900",
+    "length": 77,
+    "text": "is_infinite($self, x, /)\n--\n\nReturn True if x is infinite, False otherwise.\n\n"
+  },
+  {
+    "offset": "0x9b93960",
+    "length": 73,
+    "text": "is_finite($self, x, /)\n--\n\nReturn True if x is finite, False otherwise.\n\n"
+  },
+  {
+    "offset": "0x9b939c0",
+    "length": 79,
+    "text": "is_canonical($self, x, /)\n--\n\nReturn True if x is canonical, False otherwise.\n\n"
+  },
+  {
+    "offset": "0x9b93ea0",
+    "length": 69,
+    "text": "subtract($self, x, y, /)\n--\n\nReturn the difference between x and y.\n\n"
+  },
+  {
+    "offset": "0x9b941c0",
+    "length": 80,
+    "text": "min($self, x, y, /)\n--\n\nCompare the values numerically and return the minimum.\n\n"
+  },
+  {
+    "offset": "0x9b94280",
+    "length": 80,
+    "text": "max($self, x, y, /)\n--\n\nCompare the values numerically and return the maximum.\n\n"
+  },
+  {
+    "offset": "0x9b94340",
+    "length": 80,
+    "text": "divide_int($self, x, y, /)\n--\n\nReturn x divided by y, truncated to an integer.\n\n"
+  },
+  {
+    "offset": "0x9b945e0",
+    "length": 65,
+    "text": "to_integral($self, x, /)\n--\n\nIdentical to to_integral_value(x).\n\n"
+  },
+  {
+    "offset": "0x9b946c0",
+    "length": 80,
+    "text": "normalize($self, x, /)\n--\n\nReduce x to its simplest form. Alias for reduce(x).\n\n"
+  },
+  {
+    "offset": "0x9b948a0",
+    "length": 65,
+    "text": "ln($self, x, /)\n--\n\nReturn the natural (base e) logarithm of x.\n\n"
+  },
+  {
+    "offset": "0x9b94ac0",
+    "length": 64,
+    "text": "setcontext($module, context, /)\n--\n\nSet a new default context.\n\n"
+  },
+  {
+    "offset": "0x9d32cc0",
+    "length": 67,
+    "text": "attrset($self, attr, /)\n--\n\nSet the \"background\" set of attributes."
+  },
+  {
+    "offset": "0x9d32d20",
+    "length": 72,
+    "text": "attron($self, attr, /)\n--\n\nAdd attribute attr from the \"background\" set."
+  },
+  {
+    "offset": "0x9d32d80",
+    "length": 76,
+    "text": "attroff($self, attr, /)\n--\n\nRemove attribute attr from the \"background\" set."
+  },
+  {
+    "offset": "0x9d332c0",
+    "length": 69,
+    "text": "curses.ncurses_version\n\nNcurses version information as a named tuple."
+  },
+  {
+    "offset": "0x9d335e0",
+    "length": 75,
+    "text": "unget_wch($module, ch, /)\n--\n\nPush ch so the next get_wch() will return it."
+  },
+  {
+    "offset": "0x9d33680",
+    "length": 71,
+    "text": "ungetch($module, ch, /)\n--\n\nPush ch so the next getch() will return it."
+  },
+  {
+    "offset": "0x9d34560",
+    "length": 43,
+    "text": "savetty($module, /)\n--\n\nSave terminal mode."
+  },
+  {
+    "offset": "0x9d348c0",
+    "length": 46,
+    "text": "resetty($module, /)\n--\n\nRestore terminal mode."
+  },
+  {
+    "offset": "0x9d35900",
+    "length": 71,
+    "text": "killchar($module, /)\n--\n\nReturn the user's current line kill character."
+  },
+  {
+    "offset": "0x9d35a80",
+    "length": 65,
+    "text": "isendwin($module, /)\n--\n\nReturn True if endwin() has been called."
+  },
+  {
+    "offset": "0x9d36620",
+    "length": 68,
+    "text": "erasechar($module, /)\n--\n\nReturn the user's current erase character."
+  },
+  {
+    "offset": "0x9d367c0",
+    "length": 80,
+    "text": "doupdate($module, /)\n--\n\nUpdate the physical screen to match the virtual screen."
+  },
+  {
+    "offset": "0xa407010",
+    "length": 60,
+    "text": "theme/Adwaita/assets/slider-horz-scale-has-marks-above@2.png"
+  },
+  {
+    "offset": "0xa444b10",
+    "length": 60,
+    "text": "theme/Adwaita/assets/slider-vert-scale-has-marks-below@2.png"
+  },
+  {
+    "offset": "0xa55d040",
+    "length": 48,
+    "text": "for user lookups\n#\n# See `info libc 'NSS Basics'"
+  },
+  {
+    "offset": "0xa5f5470",
+    "length": 60,
+    "text": "nfo/gnome-system-monitor.appdata.xml:ctime=1638681996.280317"
+  },
+  {
+    "offset": "0xa60f950",
+    "length": 60,
+    "text": "cations/gnome-datetime-panel.desktop:ctime=1638681991.754522"
+  },
+  {
+    "offset": "0xabd2520",
+    "length": 69,
+    "text": "as_tuple($self, /)\n--\n\nReturn a tuple representation of the number.\n\n"
+  },
+  {
+    "offset": "0xac01088",
+    "length": 42,
+    "text": "z'\nCommon code used in multiple modules.\nc"
+  },
+  {
+    "offset": "0xad99ec0",
+    "length": 40,
+    "text": "Tss2_MU_TPM2B_ENCRYPTED_SECRET_Unmarshal"
+  },
+  {
+    "offset": "0xad9dc60",
+    "length": 41,
+    "text": "Tss2_MU_TPMS_SESSION_AUDIT_INFO_Unmarshal"
+  },
+  {
+    "offset": "0xad9dce0",
+    "length": 41,
+    "text": "Tss2_MU_TPMS_COMMAND_AUDIT_INFO_Unmarshal"
+  },
+  {
+    "offset": "0xd2955b4",
+    "length": 44,
+    "text": " Allow taking area screenshots with timeout\n"
+  },
+  {
+    "offset": "0xd2f8364",
+    "length": 40,
+    "text": " Add sysprof support for profiling jobs\n"
+  },
+  {
+    "offset": "0x1304eff8",
+    "length": 72,
+    "text": "Marshalling TPMS_COMMAND_AUDIT_INFO from 0x%lx to buffer 0x%lx at index "
+  },
+  {
+    "offset": "0x171a1ff1",
+    "length": 79,
+    "text": "\n    A class decorator that defines __unicode__ and __str__ methods under Pytho"
+  },
+  {
+    "offset": "0x2f8747e0",
+    "length": 74,
+    "text": "I:%c If#=%2d Alt=%2d #EPs=%2d Cls=%02x(%-5s) Sub=%02x Prot=%02x Driver=%s\n"
+  },
+  {
+    "offset": "0x2f874880",
+    "length": 44,
+    "text": "C:%c #Ifs=%2d Cfg#=%2d Atr=%02x MxPwr=%3dmA\n"
+  },
+  {
+    "offset": "0x2f8748c0",
+    "length": 41,
+    "text": "P:  Vendor=%04x ProdID=%04x Rev=%2x.%02x\n"
+  },
+  {
+    "offset": "0x2f874900",
+    "length": 70,
+    "text": "D:  Ver=%2x.%02x Cls=%02x(%-5s) Sub=%02x Prot=%02x MxPS=%2d #Cfgs=%3d\n"
+  },
+  {
+    "offset": "0x2f89ee40",
+    "length": 46,
+    "text": "magicsecure not supported, cannot set password"
+  },
+  {
+    "offset": "0x2fac2191",
+    "length": 40,
+    "text": "6sha1_ssse3: AVX detected but unusable.\n"
+  },
+  {
+    "offset": "0x2fb92279",
+    "length": 45,
+    "text": "2Hibernate inconsistent memory map detected!\n"
+  },
+  {
+    "offset": "0x30068500",
+    "length": 74,
+    "text": "CSV dialect\n\nThe Dialect type records CSV parsing and generation options.\n"
+  },
+  {
+    "offset": "0x30cd8960",
+    "length": 42,
+    "text": "readlines($self, sizehintobj=None, /)\n--\n\n"
+  },
+  {
+    "offset": "0x30d95200",
+    "length": 72,
+    "text": "getstate($self, /)\n--\n\ngetstate() -> tuple containing the current state."
+  },
+  {
+    "offset": "0x30de4220",
+    "length": 75,
+    "text": "Cache the module name and the path to the file found by the\n        finder."
+  },
+  {
+    "offset": "0x30de4ea0",
+    "length": 65,
+    "text": "\n        Encodes input and returns the resulting object.\n        "
+  },
+  {
+    "offset": "0x30de4fa0",
+    "length": 64,
+    "text": "\n        Decode input and returns the resulting object.\n        "
+  },
+  {
+    "offset": "0x30e2d350",
+    "length": 46,
+    "text": "FileId=TMSi PortiLab sample log file\n\rVersion="
+  },
+  {
+    "offset": "0x3135bda0",
+    "length": 64,
+    "text": "Preserve the context stack by transferring it to a new instance."
+  },
+  {
+    "offset": "0x3136b0a0",
+    "length": 76,
+    "text": "Procedurally generate administrative dark-mode SecOps audit console display."
+  },
+  {
+    "offset": "0x3136bb20",
+    "length": 64,
+    "text": "Read-only access to the address family for this socket.\n        "
+  },
+  {
+    "offset": "0x31405040",
+    "length": 65,
+    "text": " arithmetic. Included for compatibility with the specification.\n\n"
+  },
+  {
+    "offset": "0x31407040",
+    "length": 47,
+    "text": "ne using the absolute\nvalues of the operands.\n\n"
+  },
+  {
+    "offset": "0x314b3340",
+    "length": 60,
+    "text": "Base class shared between poll, epoll and devpoll selectors."
+  },
+  {
+    "offset": "0x314b3ff0",
+    "length": 50,
+    "text": "True if the SocketIO is open for reading.\n        "
+  },
+  {
+    "offset": "0x315b73f0",
+    "length": 55,
+    "text": "openssl enc'd data with salted password, base64 encoded"
+  },
+  {
+    "offset": "0x315ec178",
+    "length": 43,
+    "text": "Quake I save: d11 The genetics lab (secret)"
+  },
+  {
+    "offset": "0x33c91040",
+    "length": 80,
+    "text": "ed according\nto the format string.  See help(struct) for more on format strings."
+  },
+  {
+    "offset": "0x33cc9c20",
+    "length": 71,
+    "text": "digest($self, /, length)\n--\n\nReturn the digest value as a bytes object."
+  },
+  {
+    "offset": "0x33ccaaa0",
+    "length": 80,
+    "text": "hmac_new($module, /, key, msg=b'', digestmod=None)\n--\n\nReturn a new hmac object."
+  },
+  {
+    "offset": "0x33f7db20",
+    "length": 60,
+    "text": "chrome-extension://inpclkkffgmceffinhohmchhijoolkoa/tv360.js"
+  },
+  {
+    "offset": "0x33f7dc60",
+    "length": 60,
+    "text": "chrome-extension://inpclkkffgmceffinhohmchhijoolkoa/vieon.js"
+  },
+  {
+    "offset": "0x33f7dcb0",
+    "length": 60,
+    "text": "chrome-extension://inpclkkffgmceffinhohmchhijoolkoa/udemy.js"
+  },
+  {
+    "offset": "0x33f98680",
+    "length": 80,
+    "text": "Remove and return an arbitrary set element.\nRaises KeyError if the set is empty."
+  },
+  {
+    "offset": "0x33f98800",
+    "length": 79,
+    "text": "Add an element to a set.\n\nThis has no effect if the element is already present."
+  },
+  {
+    "offset": "0x3403aca0",
+    "length": 40,
+    "text": "Struct(fmt) --> compiled struct object\n\n"
+  },
+  {
+    "offset": "0x34236de0",
+    "length": 75,
+    "text": "tolist($self, /)\n--\n\nConvert array to an ordinary list with the same items."
+  },
+  {
+    "offset": "0x34236ea0",
+    "length": 66,
+    "text": "reverse($self, /)\n--\n\nReverse the order of the items in the array."
+  },
+  {
+    "offset": "0x34236f00",
+    "length": 70,
+    "text": "remove($self, v, /)\n--\n\nRemove the first occurrence of v in the array."
+  },
+  {
+    "offset": "0x34236f60",
+    "length": 73,
+    "text": "__reduce_ex__($self, value, /)\n--\n\nReturn state information for pickling."
+  },
+  {
+    "offset": "0x34237040",
+    "length": 80,
+    "text": "insert($self, i, v, /)\n--\n\nInsert a new item v into the array before position i."
+  },
+  {
+    "offset": "0x342370a0",
+    "length": 74,
+    "text": "index($self, v, /)\n--\n\nReturn index of first occurrence of v in the array."
+  },
+  {
+    "offset": "0x34237420",
+    "length": 70,
+    "text": "count($self, v, /)\n--\n\nReturn number of occurrences of v in the array."
+  },
+  {
+    "offset": "0x34237680",
+    "length": 67,
+    "text": "append($self, v, /)\n--\n\nAppend new value v to the end of the array."
+  },
+  {
+    "offset": "0x34238020",
+    "length": 71,
+    "text": "__setstate__($self, state, /)\n--\n\nSet state information for unpickling."
+  },
+  {
+    "offset": "0x344b0140",
+    "length": 48,
+    "text": "/FontBBox [{0:.4g} {1:.4g} {2:.4g} {3:.4g}] def\n"
+  },
+  {
+    "offset": "0x345cf960",
+    "length": 46,
+    "text": "_setter_session(session)\nGet / set SSLSession."
+  },
+  {
+    "offset": "0x345d0680",
+    "length": 75,
+    "text": "load_verify_locations($self, /, cafile=None, capath=None, cadata=None)\n--\n\n"
+  },
+  {
+    "offset": "0x345d0720",
+    "length": 69,
+    "text": "load_cert_chain($self, /, certfile, keyfile=None, password=None)\n--\n\n"
+  },
+  {
+    "offset": "0x345d0780",
+    "length": 41,
+    "text": "_set_npn_protocols($self, protos, /)\n--\n\n"
+  },
+  {
+    "offset": "0x345d07c0",
+    "length": 42,
+    "text": "_set_alpn_protocols($self, protos, /)\n--\n\n"
+  },
+  {
+    "offset": "0x347d3040",
+    "length": 65,
+    "text": "eta will use the names found in self._member_names as the\n    en?"
+  },
+  {
+    "offset": "0x3489f208",
+    "length": 60,
+    "text": "src/pk/asn1/der/generalizedtime/der_decode_generalizedtime.c"
+  },
+  {
+    "offset": "0x34d08120",
+    "length": 76,
+    "text": "_heapreplace_max($module, heap, item, /)\n--\n\nMaxheap variant of heapreplace."
+  },
+  {
+    "offset": "0x34f75ca0",
+    "length": 60,
+    "text": "web_cache.mojom.WebCache [primary] PipeControlMessageHandler"
+  },
+  {
+    "offset": "0x34fbe3a0",
+    "length": 72,
+    "text": "Return a list of all know dialect names.\n    names = csv.list_dialects()"
+  },
+  {
+    "offset": "0x353500b0",
+    "length": 60,
+    "text": "chrome-extension://gfgbmghkdjckppeomloefmbphdfmokgd/images/*"
+  },
+  {
+    "offset": "0x35909097",
+    "length": 56,
+    "text": "MetroBank SecOps Audit Console | CaptureID: SCR-2026-X89"
+  },
+  {
+    "offset": "0x3599bffa",
+    "length": 70,
+    "text": "zI\n        Work out the rollover time based on the specified time.\n   "
+  },
+  {
+    "offset": "0x35cc7a20",
+    "length": 44,
+    "text": "Quake I save: e1m8 Ziggurat vertigo (secret)"
+  },
+  {
+    "offset": "0x35cc8000",
+    "length": 46,
+    "text": "Quake I save: hip1m5 Military complex (secret)"
+  },
+  {
+    "offset": "0x35cd5180",
+    "length": 61,
+    "text": "Return the file descriptor of the underlying socket.\n        "
+  },
+  {
+    "offset": "0x35cd5a40",
+    "length": 60,
+    "text": "Stub method.  Not used for a system random number generator."
+  },
+  {
+    "offset": "0x35cdc3c0",
+    "length": 73,
+    "text": "getsizeof(object [, default]) -> int\n\nReturn the size of object in bytes."
+  },
+  {
+    "offset": "0x35cdcca0",
+    "length": 71,
+    "text": "_clear_type_cache($module, /)\n--\n\nClear the internal type lookup cache."
+  },
+  {
+    "offset": "0x35cdcd60",
+    "length": 75,
+    "text": "audit(event, *args)\n\nPasses the event to any audit hooks that are attached."
+  },
+  {
+    "offset": "0x35cdcdc0",
+    "length": 66,
+    "text": "addaudithook($module, /, hook)\n--\n\nAdds a new audit hook callback."
+  },
+  {
+    "offset": "0x35cdce20",
+    "length": 77,
+    "text": "sys.flags\n\nFlags provided through command line arguments or environment vars."
+  },
+  {
+    "offset": "0x41ffef60",
+    "length": 60,
+    "text": "theme/Adwaita/assets/slider-horz-scale-has-marks-below@2.png"
+  },
+  {
+    "offset": "0x420023b0",
+    "length": 60,
+    "text": "theme/Adwaita/assets/slider-vert-scale-has-marks-above@2.png"
+  },
+  {
+    "offset": "0x4200a8a0",
+    "length": 60,
+    "text": "s read complete_in_idle_cbreply_unlocked complete_in_idle_cb"
+  },
+  {
+    "offset": "0x421d6a60",
+    "length": 41,
+    "text": "the machine to find the\n# ibus session b1"
+  },
+  {
+    "offset": "0x421d6ac0",
+    "length": 41,
+    "text": "ment variable is set, it will\n# be used 1"
+  },
+  {
+    "offset": "0x6b2b3040",
+    "length": 64,
+    "text": " stats (also lazily initialises\n                    // tfsheadup"
+  },
+  {
+    "offset": "0x9f023040",
+    "length": 61,
+    "text": "[timestamps]\n3bb4cd9c-965d-3a39-86fd-3765b5a65ba6=1788885637\n"
+  },
+  {
+    "offset": "0xa191e040",
+    "length": 61,
+    "text": "# This is private data. Do not parse.\nADDRESS=192.168.76.131\n"
+  },
+  {
+    "offset": "0xbb78a674",
+    "length": 43,
+    "text": "Breaking content into %u epochs of size %u\n"
+  },
+  {
+    "offset": "0xbfe0a650",
+    "length": 48,
+    "text": "\nNetwork location where the request is made to.\n"
+  },
+  {
+    "offset": "0xbfe0aea0",
+    "length": 60,
+    "text": ": Enable tracemalloc to get the object allocation traceback\n"
+  },
+  {
+    "offset": "0xc272c04d",
+    "length": 49,
+    "text": "Ss an automatic default value.\n\t# vdo_bio_threads"
+  },
+  {
+    "offset": "0xc277a12e",
+    "length": 60,
+    "text": "../../../../usr/lib64/samba/libpopt-samba3-cmdline-samba4.so"
+  },
+  {
+    "offset": "0xc2d5552e",
+    "length": 60,
+    "text": "/usr/share/help/C/zenity/figures/zenity-scale-screenshot.png"
+  },
+  {
+    "offset": "0xc2d92d2e",
+    "length": 60,
+    "text": "../../../../usr/lib64/fwupd-plugins-3/libfu_plugin_ebitdo.so"
+  },
+  {
+    "offset": "0xc2d9c32e",
+    "length": 60,
+    "text": "../../../../usr/lib64/fwupd-plugins-3/libfu_plugin_ep963x.so"
+  },
+  {
+    "offset": "0xc2d9ef2e",
+    "length": 60,
+    "text": "../../../../usr/lib64/ModemManager/libmm-plugin-longcheer.so"
+  },
+  {
+    "offset": "0xc30541f5",
+    "length": 40,
+    "text": "selinuxsystem_u:object_r:auditd_log_t:s0"
+  },
+  {
+    "offset": "0xc30543f5",
+    "length": 40,
+    "text": "selinuxsystem_u:object_r:auditd_etc_t:s0"
+  },
+  {
+    "offset": "0xc32ccd2e",
+    "length": 60,
+    "text": "../../../../usr/lib64/fwupd-plugins-3/libfu_plugin_upower.so"
+  },
+  {
+    "offset": "0xc4c4392e",
+    "length": 60,
+    "text": "input\\x2fby-path\\x2fpci-0000:02:00.0-usb-0:1:1.0-event-mouse"
+  },
+  {
+    "offset": "0xc4c43c8e",
+    "length": 60,
+    "text": "app-org.gnome.Evolution\\x2dalarm\\x2dnotify@autostart.service"
+  },
+  {
+    "offset": "0xc516c04d",
+    "length": 49,
+    "text": "S theclass=\"clearfix\">/div>\r\n</div>\r\n\r\nthree-dime"
+  },
+  {
+    "offset": "0xc566807e",
+    "length": 70,
+    "text": "Activate the web console with: systemctl enable --now cockpit.socket\n\n"
+  },
+  {
+    "offset": "0xc5837022",
+    "length": 60,
+    "text": "a6cbfdebb65b49512bc243800d40d756643a52e34d3c76710a55e4276071"
+  },
+  {
+    "offset": "0xc584332e",
+    "length": 47,
+    "text": "../../../../usr/lib64/security/pam_tty_audit.so"
+  },
+  {
+    "offset": "0xc5b1fb2e",
+    "length": 40,
+    "text": "../../../../usr/bin/systemd-ask-password"
+  },
+  {
+    "offset": "0xc636e52e",
+    "length": 42,
+    "text": "../../../../usr/lib64/audit/sotruss-lib.so"
+  },
+  {
+    "offset": "0xc674a702",
+    "length": 60,
+    "text": "hyperv-daemons-license;0-0.45.20190303git.el9;noarch;appstre"
+  },
+  {
+    "offset": "0xc709eb2e",
+    "length": 42,
+    "text": "../../../../usr/lib64/libarchive.so.13.5.2"
+  },
+  {
+    "offset": "0xc775892e",
+    "length": 50,
+    "text": "../../../../usr/lib/systemd/systemd-reply-password"
+  },
+  {
+    "offset": "0xc77b7b2e",
+    "length": 42,
+    "text": "../../../../usr/lib64/rpm-plugins/audit.so"
+  },
+  {
+    "offset": "0xc89b812e",
+    "length": 44,
+    "text": "../../../../usr/lib64/sssd/libsss_secrets.so"
+  },
+  {
+    "offset": "0xc89f5d2e",
+    "length": 60,
+    "text": "../../../../usr/lib64/ModemManager/libmm-plugin-broadmobi.so"
+  },
+  {
+    "offset": "0xc95e6706",
+    "length": 60,
+    "text": "\"%s\" is neither a valid executable name nor an absolute path"
+  },
+  {
+    "offset": "0xc984a07e",
+    "length": 62,
+    "text": "I:10458666\nE:ID_VENDOR_FROM_DATABASE=The Linux Foundation\nV:1\n"
+  },
+  {
+    "offset": "0xc9c2d3f5",
+    "length": 46,
+    "text": "selinuxsystem_u:object_r:auditd_unit_file_t:s0"
+  },
+  {
+    "offset": "0xc9d3472e",
+    "length": 60,
+    "text": "../../../../usr/lib64/ModemManager/libmm-plugin-cinterion.so"
+  },
+  {
+    "offset": "0xc9e483a7",
+    "length": 45,
+    "text": "6PCLMULQDQ-NI instructions are not detected.\n"
+  },
+  {
+    "offset": "0xcb46d92e",
+    "length": 60,
+    "text": "/usr/share/help/C/gnome-help/figures/touch-pinch-to-zoom.svg"
+  },
+  {
+    "offset": "0xcb4cd12e",
+    "length": 44,
+    "text": "../../../../usr/lib64/xtables/libxt_AUDIT.so"
+  },
+  {
+    "offset": "0xcb5a6b2e",
+    "length": 50,
+    "text": "../../../../usr/bin/systemd-tty-ask-password-agent"
+  },
+  {
+    "offset": "0xcb66d1f5",
+    "length": 60,
+    "text": "selinuxsystem_u:object_r:systemd_modules_load_unit_file_t:s0"
+  },
+  {
+    "offset": "0xcb68592e",
+    "length": 60,
+    "text": "../../dracut/modules.d/98dracut-systemd/dracut-mount.service"
+  },
+  {
+    "offset": "0xcbc0402e",
+    "length": 72,
+    "text": "kmod_builtin_iter_get_modname: unexpected string without modname prefix\n"
+  },
+  {
+    "offset": "0xcbc2907e",
+    "length": 62,
+    "text": "I:10541985\nE:ID_VENDOR_FROM_DATABASE=The Linux Foundation\nV:1\n"
+  },
+  {
+    "offset": "0xcbc6f07e",
+    "length": 62,
+    "text": "[Service]\nEnvironment=SYSTEMD_REBOOT_TO_BOOT_LOADER_MENU=true\n"
+  },
+  {
+    "offset": "0xcbea707e",
+    "length": 61,
+    "text": "files /etc/sysconfig/network-scripts\nfiles /var/lib/dhclient\n"
+  },
+  {
+    "offset": "0xcc54fdbe",
+    "length": 52,
+    "text": "%s %s %u %s %s %u \"%d%02d%02d %02d:%02d:%02d\" %u %d\n"
+  },
+  {
+    "offset": "0xcc565b46",
+    "length": 64,
+    "text": "All markup of the conditional section is not in the same entity\n"
+  },
+  {
+    "offset": "0xcc5f707e",
+    "length": 62,
+    "text": "I:10543665\nE:ID_VENDOR_FROM_DATABASE=The Linux Foundation\nV:1\n"
+  },
+  {
+    "offset": "0xcc61107e",
+    "length": 62,
+    "text": "I:10771481\nE:ID_VENDOR_FROM_DATABASE=The Linux Foundation\nV:1\n"
+  },
+  {
+    "offset": "0xcc62f07e",
+    "length": 62,
+    "text": "I:10730175\nE:ID_VENDOR_FROM_DATABASE=The Linux Foundation\nV:1\n"
+  },
+  {
+    "offset": "0xcc72107e",
+    "length": 62,
+    "text": "I:10466173\nE:ID_VENDOR_FROM_DATABASE=The Linux Foundation\nV:1\n"
+  },
+  {
+    "offset": "0xcc75707e",
+    "length": 62,
+    "text": "I:10470940\nE:ID_VENDOR_FROM_DATABASE=The Linux Foundation\nV:1\n"
+  },
+  {
+    "offset": "0xcc7be07e",
+    "length": 62,
+    "text": "I:10670264\nE:ID_VENDOR_FROM_DATABASE=The Linux Foundation\nV:1\n"
+  },
+  {
+    "offset": "0xcc7c107e",
+    "length": 62,
+    "text": "I:10676426\nE:ID_VENDOR_FROM_DATABASE=The Linux Foundation\nV:1\n"
+  },
+  {
+    "offset": "0xcc7c207e",
+    "length": 62,
+    "text": "I:10676926\nE:ID_VENDOR_FROM_DATABASE=The Linux Foundation\nV:1\n"
+  },
+  {
+    "offset": "0xcc7c507d",
+    "length": 63,
+    "text": "HI:10677455\nE:ID_VENDOR_FROM_DATABASE=The Linux Foundation\nV:1\n"
+  },
+  {
+    "offset": "0xcc7c907e",
+    "length": 62,
+    "text": "I:10691324\nE:ID_VENDOR_FROM_DATABASE=The Linux Foundation\nV:1\n"
+  },
+  {
+    "offset": "0xcc7ca07e",
+    "length": 62,
+    "text": "I:10691847\nE:ID_VENDOR_FROM_DATABASE=The Linux Foundation\nV:1\n"
+  },
+  {
+    "offset": "0xcc7cd07e",
+    "length": 62,
+    "text": "I:10692128\nE:ID_VENDOR_FROM_DATABASE=The Linux Foundation\nV:1\n"
+  },
+  {
+    "offset": "0xcc7d007e",
+    "length": 62,
+    "text": "I:10709511\nE:ID_VENDOR_FROM_DATABASE=The Linux Foundation\nV:1\n"
+  },
+  {
+    "offset": "0xcc7d107e",
+    "length": 62,
+    "text": "I:10709971\nE:ID_VENDOR_FROM_DATABASE=The Linux Foundation\nV:1\n"
+  },
+  {
+    "offset": "0xcc7d407e",
+    "length": 62,
+    "text": "I:10715962\nE:ID_VENDOR_FROM_DATABASE=The Linux Foundation\nV:1\n"
+  },
+  {
+    "offset": "0xcc7d507e",
+    "length": 62,
+    "text": "I:10719400\nE:ID_VENDOR_FROM_DATABASE=The Linux Foundation\nV:1\n"
+  },
+  {
+    "offset": "0xcc7d807e",
+    "length": 62,
+    "text": "I:10708307\nE:ID_VENDOR_FROM_DATABASE=The Linux Foundation\nV:1\n"
+  },
+  {
+    "offset": "0xcc7d907e",
+    "length": 62,
+    "text": "I:10725771\nE:ID_VENDOR_FROM_DATABASE=The Linux Foundation\nV:1\n"
+  },
+  {
+    "offset": "0xcc88a04e",
+    "length": 48,
+    "text": "pipewire\n\n30\n1\n0\n0\n0\na. Do not parse\nPRIORITY=30"
+  },
+  {
+    "offset": "0xcc8b907e",
+    "length": 62,
+    "text": "I:10544976\nE:ID_VENDOR_FROM_DATABASE=The Linux Foundation\nV:1\n"
+  },
+  {
+    "offset": "0xcc926a9e",
+    "length": 43,
+    "text": "Debug line with all properties:\nFROMHOST: '"
+  },
+  {
+    "offset": "0xcc9c407e",
+    "length": 62,
+    "text": "I:10773198\nE:ID_VENDOR_FROM_DATABASE=The Linux Foundation\nV:1\n"
+  },
+  {
+    "offset": "0xcca8207e",
+    "length": 70,
+    "text": "# See tmpfiles.d(5) for details\n\nd /run/lock/lockdev 0775 root lock -\n"
+  },
+  {
+    "offset": "0xcca8307e",
+    "length": 61,
+    "text": "d /run/lock/lvm 0700 root root -\nd /run/lvm 0700 root root -\n"
+  },
+  {
+    "offset": "0xccb7a07e",
+    "length": 62,
+    "text": "I:10668164\nE:ID_VENDOR_FROM_DATABASE=The Linux Foundation\nV:1\n"
+  },
+  {
+    "offset": "0xccc0107e",
+    "length": 62,
+    "text": "I:10737827\nE:ID_VENDOR_FROM_DATABASE=The Linux Foundation\nV:1\n"
+  },
+  {
+    "offset": "0xccd1507e",
+    "length": 60,
+    "text": "f /run/motd 0644 root root -\nd /run/motd.d 0755 root root -\n"
+  },
+  {
+    "offset": "0xccd2f0ee",
+    "length": 43,
+    "text": "man:systemd-ask-password-console.service(8)"
+  },
+  {
+    "offset": "0xccd6207e",
+    "length": 58,
+    "text": "d /run/setroubleshoot 711 setroubleshoot setroubleshoot -\n"
+  },
+  {
+    "offset": "0xcd11507c",
+    "length": 64,
+    "text": "t$I:10738746\nE:ID_VENDOR_FROM_DATABASE=The Linux Foundation\nV:1\n"
+  },
+  {
+    "offset": "0xcd12507e",
+    "length": 62,
+    "text": "I:10791318\nE:ID_VENDOR_FROM_DATABASE=The Linux Foundation\nV:1\n"
+  },
+  {
+    "offset": "0xcd1b507d",
+    "length": 63,
+    "text": "II:10796336\nE:ID_VENDOR_FROM_DATABASE=The Linux Foundation\nV:1\n"
+  },
+  {
+    "offset": "0xcd1b707e",
+    "length": 62,
+    "text": "I:10738210\nE:ID_VENDOR_FROM_DATABASE=The Linux Foundation\nV:1\n"
+  },
+  {
+    "offset": "0xcd1c707e",
+    "length": 62,
+    "text": "I:10749353\nE:ID_VENDOR_FROM_DATABASE=The Linux Foundation\nV:1\n"
+  },
+  {
+    "offset": "0xcd1c807e",
+    "length": 62,
+    "text": "I:10773634\nE:ID_VENDOR_FROM_DATABASE=The Linux Foundation\nV:1\n"
+  },
+  {
+    "offset": "0xcd1c907e",
+    "length": 62,
+    "text": "I:10774189\nE:ID_VENDOR_FROM_DATABASE=The Linux Foundation\nV:1\n"
+  },
+  {
+    "offset": "0xcd1cb07e",
+    "length": 62,
+    "text": "I:10649315\nE:ID_VENDOR_FROM_DATABASE=The Linux Foundation\nV:1\n"
+  },
+  {
+    "offset": "0xcd1cc07e",
+    "length": 62,
+    "text": "I:10650075\nE:ID_VENDOR_FROM_DATABASE=The Linux Foundation\nV:1\n"
+  },
+  {
+    "offset": "0xcd1cd07e",
+    "length": 62,
+    "text": "I:10651270\nE:ID_VENDOR_FROM_DATABASE=The Linux Foundation\nV:1\n"
+  },
+  {
+    "offset": "0xcd1ce07e",
+    "length": 62,
+    "text": "I:10656232\nE:ID_VENDOR_FROM_DATABASE=The Linux Foundation\nV:1\n"
+  },
+  {
+    "offset": "0xcd1d107e",
+    "length": 62,
+    "text": "I:10557754\nE:ID_VENDOR_FROM_DATABASE=The Linux Foundation\nV:1\n"
+  },
+  {
+    "offset": "0xcd1db07c",
+    "length": 64,
+    "text": "_ZI:10556189\nE:ID_VENDOR_FROM_DATABASE=The Linux Foundation\nV:1\n"
+  },
+  {
+    "offset": "0xcd22a07e",
+    "length": 62,
+    "text": "I:10461726\nE:ID_VENDOR_FROM_DATABASE=The Linux Foundation\nV:1\n"
+  },
+  {
+    "offset": "0xcd22d07e",
+    "length": 62,
+    "text": "I:10465014\nE:ID_VENDOR_FROM_DATABASE=The Linux Foundation\nV:1\n"
+  },
+  {
+    "offset": "0xcd35207e",
+    "length": 62,
+    "text": "I:10751096\nE:ID_VENDOR_FROM_DATABASE=The Linux Foundation\nV:1\n"
+  },
+  {
+    "offset": "0xcd35607e",
+    "length": 62,
+    "text": "I:10770867\nE:ID_VENDOR_FROM_DATABASE=The Linux Foundation\nV:1\n"
+  },
+  {
+    "offset": "0xcd35707e",
+    "length": 62,
+    "text": "I:10759797\nE:ID_VENDOR_FROM_DATABASE=The Linux Foundation\nV:1\n"
+  },
+  {
+    "offset": "0xcd35f07e",
+    "length": 62,
+    "text": "I:10555204\nE:ID_VENDOR_FROM_DATABASE=The Linux Foundation\nV:1\n"
+  },
+  {
+    "offset": "0xcd36207d",
+    "length": 63,
+    "text": "<I:10656843\nE:ID_VENDOR_FROM_DATABASE=The Linux Foundation\nV:1\n"
+  },
+  {
+    "offset": "0xcd36507b",
+    "length": 65,
+    "text": ")D$I:10559115\nE:ID_VENDOR_FROM_DATABASE=The Linux Foundation\nV:1\n"
+  },
+  {
+    "offset": "0xcd36607e",
+    "length": 62,
+    "text": "I:10559725\nE:ID_VENDOR_FROM_DATABASE=The Linux Foundation\nV:1\n"
+  },
+  {
+    "offset": "0xcd36707e",
+    "length": 62,
+    "text": "I:10561515\nE:ID_VENDOR_FROM_DATABASE=The Linux Foundation\nV:1\n"
+  },
+  {
+    "offset": "0xcd36807e",
+    "length": 62,
+    "text": "I:10667398\nE:ID_VENDOR_FROM_DATABASE=The Linux Foundation\nV:1\n"
+  },
+  {
+    "offset": "0xcd36907e",
+    "length": 62,
+    "text": "I:10675740\nE:ID_VENDOR_FROM_DATABASE=The Linux Foundation\nV:1\n"
+  },
+  {
+    "offset": "0xcd36c07e",
+    "length": 62,
+    "text": "I:10676391\nE:ID_VENDOR_FROM_DATABASE=The Linux Foundation\nV:1\n"
+  },
+  {
+    "offset": "0xcd66807e",
+    "length": 69,
+    "text": "I:11055966\nE:ID_PATH=platform-i8042\nE:ID_PATH_TAG=platform-i8042\nV:1\n"
+  },
+  {
+    "offset": "0xcd6b107e",
+    "length": 71,
+    "text": "I:11058781\nE:ID_PATH=platform-kgdboc\nE:ID_PATH_TAG=platform-kgdboc\nV:1\n"
+  },
+  {
+    "offset": "0xcd76107e",
+    "length": 79,
+    "text": "I:11082462\nE:ID_PATH=platform-serial8250\nE:ID_PATH_TAG=platform-serial8250\nV:1\n"
+  },
+  {
+    "offset": "0xcd81cc76",
+    "length": 40,
+    "text": "mkdir: this may cause subsequent errors\n"
+  },
+  {
+    "offset": "0xcd9cf061",
+    "length": 64,
+    "text": "0hb_ot_layout_lookup_would_suI:11304866\nE:ID_MM_CANDIDATE=1\nV:1\n"
+  },
+  {
+    "offset": "0xcda4407e",
+    "length": 52,
+    "text": "I:11477827\nE:ID_MM_CANDIDATE=1\nE:ID_NET_DRIVER=\nV:1\n"
+  },
+  {
+    "offset": "0xcdbe007e",
+    "length": 64,
+    "text": "tname: %inputname% rawmsg: '%rawmsg%'\n$!:%$!%\n$.:%$.%\n$/:%$/%\n\n\""
+  },
+  {
+    "offset": "0xcdbe6bfe",
+    "length": 65,
+    "text": "\"%TIMESTAMP% %HOSTNAME% %syslogtag%%msg:::sp-if-no-1st-sp%%msg%\n\""
+  },
+  {
+    "offset": "0xcdbe6e02",
+    "length": 76,
+    "text": "Message from syslogd@%HOSTNAME% at %timegenerated% ...\r\n %syslogtag%%msg%\n\r\""
+  },
+  {
+    "offset": "0xcdc7727e",
+    "length": 51,
+    "text": "accounts-daemon\naccounts-daemon.service\n30\n1\n0\n0\n0\n"
+  },
+  {
+    "offset": "0xcdf9607e",
+    "length": 71,
+    "text": "I:11057668\nE:ID_PATH=platform-pcspkr\nE:ID_PATH_TAG=platform-pcspkr\nV:1\n"
+  },
+  {
+    "offset": "0xce10692e",
+    "length": 49,
+    "text": "RpcChannel: Request %s: reqlen=%zu, replyLen=%zu\n"
+  },
+  {
+    "offset": "0xce193425",
+    "length": 73,
+    "text": "ect Alias store '%1$s' to '%2$s'\"\n\nalias.mapfile.badperm = \"Alias store m"
+  },
+  {
+    "offset": "0xce29707d",
+    "length": 51,
+    "text": "y# Command-line options for chronyd\nOPTIONS=\"-F 2\"\n"
+  },
+  {
+    "offset": "0xce39c7ce",
+    "length": 59,
+    "text": "type=BPF msg=audit(1788883877.537:87): prog-id=34 op=UNLOAD"
+  },
+  {
+    "offset": "0xce3b22d6",
+    "length": 55,
+    "text": "unexpected failure: fts_info=%d: %s\nplease report to %s"
+  },
+  {
+    "offset": "0xce45779e",
+    "length": 42,
+    "text": "dbus_connection_get_adt_audit_session_data"
+  },
+  {
+    "offset": "0xce864048",
+    "length": 60,
+    "text": "reply timeout expired, or the network connection was broken."
+  },
+  {
+    "offset": "0xce86f33e",
+    "length": 56,
+    "text": "          0   PCI-MSI 407552-edge      PCIe PME, pciehp\n"
+  },
+  {
+    "offset": "0xce8aecc5",
+    "length": 40,
+    "text": " #011num_reg: 8  #011lose cover RAM: 0G\n"
+  },
+  {
+    "offset": "0xce8aede1",
+    "length": 44,
+    "text": " 64M #011num_reg: 8  #011lose cover RAM: 0G\n"
+  },
+  {
+    "offset": "0xce8aee69",
+    "length": 53,
+    "text": "nk_size: 128M #011num_reg: 8  #011lose cover RAM: 0G\n"
+  },
+  {
+    "offset": "0xce8aef04",
+    "length": 42,
+    "text": "6M #011num_reg: 8  #011lose cover RAM: 0G\n"
+  },
+  {
+    "offset": "0xce8b32d7",
+    "length": 41,
+    "text": "M #011num_reg: 8  #011lose cover RAM: 0G\n"
+  },
+  {
+    "offset": "0xce8b3365",
+    "length": 43,
+    "text": "56M #011num_reg: 8  #011lose cover RAM: 0G\n"
+  },
+  {
+    "offset": "0xce8b3515",
+    "length": 41,
+    "text": "G #011num_reg: 8  #011lose cover RAM: 0G\n"
+  },
+  {
+    "offset": "0xce8b4bc2",
+    "length": 44,
+    "text": ": 1G #011num_reg: 8  #011lose cover RAM: 0G\n"
+  },
+  {
+    "offset": "0xce974f3e",
+    "length": 40,
+    "text": "driver_method_get_adt_audit_session_data"
+  },
+  {
+    "offset": "0xcec7402e",
+    "length": 80,
+    "text": " \n\n    \n    \n\n    \n\n    \n\n    \n    \n\n    \n\n    \n\n    \n    \n\n    \n    \n\n    \n\n   "
+  },
+  {
+    "offset": "0xceca507e",
+    "length": 42,
+    "text": "            2.222061             1.049669\n"
+  },
+  {
+    "offset": "0xcf359036",
+    "length": 44,
+    "text": "xmlTextWriterWriteRawLen : invalid content!\n"
+  },
+  {
+    "offset": "0xcf5f44c8",
+    "length": 46,
+    "text": "Class for finalization of weakrefable objects\n"
+  },
+  {
+    "offset": "0xcf8fb07e",
+    "length": 73,
+    "text": "# firewalld command line args\n# possible values: --debug\nFIREWALLD_ARGS=\n"
+  },
+  {
+    "offset": "0xcf9ae7de",
+    "length": 61,
+    "text": "\nThe objects used by the site module to add custom builtins.\n"
+  },
+  {
+    "offset": "0xcfaecd3e",
+    "length": 77,
+    "text": "3.9.9 (main, Nov 22 2021, 00:00:00) \n[GCC 11.2.1 20211019 (Red Hat 11.2.1-6)]"
+  },
+  {
+    "offset": "0xcfe4908e",
+    "length": 66,
+    "text": "ser-42.slice/session-c1.scope\nession.slice/pipewire-pulse.service\n"
+  },
+  {
+    "offset": "0xcff62fea",
+    "length": 60,
+    "text": "o para instalar o perfil de cores para todos os utilizadores"
+  },
+  {
+    "offset": "0xd008341e",
+    "length": 41,
+    "text": "mm_simple_connect_properties_get_password"
+  },
+  {
+    "offset": "0xd008345e",
+    "length": 41,
+    "text": "mm_simple_connect_properties_set_password"
+  },
+  {
+    "offset": "0xd00b700e",
+    "length": 69,
+    "text": "\n026-09-08 12:10:36 Dropped Linux capabilities to NET_ADMIN, NET_RAW."
+  },
+  {
+    "offset": "0xd01b2a3e",
+    "length": 46,
+    "text": "Raise GeneratorExit inside generator.\n        "
+  },
+  {
+    "offset": "0xd024a45e",
+    "length": 60,
+    "text": "_ActionsContainer._handle_conflict_error.<locals>.<listcomp>"
+  },
+  {
+    "offset": "0xd026e6de",
+    "length": 79,
+    "text": "Expand ~ and ~user constructions.  If user or $HOME is unknown,\n    do nothing."
+  },
+  {
+    "offset": "0xd02a804e",
+    "length": 48,
+    "text": "g)</li>\n          <li>Updated Turkish translatio"
+  },
+  {
+    "offset": "0xd03f707d",
+    "length": 40,
+    "text": "E\n\nSet state information for unpickling."
+  },
+  {
+    "offset": "0xd054237e",
+    "length": 60,
+    "text": "/usr/lib64/python3.9/site-packages/dbus/mainloop/__init__.py"
+  },
+  {
+    "offset": "0xd06ad37e",
+    "length": 67,
+    "text": "ParseFile($self, file, /)\n--\n\nParse XML data from file-like object."
+  },
+  {
+    "offset": "0xd06ad45e",
+    "length": 72,
+    "text": "ErrorString($module, code, /)\n--\n\nReturns string error for given number."
+  },
+  {
+    "offset": "0xd06c202e",
+    "length": 60,
+    "text": "%r is a FileType class object, instance of it must be passed"
+  },
+  {
+    "offset": "0xd0728406",
+    "length": 70,
+    "text": "!g_type_info_is_pointer (type_info) || transfer == GI_TRANSFER_NOTHING"
+  },
+  {
+    "offset": "0xd0a769de",
+    "length": 76,
+    "text": "Helper to correctly register coroutine function to __aexit__\n        method."
+  },
+  {
+    "offset": "0xd0ae629e",
+    "length": 60,
+    "text": "Compile the source string, then disassemble the code object."
+  },
+  {
+    "offset": "0xd0ae702e",
+    "length": 60,
+    "text": "/usr/lib/python3.9/site-packages/firewall/server/__init__.py"
+  },
+  {
+    "offset": "0xd0af4fde",
+    "length": 73,
+    "text": " Main function for firewall server. Handles D-Bus and GLib mainloop.\n    "
+  },
+  {
+    "offset": "0xd0b04cde",
+    "length": 77,
+    "text": "\n        The base name of this object without any parent references.\n        "
+  },
+  {
+    "offset": "0xd0c02d8e",
+    "length": 49,
+    "text": "Format help with underlined section headers.\n    "
+  },
+  {
+    "offset": "0xd0c30bce",
+    "length": 50,
+    "text": "      <arg direction=\"in\"  type=\"%s\" name=\"%s\" />\n"
+  },
+  {
+    "offset": "0xd0c3102e",
+    "length": 60,
+    "text": "input signature is longer than the number of arguments taken"
+  },
+  {
+    "offset": "0xd0c3515e",
+    "length": 79,
+    "text": "add_option(Option)\n           add_option(opt_str, ..., kwarg=val, ...)\n        "
+  },
+  {
+    "offset": "0xd0d2d16e",
+    "length": 80,
+    "text": "Add an interface to a zone.\n        If zone is empty, use default zone.\n        "
+  },
+  {
+    "offset": "0xd0e43a7e",
+    "length": 60,
+    "text": "/usr/lib64/python3.9/json/__pycache__/decoder.cpython-39.pyc"
+  },
+  {
+    "offset": "0xd0e43dfe",
+    "length": 60,
+    "text": "/usr/lib64/python3.9/json/__pycache__/scanner.cpython-39.pyc"
+  },
+  {
+    "offset": "0xd0e4402e",
+    "length": 60,
+    "text": "/usr/lib64/python3.9/json/__pycache__/encoder.cpython-39.pyc"
+  },
+  {
+    "offset": "0xd0ee902e",
+    "length": 57,
+    "text": "Invalid rule: More than one audit in rule '%s', ignoring."
+  },
+  {
+    "offset": "0xd10df02e",
+    "length": 48,
+    "text": "object path of icmptype with given name\n        "
+  },
+  {
+    "offset": "0xd14a61de",
+    "length": 56,
+    "text": "org.freedesktop.NetworkManager.SecretAgent.AgentCanceled"
+  },
+  {
+    "offset": "0xd154e07e",
+    "length": 68,
+    "text": "[main]\nNetworkingEnabled=true\nWirelessEnabled=true\nWWANEnabled=true\n"
+  },
+  {
+    "offset": "0xd170e5cf",
+    "length": 44,
+    "text": "\nName=New Window\nExec=nautilus --new-window\n"
+  },
+  {
+    "offset": "0xd1790dfc",
+    "length": 48,
+    "text": "ome/centos/Videos\nfile:///home/centos/Downloads\n"
+  },
+  {
+    "offset": "0xd1a504bf",
+    "length": 60,
+    "text": "poptions file names default destination that does not exist."
+  },
+  {
+    "offset": "0xd1a566c6",
+    "length": 49,
+    "text": "oom:x:977:\nsystemd-resolve:x:976:\ncentos:x:1000:\n"
+  },
+  {
+    "offset": "0xd1ad907e",
+    "length": 67,
+    "text": "#PDF-BANNER\nTemplate form_english.pdf\nFont UseDefault\nFont-size 11\n"
+  },
+  {
+    "offset": "0xd1aee07e",
+    "length": 67,
+    "text": "# Job cache file for CUPS v2.3.3op2\n# Written by cupsd\nNextJobId 1\n"
+  },
+  {
+    "offset": "0xd227f049",
+    "length": 54,
+    "text": "</description>\n    <description xml:lang=\"fur\">Abilit~"
+  },
+  {
+    "offset": "0xd2458396",
+    "length": 49,
+    "text": "couldn't initialize slot with master password: %s"
+  },
+  {
+    "offset": "0xd254a29b",
+    "length": 70,
+    "text": "Kit1/AuthenticationAgent, locale en_US.UTF-8) (disconnected from bus)\n"
+  },
+  {
+    "offset": "0xd254a475",
+    "length": 55,
+    "text": "get-updates: Creating repo: mkdirat: Permission denied\n"
+  },
+  {
+    "offset": "0xd28ff3ce",
+    "length": 60,
+    "text": "org.gnome.DisplayManager.SessionWorker.Error.InReauthSession"
+  },
+  {
+    "offset": "0xd2b24a4e",
+    "length": 55,
+    "text": "A NULL argv[0] was passed through an exec system call.\n"
+  },
+  {
+    "offset": "0xd2c7107e",
+    "length": 73,
+    "text": "root:unconfined_u:s0-s0:c0.c1023\n__default__:unconfined_u:s0-s0:c0.c1023\n"
+  },
+  {
+    "offset": "0xd32e06be",
+    "length": 40,
+    "text": "soup_password_manager_get_passwords_sync"
+  },
+  {
+    "offset": "0xd334807a",
+    "length": 53,
+    "text": "\n\n\n\n/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin"
+  },
+  {
+    "offset": "0xd33b77de",
+    "length": 77,
+    "text": "Unable to write termination signal to pipe - buffer full?\nWill exit instead.\n"
+  },
+  {
+    "offset": "0xd3c249ae",
+    "length": 48,
+    "text": "/Documents/mem.dubmitting(state) strict';\n\n     "
+  },
+  {
+    "offset": "0xd3f2372e",
+    "length": 60,
+    "text": "../../../../usr/lib64/gutenprint/5.3/modules/print-dyesub.so"
+  },
+  {
+    "offset": "0xd460203c",
+    "length": 66,
+    "text": "</summary>\n  <summary xml:lang=\"oc\">Utilizar la linha de comanda</"
+  },
+  {
+    "offset": "0xd47f07f6",
+    "length": 46,
+    "text": "Unable to drain events, buffer size mismatch.\n"
+  },
+  {
+    "offset": "0xd4c2852e",
+    "length": 60,
+    "text": "../../../../usr/lib64/fwupd-plugins-3/libfu_plugin_elantp.so"
+  },
+  {
+    "offset": "0xd4fbf6f6",
+    "length": 52,
+    "text": "libinput bug: Failed to find group %d for button %i\n"
+  },
+  {
+    "offset": "0xd51e1596",
+    "length": 59,
+    "text": "    <Failed to format values while inspecting stack frame>\n"
+  },
+  {
+    "offset": "0xd5b54e76",
+    "length": 53,
+    "text": " to save mapping file for order file instrumentation\n"
+  },
+  {
+    "offset": "0xd674a68e",
+    "length": 60,
+    "text": "crypto-policies-scripts-20260714-1.git65b74f7.el9.noarch.rpm"
+  },
+  {
+    "offset": "0xd674a92e",
+    "length": 60,
+    "text": "invocation:dbus-:1.2-org.gnome.Shell.Notifications@0.service"
+  },
+  {
+    "offset": "0xd6d3c906",
+    "length": 60,
+    "text": "Ignore balance information, always return (1: Even, 2: Odd)."
+  },
+  {
+    "offset": "0xd711061e",
+    "length": 71,
+    "text": "FRAG\n%sDCL IN[0], %s[0], %s\nDCL OUT[0], COLOR[0]\nMOV OUT[0], IN[0]\nEND\n"
+  },
+  {
+    "offset": "0xd719018e",
+    "length": 56,
+    "text": "Megadriver stub did not reserve enough extension slots.\n"
+  },
+  {
+    "offset": "0xd724fb9e",
+    "length": 43,
+    "text": "EE %s:%d %s UVD - Can't create CPB buffer.\n"
+  },
+  {
+    "offset": "0xd7263dd6",
+    "length": 43,
+    "text": "ac: Unknown GPU, using 0 for raster_config\n"
+  },
+  {
+    "offset": "0xd7547d3e",
+    "length": 48,
+    "text": "%s:%d - user constbufs only supported in slot 0\n"
+  },
+  {
+    "offset": "0xd768e8de",
+    "length": 47,
+    "text": "#extension GL_OES_EGL_image_external : require\n"
+  },
+  {
+    "offset": "0xd8bc4f3e",
+    "length": 45,
+    "text": "Failure creating val_to_{struct,name} arrays\n"
+  },
+  {
+    "offset": "0xd95d803b",
+    "length": 67,
+    "text": "CB7).</p>\n  </description>\n  <provides>\n    <id>evince.desktop</id>"
+  },
+  {
+    "offset": "0xd983afbe",
+    "length": 45,
+    "text": "%s (%s=%p): call: can't connect to `%s': %s\n\n"
+  },
+  {
+    "offset": "0xd983b5de",
+    "length": 67,
+    "text": "CANCEL\n\nRun the server's cancel handler if one has been registered."
+  },
+  {
+    "offset": "0xd99deaf7",
+    "length": 76,
+    "text": "UID=\"root\" AUID=\"centos\"\noot\"\nt\" EGID=\"centos\" SGID=\"centos\" FSGID=\"centos\"\n"
+  },
+  {
+    "offset": "0xd9a492b6",
+    "length": 72,
+    "text": "Effective:   %08X, %08X\nPermitted:   %08X, %08X\nInheritable: %08X, %08X\n"
+  },
+  {
+    "offset": "0xdb79d3f5",
+    "length": 43,
+    "text": "selinuxsystem_u:object_r:auditctl_exec_t:s0"
+  },
+  {
+    "offset": "0xdb79d5f5",
+    "length": 41,
+    "text": "selinuxsystem_u:object_r:auditd_exec_t:s0"
+  },
+  {
+    "offset": "0xdbed312e",
+    "length": 60,
+    "text": "../../../../usr/lib64/open-vm-tools/plugins/common/libvix.so"
+  },
+  {
+    "offset": "0xdc47f07e",
+    "length": 62,
+    "text": "I:10795138\nE:ID_VENDOR_FROM_DATABASE=The Linux Foundation\nV:1\n"
+  },
+  {
+    "offset": "0xdc4a807e",
+    "length": 62,
+    "text": "I:10774722\nE:ID_VENDOR_FROM_DATABASE=The Linux Foundation\nV:1\n"
+  },
+  {
+    "offset": "0xdc4ef07e",
+    "length": 62,
+    "text": "I:10461723\nE:ID_VENDOR_FROM_DATABASE=The Linux Foundation\nV:1\n"
+  },
+  {
+    "offset": "0xdc4f807e",
+    "length": 62,
+    "text": "I:10738403\nE:ID_VENDOR_FROM_DATABASE=The Linux Foundation\nV:1\n"
+  },
+  {
+    "offset": "0xdc53407e",
+    "length": 62,
+    "text": "I:10796989\nE:ID_VENDOR_FROM_DATABASE=The Linux Foundation\nV:1\n"
+  },
+  {
+    "offset": "0xdc57107e",
+    "length": 62,
+    "text": "I:10730703\nE:ID_VENDOR_FROM_DATABASE=The Linux Foundation\nV:1\n"
+  },
+  {
+    "offset": "0xdc5a807e",
+    "length": 62,
+    "text": "I:10793376\nE:ID_VENDOR_FROM_DATABASE=The Linux Foundation\nV:1\n"
+  },
+  {
+    "offset": "0xdc92e2f6",
+    "length": 45,
+    "text": "uniform uvec4 bitplane;\nuniform vec4 bitmul;\n"
+  },
+  {
+    "offset": "0xdc92e41e",
+    "length": 77,
+    "text": "%s#ifdef GL_ES\nprecision mediump float;\n#endif\n%s%s%s%svoid main() {\n%s%s%s}\n"
+  },
+  {
+    "offset": "0xdc9f007e",
+    "length": 62,
+    "text": "I:10542581\nE:ID_VENDOR_FROM_DATABASE=The Linux Foundation\nV:1\n"
+  },
+  {
+    "offset": "0xdca9b07e",
+    "length": 75,
+    "text": "I:10490065\nE:SYSTEMD_WANTS=sys-kernel-config.mount\nG:systemd\nQ:systemd\nV:1\n"
+  },
+  {
+    "offset": "0xdcac507e",
+    "length": 62,
+    "text": "I:10538734\nE:ID_VENDOR_FROM_DATABASE=The Linux Foundation\nV:1\n"
+  },
+  {
+    "offset": "0xdcb2007e",
+    "length": 62,
+    "text": "I:10537703\nE:ID_VENDOR_FROM_DATABASE=The Linux Foundation\nV:1\n"
+  },
+  {
+    "offset": "0xdcb2107e",
+    "length": 62,
+    "text": "I:10774149\nE:ID_VENDOR_FROM_DATABASE=The Linux Foundation\nV:1\n"
+  },
+  {
+    "offset": "0xdcb2c07e",
+    "length": 62,
+    "text": "I:10750221\nE:ID_VENDOR_FROM_DATABASE=The Linux Foundation\nV:1\n"
+  },
+  {
+    "offset": "0xdcb2d07e",
+    "length": 62,
+    "text": "I:10739325\nE:ID_VENDOR_FROM_DATABASE=The Linux Foundation\nV:1\n"
+  },
+  {
+    "offset": "0xdcb3207e",
+    "length": 62,
+    "text": "I:10762770\nE:ID_VENDOR_FROM_DATABASE=The Linux Foundation\nV:1\n"
+  },
+  {
+    "offset": "0xdcb3307e",
+    "length": 62,
+    "text": "I:10763331\nE:ID_VENDOR_FROM_DATABASE=The Linux Foundation\nV:1\n"
+  },
+  {
+    "offset": "0xdcb3607e",
+    "length": 62,
+    "text": "I:10765166\nE:ID_VENDOR_FROM_DATABASE=The Linux Foundation\nV:1\n"
+  },
+  {
+    "offset": "0xdcb3707e",
+    "length": 62,
+    "text": "I:10541974\nE:ID_VENDOR_FROM_DATABASE=The Linux Foundation\nV:1\n"
+  },
+  {
+    "offset": "0xdcb3807e",
+    "length": 62,
+    "text": "I:10770832\nE:ID_VENDOR_FROM_DATABASE=The Linux Foundation\nV:1\n"
+  },
+  {
+    "offset": "0xdcb3b07e",
+    "length": 62,
+    "text": "I:10772753\nE:ID_VENDOR_FROM_DATABASE=The Linux Foundation\nV:1\n"
+  },
+  {
+    "offset": "0xdcb3c07e",
+    "length": 62,
+    "text": "I:10773305\nE:ID_VENDOR_FROM_DATABASE=The Linux Foundation\nV:1\n"
+  },
+  {
+    "offset": "0xdcb4707e",
+    "length": 62,
+    "text": "I:10772648\nE:ID_VENDOR_FROM_DATABASE=The Linux Foundation\nV:1\n"
+  },
+  {
+    "offset": "0xdcb4b07b",
+    "length": 65,
+    "text": "CxHI:10556118\nE:ID_VENDOR_FROM_DATABASE=The Linux Foundation\nV:1\n"
+  },
+  {
+    "offset": "0xdcb4f07c",
+    "length": 64,
+    "text": "icI:10557450\nE:ID_VENDOR_FROM_DATABASE=The Linux Foundation\nV:1\n"
+  },
+  {
+    "offset": "0xdcb5007e",
+    "length": 62,
+    "text": "I:10559403\nE:ID_VENDOR_FROM_DATABASE=The Linux Foundation\nV:1\n"
+  },
+  {
+    "offset": "0xdcb5407e",
+    "length": 54,
+    "text": "I:10560570\nE:ID_VENDOR_FROM_DATABASE=VMware Inc.,\nV:1\n"
+  },
+  {
+    "offset": "0xdcb5a07e",
+    "length": 62,
+    "text": "I:10646791\nE:ID_VENDOR_FROM_DATABASE=The Linux Foundation\nV:1\n"
+  },
+  {
+    "offset": "0xdcb5b07e",
+    "length": 62,
+    "text": "I:10649337\nE:ID_VENDOR_FROM_DATABASE=The Linux Foundation\nV:1\n"
+  },
+  {
+    "offset": "0xdcb5e07e",
+    "length": 62,
+    "text": "I:10657824\nE:ID_VENDOR_FROM_DATABASE=The Linux Foundation\nV:1\n"
+  },
+  {
+    "offset": "0xdcb5f07e",
+    "length": 62,
+    "text": "I:10666857\nE:ID_VENDOR_FROM_DATABASE=The Linux Foundation\nV:1\n"
+  },
+  {
+    "offset": "0xdcf7107e",
+    "length": 62,
+    "text": "I:10677599\nE:ID_VENDOR_FROM_DATABASE=The Linux Foundation\nV:1\n"
+  },
+  {
+    "offset": "0xdcf76a6e",
+    "length": 48,
+    "text": "BUG: triggered 'if (CursorRefCount(pCurs) < 0)'\n"
+  },
+  {
+    "offset": "0xdcf77078",
+    "length": 68,
+    "text": "../ranI:10690846\nE:ID_VENDOR_FROM_DATABASE=The Linux Foundation\nV:1\n"
+  },
+  {
+    "offset": "0xdcf7a07d",
+    "length": 63,
+    "text": "VI:10691691\nE:ID_VENDOR_FROM_DATABASE=The Linux Foundation\nV:1\n"
+  },
+  {
+    "offset": "0xdcf7b07e",
+    "length": 62,
+    "text": "I:10692225\nE:ID_VENDOR_FROM_DATABASE=The Linux Foundation\nV:1\n"
+  },
+  {
+    "offset": "0xdcf7e07e",
+    "length": 62,
+    "text": "I:10692730\nE:ID_VENDOR_FROM_DATABASE=The Linux Foundation\nV:1\n"
+  },
+  {
+    "offset": "0xdcf7f07e",
+    "length": 62,
+    "text": "I:10705353\nE:ID_VENDOR_FROM_DATABASE=The Linux Foundation\nV:1\n"
+  },
+  {
+    "offset": "0xdcf8207e",
+    "length": 62,
+    "text": "I:10708898\nE:ID_VENDOR_FROM_DATABASE=The Linux Foundation\nV:1\n"
+  },
+  {
+    "offset": "0xdcf8707e",
+    "length": 62,
+    "text": "I:10716357\nE:ID_VENDOR_FROM_DATABASE=The Linux Foundation\nV:1\n"
+  },
+  {
+    "offset": "0xdcf8a07d",
+    "length": 63,
+    "text": "MI:10726316\nE:ID_VENDOR_FROM_DATABASE=The Linux Foundation\nV:1\n"
+  },
+  {
+    "offset": "0xdcf8b07e",
+    "length": 62,
+    "text": "I:10726456\nE:ID_VENDOR_FROM_DATABASE=The Linux Foundation\nV:1\n"
+  },
+  {
+    "offset": "0xdcf8e07d",
+    "length": 63,
+    "text": "HI:10729758\nE:ID_VENDOR_FROM_DATABASE=The Linux Foundation\nV:1\n"
+  },
+  {
+    "offset": "0xdcf9407e",
+    "length": 62,
+    "text": "I:10739845\nE:ID_VENDOR_FROM_DATABASE=The Linux Foundation\nV:1\n"
+  },
+  {
+    "offset": "0xdcf9607e",
+    "length": 62,
+    "text": "I:10796923\nE:ID_VENDOR_FROM_DATABASE=The Linux Foundation\nV:1\n"
+  },
+  {
+    "offset": "0xdcf9c07e",
+    "length": 62,
+    "text": "I:10804946\nE:ID_VENDOR_FROM_DATABASE=The Linux Foundation\nV:1\n"
+  },
+  {
+    "offset": "0xdcf9d07e",
+    "length": 62,
+    "text": "I:10825654\nE:ID_VENDOR_FROM_DATABASE=The Linux Foundation\nV:1\n"
+  },
+  {
+    "offset": "0xdcfa307d",
+    "length": 63,
+    "text": "dI:10748825\nE:ID_VENDOR_FROM_DATABASE=The Linux Foundation\nV:1\n"
+  },
+  {
+    "offset": "0xdd41707e",
+    "length": 55,
+    "text": "I:11099135\nE:ID_MM_CANDIDATE=1\nG:systemd\nQ:systemd\nV:1\n"
+  },
+  {
+    "offset": "0xdd47107e",
+    "length": 55,
+    "text": "I:11105077\nE:ID_MM_CANDIDATE=1\nG:systemd\nQ:systemd\nV:1\n"
+  },
+  {
+    "offset": "0xdd4a306a",
+    "length": 55,
+    "text": "clutter_touchpad_gesI:11250093\nE:ID_MM_CANDIDATE=1\nV:1\n"
+  },
+  {
+    "offset": "0xdd4e1079",
+    "length": 40,
+    "text": "nKKKKI:11292503\nE:ID_MM_CANDIDATE=1\nV:1\n"
+  },
+  {
+    "offset": "0xdd70b076",
+    "length": 43,
+    "text": "Error opI:11319208\nE:ID_MM_CANDIDATE=1\nV:1\n"
+  },
+  {
+    "offset": "0xdd906cae",
+    "length": 60,
+    "text": "d: \"/org/gnome/desktop/a11y/applications/\" (establishing: 1)"
+  },
+  {
+    "offset": "0xddf5a1ee",
+    "length": 41,
+    "text": "VGAuthService\nvgauthd.service\n30\n1\n0\n0\n0\n"
+  },
+  {
+    "offset": "0xddf8876e",
+    "length": 40,
+    "text": "\n    \n\n    \n    \n    \n    \n    \n    \n\n  "
+  },
+  {
+    "offset": "0xddfafafe",
+    "length": 50,
+    "text": "dbus-broker-launch\ndbus-broker.service\n30\n1\n0\n0\n0\n"
+  },
+  {
+    "offset": "0xddfb1475",
+    "length": 54,
+    "text": "DENTIFIER=dbus-broker-launch\nUNIT=dbus-broker.service\n"
+  },
+  {
+    "offset": "0xde01e51e",
+    "length": 41,
+    "text": " transport does not support data transfer"
+  },
+  {
+    "offset": "0xde05ee2e",
+    "length": 60,
+    "text": "NetworkManager-dispatcher.service: Deactivated successfully."
+  },
+  {
+    "offset": "0xde08bb9e",
+    "length": 60,
+    "text": "Relabelled /dev, /dev/shm, /run, /sys/fs/cgroup in 13.642ms."
+  },
+  {
+    "offset": "0xde099eee",
+    "length": 58,
+    "text": "Started Forward Password Requests to Wall Directory Watch."
+  },
+  {
+    "offset": "0xde0aed2e",
+    "length": 50,
+    "text": "size: 128K #011num_reg: 8  #011lose cover RAM: 0G\n"
+  },
+  {
+    "offset": "0xde0c689e",
+    "length": 60,
+    "text": "initrd-udevadm-cleanup-db.service: Deactivated successfully."
+  },
+  {
+    "offset": "0xde23f3ae",
+    "length": 60,
+    "text": "xmlSecTransformCheckId(transform, xmlSecTransformXPointerId)"
+  },
+  {
+    "offset": "0xde5ba6be",
+    "length": 44,
+    "text": "ECC private key version %u is not supported\n"
+  },
+  {
+    "offset": "0xde5bc11e",
+    "length": 48,
+    "text": "invalid (non-ASCII) name in certificate CN %.*s\n"
+  },
+  {
+    "offset": "0xde5bd046",
+    "length": 40,
+    "text": "matching %.*s with CIDR constraint %.*s\n"
+  },
+  {
+    "offset": "0xde5c2666",
+    "length": 57,
+    "text": "EXT[%p]: Confirming to use a %s client certificate type.\n"
+  },
+  {
+    "offset": "0xde5c394e",
+    "length": 55,
+    "text": "auth_rsa: Possible PKCS #1 version check format attack\n"
+  },
+  {
+    "offset": "0xdeb4fb9d",
+    "length": 57,
+    "text": "k:35 rtkit-daemon[788]: Successfully dropped privileges.\n"
+  },
+  {
+    "offset": "0xded34536",
+    "length": 54,
+    "text": "%s: Not running in vmsvc daemon: container name='%s'.\n"
+  },
+  {
+    "offset": "0xded380be",
+    "length": 80,
+    "text": "{\n\"version\":\"%d\", \n\"updateCounter\":\"%ld\", \n\"publishTime\":\"%s\", \n\"applications\":["
+  },
+  {
+    "offset": "0xdee0a61e",
+    "length": 53,
+    "text": "gin\ncentos:x:1000:1000:CentOS:/home/centos:/bin/bash\n"
+  },
+  {
+    "offset": "0xdee4607e",
+    "length": 44,
+    "text": "/bin/sh\n/bin/bash\n/usr/bin/sh\n/usr/bin/bash\n"
+  },
+  {
+    "offset": "0xdf3da61e",
+    "length": 42,
+    "text": "kmip_libvk_packet_unwrap_secret_asymmetric"
+  },
+  {
+    "offset": "0xdf3da7fe",
+    "length": 48,
+    "text": "libvk_volume_create_packet_wrap_secret_symmetric"
+  },
+  {
+    "offset": "0xdf3da87e",
+    "length": 40,
+    "text": "kmip_libvk_packet_wrap_secret_asymmetric"
+  },
+  {
+    "offset": "0xdf7cde5e",
+    "length": 78,
+    "text": "easeProfile:\n\n        This removes the hold that was set on a profile.\n    -->"
+  },
+  {
+    "offset": "0xdf99563e",
+    "length": 47,
+    "text": "g_callable_info_get_instance_ownership_transfer"
+  },
+  {
+    "offset": "0xdfb3c5ae",
+    "length": 59,
+    "text": "Written by %s, %s, %s,\n%s, %s, %s, %s,\n%s, %s, and others.\n"
+  },
+  {
+    "offset": "0xdff5b8de",
+    "length": 64,
+    "text": "Error in sitecustomize; set PYTHONVERBOSE for traceback:\n%s: %s\n"
+  },
+  {
+    "offset": "0xdff5b95e",
+    "length": 64,
+    "text": "Error in usercustomize; set PYTHONVERBOSE for traceback:\n%s: %s\n"
+  },
+  {
+    "offset": "0xdffaf76e",
+    "length": 59,
+    "text": "\n        Is this logger enabled for level 'level'?\n        "
+  },
+  {
+    "offset": "0xdffafd1e",
+    "length": 48,
+    "text": "\n    Escape special characters in a string.\n    "
+  },
+  {
+    "offset": "0xe00aa8fe",
+    "length": 73,
+    "text": "get_is_connected() -> bool\n\nReturn true if this Connection is connected.\n"
+  },
+  {
+    "offset": "0xe01910de",
+    "length": 80,
+    "text": "\n    Instances are replaced with an appropriate value in Enum class suites.\n    "
+  },
+  {
+    "offset": "0xe01915ee",
+    "length": 80,
+    "text": "\n        Returns True if self has at least the same flags set as other.\n        "
+  },
+  {
+    "offset": "0xe019f5be",
+    "length": 41,
+    "text": "\n        Initialize the handler.\n        "
+  },
+  {
+    "offset": "0xe02791de",
+    "length": 64,
+    "text": "\n        Remove the specified handler from this logger.\n        "
+  },
+  {
+    "offset": "0xe027965e",
+    "length": 64,
+    "text": "\n        See if the underlying logger has any handlers.\n        "
+  },
+  {
+    "offset": "0xe02797de",
+    "length": 66,
+    "text": "\n    Disable all logging calls of severity 'level' and below.\n    "
+  },
+  {
+    "offset": "0xe0279fde",
+    "length": 73,
+    "text": "\n    Class decorator for enumerations ensuring unique member values.\n    "
+  },
+  {
+    "offset": "0xe02914de",
+    "length": 72,
+    "text": "\n    Return the factory to be used when instantiating a log record.\n    "
+  },
+  {
+    "offset": "0xe02919de",
+    "length": 69,
+    "text": "\n        Return the footer string for the specified records.\n        "
+  },
+  {
+    "offset": "0xe0291b5e",
+    "length": 64,
+    "text": "\n        Remove the specified filter from this handler.\n        "
+  },
+  {
+    "offset": "0xe0291f5e",
+    "length": 74,
+    "text": "\n        Initialize the logger with a name and an optional level.\n        "
+  },
+  {
+    "offset": "0xe030230e",
+    "length": 59,
+    "text": "\n    Returns True if a _sunder_ name, False otherwise.\n    "
+  },
+  {
+    "offset": "0xe032555e",
+    "length": 69,
+    "text": "functools.py - Tools for working with functions and callable objects\n"
+  },
+  {
+    "offset": "0xe076ea6e",
+    "length": 80,
+    "text": "\n>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n"
+  },
+  {
+    "offset": "0xe076eafe",
+    "length": 80,
+    "text": "\n<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<\n"
+  },
+  {
+    "offset": "0xe079076e",
+    "length": 48,
+    "text": "\n        Read contents of self as bytes\n        "
+  },
+  {
+    "offset": "0xe07c915e",
+    "length": 69,
+    "text": "Optional type.\n\n    Optional[X] is equivalent to Union[X, None].\n    "
+  },
+  {
+    "offset": "0xe09aa92e",
+    "length": 60,
+    "text": "Return True if the octet should be escaped with body quopri."
+  },
+  {
+    "offset": "0xe0a2e03c",
+    "length": 66,
+    "text": "Return local time as an aware datetime object.\n\n    If called with"
+  },
+  {
+    "offset": "0xe0b9f1de",
+    "length": 64,
+    "text": "\nThe hierarchical path, such as the path to a file to download.\n"
+  },
+  {
+    "offset": "0xe0badfde",
+    "length": 47,
+    "text": "HTTPPasswordMgr.add_password.<locals>.<genexpr>"
+  },
+  {
+    "offset": "0xe0bf337e",
+    "length": 54,
+    "text": "Content-type: %s\nContent-length: %d\nLast-modified: %s\n"
+  },
+  {
+    "offset": "0xe0c0065e",
+    "length": 75,
+    "text": "Encode the bytes-like object s using Base16 and return a bytes object.\n    "
+  },
+  {
+    "offset": "0xe0c00ede",
+    "length": 70,
+    "text": "Test whether a file-like object is a text or a binary stream.\n        "
+  },
+  {
+    "offset": "0xe0c05d1e",
+    "length": 60,
+    "text": "Call data.encode(\"latin-1\") but show a better error message."
+  },
+  {
+    "offset": "0xe0c417de",
+    "length": 69,
+    "text": "An invalid content transfer encoding was set on the multipart itself."
+  },
+  {
+    "offset": "0xe0c9d95e",
+    "length": 65,
+    "text": "\n        Returns a single week in a string (no newline).\n        "
+  },
+  {
+    "offset": "0xe0ca768e",
+    "length": 48,
+    "text": "\n        Return a formatted month name.\n        "
+  },
+  {
+    "offset": "0xe0ca7a7e",
+    "length": 63,
+    "text": "\n        Return a formatted year as a table of tables.\n        "
+  },
+  {
+    "offset": "0xe0ca7bce",
+    "length": 52,
+    "text": "<link rel=\"stylesheet\" type=\"text/css\" href=\"%s\" />\n"
+  },
+  {
+    "offset": "0xe0cb4d9e",
+    "length": 45,
+    "text": "\n        Return a header for a week.\n        "
+  },
+  {
+    "offset": "0xe0cb4e5e",
+    "length": 43,
+    "text": "\n        Print a month's calendar.\n        "
+  },
+  {
+    "offset": "0xe0cf7a5e",
+    "length": 64,
+    "text": "Content types (record layer)\n\n    See RFC 8446, section B.1\n    "
+  },
+  {
+    "offset": "0xe0cf7c5e",
+    "length": 68,
+    "text": "SSLContext purpose flags with X509v3 Extended Key Usage objects\n    "
+  },
+  {
+    "offset": "0xe0cf7e5e",
+    "length": 79,
+    "text": "Read up to LEN bytes and return them.\n        Return zero-length string on EOF."
+  },
+  {
+    "offset": "0xe0d1bcae",
+    "length": 60,
+    "text": "Unknown charset {} in encoded word; decoded as unknown bytes"
+  },
+  {
+    "offset": "0xe10a8e56",
+    "length": 51,
+    "text": "libibverbs: Fatal: couldn't allocate device for %s\n"
+  },
+  {
+    "offset": "0xe14394c1",
+    "length": 61,
+    "text": ";\nKeywords=Login;Name;Fingerprint;Avatar;Logo;Face;Password;\n"
+  },
+  {
+    "offset": "0xe14ef58e",
+    "length": 61,
+    "text": "WARNING: Unhandled message: interface=%s, path=%s, member=%s\n"
+  },
+  {
+    "offset": "0xe14eff3e",
+    "length": 40,
+    "text": "Error parsing service resolving message\n"
+  },
+  {
+    "offset": "0xe1b4fe6e",
+    "length": 62,
+    "text": "%s: Unexpected end of packet: continuation state data missing\n"
+  },
+  {
+    "offset": "0xe2100ab7",
+    "length": 60,
+    "text": "Urrrrrrrrdrttdtrrrtttddttbdttdttddddddddddttrdrrrrrrddtttttt"
+  },
+  {
+    "offset": "0xe22a452e",
+    "length": 60,
+    "text": "../../../../usr/libexec/gnome-control-center-search-provider"
+  },
+  {
+    "offset": "0xe26fad2e",
+    "length": 60,
+    "text": "../../../../usr/lib64/gnome-remote-desktop/libvncserver.so.1"
+  },
+  {
+    "offset": "0xe28da65e",
+    "length": 48,
+    "text": "%n %s %b %f %u %g %D %i %h %t %T %X %Y %Z %W %o\n"
+  },
+  {
+    "offset": "0xe2a4fc3e",
+    "length": 48,
+    "text": "  <use xlink:href=\"#glyph%d-%d\" x=\"%f\" y=\"%f\"/>\n"
+  },
+  {
+    "offset": "0xe2e4172e",
+    "length": 60,
+    "text": "/usr/share/help/C/baobab/media/hicolor_apps_48x48_baobab.png"
+  },
+  {
+    "offset": "0xe2e44d2e",
+    "length": 60,
+    "text": "../../../../usr/lib64/fwupd-plugins-3/libfu_plugin_logind.so"
+  },
+  {
+    "offset": "0xe3cea07e",
+    "length": 64,
+    "text": "      let btnLabel;\n        let btnLabelCancel;\n        let canC"
+  },
+  {
+    "offset": "0xe3efc7b1",
+    "length": 49,
+    "text": " Display an error dialog when installation fails\n"
+  },
+  {
+    "offset": "0xe3f71f43",
+    "length": 77,
+    "text": "positing \\\n  --disable-software-rasterizer=false \\\n  >/dev/null 2>&1 &\ndisown"
+  },
+  {
+    "offset": "0xe57b15b6",
+    "length": 45,
+    "text": "MachinePostDominatorTree verification failed\n"
+  },
+  {
+    "offset": "0xe6a495b0",
+    "length": 70,
+    "text": "5ac8e11786248231fbf\nUSER_UNIT=app-gnome-org.gnome.Terminal-3657.scope\n"
+  },
+  {
+    "offset": "0xe706461e",
+    "length": 45,
+    "text": "e_source_authentication_set_remember_password"
+  },
+  {
+    "offset": "0xe706465e",
+    "length": 45,
+    "text": "e_source_authentication_get_remember_password"
+  },
+  {
+    "offset": "0xe70675de",
+    "length": 40,
+    "text": "e_source_mail_account_set_archive_folder"
+  },
+  {
+    "offset": "0xe706761e",
+    "length": 40,
+    "text": "e_source_mail_account_dup_archive_folder"
+  },
+  {
+    "offset": "0xe706765e",
+    "length": 40,
+    "text": "e_source_mail_account_get_archive_folder"
+  },
+  {
+    "offset": "0xe726322e",
+    "length": 60,
+    "text": "/Encoding 256 array\n0 1 255 {1 index exch /.notdef put} for\n"
+  },
+  {
+    "offset": "0xe72634be",
+    "length": 65,
+    "text": "0000000000000000000000000000000000000000000000000000000000000000\n"
+  },
+  {
+    "offset": "0xe735fac7",
+    "length": 69,
+    "text": ";\nKeywords=Network;Wireless;Wi-Fi;Wifi;IP;LAN;Broadband;DNS;Hotspot;\n"
+  },
+  {
+    "offset": "0xe736c3ea",
+    "length": 41,
+    "text": ";\nKeywords=share;sharing;bluetooth;obex;\n"
+  },
+  {
+    "offset": "0xe914158d",
+    "length": 69,
+    "text": "58e842da4a758f6c1cdc7b36dcc5\nUSER_UNIT=gnome-terminal-server.service\n"
+  },
+  {
+    "offset": "0xea30671e",
+    "length": 41,
+    "text": " not modify it.\n# This file allows proce1"
+  },
+  {
+    "offset": "0xea30677e",
+    "length": 41,
+    "text": "the below address.\n# If the IBUS_ADDRESS1"
+  },
+  {
+    "offset": "0xea3067de",
+    "length": 41,
+    "text": "han this file.\nIBUS_ADDRESS=unix:abstrac1"
+  },
+  {
+    "offset": "0xea91c07e",
+    "length": 67,
+    "text": "# match all devices with this udev subsystem\n[BLOCK]\nPlugin = emmc\n"
+  },
+  {
+    "offset": "0xea94a07e",
+    "length": 40,
+    "text": "[USB\\VID_17EF&PID_7226]\nPlugin = ep963x\n"
+  },
+  {
+    "offset": "0xea94e07e",
+    "length": 76,
+    "text": "# All fastboot devices\n[USB\\CLASS_FF&SUBCLASS_42&PROT_03]\nPlugin = fastboot\n"
+  },
+  {
+    "offset": "0xeaaa607e",
+    "length": 68,
+    "text": "# match all devices with this udev subsystem\n[IOMMU]\nPlugin = iommu\n"
+  },
+  {
+    "offset": "0xeb0cc0fe",
+    "length": 42,
+    "text": "gkm_secret_fields_add_compat_hashed_string"
+  },
+  {
+    "offset": "0xeb0cc13e",
+    "length": 42,
+    "text": "gkm_secret_fields_add_compat_hashed_uint32"
+  },
+  {
+    "offset": "0xeb0cc17e",
+    "length": 42,
+    "text": "gkm_secret_fields_get_compat_hashed_uint32"
+  },
+  {
+    "offset": "0xeb0eeabe",
+    "length": 42,
+    "text": "gkd_secret_service_emit_collection_changed"
+  },
+  {
+    "offset": "0xeb0eeafe",
+    "length": 42,
+    "text": "gkd_secret_service_emit_collection_created"
+  },
+  {
+    "offset": "0xeb0eeb7e",
+    "length": 42,
+    "text": "gkd_secret_objects_append_collection_paths"
+  },
+  {
+    "offset": "0xeb12935e",
+    "length": 41,
+    "text": "secret_objects_lookup_gck_object_for_path"
+  },
+  {
+    "offset": "0xeb12d21e",
+    "length": 41,
+    "text": "gkd_secret_exchange_generate_exchange_key"
+  },
+  {
+    "offset": "0xeb870036",
+    "length": 72,
+    "text": "0.0505232,321.11765,18.020497)\"\n       id=\"use17740\"\n       xlink:href=\""
+  },
+  {
+    "offset": "0xebcc403e",
+    "length": 64,
+    "text": "arse\nPRIORITY=30\nLEVEL_PREFIX=1\nFORWARD_TO_SYSLOG=0\nFORWARD_TO_K"
+  },
+  {
+    "offset": "0xebd4a0fe",
+    "length": 43,
+    "text": "g_proxy_mount_operation_handle_ask_password"
+  },
+  {
+    "offset": "0xec3376ae",
+    "length": 54,
+    "text": "org.gnome.SettingsDaemon.MediaKeys.desktop\n\n6\n0\n0\n0\n0\n"
+  },
+  {
+    "offset": "0xec55707e",
+    "length": 68,
+    "text": "[core]\nrepo_version=1\nmode=bare-user-only\nmin-free-space-size=500MB\n"
+  },
+  {
+    "offset": "0xec55807e",
+    "length": 69,
+    "text": "I:883396558\nE:ID_INPUT=1\nE:ID_INPUT_MOUSE=1\nE:ID_SERIAL=noserial\nV:1\n"
+  },
+  {
+    "offset": "0xecf3d81e",
+    "length": 52,
+    "text": "usage_usec 109533\nuser_usec 90400\nsystem_usec 19132\n"
+  },
+  {
+    "offset": "0xed06d73e",
+    "length": 46,
+    "text": "s that are essential for the running system.\n\n"
+  },
+  {
+    "offset": "0xed53441e",
+    "length": 72,
+    "text": "X-Frame-Options: DENY\r\nContent-Security-Policy: frame-ancestors 'none'\r\n"
+  },
+  {
+    "offset": "0xee3a2e1e",
+    "length": 44,
+    "text": ",,,,\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\n\n\n\n"
+  },
+  {
+    "offset": "0xee8af37e",
+    "length": 48,
+    "text": "gcr_secret_exchange_default_derive_transport_key"
+  },
+  {
+    "offset": "0xeea8e30e",
+    "length": 59,
+    "text": "confirmation prompt requested, but password prompt expected"
+  },
+  {
+    "offset": "0xeea8e4be",
+    "length": 40,
+    "text": "gcr_mock_prompter_expect_password_cancel"
+  },
+  {
+    "offset": "0xeef3fe1e",
+    "length": 79,
+    "text": "DISCONNECT\n\nDisconnect the card if the backend supports a disconnect operation."
+  },
+  {
+    "offset": "0xef3eb4ae",
+    "length": 60,
+    "text": "type=BPF msg=audit(1788884814.318:141): prog-id=46 op=UNLOAD"
+  },
+  {
+    "offset": "0xef76354e",
+    "length": 54,
+    "text": "Programmers compatible with SI-Prog, serbang or AJAWe\n"
+  },
+  {
+    "offset": "0xef9a737e",
+    "length": 75,
+    "text": " Profile that is saved to disk and restored on next startup.\n              "
+  },
+  {
+    "offset": "0xef9a804e",
+    "length": 48,
+    "text": "ileWithFd() for the allowed values.\n            "
+  },
+  {
+    "offset": "0xefda7f14",
+    "length": 46,
+    "text": " Wrap long descriptions in the update dialog\n\n"
+  },
+  {
+    "offset": "0xf05975fe",
+    "length": 56,
+    "text": "Exec=/usr/libexec/at-spi2-registryd --use-gnome-session\n"
+  },
+  {
+    "offset": "0xf09f743e",
+    "length": 69,
+    "text": "d:app_idCKA_CLASS = CKO_SECRET_KEY }, { CKA_KEY_TYPE = 0xC74E4DA9 } ]"
+  },
+  {
+    "offset": "0xf142930e",
+    "length": 49,
+    "text": "load default settings for builtin helper\n        "
+  },
+  {
+    "offset": "0xf146abce",
+    "length": 49,
+    "text": "load default settings for builtin policy\n        "
+  },
+  {
+    "offset": "0xf146ae6e",
+    "length": 48,
+    "text": "load default settings for builtin ipset\n        "
+  },
+  {
+    "offset": "0xf149f67e",
+    "length": 47,
+    "text": "add ipset with given name and settings\n        "
+  },
+  {
+    "offset": "0xf149fcde",
+    "length": 44,
+    "text": "object path of zone with given name\n        "
+  },
+  {
+    "offset": "0xf149febe",
+    "length": 46,
+    "text": "add zone with given name and settings\n        "
+  },
+  {
+    "offset": "0xf14a35ae",
+    "length": 48,
+    "text": "add policy with given name and settings\n        "
+  },
+  {
+    "offset": "0xf14a376e",
+    "length": 48,
+    "text": "add helper with given name and settings\n        "
+  },
+  {
+    "offset": "0xf14a3f4e",
+    "length": 51,
+    "text": "load default settings for builtin icmptype\n        "
+  },
+  {
+    "offset": "0xf14a713e",
+    "length": 46,
+    "text": "object path of policy with given name\n        "
+  },
+  {
+    "offset": "0xf14a731e",
+    "length": 46,
+    "text": "object path of helper with given name\n        "
+  },
+  {
+    "offset": "0xf14b245e",
+    "length": 50,
+    "text": "load default settings for builtin service\n        "
+  },
+  {
+    "offset": "0xf1557d1e",
+    "length": 60,
+    "text": "Returns true iff the identified attribute is a DTD-style ID."
+  },
+  {
+    "offset": "0xf2d76516",
+    "length": 49,
+    "text": "type=\"L\"\n\t\tinverted_name=\"Oromo, Eastern\"\n\t\trefe1"
+  },
+  {
+    "offset": "0xf2d93556",
+    "length": 49,
+    "text": "y\n\t\tid=\"ksb\"\n\t\tstatus=\"Active\"\n\t\tscope=\"I\"\n\t\ttypQ"
+  },
+  {
+    "offset": "0xf2da51de",
+    "length": 73,
+    "text": "Maring\" />\n\t<iso_639_3_entry\n\t\tid=\"mbx\"\n\t\tstatus=\"Active\"\n\t\tscope=\"I\"\n\t\ta"
+  },
+  {
+    "offset": "0xf2e14de6",
+    "length": 49,
+    "text": "A\"\n\t\treference_name=\"Vestinian\"\n\t\tname=\"VestiniaQ"
+  },
+  {
+    "offset": "0xf3a129de",
+    "length": 40,
+    "text": "camel_folder_transfer_messages_to_finish"
+  },
+  {
+    "offset": "0xf3a1962e",
+    "length": 60,
+    "text": "0123456789ABCDEFcamel_mime_part_construct_from_parser_finish"
+  },
+  {
+    "offset": "0xf3d1e87e",
+    "length": 64,
+    "text": "Name[tr]=CardDAV\nDisplayName[uk]=CardDAV\nDisplayName[zh_CN]=Card"
+  },
+  {
+    "offset": "0xf4f99055",
+    "length": 41,
+    "text": "\nEnabled=true\nParent=local-stub\n\n[Calenda"
+  },
+  {
+    "offset": "0xf5d73b2e",
+    "length": 60,
+    "text": "../../../../usr/lib64/samba/libcmdline-credentials-samba4.so"
+  },
+  {
+    "offset": "0xf62348be",
+    "length": 40,
+    "text": "ures_swapResource(root res=%08x) failed\n"
+  },
+  {
+    "offset": "0xf86b5825",
+    "length": 49,
+    "text": "p2 (Linux 5.14.0-22.el9.x86_64; x86_64) IPP/2.0\r\n"
+  },
+  {
+    "offset": "0xf96d276e",
+    "length": 62,
+    "text": "org.gnome.SettingsDaemon.DiskUtilityNotify.desktop\n\n6\n0\n0\n0\n0\n"
+  },
+  {
+    "offset": "0xf99de02e",
+    "length": 80,
+    "text": "cycoreutils package contains the interfaces that can be used\nby python 3 in an S"
+  },
+  {
+    "offset": "0xfa7c6c7d",
+    "length": 51,
+    "text": "this 0 will use the system-default, usually 64 MiB\n"
+  },
+  {
+    "offset": "0xfa95259e",
+    "length": 56,
+    "text": "http://tracker.api.gnome.org/ontology/v3/nfo#ArchiveItem"
+  },
+  {
+    "offset": "0xfb9443c6",
+    "length": 60,
+    "text": "Can escape the sandbox and circumvent any other restrictions"
+  },
+  {
+    "offset": "0xfbda6ace",
+    "length": 73,
+    "text": "\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t nh fontsric nameamiliess less than 8ppem"
+  },
+  {
+    "offset": "0xfbda6e5e",
+    "length": 61,
+    "text": "\n\t\t\t\t\t\n\t\t\t\t       \n        \n        \n        \n        \n      "
+  },
+  {
+    "offset": "0xfbf3aa29",
+    "length": 46,
+    "text": "l\nDisplayName[ga]=Pearsanta\nDisplayName[gl]=PU"
+  },
+  {
+    "offset": "0xfc6b87be",
+    "length": 68,
+    "text": "failed to transfer section, trying another write, ignoring error: %s"
+  },
+  {
+    "offset": "0xfcb0907e",
+    "length": 44,
+    "text": "ght</const></edit>\n  </match>\n</fontconfig>\n"
+  },
+  {
+    "offset": "0xfd25b03c",
+    "length": 66,
+    "text": "mes\nDisplayName[nb]=WebDAV notater\nDisplayName[nl]=WebDAV-notities"
+  },
+  {
+    "offset": "0xfd33f271",
+    "length": 70,
+    "text": " des processus</message>\n    <message xml:lang=\"fi\">Prosessien priori1"
+  },
+  {
+    "offset": "0xfd585dfe",
+    "length": 60,
+    "text": ".0/3.0.0/x86_64-redhat-linux-gnu/modules/libpk-gtk-module.la"
+  },
+  {
+    "offset": "0xfe09d94e",
+    "length": 52,
+    "text": "after verify_password: tmpret(%d)  security_key(%d)\n"
+  },
+  {
+    "offset": "0x1002e3042",
+    "length": 60,
+    "text": "0302047c435bb50067306502310098006c63cb62fab2a700b12a5c0e95b8"
+  },
+  {
+    "offset": "0x1006be07e",
+    "length": 61,
+    "text": "user-db:user\nsystem-db:local\nsystem-db:site\nsystem-db:distro\n"
+  },
+  {
+    "offset": "0x100a59d25",
+    "length": 52,
+    "text": ";\nKeywords=Notifications;Banner;Message;Tray;Popup;\n"
+  },
+  {
+    "offset": "0x100a65763",
+    "length": 51,
+    "text": ";\nKeywords=Search;Find;Index;Hide;Privacy;Results;\n"
+  },
+  {
+    "offset": "0x100a68050",
+    "length": 46,
+    "text": "\nName[pl]=Nowe okno prywatne\nName[pt-BR]=Nova "
+  },
+  {
+    "offset": "0x100ab735b",
+    "length": 70,
+    "text": ";\nKeywords=Trackpad;Pointer;Click;Tap;Double;Button;Trackball;Scroll;\n"
+  },
+  {
+    "offset": "0x100ac12fd",
+    "length": 71,
+    "text": ";\nKeywords=Network;IP;LAN;Proxy;WAN;Broadband;Modem;Bluetooth;vpn;DNS;\n"
+  },
+  {
+    "offset": "0x100acb2de",
+    "length": 45,
+    "text": ";\nKeywords=Tablet;Wacom;Stylus;Eraser;Mouse;\n"
+  },
+  {
+    "offset": "0x100ae4261",
+    "length": 71,
+    "text": ";\nKeywords=characters;unicode;punctuation;math;letters;emoji;emoticon;\n"
+  },
+  {
+    "offset": "0x100aeacf3",
+    "length": 71,
+    "text": "\nName=Take a Screenshot of the Current Window\nExec=gnome-screenshot -w\n"
+  },
+  {
+    "offset": "0x100afe02d",
+    "length": 43,
+    "text": ";\nKeywords=Language;Layout;Keyboard;Input;\n"
+  },
+  {
+    "offset": "0x100b04db6",
+    "length": 48,
+    "text": ";\nKeywords=default;application;preferred;media;\n"
+  },
+  {
+    "offset": "0x101c3092e",
+    "length": 42,
+    "text": "../../../../usr/libexec/sudo/audit_json.so"
+  },
+  {
+    "offset": "0x10248507d",
+    "length": 70,
+    "text": "cI:883391003\nE:ID_INPUT=1\nE:ID_INPUT_MOUSE=1\nE:ID_SERIAL=noserial\nV:1\n"
+  },
+  {
+    "offset": "0x1025cdf5e",
+    "length": 48,
+    "text": "_goa_password_based_skeleton_handle_set_property"
+  },
+  {
+    "offset": "0x1025cdf9e",
+    "length": 48,
+    "text": "_goa_password_based_skeleton_handle_get_property"
+  },
+  {
+    "offset": "0x1025cdfde",
+    "length": 47,
+    "text": "_goa_password_based_skeleton_handle_method_call"
+  },
+  {
+    "offset": "0x1026aad1e",
+    "length": 45,
+    "text": "\nName=New Document\nExec=gedit --new-document\n"
+  },
+  {
+    "offset": "0x1026b6d2d",
+    "length": 52,
+    "text": "\nName=Preferences\nExec=gnome-terminal --preferences\n"
+  },
+  {
+    "offset": "0x1026c8560",
+    "length": 68,
+    "text": ";\nKeywords=Monitor;System;Process;CPU;Memory;Network;History;Usage;\n"
+  },
+  {
+    "offset": "0x102bd407e",
+    "length": 64,
+    "text": "# match all devices with this udev subsystem\n[MSR]\nPlugin = msr\n"
+  },
+  {
+    "offset": "0x102be307e",
+    "length": 70,
+    "text": "# match all devices with this udev subsystem\n[PCI]\nPlugin = optionrom\n"
+  },
+  {
+    "offset": "0x102bef34e",
+    "length": 71,
+    "text": "{ CKA_CLASS = CKO_SECRET_KEY }, { CKA_0xC74E4E1B =  (7) NOT-PRINTED } ]"
+  },
+  {
+    "offset": "0x102c8707d",
+    "length": 74,
+    "text": "$# SoloKey1\n[USB\\VID_0483&PID_A2CA]\nPlugin = solokey\nInstallDuration = 20\n"
+  },
+  {
+    "offset": "0x102d79396",
+    "length": 44,
+    "text": "#4: \tNc %4.4d    bc %d    Mc %d    xmaxc %d\n"
+  },
+  {
+    "offset": "0x102e36da7",
+    "length": 64,
+    "text": "\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\n\t\t\n\t\t\n\n\n\n\t\t\t\t\t\t\t\n\t\n\n\n\n\t\t\t\n\t\t\n\n\t\n\n\n\n\t\t\t\n\t\t\t\n\n\n\n\n\n"
+  },
+  {
+    "offset": "0x102f3207e",
+    "length": 73,
+    "text": "# System76 Thelio IO\n[USB\\VID_1209&PID_1776&REV_0001]\nPlugin = thelio_io\n"
+  },
+  {
+    "offset": "0x102f3407e",
+    "length": 80,
+    "text": "# match all devices with this udev subsystem\n[THUNDERBOLT]\nPlugin = thunderbolt\n"
+  },
+  {
+    "offset": "0x102f483dd",
+    "length": 78,
+    "text": " Toshiba) X30, X40\n[28108d08-5027-42c2-a5b8-92d6ede9b97b]\nVersionFormat = bcd\n"
+  },
+  {
+    "offset": "0x1034d55ce",
+    "length": 66,
+    "text": "systemd\nuser@1000.service\n30\n1\n0\n0\n0\n-dir@1000.service\n30\n1\n0\n0\n0\n"
+  },
+  {
+    "offset": "0x103cc907e",
+    "length": 61,
+    "text": "%pkgconfig_personalitydir /usr/share/pkgconfig/personality.d\n"
+  },
+  {
+    "offset": "0x1043be8be",
+    "length": 54,
+    "text": "org.gnome.SettingsDaemon.Smartcard.desktop\n\n6\n0\n0\n0\n0\n"
+  },
+  {
+    "offset": "0x10469249e",
+    "length": 50,
+    "text": "org.gnome.SettingsDaemon.Sound.desktop\n\n6\n0\n0\n0\n0\n"
+  },
+  {
+    "offset": "0x104b76ed6",
+    "length": 50,
+    "text": "\n\nMaximum number of concurrent open sessions: %d\n\n"
+  },
+  {
+    "offset": "0x10534dab4",
+    "length": 56,
+    "text": " Hide the kudo details panel for non desktop components\n"
+  },
+  {
+    "offset": "0x105e9505e",
+    "length": 47,
+    "text": "/etc/fonts/conf.d/25-no-bitmap-fMESSAGE=Ready\n\n"
+  },
+  {
+    "offset": "0x1060cf07e",
+    "length": 69,
+    "text": "I:883405118\nE:ID_INPUT=1\nE:ID_INPUT_MOUSE=1\nE:ID_SERIAL=noserial\nV:1\n"
+  },
+  {
+    "offset": "0x10743cb96",
+    "length": 49,
+    "text": "(XIM-IMdkit) WARNING: dereference pointer %s:%d.\n"
+  },
+  {
+    "offset": "0x10751d0ae",
+    "length": 60,
+    "text": "type=BPF msg=audit(1788884731.171:128): prog-id=44 op=UNLOAD"
+  },
+  {
+    "offset": "0x10751d17e",
+    "length": 60,
+    "text": "type=BPF msg=audit(1788885160.550:154): prog-id=51 op=UNLOAD"
+  },
+  {
+    "offset": "0x107e7eebe",
+    "length": 40,
+    "text": "  },\n  \"accuracy\": 1597.9974774183545\n}\n"
+  },
+  {
+    "offset": "0x108a29dae",
+    "length": 61,
+    "text": "Note: Use \"%s %s\" for a full featured key generation dialog.\n"
+  },
+  {
+    "offset": "0x109ffe727",
+    "length": 55,
+    "text": "ASCII text (Zip archive data, at least v2.0 to extract)"
+  },
+  {
+    "offset": "0x10a5c5042",
+    "length": 60,
+    "text": "d92d00fdfed5c6fc84ac930c08fa8adf7002840dbd21590caf5a3e4a932d"
+  },
+  {
+    "offset": "0x10a81dfe2",
+    "length": 60,
+    "text": "ger.Presencexorg-x11-server-Xwayland-24.1.9-7.el9.x86_64.rpm"
+  },
+  {
+    "offset": "0x10c4bf09e",
+    "length": 48,
+    "text": "eyword>\n    <keyword>Klavaro</keyword>\n    <keyw"
+  },
+  {
+    "offset": "0x10c5cb037",
+    "length": 80,
+    "text": "ma</keyword>\n    <keyword>Process</keyword>\n    <keyword>CPU</keyword>\n    <keyQ"
+  },
+  {
+    "offset": "0x10c7650b6",
+    "length": 56,
+    "text": "</name>\n  <name xml:lang=\"nl\">Terminalvenster</name>\n  <"
+  },
+  {
+    "offset": "0x10c86e55e",
+    "length": 40,
+    "text": "e_goa_password_based_ref_goa_client_sync"
+  },
+  {
+    "offset": "0x10cb4329e",
+    "length": 42,
+    "text": "_gcr_pkcs11_import_dialog_run_ask_password"
+  },
+  {
+    "offset": "0x10ccc5053",
+    "length": 43,
+    "text": "o\nDisplayName[fur]=Condizions meteo\nDisplay"
+  },
+  {
+    "offset": "0x10cd44055",
+    "length": 41,
+    "text": "\nDisplayName[ms]=Pada Sesawang\nDisplayNam"
+  },
+  {
+    "offset": "0x10e4408fe",
+    "length": 42,
+    "text": "evolution-addressbook-factory\n\n30\n1\n0\n0\n0\n"
+  },
+  {
+    "offset": "0x10e5893ce",
+    "length": 64,
+    "text": "acb6e3001abc2684cf336baf4\r\nDTSTAMP:20260908T162503Z\r\nEND:VTODO\r\n"
+  },
+  {
+    "offset": "0x10e641ade",
+    "length": 42,
+    "text": "-REVISION:2021-12-05T05:36:16.744468Z(1)\r\n"
+  },
+  {
+    "offset": "0x10e6597bc",
+    "length": 60,
+    "text": "Umasa{ss}sa{sv})a(ssssssbbssa{ss}sa{sv})a(ssssssbsassa{sv}))"
+  },
+  {
+    "offset": "0x10ebb4e9e",
+    "length": 60,
+    "text": "/usr/share/locale/en_US/LC_MESSAGES/evolution-data-server.mo"
+  },
+  {
+    "offset": "0x10eefe01e",
+    "length": 60,
+    "text": "Whether can use UTF-8 extension, when the server supports it"
+  },
+  {
+    "offset": "0x10f617ebe",
+    "length": 77,
+    "text": "SpiRegistry daemon is running with well-known name - org.a11y.atspi.Registry\n"
+  },
+  {
+    "offset": "0x1104e6042",
+    "length": 60,
+    "text": "type='signal',sender='org.gnome.SessionManager',interface='o"
+  },
+  {
+    "offset": "0x1105c3c5e",
+    "length": 44,
+    "text": "e_credentials_prompter_impl_password_dispose"
+  },
+  {
+    "offset": "0x1105c3d1e",
+    "length": 48,
+    "text": "e_credentials_prompter_impl_password_show_dialog"
+  },
+  {
+    "offset": "0x1107ffc1e",
+    "length": 52,
+    "text": "org.gnome.Evolution-alarm-notify.desktop\n\n6\n0\n0\n0\n0\n"
+  },
+  {
+    "offset": "0x110ee8042",
+    "length": 60,
+    "text": "type='signal',interface='ca.desrt.dconf.Writer',path='/ca/de"
+  },
+  {
+    "offset": "0x11182f3d6",
+    "length": 61,
+    "text": "of 35 base fonts that can be used with any PostScript file.\n\n"
+  },
+  {
+    "offset": "0x113a2e44a",
+    "length": 62,
+    "text": ";                        KSC5601.1987-1:GL; KSC5601.1987-1:GR\n"
+  },
+  {
+    "offset": "0x114790c0c",
+    "length": 46,
+    "text": "-row>\n    </dropdown-box-body>\n</dropdown-box>"
+  },
+  {
+    "offset": "0x115b9e042",
+    "length": 60,
+    "text": "KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK"
+  },
+  {
+    "offset": "0x115e6132e",
+    "length": 63,
+    "text": "\n  \n t bitmap fontsault for LCD filterrtical RGB stripes layout"
+  },
+  {
+    "offset": "0x11911d1ae",
+    "length": 48,
+    "text": "PasswordSignInPromoShownCountForLimitsExperiment"
+  },
+  {
+    "offset": "0x119ae80d4",
+    "length": 60,
+    "text": "ASCII text, with very long lines, with CRLF line terminators"
+  },
+  {
+    "offset": "0x11c15ebae",
+    "length": 43,
+    "text": "password_manager.password_manager_blocklist"
+  },
+  {
+    "offset": "0x11c1d519e",
+    "length": 48,
+    "text": "passwordsPrivate.onPasswordExceptionsListChanged"
+  },
+  {
+    "offset": "0x121587326",
+    "length": 49,
+    "text": "5:41\nregisterClass@resource:///org/gnome/gjs/modQ"
+  },
+  {
+    "offset": "0x1215a4556",
+    "length": 49,
+    "text": "8:22\n@resource:///org/gnome/shell/ui/appDisplay.Q"
+  },
+  {
+    "offset": "0x1242598be",
+    "length": 60,
+    "text": "Use of Web Bluetooth API is blocked in a <fencedframe> tree."
+  },
+  {
+    "offset": "0x1281afb12",
+    "length": 63,
+    "text": "/usr/share/help/C/zenity/figures/zenity-password-screenshot.png"
+  },
+  {
+    "offset": "0x128785f29",
+    "length": 65,
+    "text": "\neb641380e9a934f5aa987f809714904a7c1d4468d9a757c90800854ee310661e"
+  },
+  {
+    "offset": "0x12878a203",
+    "length": 60,
+    "text": "../../../../usr/lib64/gstreamer-1.0/libgstcolormanagement.so"
+  },
+  {
+    "offset": "0x12afa35de",
+    "length": 64,
+    "text": "PasswordProtection.RequestOutcome.NonGaiaEnterprisePasswordEntry"
+  },
+  {
+    "offset": "0x12afa366e",
+    "length": 64,
+    "text": "PasswordProtection.PageInfoAction.NonGaiaEnterprisePasswordEntry"
+  },
+  {
+    "offset": "0x12afa3bbe",
+    "length": 64,
+    "text": "PasswordProtection.InterstitialAction.GSuiteNonSyncPasswordEntry"
+  },
+  {
+    "offset": "0x12c20b75e",
+    "length": 48,
+    "text": "safebrowsing.password_protection_warning_trigger"
+  },
+  {
+    "offset": "0x12c21654e",
+    "length": 60,
+    "text": "https://support.google.com/chrome/a/?p=cast_to_class_teacher"
+  },
+  {
+    "offset": "0x12e66dcb7",
+    "length": 60,
+    "text": "kspace;window;resize;zoom;contrast;input;source;lock;volume;"
+  },
+  {
+    "offset": "0x1311e192e",
+    "length": 57,
+    "text": "unknown_Gjs_ui_messageTray_NotificationBanner\n        soQ"
+  },
+  {
+    "offset": "0x1312f0b2e",
+    "length": 51,
+    "text": "=\"o\" direction=\"out\"/></signal></interface></node>\n"
+  },
+  {
+    "offset": "0x1313b967e",
+    "length": 41,
+    "text": "ULTIPLIER * x * x -\n                DECEQ"
+  },
+  {
+    "offset": "0x1313eefce",
+    "length": 57,
+    "text": "/overrides/GObject.js:435:41\nregisterClass@resource:///oQ"
+  },
+  {
+    "offset": "0x1314e0f9e",
+    "length": 41,
+    "text": "e();\n    }\n\n    start(x, y, duration) {\nQ"
+  },
+  {
+    "offset": "0x13156789e",
+    "length": 41,
+    "text": "']': '[' }[closeBrace];\n\n    return findQ"
+  },
+  {
+    "offset": "0x131b40346",
+    "length": 49,
+    "text": "Active\"\n\t\tscope=\"I\"\n\t\ttype=\"L\"\n\t\treference_name=Q"
+  },
+  {
+    "offset": "0x131b44b26",
+    "length": 49,
+    "text": "rence_name=\"Birhor\"\n\t\tname=\"Birhor\" />\n\t<iso_639Q"
+  },
+  {
+    "offset": "0x141e7307e",
+    "length": 48,
+    "text": "proc:/sbin/nologin\nlibstoragemgmt:x:996:992:daem"
+  },
+  {
+    "offset": "0x14226dacf",
+    "length": 60,
+    "text": ";Hellenic Academic and Research Institutions ECC RootCA 2015"
+  },
+  {
+    "offset": "0x15a95f09e",
+    "length": 48,
+    "text": " <I632>               {\t[        NoSymbol ] };\n\t"
+  },
+  {
+    "offset": "0x15a95f89e",
+    "length": 64,
+    "text": "              {\t[        NoSymbol ] };\n\tkey <I696>              "
+  },
+  {
+    "offset": "0x17bbefcce",
+    "length": 52,
+    "text": "0:44(42): warning: `cogl_texel0' used uninitialized\n"
+  },
+  {
+    "offset": "0x19a39890e",
+    "length": 60,
+    "text": "/org/gtk/libgtk/theme/Adwaita/assets/text-select-start@2.png"
+  },
+  {
+    "offset": "0x19a3c770e",
+    "length": 60,
+    "text": "profile.default_content_setting_values.auto_dark_web_content"
+  },
+  {
+    "offset": "0x19a3c789e",
+    "length": 60,
+    "text": "profile.content_settings.partitioned_exceptions.pointer_lock"
+  },
+  {
+    "offset": "0x19a3cb74e",
+    "length": 58,
+    "text": "profile.default_content_setting_values.password_protection"
+  },
+  {
+    "offset": "0x19a3cc00e",
+    "length": 60,
+    "text": "profile.content_settings.exceptions.geolocation_with_options"
+  },
+  {
+    "offset": "0x19a3d7a4e",
+    "length": 60,
+    "text": "profile.content_settings.partitioned_exceptions.mixed_script"
+  },
+  {
+    "offset": "0x19a3d7e0e",
+    "length": 60,
+    "text": "profile.default_content_setting_values.private_network_guard"
+  },
+  {
+    "offset": "0x19aba14bd",
+    "length": 75,
+    "text": "\n--metrics-shmem-handle=4,i,1518371077215210529,10270900360044526446,262144"
+  },
+  {
+    "offset": "0x19ac700ff",
+    "length": 51,
+    "text": "0.0/_platform_specific/linux_x64/libwidevinecdm.so\n"
+  },
+  {
+    "offset": "0x19b4285ce",
+    "length": 60,
+    "text": "profile.content_settings.partitioned_exceptions.serial_guard"
+  },
+  {
+    "offset": "0x19b4288ee",
+    "length": 60,
+    "text": "profile.content_settings.partitioned_exceptions.client_hints"
+  },
+  {
+    "offset": "0x19b42ac9e",
+    "length": 60,
+    "text": "profile.content_settings.partitioned_exceptions.http_allowed"
+  },
+  {
+    "offset": "0x19b4b33ce",
+    "length": 60,
+    "text": "profile.content_settings.exceptions.cookie_controls_metadata"
+  },
+  {
+    "offset": "0x19b4b37de",
+    "length": 60,
+    "text": "profile.content_settings.exceptions.top_level_storage_access"
+  },
+  {
+    "offset": "0x19b4b3b9e",
+    "length": 60,
+    "text": "profile.content_settings.exceptions.captured_surface_control"
+  },
+  {
+    "offset": "0x19b4b5b8e",
+    "length": 60,
+    "text": "profile.content_settings.exceptions.initialized_translations"
+  },
+  {
+    "offset": "0x19b4ba39e",
+    "length": 60,
+    "text": "profile.managed_default_content_settings.web_bluetooth_guard"
+  },
+  {
+    "offset": "0x19b4ba48e",
+    "length": 60,
+    "text": "profile.managed_default_content_settings.legacy_cookie_scope"
+  },
+  {
+    "offset": "0x19b4ba75e",
+    "length": 59,
+    "text": "optimization_guide.password_change_submission_setting_state"
+  },
+  {
+    "offset": "0x19b4df10e",
+    "length": 57,
+    "text": "password_manager.account_store_migrated_to_os_crypt_async"
+  },
+  {
+    "offset": "0x19b4df15e",
+    "length": 57,
+    "text": "password_manager.profile_store_migrated_to_os_crypt_async"
+  },
+  {
+    "offset": "0x19b4df24e",
+    "length": 59,
+    "text": "password_manager.deleteting_undecryptable_passwords_enabled"
+  },
+  {
+    "offset": "0x19b4df29e",
+    "length": 57,
+    "text": "password_manager.relaunch_chrome_bubble_dismissed_counter"
+  },
+  {
+    "offset": "0x19b4df38e",
+    "length": 57,
+    "text": "password_manager.account_store_date_last_used_for_filling"
+  },
+  {
+    "offset": "0x19b4df3de",
+    "length": 57,
+    "text": "password_manager.profile_store_date_last_used_for_filling"
+  },
+  {
+    "offset": "0x19b4df8de",
+    "length": 56,
+    "text": "password_manager.last_negative_password_change_timestamp"
+  },
+  {
+    "offset": "0x19b64fe1e",
+    "length": 60,
+    "text": "optimization_guide.predictionmodelfetcher.last_fetch_attempt"
+  },
+  {
+    "offset": "0x19b65054e",
+    "length": 57,
+    "text": "signin.PasswordSignInPromoDismissCountForLimitsExperiment"
+  },
+  {
+    "offset": "0x19b65090e",
+    "length": 60,
+    "text": "optimization_guide.predictionmodelfetcher.last_fetch_success"
+  },
+  {
+    "offset": "0x19b7fcb8e",
+    "length": 60,
+    "text": "sync.data_type_status_for_sync_to_signin.wifi_configurations"
+  },
+  {
+    "offset": "0x19b7fcd1e",
+    "length": 60,
+    "text": "sync.data_type_status_for_sync_to_signin.webauthn_credential"
+  },
+  {
+    "offset": "0x19b7fce5e",
+    "length": 60,
+    "text": "sync.data_type_status_for_sync_to_signin.collaboration_group"
+  },
+  {
+    "offset": "0x19b7fe52e",
+    "length": 60,
+    "text": "cr_elements/cr_radio_button/cr_radio_button_style_lit.css.js"
+  },
+  {
+    "offset": "0x19b80b46e",
+    "length": 60,
+    "text": "cr_components/composebox/contextual_entrypoint_button.css.js"
+  },
+  {
+    "offset": "0x19b80f6ae",
+    "length": 60,
+    "text": "safebrowsing.javascript_optimizer_setting_migration_complete"
+  },
+  {
+    "offset": "0x19b80f92e",
+    "length": 60,
+    "text": "safebrowsing.aesb_sync_flow_observed_outcome_unset_timestamp"
+  },
+  {
+    "offset": "0x19c27a22e",
+    "length": 60,
+    "text": "/home/centos/.config/coccoc-browser/Default/Web Applications"
+  },
+  {
+    "offset": "0x19c4ff09e",
+    "length": 60,
+    "text": "/home/centos/.config/coccoc-browser/Default/trusted_vault.pb"
+  },
+  {
+    "offset": "0x19c97a28e",
+    "length": 60,
+    "text": "mojo/mojo/public/mojom/base/unguessable_token.mojom-webui.js"
+  },
+  {
+    "offset": "0x19ccdd3d7",
+    "length": 66,
+    "text": "\",\n        \"remote\": true\n      }\n    ]\n  },\n  \"version\": \"1.0\"\n}\n"
+  },
+  {
+    "offset": "0x19d01569e",
+    "length": 60,
+    "text": "chrome-extension://gcopfpdkmpdacdmbjonfjmbnccmnjdoi/gserp.js"
+  },
+  {
+    "offset": "0x19d17881e",
+    "length": 42,
+    "text": "PasswordsManagementBubbleDuringSignin_used"
+  },
+  {
+    "offset": "0x19d1d32ae",
+    "length": 60,
+    "text": "Symantec Class 1 Public Primary Certification Authority - G6"
+  },
+  {
+    "offset": "0x19d1d751e",
+    "length": 60,
+    "text": "Symantec Class 2 Public Primary Certification Authority - G6"
+  },
+  {
+    "offset": "0x19d1d774e",
+    "length": 60,
+    "text": "Verisign Class 2 Public Primary Certification Authority - G3"
+  },
+  {
+    "offset": "0x19d1d92de",
+    "length": 60,
+    "text": "Verisign Class 1 Public Primary Certification Authority - G3"
+  },
+  {
+    "offset": "0x19d1e869e",
+    "length": 60,
+    "text": "Triggered when a pinnable lens overlay side panel is opened."
+  },
+  {
+    "offset": "0x19d1e87de",
+    "length": 60,
+    "text": "Triggered after loyalty card autofill suggestions are shown."
+  },
+  {
+    "offset": "0x19d68cf1e",
+    "length": 60,
+    "text": "policy.restrict_background_fetch_from_service_worker_enabled"
+  },
+  {
+    "offset": "0x19e0cb54e",
+    "length": 60,
+    "text": "media_session.mojom.AudioFocusObserverMessageHeaderValidator"
+  },
+  {
+    "offset": "0x19f7cc52e",
+    "length": 60,
+    "text": "network.mojom.TrustTokenAccessObserverMessageHeaderValidator"
+  },
+  {
+    "offset": "0x19f7d26ee",
+    "length": 60,
+    "text": "blink.mojom.WorkerContentSettingsProxyMessageHeaderValidator"
+  },
+  {
+    "offset": "0x1a6b0245e",
+    "length": 60,
+    "text": "blink.mojom.ServiceWorkerContainerHostMessageHeaderValidator"
+  },
+  {
+    "offset": "0x1abb0d03c",
+    "length": 66,
+    "text": "<?xml version=\"1.0\"?>\n<svg xmlns=\"http://www.w3.org/2000/svg\" widt"
+  },
+  {
+    "offset": "0x1b1f4761e",
+    "length": 60,
+    "text": "enterprise_reporting.last_signals_upload_succeeded_timestamp"
+  },
+  {
+    "offset": "0x1b1f690ce",
+    "length": 60,
+    "text": "on_device_translation.translate_kit_packages.en_zh-Hant_path"
+  },
+  {
+    "offset": "0x1b3d2a03e",
+    "length": 64,
+    "text": "v>\n    <p>{{i18n_desc}}</p>\n\n    <div class=\"btn-block\">\n       "
+  },
+  {
+    "offset": "0x1b41c802e",
+    "length": 52,
+    "text": "Warning: LLVM emitted unknown config register: 0x%x\n"
+  },
+  {
+    "offset": "0x1b4db907e",
+    "length": 73,
+    "text": "{\n    \"external_crx\": \"cashback.crx\",\n    \"external_version\": \"2.0.15\"\n}\n"
+  },
+  {
+    "offset": "0x1b4dba07e",
+    "length": 70,
+    "text": "{\n    \"external_crx\": \"cache.crx\",\n    \"external_version\": \"2.0.31\"\n}\n"
+  },
+  {
+    "offset": "0x1b4ddf07d",
+    "length": 71,
+    "text": "{{\n    \"external_crx\": \"en2vi.crx\",\n    \"external_version\": \"3.3.22\"\n}\n"
+  },
+  {
+    "offset": "0x1b4dfe07e",
+    "length": 71,
+    "text": "{\n    \"external_crx\": \"savior.crx\",\n    \"external_version\": \"2.4.51\"\n}\n"
+  },
+  {
+    "offset": "0x1b657b9ae",
+    "length": 40,
+    "text": "std\r\nAccept-Language: en-US,en;q=0.9\r\n\r\n"
+  },
+  {
+    "offset": "0x1b6bf7a5e",
+    "length": 60,
+    "text": "Is used to notify that the table row description has changed"
+  },
+  {
+    "offset": "0x1b6ca2c0e",
+    "length": 60,
+    "text": "chrome-extension://jdfkmiabjpfjacifcmihfdjhpnjpiick/popup.js"
+  },
+  {
+    "offset": "0x1b6e1129e",
+    "length": 60,
+    "text": "PerformanceManager.UserTuning.BatterySaverModeEnabledPercent"
+  },
+  {
+    "offset": "0x1b7fb3006",
+    "length": 60,
+    "text": "://gfgbmghkdjckppeomloefmbphdfmokgd/service-worker-loader.js"
+  },
+  {
+    "offset": "0x1b8be707e",
+    "length": 61,
+    "text": "[timestamps]\n3bb4cd9c-965d-3a39-86fd-3765b5a65ba6=1788885937\n"
+  },
+  {
+    "offset": "0x1b8c12d1e",
+    "length": 72,
+    "text": "/home/centos/.config/coccoc-browser/Default/SCT Auditing Pending Reports"
+  },
+  {
+    "offset": "0x1b93bee72",
+    "length": 60,
+    "text": "UUU`VVV`VVV`VVV`VVV`VVV`VVV`VVV`VVV`VVV`VVV`VVV`VVV`VVV`999@"
+  },
+  {
+    "offset": "0x1b96fe60e",
+    "length": 60,
+    "text": "Enable Rewrite button when selecting text in text input area"
+  },
+  {
+    "offset": "0x1bc93541c",
+    "length": 58,
+    "text": ")z303030\r\nelatime,seclabel,nsdelegate,memory_recursiveprot"
+  },
+  {
+    "offset": "0x1be53307e",
+    "length": 75,
+    "text": "ext-cb7;application/x-ext-cbr;application/x-ext-cbt;application/x-ext-cbz;\n"
+  },
+  {
+    "offset": "0x1becaa18e",
+    "length": 60,
+    "text": "20213116~120385423~120469145~120469153~120474864&z=301487760"
+  },
+  {
+    "offset": "0x1bed7604a",
+    "length": 52,
+    "text": "\n<div class=\"j-media-scope media-scope\" title=\"{{tit"
+  },
+  {
+    "offset": "0x1bf6ffc2e",
+    "length": 60,
+    "text": "sqlite_autoindex_resource_prefetch_predictor_host_redirect_1"
+  },
+  {
+    "offset": "0x1bfc4e23d",
+    "length": 74,
+    "text": "\n--metrics-shmem-handle=4,i,2786911680697018893,444082010284702203,2097152"
+  },
+  {
+    "offset": "0x1c1a267de",
+    "length": 60,
+    "text": "/home/centos/.config/coccoc-browser/Default/Account Web Data"
+  },
+  {
+    "offset": "0x1c1a2691e",
+    "length": 60,
+    "text": "/home/centos/.config/coccoc-browser/Default/AccountBookmarks"
+  },
+  {
+    "offset": "0x1c2518b2e",
+    "length": 80,
+    "text": "-component text-icon nav-elem normal slim transfer-state-btn transfer-pause-icon"
+  },
+  {
+    "offset": "0x1c2cfa96e",
+    "length": 60,
+    "text": "translate.mojom.ContentTranslateDriverMessageHeaderValidator"
+  },
+  {
+    "offset": "0x1c445503e",
+    "length": 64,
+    "text": ";\n\n# $adlam_vowel { MB > \\U0001E910 \\U0001E948 \\U0001E904;\n$adla"
+  },
+  {
+    "offset": "0x1c461540e",
+    "length": 50,
+    "text": "Item type %s does not implement translate method.\n"
+  },
+  {
+    "offset": "0x1c57bb038",
+    "length": 70,
+    "text": "{\n    /usr/sbin/groupadd -g 22 -r -f utmp || :\n    /usr/sbin/groupadd "
+  },
+  {
+    "offset": "0x1c675e042",
+    "length": 60,
+    "text": "Access-Control-Allow-Headers: Accept, Authorization, Cache-C"
+  },
+  {
+    "offset": "0x1c85ba19d",
+    "length": 74,
+    "text": "\n--metrics-shmem-handle=4,i,70778755922213247,12503046599137078209,2097152"
+  },
+  {
+    "offset": "0x1c9338f3d",
+    "length": 60,
+    "text": "/home/centos/.config/coccoc-browser/Default/Trust Tokens-wal"
+  },
+  {
+    "offset": "0x1c9eb7ace",
+    "length": 56,
+    "text": "Import bookmarks and saved passwords from other browsers"
+  },
+  {
+    "offset": "0x1cd247c9e",
+    "length": 40,
+    "text": "_xdp_secret_skeleton_handle_set_property"
+  },
+  {
+    "offset": "0x1cd247cde",
+    "length": 40,
+    "text": "_xdp_secret_skeleton_handle_get_property"
+  },
+  {
+    "offset": "0x1cd30af7e",
+    "length": 44,
+    "text": "xdp_dbus_file_transfer_skeleton_set_property"
+  },
+  {
+    "offset": "0x1cd30afbe",
+    "length": 44,
+    "text": "xdp_dbus_file_transfer_skeleton_get_property"
+  },
+  {
+    "offset": "0x1cdb02c0e",
+    "length": 53,
+    "text": "\nTypeDescription=TIFF Documents\nMimeType=image/tiff;\n"
+  },
+  {
+    "offset": "0x1cdf590c6",
+    "length": 60,
+    "text": " (ID INTEGER NOT NULL, \"nfo:mediaListEntry\" INTEGER NOT NULL"
+  },
+  {
+    "offset": "0x1ce1846fe",
+    "length": 58,
+    "text": "/portal/desktop',arg0='org.freedesktop.impl.portal.Secret'"
+  },
+  {
+    "offset": "0x1ce5ff31e",
+    "length": 60,
+    "text": "/home/centos/.local/share/flatpak/exports/share/applications"
+  },
+  {
+    "offset": "0x1ce718e2e",
+    "length": 70,
+    "text": "esktop.secrets's'sktop/request/1_108/04CE0238F4BF42BE1B6EC22F6CF54262'"
+  },
+  {
+    "offset": "0x1cf88580c",
+    "length": 57,
+    "text": "   </savior-row>\n    </dropdown-box-body>\n</dropdown-box>"
+  },
+  {
+    "offset": "0x1d1e49de6",
+    "length": 74,
+    "text": "ome-extension://jdfkmiabjpfjacifcmihfdjhpnjpiick/css/content-script.css\";\n"
+  },
+  {
+    "offset": "0x1d2aa8a4e",
+    "length": 78,
+    "text": "s://mega.io/wp-content/themes/megapages/megalib/icons/mono/transfer-it-mto.svg"
+  },
+  {
+    "offset": "0x1d2d3203e",
+    "length": 64,
+    "text": "a-sub-info info-resolution\">\r\n                                {{"
+  },
+  {
+    "offset": "0x1d350c4de",
+    "length": 60,
+    "text": "/home/centos/.config/coccoc-browser/Default/DownloadMetadata"
+  },
+  {
+    "offset": "0x1d5d2b786",
+    "length": 60,
+    "text": "window_slot == NULL || NAUTILUS_IS_WINDOW_SLOT (window_slot)"
+  },
+  {
+    "offset": "0x1d64bc74e",
+    "length": 60,
+    "text": "https://coccoc.com/search?query=mega.nz+l%C3%A0+g%C3%AC&s=os"
+  },
+  {
+    "offset": "0x1d7a77cde",
+    "length": 60,
+    "text": "blink.mojom.FileSystemAccessFileHandleMessageHeaderValidator"
+  },
+  {
+    "offset": "0x1d8d359ae",
+    "length": 60,
+    "text": "audio.mojom.AudioService [primary] PipeControlMessageHandler"
+  },
+  {
+    "offset": "0x1d90d4aae",
+    "length": 46,
+    "text": "nguage: en-US,en;q=0.9\r\n\r\n[{\"a\":\"dailystats\"}]"
+  },
+  {
+    "offset": "0x1d9586036",
+    "length": 72,
+    "text": "<div class=\"tour-container\">\n    <div class=\"pointer\"></div>\n    <div cl"
+  },
+  {
+    "offset": "0x1dbe0675e",
+    "length": 60,
+    "text": "user-auth.apply-to-visit-or-stay-in-the-uk.homeoffice.gov.uk"
+  },
+  {
+    "offset": "0x1e03fd042",
+    "length": 60,
+    "text": "b268f5ef9ad51e4d78de3a750c2dc89b1e626d43505867999932e5db33af"
+  },
+  {
+    "offset": "0x1e8722226",
+    "length": 48,
+    "text": " segfault when changing default keyring password"
+  },
+  {
+    "offset": "0x1e939e82e",
+    "length": 46,
+    "text": "org.freedesktop.DBus.Error.AdtAuditDataUnknown"
+  },
+  {
+    "offset": "0x1e9bcabcb",
+    "length": 42,
+    "text": " the\n      Cockpit journal interface.\n    "
+  },
+  {
+    "offset": "0x1e9d0607e",
+    "length": 48,
+    "text": ">ia</lang>\n    <lang>id</lang>\n    <lang>ie</lan"
+  },
+  {
+    "offset": "0x1eaf704e5",
+    "length": 57,
+    "text": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+  },
+  {
+    "offset": "0x1edcab589",
+    "length": 50,
+    "text": "+ glyphs for all common Malayalam ligatures.\n     "
+  },
+  {
+    "offset": "0x1edcb189e",
+    "length": 48,
+    "text": "rrently selected window.</p>\n    <p xml:lang=\"el"
+  },
+  {
+    "offset": "0x1edd4c641",
+    "length": 60,
+    "text": "e-tour/raw/master/data/resources/screenshots/screenshot1.png"
+  },
+  {
+    "offset": "0x1edd61aee",
+    "length": 54,
+    "text": "nt, glibc locale and input-method if available.\n      "
+  },
+  {
+    "offset": "0x1edd61f29",
+    "length": 45,
+    "text": " a free Devanagari Script TrueType font.\n    "
+  },
+  {
+    "offset": "0x1ee50fee6",
+    "length": 48,
+    "text": "    .success {\n      fill: rgb(51,209,122) !impo"
+  },
+  {
+    "offset": "0x1ee6c80ff",
+    "length": 79,
+    "text": "</keyword>\n    <keyword>tijdelijk</keyword>\n    <keyword>naam</keyword>\n    <ke"
+  },
+  {
+    "offset": "0x1ee6d4a36",
+    "length": 48,
+    "text": "\n    .success {\n      fill: rgb(51,209,122) !imp"
+  },
+  {
+    "offset": "0x1ee701172",
+    "length": 60,
+    "text": "loso</name>\n  <name xml:lang=\"es\">Bloqueo de pantalla</name>"
+  },
+  {
+    "offset": "0x1eeb8f87e",
+    "length": 64,
+    "text": "zf7nGGBFEvkUGlXrfPtY2ibQuoLVPH9JP9H89DYyc\nm6Ck5ARs6cjj+BQVYW0Drw"
+  },
+  {
+    "offset": "0x1f04039fe",
+    "length": 60,
+    "text": "BEg2Yj1pelpoUgsQRFRWfFYmI3wPIGkuUiddNTI6PyQbIR43OyIZbkIPNmVi"
+  },
+  {
+    "offset": "0x1f0c2b5fc",
+    "length": 48,
+    "text": "\n?tingSource [primary] PipeControlMessageHandler"
+  },
+  {
+    "offset": "0x1f1c196fe",
+    "length": 51,
+    "text": "       {{>media_template}}\n    {{/downloads}}\n</ul>"
+  },
+  {
+    "offset": "0x1f2fab72e",
+    "length": 60,
+    "text": "../../../../usr/lib64/gstreamer-1.0/libgstvideofiltersbad.so"
+  },
+  {
+    "offset": "0x1f41f607e",
+    "length": 60,
+    "text": "/usr/share/locale/en_US.UTF-8.utf8/LC_MESSAGES/pulseaudio.mo"
+  },
+  {
+    "offset": "0x1f6e6692e",
+    "length": 60,
+    "text": "../../../../usr/lib64/perl5/vendor_perl/auto/Encode/CN/CN.so"
+  },
+  {
+    "offset": "0x1f6e66b2e",
+    "length": 60,
+    "text": "../../../../usr/lib64/perl5/vendor_perl/auto/Encode/KR/KR.so"
+  },
+  {
+    "offset": "0x1f722712e",
+    "length": 60,
+    "text": "/usr/share/help/C/evince/figures/annotations-nav-to-page.png"
+  },
+  {
+    "offset": "0x1f726612e",
+    "length": 60,
+    "text": "../../../../usr/lib64/evince/4/backends/libcomicsdocument.so"
+  },
+  {
+    "offset": "0x1f73ec92e",
+    "length": 60,
+    "text": "../../../../usr/lib64/gstreamer-1.0/libgstvideoparsersbad.so"
+  },
+  {
+    "offset": "0x1ffe458fe",
+    "length": 54,
+    "text": "/usr/lib/systemd/system/systemd-ask-password-wall.path"
+  }
+]

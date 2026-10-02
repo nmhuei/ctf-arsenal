@@ -1,0 +1,4 @@
+Node_ID,Hostname,IP_Address,VLAN,Role,Status,Token_B64,Split_Parts
+1,dc-core-01,10.0.10.15,100,Core Gateway,ACTIVE,RkxBR3tkM2MweV9mbDRnX3kwdV9mMGxsMHczZF90aDNfd3IwbmdfcDR0aF9oNGg0fQ==,"RkxBR3tkM2MweV9mbDRnX3k= + MHVfZjBsbDB3M2RfdGgzXw== + d3IwbmdfcDR0aF9oNGg0fQ=="
+2,db-cluster-01,10.0.20.101,200,Database Master,ACTIVE,VE9LRU5fODkyMWFfTk9UX1ZBTElE,N/A
+3,jump-host-02,10.0.30.55,300,SSH Bastion,ACTIVE,RkxBR3tnMGw0bmdfcGNsbnQ0Yl9zeW1iMGxfcjNjMHYzcnlfODgxOX0=,"RkxBR3tnMGw0bmdfcGNs + bnQ0Yl9zeW1iMGxfcjM= + YzB2M3J5Xzg4MTl9"

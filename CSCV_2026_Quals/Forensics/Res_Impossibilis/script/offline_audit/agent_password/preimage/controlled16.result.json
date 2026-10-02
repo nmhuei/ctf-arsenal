@@ -1,0 +1,16 @@
+{
+  "length": 16,
+  "alphabet": "ASCII32..126",
+  "parameterization": "q_i=low8(X_i)",
+  "timeout_ms": 60000,
+  "status": "unknown",
+  "elapsed_seconds": 60.02282144699984,
+  "controls": {
+    "random_reconstruction_cases": 100,
+    "pinned_sat": true,
+    "wrong_target_unsat": true
+  },
+  "equivalent_only": true,
+  "reason_unknown": "timeout",
+  "statistics": "(:max-memory              145.81\n :memory                  36.30\n :num-allocs              40369495433.00\n :rlimit-count            419607624\n :sat-backjumps           112626\n :sat-backtracks          7\n :sat-conflicts           112633\n :sat-decisions           160711\n :sat-del-clause          190178\n :sat-elim-bool-vars-res  16751\n :sat-elim-clauses        4117\n :sat-elim-literals       19081\n :sat-gc-clause           82306\n :sat-minimized-lits      658492\n :sat-mk-clause-2ary      42303\n :sat-mk-clause-3ary      29748\n :sat-mk-clause-nary      510284\n :sat-mk-var              71997\n :sat-probing-assigned    44\n :sat-propagations-2ary   20155002\n :sat-propagations-nary   436545289\n :sat-restarts            16783\n :sat-scc-elim-binary     11\n :sat-scc-elim-vars       359\n :sat-subs-resolution     4669\n :sat-subs-resolution-dyn 7313\n :sat-subsumed            23072\n :sat-tr                  561\n :sat-units               463\n :solve-eqs-elim-vars     51\n :solve-eqs-steps         3414\n :time                    60.02)"
+}

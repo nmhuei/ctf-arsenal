@@ -1,0 +1,21 @@
+{
+  "length": 12,
+  "alphabet": "ASCII32..126",
+  "timeout_ms": 120000,
+  "solver_version": "5.1.0",
+  "controls": {
+    "crc_cases": 100,
+    "pinned_password_sat": true,
+    "wrong_target_unsat": true
+  },
+  "status": "unknown",
+  "elapsed_seconds": 120.01012518400012,
+  "target": [
+    "670e8462",
+    "306591b4",
+    "8372919d"
+  ],
+  "equivalent_only": true,
+  "reason_unknown": "timeout",
+  "statistics": "(:max-memory              84.62\n :memory                  22.63\n :num-allocs              8380848572.00\n :rlimit-count            766464506\n :sat-ate                 5220\n :sat-backjumps           275032\n :sat-backtracks          8\n :sat-bce                 7\n :sat-conflicts           275040\n :sat-decisions           345851\n :sat-del-clause          325102\n :sat-elim-bool-vars-res  9824\n :sat-elim-clauses        4420\n :sat-elim-literals       24156\n :sat-gc-clause           239483\n :sat-minimized-lits      2019481\n :sat-mk-clause-2ary      24709\n :sat-mk-clause-3ary      14418\n :sat-mk-clause-nary      484676\n :sat-mk-var              35593\n :sat-probing-assigned    3\n :sat-propagations-2ary   44635922\n :sat-propagations-nary   745840201\n :sat-restarts            9888\n :sat-scc-elim-binary     548\n :sat-scc-elim-vars       436\n :sat-subs-resolution     12623\n :sat-subs-resolution-dyn 22603\n :sat-subsumed            16151\n :sat-tr                  768\n :sat-units               676\n :solve-eqs-elim-vars     51\n :solve-eqs-steps         9071\n :time                    120.01)"
+}

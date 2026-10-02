@@ -1,0 +1,15 @@
+{
+  "length": 4,
+  "alphabet": "ASCII32..126",
+  "parameterization": "q_i=low8(X_i)",
+  "timeout_ms": 60000,
+  "status": "unsat",
+  "elapsed_seconds": 0.04656573999818647,
+  "controls": {
+    "random_reconstruction_cases": 100,
+    "pinned_sat": true,
+    "wrong_target_unsat": true
+  },
+  "equivalent_only": true,
+  "statistics": "(:max-memory            127.80\n :memory                27.02\n :num-allocs            13393148897.00\n :rlimit-count          7995798\n :sat-backjumps         72\n :sat-conflicts         73\n :sat-decisions         227\n :sat-del-clause        60\n :sat-elim-clauses      30\n :sat-elim-literals     30\n :sat-minimized-lits    39\n :sat-mk-clause-2ary    1944\n :sat-mk-clause-nary    21161\n :sat-mk-var            4633\n :sat-propagations-2ary 862\n :sat-propagations-nary 4328\n :sat-units             19\n :solve-eqs-elim-vars   15\n :solve-eqs-steps       678\n :time                  0.05)"
+}

@@ -1,0 +1,15 @@
+set pagination off
+b v8::internal::maglev::MaglevStoreSink::Run
+commands
+  silent
+  printf "=== MaglevStoreSink::Run CALLED! ===\n"
+  continue
+end
+b v8::internal::maglev::MaglevSmiCheckElimination::Run
+commands
+  silent
+  printf "=== MaglevSmiCheckElimination::Run CALLED! ===\n"
+  continue
+end
+run
+quit

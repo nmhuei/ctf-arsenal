@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+function foo(x) { return x + 1; }
+for (let i = 0; i < 5000; i++) foo(i);
+if (typeof %GetOptimizationStatus !== 'undefined') {
+  console.log("Opt status:", (%GetOptimizationStatus(foo)).toString(2));
+} else {
+  console.log("Natives syntax NOT enabled");
+}
+</script>
+</body>
+</html>

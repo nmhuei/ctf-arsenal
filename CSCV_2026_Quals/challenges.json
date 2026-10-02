@@ -1,0 +1,752 @@
+{
+  "ctf_info": {
+    "title": "CSCV 2026",
+    "url": "https://qual.cscv.vn",
+    "platform": "ctfd",
+    "user": "cscv_0721",
+    "team": null,
+    "game_id": null,
+    "event_window": {
+      "start": "2026-09-25T01:45:00+00:00",
+      "end": "2026-09-25T09:30:00+00:00",
+      "source": "ctfd:window.init",
+      "confidence": "medium"
+    }
+  },
+  "total_challenges": 23,
+  "total_points": 2979,
+  "categories": {
+    "Web": 3,
+    "Pwn": 3,
+    "Crypto": 4,
+    "RE": 4,
+    "Misc": 4,
+    "Warmup": 1,
+    "Forensics": 4
+  },
+  "challenges": [
+    {
+      "id": 3,
+      "name": "Chromatic Aberration",
+      "category": "Web",
+      "points": 100,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": true,
+      "solves_count": 98,
+      "submit_endpoint": "https://qual.cscv.vn/api/v1/challenges/attempt",
+      "instance_info": {
+        "is_container": true,
+        "type": "ctfd_container",
+        "start_url": "https://qual.cscv.vn/plugins/ctfd-whale/container",
+        "stop_url": "https://qual.cscv.vn/plugins/ctfd-whale/container",
+        "extend_url": "https://qual.cscv.vn/plugins/ctfd-whale/container",
+        "status_url": "https://qual.cscv.vn/plugins/ctfd-whale/container"
+      },
+      "files": [
+        {
+          "url": "https://drive.google.com/file/d/1WeuYqhgfqgyEuLzToKknidWB1O364CC3/view?usp=sharing",
+          "name": "here",
+          "saved_path": "/home/light/Workspace/CTF/CSCV_2026_Quals/Web/Chromatic_Aberration/challenge/here",
+          "success": true,
+          "source": "description_gdrive",
+          "message": "Đã tải qua handler gdrive",
+          "verification": {
+            "etag": null,
+            "final_url": "https://drive.usercontent.google.com/download?id=1WeuYqhgfqgyEuLzToKknidWB1O364CC3&export=download&authuser=0&confirm=t",
+            "last_modified": "Wed, 23 Sep 2026 08:54:53 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 125997,
+            "url": "https://drive.google.com/file/d/1WeuYqhgfqgyEuLzToKknidWB1O364CC3/view?usp=sharing",
+            "verified_at": "2026-09-25T01:46:08Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Inoffice",
+      "category": "Web",
+      "points": 100,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": true,
+      "solves_count": 111,
+      "submit_endpoint": "https://qual.cscv.vn/api/v1/challenges/attempt",
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://drive.google.com/file/d/1PKzswKAC7D8L-XpE2Nz1hdYmOgPPtODj/view?usp=sharing",
+          "name": "here",
+          "saved_path": "/home/light/Workspace/CTF/CSCV_2026_Quals/Web/Inoffice/challenge/here",
+          "success": true,
+          "source": "description_gdrive",
+          "message": "Đã tải qua handler gdrive",
+          "verification": {
+            "etag": null,
+            "final_url": "https://drive.usercontent.google.com/download?id=1PKzswKAC7D8L-XpE2Nz1hdYmOgPPtODj&export=download&authuser=0&confirm=t",
+            "last_modified": "Wed, 23 Sep 2026 09:02:01 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 6870,
+            "url": "https://drive.google.com/file/d/1PKzswKAC7D8L-XpE2Nz1hdYmOgPPtODj/view?usp=sharing",
+            "verified_at": "2026-09-25T01:46:08Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "MARIONETTE",
+      "category": "Pwn",
+      "points": 100,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": true,
+      "solves_count": 145,
+      "submit_endpoint": "https://qual.cscv.vn/api/v1/challenges/attempt",
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://drive.google.com/file/d/1NqBFhA_iwY-aaw666e1OCMeQF0OlHg6T/view?usp=sharing",
+          "name": "here",
+          "saved_path": "/home/light/Workspace/CTF/CSCV_2026_Quals/Pwn/MARIONETTE/challenge/here",
+          "success": true,
+          "source": "description_gdrive",
+          "message": "Đã tải qua handler gdrive",
+          "verification": {
+            "etag": null,
+            "final_url": "https://drive.usercontent.google.com/download?id=1NqBFhA_iwY-aaw666e1OCMeQF0OlHg6T&export=download&authuser=0&confirm=t",
+            "last_modified": "Wed, 23 Sep 2026 09:11:12 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 43456,
+            "url": "https://drive.google.com/file/d/1NqBFhA_iwY-aaw666e1OCMeQF0OlHg6T/view?usp=sharing",
+            "verified_at": "2026-09-25T01:46:08Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Message System",
+      "category": "Pwn",
+      "points": 100,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": true,
+      "solves_count": 128,
+      "submit_endpoint": "https://qual.cscv.vn/api/v1/challenges/attempt",
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://drive.google.com/file/d/1n4wkxyoCaRhL5qz1h_heYmhkyT1J98Js/view?usp=sharing",
+          "name": "here",
+          "saved_path": "/home/light/Workspace/CTF/CSCV_2026_Quals/Pwn/Message_System/challenge/here",
+          "success": true,
+          "source": "description_gdrive",
+          "message": "Đã tải qua handler gdrive",
+          "verification": {
+            "etag": null,
+            "final_url": "https://drive.usercontent.google.com/download?id=1n4wkxyoCaRhL5qz1h_heYmhkyT1J98Js&export=download&authuser=0&confirm=t",
+            "last_modified": "Wed, 23 Sep 2026 11:25:51 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 6320,
+            "url": "https://drive.google.com/file/d/1n4wkxyoCaRhL5qz1h_heYmhkyT1J98Js/view?usp=sharing",
+            "verified_at": "2026-09-25T01:46:09Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Typhone",
+      "category": "Crypto",
+      "points": 100,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": true,
+      "solves_count": 209,
+      "submit_endpoint": "https://qual.cscv.vn/api/v1/challenges/attempt",
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://drive.google.com/file/d/1ca0Ya4tenwtXq8Xkth2bxbA_Gz0IEjNE/view?usp=sharing",
+          "name": "here",
+          "saved_path": "/home/light/Workspace/CTF/CSCV_2026_Quals/Crypto/Typhone/challenge/here",
+          "success": true,
+          "source": "description_gdrive",
+          "message": "Đã tải qua handler gdrive",
+          "verification": {
+            "etag": null,
+            "final_url": "https://drive.usercontent.google.com/download?id=1ca0Ya4tenwtXq8Xkth2bxbA_Gz0IEjNE&export=download&authuser=0&confirm=t",
+            "last_modified": "Wed, 23 Sep 2026 09:23:37 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 23105,
+            "url": "https://drive.google.com/file/d/1ca0Ya4tenwtXq8Xkth2bxbA_Gz0IEjNE/view?usp=sharing",
+            "verified_at": "2026-09-25T01:46:10Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Baby Circuit",
+      "category": "Crypto",
+      "points": 100,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": true,
+      "solves_count": 94,
+      "submit_endpoint": "https://qual.cscv.vn/api/v1/challenges/attempt",
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://drive.google.com/file/d/1iqD4dcc5qrTG2sxB2byi8G02Mmcd42QC/view?usp=sharing",
+          "name": "here",
+          "saved_path": "/home/light/Workspace/CTF/CSCV_2026_Quals/Crypto/Baby_Circuit/challenge/here",
+          "success": true,
+          "source": "description_gdrive",
+          "message": "Đã tải qua handler gdrive",
+          "verification": {
+            "etag": null,
+            "final_url": "https://drive.usercontent.google.com/download?id=1iqD4dcc5qrTG2sxB2byi8G02Mmcd42QC&export=download&authuser=0&confirm=t",
+            "last_modified": "Thu, 24 Sep 2026 15:20:29 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 165041,
+            "url": "https://drive.google.com/file/d/1iqD4dcc5qrTG2sxB2byi8G02Mmcd42QC/view?usp=sharing",
+            "verified_at": "2026-09-25T01:46:12Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "name": "BabyCrackMe",
+      "category": "RE",
+      "points": 100,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": true,
+      "solves_count": 211,
+      "submit_endpoint": "https://qual.cscv.vn/api/v1/challenges/attempt",
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://drive.google.com/file/d/1MaUnwHICmtrBhsG7p6lIsI4OSMJvcYKB/view?usp=sharing",
+          "name": "here",
+          "saved_path": "/home/light/Workspace/CTF/CSCV_2026_Quals/RE/BabyCrackMe/challenge/here",
+          "success": true,
+          "source": "description_gdrive",
+          "message": "Đã tải qua handler gdrive",
+          "verification": {
+            "etag": null,
+            "final_url": "https://drive.usercontent.google.com/download?id=1MaUnwHICmtrBhsG7p6lIsI4OSMJvcYKB&export=download&authuser=0&confirm=t",
+            "last_modified": "Wed, 23 Sep 2026 10:30:37 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 31232,
+            "url": "https://drive.google.com/file/d/1MaUnwHICmtrBhsG7p6lIsI4OSMJvcYKB/view?usp=sharing",
+            "verified_at": "2026-09-25T01:46:12Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Ghost Dependency",
+      "category": "RE",
+      "points": 100,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": true,
+      "solves_count": 157,
+      "submit_endpoint": "https://qual.cscv.vn/api/v1/challenges/attempt",
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://drive.google.com/file/d/170rHz-PX3XnwdtCSIoB3uBSbKKJXkEXk/view?usp=sharing",
+          "name": "here",
+          "saved_path": "/home/light/Workspace/CTF/CSCV_2026_Quals/RE/Ghost_Dependency/challenge/here",
+          "success": true,
+          "source": "description_gdrive",
+          "message": "Đã tải qua handler gdrive",
+          "verification": {
+            "etag": null,
+            "final_url": "https://drive.usercontent.google.com/download?id=170rHz-PX3XnwdtCSIoB3uBSbKKJXkEXk&export=download&authuser=0&confirm=t",
+            "last_modified": "Wed, 23 Sep 2026 10:35:45 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 5552,
+            "url": "https://drive.google.com/file/d/170rHz-PX3XnwdtCSIoB3uBSbKKJXkEXk/view?usp=sharing",
+            "verified_at": "2026-09-25T01:46:15Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "name": "Signed, Sealed, Subverted",
+      "category": "RE",
+      "points": 100,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": true,
+      "solves_count": 134,
+      "submit_endpoint": "https://qual.cscv.vn/api/v1/challenges/attempt",
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://drive.google.com/file/d/1blbxI3xCeZZssh637YnTqZ-fOj3o650_/view?usp=sharing",
+          "name": "here",
+          "saved_path": "/home/light/Workspace/CTF/CSCV_2026_Quals/RE/Signed,_Sealed,_Subverted/challenge/here",
+          "success": true,
+          "source": "description_gdrive",
+          "message": "Đã tải qua handler gdrive",
+          "verification": {
+            "etag": null,
+            "final_url": "https://drive.usercontent.google.com/download?id=1blbxI3xCeZZssh637YnTqZ-fOj3o650_&export=download&authuser=0&confirm=t",
+            "last_modified": "Wed, 23 Sep 2026 10:38:18 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 328545,
+            "url": "https://drive.google.com/file/d/1blbxI3xCeZZssh637YnTqZ-fOj3o650_/view?usp=sharing",
+            "verified_at": "2026-09-25T01:46:17Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "name": "Weirdo",
+      "category": "Misc",
+      "points": 100,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": true,
+      "solves_count": 166,
+      "submit_endpoint": "https://qual.cscv.vn/api/v1/challenges/attempt",
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://drive.google.com/file/d/1uPyYbmvJANCOggGnr56Zz71idCumr7P0/view?usp=sharing",
+          "name": "here",
+          "saved_path": "/home/light/Workspace/CTF/CSCV_2026_Quals/Misc/Weirdo/challenge/here",
+          "success": true,
+          "source": "description_gdrive",
+          "message": "Đã tải qua handler gdrive",
+          "verification": {
+            "etag": null,
+            "final_url": "https://drive.usercontent.google.com/download?id=1uPyYbmvJANCOggGnr56Zz71idCumr7P0&export=download&authuser=0&confirm=t",
+            "last_modified": "Wed, 23 Sep 2026 10:42:53 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 52251302,
+            "url": "https://drive.google.com/file/d/1uPyYbmvJANCOggGnr56Zz71idCumr7P0/view?usp=sharing",
+            "verified_at": "2026-09-25T01:52:48Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "name": "Don't be that slop",
+      "category": "Warmup",
+      "points": 100,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": true,
+      "solves_count": 143,
+      "submit_endpoint": "https://qual.cscv.vn/api/v1/challenges/attempt",
+      "instance_info": {},
+      "files": []
+    },
+    {
+      "id": 18,
+      "name": "Silent Room",
+      "category": "Forensics",
+      "points": 100,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": true,
+      "solves_count": 303,
+      "submit_endpoint": "https://qual.cscv.vn/api/v1/challenges/attempt",
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://drive.google.com/file/d/1ECnN0sI-BNzObpKDHD8lacb5Oaij43Mo/view?usp=sharing",
+          "name": "here",
+          "saved_path": "/home/light/Workspace/CTF/CSCV_2026_Quals/Forensics/Silent_Room/challenge/here",
+          "success": true,
+          "source": "description_gdrive",
+          "message": "Đã tải qua handler gdrive",
+          "verification": {
+            "etag": null,
+            "final_url": "https://drive.usercontent.google.com/download?id=1ECnN0sI-BNzObpKDHD8lacb5Oaij43Mo&export=download&authuser=0&confirm=t",
+            "last_modified": "Thu, 24 Sep 2026 02:57:50 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 5209683,
+            "url": "https://drive.google.com/file/d/1ECnN0sI-BNzObpKDHD8lacb5Oaij43Mo/view?usp=sharing",
+            "verified_at": "2026-09-25T01:47:00Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "name": "From Update To Encrypt",
+      "category": "Forensics",
+      "points": 100,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": true,
+      "solves_count": 199,
+      "submit_endpoint": "https://qual.cscv.vn/api/v1/challenges/attempt",
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://drive.google.com/file/d/1g2-1Jy7pMjjvWO2WmLAUDkUidB3h9iSp/view?usp=sharing",
+          "name": "here",
+          "saved_path": null,
+          "success": false,
+          "source": "description_gdrive",
+          "message": "skipped_large_file: https://drive.google.com/file/d/1g2-1Jy7pMjjvWO2WmLAUDkUidB3h9iSp/view?usp=sharing — dung lượng 1.0GB vượt quá giới hạn 1.0GB, người dùng không đồng ý tải.",
+          "verification": {}
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "name": "Insidotage",
+      "category": "Forensics",
+      "points": 100,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": true,
+      "solves_count": 75,
+      "submit_endpoint": "https://qual.cscv.vn/api/v1/challenges/attempt",
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://drive.google.com/file/d/1Zec3yurmPjqOy_0colfdLLKwx2zRp2ih/view?usp=sharing",
+          "name": "here",
+          "saved_path": null,
+          "success": false,
+          "source": "description_gdrive",
+          "message": "skipped_large_file: https://drive.google.com/file/d/1Zec3yurmPjqOy_0colfdLLKwx2zRp2ih/view?usp=sharing — dung lượng 2.9GB vượt quá giới hạn 1.0GB, người dùng không đồng ý tải.",
+          "verification": {}
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "name": "LLM Security Lab",
+      "category": "Misc",
+      "points": 100,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": true,
+      "solves_count": 295,
+      "submit_endpoint": "https://qual.cscv.vn/api/v1/challenges/attempt",
+      "instance_info": {},
+      "files": []
+    },
+    {
+      "id": 26,
+      "name": "ReQ1",
+      "category": "RE",
+      "points": 100,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": true,
+      "solves_count": 197,
+      "submit_endpoint": "https://qual.cscv.vn/api/v1/challenges/attempt",
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://drive.google.com/file/d/1aokBasUWqNlPDEzd0HTsoL2is3ZgoQof/view?usp=sharing",
+          "name": "gdrive_1aokBasUWqNlPDEzd0HTsoL2is3ZgoQof.bin",
+          "saved_path": "/home/light/Workspace/CTF/CSCV_2026_Quals/RE/ReQ1`/challenge/gdrive_1aokBasUWqNlPDEzd0HTsoL2is3ZgoQof.bin",
+          "success": true,
+          "source": "description_gdrive",
+          "message": "Đã tải qua handler gdrive",
+          "verification": {
+            "etag": null,
+            "final_url": "https://drive.usercontent.google.com/download?id=1aokBasUWqNlPDEzd0HTsoL2is3ZgoQof&export=download&authuser=0&confirm=t",
+            "last_modified": "Fri, 25 Sep 2026 01:28:32 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 74586,
+            "url": "https://drive.google.com/file/d/1aokBasUWqNlPDEzd0HTsoL2is3ZgoQof/view?usp=sharing",
+            "verified_at": "2026-09-25T02:53:33Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "name": "chimera",
+      "category": "Crypto",
+      "points": 100,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": true,
+      "solves_count": 167,
+      "submit_endpoint": "https://qual.cscv.vn/api/v1/challenges/attempt",
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://drive.google.com/file/d/1kWFW4imHc-KmX7sTOJ-peQD38aEs8ZYb/view?usp=drivesdk",
+          "name": "here",
+          "saved_path": "/home/light/Workspace/CTF/CSCV_2026_Quals/Crypto/chimera/challenge/here",
+          "success": true,
+          "source": "description_gdrive",
+          "message": "Đã tải qua handler gdrive",
+          "verification": {
+            "etag": null,
+            "final_url": "https://drive.usercontent.google.com/download?id=1kWFW4imHc-KmX7sTOJ-peQD38aEs8ZYb&export=download&authuser=0&confirm=t",
+            "last_modified": "Fri, 25 Sep 2026 05:03:49 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 29241,
+            "url": "https://drive.google.com/file/d/1kWFW4imHc-KmX7sTOJ-peQD38aEs8ZYb/view?usp=drivesdk",
+            "verified_at": "2026-09-25T05:31:53Z"
+          }
+        },
+        {
+          "url": "https://drive.google.com/file/d/1R9dm5naKkaFY8czvVppa0KBMyOiJ-w8r/view?usp=drivesdk",
+          "name": "here",
+          "saved_path": "/home/light/Workspace/CTF/CSCV_2026_Quals/Crypto/chimera/challenge/here",
+          "success": true,
+          "source": "description_gdrive",
+          "message": "Đã tải qua handler gdrive",
+          "verification": {
+            "etag": null,
+            "final_url": "https://drive.usercontent.google.com/download?id=1kWFW4imHc-KmX7sTOJ-peQD38aEs8ZYb&export=download&authuser=0&confirm=t",
+            "last_modified": "Fri, 25 Sep 2026 05:03:49 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 29241,
+            "url": "https://drive.google.com/file/d/1kWFW4imHc-KmX7sTOJ-peQD38aEs8ZYb/view?usp=drivesdk",
+            "verified_at": "2026-09-25T05:31:53Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "sinkhole",
+      "category": "Pwn",
+      "points": 100,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 34,
+      "submit_endpoint": "https://qual.cscv.vn/api/v1/challenges/attempt",
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://drive.google.com/file/d/1Q8zJ_CMtqy2E_B9hsCW8CBYFNxWy-Eps/view?usp=sharing",
+          "name": "here",
+          "saved_path": "/home/light/Workspace/CTF/CSCV_2026_Quals/Pwn/sinkhole/challenge/here",
+          "success": true,
+          "source": "description_gdrive",
+          "message": "Đã tải qua handler gdrive",
+          "verification": {
+            "etag": null,
+            "final_url": "https://drive.usercontent.google.com/download?id=1Q8zJ_CMtqy2E_B9hsCW8CBYFNxWy-Eps&export=download&authuser=0&confirm=t",
+            "last_modified": "Wed, 23 Sep 2026 09:17:20 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 185794355,
+            "url": "https://drive.google.com/file/d/1Q8zJ_CMtqy2E_B9hsCW8CBYFNxWy-Eps/view?usp=sharing",
+            "verified_at": "2026-09-25T01:50:12Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "name": "Bank — GemOA Bot",
+      "category": "Misc",
+      "points": 100,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": true,
+      "solves_count": 260,
+      "submit_endpoint": "https://qual.cscv.vn/api/v1/challenges/attempt",
+      "instance_info": {},
+      "files": []
+    },
+    {
+      "id": 9,
+      "name": "Residuegate",
+      "category": "Crypto",
+      "points": 100,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": true,
+      "solves_count": 35,
+      "submit_endpoint": "https://qual.cscv.vn/api/v1/challenges/attempt",
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://drive.google.com/file/d/1I9gsi81cESE-PTHNPAtTgn1amVYvcCqp/view?usp=sharing",
+          "name": "here",
+          "saved_path": "/home/light/Workspace/CTF/CSCV_2026_Quals/Crypto/Residuegate/challenge/here",
+          "success": true,
+          "source": "description_gdrive",
+          "message": "Đã tải qua handler gdrive",
+          "verification": {
+            "etag": null,
+            "final_url": "https://drive.usercontent.google.com/download?id=1I9gsi81cESE-PTHNPAtTgn1amVYvcCqp&export=download&authuser=0&confirm=t",
+            "last_modified": "Wed, 23 Sep 2026 09:35:59 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 543027617,
+            "url": "https://drive.google.com/file/d/1I9gsi81cESE-PTHNPAtTgn1amVYvcCqp/view?usp=sharing",
+            "verified_at": "2026-09-25T01:56:46Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Exam Score ",
+      "category": "Web",
+      "points": 379,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 12,
+      "submit_endpoint": "https://qual.cscv.vn/api/v1/challenges/attempt",
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://drive.google.com/file/d/1SCsZdy5ZVd2x7-A9udY7gExqd07DJU0m/view?usp=sharing",
+          "name": "here",
+          "saved_path": "/home/light/Workspace/CTF/CSCV_2026_Quals/Web/Exam_Score/challenge/here",
+          "success": true,
+          "source": "description_gdrive",
+          "message": "Đã tải qua handler gdrive",
+          "verification": {
+            "etag": null,
+            "final_url": "https://drive.usercontent.google.com/download?id=1SCsZdy5ZVd2x7-A9udY7gExqd07DJU0m&export=download&authuser=0&confirm=t",
+            "last_modified": "Fri, 25 Sep 2026 01:15:51 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 41069,
+            "url": "https://drive.google.com/file/d/1SCsZdy5ZVd2x7-A9udY7gExqd07DJU0m/view?usp=sharing",
+            "verified_at": "2026-09-25T01:46:08Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "name": "Super Agent",
+      "category": "Misc",
+      "points": 500,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 0,
+      "submit_endpoint": "https://qual.cscv.vn/api/v1/challenges/attempt",
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://drive.google.com/file/d/1T2IEDguI1WOQB9yWAZOu6j6R05d5d407/view?usp=sharing",
+          "name": "here",
+          "saved_path": "/home/light/Workspace/CTF/CSCV_2026_Quals/Misc/Super_Agent/challenge/here",
+          "success": true,
+          "source": "description_gdrive",
+          "message": "Đã tải qua handler gdrive",
+          "verification": {
+            "etag": null,
+            "final_url": "https://drive.usercontent.google.com/download?id=1T2IEDguI1WOQB9yWAZOu6j6R05d5d407&export=download&authuser=0&confirm=t",
+            "last_modified": "Wed, 23 Sep 2026 11:29:20 GMT",
+            "schema_version": 1,
+            "sha256": null,
+            "size": 112,
+            "url": "https://drive.google.com/file/d/1T2IEDguI1WOQB9yWAZOu6j6R05d5d407/view?usp=sharing",
+            "verified_at": "2026-09-25T01:46:19Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "name": "Res Impossibilis",
+      "category": "Forensics",
+      "points": 100,
+      "author": null,
+      "tags": [],
+      "hints": [],
+      "connection_info": null,
+      "solved_by_me": false,
+      "solves_count": 34,
+      "submit_endpoint": "https://qual.cscv.vn/api/v1/challenges/attempt",
+      "instance_info": {},
+      "files": [
+        {
+          "url": "https://drive.google.com/file/d/1Zm4qNm0U48djWZpezVvGaeiORhIWCd8M/view?usp=sharing",
+          "name": "here",
+          "saved_path": null,
+          "success": false,
+          "source": "description_gdrive",
+          "message": "Google Drive quota exceeded / cần quyền truy cập: file đã vượt hạn mức tải hoặc không chia sẻ công khai.",
+          "verification": {}
+        }
+      ]
+    }
+  ]
+}

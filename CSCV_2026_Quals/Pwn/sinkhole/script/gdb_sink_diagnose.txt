@@ -1,0 +1,18 @@
+set pagination off
+set breakpoint pending on
+set logging file /tmp/gdb_sink_diag.log
+set logging enabled on
+
+b v8::internal::maglev::MaglevStoreSink::TrySinkIntoLoop
+commands
+  silent
+  printf "TrySinkIntoLoop header=%p is_loop=%d preds=%d\n", header, header->is_loop_, header->predecessor_count_
+  if header->is_loop_ && header->predecessor_count_ == 2
+    set $pre = header->predecessors_.data_[0]
+    printf "  preheader=%p succs=%d nodes=%d\n", $pre, $pre->successors_.size_, $pre->nodes_.size_
+  end
+  continue
+end
+
+run
+quit

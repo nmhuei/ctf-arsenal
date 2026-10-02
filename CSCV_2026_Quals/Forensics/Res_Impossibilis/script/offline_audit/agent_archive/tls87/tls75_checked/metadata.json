@@ -1,0 +1,485 @@
+{
+  "stream": 75,
+  "pcap": "script/evidence/network.pcapng",
+  "packet_count": 66,
+  "first_time": "1788885070.551731500",
+  "last_time": "1788885377.367776700",
+  "directions": {
+    "client": {
+      "size": 2614,
+      "base_raw_sequence": 812764684,
+      "payload_packet_count": 4,
+      "duplicate_payload_bytes": 0,
+      "conflicting_bytes": [],
+      "gaps": [],
+      "segments": [
+        {
+          "frame": 36649,
+          "offset": 0,
+          "length": 1460,
+          "time": "1788885070.761487700"
+        },
+        {
+          "frame": 36650,
+          "offset": 1460,
+          "length": 379,
+          "time": "1788885070.761495900"
+        },
+        {
+          "frame": 37392,
+          "offset": 1839,
+          "length": 64,
+          "time": "1788885071.179620600"
+        },
+        {
+          "frame": 37394,
+          "offset": 1903,
+          "length": 711,
+          "time": "1788885071.180372700"
+        }
+      ],
+      "tls_records": [
+        {
+          "index": 0,
+          "offset": 0,
+          "content_type": 22,
+          "legacy_version": "0x0301",
+          "length": 1834,
+          "payload_offset": 5,
+          "end": 1839,
+          "after_ccs": false
+        },
+        {
+          "index": 1,
+          "offset": 1839,
+          "content_type": 20,
+          "legacy_version": "0x0303",
+          "length": 1,
+          "payload_offset": 1844,
+          "end": 1845,
+          "after_ccs": false
+        },
+        {
+          "index": 2,
+          "offset": 1845,
+          "content_type": 23,
+          "legacy_version": "0x0303",
+          "length": 53,
+          "payload_offset": 1850,
+          "end": 1903,
+          "after_ccs": true
+        },
+        {
+          "index": 3,
+          "offset": 1903,
+          "content_type": 23,
+          "legacy_version": "0x0303",
+          "length": 706,
+          "payload_offset": 1908,
+          "end": 2614,
+          "after_ccs": true
+        }
+      ],
+      "handshakes": [
+        {
+          "type": 1,
+          "length": 1830,
+          "hello": {
+            "legacy_version": "0303",
+            "random": "2be8fac96d750ae93ee6fc05412bd868bbc93f94f1bbad860f95841c377332de",
+            "session_id": "8c7735083a7b679e5057f574883abf4648f958f33f99a8f96b68eef4b20229b1",
+            "cipher_suites": [
+              "0xeaea",
+              "0x1301",
+              "0x1302",
+              "0x1303",
+              "0xc02b",
+              "0xc02f",
+              "0xc02c",
+              "0xc030",
+              "0xcca9",
+              "0xcca8",
+              "0xc013",
+              "0xc014",
+              "0x009c",
+              "0x009d",
+              "0x002f",
+              "0x0035"
+            ],
+            "compressions": [
+              0
+            ],
+            "extensions": [
+              {
+                "type": 10794,
+                "length": 0,
+                "hex": ""
+              },
+              {
+                "type": 23,
+                "length": 0,
+                "hex": ""
+              },
+              {
+                "type": 16,
+                "length": 14,
+                "hex": "000c02683208687474702f312e31",
+                "alpn": [
+                  "h2",
+                  "http/1.1"
+                ]
+              },
+              {
+                "type": 18,
+                "length": 0,
+                "hex": ""
+              },
+              {
+                "type": 43,
+                "length": 7,
+                "hex": "06baba03040303",
+                "supported_versions": "06baba03040303"
+              },
+              {
+                "type": 10,
+                "length": 12,
+                "hex": "000ababa11ec001d00170018"
+              },
+              {
+                "type": 45,
+                "length": 2,
+                "hex": "0101"
+              },
+              {
+                "type": 17613,
+                "length": 5,
+                "hex": "0003026832"
+              },
+              {
+                "type": 5,
+                "length": 5,
+                "hex": "0100000000"
+              },
+              {
+                "type": 51,
+                "length": 1263,
+                "hex": "04edbaba00010011ec04c0a45846379458f67c6ab6d6c4050173011317afd88cb19c121f5cc71918898bc256d3866facd736ef55a8cbf11e6ca7c3b0b922fed01932e346efa8c22eb26a038a484e2a541e4b756205abbc6c4817687b55138e80498c0e9a17cf151d21881adca4b94b57bac2e56392d9a1e247b4a8f18c76a7aab81c9c4660b466905fd436c7b7196f625c5eea13af916b7ed4b714909cb604d5359510c9d22970c982083dc64e13a61d7c299d9e4788e7e82f8c330bd2215f2558757369b158533566cb11fbf2141ee336a0015696b49254574f390c968bb1aefed574709a31f59752a23bb461d09637020678bc11fbaa4b15e7253209046250bfea073ffc32c681216ff2a11fb8e6b48d7120d41319deb24099d73a97447c646c69132b9b0f8674b406c250fb50be38746e1b4af82c2b04c4a72759432dc09e12ca445dd610a064a02e5282165c64e8e236dd69119eb6ad92da8a9077a4a5dc851bd04da7427c236c19221ab8c1f47de71a327a74bd74ba9456a95530babe9c479edaf60734033eb7a6857e44151ff9779724b670574d15c485fb6b6215b43b15a7468704aa5e13be6912a965a30bc5c44dfa79533fc88c3a6cb44b14b8011ca3e0817be8629567fa357d60a0fb47609b129d735b34e18c27dbf4ae06077068a5bdf633786a493f29ebb4079bafb927cb6cf650b4b430d356a995668e1adc9b41b7625c193a7af64b890a70ea56252bc2c41fc55d50f48d9e305a69c7cf8449cb56b84fbf619363302347d17909e3af9ab02bb8ea0efec64f66100843724eec71971b63925ce6803379cbec8c0703e24e674407525387624575d7ba52a965a7852a6f0274615909290c8196759879e2c92d3cc41806082787bbcb5b67cb08248149093fc6c00044f438eb5204e433af1a35acd0b18c0ee781c8500c02155ebb8158bd440c012c7b1c339ce7bc5f2276a0d4a1ab15d530356cc1c791174f451922e6c217db9a6968c35431a6dec96363d098e6b667ada3b3c4e25cd9f4b61fb32375fa8c6d81067743a6aff02a73256f3724b82a42c5003156343c0c74936dc085abbe8a15464806a61261c2e67c72045be5293913445e6e9c7b4d941167699d1329a209680772ccaaf1b51f982a1a7d1b69b3530833547e1e692a814c306cc5b1a3e5b837753b6a4800b716bb13d40476f128a4b482b7d8815701c01c1c0005c76ed536a623435170987b49424865128d47b712f2daafdec1ad0cf361aa285a11e227edc6c36a1943d54a8a27504a37fc45d0f2c488b06676fa4faed35e283ccc7c7acbd5ca118727b592674e6f3285b3d3cc66818a44a30fc37a7847a3cc88031ebaaa9778651543614cba70b3817b3b3436b1466680c2617d54884a51649219b773429033bddb3134b066e01a4290970f6d95395df758f84a54168797cda3203d9695c19b1d6ada4dba23284cb99046344409d1b678286d577c693f95736c2bcc7ae0c8b3a4231883b2097160c5806e308583fc0a441143ae4f95a90d97b273e82152a998b34c207b0b17acec0878bc9cae4812c5762068b367f5834bcab7a5a56378ab783ffa696c45c0020f43477ddca4d00c5829a70de310b5f0c6acfe5207bc5a18bb23ae21c5be048d2dbaded1f4c7b680eb897e02147aab159f987dee744ad606d028a6cc7b2fa99bc2590ca6b0a146b0aee6755d2ee537c8bd9bf1ccdaf21a64f87e6551c00f001d00206a2390238b9db6c6e26ebfe686c980b74276056486c0109cd05ca4775ff4de76"
+              },
+              {
+                "type": 0,
+                "length": 38,
+                "hex": "00240000216766733237306e3332332e7573657273746f726167652e6d6567612e636f2e6e7a",
+                "server_names": [
+                  "gfs270n323.userstorage.mega.co.nz"
+                ]
+              },
+              {
+                "type": 27,
+                "length": 3,
+                "hex": "020002"
+              },
+              {
+                "type": 65037,
+                "length": 282,
+                "hex": "0000010001a20020fa0d27bb6f790b7fc274da396b76569939a80ff15cc4668361e09e146448063000f0a654008c2f292bb41c8bc1c3040f53dd6d472606e79c04f4fa4c910b6d3b1cda67ed2a088924f2c2789cc2046f0c6e3ac3f90bb8924ba57331382044ea674364daffe987fe4397e7f66fbcaec6b39da67cc50da7b5f0c86d63567e3174d92e206814725ce2401e5dbdbc82a8a6d46a7aff810b1717fe6a99917e23bd6700054868b16211920bbbae98d4b8a7d5365c07c881065fea8d30e8fcba6a610314b542ce2eeea5d066862feac13267acbcfd1b3b8f3ec41eb27ddcc1734dfa67da5e1c8e488618c2953d8a2240d632f8edb511099273436cd11a35370dc297686526e68e2e390a8695e746433921ab08a68b4f"
+              },
+              {
+                "type": 11,
+                "length": 2,
+                "hex": "0100"
+              },
+              {
+                "type": 65281,
+                "length": 1,
+                "hex": "00"
+              },
+              {
+                "type": 35,
+                "length": 0,
+                "hex": ""
+              },
+              {
+                "type": 13,
+                "length": 18,
+                "hex": "001004030804040105030805050108060601"
+              },
+              {
+                "type": 43690,
+                "length": 1,
+                "hex": "00"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "server": {
+      "size": 29681,
+      "base_raw_sequence": 1463563560,
+      "payload_packet_count": 23,
+      "duplicate_payload_bytes": 0,
+      "conflicting_bytes": [],
+      "gaps": [],
+      "segments": [
+        {
+          "frame": 37384,
+          "offset": 0,
+          "length": 1460,
+          "time": "1788885071.176290800"
+        },
+        {
+          "frame": 37385,
+          "offset": 1460,
+          "length": 1460,
+          "time": "1788885071.176312800"
+        },
+        {
+          "frame": 37386,
+          "offset": 2920,
+          "length": 1460,
+          "time": "1788885071.176326900"
+        },
+        {
+          "frame": 37387,
+          "offset": 4380,
+          "length": 1141,
+          "time": "1788885071.176369000"
+        },
+        {
+          "frame": 37867,
+          "offset": 5521,
+          "length": 1398,
+          "time": "1788885071.705863200"
+        },
+        {
+          "frame": 37868,
+          "offset": 6919,
+          "length": 1460,
+          "time": "1788885071.705933800"
+        },
+        {
+          "frame": 37869,
+          "offset": 8379,
+          "length": 1460,
+          "time": "1788885071.705953700"
+        },
+        {
+          "frame": 37870,
+          "offset": 9839,
+          "length": 1460,
+          "time": "1788885071.705968900"
+        },
+        {
+          "frame": 37871,
+          "offset": 11299,
+          "length": 1460,
+          "time": "1788885071.705991200"
+        },
+        {
+          "frame": 37872,
+          "offset": 12759,
+          "length": 1150,
+          "time": "1788885071.706032300"
+        },
+        {
+          "frame": 37903,
+          "offset": 13909,
+          "length": 1398,
+          "time": "1788885071.720935500"
+        },
+        {
+          "frame": 37904,
+          "offset": 15307,
+          "length": 1398,
+          "time": "1788885071.721145500"
+        },
+        {
+          "frame": 37935,
+          "offset": 16705,
+          "length": 1460,
+          "time": "1788885071.736039000"
+        },
+        {
+          "frame": 37936,
+          "offset": 18165,
+          "length": 1336,
+          "time": "1788885071.736067200"
+        },
+        {
+          "frame": 37971,
+          "offset": 19501,
+          "length": 1460,
+          "time": "1788885071.751019300"
+        },
+        {
+          "frame": 37972,
+          "offset": 20961,
+          "length": 1336,
+          "time": "1788885071.751046600"
+        },
+        {
+          "frame": 38002,
+          "offset": 22297,
+          "length": 1460,
+          "time": "1788885071.765942700"
+        },
+        {
+          "frame": 38003,
+          "offset": 23757,
+          "length": 1336,
+          "time": "1788885071.765970700"
+        },
+        {
+          "frame": 38347,
+          "offset": 25093,
+          "length": 1460,
+          "time": "1788885071.911817300"
+        },
+        {
+          "frame": 38348,
+          "offset": 26553,
+          "length": 1336,
+          "time": "1788885071.911846500"
+        },
+        {
+          "frame": 38372,
+          "offset": 27889,
+          "length": 1460,
+          "time": "1788885071.919284100"
+        },
+        {
+          "frame": 38373,
+          "offset": 29349,
+          "length": 308,
+          "time": "1788885071.919313400"
+        },
+        {
+          "frame": 694859,
+          "offset": 29657,
+          "length": 24,
+          "time": "1788885377.367457900"
+        }
+      ],
+      "tls_records": [
+        {
+          "index": 0,
+          "offset": 0,
+          "content_type": 22,
+          "legacy_version": "0x0303",
+          "length": 122,
+          "payload_offset": 5,
+          "end": 127,
+          "after_ccs": false
+        },
+        {
+          "index": 1,
+          "offset": 127,
+          "content_type": 20,
+          "legacy_version": "0x0303",
+          "length": 1,
+          "payload_offset": 132,
+          "end": 133,
+          "after_ccs": false
+        },
+        {
+          "index": 2,
+          "offset": 133,
+          "content_type": 23,
+          "legacy_version": "0x0303",
+          "length": 5383,
+          "payload_offset": 138,
+          "end": 5521,
+          "after_ccs": true
+        },
+        {
+          "index": 3,
+          "offset": 5521,
+          "content_type": 23,
+          "legacy_version": "0x0303",
+          "length": 413,
+          "payload_offset": 5526,
+          "end": 5939,
+          "after_ccs": true
+        },
+        {
+          "index": 4,
+          "offset": 5939,
+          "content_type": 23,
+          "legacy_version": "0x0303",
+          "length": 16401,
+          "payload_offset": 5944,
+          "end": 22345,
+          "after_ccs": true
+        },
+        {
+          "index": 5,
+          "offset": 22345,
+          "content_type": 23,
+          "legacy_version": "0x0303",
+          "length": 7307,
+          "payload_offset": 22350,
+          "end": 29657,
+          "after_ccs": true
+        },
+        {
+          "index": 6,
+          "offset": 29657,
+          "content_type": 23,
+          "legacy_version": "0x0303",
+          "length": 19,
+          "payload_offset": 29662,
+          "end": 29681,
+          "after_ccs": true
+        }
+      ],
+      "handshakes": [
+        {
+          "type": 2,
+          "length": 118,
+          "hello": {
+            "legacy_version": "0303",
+            "random": "7f596d2ddfcb0f773bdaaf929c34acb1b505691c6d572e834fcdb9db0e3dfa15",
+            "session_id": "8c7735083a7b679e5057f574883abf4648f958f33f99a8f96b68eef4b20229b1",
+            "cipher_suite": "0x1301",
+            "compression": 0,
+            "extensions": [
+              {
+                "type": 51,
+                "length": 36,
+                "hex": "001d002098c63f97f5093b7b664c5dc695629678ab9122ab9c9ee42e75dfe99eadee8840"
+              },
+              {
+                "type": 43,
+                "length": 2,
+                "hex": "0304",
+                "supported_versions": "0304"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "tshark_handshakes": [
+    {
+      "frame": 37384,
+      "time": "1788885071.176290800",
+      "src": "89.44.168.33",
+      "sport": "443",
+      "dst": "192.168.76.131",
+      "dport": "48418",
+      "seq": 1463563560,
+      "ack": "812766523",
+      "flags": 16,
+      "tcp_len": 1460,
+      "hs_type": "2",
+      "hs_version": "0x0303",
+      "hs_random": "7f596d2ddfcb0f773bdaaf929c34acb1b505691c6d572e834fcdb9db0e3dfa15",
+      "hs_suites": "0x1301",
+      "sni": "",
+      "alpn": "",
+      "supported_version": "0x0304",
+      "direction": "server"
+    }
+  ]
+}

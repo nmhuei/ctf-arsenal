@@ -1,0 +1,16 @@
+{
+  "length": 12,
+  "alphabet": "ASCII32..126",
+  "parameterization": "q_i=low8(X_i)",
+  "timeout_ms": 20000,
+  "status": "unknown",
+  "elapsed_seconds": 20.023697937998804,
+  "controls": {
+    "random_reconstruction_cases": 100,
+    "pinned_sat": true,
+    "wrong_target_unsat": true
+  },
+  "equivalent_only": true,
+  "reason_unknown": "timeout",
+  "statistics": "(:max-memory              127.79\n :memory                  28.51\n :num-allocs              22038036418.00\n :rlimit-count            114540271\n :sat-backjumps           66032\n :sat-conflicts           66032\n :sat-decisions           96323\n :sat-del-clause          93857\n :sat-elim-bool-vars-res  8305\n :sat-elim-clauses        1727\n :sat-elim-literals       1262\n :sat-gc-clause           43292\n :sat-minimized-lits      284592\n :sat-mk-clause-2ary      19465\n :sat-mk-clause-3ary      10304\n :sat-mk-clause-nary      297996\n :sat-mk-var              41762\n :sat-probing-assigned    12\n :sat-propagations-2ary   4421109\n :sat-propagations-nary   110914130\n :sat-restarts            11437\n :sat-scc-elim-vars       109\n :sat-subs-resolution     203\n :sat-subs-resolution-dyn 1061\n :sat-subsumed            8863\n :sat-units               360\n :solve-eqs-elim-vars     39\n :solve-eqs-steps         2502\n :time                    20.02)"
+}

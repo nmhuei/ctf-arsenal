@@ -1,0 +1,8 @@
+{
+  "author": "frank77",
+  "content": "# Embedded Rust: First Impressions\n\nI spent the last month porting a small firmware project from C to Rust. Here's my honest take.\n\n## The good\n\n- Zero-cost abstractions hold up in practice\n- The borrow checker prevents an entire class of memory bugs at compile time\n- `probe-rs` makes flashing and debugging painless\n\n## The frustrating\n\n- Async on `no_std` is still rough around the edges\n- Crate ecosystem fragmentation for certain MCU families\n\n## Verdict\n\nFor a new project: Rust. For legacy C with 10 years of field history: stay put.\n",
+  "created_at": "2026-03-11T23:00:00Z",
+  "id": "1679091c-5a88-0faf-6fb5-e6087eb1b2dc",
+  "sig": "u_580aa44c55d7ef0ce9f8dfc9",
+  "title": "Embedded Rust: first impressions"
+}

@@ -1,0 +1,20 @@
+<!doctype html>
+<meta charset="utf-8">
+<script>
+const lines = ["function trigger(x, alias, idx, limit) {"];
+for (let i = 0; i < 650; i++) lines.push(`  if (x === ${i}) return ${i};`);
+lines.push("  let i = 0, res = 0;");
+lines.push("  while (i < limit) {");
+for (let i = 0; i < 430; i++) lines.push(`    res = (res + i) | 0;`);
+lines.push("    res = alias[idx] + 0.0;");
+lines.push("    i++;");
+lines.push("  }");
+lines.push("  return res;");
+lines.push("}");
+lines.push("return trigger;");
+const trigger = new Function(lines.join("\n"))();
+function makeDouble() { return [1.1, 2.2, 3.3]; }
+for (let i = 0; i < 30000; i++) trigger(1000, makeDouble(), 0, 1);
+console.log("warmup complete");
+setTimeout(() => console.log("result", trigger(1000, makeDouble(), 0, 1)), 2000);
+</script>

@@ -1,0 +1,459 @@
+I0925 12:56:24.646825      36 server.go:1580] Starting language server process with pid 3023017
+I0925 12:56:24.649671      36 server.go:1631] Language server version: 1.2.11
+I0925 12:56:24.649693      36 server.go:615] Language server will attempt to listen on host localhost
+I0925 12:56:24.650854      36 server.go:630] Language server listening on random port at 41779 for HTTPS (gRPC)
+I0925 12:56:24.651038      36 server.go:638] Language server listening on random port at 40433 for HTTP
+W0925 12:56:25.179460      90 cache.go:135] Cache(loadCodeAssistResponse): Singleflight refresh failed: error getting token source: You are not logged into Antigravity.
+E0925 12:56:25.179689      90 errorreport.go:224] error getting token source: You are not logged into Antigravity.
+E0925 12:56:25.182441      90 errorreport.go:224] Failed to poll ListExperiments: error getting token source: You are not logged into Antigravity.
+I0925 12:56:25.182505      90 model_configs.go:226] Auth mode is unspecified, skipping fetchAvailableModels and returning empty response
+I0925 12:56:25.185242      96 store_client.go:697] summary store: starting background reconciliation (trigger=startup)
+W0925 12:56:25.187250      36 cache.go:135] Cache(loadCodeAssistResponse): Singleflight refresh failed: error getting token source: You are not logged into Antigravity.
+E0925 12:56:25.187299      36 errorreport.go:224] error getting token source: You are not logged into Antigravity.
+W0925 12:56:25.188829      36 cache.go:135] Cache(userInfo): Singleflight refresh failed: failed to get load code assist response: error getting token source: You are not logged into Antigravity.
+E0925 12:56:25.188859      36 errorreport.go:224] failed to get load code assist response: error getting token source: You are not logged into Antigravity.
+W0925 12:56:25.189260      36 cache.go:135] Cache(loadCodeAssistResponse): Singleflight refresh failed: error getting token source: You are not logged into Antigravity.
+E0925 12:56:25.189286      36 errorreport.go:224] error getting token source: You are not logged into Antigravity.
+W0925 12:56:25.189349      36 cache.go:135] Cache(userInfo): Singleflight refresh failed: failed to get load code assist response: error getting token source: You are not logged into Antigravity.
+E0925 12:56:25.189361      36 errorreport.go:224] failed to get load code assist response: error getting token source: You are not logged into Antigravity.
+W0925 12:56:25.189434      36 cache.go:135] Cache(loadCodeAssistResponse): Singleflight refresh failed: error getting token source: You are not logged into Antigravity.
+E0925 12:56:25.189456      36 errorreport.go:224] error getting token source: You are not logged into Antigravity.
+W0925 12:56:25.189532      36 cache.go:135] Cache(userInfo): Singleflight refresh failed: failed to get load code assist response: error getting token source: You are not logged into Antigravity.
+E0925 12:56:25.189549      36 errorreport.go:224] failed to get load code assist response: error getting token source: You are not logged into Antigravity.
+W0925 12:56:25.191577      36 defaults.go:706] failed to get cs path: cs path /usr/bin/cs invalid
+I0925 12:56:25.191967      36 manager.go:108] Creating trajectory store manager with proto store and SQLite store
+W0925 12:56:25.193399     121 cache.go:135] Cache(loadCodeAssistResponse): Singleflight refresh failed: error getting token source: You are not logged into Antigravity.
+E0925 12:56:25.193429     121 errorreport.go:224] error getting token source: You are not logged into Antigravity.
+I0925 12:56:25.194803      96 store_client.go:747] summary store: reconciliation complete, synced 62 records
+W0925 12:56:25.194904      96 cache.go:135] Cache(loadCodeAssistResponse): Singleflight refresh failed: error getting token source: You are not logged into Antigravity.
+E0925 12:56:25.194925      96 errorreport.go:224] error getting token source: You are not logged into Antigravity.
+W0925 12:56:25.195416      96 cache.go:135] Cache(userInfo): Singleflight refresh failed: failed to get load code assist response: error getting token source: You are not logged into Antigravity.
+E0925 12:56:25.195451      96 errorreport.go:224] failed to get load code assist response: error getting token source: You are not logged into Antigravity.
+W0925 12:56:25.195740     163 cache.go:135] Cache(loadCodeAssistResponse): Singleflight refresh failed: error getting token source: You are not logged into Antigravity.
+E0925 12:56:25.195779     163 errorreport.go:224] error getting token source: You are not logged into Antigravity.
+W0925 12:56:25.195913     163 cache.go:135] Cache(userInfo): Singleflight refresh failed: failed to get load code assist response: error getting token source: You are not logged into Antigravity.
+E0925 12:56:25.195936     163 errorreport.go:224] failed to get load code assist response: error getting token source: You are not logged into Antigravity.
+W0925 12:56:25.197247     200 cache.go:135] Cache(loadCodeAssistResponse): Singleflight refresh failed: error getting token source: You are not logged into Antigravity.
+E0925 12:56:25.197298     200 errorreport.go:224] error getting token source: You are not logged into Antigravity.
+W0925 12:56:25.197414     200 cache.go:135] Cache(userInfo): Singleflight refresh failed: failed to get load code assist response: error getting token source: You are not logged into Antigravity.
+E0925 12:56:25.197440     200 errorreport.go:224] failed to get load code assist response: error getting token source: You are not logged into Antigravity.
+W0925 12:56:25.198356      36 cache.go:135] Cache(loadCodeAssistResponse): Singleflight refresh failed: error getting token source: You are not logged into Antigravity.
+E0925 12:56:25.198426      36 errorreport.go:224] error getting token source: You are not logged into Antigravity.
+W0925 12:56:25.198558      36 cache.go:135] Cache(userInfo): Singleflight refresh failed: failed to get load code assist response: error getting token source: You are not logged into Antigravity.
+E0925 12:56:25.198590      36 errorreport.go:224] failed to get load code assist response: error getting token source: You are not logged into Antigravity.
+W0925 12:56:25.198751     135 cache.go:135] Cache(loadCodeAssistResponse): Singleflight refresh failed: error getting token source: You are not logged into Antigravity.
+E0925 12:56:25.198799     135 errorreport.go:224] error getting token source: You are not logged into Antigravity.
+W0925 12:56:25.198882     135 cache.go:135] Cache(userInfo): Singleflight refresh failed: failed to get load code assist response: error getting token source: You are not logged into Antigravity.
+E0925 12:56:25.198901     135 errorreport.go:224] failed to get load code assist response: error getting token source: You are not logged into Antigravity.
+I0925 12:56:25.204280     226 manager.go:88] Migration [MIGRATION_ID_SIDECAR_USER_CONFIG_BYPASS] is disabled, skipping entirely
+I0925 12:56:25.204322     226 manager.go:91] Migration [MIGRATION_ID_SANITY_CHECK_PROJECT_URIS] is enabled
+I0925 12:56:25.204402     226 manager.go:100] Migration [MIGRATION_ID_SANITY_CHECK_PROJECT_URIS] already has status MIGRATION_STATUS_COMPLETED, skipping
+I0925 12:56:25.204409     226 manager.go:91] Migration [MIGRATION_ID_PLUGIN_ENABLEMENT] is enabled
+I0925 12:56:25.204433     226 manager.go:100] Migration [MIGRATION_ID_PLUGIN_ENABLEMENT] already has status MIGRATION_STATUS_COMPLETED, skipping
+I0925 12:56:25.204604     226 manager.go:91] Migration [MIGRATION_ID_BUILTIN_SIDECARS_TO_PLUGINS] is enabled
+I0925 12:56:25.204678     226 manager.go:100] Migration [MIGRATION_ID_BUILTIN_SIDECARS_TO_PLUGINS] already has status MIGRATION_STATUS_COMPLETED, skipping
+I0925 12:56:25.204694     226 manager.go:88] Migration [MIGRATION_ID_LIN_BUILTIN_TO_MARKETPLACE] is disabled, skipping entirely
+I0925 12:56:25.204698     226 manager.go:88] Migration [MIGRATION_ID_ADOPT_BWG_INSTALLS] is disabled, skipping entirely
+I0925 12:56:25.231265      36 server.go:3073] Auth succeeded, refreshing features and managers
+W0925 12:56:25.231354      36 cache.go:135] Cache(loadCodeAssistResponse): Singleflight refresh failed: error getting token source: You are not logged into Antigravity.
+E0925 12:56:25.231396      36 errorreport.go:224] error getting token source: You are not logged into Antigravity.
+E0925 12:56:25.231496      36 errorreport.go:224] Failed to poll ListExperiments: error getting token source: You are not logged into Antigravity.
+I0925 12:56:25.231541      36 server.go:3080] State refresh took 0ms
+I0925 12:56:25.231786      36 server.go:3091] [RemoteControl] Subscription callback triggered.
+I0925 12:56:25.231885      36 server.go:3094] [RemoteControl] RemoteControlEnabled value: false
+I0925 12:56:25.231889      36 server.go:3770] [RemoteControl] Session toggle is off, staying disconnected
+I0925 12:56:25.231892      36 server.go:3481] [RemoteControl] Resolved proxyServerURL: ""
+I0925 12:56:25.231917      36 profiler.go:231] Continuous pprof profiling is disabled.
+I0925 12:56:25.232027     245 manager.go:88] Migration [MIGRATION_ID_SIDECAR_USER_CONFIG_BYPASS] is disabled, skipping entirely
+I0925 12:56:25.232045     245 manager.go:91] Migration [MIGRATION_ID_SANITY_CHECK_PROJECT_URIS] is enabled
+I0925 12:56:25.232119     245 manager.go:100] Migration [MIGRATION_ID_SANITY_CHECK_PROJECT_URIS] already has status MIGRATION_STATUS_COMPLETED, skipping
+I0925 12:56:25.232123     245 manager.go:91] Migration [MIGRATION_ID_PLUGIN_ENABLEMENT] is enabled
+I0925 12:56:25.232151     245 manager.go:100] Migration [MIGRATION_ID_PLUGIN_ENABLEMENT] already has status MIGRATION_STATUS_COMPLETED, skipping
+I0925 12:56:25.232154     245 manager.go:91] Migration [MIGRATION_ID_BUILTIN_SIDECARS_TO_PLUGINS] is enabled
+I0925 12:56:25.232179     245 manager.go:100] Migration [MIGRATION_ID_BUILTIN_SIDECARS_TO_PLUGINS] already has status MIGRATION_STATUS_COMPLETED, skipping
+I0925 12:56:25.232183     245 manager.go:88] Migration [MIGRATION_ID_LIN_BUILTIN_TO_MARKETPLACE] is disabled, skipping entirely
+I0925 12:56:25.232186     245 manager.go:88] Migration [MIGRATION_ID_ADOPT_BWG_INSTALLS] is disabled, skipping entirely
+I0925 12:56:25.232651      36 server.go:2532] initialized server successfully in 584.728986ms
+W0925 12:56:25.232942     248 cache.go:135] Cache(loadCodeAssistResponse): Singleflight refresh failed: error getting token source: You are not logged into Antigravity.
+E0925 12:56:25.232994     248 errorreport.go:224] error getting token source: You are not logged into Antigravity.
+W0925 12:56:25.233144     248 cache.go:135] Cache(userInfo): Singleflight refresh failed: failed to get load code assist response: error getting token source: You are not logged into Antigravity.
+E0925 12:56:25.233176     248 errorreport.go:224] failed to get load code assist response: error getting token source: You are not logged into Antigravity.
+I0925 12:56:25.234551       1 auto_updater.go:334] Spawned background update process with PID 3023134
+I0925 12:56:25.234851       1 common.go:152] Launching CLI mode
+E0925 12:56:25.234873       1 launchsteps.go:84] Failed to resolve GeminiDir ".gemini": .gemini must be an absolute path: path is not absolute, falling back to default
+I0925 12:56:25.234894       1 common.go:174] CLI app data directory: /home/light/.gemini/antigravity-cli
+I0925 12:56:25.234912       1 server.go:315] Creating CLI server backend: product=antigravity workspaceDirs=[/home/light/Workspace/CTF/CSCV_2026_Quals/Misc/Super_Agent/script/offline_consult] appDataDir=/home/light/.gemini/antigravity-cli cascadeManager=true codeAssist=true
+I0925 12:56:25.235608       1 auth_provider.go:952] [AuthProvider] SetEnableBusinessLogin called with enable: true
+W0925 12:56:25.236390     264 cache.go:135] Cache(loadCodeAssistResponse): Singleflight refresh failed: error getting token source: You are not logged into Antigravity.
+E0925 12:56:25.236416     264 errorreport.go:224] error getting token source: You are not logged into Antigravity.
+W0925 12:56:25.236516     264 cache.go:135] Cache(userInfo): Singleflight refresh failed: failed to get load code assist response: error getting token source: You are not logged into Antigravity.
+E0925 12:56:25.236531     264 errorreport.go:224] failed to get load code assist response: error getting token source: You are not logged into Antigravity.
+I0925 12:56:25.236548       1 server.go:2166] Backend project ID updated dynamically to: default-cli-project
+I0925 12:56:25.236780       1 analytics.go:186] CLI startup completed (took 591.38097ms)
+W0925 12:56:25.236924     264 cache.go:135] Cache(loadCodeAssistResponse): Singleflight refresh failed: error getting token source: You are not logged into Antigravity.
+E0925 12:56:25.236955     264 errorreport.go:224] error getting token source: You are not logged into Antigravity.
+W0925 12:56:25.237014     264 cache.go:135] Cache(userInfo): Singleflight refresh failed: failed to get load code assist response: error getting token source: You are not logged into Antigravity.
+E0925 12:56:25.237026     264 errorreport.go:224] failed to get load code assist response: error getting token source: You are not logged into Antigravity.
+W0925 12:56:25.237081     264 cache.go:135] Cache(loadCodeAssistResponse): Singleflight refresh failed: error getting token source: You are not logged into Antigravity.
+E0925 12:56:25.237093     264 errorreport.go:224] error getting token source: You are not logged into Antigravity.
+W0925 12:56:25.237138     264 cache.go:135] Cache(userInfo): Singleflight refresh failed: failed to get load code assist response: error getting token source: You are not logged into Antigravity.
+E0925 12:56:25.237149     264 errorreport.go:224] failed to get load code assist response: error getting token source: You are not logged into Antigravity.
+I0925 12:56:25.236942       1 printmode.go:181] Print mode: starting (promptLength=152, model="", conversationID="")
+I0925 12:56:25.237708       1 manager.go:443] Initializing CLI store manager for workspace /home/light/Workspace/CTF/CSCV_2026_Quals/Misc/Super_Agent/script/offline_consult
+I0925 12:56:25.238836       1 cli_setting_manager.go:156] applyUserSettings: no shared config permissions from /home/light/.gemini/config/config.json
+I0925 12:56:25.239238       1 cli_setting_manager.go:92] CLI settings initialized: permissions=<nil>, toolPermission=request-review
+W0925 12:56:25.239376     264 cache.go:135] Cache(loadCodeAssistResponse): Singleflight refresh failed: error getting token source: You are not logged into Antigravity.
+E0925 12:56:25.239425     264 errorreport.go:224] error getting token source: You are not logged into Antigravity.
+W0925 12:56:25.239553     264 cache.go:135] Cache(userInfo): Singleflight refresh failed: failed to get load code assist response: error getting token source: You are not logged into Antigravity.
+E0925 12:56:25.239580     264 errorreport.go:224] failed to get load code assist response: error getting token source: You are not logged into Antigravity.
+I0925 12:56:25.243087       1 hooks_manager.go:53] loaded 1 named hooks from 1 hooks.json file(s)
+I0925 12:56:25.243126       1 manager.go:627] CLI store manager initialized successfully
+I0925 12:56:25.243148       1 session.go:86] Print mode: enabling terminal sandbox for this session
+W0925 12:56:25.251746     338 cache.go:135] Cache(loadCodeAssistResponse): Singleflight refresh failed: error getting token source: You are not logged into Antigravity.
+E0925 12:56:25.251794     338 errorreport.go:224] error getting token source: You are not logged into Antigravity.
+W0925 12:56:25.251879     338 cache.go:135] Cache(userInfo): Singleflight refresh failed: failed to get load code assist response: error getting token source: You are not logged into Antigravity.
+E0925 12:56:25.251896     338 errorreport.go:224] failed to get load code assist response: error getting token source: You are not logged into Antigravity.
+W0925 12:56:25.251991     326 cache.go:135] Cache(loadCodeAssistResponse): Singleflight refresh failed: error getting token source: You are not logged into Antigravity.
+E0925 12:56:25.252006     326 errorreport.go:224] error getting token source: You are not logged into Antigravity.
+W0925 12:56:25.252048     326 cache.go:135] Cache(userInfo): Singleflight refresh failed: failed to get load code assist response: error getting token source: You are not logged into Antigravity.
+E0925 12:56:25.252063     326 errorreport.go:224] failed to get load code assist response: error getting token source: You are not logged into Antigravity.
+E0925 12:56:25.254026       1 errorreport.go:224] Unable to start git event watcher for workspace file:///home/light/Workspace/CTF/CSCV_2026_Quals/Misc/Super_Agent/script/offline_consult: failed to create git event watcher for /home/light/Workspace/CTF: core.repositoryformatversion does not support extension: worktreeconfig: core.repositoryformatversion does not support extension: worktreeconfig
+I0925 12:56:25.254296     341 manager.go:1331] Reloading system slash commands and skills
+I0925 12:56:25.254315     341 manager.go:1308] Reloading system slash commands
+I0925 12:56:25.254322     341 manager.go:1312] Slash commands unchanged, skipping update
+I0925 12:56:25.256467       1 hooks_manager.go:53] loaded 1 named hooks from 1 hooks.json file(s)
+I0925 12:56:25.256492       1 printmode.go:818] Print mode: applying agent mode plan
+I0925 12:56:25.256498       1 manager.go:1379] SetCycleMode called: plan
+I0925 12:56:25.256515       1 printmode.go:372] Print mode: not authenticated, trying silent auth
+I0925 12:56:25.262277     423 keyring.go:64] keyringAuth: loaded token, expiry=2026-09-25 13:26:52.852026097 +0700 +07 expired=false
+I0925 12:56:25.262347       1 auth.go:157] ChainedAuth: authenticated via keyring (effective: keyring)
+I0925 12:56:25.262353       1 server_oauth.go:196] applyAuthResult: email=absolute3k@gmail.com, authMethod=consumer, quotaProject=
+I0925 12:56:25.262356       1 server_oauth.go:201] OAuth: authenticated successfully as absolute3k@gmail.com
+I0925 12:56:25.262359       1 server_oauth.go:207] b.codeAssistClient.AuthProvider (0x2fee41da7770) is same as b.cliAuth (0x2fee41da7770)
+W0925 12:56:25.262600     335 cache.go:163] Failed to refresh cache in background: admin controls not applicable
+W0925 12:56:25.262668     235 cache.go:163] Failed to refresh cache in background: admin controls not applicable
+E0925 12:56:25.764177     193 repo.go:368] failed to create patch for untracked file ASIS_CTF_Quals_2026/Crypto/Fence/challenge/Fence_7e750d85599a53701faa9ec6b58323c4b4a9d977.txz: bytes are not valid utf8
+E0925 12:56:25.765037     193 repo.go:368] failed to create patch for untracked file ASIS_CTF_Quals_2026/Crypto/Hackel/challenge/Hackel_167b289c63c46836d376945105d757028321303a.txz: bytes are not valid utf8
+E0925 12:56:25.765774     193 repo.go:368] failed to create patch for untracked file ASIS_CTF_Quals_2026/Crypto/Headache/challenge/Headache_dd252a8948d2ec605553e4047246b8f81cf801cd.txz: bytes are not valid utf8
+E0925 12:56:25.770174     193 repo.go:368] failed to create patch for untracked file ASIS_CTF_Quals_2026/Crypto/Pancake/challenge/Pancake_bf844b6c9e574c6f80b121155918b76ff3658962.txz: bytes are not valid utf8
+E0925 12:56:25.771417     193 repo.go:368] failed to create patch for untracked file ASIS_CTF_Quals_2026/Crypto/Sultan/challenge/Sultan_3941e94ae8b90cd1152a5ffb08edcfecc6949fd4.txz: bytes are not valid utf8
+E0925 12:56:25.775373     193 repo.go:368] failed to create patch for untracked file ASIS_CTF_Quals_2026/Hardware/Echoes/challenge/Echoes_a6abb166d71df1315e611540520dde97d6811a75.txz: bytes are not valid utf8
+E0925 12:56:25.777871     193 repo.go:368] failed to create patch for untracked file ASIS_CTF_Quals_2026/Hardware/OutOfPhase/challenge/extracted/OutOfPhase/oopenc: bytes are not valid utf8
+E0925 12:56:25.778533     193 repo.go:368] failed to create patch for untracked file ASIS_CTF_Quals_2026/Hardware/OutOfPhase/script/extract/OutOfPhase/oopenc: bytes are not valid utf8
+E0925 12:56:25.783175     193 repo.go:368] failed to create patch for untracked file ASIS_CTF_Quals_2026/Pwnable/Arena_Snapshots/challenge/arena-snapshots_f3df2911b7bb124d34b4810d8ee87330959ae1ad.txz: bytes are not valid utf8
+E0925 12:56:25.784035     193 repo.go:368] failed to create patch for untracked file ASIS_CTF_Quals_2026/Pwnable/Dead_Letter/challenge/dead-letter-queue_b8dacfd42cdadda3d61139356adf6267e8aeed9d.txz: bytes are not valid utf8
+E0925 12:56:25.786615     193 repo.go:368] failed to create patch for untracked file ASIS_CTF_Quals_2026/Pwnable/Signal_Race/challenge/Signal_Race_5cfce154b37a7b3531fe35bd6ee161d6a5f17964.txz: bytes are not valid utf8
+E0925 12:56:25.787422     193 repo.go:368] failed to create patch for untracked file ASIS_CTF_Quals_2026/Reverse/ASIS_Arch/challenge/ASIS-Arch_2671a9f8046f73ecbbaa579a1daca1819e975772.txz: bytes are not valid utf8
+E0925 12:56:25.790966     193 repo.go:368] failed to create patch for untracked file ASIS_CTF_Quals_2026/Reverse/Beyond_the_fourth_wall/challenge/Beyond/beyond.elf: bytes are not valid utf8
+E0925 12:56:25.793946     193 repo.go:368] failed to create patch for untracked file ASIS_CTF_Quals_2026/Reverse/Beyond_the_fourth_wall/work/Beyond/beyond.elf: bytes are not valid utf8
+E0925 12:56:25.795855     193 repo.go:368] failed to create patch for untracked file ASIS_CTF_Quals_2026/Reverse/LeakMeAk/challenge/LeakMeAk_f9e29089aee4968435d8e68e316f36d37d1bd002.txz: bytes are not valid utf8
+E0925 12:56:25.796626     193 repo.go:368] failed to create patch for untracked file ASIS_CTF_Quals_2026/Reverse/Lesh/challenge/Lesh_6d7379445e6714458e86c4c7a98924c3c7eb0d45.txz: bytes are not valid utf8
+E0925 12:56:25.803569     193 repo.go:368] failed to create patch for untracked file ASIS_CTF_Quals_2026/Web/Proxy_Dough/challenge/ProxyDough_faab7cb2ef78e1be178d2feffc266a4e6fba3233.txz: bytes are not valid utf8
+E0925 12:56:25.809636     193 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Crypto/Baby_Circuit/script/public/hw_model.cpython-311-x86_64-linux-gnu.so.id2: bytes are not valid utf8
+E0925 12:56:25.809894     193 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Crypto/Baby_Circuit/script/public/hw_model.cpython-311-x86_64-linux-gnu.so.nam: bytes are not valid utf8
+E0925 12:56:25.809942     193 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Crypto/Baby_Circuit/script/public/hw_model.cpython-311-x86_64-linux-gnu.so.til: bytes are not valid utf8
+E0925 12:56:25.811099     193 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Crypto/Residuegate/challenge/give_to_player/local-data/base_badge.png: bytes are not valid utf8
+E0925 12:56:25.812434     193 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Crypto/Residuegate/script/bruteforce_commitment: bytes are not valid utf8
+E0925 12:56:25.813024     193 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Crypto/Residuegate/script/gdb_slot_local.png: bytes are not valid utf8
+E0925 12:56:25.814890     193 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Crypto/Residuegate/script/ida/residuegate.id2: bytes are not valid utf8
+E0925 12:56:25.815296     193 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Crypto/Residuegate/script/ida/residuegate.nam: bytes are not valid utf8
+E0925 12:56:25.815452     193 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Crypto/Residuegate/script/ida/residuegate.til: bytes are not valid utf8
+E0925 12:56:25.817396     193 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Crypto/Residuegate/script/local_slot_0.png: bytes are not valid utf8
+E0925 12:56:25.817582     193 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Crypto/Residuegate/script/local_slot_1.png: bytes are not valid utf8
+E0925 12:56:25.817621     193 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Crypto/Residuegate/script/local_slot_2.png: bytes are not valid utf8
+E0925 12:56:25.817658     193 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Crypto/Residuegate/script/local_slot_3.png: bytes are not valid utf8
+E0925 12:56:25.817695     193 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Crypto/Residuegate/script/local_slot_4.png: bytes are not valid utf8
+E0925 12:56:25.817733     193 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Crypto/Residuegate/script/local_slot_5.png: bytes are not valid utf8
+E0925 12:56:25.818780     193 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Crypto/Residuegate/script/local_slot_session_session_id_75facdf7136cbf6f727e0dfa30b90d96_slot_0.body: bytes are not valid utf8
+E0925 12:56:25.822801     193 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Crypto/Residuegate/script/variants/variant-0.png: bytes are not valid utf8
+E0925 12:56:25.823026     193 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Crypto/Residuegate/script/variants/variant-1.png: bytes are not valid utf8
+E0925 12:56:25.823074     193 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Crypto/Residuegate/script/variants/variant-10.png: bytes are not valid utf8
+E0925 12:56:25.823119     193 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Crypto/Residuegate/script/variants/variant-11.png: bytes are not valid utf8
+E0925 12:56:25.823180     193 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Crypto/Residuegate/script/variants/variant-12.png: bytes are not valid utf8
+E0925 12:56:25.823220     193 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Crypto/Residuegate/script/variants/variant-13.png: bytes are not valid utf8
+E0925 12:56:25.823258     193 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Crypto/Residuegate/script/variants/variant-14.png: bytes are not valid utf8
+E0925 12:56:25.823293     193 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Crypto/Residuegate/script/variants/variant-15.png: bytes are not valid utf8
+E0925 12:56:25.823328     193 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Crypto/Residuegate/script/variants/variant-2.png: bytes are not valid utf8
+E0925 12:56:25.823364     193 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Crypto/Residuegate/script/variants/variant-3.png: bytes are not valid utf8
+E0925 12:56:25.823398     193 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Crypto/Residuegate/script/variants/variant-4.png: bytes are not valid utf8
+E0925 12:56:25.823432     193 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Crypto/Residuegate/script/variants/variant-5.png: bytes are not valid utf8
+E0925 12:56:25.823467     193 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Crypto/Residuegate/script/variants/variant-6.png: bytes are not valid utf8
+E0925 12:56:25.823501     193 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Crypto/Residuegate/script/variants/variant-7.png: bytes are not valid utf8
+E0925 12:56:25.823535     193 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Crypto/Residuegate/script/variants/variant-8.png: bytes are not valid utf8
+E0925 12:56:25.823569     193 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Crypto/Residuegate/script/variants/variant-9.png: bytes are not valid utf8
+E0925 12:56:25.824404     193 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Crypto/Typhone/challenge/here: bytes are not valid utf8
+E0925 12:56:25.825106     193 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Crypto/chimera/challenge/here: bytes are not valid utf8
+E0925 12:56:25.826823     193 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Crypto/chimera/script/residue_search: bytes are not valid utf8
+E0925 12:56:25.827903     193 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Crypto/chimera/script/second_download.zip: bytes are not valid utf8
+E0925 12:56:25.831790     193 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Forensics/From_Update_To_Encrypt/script/x/Users/Public/MetaData/Data/1337dakl.txt.enc: bytes are not valid utf8
+E0925 12:56:25.832031     193 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Forensics/From_Update_To_Encrypt/script/x/Users/Public/MetaData/Data/hi.txt.enc: bytes are not valid utf8
+E0925 12:56:25.832096     193 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Forensics/From_Update_To_Encrypt/script/x/Users/Public/MetaData/Data/ptit.txt.enc: bytes are not valid utf8
+E0925 12:56:25.837636     193 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Forensics/Silent_Room/script/out/c56.png: bytes are not valid utf8
+E0925 12:56:25.837860     193 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Forensics/Silent_Room/script/out/c58.png: bytes are not valid utf8
+E0925 12:56:25.838106     193 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Forensics/Silent_Room/script/out/pic87.jpg: bytes are not valid utf8
+E0925 12:56:25.838188     193 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Forensics/Silent_Room/script/out/pic88.jpg: bytes are not valid utf8
+E0925 12:56:25.838373     193 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Forensics/Silent_Room/script/out/pic99.jpg: bytes are not valid utf8
+E0925 12:56:25.838653     193 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Forensics/Silent_Room/script/out/proof.decrypted.png: bytes are not valid utf8
+E0925 12:56:25.838908     193 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Forensics/Silent_Room/script/out/proof.png: bytes are not valid utf8
+E0925 12:56:25.840053     193 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Misc/Super_Agent/challenge/ctf_super_agent_can_solve_this.challage: bytes are not valid utf8
+E0925 12:56:25.840068     193 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Misc/Super_Agent/challenge/here: bytes are not valid utf8
+E0925 12:56:25.844180     193 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Misc/Weirdo/script/sys_3.png: bytes are not valid utf8
+E0925 12:56:25.845027     193 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Misc/Weirdo/script/sys_all.png: bytes are not valid utf8
+E0925 12:56:25.846389     193 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Pwn/MARIONETTE/challenge/here: bytes are not valid utf8
+E0925 12:56:25.847872     193 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Pwn/Message_System/challenge/here: bytes are not valid utf8
+E0925 12:56:25.849490     193 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Pwn/Message_System/script/extracted/challenge: bytes are not valid utf8
+E0925 12:56:25.849714     193 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Pwn/Message_System/script/test_fake_free: bytes are not valid utf8
+E0925 12:56:25.851567     193 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/RE/BabyCrackMe/challenge/here: bytes are not valid utf8
+E0925 12:56:25.852439     193 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/RE/Ghost_Dependency/challenge/here: bytes are not valid utf8
+E0925 12:56:25.854842     193 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/RE/Signed,_Sealed,_Subverted/challenge/handout/public-keys.cbor: bytes are not valid utf8
+E0925 12:56:25.854941     193 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/RE/Signed,_Sealed,_Subverted/challenge/handout/signed-base.upd: bytes are not valid utf8
+E0925 12:56:25.856376     193 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/RE/Signed,_Sealed,_Subverted/extracted/handout/public-keys.cbor: bytes are not valid utf8
+E0925 12:56:25.856652     193 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/RE/Signed,_Sealed,_Subverted/extracted/handout/signed-base.upd: bytes are not valid utf8
+E0925 12:56:25.862041     193 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Web/Exam_Score/challenge/here: bytes are not valid utf8
+E0925 12:56:25.863285     193 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Web/Inoffice/challenge/here: bytes are not valid utf8
+E0925 12:56:25.887487     193 repo.go:368] failed to create patch for untracked file CTF_Da_Nang_2026/Crypto/Crypto_Challenge_9/script/aes_cnf/: read /home/light/Workspace/CTF/CTF_Da_Nang_2026/Crypto/Crypto_Challenge_9/script/aes_cnf: is a directory
+E0925 12:56:25.894950     193 repo.go:368] failed to create patch for untracked file CTF_Da_Nang_2026/Forensics/HIve_Discovery/script/LABREMOVE.EXE-27D1C127.pf: bytes are not valid utf8
+E0925 12:56:25.895161     193 repo.go:368] failed to create patch for untracked file CTF_Da_Nang_2026/Forensics/HIve_Discovery/script/Lab03-01.exe: bytes are not valid utf8
+E0925 12:56:25.895379     193 repo.go:368] failed to create patch for untracked file CTF_Da_Nang_2026/Forensics/HIve_Discovery/script/Lab03-03.exe: bytes are not valid utf8
+E0925 12:56:25.895587     193 repo.go:368] failed to create patch for untracked file CTF_Da_Nang_2026/Forensics/HIve_Discovery/script/Lab03-04.exe: bytes are not valid utf8
+E0925 12:56:25.896429     193 repo.go:368] failed to create patch for untracked file CTF_Da_Nang_2026/Forensics/HIve_Discovery/script/VMX32TO64.EXE-1699ED6A.pf: bytes are not valid utf8
+E0925 12:56:25.896648     193 repo.go:368] failed to create patch for untracked file CTF_Da_Nang_2026/Forensics/HIve_Discovery/script/VMX64TO32.EXE-1AA8A9D1.pf: bytes are not valid utf8
+E0925 12:56:25.896866     193 repo.go:368] failed to create patch for untracked file CTF_Da_Nang_2026/Forensics/HIve_Discovery/script/admin-history-index.dat: bytes are not valid utf8
+E0925 12:56:25.897046     193 repo.go:368] failed to create patch for untracked file CTF_Da_Nang_2026/Forensics/HIve_Discovery/script/admin-history-sept-index.dat: bytes are not valid utf8
+E0925 12:56:25.897826     193 repo.go:368] failed to create patch for untracked file CTF_Da_Nang_2026/Forensics/HIve_Discovery/script/carved-checkurl-a.exe: bytes are not valid utf8
+E0925 12:56:25.898021     193 repo.go:368] failed to create patch for untracked file CTF_Da_Nang_2026/Forensics/HIve_Discovery/script/carved-checkurl-b.exe: bytes are not valid utf8
+E0925 12:56:25.898627     193 repo.go:368] failed to create patch for untracked file CTF_Da_Nang_2026/Forensics/HIve_Discovery/script/hives/SOFTWARE.LOG: bytes are not valid utf8
+E0925 12:56:25.900124     193 repo.go:368] failed to create patch for untracked file CTF_Da_Nang_2026/Forensics/HIve_Discovery/script/samfile: bytes are not valid utf8
+E0925 12:56:25.901722     193 repo.go:368] failed to create patch for untracked file CTF_Da_Nang_2026/Forensics/HIve_Discovery/script/vmx64to32.exe: bytes are not valid utf8
+E0925 12:56:25.906574     193 repo.go:368] failed to create patch for untracked file CTF_Da_Nang_2026/Misc/Misc_Challenge_2/challenge/damaged.png: bytes are not valid utf8
+E0925 12:56:25.907503     193 repo.go:368] failed to create patch for untracked file CTF_Da_Nang_2026/Misc/Misc_Challenge_3/script/capture.pcap: bytes are not valid utf8
+E0925 12:56:25.907671     193 repo.go:368] failed to create patch for untracked file CTF_Da_Nang_2026/Misc/Misc_Challenge_4/challenge/workstation.img.xz: bytes are not valid utf8
+E0925 12:56:25.916803     193 repo.go:368] failed to create patch for untracked file CTF_Da_Nang_2026/Pwn/Pwn_Challenge_11/challenge/neurocache: bytes are not valid utf8
+E0925 12:56:25.921235     193 repo.go:368] failed to create patch for untracked file CTF_Da_Nang_2026/Pwn/Pwn_Challenge_5/challenge/chall_dumped: bytes are not valid utf8
+E0925 12:56:25.943331     193 repo.go:368] failed to create patch for untracked file CTF_Da_Nang_2026/Reverse/Reverse_Challenge_12/solver/d19f_0ad372/external_tools/validator_d19f.onnx: bytes are not valid utf8
+E0925 12:56:25.943497     193 repo.go:368] failed to create patch for untracked file CTF_Da_Nang_2026/Reverse/Reverse_Challenge_12/solver/d19f_0ad372/external_tools/validator_d19f.tflite: bytes are not valid utf8
+E0925 12:56:25.943989     193 repo.go:368] failed to create patch for untracked file CTF_Da_Nang_2026/Reverse/Reverse_Challenge_12/solver/d19f_0ad372/model_arrays_d19f_0ad372.npz: bytes are not valid utf8
+E0925 12:56:25.958832     193 repo.go:368] failed to create patch for untracked file CTF_Da_Nang_2026/Reverse/Reverse_Challenge_12/solver/d19f_0ad372/validator_d19f.tflite: bytes are not valid utf8
+E0925 12:56:25.959893     193 repo.go:368] failed to create patch for untracked file CTF_Da_Nang_2026/Reverse/Reverse_Challenge_12/solver/model_arrays_e035f798.npz: bytes are not valid utf8
+E0925 12:56:25.961981     193 repo.go:368] failed to create patch for untracked file CTF_Da_Nang_2026/Reverse/Reverse_Challenge_12/solver/tflite_runner: bytes are not valid utf8
+E0925 12:56:25.962145     193 repo.go:368] failed to create patch for untracked file CTF_Da_Nang_2026/Reverse/Reverse_Challenge_12/solver/validator.tflite: bytes are not valid utf8
+E0925 12:56:25.962284     193 repo.go:368] failed to create patch for untracked file CTF_Da_Nang_2026/Reverse/Reverse_Challenge_12/solver/validator_e035f798.tflite: bytes are not valid utf8
+E0925 12:56:25.962424     193 repo.go:368] failed to create patch for untracked file CTF_Da_Nang_2026/Reverse/Reverse_Challenge_12/solver/validator_now.tflite: bytes are not valid utf8
+E0925 12:56:25.966971     193 repo.go:368] failed to create patch for untracked file CTF_Da_Nang_2026/Reverse/Reverse_Challenge_9/challenge/license_probe: bytes are not valid utf8
+E0925 12:56:25.977574     193 repo.go:368] failed to create patch for untracked file K17_CTF_2026/Crypto/blowfish/challenge/handout.zip: bytes are not valid utf8
+E0925 12:56:25.982650     193 repo.go:368] failed to create patch for untracked file K17_CTF_2026/Forensics/close_enough/challenge/out.pkl.part: bytes are not valid utf8
+E0925 12:56:25.984476     193 repo.go:368] failed to create patch for untracked file K17_CTF_2026/Misc/archive_trap/challenge/handout.zip: bytes are not valid utf8
+E0925 12:56:25.985785     193 repo.go:368] failed to create patch for untracked file K17_CTF_2026/Misc/prime_calc/challenge/handout.zip: bytes are not valid utf8
+E0925 12:56:25.990329     193 repo.go:368] failed to create patch for untracked file K17_CTF_2026/Misc/spot/challenge/handout.zip: bytes are not valid utf8
+E0925 12:56:25.990938     193 repo.go:368] failed to create patch for untracked file K17_CTF_2026/Misc/sudo_but_good/challenge/handout.zip: bytes are not valid utf8
+E0925 12:56:25.994908     193 repo.go:368] failed to create patch for untracked file K17_CTF_2026/Pwn/ihyh/challenge/handout.zip: bytes are not valid utf8
+E0925 12:56:25.995626     193 repo.go:368] failed to create patch for untracked file K17_CTF_2026/Pwn/java_notes/challenge/handout.zip: bytes are not valid utf8
+E0925 12:56:25.996343     193 repo.go:368] failed to create patch for untracked file K17_CTF_2026/Pwn/make-a-wish/challenge/handout.zip: bytes are not valid utf8
+E0925 12:56:25.997127     193 repo.go:368] failed to create patch for untracked file K17_CTF_2026/Pwn/not_json/challenge/handout.zip: bytes are not valid utf8
+E0925 12:56:25.998601     193 repo.go:368] failed to create patch for untracked file K17_CTF_2026/Pwn/waf/challenge/handout.zip: bytes are not valid utf8
+E0925 12:56:25.999351     193 repo.go:368] failed to create patch for untracked file K17_CTF_2026/Rev/Evilgram/challenge/handout.zip: bytes are not valid utf8
+E0925 12:56:26.000126     193 repo.go:368] failed to create patch for untracked file K17_CTF_2026/Rev/etch-a-sketch/challenge/etchasketch: bytes are not valid utf8
+E0925 12:56:26.003127     193 repo.go:368] failed to create patch for untracked file K17_CTF_2026/Rev/srev/challenge/srev: bytes are not valid utf8
+E0925 12:56:26.005809     193 repo.go:368] failed to create patch for untracked file K17_CTF_2026/Web/macrohard_azuer/challenge/handout.zip: bytes are not valid utf8
+E0925 12:56:26.007105     193 repo.go:368] failed to create patch for untracked file K17_CTF_2026/Web/whatsNew/challenge/handout.zip: bytes are not valid utf8
+I0925 12:56:26.194443     230 http_helpers.go:305] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:loadCodeAssist Trace: 0xd6247a438eaf7de2
+I0925 12:56:26.695419     231 http_helpers.go:305] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:fetchAvailableModels Trace: 0xcf7fb6c236e8e813
+I0925 12:56:26.724244       1 model_config_manager.go:327] Propagating selected model override to backend: label="Gemini 3.8 Flash (High)"
+I0925 12:56:26.724284       1 printmode.go:374] Print mode: silent auth succeeded
+I0925 12:56:26.724327     307 quota_manager.go:45] doRefreshQuota: starting reload (force=true)
+I0925 12:56:26.724372     308 experiment_manager.go:66] Starting experiment refresh after login
+I0925 12:56:26.909277     308 remote_agent.go:156] Remote agent fastpush pin gate changed: false -> true
+I0925 12:56:26.909389     308 server.go:3770] [RemoteControl] Session toggle is off, staying disconnected
+I0925 12:56:26.909394     308 server.go:3481] [RemoteControl] Resolved proxyServerURL: ""
+I0925 12:56:26.909398     308 experiment_manager.go:70] Experiments refreshed after login
+I0925 12:56:26.909423     511 manager.go:1308] Reloading system slash commands
+I0925 12:56:27.608819     589 http_helpers.go:305] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:loadCodeAssist Trace: 0xa1ade2efad7698fc
+I0925 12:56:28.321757     589 http_helpers.go:305] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:loadCodeAssist Trace: 0x2752efba1e705572
+I0925 12:56:29.143612     589 model_config_manager.go:327] Propagating selected model override to backend: label="Gemini 3.8 Flash (High)"
+I0925 12:56:29.143707     307 quota_manager.go:45] doRefreshQuota: starting reload (force=true)
+I0925 12:56:29.143722     308 experiment_manager.go:66] Starting experiment refresh after login
+I0925 12:56:29.143734     614 model_config_manager.go:327] Propagating selected model override to backend: label="Gemini 3.8 Flash (High)"
+I0925 12:56:29.175277       1 conversation_manager.go:512] Starting new conversation (agent=false)
+I0925 12:56:29.186319       1 server.go:1204] Creating new cascade trajectory (agentScript=false)
+I0925 12:56:29.186365       1 server.go:1207] Conversation using project ID: default-cli-project
+I0925 12:56:29.200606       1 server.go:1239] Created conversation 0fea1f6e-08ae-4f32-b73e-0ced8d0f5d00
+I0925 12:56:29.200866       1 server.go:3166] GetConversationDetail: found conversation 0fea1f6e-08ae-4f32-b73e-0ced8d0f5d00 (active=true)
+I0925 12:56:29.201562       1 server.go:3166] GetConversationDetail: found conversation 0fea1f6e-08ae-4f32-b73e-0ced8d0f5d00 (active=true)
+I0925 12:56:29.201621       1 conversation_manager.go:559] project: switching to conversation belonging to project ID: default-cli-project
+I0925 12:56:29.201831       1 server.go:2166] Backend project ID updated dynamically to: default-cli-project
+I0925 12:56:29.201871       1 cli_setting_manager.go:218] ApplyProjectPermissionGrants: no grants for project "CLI Project", cleared project permissions
+I0925 12:56:29.201880       1 conversation_manager.go:605] project: synced active project to "CLI Project" (id=default-cli-project) from conversation switch
+I0925 12:56:29.201894       1 conversation_manager.go:887] Streaming conversation 0fea1f6e-08ae-4f32-b73e-0ced8d0f5d00
+I0925 12:56:29.201960     675 manager.go:1331] Reloading system slash commands and skills
+I0925 12:56:29.201983     675 manager.go:1308] Reloading system slash commands
+I0925 12:56:29.202056       1 server.go:3166] GetConversationDetail: found conversation 0fea1f6e-08ae-4f32-b73e-0ced8d0f5d00 (active=true)
+I0925 12:56:29.206235       1 server.go:1248] Starting conversation update stream for 0fea1f6e-08ae-4f32-b73e-0ced8d0f5d00
+I0925 12:56:29.206272       1 session.go:180] Print mode: conversation=0fea1f6e-08ae-4f32-b73e-0ced8d0f5d00, sending message
+I0925 12:56:29.206278       1 printmode.go:856] Print mode: slash command expansion disabled
+I0925 12:56:29.206323       1 conversation_manager.go:699] Forwarding user message to conversation 0fea1f6e-08ae-4f32-b73e-0ced8d0f5d00 (items=1, media=0)
+I0925 12:56:29.206328       1 server.go:1801] Sending user message to conversation 0fea1f6e-08ae-4f32-b73e-0ced8d0f5d00 (items=1, media=0)
+I0925 12:56:29.206681     570 manager.go:538] Ignoring IDLE update because we are waiting for RUNNING
+I0925 12:56:29.207214     675 manager.go:1312] Slash commands unchanged, skipping update
+I0925 12:56:29.207728       1 latency_breakdown.go:142] SEND_USER_CASCADE_MESSAGE_LATENCY latency breakdown: map[active_user_state_latency_ms:0 blocking:false cascade_id:0fea1f6e-08ae-4f32-b73e-0ced8d0f5d00 cascade_send_latency_ms:0 hydrate_slash_commands_latency_ms:0 load_trajectory_latency_ms:0 media_count:0 media_summaries_latency_ms:0 message_origin:AGENT_MESSAGE_ORIGIN_UNSPECIFIED resolve_agent_config_latency_ms:0 save_media_latency_ms:0 saved_media_count:0 status:OK total_latency_ms:0 trajectory_id:227fa51c-fd52-47b9-88e4-a8e527fce6cf]
+W0925 12:56:29.256344     634 hooks.go:118] failed to parse hooks for plugin at /home/light/.gemini/config/plugins/superpowers: invalid hook "hooks": command hook must specify 'command'
+I0925 12:56:29.258640     634 monitor_config_manager_external.go:53] externalMonitorConfigManager: initialized with embedded config (2 monitors)
+I0925 12:56:29.258895     634 monitoring.go:327] [Sonar] Resolved active tags: [policy_guardian] (detected surface: "")
+I0925 12:56:29.259132     634 monitoring.go:327] [Sonar] Resolved active tags: [policy_guardian] (detected surface: "")
+W0925 12:56:29.259137     634 declarative_config_loader.go:272] skipping component during resolution: empty component: prompt section "mcp_servers"
+W0925 12:56:29.259142     634 declarative_config_loader.go:272] skipping component during resolution: empty component: prompt section "user_rules"
+W0925 12:56:29.259145     634 declarative_config_loader.go:272] skipping component during resolution: empty component: prompt section "subagent_reminder"
+W0925 12:56:29.259153     634 declarative_config_loader.go:272] skipping component during resolution: empty component: pre-tool hook "command_assessor" is empty
+W0925 12:56:29.259156     634 declarative_config_loader.go:272] skipping component during resolution: empty component: post-tool hook "command_assessor" is empty
+E0925 12:56:29.461543     655 repo.go:368] failed to create patch for untracked file ASIS_CTF_Quals_2026/Crypto/Fence/challenge/Fence_7e750d85599a53701faa9ec6b58323c4b4a9d977.txz: bytes are not valid utf8
+E0925 12:56:29.461851     655 repo.go:368] failed to create patch for untracked file ASIS_CTF_Quals_2026/Crypto/Hackel/challenge/Hackel_167b289c63c46836d376945105d757028321303a.txz: bytes are not valid utf8
+E0925 12:56:29.461985     655 repo.go:368] failed to create patch for untracked file ASIS_CTF_Quals_2026/Crypto/Headache/challenge/Headache_dd252a8948d2ec605553e4047246b8f81cf801cd.txz: bytes are not valid utf8
+E0925 12:56:29.462745     655 repo.go:368] failed to create patch for untracked file ASIS_CTF_Quals_2026/Crypto/Pancake/challenge/Pancake_bf844b6c9e574c6f80b121155918b76ff3658962.txz: bytes are not valid utf8
+E0925 12:56:29.462992     655 repo.go:368] failed to create patch for untracked file ASIS_CTF_Quals_2026/Crypto/Sultan/challenge/Sultan_3941e94ae8b90cd1152a5ffb08edcfecc6949fd4.txz: bytes are not valid utf8
+E0925 12:56:29.463296     655 repo.go:368] failed to create patch for untracked file ASIS_CTF_Quals_2026/Hardware/Echoes/challenge/Echoes_a6abb166d71df1315e611540520dde97d6811a75.txz: bytes are not valid utf8
+E0925 12:56:29.463503     655 repo.go:368] failed to create patch for untracked file ASIS_CTF_Quals_2026/Hardware/OutOfPhase/challenge/extracted/OutOfPhase/oopenc: bytes are not valid utf8
+E0925 12:56:29.463574     655 repo.go:368] failed to create patch for untracked file ASIS_CTF_Quals_2026/Hardware/OutOfPhase/script/extract/OutOfPhase/oopenc: bytes are not valid utf8
+E0925 12:56:29.464016     655 repo.go:368] failed to create patch for untracked file ASIS_CTF_Quals_2026/Pwnable/Arena_Snapshots/challenge/arena-snapshots_f3df2911b7bb124d34b4810d8ee87330959ae1ad.txz: bytes are not valid utf8
+E0925 12:56:29.464210     655 repo.go:368] failed to create patch for untracked file ASIS_CTF_Quals_2026/Pwnable/Dead_Letter/challenge/dead-letter-queue_b8dacfd42cdadda3d61139356adf6267e8aeed9d.txz: bytes are not valid utf8
+E0925 12:56:29.464722     655 repo.go:368] failed to create patch for untracked file ASIS_CTF_Quals_2026/Pwnable/Signal_Race/challenge/Signal_Race_5cfce154b37a7b3531fe35bd6ee161d6a5f17964.txz: bytes are not valid utf8
+E0925 12:56:29.464875     655 repo.go:368] failed to create patch for untracked file ASIS_CTF_Quals_2026/Reverse/ASIS_Arch/challenge/ASIS-Arch_2671a9f8046f73ecbbaa579a1daca1819e975772.txz: bytes are not valid utf8
+E0925 12:56:29.465323     655 repo.go:368] failed to create patch for untracked file ASIS_CTF_Quals_2026/Reverse/Beyond_the_fourth_wall/challenge/Beyond/beyond.elf: bytes are not valid utf8
+E0925 12:56:29.465525     655 repo.go:368] failed to create patch for untracked file ASIS_CTF_Quals_2026/Reverse/Beyond_the_fourth_wall/work/Beyond/beyond.elf: bytes are not valid utf8
+E0925 12:56:29.465759     655 repo.go:368] failed to create patch for untracked file ASIS_CTF_Quals_2026/Reverse/LeakMeAk/challenge/LeakMeAk_f9e29089aee4968435d8e68e316f36d37d1bd002.txz: bytes are not valid utf8
+E0925 12:56:29.465962     655 repo.go:368] failed to create patch for untracked file ASIS_CTF_Quals_2026/Reverse/Lesh/challenge/Lesh_6d7379445e6714458e86c4c7a98924c3c7eb0d45.txz: bytes are not valid utf8
+E0925 12:56:29.467389     655 repo.go:368] failed to create patch for untracked file ASIS_CTF_Quals_2026/Web/Proxy_Dough/challenge/ProxyDough_faab7cb2ef78e1be178d2feffc266a4e6fba3233.txz: bytes are not valid utf8
+E0925 12:56:29.468425     655 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Crypto/Baby_Circuit/script/public/hw_model.cpython-311-x86_64-linux-gnu.so.id2: bytes are not valid utf8
+E0925 12:56:29.468471     655 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Crypto/Baby_Circuit/script/public/hw_model.cpython-311-x86_64-linux-gnu.so.nam: bytes are not valid utf8
+E0925 12:56:29.468489     655 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Crypto/Baby_Circuit/script/public/hw_model.cpython-311-x86_64-linux-gnu.so.til: bytes are not valid utf8
+E0925 12:56:29.468651     655 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Crypto/Residuegate/challenge/give_to_player/local-data/base_badge.png: bytes are not valid utf8
+E0925 12:56:29.468814     655 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Crypto/Residuegate/script/bruteforce_commitment: bytes are not valid utf8
+E0925 12:56:29.468902     655 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Crypto/Residuegate/script/gdb_slot_local.png: bytes are not valid utf8
+E0925 12:56:29.469050     655 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Crypto/Residuegate/script/ida/residuegate.id2: bytes are not valid utf8
+E0925 12:56:29.469088     655 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Crypto/Residuegate/script/ida/residuegate.nam: bytes are not valid utf8
+E0925 12:56:29.469104     655 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Crypto/Residuegate/script/ida/residuegate.til: bytes are not valid utf8
+E0925 12:56:29.469315     655 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Crypto/Residuegate/script/local_slot_0.png: bytes are not valid utf8
+E0925 12:56:29.469339     655 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Crypto/Residuegate/script/local_slot_1.png: bytes are not valid utf8
+E0925 12:56:29.469353     655 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Crypto/Residuegate/script/local_slot_2.png: bytes are not valid utf8
+E0925 12:56:29.469366     655 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Crypto/Residuegate/script/local_slot_3.png: bytes are not valid utf8
+E0925 12:56:29.469381     655 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Crypto/Residuegate/script/local_slot_4.png: bytes are not valid utf8
+E0925 12:56:29.469404     655 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Crypto/Residuegate/script/local_slot_5.png: bytes are not valid utf8
+E0925 12:56:29.469471     655 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Crypto/Residuegate/script/local_slot_session_session_id_75facdf7136cbf6f727e0dfa30b90d96_slot_0.body: bytes are not valid utf8
+E0925 12:56:29.469761     655 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Crypto/Residuegate/script/variants/variant-0.png: bytes are not valid utf8
+E0925 12:56:29.469774     655 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Crypto/Residuegate/script/variants/variant-1.png: bytes are not valid utf8
+E0925 12:56:29.469786     655 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Crypto/Residuegate/script/variants/variant-10.png: bytes are not valid utf8
+E0925 12:56:29.469796     655 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Crypto/Residuegate/script/variants/variant-11.png: bytes are not valid utf8
+E0925 12:56:29.469807     655 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Crypto/Residuegate/script/variants/variant-12.png: bytes are not valid utf8
+E0925 12:56:29.469818     655 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Crypto/Residuegate/script/variants/variant-13.png: bytes are not valid utf8
+E0925 12:56:29.469829     655 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Crypto/Residuegate/script/variants/variant-14.png: bytes are not valid utf8
+E0925 12:56:29.469847     655 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Crypto/Residuegate/script/variants/variant-15.png: bytes are not valid utf8
+E0925 12:56:29.469864     655 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Crypto/Residuegate/script/variants/variant-2.png: bytes are not valid utf8
+E0925 12:56:29.469874     655 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Crypto/Residuegate/script/variants/variant-3.png: bytes are not valid utf8
+E0925 12:56:29.469884     655 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Crypto/Residuegate/script/variants/variant-4.png: bytes are not valid utf8
+E0925 12:56:29.469894     655 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Crypto/Residuegate/script/variants/variant-5.png: bytes are not valid utf8
+E0925 12:56:29.469904     655 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Crypto/Residuegate/script/variants/variant-6.png: bytes are not valid utf8
+E0925 12:56:29.469914     655 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Crypto/Residuegate/script/variants/variant-7.png: bytes are not valid utf8
+E0925 12:56:29.469925     655 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Crypto/Residuegate/script/variants/variant-8.png: bytes are not valid utf8
+E0925 12:56:29.469935     655 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Crypto/Residuegate/script/variants/variant-9.png: bytes are not valid utf8
+E0925 12:56:29.469996     655 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Crypto/Typhone/challenge/here: bytes are not valid utf8
+E0925 12:56:29.470088     655 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Crypto/chimera/challenge/here: bytes are not valid utf8
+E0925 12:56:29.470233     655 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Crypto/chimera/script/residue_search: bytes are not valid utf8
+E0925 12:56:29.470276     655 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Crypto/chimera/script/second_download.zip: bytes are not valid utf8
+E0925 12:56:29.470987     655 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Forensics/From_Update_To_Encrypt/script/x/Users/Public/MetaData/Data/1337dakl.txt.enc: bytes are not valid utf8
+E0925 12:56:29.471023     655 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Forensics/From_Update_To_Encrypt/script/x/Users/Public/MetaData/Data/hi.txt.enc: bytes are not valid utf8
+E0925 12:56:29.471034     655 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Forensics/From_Update_To_Encrypt/script/x/Users/Public/MetaData/Data/ptit.txt.enc: bytes are not valid utf8
+E0925 12:56:29.472177     655 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Forensics/Silent_Room/script/out/c56.png: bytes are not valid utf8
+E0925 12:56:29.472213     655 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Forensics/Silent_Room/script/out/c58.png: bytes are not valid utf8
+E0925 12:56:29.472228     655 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Forensics/Silent_Room/script/out/pic87.jpg: bytes are not valid utf8
+E0925 12:56:29.472243     655 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Forensics/Silent_Room/script/out/pic88.jpg: bytes are not valid utf8
+E0925 12:56:29.472258     655 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Forensics/Silent_Room/script/out/pic99.jpg: bytes are not valid utf8
+E0925 12:56:29.472291     655 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Forensics/Silent_Room/script/out/proof.decrypted.png: bytes are not valid utf8
+E0925 12:56:29.472314     655 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Forensics/Silent_Room/script/out/proof.png: bytes are not valid utf8
+E0925 12:56:29.472463     655 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Misc/Super_Agent/challenge/ctf_super_agent_can_solve_this.challage: bytes are not valid utf8
+E0925 12:56:29.472475     655 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Misc/Super_Agent/challenge/here: bytes are not valid utf8
+E0925 12:56:29.473119     655 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Misc/Weirdo/script/sys_3.png: bytes are not valid utf8
+E0925 12:56:29.473242     655 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Misc/Weirdo/script/sys_all.png: bytes are not valid utf8
+E0925 12:56:29.473331     655 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Pwn/MARIONETTE/challenge/here: bytes are not valid utf8
+E0925 12:56:29.473444     655 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Pwn/Message_System/challenge/here: bytes are not valid utf8
+E0925 12:56:29.474716     655 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Pwn/Message_System/script/extracted/challenge: bytes are not valid utf8
+E0925 12:56:29.474743     655 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Pwn/Message_System/script/test_fake_free: bytes are not valid utf8
+E0925 12:56:29.474900     655 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/RE/BabyCrackMe/challenge/here: bytes are not valid utf8
+E0925 12:56:29.474973     655 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/RE/Ghost_Dependency/challenge/here: bytes are not valid utf8
+E0925 12:56:29.475135     655 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/RE/Signed,_Sealed,_Subverted/challenge/handout/public-keys.cbor: bytes are not valid utf8
+E0925 12:56:29.475161     655 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/RE/Signed,_Sealed,_Subverted/challenge/handout/signed-base.upd: bytes are not valid utf8
+E0925 12:56:29.475235     655 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/RE/Signed,_Sealed,_Subverted/extracted/handout/public-keys.cbor: bytes are not valid utf8
+E0925 12:56:29.475258     655 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/RE/Signed,_Sealed,_Subverted/extracted/handout/signed-base.upd: bytes are not valid utf8
+E0925 12:56:29.476094     655 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Web/Exam_Score/challenge/here: bytes are not valid utf8
+E0925 12:56:29.476199     655 repo.go:368] failed to create patch for untracked file CSCV_2026_Quals/Web/Inoffice/challenge/here: bytes are not valid utf8
+E0925 12:56:29.481371     655 repo.go:368] failed to create patch for untracked file CTF_Da_Nang_2026/Crypto/Crypto_Challenge_9/script/aes_cnf/: read /home/light/Workspace/CTF/CTF_Da_Nang_2026/Crypto/Crypto_Challenge_9/script/aes_cnf: is a directory
+E0925 12:56:29.481921     655 repo.go:368] failed to create patch for untracked file CTF_Da_Nang_2026/Forensics/HIve_Discovery/script/LABREMOVE.EXE-27D1C127.pf: bytes are not valid utf8
+E0925 12:56:29.481958     655 repo.go:368] failed to create patch for untracked file CTF_Da_Nang_2026/Forensics/HIve_Discovery/script/Lab03-01.exe: bytes are not valid utf8
+E0925 12:56:29.481996     655 repo.go:368] failed to create patch for untracked file CTF_Da_Nang_2026/Forensics/HIve_Discovery/script/Lab03-03.exe: bytes are not valid utf8
+E0925 12:56:29.482043     655 repo.go:368] failed to create patch for untracked file CTF_Da_Nang_2026/Forensics/HIve_Discovery/script/Lab03-04.exe: bytes are not valid utf8
+E0925 12:56:29.482102     655 repo.go:368] failed to create patch for untracked file CTF_Da_Nang_2026/Forensics/HIve_Discovery/script/VMX32TO64.EXE-1699ED6A.pf: bytes are not valid utf8
+E0925 12:56:29.482121     655 repo.go:368] failed to create patch for untracked file CTF_Da_Nang_2026/Forensics/HIve_Discovery/script/VMX64TO32.EXE-1AA8A9D1.pf: bytes are not valid utf8
+E0925 12:56:29.482158     655 repo.go:368] failed to create patch for untracked file CTF_Da_Nang_2026/Forensics/HIve_Discovery/script/admin-history-index.dat: bytes are not valid utf8
+E0925 12:56:29.482185     655 repo.go:368] failed to create patch for untracked file CTF_Da_Nang_2026/Forensics/HIve_Discovery/script/admin-history-sept-index.dat: bytes are not valid utf8
+E0925 12:56:29.482260     655 repo.go:368] failed to create patch for untracked file CTF_Da_Nang_2026/Forensics/HIve_Discovery/script/carved-checkurl-a.exe: bytes are not valid utf8
+E0925 12:56:29.482294     655 repo.go:368] failed to create patch for untracked file CTF_Da_Nang_2026/Forensics/HIve_Discovery/script/carved-checkurl-b.exe: bytes are not valid utf8
+E0925 12:56:29.482332     655 repo.go:368] failed to create patch for untracked file CTF_Da_Nang_2026/Forensics/HIve_Discovery/script/hives/SOFTWARE.LOG: bytes are not valid utf8
+E0925 12:56:29.482626     655 repo.go:368] failed to create patch for untracked file CTF_Da_Nang_2026/Forensics/HIve_Discovery/script/samfile: bytes are not valid utf8
+E0925 12:56:29.482776     655 repo.go:368] failed to create patch for untracked file CTF_Da_Nang_2026/Forensics/HIve_Discovery/script/vmx64to32.exe: bytes are not valid utf8
+E0925 12:56:29.483250     655 repo.go:368] failed to create patch for untracked file CTF_Da_Nang_2026/Misc/Misc_Challenge_2/challenge/damaged.png: bytes are not valid utf8
+E0925 12:56:29.483301     655 repo.go:368] failed to create patch for untracked file CTF_Da_Nang_2026/Misc/Misc_Challenge_3/script/capture.pcap: bytes are not valid utf8
+E0925 12:56:29.483314     655 repo.go:368] failed to create patch for untracked file CTF_Da_Nang_2026/Misc/Misc_Challenge_4/challenge/workstation.img.xz: bytes are not valid utf8
+E0925 12:56:29.483897     655 repo.go:368] failed to create patch for untracked file CTF_Da_Nang_2026/Pwn/Pwn_Challenge_11/challenge/neurocache: bytes are not valid utf8
+E0925 12:56:29.484244     655 repo.go:368] failed to create patch for untracked file CTF_Da_Nang_2026/Pwn/Pwn_Challenge_5/challenge/chall_dumped: bytes are not valid utf8
+E0925 12:56:29.486103     655 repo.go:368] failed to create patch for untracked file CTF_Da_Nang_2026/Reverse/Reverse_Challenge_12/solver/d19f_0ad372/external_tools/validator_d19f.onnx: bytes are not valid utf8
+E0925 12:56:29.486127     655 repo.go:368] failed to create patch for untracked file CTF_Da_Nang_2026/Reverse/Reverse_Challenge_12/solver/d19f_0ad372/external_tools/validator_d19f.tflite: bytes are not valid utf8
+E0925 12:56:29.486234     655 repo.go:368] failed to create patch for untracked file CTF_Da_Nang_2026/Reverse/Reverse_Challenge_12/solver/d19f_0ad372/model_arrays_d19f_0ad372.npz: bytes are not valid utf8
+E0925 12:56:29.487659     655 repo.go:368] failed to create patch for untracked file CTF_Da_Nang_2026/Reverse/Reverse_Challenge_12/solver/d19f_0ad372/validator_d19f.tflite: bytes are not valid utf8
+E0925 12:56:29.487733     655 repo.go:368] failed to create patch for untracked file CTF_Da_Nang_2026/Reverse/Reverse_Challenge_12/solver/model_arrays_e035f798.npz: bytes are not valid utf8
+E0925 12:56:29.487901     655 repo.go:368] failed to create patch for untracked file CTF_Da_Nang_2026/Reverse/Reverse_Challenge_12/solver/tflite_runner: bytes are not valid utf8
+E0925 12:56:29.487926     655 repo.go:368] failed to create patch for untracked file CTF_Da_Nang_2026/Reverse/Reverse_Challenge_12/solver/validator.tflite: bytes are not valid utf8
+E0925 12:56:29.487937     655 repo.go:368] failed to create patch for untracked file CTF_Da_Nang_2026/Reverse/Reverse_Challenge_12/solver/validator_e035f798.tflite: bytes are not valid utf8
+E0925 12:56:29.487946     655 repo.go:368] failed to create patch for untracked file CTF_Da_Nang_2026/Reverse/Reverse_Challenge_12/solver/validator_now.tflite: bytes are not valid utf8
+E0925 12:56:29.488881     655 repo.go:368] failed to create patch for untracked file CTF_Da_Nang_2026/Reverse/Reverse_Challenge_9/challenge/license_probe: bytes are not valid utf8
+E0925 12:56:29.489626     655 repo.go:368] failed to create patch for untracked file K17_CTF_2026/Crypto/blowfish/challenge/handout.zip: bytes are not valid utf8
+E0925 12:56:29.490030     655 repo.go:368] failed to create patch for untracked file K17_CTF_2026/Forensics/close_enough/challenge/out.pkl.part: bytes are not valid utf8
+E0925 12:56:29.490184     655 repo.go:368] failed to create patch for untracked file K17_CTF_2026/Misc/archive_trap/challenge/handout.zip: bytes are not valid utf8
+E0925 12:56:29.490281     655 repo.go:368] failed to create patch for untracked file K17_CTF_2026/Misc/prime_calc/challenge/handout.zip: bytes are not valid utf8
+E0925 12:56:29.490554     655 repo.go:368] failed to create patch for untracked file K17_CTF_2026/Misc/spot/challenge/handout.zip: bytes are not valid utf8
+E0925 12:56:29.490618     655 repo.go:368] failed to create patch for untracked file K17_CTF_2026/Misc/sudo_but_good/challenge/handout.zip: bytes are not valid utf8
+E0925 12:56:29.490931     655 repo.go:368] failed to create patch for untracked file K17_CTF_2026/Pwn/ihyh/challenge/handout.zip: bytes are not valid utf8
+E0925 12:56:29.490985     655 repo.go:368] failed to create patch for untracked file K17_CTF_2026/Pwn/java_notes/challenge/handout.zip: bytes are not valid utf8
+E0925 12:56:29.491039     655 repo.go:368] failed to create patch for untracked file K17_CTF_2026/Pwn/make-a-wish/challenge/handout.zip: bytes are not valid utf8
+E0925 12:56:29.491092     655 repo.go:368] failed to create patch for untracked file K17_CTF_2026/Pwn/not_json/challenge/handout.zip: bytes are not valid utf8
+E0925 12:56:29.491212     655 repo.go:368] failed to create patch for untracked file K17_CTF_2026/Pwn/waf/challenge/handout.zip: bytes are not valid utf8
+E0925 12:56:29.491266     655 repo.go:368] failed to create patch for untracked file K17_CTF_2026/Rev/Evilgram/challenge/handout.zip: bytes are not valid utf8
+E0925 12:56:29.491319     655 repo.go:368] failed to create patch for untracked file K17_CTF_2026/Rev/etch-a-sketch/challenge/etchasketch: bytes are not valid utf8
+E0925 12:56:29.491841     655 repo.go:368] failed to create patch for untracked file K17_CTF_2026/Rev/srev/challenge/srev: bytes are not valid utf8
+E0925 12:56:29.492036     655 repo.go:368] failed to create patch for untracked file K17_CTF_2026/Web/macrohard_azuer/challenge/handout.zip: bytes are not valid utf8
+E0925 12:56:29.492130     655 repo.go:368] failed to create patch for untracked file K17_CTF_2026/Web/whatsNew/challenge/handout.zip: bytes are not valid utf8
+I0925 12:56:29.560808     308 server.go:3770] [RemoteControl] Session toggle is off, staying disconnected
+I0925 12:56:29.560827     308 server.go:3481] [RemoteControl] Resolved proxyServerURL: ""
+I0925 12:56:29.560831     308 experiment_manager.go:70] Experiments refreshed after login
+I0925 12:56:29.560860     308 experiment_manager.go:66] Starting experiment refresh after login
+I0925 12:56:29.560925    1462 manager.go:1308] Reloading system slash commands
+I0925 12:56:29.564386    1462 manager.go:1312] Slash commands unchanged, skipping update
+I0925 12:56:29.607714     307 quota_manager.go:45] doRefreshQuota: starting reload (force=true)
+I0925 12:56:29.737116     613 http_helpers.go:305] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:loadCodeAssist Trace: 0xe57d74bd4842be8f
+I0925 12:56:29.767403     308 server.go:3770] [RemoteControl] Session toggle is off, staying disconnected
+I0925 12:56:29.767423     308 server.go:3481] [RemoteControl] Resolved proxyServerURL: ""
+I0925 12:56:29.767428     308 experiment_manager.go:70] Experiments refreshed after login
+I0925 12:56:29.767459    1475 manager.go:1308] Reloading system slash commands
+I0925 12:56:29.769785    1475 manager.go:1312] Slash commands unchanged, skipping update
+I0925 12:56:30.360630     573 http_helpers.go:305] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x299823a0ff07e947 ResponseID: DQ22arzyLPilg8UPuZyd8Q4
+I0925 12:56:37.775914     926 http_helpers.go:305] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0xc113b17383b96eb0 ResponseID: Dg22au2yAvDEg8UPpIL0iA8
+I0925 12:56:41.047504    1602 http_helpers.go:305] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x7170d11c968b2d37 ResponseID: Fg22arLwINPfg8UPtqbtCA
+I0925 12:56:47.457975    1772 http_helpers.go:305] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0xb5f50c2b8fe6c217 ResponseID: GQ22au64Jb6vg8UPjL-BuQ4
+I0925 12:56:51.988695    1906 http_helpers.go:305] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x719deaf212abf4d ResponseID: IA22apGYBtWog8UP04va2QI
+I0925 12:56:53.357040     570 tool_confirmation_manager.go:211] Print mode: soft-denying tool confirmation "RunCommand" at step 8
+I0925 12:56:53.357084    1940 server.go:2470] Tool confirmation for conversation 0fea1f6e-08ae-4f32-b73e-0ced8d0f5d00 step 8 (type=*gemini_coder_go_proto.Step_Generic approved=false)
+I0925 12:56:53.385701       1 manager.go:807] CLI store manager shutting down
+I0925 12:56:53.386128       1 conversation_manager.go:844] Stopping conversation stream
+I0925 12:56:53.386209     570 server.go:1296] Stream goroutine exited for 0fea1f6e-08ae-4f32-b73e-0ced8d0f5d00, sending completion signal
+I0925 12:56:53.386403    1937 server.go:2932] Language server shutting down
+I0925 12:56:53.386409    1937 server.go:2937] Waiting for migrations to complete to prevent partial migration state...
+E0925 12:56:53.386485    1615 telemetry.go:82] error recording trajectory segment analytics: Post "https://daily-cloudcode-pa.googleapis.com/v1internal:recordTrajectoryAnalytics": context canceled
+E0925 12:56:53.392844      74 file_watcher.go:194] skipping empty or temp file: 
+E0925 12:56:53.392862      74 file_watcher.go:194] skipping empty or temp file: 
+E0925 12:56:53.392864      74 file_watcher.go:194] skipping empty or temp file: 

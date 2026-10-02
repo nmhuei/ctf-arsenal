@@ -1,0 +1,53 @@
+[
+  {
+    "index": 32,
+    "name": "staged/shield-preference-experiments.json",
+    "length": 18,
+    "crc32": "93a63aed",
+    "sha256": "704d28223a4320a853df4a19d48c7015cf79d56a5317cc3475b6305fa43dcc05",
+    "path": "/home/light/Workspace/CTF/CSCV_2026_Quals/Forensics/Res_Impossibilis/script/offline_audit/agent_password/recovered_files/32_shield-preference-experiments.json",
+    "provenance": "Bounded reconstruction of empty Shield experiment storage",
+    "validation": "Exact ZIP central-directory length and CRC32"
+  },
+  {
+    "index": 33,
+    "name": "staged/containers.json",
+    "length": 939,
+    "crc32": "6d062582",
+    "sha256": "854ff2076f71097b030c302a1ea71d8e851d2920b9ff5fc8dc8f16c91ba95b72",
+    "path": "/home/light/Workspace/CTF/CSCV_2026_Quals/Forensics/Res_Impossibilis/script/offline_audit/agent_password/recovered_files/33_containers.json",
+    "provenance": "Mozilla ESR91 ContextualIdentityService default identities and save serialization",
+    "validation": "Exact ZIP central-directory length and CRC32"
+  },
+  {
+    "index": 34,
+    "name": "staged/handlers.json",
+    "length": 683,
+    "crc32": "6df5e5fd",
+    "sha256": "7d4fd8b32f01a66e9357c0aba57e3283493dce4ed66b9c12e30e9236e2d5bf12",
+    "path": "/home/light/Workspace/CTF/CSCV_2026_Quals/Forensics/Res_Impossibilis/script/offline_audit/agent_password/recovered_files/34_handlers.json",
+    "provenance": "Mozilla ESR91 protocol/MIME defaults; unique matching ordering among 144 permutations",
+    "validation": "Exact ZIP central-directory length and CRC32",
+    "mime_order": [
+      "pdf",
+      "xml",
+      "svg",
+      "webp"
+    ],
+    "scheme_order": [
+      "irc",
+      "ircs",
+      "mailto"
+    ]
+  },
+  {
+    "index": 35,
+    "name": "staged/broadcast-listeners.json",
+    "length": 204,
+    "crc32": "dae4fd3d",
+    "sha256": "9cf589357fceea2f37cd1a925e5d33fd517a44d22a16c357f7fb5d4d187034aa",
+    "path": "/home/light/Workspace/CTF/CSCV_2026_Quals/Forensics/Res_Impossibilis/script/offline_audit/agent_password/recovered_files/35_broadcast-listeners.json",
+    "provenance": "Mozilla ESR91 PushBroadcastService and initial RemoteSettings listener defaults",
+    "validation": "Exact ZIP central-directory length and CRC32"
+  }
+]

@@ -1,0 +1,12 @@
+<!doctype html>
+<script>
+const early = {marker: 0x1337};
+const smi = [1, 2, 3];
+const dbl = [1.1, 2.2, 3.3];
+const obj = [{a: 1}, {a: 2}, {a: 3}];
+%DebugPrint(early);
+%DebugPrint(smi);
+%DebugPrint(dbl);
+%DebugPrint(obj);
+console.log("cage", "0x" + cageBase().toString(16));
+</script>

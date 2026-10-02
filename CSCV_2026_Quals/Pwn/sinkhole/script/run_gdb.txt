@@ -1,0 +1,17 @@
+
+set pagination off
+set follow-fork-mode child
+b *0x76d3850
+commands
+  silent
+  printf "TrySinkIntoLoop hit! header=%p\n", $rsi
+  continue
+end
+b *0x76d3975
+commands
+  silent
+  printf "TrySinkIntoLoop SUCCESS! sinking nodes!\n"
+  continue
+end
+run --headless=new --no-sandbox --disable-gpu --disable-dev-shm-usage --user-data-dir=/tmp/gdb-prof --enable-logging=stderr --js-flags="--no-memory-protection-keys --expose-cage-base" http://127.0.0.1:8000/test_compile.html
+quit

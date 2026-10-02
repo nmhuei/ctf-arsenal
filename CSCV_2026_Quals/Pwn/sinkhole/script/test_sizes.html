@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+function test_size(n) {
+  let lines = [];
+  lines.push(`function fn_${n}(x) {`);
+  for (let i = 0; i < n; i++) lines.push(`  if (x === ${i}) return ${i};`);
+  lines.push("  return x + 1;");
+  lines.push("}");
+  lines.push(`return fn_${n};`);
+  let fn = new Function(lines.join("\n"))();
+  for (let i = 0; i < 20000; i++) fn(i);
+  console.log(`Tested size ${n}`);
+}
+
+async function run() {
+  for (let n of [10, 100, 300, 600, 1000, 1200]) {
+    test_size(n);
+    await new Promise(r => setTimeout(r, 200));
+  }
+}
+run();
+</script>
+</body>
+</html>

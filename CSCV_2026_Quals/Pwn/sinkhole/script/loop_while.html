@@ -1,0 +1,15 @@
+<!DOCTYPE html><html><body><script>
+let lines = [];
+lines.push("function loop_while(x, arr, obj) {");
+for (let i = 0; i < 650; i++) lines.push(`  if (x === ${i}) return ${i};`);
+lines.push(`arr[0] = obj; let r = 0; let j = 0; while (j < 5) { r = arr[1]; j++; } return r;`);
+lines.push("}");
+lines.push("return loop_while;");
+
+let fn = new Function(lines.join("\n"))();
+let dummy = { a: 1 };
+let dummy_arr = [1.1, 2.2, 3.3];
+
+for (let i = 0; i < 20000; i++) fn(i, dummy_arr, dummy);
+console.log("Warmup done for loop_while");
+</script></body></html>

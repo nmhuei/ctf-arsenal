@@ -1,0 +1,73 @@
+{
+  "known": 63684,
+  "total": 65408,
+  "unknown_intervals": [
+    [
+      55530,
+      56573
+    ],
+    [
+      56643,
+      57324
+    ]
+  ],
+  "verified_members": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    38
+  ],
+  "new_page": {
+    "memory": "0x1d6f040",
+    "logical": 57324,
+    "length": 4096,
+    "source": "MEGA AES-CTR decoded RAM"
+  },
+  "derived_headers": [
+    {
+      "index": 36,
+      "offset": 55453,
+      "length": 77,
+      "source": "directory metadata, fixed observed writer fields, confirmed RNG header stream"
+    },
+    {
+      "index": 37,
+      "offset": 56573,
+      "length": 70,
+      "source": "directory metadata, fixed observed writer fields, confirmed RNG header stream"
+    }
+  ]
+}
